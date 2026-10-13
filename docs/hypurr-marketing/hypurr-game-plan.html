@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>하이푸르 롱숏 기획서</title>
+<style>
+:root{
+  --ink:#0f1b19; --ink2:#46564f; --ink3:#83918c; --line:#dfe6e3; --soft:#f2f7f5;
+  --term:#07130f; --term2:#0d211b; --mint:#97fce4; --mint-d:#1fae8a; --long:#2fd08a; --short:#ff5c6c;
+  --amber:#a8650a; --amber-l:#fff4e2; --red:#b4232c; --red-l:#fdecee; --green:#127a52; --green-l:#e6f6ee;
+  --r-r:#4aa7ff; --r-e:#b673ff; --r-l:#ff9a30;
+}
+@page{size:A4;margin:15mm 14mm 17mm}
+*{box-sizing:border-box;margin:0;padding:0}
+html{-webkit-print-color-adjust:exact;print-color-adjust:exact}
+body{font-family:'Pretendard',sans-serif;color:var(--ink);font-size:10pt;line-height:1.65;background:#fff;word-break:keep-all}
+.mono{font-family:'JetBrains Mono','DejaVu Sans Mono',monospace}
+.page{break-before:page}
+h1{font-size:25pt;font-weight:800;letter-spacing:-.02em;line-height:1.25}
+h2{font-size:15pt;font-weight:800;margin:0 0 10px;padding-bottom:7px;border-bottom:2px solid var(--term);break-after:avoid;display:flex;align-items:baseline;gap:10px}
+h2 .n{color:var(--mint-d);font-size:13pt}
+h3{font-size:11.2pt;font-weight:700;margin:14px 0 6px;break-after:avoid}
+p{margin:0 0 7px}
+ul{margin:0 0 8px 18px} li{margin:2px 0}
+.lead{font-size:10.6pt;color:var(--ink2);margin-bottom:12px}
+.lead b{color:var(--ink)}
+.small{font-size:8.8pt;color:var(--ink2)}
+table{width:100%;border-collapse:collapse;margin:6px 0 10px;font-size:9.3pt}
+th{background:var(--term);color:#fff;text-align:left;font-weight:600;padding:6px 9px;font-size:8.8pt}
+td{padding:6px 9px;border-bottom:1px solid var(--line);vertical-align:top}
+tr{break-inside:avoid}
+.box{border-radius:10px;padding:11px 14px;margin:8px 0 10px;break-inside:avoid;border:1px solid var(--line)}
+.box.soft{background:var(--soft);border-color:#e3eeea}
+.box.ok{background:var(--green-l);border-color:#c7ead9}
+.box.stop{background:var(--red-l);border-color:#f5cdd2}
+.box.warn{background:var(--amber-l);border-color:#f3dcb2}
+.box.dark{background:var(--term);border-color:var(--term);color:#d8efe8}
+.box.dark b{color:#fff}
+.tag{display:inline-block;font-size:8pt;font-weight:700;padding:1px 9px;border-radius:99px;margin-bottom:5px;background:rgba(0,0,0,.08)}
+.dark .tag{background:var(--mint);color:var(--term)}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:9px;margin:8px 0}
+.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:9px;margin:8px 0}
+.card{border:1px solid var(--line);border-radius:10px;padding:11px 12px;break-inside:avoid}
+.card .k{font-size:8pt;font-weight:700;color:var(--mint-d);letter-spacing:.06em}
+.card .t{font-size:10.6pt;font-weight:700;margin:2px 0 4px;line-height:1.4}
+.card p,.card li{font-size:9.1pt;color:var(--ink2)}
+
+/* cover */
+.cover{background:var(--term);color:#e3f3ee;border-radius:16px;padding:24px 26px;margin-bottom:16px;position:relative;overflow:hidden}
+.cover .eb{font-size:8.5pt;letter-spacing:.16em;font-weight:700;color:var(--mint)}
+.cover h1{color:#fff;margin:8px 0 6px}
+.cover h1 em{font-style:normal;color:var(--mint)}
+.cover .sub{font-size:11pt;color:#a9c9c0}
+.cover .meta{margin-top:14px;font-size:8.6pt;color:#86a79e;display:flex;gap:16px;flex-wrap:wrap}
+.cover .meta b{color:#fff;font-weight:600}
+.cover img{position:absolute;right:22px;top:22px;width:96px;border-radius:14px;border:2px solid rgba(151,252,228,.5)}
+
+/* PnL card mock */
+.pnl{width:100%;aspect-ratio:1.38/1;border-radius:16px;background:radial-gradient(120% 120% at 100% 0%,#14392f 0%,var(--term) 60%);color:#e3f3ee;position:relative;overflow:hidden;padding:16px 18px;break-inside:avoid;border:1px solid #1d3d34}
+.pnl .top{display:flex;justify-content:space-between;font-size:8.6pt;color:#86a79e}
+.pnl .top b{color:var(--mint);font-weight:700}
+.pnl .tk{margin-top:10px;font-size:11pt;font-weight:700;color:#fff}
+.pnl .tk span{font-size:8.4pt;font-weight:700;padding:1px 7px;border-radius:5px;margin-left:6px;vertical-align:1px}
+.pnl .roe{font-size:36pt;font-weight:800;line-height:1;margin-top:6px;letter-spacing:-.02em}
+.pnl .rows{display:grid;grid-template-columns:auto auto;gap:2px 14px;margin-top:10px;font-size:8.6pt;color:#86a79e;width:max-content}
+.pnl .rows b{color:#e3f3ee;font-weight:600}
+.pnl img{position:absolute;right:14px;bottom:14px;width:40%;border-radius:12px;border:3px solid var(--rc,#97fce4)}
+.pnl .title{position:absolute;right:14px;top:40px;font-size:8.4pt;background:var(--mint);color:var(--term);font-weight:700;padding:2px 8px;border-radius:99px}
+.pnl .foot{position:absolute;left:18px;bottom:12px;font-size:7.6pt;color:#5f7f76}
+.pnl.rekt .roe{color:var(--short)}
+.pnl .stamp{position:absolute;left:44%;top:30%;transform:rotate(-14deg);border:4px solid var(--short);color:var(--short);font-size:24pt;font-weight:800;padding:0 10px;border-radius:8px;letter-spacing:.06em;opacity:.9}
+.pnl.rekt img{filter:grayscale(.6) brightness(.85)}
+
+/* phone wireframe */
+.phones{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin:10px 0}
+.ph{border:6px solid #1a2421;border-radius:22px;background:var(--term);color:#cfe6df;padding:9px 8px;font-size:7.6pt;break-inside:avoid;min-height:300px;display:flex;flex-direction:column;gap:6px}
+.ph .bar{display:flex;justify-content:space-between;color:#86a79e;font-size:7.2pt}
+.ph .bar b{color:var(--mint)}
+.ph .chart{height:120px;border-radius:8px;background:var(--term2);position:relative;overflow:hidden}
+.ph .chart svg{position:absolute;inset:0;width:100%;height:100%}
+.ph .liq{position:absolute;left:0;right:0;border-top:1.5px dashed var(--short);font-size:6.6pt;color:var(--short);text-align:right;padding-right:4px}
+.ph .pos{display:flex;justify-content:space-between;align-items:center;background:var(--term2);border-radius:8px;padding:5px 7px}
+.ph .pos b{font-size:10pt}
+.ph .lev{height:6px;border-radius:9px;background:linear-gradient(90deg,var(--long),#ffd466,var(--short));position:relative}
+.ph .lev i{position:absolute;left:58%;top:-4px;width:14px;height:14px;border-radius:50%;background:#fff;border:2px solid var(--term)}
+.ph .btns{display:grid;grid-template-columns:1fr 1fr;gap:6px;margin-top:auto}
+.ph .btns span{text-align:center;font-weight:700;font-size:9pt;padding:8px 0;border-radius:8px;color:var(--term)}
+.ph .ava{display:flex;align-items:center;gap:6px}
+.ph .ava img{width:30px;border-radius:50%;border:2px solid var(--mint)}
+.ph .row{display:flex;justify-content:space-between;padding:4px 6px;border-radius:6px;background:var(--term2)}
+.ph .row.me{outline:1.5px solid var(--mint)}
+.ph .cap{color:#86a79e;font-size:7pt;text-align:center}
+
+.loop{display:grid;grid-template-columns:repeat(6,1fr);gap:0;margin:10px 0}
+.loop div{background:var(--soft);padding:9px 8px 9px 16px;clip-path:polygon(0 0,90% 0,100% 50%,90% 100%,0 100%,10% 50%);font-size:8.6pt;line-height:1.35;min-height:54px;display:flex;flex-direction:column;justify-content:center}
+.loop div:first-child{clip-path:polygon(0 0,90% 0,100% 50%,90% 100%,0 100%);padding-left:10px}
+.loop div b{color:var(--mint-d);font-size:9pt}
+.loop div:nth-child(odd){background:#e6f1ed}
+.c-long{color:var(--long);font-weight:700}.c-short{color:var(--short);font-weight:700}
+.chip{display:inline-block;font-size:8pt;font-weight:700;padding:0 8px;border-radius:99px;color:#fff}
+.share{font-family:'JetBrains Mono','DejaVu Sans Mono',monospace;background:var(--term);color:#d8efe8;border-radius:10px;padding:10px 14px;font-size:9pt;line-height:1.6;break-inside:avoid}
+.foot-note{font-size:8pt;color:var(--ink3);margin-top:4px}
+</style>
+</head>
+<body>
+
+<section class="cover">
+  <img src="assets/hypurr-1925.png" alt="">
+  <div class="eb">GAME PLAN · v0.1</div>
+  <h1>하이푸르 <em>롱숏</em></h1>
+  <div class="sub">돈은 안 걸고, 실력과 자랑으로 붙는 60초 트레이딩 대결</div>
+  <div class="meta"><span>작성 <b>2026.10.13</b></span><span>대상 <b>하 빤뚱 · pleasemoney</b></span><span>상태 <b>검토용 초안</b></span></div>
+</section>
+
+<h2><span class="n">00</span>한 장 요약</h2>
+<table>
+  <tbody>
+    <tr><td style="width:20%"><b>한 줄</b></td><td>60초 동안 흘러가는 차트에서 롱이나 숏을 잡고, 레버리지를 정해서 수익률로 겨루는 모의 트레이딩 게임이에요. 실제 돈은 쓰지 않아요.</td></tr>
+    <tr><td><b>누가 하나</b></td><td>크립토를 하는 20~40대 남성, 그리고 주식 단타를 하는 개인 투자자예요.</td></tr>
+    <tr><td><b>왜 하나</b></td><td>승부욕(모두 같은 차트로 순위 경쟁), 인정욕(수익 인증 카드 자랑), 재미(레버리지의 긴장감), 실물 보상(한정 굿즈, 오프라인 결승 초대)이에요.</td></tr>
+    <tr><td><b>우리한테 좋은 점</b></td><td>하이퍼리퀴드의 핵심 경험인 롱숏, 레버리지, 24시간 시장을 돈 없이 맛보게 해요(목표②). 하이푸르를 '트레이딩하는 귀여운 고양이'로 기억하게 만들어요(목표①).</td></tr>
+    <tr><td><b>비용</b></td><td>바이브코딩으로 2~3주면 첫 버전을 만들 수 있어요. 서버 없이 시작할 수 있어요.</td></tr>
+    <tr><td><b>판단 기준</b></td><td>2주 테스트에서 사람들이 다시 오지 않으면 게임은 접고 콘텐츠에 집중해요.</td></tr>
+  </tbody>
+</table>
+
+<h3>지난 프로토타입에서 배운 것</h3>
+<div class="box warn"><span class="tag">반성</span><br>지난 버전(하이푸르 오락실)은 귀엽기만 했어요. 인형뽑기, 머지, 캐치를 모아 놓은 '미니게임천국' 구조라서 특별한 점이 없었어요. 크립토 하는 남자들이 할 이유도 없었어요. 글꼴과 화면도 유아용처럼 보였어요. 이번 기획은 <b>"이 사람들이 왜 이걸 하나"</b>에서 출발해요.</div>
+
+<!-- ============================================ -->
+<section class="page">
+<h2><span class="n">01</span>"에어드랍도 아닌데 왜 해?"에 대한 답</h2>
+<p class="lead">가장 중요한 질문이에요. 크립토 유저는 보통 <b>보상이 있을 때</b> 움직여요. 에어드랍 작업이 대표적이에요. 그래서 우리가 줄 수 있는 것과 줄 수 없는 것을 먼저 나눠 볼게요.</p>
+
+<div class="grid2">
+  <div class="box stop" style="margin:0"><span class="tag">줄 수 없는 것</span>
+    <ul class="small" style="margin-top:4px">
+      <li>토큰, 에어드랍, 포인트를 나중에 코인으로 바꿔 준다는 약속</li>
+      <li>"나중에 뭔가 있을 수도" 같은 암시</li>
+    </ul>
+    <p class="small" style="margin:6px 0 0">이유는 세 가지예요. 우리는 하이퍼리퀴드 팀이 아니라서 약속할 권한이 없어요. 한국에서 가상자산 보상을 미끼로 쓰면 법 문제가 생길 수 있어요. 그리고 보상만 보고 온 사람은 보상이 끝나면 떠나요.</p>
+  </div>
+  <div class="box ok" style="margin:0"><span class="tag">줄 수 있는 것</span>
+    <ul class="small" style="margin-top:4px">
+      <li><b>실력 인증:</b> 매일 모두 같은 차트로 겨뤄서 진짜 실력 순위가 나와요</li>
+      <li><b>자랑거리:</b> 수익 인증 카드, 칭호, 업적으로만 얻는 희귀 하이푸르</li>
+      <li><b>실물 보상:</b> 시즌 상위권에게 한정 하이푸르 인형과 굿즈, 팝업 VIP 초대</li>
+      <li><b>무대:</b> 오프라인 결승전, 하이푸르 코리아 X 계정의 주간 랭커 소개</li>
+    </ul>
+  </div>
+</div>
+
+<h3>크립토 유저가 게임을 하는 이유와 우리 전략</h3>
+<table>
+  <thead><tr><th style="width:18%">동기</th><th style="width:38%">보통 어디서 채우나</th><th>하이푸르 롱숏에서는</th></tr></thead>
+  <tbody>
+    <tr><td><b>돈</b></td><td>에어드랍, 포인트 작업</td><td>안 줘요. 대신 한정판 실물로 대신해요.</td></tr>
+    <tr><td><b>자랑</b></td><td>X에 PnL 카드 인증, 희귀 NFT 프사</td><td>수익 인증 카드, 청산 밈 카드, 희귀 하이푸르 프로필</td></tr>
+    <tr><td><b>경쟁</b></td><td>트레이딩 대회, 리더보드</td><td>오늘의 차트 순위, 라이벌 봇, 시즌 순위, 오프라인 결승</td></tr>
+    <tr><td><b>재미</b></td><td>레버리지 매매의 손맛</td><td>60초 안에 끝나는 긴장감. 수익이 날수록 높아지는 효과음</td></tr>
+    <tr><td><b>소속감</b></td><td>커뮤니티, 단톡방</td><td>"하이푸르 코리아 랭커"라는 이름. 시즌 우승자는 명예의 전당에 영구 기록</td></tr>
+  </tbody>
+</table>
+<div class="box dark"><span class="tag">결론</span><br><b>돈 대신 명예와 한정판으로 움직이게 해요.</b> 크립토 유저는 PnL 카드를 자랑하는 문화가 강해서, 공짜로도 자랑할 거리가 생기면 공유해요. 다만 이게 정말 먹히는지는 2주 테스트로 확인해요. 안 먹히면 게임을 접어요.</div>
+<p class="small">참고로 게임 결과에 따라 경품을 주는 것은 게임산업법상 사행성 규정 검토가 필요해요. 그래서 무료 참여로 하고, 경품은 이벤트 형태로 주고, 반드시 변호사 확인을 받아요. 점수 위조를 막기 위해 큰 상품은 오프라인 결승에서 직접 겨룬 결과로만 줘요.</p>
+</section>
+
+<!-- ============================================ -->
+<section class="page">
+<h2><span class="n">02</span>핵심 게임: 한 판의 흐름</h2>
+<table>
+  <thead><tr><th style="width:15%">순서</th><th>무엇을 하나</th></tr></thead>
+  <tbody>
+    <tr><td><b>1. 시작</b></td><td>종목이 정해져요. 모두 가상 종목이에요. 예: 냥비디아, 테슬냥, 하이닉냥, 비트냥</td></tr>
+    <tr><td><b>2. 매매</b></td><td>캔들이 1초에 2개씩 나와요. <span class="c-long">롱</span>이나 <span class="c-short">숏</span>을 누르고, 레버리지를 1배부터 50배까지 정해요. 언제든 포지션을 닫고 다시 들어갈 수 있어요.</td></tr>
+    <tr><td><b>3. 이벤트</b></td><td>중간에 '고래 등장'(큰 캔들), '속보'(변동성 커짐), '펀딩 타임' 같은 사건이 터져요.</td></tr>
+    <tr><td><b>4. 청산</b></td><td>가격이 청산가에 닿으면 그 판은 끝나요. 레버리지가 높을수록 청산가가 가까워져요.</td></tr>
+    <tr><td><b>5. 결과</b></td><td>60초가 끝나면 최종 수익률(ROE)로 점수가 나와요. 수익 인증 카드가 만들어지고, 순위와 라이벌 결과가 나와요.</td></tr>
+  </tbody>
+</table>
+
+<h3>하이푸르가 귀여움을 맡아요</h3>
+<div class="grid3">
+  <div class="card"><div class="k">레버리지 20배 이상</div><div class="t">땀을 뻘뻘 흘려요</div><p>화면 테두리도 점점 빨개져요.</p></div>
+  <div class="card"><div class="k">수익 +100% 이상</div><div class="t">선글라스를 써요</div><p>효과음도 한 단계 올라가요.</p></div>
+  <div class="card"><div class="k">청산</div><div class="t">눈이 X가 돼서 기절해요</div><p>"청산당했다냥" 메시지와 함께 REKT 카드가 나와요.</p></div>
+</div>
+
+<h3>화면 구성</h3>
+<div class="phones">
+  <div class="ph">
+    <div class="bar"><span>오늘의 차트 #127</span><b>00:42</b></div>
+    <div class="row"><span>냥비디아 · NYDA</span><span class="mono" style="color:var(--long)">+2.4%</span></div>
+    <div class="chart"><svg viewBox="0 0 200 120" preserveAspectRatio="none">
+      <g stroke-width="1"><line x1="12" y1="60" x2="12" y2="90" stroke="#2fd08a"/><rect x="9" y="66" width="6" height="16" fill="#2fd08a"/>
+      <line x1="26" y1="50" x2="26" y2="78" stroke="#2fd08a"/><rect x="23" y="55" width="6" height="15" fill="#2fd08a"/>
+      <line x1="40" y1="52" x2="40" y2="84" stroke="#ff5c6c"/><rect x="37" y="58" width="6" height="18" fill="#ff5c6c"/>
+      <line x1="54" y1="40" x2="54" y2="74" stroke="#2fd08a"/><rect x="51" y="46" width="6" height="22" fill="#2fd08a"/>
+      <line x1="68" y1="30" x2="68" y2="56" stroke="#2fd08a"/><rect x="65" y="34" width="6" height="14" fill="#2fd08a"/>
+      <line x1="82" y1="34" x2="82" y2="62" stroke="#ff5c6c"/><rect x="79" y="38" width="6" height="16" fill="#ff5c6c"/>
+      <line x1="96" y1="44" x2="96" y2="80" stroke="#ff5c6c"/><rect x="93" y="50" width="6" height="22" fill="#ff5c6c"/>
+      <line x1="110" y1="36" x2="110" y2="70" stroke="#2fd08a"/><rect x="107" y="42" width="6" height="20" fill="#2fd08a"/>
+      <line x1="124" y1="22" x2="124" y2="50" stroke="#2fd08a"/><rect x="121" y="26" width="6" height="16" fill="#2fd08a"/>
+      <line x1="138" y1="14" x2="138" y2="40" stroke="#2fd08a"/><rect x="135" y="18" width="6" height="14" fill="#2fd08a"/></g>
+      <line x1="0" y1="62" x2="200" y2="62" stroke="#97fce4" stroke-dasharray="3 3" stroke-width="1"/></svg>
+      <div class="liq" style="top:96px">청산가</div></div>
+    <div class="pos"><span>롱 · 25배</span><b class="mono" style="color:var(--long)">+184%</b></div>
+    <div class="ava"><img src="assets/hypurr-1925.png" alt=""><span>"이대로만 가자냥…"</span></div>
+    <div class="lev"><i></i></div>
+    <div class="btns"><span style="background:var(--long)">롱</span><span style="background:var(--short)">숏</span></div>
+    <div class="cap">게임 화면</div>
+  </div>
+  <div class="ph">
+    <div class="bar"><span>결과</span><b>#127</b></div>
+    <div style="text-align:center;margin-top:6px;color:#86a79e">최종 수익률</div>
+    <div class="mono" style="text-align:center;font-size:24pt;font-weight:700;color:var(--long);line-height:1.1">+312%</div>
+    <div class="row"><span>오늘 순위</span><span class="mono">38 / 1,204</span></div>
+    <div class="row"><span>존버냥</span><span class="c-long">승</span></div>
+    <div class="row"><span>단타냥</span><span class="c-long">승</span></div>
+    <div class="row"><span>풀레버냥</span><span class="c-short">패</span></div>
+    <div class="row"><span>새 칭호</span><span style="color:var(--mint)">50배 생존자</span></div>
+    <div class="btns"><span style="background:var(--mint)">카드 공유</span><span style="background:#2b3d38;color:#cfe6df">다시 하기</span></div>
+    <div class="cap">결과 화면</div>
+  </div>
+  <div class="ph">
+    <div class="bar"><span>시즌 1 순위</span><b>D-9</b></div>
+    <div class="row"><span>1 불꽃 기사 냥</span><span class="mono">+4,820%</span></div>
+    <div class="row"><span>2 존버의 신</span><span class="mono">+3,911%</span></div>
+    <div class="row"><span>3 하닉 장인</span><span class="mono">+3,402%</span></div>
+    <div class="row"><span>…</span><span></span></div>
+    <div class="row me"><span>38 나</span><span class="mono">+1,240%</span></div>
+    <div style="margin-top:6px;color:#86a79e">상위 8명은 팝업 스토어 오프라인 결승에 초대돼요.</div>
+    <div class="ava" style="margin-top:auto"><img src="assets/hypurr-56.png" alt=""><span>시즌 1위 보상: 레전드 '불꽃 기사' 프로필 + 한정 인형</span></div>
+    <div class="cap">순위 화면</div>
+  </div>
+</div>
+<p class="foot-note">화면 속 숫자와 닉네임은 예시예요.</p>
+</section>
+
+<!-- ============================================ -->
+<section class="page">
+<h2><span class="n">03</span>승부욕 장치</h2>
+<table>
+  <thead><tr><th style="width:24%">장치</th><th>어떻게 동작하나</th><th style="width:26%">왜 먹히나</th></tr></thead>
+  <tbody>
+    <tr><td><b>오늘의 차트</b></td><td>하루에 한 번, 모든 사람이 같은 차트로 겨뤄요. 공식 기록은 하루 1판이고, 연습은 무제한이에요.</td><td>운이 아니라 실력 싸움이 돼요. 워들이 이 방식으로 퍼졌어요.</td></tr>
+    <tr><td><b>라이벌 봇 3마리</b></td><td>존버냥(계속 들고 감), 단타냥(짧게 치고 빠짐), 풀레버냥(50배 몰빵). 매일 셋을 다 이기면 '오늘의 승리'예요.</td><td>혼자 해도 상대가 있어요. 봇마다 성격이 달라 매일 결과가 달라요.</td></tr>
+    <tr><td><b>도전장 카드</b></td><td>내 결과 카드를 보내면, 친구가 같은 차트로 도전해요.</td><td>단톡방 안에서 서로 붙게 만들어요.</td></tr>
+    <tr><td><b>시즌 순위</b></td><td>2주 단위 시즌. 매일 공식 기록을 합산해요.</td><td>매일 들어올 이유가 생겨요.</td></tr>
+    <tr><td><b>오프라인 결승</b></td><td>시즌 상위 8명을 팝업 스토어에 초대해 현장에서 결승을 치러요.</td><td>점수 위조를 막고, 목표③ 오프라인 이벤트와 바로 연결돼요.</td></tr>
+  </tbody>
+</table>
+
+<h2 style="margin-top:18px"><span class="n">04</span>인정욕 장치</h2>
+<div class="grid2">
+  <div class="pnl" style="--rc:#4aa7ff">
+    <div class="top"><span>HYPURR LONG/SHORT</span><b>오늘의 차트 #127</b></div>
+    <div class="title">50배 생존자</div>
+    <div class="tk">냥비디아 <span style="background:var(--long);color:var(--term)">LONG 25x</span></div>
+    <div class="roe mono" style="color:var(--long)">+312%</div>
+    <div class="rows"><span>진입</span><b class="mono">142.80</b><span>종료</span><b class="mono">160.62</b><span>순위</span><b class="mono">38 / 1,204</b></div>
+    <img src="assets/hypurr-1925.png" alt="">
+    <div class="foot">모의 게임 · 실제 투자가 아니에요</div>
+  </div>
+  <div class="pnl rekt" style="--rc:#ff5c6c">
+    <div class="top"><span>HYPURR LONG/SHORT</span><b>오늘의 차트 #127</b></div>
+    <div class="tk">테슬냥 <span style="background:var(--short);color:#fff">SHORT 50x</span></div>
+    <div class="roe mono">-100%</div>
+    <div class="rows"><span>버틴 시간</span><b class="mono">00:07</b><span>사인</span><b>풀레버의 최후</b></div>
+    <img src="assets/hypurr-4357.png" alt="">
+    <div class="stamp">REKT</div>
+    <div class="foot">모의 게임 · 실제 투자가 아니에요</div>
+  </div>
+</div>
+<p class="small">수익 카드는 하이퍼리퀴드의 포지션 공유 카드처럼 생겨서 자랑하기 좋아요. 청산 카드도 밈이 돼요. 실패해도 공유할 거리가 생겨요.</p>
+
+<table>
+  <thead><tr><th style="width:24%">장치</th><th>내용</th></tr></thead>
+  <tbody>
+    <tr><td><b>칭호</b></td><td>조건을 달성하면 이름 옆에 붙어요. 예: 50배 생존자, 청산 없이 7일, 하루 +300%, 라이벌 3연승, 시즌 TOP 10</td></tr>
+    <tr><td><b>희귀 하이푸르 프로필</b></td><td>뽑기로는 못 얻고 업적으로만 얻어요. 그래서 희귀 하이푸르는 곧 실력 증명이에요. 등급은 OpenSea 희귀도 색을 그대로 써요(일반, 레어, 에픽, 레전드).</td></tr>
+    <tr><td><b>명예의 전당</b></td><td>시즌 우승자의 닉네임과 하이푸르가 게임 안에 영구히 남아요.</td></tr>
+  </tbody>
+</table>
+</section>
+
+<!-- ============================================ -->
+<section class="page">
+<h2><span class="n">05</span>퍼지는 구조</h2>
+<div class="loop">
+  <div><b>1. 한 판</b>60초 플레이</div>
+  <div><b>2. 카드</b>수익 또는 청산 카드</div>
+  <div><b>3. 공유</b>X, 카톡, 주식 커뮤니티</div>
+  <div><b>4. 도전</b>친구가 같은 차트로</div>
+  <div><b>5. 순위</b>단톡방 안 경쟁</div>
+  <div><b>6. 다시</b>내일의 차트</div>
+</div>
+<p>공유 문구는 워들처럼 짧게 만들어요. 결과를 몰라도 궁금하게 만드는 게 핵심이에요.</p>
+<div class="share">하이푸르 롱숏 #127 · 냥비디아<br>+312% · 25배 · 라이벌 2승 1패<br>■■□■■■□■ 버틴 시간 60초<br>오늘 순위 38 / 1,204</div>
+
+<h2 style="margin-top:18px"><span class="n">06</span>하이퍼리퀴드와 연결 (목표②)</h2>
+<p>이 게임은 주식 하는 사람이 하이퍼리퀴드에서 할 수 있는 경험을 <b>돈 없이, 권유 없이</b> 미리 맛보게 해요.</p>
+<table>
+  <thead><tr><th style="width:24%">게임 속 경험</th><th>실제 하이퍼리퀴드와 연결되는 지점</th></tr></thead>
+  <tbody>
+    <tr><td><b>롱과 숏</b></td><td>주가가 떨어질 때도 수익을 낼 수 있다는 개념</td></tr>
+    <tr><td><b>레버리지와 청산</b></td><td>무기한선물의 위험을 직접 체감해요. 위험 교육 효과도 있어요.</td></tr>
+    <tr><td><b>24시간 시장</b></td><td>'주말 차트' 모드. 주식 시장이 닫혀 있을 때도 가격이 움직인다는 경험</td></tr>
+    <tr><td><b>주식 패러디 종목</b></td><td>냥비디아, 하이닉냥처럼 주식 하는 사람이 바로 알아보는 종목</td></tr>
+  </tbody>
+</table>
+<div class="grid2">
+  <div class="box ok" style="margin:0"><span class="tag">하는 것</span><ul class="small" style="margin-top:3px"><li>용어 설명 (롱, 숏, 청산, 펀딩)</li><li>"하이푸르는 Hyperliquid의 마스코트예요" 정도의 출처 표기</li><li>모든 화면에 "모의 게임이에요. 실제 투자 권유가 아니에요" 표시</li></ul></div>
+  <div class="box stop" style="margin:0"><span class="tag">하지 않는 것</span><ul class="small" style="margin-top:3px"><li>하이퍼리퀴드 가입 링크, 레퍼럴 코드</li><li>"실제로 해 보세요" 같은 문구</li><li>실제 종목명과 실제 가격 사용</li></ul></div>
+</div>
+</section>
+
+<!-- ============================================ -->
+<section class="page">
+<h2><span class="n">07</span>디자인 방향과 레퍼런스</h2>
+<p class="lead">기준은 하나예요. <b>트레이더가 켜도 부끄럽지 않은 화면</b>에 <b>하이푸르의 귀여움</b>을 얹는 것이에요.</p>
+<table>
+  <thead><tr><th style="width:22%">요소</th><th style="width:32%">빌려올 곳</th><th>이렇게 써요</th></tr></thead>
+  <tbody>
+    <tr><td><b>전체 톤</b></td><td>하이퍼리퀴드 거래 화면</td><td>짙은 녹색 배경, 민트 포인트, 깔끔한 선. 장난감 같은 버튼은 쓰지 않아요.</td></tr>
+    <tr><td><b>숫자 글꼴</b></td><td>트레이딩 터미널</td><td>수익률, 가격, 시간은 고정폭 글꼴(JetBrains Mono)로 표시해요. 한글은 Pretendard를 써요.</td></tr>
+    <tr><td><b>공유 카드</b></td><td>하이퍼리퀴드, 바이낸스 PnL 카드</td><td>수익률을 크게, 정보는 작게, 하이푸르를 오른쪽 아래에 둬요.</td></tr>
+    <tr><td><b>희귀도 연출</b></td><td>원신 뽑기 빛, 포켓몬 카드 홀로그램</td><td>업적으로 희귀 하이푸르를 얻을 때 파랑, 보라, 주황 빛이 터지고 카드가 반짝여요.</td></tr>
+    <tr><td><b>손맛</b></td><td>발라트로(Balatro)의 점수 연출</td><td>수익률 숫자가 커질 때 튀고 흔들려요. 효과음 음높이도 같이 올라가요.</td></tr>
+    <tr><td><b>매일 문제</b></td><td>워들</td><td>오늘의 차트 번호, 짧은 공유 문구</td></tr>
+    <tr><td><b>라이벌 말투</b></td><td>동물의 숲 주민 대사</td><td>봇 하이푸르가 짧게 도발해요. 예: "또 50배냐옹?"</td></tr>
+  </tbody>
+</table>
+<div class="box stop"><span class="tag">피할 것</span><br>둥글고 유아적인 글꼴, 파스텔 범벅, 3D 장난감 버튼, 미니게임 모음 구조. 지난 프로토타입에서 문제가 됐던 것들이에요.</div>
+
+<h2 style="margin-top:18px"><span class="n">08</span>첫 버전 범위와 일정</h2>
+<table>
+  <thead><tr><th style="width:14%">주차</th><th>만들 것</th></tr></thead>
+  <tbody>
+    <tr><td><b>1주차</b></td><td>차트 엔진(같은 날짜면 같은 차트), 롱숏 조작, 레버리지, 청산, 결과 카드</td></tr>
+    <tr><td><b>2주차</b></td><td>오늘의 차트, 라이벌 봇 3마리, 칭호 5개, 공용 순위표, 공유 이미지</td></tr>
+    <tr><td><b>3주차</b></td><td>효과음과 연출을 다듬고, 크립토 지인과 주식 지인 20명에게 테스트</td></tr>
+  </tbody>
+</table>
+<table>
+  <thead><tr><th style="width:30%">2주 테스트 성공 기준(안)</th><th>의미</th></tr></thead>
+  <tbody>
+    <tr><td><b>다음 날 재방문 30% 이상</b></td><td>매일 할 이유가 있다는 뜻이에요</td></tr>
+    <tr><td><b>1인당 하루 5판 이상</b></td><td>한 판이 재미있다는 뜻이에요</td></tr>
+    <tr><td><b>카드 공유 10% 이상</b></td><td>자랑하고 싶다는 뜻이에요</td></tr>
+  </tbody>
+</table>
+<p class="small">기준에 못 미치면 게임은 접고 AI 영상, 웹툰, 공모전에 힘을 모아요.</p>
+</section>
+
+<!-- ============================================ -->
+<section class="page">
+<h2><span class="n">09</span>위험 요소</h2>
+<table>
+  <thead><tr><th style="width:20%">위험</th><th>내용</th><th style="width:32%">대응</th></tr></thead>
+  <tbody>
+    <tr><td><b>경품 규제</b></td><td>게임 결과로 경품을 주면 게임산업법상 사행성 문제가 될 수 있어요.</td><td>무료 참여, 이벤트 형태, 변호사 확인</td></tr>
+    <tr><td><b>투자 권유 오해</b></td><td>레버리지 게임이 실제 거래를 부추긴다고 보일 수 있어요.</td><td>가상 종목, 권유 문구와 링크 금지, 위험 고지</td></tr>
+    <tr><td><b>점수 위조</b></td><td>서버 검증 없이 시작하면 점수를 조작할 수 있어요.</td><td>큰 상품은 오프라인 결승 결과로만 지급</td></tr>
+    <tr><td><b>IP 허가</b></td><td>하이푸르 그림은 Hyper Foundation과 각 소유자의 권리예요.</td><td>공개 전에 사용 허가 받기</td></tr>
+    <tr><td><b>재미 검증 실패</b></td><td>만들어도 안 할 수 있어요.</td><td>2주 테스트 기준으로 계속할지 판단</td></tr>
+  </tbody>
+</table>
+
+<h2 style="margin-top:18px"><span class="n">10</span>지금 정해야 할 것</h2>
+<table>
+  <tbody>
+    <tr><td style="width:5%"><b>1</b></td><td><b>게임을 만들지 여부.</b> 이 기획서로 둘이 합의하면 2주 안에 첫 버전을 만들어요.</td></tr>
+    <tr><td><b>2</b></td><td><b>보상 예산.</b> 시즌마다 한정 인형과 굿즈에 쓸 금액</td></tr>
+    <tr><td><b>3</b></td><td><b>법률 검토 범위.</b> 경품 규제, 모의투자 게임의 투자 권유 해당 여부</td></tr>
+    <tr><td><b>4</b></td><td><b>게임 이름.</b> 후보: 하이푸르 롱숏, 냥버리지, 롱이냐 숏이냥</td></tr>
+    <tr><td><b>5</b></td><td><b>테스트 참가자 20명</b> 모집 경로 (크립토 단톡방 지인, 주식 지인)</td></tr>
+  </tbody>
+</table>
+<p class="foot-note">이 문서는 기획 초안이에요. 규제 관련 내용은 법률 자문이 아니고, 실행 전에 변호사 확인이 필요해요. 하이푸르 그림은 OpenSea Hypurr 컬렉션 캡처이며 권리는 Hyper Foundation과 각 소유자에게 있어요.</p>
+</section>
+
+</body>
+</html>
