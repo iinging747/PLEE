@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Hypurr 마케팅 전략</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css">
+<style>
+:root{
+  --ink:#14211f; --ink2:#4a5a57; --ink3:#86948f;
+  --line:#dfe7e4; --soft:#f3f8f6; --soft2:#e8f3ef;
+  --teal:#0b3b36; --mint:#3fcfb4; --mint-l:#dcf7f0;
+  --amber:#a8650a; --amber-l:#fff4e2;
+  --red:#b4232c; --red-l:#fdecee;
+  --green:#127a52; --green-l:#e5f6ee;
+}
+@page{size:A4;margin:16mm 15mm 18mm}
+*{box-sizing:border-box;margin:0;padding:0}
+html{-webkit-print-color-adjust:exact;print-color-adjust:exact}
+body{font-family:'Pretendard','Apple SD Gothic Neo','Noto Sans KR',sans-serif;color:var(--ink);font-size:10pt;line-height:1.62;background:#fff;word-break:keep-all;overflow-wrap:break-word}
+.wrap{max-width:180mm;margin:0 auto}
+
+/* ---------- 표지 블록 ---------- */
+.hero{background:var(--teal);color:#fff;border-radius:14px;padding:22px 24px 20px;margin-bottom:16px;position:relative;overflow:hidden}
+.hero:after{content:"";position:absolute;right:-40px;top:-40px;width:180px;height:180px;border-radius:50%;background:radial-gradient(circle,rgba(63,207,180,.45),rgba(63,207,180,0) 70%)}
+.eyebrow{font-size:8pt;letter-spacing:.14em;font-weight:700;color:var(--mint);text-transform:uppercase}
+.hero h1{font-size:21pt;line-height:1.28;font-weight:800;margin:6px 0 6px;letter-spacing:-.02em}
+.hero .sub{font-size:10.5pt;color:#cfe9e3;font-weight:500}
+.meta{display:flex;flex-wrap:wrap;gap:6px 18px;margin-top:14px;font-size:8.6pt;color:#b9d8d1}
+.meta b{color:#fff;font-weight:600}
+
+/* ---------- 섹션 ---------- */
+h2{font-size:14pt;font-weight:800;color:var(--teal);margin:22px 0 10px;padding-bottom:6px;border-bottom:2px solid var(--teal);letter-spacing:-.01em;break-after:avoid}
+h2 .no{display:inline-block;min-width:24px;color:var(--mint)}
+h3{font-size:11.2pt;font-weight:700;margin:14px 0 6px;color:var(--ink);break-after:avoid}
+h4{font-size:10pt;font-weight:700;margin:10px 0 4px;color:var(--teal);break-after:avoid}
+p{margin:0 0 7px}
+ul,ol{margin:0 0 8px 17px}
+li{margin:2px 0}
+li::marker{color:var(--ink3)}
+.muted{color:var(--ink2)}
+.small{font-size:8.6pt}
+.pb{break-before:page}
+.keep{break-inside:avoid}
+
+/* ---------- 박스·카드 ---------- */
+.box{border:1px solid var(--line);border-radius:10px;padding:12px 14px;margin:8px 0 10px;break-inside:avoid;background:#fff}
+.box.soft{background:var(--soft);border-color:var(--soft2)}
+.box.warn{background:var(--amber-l);border-color:#f4ddb5}
+.box.stop{background:var(--red-l);border-color:#f6cdd1}
+.box.ok{background:var(--green-l);border-color:#c5ead8}
+.box .tag{display:inline-block;font-size:7.8pt;font-weight:700;padding:1px 8px;border-radius:99px;margin-bottom:5px;letter-spacing:.02em}
+.warn .tag{background:#f6d9a6;color:#6b3f00}
+.stop .tag{background:#f3b9bf;color:#7a1219}
+.ok .tag{background:#b6e5cf;color:#0b4d33}
+.soft .tag{background:var(--mint-l);color:var(--teal)}
+
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:9px;margin:8px 0}
+.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:9px;margin:8px 0}
+.card{border:1px solid var(--line);border-radius:10px;padding:11px 12px;break-inside:avoid;background:#fff}
+.card .k{font-size:7.8pt;font-weight:700;color:var(--mint);letter-spacing:.08em;text-transform:uppercase}
+.card .t{font-size:10.4pt;font-weight:700;margin:2px 0 4px;line-height:1.4}
+.card p,.card li{font-size:9pt;color:var(--ink2)}
+.card ul{margin-left:15px}
+.goal{border-top:4px solid var(--mint)}
+.goal .num{font-size:20pt;font-weight:800;color:var(--teal);line-height:1}
+
+/* 요약 */
+.tldr{display:grid;grid-template-columns:92px 1fr;gap:0;border:1px solid var(--line);border-radius:10px;overflow:hidden;margin:6px 0 10px}
+.tldr div{padding:8px 12px;border-bottom:1px solid var(--line);font-size:9.4pt}
+.tldr div:nth-last-child(-n+2){border-bottom:none}
+.tldr .h{background:var(--soft);font-weight:700;color:var(--teal);font-size:8.8pt}
+
+/* 표 */
+table{width:100%;border-collapse:collapse;margin:6px 0 10px;font-size:9pt}
+th{background:var(--teal);color:#fff;font-weight:600;text-align:left;padding:6px 8px;font-size:8.6pt}
+th:first-child{border-top-left-radius:8px}
+th:last-child{border-top-right-radius:8px}
+td{padding:6px 8px;border-bottom:1px solid var(--line);vertical-align:top}
+tr{break-inside:avoid}
+tbody tr:nth-child(even) td{background:#fafcfb}
+td b{color:var(--ink)}
+.c-red{color:var(--red);font-weight:700}
+.c-green{color:var(--green);font-weight:700}
+.c-amber{color:var(--amber);font-weight:700}
+
+/* 메모 인용 */
+.memo{border-left:3px solid var(--mint);background:var(--soft);padding:8px 12px;border-radius:0 8px 8px 0;margin:6px 0 10px;font-size:9.2pt;break-inside:avoid}
+.memo .who{font-size:7.8pt;font-weight:700;color:var(--teal);letter-spacing:.04em}
+
+/* 로드맵 */
+.road{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin:10px 0}
+.phase{border-radius:10px;padding:10px 11px;background:var(--soft);border:1px solid var(--soft2);break-inside:avoid}
+.phase .p{font-size:7.8pt;font-weight:800;color:var(--mint);letter-spacing:.08em}
+.phase .w{font-size:10pt;font-weight:800;color:var(--teal);margin:1px 0}
+.phase .d{font-size:8pt;color:var(--ink3);margin-bottom:5px}
+.phase ul{margin-left:13px}
+.phase li{font-size:8.5pt;color:var(--ink2)}
+.phase.now{background:var(--teal);border-color:var(--teal)}
+.phase.now .w{color:#fff}.phase.now .d{color:#9fc9bf}.phase.now li{color:#dcefea}
+
+/* 원칙 */
+.rule{display:grid;grid-template-columns:28px 1fr;gap:8px;align-items:start;padding:7px 0;border-bottom:1px dashed var(--line);break-inside:avoid}
+.rule:last-child{border-bottom:none}
+.rule .n{width:24px;height:24px;border-radius:50%;background:var(--teal);color:#fff;font-weight:800;font-size:9pt;display:flex;align-items:center;justify-content:center}
+.rule b{display:block;font-size:10pt}
+.rule span{font-size:9pt;color:var(--ink2)}
+
+.chip{display:inline-block;font-size:7.8pt;font-weight:700;padding:1px 7px;border-radius:99px;background:var(--mint-l);color:var(--teal);margin-right:3px;vertical-align:1px}
+.chip.g2{background:#e6ecff;color:#2a3f8f}
+.chip.g3{background:#fde9dc;color:#8a3b0c}
+
+.src{font-size:8pt;color:var(--ink2)}
+.src li{margin:1px 0;word-break:break-all}
+.src a{color:var(--ink2);text-decoration:none}
+.foot-note{font-size:8pt;color:var(--ink3);margin-top:4px}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<!-- ================= 표지 ================= -->
+<section class="hero">
+  <div class="eyebrow">Meeting Note · Strategy Draft</div>
+  <h1>Hypurr 마케팅 미팅 정리 &amp; 발전 방향</h1>
+  <div class="sub">크립토는 뒤로, 캐릭터를 앞으로. 펭구(Pudgy Penguins) 방식을 Hypurr에 적용한다</div>
+  <div class="meta">
+    <span>미팅 <b>2026.10.13 (화) 18:20–19:10</b></span>
+    <span>사전 논의 <b>10.08 · 10.10</b></span>
+    <span>참석 <b>하 빤뚱 · pleasemoney</b></span>
+    <span>상태 <b>논의용 초안</b></span>
+  </div>
+</section>
+
+<h2><span class="no">00</span>한눈에 보기</h2>
+<div class="tldr">
+  <div class="h">우리가 원하는 것</div>
+  <div>Hyperliquid에 <b>직접적으로, 장기적으로</b> 기여하기. 세 갈래로 나눈다. <span class="chip">① 크립토 없이 Hypurr 알리기</span><span class="chip g2">② 주식 거래자 유입</span><span class="chip g3">③ 오프라인 이벤트</span></div>
+  <div class="h">합의한 진단</div>
+  <div>지금까지의 웹3 마케팅은 <b>"그들만의 리그"</b>였다. 텔레그램과 X·스레드 안에서만 돌아서 새로운 사람이 들어오지 않는다. 그래서 <b>웹2 플랫폼에서, 웹2 언어로</b> 간다.</div>
+  <div class="h">핵심 전략</div>
+  <div>먼저 <b>캐릭터 인지도</b>(SNS·AI 영상·웹툰)를 쌓고, 다음으로 <b>참여</b>(이모티콘·영상·웹툰 공모전)를 만든 뒤, <b>실물·오프라인</b>(굿즈·인형 기부·봉사·팝업)으로 넓힌다.</div>
+  <div class="h">참고 성공 사례</div>
+  <div><b>펭구(Pudgy Penguins).</b> GIF 스티커와 마트 장난감으로 대중에게 먼저 다가갔고, 크립토는 관심이 생긴 사람만 찾아오게 했다.</div>
+  <div class="h">가장 큰 변수</div>
+  <div><b>오늘(10/13) FIU가 미신고 해외 가상자산사업자 웹사이트 27곳의 국내 접속을 차단했다.</b> FIU는 '한국인 대상 마케팅'을 신고 의무의 판단 기준으로 보고, 미신고 사업자의 SNS 홍보·레퍼럴 알선을 불법 유형으로 꼽는다. 그래서 <b>캐릭터 IP 중심으로 가고, 거래 권유·레퍼럴은 하지 않는 것</b>을 원칙으로 삼는다.</div>
+</div>
+
+<!-- ================= 1. 목표 ================= -->
+<h2><span class="no">01</span>우리가 원하는 것: 세 가지 목표</h2>
+<div class="memo"><div class="who">하 빤뚱 · 10.08</div>"하던 걸 마무리하고 이쪽으로 해보려고 하는데, 실제적으로 더 많은 기여를 Hyperliquid에 하고 싶거든요, 직접적으로. … 좀 장기적으로."</div>
+<div class="grid3">
+  <div class="card goal"><div class="num">①</div><div class="t">크립토 컨텍스트 없이<br>Hypurr 알리기</div><p>코인을 모르는 사람도 "그 귀여운 고양이"로 Hypurr를 알게 만든다. <b>가장 먼저, 가장 안전하게</b> 시작할 수 있는 영역이다.</p></div>
+  <div class="card goal"><div class="num">②</div><div class="t">주식 거래자<br>Hyperliquid 유입</div><p>주식 투자자 커뮤니티로 웹2 유입을 만든다. 수요는 크지만 <b>규제 리스크도 가장 큰</b> 영역이라 법률 검토가 먼저다.</p></div>
+  <div class="card goal"><div class="num">③</div><div class="t">Hyperliquid<br>오프라인 이벤트 기획</div><p>굿즈·기부·봉사·팝업·밋업으로 <b>실물 접점</b>을 만든다. ①로 쌓은 캐릭터 인지도를 오프라인에서 확인하는 단계다.</p></div>
+</div>
+
+<!-- ================= 2. 미팅 내용 ================= -->
+<h2><span class="no">02</span>미팅 내용 정리 (10.10 · 10.13)</h2>
+<p class="muted small">카카오톡 메모를 주제별로 묶었다. 괄호 안은 원문 표현이다.</p>
+
+<table>
+  <thead><tr><th style="width:22%">주제</th><th>논의 내용</th></tr></thead>
+  <tbody>
+    <tr><td><b>캐릭터 인지도</b><br><span class="chip">목표①</span></td><td>
+      <ul>
+        <li>하이푸르 공식 <b>인스타·틱톡·유튜브</b> SNS 운영</li>
+        <li>레퍼런스: <b>듀오링고 인스타</b>. 캐릭터가 직접 말하고 트렌드 밈에 올라타는 방식</li>
+        <li><b>AI 영상 주 3회 업로드</b>로 꾸준히 노출하고, <b>웹툰 형식</b>도 검토</li>
+        <li>참고 계정: instagram.com/ai_mangwon203 (AI 영상 운영 사례로 공유)</li>
+        <li>목표는 "전반적으로 사람들한테 <b>캐릭터 인식</b>"</li>
+      </ul></td></tr>
+    <tr><td><b>공모전</b><br><span class="chip">목표①</span></td><td>
+      <ul>
+        <li>하이푸르 <b>이모티콘(임티)·스티커 대회</b>를 웹3가 아니라 <b>웹2 공모전</b>으로 연다 (10.10 제안)</li>
+        <li>부문: 스티커 · 영상 · 웹툰</li>
+      </ul></td></tr>
+    <tr><td><b>웹2 유입 채널</b><br><span class="chip g2">목표②</span></td><td>
+      <ul><li>토스 커뮤니티, 주식갤러리(주갤), 주식 커뮤니티, 블로그, 오픈카톡</li></ul></td></tr>
+    <tr><td><b>오프라인·굿즈·기부</b><br><span class="chip g3">목표③</span></td><td>
+      <ul>
+        <li><b>연탄봉사, 유기견 봉사</b>: "원초적인 감정"에 닿는 기부. 회의 중 이태원 참사 당시의 사회적 분위기가 예시로 언급됨</li>
+        <li>굿즈 → <b>인형</b> → <b>보육원 기부</b></li>
+        <li><b>하이푸르 인형뽑기 게임</b>에서 이기면 굿즈 증정</li>
+        <li><b>바이브코딩</b>으로 만든 게임과 연동한 마케팅</li>
+      </ul></td></tr>
+    <tr><td><b>유튜브·타겟</b></td><td>
+      <ul>
+        <li><b>하이퍼리퀴드 관련 유저 영상</b>으로 유튜브 운영</li>
+        <li>마케팅 <b>타겟층</b>을 정의해야 함</li>
+      </ul></td></tr>
+    <tr><td><b>웹3 마케팅 진단</b></td><td>
+      <ul>
+        <li>웹3 마케팅이 실패한 이유는 <b>"그들만의 리그"</b></li>
+        <li>① 텔레그램은 신규 유입이 없다 ② 스레드·트위터 마케팅도 같은 사람끼리 돈다</li>
+        <li>텔레그램을 한다면 <b>대형 채널장 말고 일반 유저들에게</b> 보상을 준다</li>
+      </ul></td></tr>
+    <tr><td><b>확인 과제</b></td><td>
+      <ul><li>한국에서 하이퍼리퀴드 영상을 띄우면 <b>규제</b>에 걸리는지 찾아보고 대응 방법 검토 → <b>§5·§7</b>에 정리</li></ul></td></tr>
+    <tr><td><b>협업 조건(안)</b></td><td>
+      <ul><li><b>월급제</b>로 하되 <b>20~30%는 선불</b>, 나머지는 <b>후불</b> (pleasemoney 제안)</li></ul></td></tr>
+    <tr><td><b>후속</b></td><td>
+      <ul><li>pleasemoney가 오늘 논의를 문서화해 10.14에 공유 예정</li></ul></td></tr>
+  </tbody>
+</table>
+
+<!-- ================= 3. 펭구 ================= -->
+<h2 class="pb"><span class="no">03</span>레퍼런스: 펭구(Pudgy Penguins)는 어떻게 웹2를 뚫었나</h2>
+<p>캐릭터 마케팅으로 성공한 크립토 IP 중 가장 크게 성공한 사례가 펭구다. 핵심은 <b>"크립토 브랜드"가 아니라 "그냥 귀여운 펭귄 캐릭터"로 대중 앞에 섰다</b>는 것이다.</p>
+
+<div class="grid2">
+  <div class="card"><div class="k">GIF · 스티커</div><div class="t">누적 조회 2,300억~3,000억 회</div><p>GIPHY 스티커·GIF가 무료 확산 엔진이었다. 공식 페이지는 2,310억 회 이상, 2026년 3월 보도는 3,000억 회 돌파로 집계한다. 사람들이 대화 중에 쓰는 것 자체가 노출이 됐다.</p></div>
+  <div class="card"><div class="k">실물 장난감</div><div class="t">월마트 → 타깃, 마트 진열대로</div><p>월마트에서 장난감을 팔기 시작했고(약 2,000~3,100개 매장), 2026년 7월에는 타깃 1,800여 개 매장에 봉제인형이 들어갔다. 독일 완구 브랜드 schleich 피규어도 2026년에 나왔다.</p></div>
+  <div class="card"><div class="k">커뮤니티 = IP 공동 소유자</div><div class="t">홀더 캐릭터를 라이선스하고 로열티 지급</div><p>장난감에 쓰인 펭귄 디자인을 NFT 홀더에게서 라이선스하고, 판매 로열티를 홀더에게 나눴다(OverpassIP). 커뮤니티가 자발적으로 홍보하게 되는 구조다.</p></div>
+  <div class="card"><div class="k">실물 → 디지털 연결</div><div class="t">장난감 QR → 웹 게임 Pudgy World</div><p>장난감의 QR 코드를 찍으면 디지털 캐릭터 특성을 받는다. 크립토는 <b>관심 생긴 사람만 여는 '숨은 문'</b>이다. 모바일 게임 Pudgy Party는 2주 만에 50만 다운로드를 넘겼다.</p></div>
+</div>
+<p class="small muted">그 밖에 맨체스터 시티 굿즈 협업, 비자 기반 '펭구 카드'를 냈고, 2025년 9월에는 한국·싱가포르 '아시아 투어'(K팝 공연 포함)를 열었다. 매장 수와 조회수는 출처마다 차이가 있어 범위로 적었다.</p>
+
+<h3>Hypurr에 옮겨올 다섯 가지</h3>
+<table>
+  <thead><tr><th style="width:34%">펭구가 한 것</th><th>Hypurr에 적용</th></tr></thead>
+  <tbody>
+    <tr><td><b>1. GIF·스티커로 공짜 확산</b></td><td>GIPHY 등록 → 인스타 스토리·틱톡 검색에 노출. <b>카카오 이모티콘 스튜디오</b> 제안. 한국에서는 카톡 이모티콘이 가장 강한 스티커 채널이다.</td></tr>
+    <tr><td><b>2. 캐릭터는 앞, 크립토는 뒤</b></td><td>계정·콘텐츠에서 코인·거래 이야기를 뺀다. Hyperliquid로 이어지는 '숨은 문'을 어디까지 열지는 법률 검토 후 정한다.</td></tr>
+    <tr><td><b>3. 실물이 캐릭터를 '진짜'로 만든다</b></td><td>하이푸르 인형을 만들어 판매·증정·보육원 기부로 쓴다. 손에 쥘 수 있는 캐릭터가 화면 속 캐릭터보다 오래 기억된다.</td></tr>
+    <tr><td><b>4. 커뮤니티와 IP를 함께 키운다</b></td><td>공모전 수상작을 공식 이모티콘·굿즈로 만들고 수익 일부를 창작자에게 돌려준다(펭구식 로열티).</td></tr>
+    <tr><td><b>5. 로컬 브랜드·스포츠와 협업</b></td><td>장기 과제. 한국 로컬(카페·편의점·팝업 공간) 협업으로 확장한다.</td></tr>
+  </tbody>
+</table>
+<div class="box warn"><span class="tag">결정적 차이</span><br>펭구는 <b>Igloo Inc.라는 브랜드 회사</b>가 IP·유통·자본을 직접 쥐고 운영한다. Hypurr는 <b>Hyper Foundation의 IP</b>다(Hypurr NFT에는 별도 Terms &amp; License가 적용된다). 그래서 우리가 가장 먼저 확보할 것은 <b>IP 사용 허가</b>, 그리고 공식 협업인지 커뮤니티 프로젝트인지에 대한 <b>포지셔닝</b>이다.</div>
+
+<!-- ================= 4. 발전 방향 ================= -->
+<h2 class="pb"><span class="no">04</span>발전 방향: 목표별 실행안</h2>
+
+<h3>공통 원칙 4가지</h3>
+<div class="box soft" style="padding:4px 14px">
+  <div class="rule"><div class="n">1</div><div><b>캐릭터와 거래소를 분리한다</b><span>Hypurr 계정·콘텐츠는 '귀여운 고양이 IP'로만 운영한다. 가입 링크·레퍼럴·수익 인증·매매 권유는 넣지 않는다.</span></div></div>
+  <div class="rule"><div class="n">2</div><div><b>웹2 플랫폼에서, 웹2 언어로</b><span>인스타·틱톡·쇼츠·카톡 이모티콘·공모전 플랫폼을 쓴다. 'DEX', '무기한선물'을 몰라도 이해되는 콘텐츠만 만든다.</span></div></div>
+  <div class="rule"><div class="n">3</div><div><b>대형 1명보다 일반 유저 100명</b><span>텔레그램·X도 채널장 협찬 대신 팬아트·밈 챌린지·공모전처럼 참여에 보상한다. 회의에서 합의한 방향이다.</span></div></div>
+  <div class="rule"><div class="n">4</div><div><b>한 방보다 꾸준함</b><span>주 3회 고정 업로드와 시즌 단위 기획. 캐릭터 인지도는 반복 노출에서 나온다.</span></div></div>
+</div>
+
+<h3><span class="chip">목표①</span> 크립토 컨텍스트 없이 Hypurr 알리기 · <span class="muted">지금 바로 시작</span></h3>
+<div class="grid2">
+  <div class="card"><div class="k">A. SNS 캐릭터 채널</div><div class="t">인스타 · 틱톡 · 유튜브 쇼츠</div>
+    <ul>
+      <li><b>캐릭터 바이블</b>을 먼저 만든다: 성격, 말투, 세계관, 금지어(코인·수익·레버리지 등)</li>
+      <li>포맷 로테이션: <b>AI 숏폼 주 3회</b>(예: 월·수·금) + <b>4컷 웹툰 주 1회</b> + 밈/스티커</li>
+      <li>듀오링고식 운영: 캐릭터가 직접 댓글을 달고 트렌드 밈에 참여한다</li>
+      <li>지표: 팔로워, 저장·공유율, GIF 조회수</li>
+    </ul></div>
+  <div class="card"><div class="k">B. 웹2 공모전</div><div class="t">이모티콘·스티커 · 숏폼 · 4컷 웹툰</div>
+    <ul>
+      <li>모집 창구: 위비티·씽굿·링커리어·콘테스트코리아 같은 공모전 플랫폼, 대학 디자인·애니메이션 학과</li>
+      <li>상금·상품은 <b>원화·굿즈</b>로 준다 (가상자산 지급 X)</li>
+      <li>수상작을 공식 이모티콘·굿즈로 만들고 수익 일부를 창작자에게 배분</li>
+      <li>사전 필수: Hypurr IP 사용 허가, 응모작 저작권 귀속·2차 이용 조항</li>
+    </ul></div>
+</div>
+<div class="box ok"><span class="tag">이 목표가 1순위인 이유</span><br>캐릭터 콘텐츠는 거래를 권유하지 않으므로 규제 리스크가 가장 낮다. 이후 ②·③ 목표가 모두 이 인지도를 기반으로 한다. 펭구도 이 순서로 성장했다.</div>
+
+<h3><span class="chip g2">목표②</span> 주식 거래자 Hyperliquid 유입 · <span class="muted">장기, 법률 검토 후</span></h3>
+<p><b>수요는 분명하다.</b> Hyperliquid는 HIP-3(빌더가 직접 상장하는 마켓)를 통해 엔비디아·테슬라·S&amp;P 500 같은 <b>주식·지수 무기한선물을 24시간</b> 거래할 수 있다(대표 빌더 trade.xyz). 보도에 따르면 한국 투자자의 SK하이닉스 무기한선물 누적 거래대금은 약 5.8조 원으로, 비트코인 다음으로 크다.</p>
+<p><b>그래서 더 조심해야 한다.</b> FIU는 해외 업체라도 한국어 홈페이지나 한국인 대상 마케팅으로 국내 이용자를 상대하면 신고 의무가 생긴다고 본다. 미신고 사업자를 블로그·SNS로 홍보하거나 레퍼럴로 알선하는 것도 불법 유형으로 꼽는다. 주식 기반 파생상품이라 자본시장법 쟁점이 생길 수도 있다. 우리의 한국인 대상 마케팅이 <b>Hyperliquid 자체에 리스크</b>가 될 수 있다는 점이 핵심이다.</p>
+<div class="grid2">
+  <div class="box ok" style="margin:0"><span class="tag">지금 할 수 있는 것</span>
+    <ul class="small" style="margin-top:4px">
+      <li>가상자산 전문 변호사에게 <b>홍보 가능 범위</b> 자문</li>
+      <li>Hyper Foundation과 <b>사전 협의</b> (한국 시장 활동 여부·범위)</li>
+      <li>토스·주갤에는 광고가 아니라 <b>하이푸르 밈·웹툰</b>으로 들어간다 (목표①의 연장)</li>
+      <li>거래 권유 없는 <b>교육·트렌드 콘텐츠</b> (§5 유튜브 가이드)</li>
+    </ul></div>
+  <div class="box stop" style="margin:0"><span class="tag">하지 말 것</span>
+    <ul class="small" style="margin-top:4px">
+      <li>주식 커뮤니티·오픈카톡에 가입·레퍼럴 링크 배포</li>
+      <li>수익 인증, 매매 리딩, 종목 추천</li>
+      <li>"국내에서 막힌 해외주식 레버리지를 24시간" 같은 <b>규제 우회 소구</b></li>
+      <li>대가를 받고도 광고 표기 없는 바이럴 (뒷광고)</li>
+    </ul></div>
+</div>
+
+<h3><span class="chip g3">목표③</span> Hyperliquid 오프라인 이벤트 기획 · <span class="muted">2~4개월차부터</span></h3>
+<table>
+  <thead><tr><th style="width:22%">아이템</th><th>실행안</th><th style="width:21%">시점</th></tr></thead>
+  <tbody>
+    <tr><td><b>인형 → 기부</b></td><td>하이푸르 인형을 만들어 <b>"1개 사면 1개 보육원 기부"</b> 구조로 판매·증정한다.</td><td>공모전 이후</td></tr>
+    <tr><td><b>봉사</b></td><td><b>연탄봉사</b>는 겨울(12~2월) 시즌에 맞춘다. 고양이 캐릭터와 결이 맞는 <b>유기묘·유기견 보호소</b> 봉사·후원도 좋다. 일회성 이벤트보다 <b>정기 활동</b>으로 한다.</td><td>12월 첫 회</td></tr>
+    <tr><td><b>팝업 + 인형뽑기</b></td><td>성수·홍대 등에서 팝업. 하이푸르 인형뽑기는 <b>무료 체험형</b>으로 운영하고 이기면 굿즈를 준다.</td><td>2027년 봄</td></tr>
+    <tr><td><b>바이브코딩 게임</b></td><td>하이푸르 웹 미니게임을 만들어 온라인·팝업 현장에서 연동한다. 장기적으로는 <b>"Hypurr 미니게임 만들기" 바이브코딩 해커톤</b>으로 확장할 수 있다.</td><td>2027년 초</td></tr>
+    <tr><td><b>커뮤니티 밋업</b></td><td>기존 Hyperliquid 유저·빌더 대상 밋업. 매년 9월경 열리는 <b>코리아 블록체인 위크(KBW) 사이드 이벤트</b>를 장기 목표로 둔다.</td><td>2027년 가을</td></tr>
+  </tbody>
+</table>
+
+<!-- ================= 5. 유튜브 ================= -->
+<h2 class="pb"><span class="no">05</span>하이퍼리퀴드 한국 유튜브, 규제 리스크 없이 운영하려면</h2>
+<div class="box warn"><span class="tag">전제</span><br>규제를 '피해 가는' 운영법은 없고, 피해서도 안 된다. 할 수 있는 것은 <b>처음부터 규제 대상이 되는 행위(거래 권유·영업 알선)를 하지 않는 채널</b>로 설계하는 것이다. 이렇게 하면 채널도 Hyperliquid도 보호된다.</div>
+
+<h3>1. 채널의 정체성: '거래소 홍보 채널'이 아니라 '정보·문화 채널'</h3>
+<ul>
+  <li><b>기술·생태계·사람 이야기</b>를 다루는 채널로 포지셔닝한다. "Hyperliquid로 돈 버는 법"이 아니라 "Hyperliquid는 무엇이고 어떻게 만들어졌나"를 말한다.</li>
+  <li><b>공식/비공식을 명확히</b> 표기한다. 공식 채널이 한국어로 한국인에게 영업하는 모양새가 되면 FIU 기준에서 Hyperliquid 자체의 리스크가 될 수 있다. 처음에는 <b>독립 커뮤니티 채널</b>로 시작하고, 공식 협업은 Hyper Foundation과 법률 검토를 거쳐 결정하는 편이 안전하다.</li>
+  <li>Hypurr 캐릭터를 쓰려면 <b>IP 사용 허가</b>를 먼저 받는다.</li>
+</ul>
+
+<h3>2. 콘텐츠 신호등</h3>
+<table>
+  <thead><tr><th style="width:15%">구분</th><th>예시</th><th style="width:30%">이유</th></tr></thead>
+  <tbody>
+    <tr><td class="c-green">해도 됨</td><td>기술·구조 해설(온체인 오더북, HyperEVM, HIP-3), VC 투자 없이 성장한 Hyperliquid 스토리, 빌더·커뮤니티 인터뷰, 하이푸르 애니메이션, <b>사기·피싱·사칭 주의</b> 콘텐츠, 레버리지·청산 <b>위험</b> 교육</td><td>일반 정보·교육·문화 콘텐츠. 이용을 권유하지 않는다.</td></tr>
+    <tr><td class="c-amber">검토 후</td><td>유저 인터뷰("왜 온체인으로 왔나"), 시장 데이터·뉴스 리뷰, 주식 무기한선물 같은 신상품 소개</td><td>사람·사실 중심으로 만들되 수익·이용 권유로 읽히지 않게 편집하고, 변호사 검토를 거친다.</td></tr>
+    <tr><td class="c-red">하지 말 것</td><td>가입·입금 단계별 튜토리얼, 레퍼럴 코드·수수료 할인 링크, 수익 인증·실시간 매매 방송, 종목·포지션 추천, 유료 리딩방, <b>접속 차단 우회(VPN) 안내</b>, 원화 입금 경로 안내</td><td>미신고 영업 알선, 유사투자자문, 불공정거래로 문제될 소지가 크다.</td></tr>
+  </tbody>
+</table>
+
+<h3>3. 운영 장치</h3>
+<div class="grid2">
+  <div class="card"><div class="t">고정 고지문</div><p>채널 소개·고정 댓글·영상 설명에 넣는다.<br><i>"본 채널은 정보 제공 목적이며 투자 권유가 아닙니다. 특정 거래소 이용을 권하지 않습니다. 해외 가상자산사업자 이용 전 FIU 신고 여부를 확인하세요."</i></p></div>
+  <div class="card"><div class="t">대가 공개</div><p>재단이나 프로젝트에서 대가(금전·토큰·물품)를 받은 영상은 유튜브의 '유료 프로모션 포함' 기능을 켜고, 영상 첫머리에도 고지한다. 공정위 추천·보증 심사지침상 뒷광고는 금지된다.</p></div>
+  <div class="card"><div class="t">수익 구조</div><p>레퍼럴 수익 모델은 쓰지 않는다. 유튜브 광고 수익, 하이푸르 굿즈, 공개된 공식 후원으로 운영한다. 거래량에 연동된 보수는 '영업 알선'으로 보일 수 있다.</p></div>
+  <div class="card"><div class="t">댓글·사칭 관리</div><p>댓글의 레퍼럴·리딩방 링크는 즉시 삭제해서 채널이 알선 통로가 되지 않게 한다. 사칭 계정·가짜 앱 경고를 고정한다.</p></div>
+</div>
+
+<h3>4. 시작 전 체크리스트</h3>
+<ul>
+  <li>첫 10편의 기획안과 <b>금지 표현 리스트</b>를 가상자산 전문 변호사에게 검토받는다</li>
+  <li>운영 주체(개인/법인)와 대가 계약 구조를 정리한다 (거래량 연동 보상 X)</li>
+  <li>FIU 보도자료와 가상자산 관련 입법 동향을 월 1회 확인한다</li>
+</ul>
+
+<h3>5. 시리즈 예시</h3>
+<table>
+  <thead><tr><th style="width:30%">시리즈</th><th>내용</th><th style="width:16%">포맷</th></tr></thead>
+  <tbody>
+    <tr><td><b>Hypurr 데일리</b></td><td>하이푸르 캐릭터 AI 애니메이션. 크립토 언급 없음</td><td>쇼츠 주 3회</td></tr>
+    <tr><td><b>온체인 용어 사전</b></td><td>오더북, 수탁/비수탁, 청산이 뭔지 1분 설명. 위험 고지 포함</td><td>쇼츠</td></tr>
+    <tr><td><b>Hyperliquid 이야기</b></td><td>VC 투자 없이 성장한 과정, 팀·커뮤니티 문화 다큐</td><td>롱폼</td></tr>
+    <tr><td><b>빌더 인터뷰</b></td><td>HyperEVM에서 만드는 팀(한국 빌더 포함)의 이야기</td><td>롱폼</td></tr>
+    <tr><td><b>사기 주의보</b></td><td>사칭 앱·피싱 사이트·리딩방 사기 수법 정리</td><td>쇼츠·롱폼</td></tr>
+  </tbody>
+</table>
+
+<!-- ================= 6. 로드맵 ================= -->
+<h2 class="pb"><span class="no">06</span>로드맵 (안)</h2>
+<div class="road">
+  <div class="phase now"><div class="p">STEP 0</div><div class="w">준비</div><div class="d">10월 말 ~ 11월 초</div>
+    <ul><li>Hypurr IP 허가 문의</li><li>법률 자문</li><li>타겟 정의</li><li>캐릭터 바이블</li><li>계정 개설, 콘텐츠 10개 비축</li><li>협업 조건 확정</li></ul></div>
+  <div class="phase"><div class="p">STEP 1</div><div class="w">론칭</div><div class="d">11월 ~ 12월</div>
+    <ul><li>주 3회 업로드 시작</li><li>GIPHY 스티커 등록</li><li>1차 공모전 공고</li><li>첫 연탄봉사 (12월)</li></ul></div>
+  <div class="phase"><div class="p">STEP 2</div><div class="w">확장</div><div class="d">2027년 1 ~ 2월</div>
+    <ul><li>공모전 시상</li><li>수상작 이모티콘·굿즈화</li><li>인형 제작 → 기부</li><li>웹 미니게임 오픈</li></ul></div>
+  <div class="phase"><div class="p">STEP 3</div><div class="w">오프라인·장기</div><div class="d">2027년 3월 ~</div>
+    <ul><li>팝업 + 인형뽑기</li><li>유튜브 롱폼 시리즈</li><li>목표② 트랙 (법률 검토 결과에 따라)</li><li>KBW 사이드 이벤트</li></ul></div>
+</div>
+<p class="foot-note">성과 지표의 목표치(팔로워, 응모작 수, 굿즈 수량 등)는 STEP 0에서 함께 정한다.</p>
+
+<!-- ================= 7. 리스크 ================= -->
+<h2><span class="no">07</span>리스크 체크리스트</h2>
+<table>
+  <thead><tr><th style="width:17%">리스크</th><th>내용</th><th style="width:33%">대응</th></tr></thead>
+  <tbody>
+    <tr><td><b>가상자산 규제</b></td><td>2026.10.13 FIU가 미신고 해외 가상자산사업자 웹사이트 27곳의 국내 접속을 차단했다(쿠코인·MEXC 등, Hyperliquid는 보도된 명단에 없음). 해외 업체도 한국인 대상 마케팅을 하면 신고 의무 대상이 되고, 미신고 영업은 5년 이하 징역 또는 5천만 원 이하 벌금이다.</td><td>거래 권유·레퍼럴 금지, 캐릭터 계정 분리, 법률 자문, 월 1회 규제 모니터링</td></tr>
+    <tr><td><b>IP 권리</b></td><td>Hypurr는 Hyper Foundation의 IP이고, Hypurr NFT에는 별도 Terms &amp; License가 적용된다.</td><td>굿즈 판매·공모전·이모티콘 등록 전 <b>서면 허가</b></td></tr>
+    <tr><td><b>뒷광고</b></td><td>대가를 받은 게시물을 광고로 표기하지 않으면 표시광고법 위반 소지가 있다.</td><td>모든 대가성 게시물에 '광고' 표기</td></tr>
+    <tr><td><b>커뮤니티 역풍</b></td><td>주갤·토스 커뮤니티는 홍보 글에 대한 거부감이 크다.</td><td>광고 글 대신 사람들이 퍼가고 싶은 밈·웹툰으로</td></tr>
+    <tr><td><b>사회공헌 진정성</b></td><td>재난·참사를 브랜드와 엮으면 큰 역풍을 맞는다. 일회성 봉사는 보여주기로 읽힌다.</td><td>참사·재난 연계 금지, 정기 봉사로 운영</td></tr>
+    <tr><td><b>경품·게임</b></td><td>게임 결과로 경품을 주면 사행성 논란이 생길 수 있고, 실물 인형뽑기 기계는 관련 법의 적용을 받는다.</td><td>무료 참여, 소액 굿즈, 기계 운영 시 법 확인</td></tr>
+    <tr><td><b>협업 조건</b></td><td>월급제 + 선불 20~30% / 잔여 후불 구조에서 후불 조건이 모호하면 분쟁이 생긴다.</td><td>후불 지급 시점·성과 기준·지급 수단을 계약서에 명시</td></tr>
+  </tbody>
+</table>
+
+<!-- ================= 8. 액션 ================= -->
+<h2><span class="no">08</span>다음 할 일</h2>
+<table>
+  <thead><tr><th style="width:6%">#</th><th>할 일</th><th style="width:18%">담당(안)</th><th style="width:15%">기한(안)</th></tr></thead>
+  <tbody>
+    <tr><td>1</td><td>오늘 논의 문서화·공유</td><td>pleasemoney</td><td>10.14</td></tr>
+    <tr><td>2</td><td>Hyper Foundation에 Hypurr IP 사용 범위·한국 활동 협의 요청</td><td>하 빤뚱</td><td>10월 말</td></tr>
+    <tr><td>3</td><td>타겟층 정의 (1차: 20~30대 SNS 이용자 / 2차: 주식 투자자)</td><td>공동</td><td>10월 말</td></tr>
+    <tr><td>4</td><td>협업 조건 확정 (월 금액·선불 비율·후불 조건)</td><td>공동</td><td>10월 말</td></tr>
+    <tr><td>5</td><td>가상자산 전문 변호사 자문 (홍보·유튜브 가능 범위)</td><td>공동</td><td>11월 초</td></tr>
+    <tr><td>6</td><td>캐릭터 바이블 + AI 영상 샘플 3편</td><td>pleasemoney</td><td>11월 초</td></tr>
+    <tr><td>7</td><td>공모전 기획안 (부문·상금·일정·저작권 조항)</td><td>pleasemoney</td><td>11월 중</td></tr>
+    <tr><td>8</td><td>연탄봉사·보호소 봉사처 섭외</td><td>하 빤뚱</td><td>11월 말</td></tr>
+  </tbody>
+</table>
+<p class="foot-note">담당과 기한은 제안이다. 다음 미팅에서 확정한다.</p>
+
+<h2 style="font-size:11pt;margin-top:18px"><span class="no">—</span>참고 출처</h2>
+<ol class="src">
+  <li>헤럴드경제, 「미신고 가상자산업자 웹사이트 막는다…27곳 국내 접속 차단」 — biz.heraldcorp.com/article/10900656</li>
+  <li>Seoul Economic Daily, "Korea Blocks 27 Unregistered Crypto Exchange Sites" (2026.10.13) — en.sedaily.com/finance/2026/10/13/fiu-blocks-27-unregistered-crypto-exchange-sites-including</li>
+  <li>금융위원회 FIU 보도자료 (미신고 불법 가상자산 취급업자 유의사항) — fsc.go.kr/no010101/87177</li>
+  <li>법률신문, 「미신고 가상자산사업자 관련 유의사항」(법무법인 태평양) — lawtimes.co.kr/news/articleView.html?idxno=213930</li>
+  <li>이투데이, 「불법 가상자산 취급업자 피해 경고…FIU "신고 여부 확인해야"」 — etoday.co.kr/news/view/2596708</li>
+  <li>The Block, "Hyperliquid unveils 4,600 Hypurr NFTs" — theblock.co/post/372669/hyperliquid-hypurr-nfts-distributed</li>
+  <li>Talos, "trade.xyz's role in Hyperliquid" — talos.com/insights/trade-xyzs-role-in-hyperliquid</li>
+  <li>StockHub 뉴스 (SK하이닉스 무기한선물 한국 투자자 거래대금 요약) — stockhub.kr/news/news_de3bbe489b8a</li>
+  <li>Pudgy Penguins $PENGU 공식 페이지 — pengu.pudgypenguins.com</li>
+  <li>CoinDesk Research, "Pudgy Penguins: A New Blueprint for Tokenized Culture" — coindesk.com/research/pudgy-penguins-a-new-blueprint-for-tokenized-culture</li>
+  <li>51 Insights, "Pudgy Penguins: A Blueprint for Community-Led Brands" — 51insights.xyz/p/pudgy-penguins-a-blueprint-for-community</li>
+  <li>블록미디어, 펏지펭귄 관련 보도 (아시아 투어·맨시티·펭구 카드) — blockmedia.co.kr/coins/펏지펭귄</li>
+</ol>
+<p class="foot-note">본 문서는 법률 자문이 아니다. 규제 관련 내용은 2026년 10월 13일 기준 공개 보도를 정리한 것이며, 실행 전 전문가 검토가 필요하다.</p>
+
+</div>
+</body>
+</html>
