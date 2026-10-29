@@ -1,0 +1,98 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Elysium promo renderer</title>
+<link rel="stylesheet" href="../node_modules/pretendard/dist/web/static/pretendard.css">
+<link rel="stylesheet" href="../node_modules/@fontsource/jua/400.css">
+<link rel="stylesheet" href="../node_modules/@fontsource/dm-sans/400.css">
+<link rel="stylesheet" href="../node_modules/@fontsource/dm-sans/500.css">
+<link rel="stylesheet" href="../node_modules/@fontsource/dm-sans/600.css">
+<link rel="stylesheet" href="../node_modules/@fontsource/dm-sans/700.css">
+<link rel="stylesheet" href="../node_modules/@fontsource/dm-mono/400.css">
+<link rel="stylesheet" href="../node_modules/@fontsource/dm-mono/500.css">
+<style>html,body{margin:0;background:#000}canvas{display:block;width:960px;height:540px}</style>
+</head>
+<body>
+<canvas id="cv" width="1920" height="1080"></canvas>
+<script type="module">
+import { makeKit } from './lib.js';
+import { createRenderer, FAM } from './renderer.js';
+import * as pro from '../storyboard/pro.js';
+import * as easy from '../storyboard/easy.js';
+
+const MODS = { pro, easy };
+const mctx = document.createElement('canvas').getContext('2d');
+function measure(str, f, w, sz, tr) {
+  mctx.font = `${w} ${sz}px ${FAM[f]}`;
+  mctx.letterSpacing = `${(tr / 1000) * sz}px`;
+  return mctx.measureText(str).width;
+}
+
+function collect(video) {
+  const fonts = new Map();
+  const visit = (layers) => layers.forEach((L) => {
+    if (L.k === 'text') {
+      const key = `${L.w} 40px ${FAM[L.f]}`;
+      const txt = L.cnt ? (L.cnt.pre || '') + '0123456789.' + (L.cnt.suf || '') : L.tx;
+      fonts.set(key, (fonts.get(key) || '') + txt);
+    }
+    if (L.mt) visit([L.mt]);
+  });
+  visit(video.layers);
+  Object.values(video.scenes).forEach((s) => visit(s.layers));
+  Object.values(video.slots).forEach((s) => visit(s.layers || []));
+  return fonts;
+}
+
+let renderer = null;
+async function loadTiming(name) {
+  try {
+    const r = await fetch(`../build/narration_${name}.json`, { cache: 'no-store' });
+    return r.ok ? await r.json() : null;
+  } catch (e) {
+    return null;
+  }
+}
+window.compile = async (name) => {
+  const timing = await loadTiming(name);
+  // pass 1 discovers every glyph, then load those font subsets and re-measure
+  let video = MODS[name].build(makeKit(measure), timing);
+  const fonts = collect(video);
+  await Promise.all([...fonts].map(([font, txt]) => document.fonts.load(font, txt)));
+  await document.fonts.ready;
+  video = MODS[name].build(makeKit(measure), timing);
+  video.timingSource = timing ? 'elevenlabs' : 'estimate';
+  return video;
+};
+function imageSources(video) {
+  const out = new Set();
+  const visit = (layers) => layers.forEach((L) => L.k === 'img' && out.add(L.src));
+  visit(video.layers);
+  Object.values(video.scenes).forEach((s) => visit(s.layers));
+  Object.values(video.slots).forEach((s) => visit(s.layers || []));
+  return [...out];
+}
+async function loadImages(video) {
+  const map = {};
+  await Promise.all(imageSources(video).map((src) => new Promise((res) => {
+    const img = new Image();
+    img.onload = () => { map[src] = img; res(); };
+    img.onerror = () => { map[src] = null; res(); };
+    img.src = '../' + src;
+  })));
+  return map;
+}
+window.setup = async (name) => {
+  const video = await window.compile(name);
+  renderer = createRenderer(document.getElementById('cv'), video, await loadImages(video));
+  return { dur: video.dur, fps: video.fps };
+};
+window.frame = (t, type = 'image/png', q) => {
+  renderer.frame(t);
+  return document.getElementById('cv').toDataURL(type, q);
+};
+window.ready = true;
+</script>
+</body>
+</html>
