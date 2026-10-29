@@ -1,0 +1,11 @@
+{
+ "voice_id": "0mlAtfsvMzFpppUuNWkV",
+ "name": "Seunghyeon",
+ "description": "This voice conveys the warmth and expertise of a friendly professional, breaking down complex economic concepts into everyday language. With its smooth, mid-to-low range tone, it remains pleasant to the ear even during extended listening sessions—making it ideally suited for narrating educational content or long-form analytical videos.\n",
+ "query": {
+  "language": "ko",
+  "gender": "male",
+  "age": "middle_aged",
+  "use_cases": "informative_educational"
+ }
+}
