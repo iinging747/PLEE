@@ -49,7 +49,7 @@ function collect(video) {
 let renderer = null;
 async function loadTiming(name) {
   try {
-    const r = await fetch(`../build/narration_${name}.json`, { cache: 'no-store' });
+    const r = await fetch(`../dist/audio/narration_${name}.json`, { cache: 'no-store' });
     return r.ok ? await r.json() : null;
   } catch (e) {
     return null;

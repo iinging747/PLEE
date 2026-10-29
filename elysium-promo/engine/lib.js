@@ -605,6 +605,184 @@ export function cat(kit, S, x, ground, scale = 1, o = {}) {
 }
 
 // ---------------------------------------------------------------------------
+// Hypurr: the provided base character (assets/stickers/hypurr_sit.png) cut
+// into head / body / tail (engine/cut-rig.py) and rigged with parented nulls:
+//   ROOT (placement, hops, lean) > BODY (breathing) > TAIL (sway)
+//                                               > HEAD idle > HEAD (tilts)
+// Face overlays on the head add blinks, a talking mouth, happy eyes, glasses,
+// sparkles and a sweat drop, drawn in the character's own line style.
+
+const RIG = {
+  size: [579, 813],
+  origin: [290, 800],
+  neck: [245, 445],
+  tailBase: [455, 672],
+  chin: [[0, 400], [60, 415], [120, 437], [170, 447], [250, 450], [300, 437], [350, 425], [400, 405], [430, 380], [450, 365]],
+  eyes: [{ c: [111.5, 325.5], sz: [43, 63] }, { c: [309.5, 298.5], sz: [49, 69] }],
+  mouth: [196, 352],
+  line: '#0B1F1E',
+  fur: '#FFFFFF',
+};
+const MOODS = {
+  idle: { head: 0, lean: 0 },
+  point: { head: 7, lean: 3 },
+  pointUp: { head: -8, lean: 2, hop: 1 },
+  present: { head: 4, hop: 1, sparkle: 1 },
+  open: { head: 0, hop: 1, happy: 0.9 },
+  cheer: { head: 0, hop: 2, happy: 1.4 },
+  hold: { head: 5, lean: 1 },
+  shrug: { head: -9, lean: 0, sweat: 1 },
+  stop: { head: -5, lean: -3 },
+};
+let rigSeq = 0;
+
+export function mascot(kit, S, x, ground, height, o = {}) {
+  const k = height / RIG.size[1];
+  const rp = (p) => [r2((p[0] - RIG.origin[0]) * k), r2((p[1] - RIG.origin[1]) * k)];
+  const neg = (p) => [-p[0], -p[1]];
+  const pv = [r2(RIG.origin[0] / RIG.size[0]), r2(RIG.origin[1] / RIG.size[1])];
+  const fit = [r2(RIG.size[0] * k), r2(RIG.size[1] * k)];
+  const u = `${S.id}_hyp${++rigSeq}`;
+  const id = (n) => `${u}_${n}`;
+  const lw = (w) => r2(w * k);
+  const base = { in: 0, out: S.dur };
+  const neck = rp(RIG.neck);
+  const tailB = rp(RIG.tailBase);
+  const nul = (n, extra) => ({ k: 'null', n: `Hypurr ${n}`, id: id(n), a: [0, 0], ...base, ...extra });
+  const img = (n, file, par, p) => ({ k: 'img', n: `Hypurr ${n}`, src: `assets/stickers/rig/${file}`, fit, pv, par: id(par), p, ...base });
+
+  const root = nul('ROOT', { p: [r2(x), r2(ground)], kf: {} });
+  const body = nul('BODY', { par: id('ROOT'), p: [0, 0], ex: { s: { fn: 'breath', a: 1.1, f: 2.3 } } });
+  const tail = nul('TAIL', { par: id('BODY'), p: tailB, ex: { r: { fn: 'sway', a: 5, f: 1.7, ph: 0 } } });
+  const headIdle = nul('HEAD idle', { par: id('BODY'), p: neck, ex: { r: { fn: 'sway', a: 1.6, f: 1.15, ph: 0.8 } } });
+  const head = nul('HEAD', { par: id('HEAD idle'), p: [0, 0], kf: {} });
+  // white neck patch under the chin so tilting the head never opens a gap
+  const chin = RIG.chin.map(rp);
+  const neckFill = { k: 'shape', n: 'Hypurr neck fill', par: id('BODY'), p: [0, 0], ...base, it: [{ t: 'path', v: [...chin, ...chin.slice().reverse().map(([a, b]) => [a, r2(b - 46 * k)])], cl: true, fl: { c: RIG.fur, o: 100 } }] };
+
+  // face rig (head space): blink covers, happy eyes, talking mouth, extras
+  const fp = (p) => {
+    const q = rp(p);
+    return [r2(q[0] - neck[0]), r2(q[1] - neck[1])];
+  };
+  const face = [];
+  const happyItems = [];
+  for (const e of RIG.eyes) {
+    const c = fp(e.c);
+    const cover = [r2((e.sz[0] + 14) * k), r2((e.sz[1] + 14) * k)];
+    const blink = { fn: 'blinkO', ph: 0.5, per: 3.8 };
+    face.push({ t: 'ell', sz: cover, ps: c, fl: { c: RIG.fur, o: 100 }, ge: { o: blink } });
+    face.push({ t: 'path', ...smooth([[c[0] - cover[0] * 0.42, c[1] + 4 * k], [c[0], c[1] + 12 * k], [c[0] + cover[0] * 0.42, c[1] + 4 * k]], false), st: { c: RIG.line, w: lw(6), o: 100, cap: 'r' }, ge: { o: blink } });
+    const hc = { t: 'ell', sz: cover, ps: c, fl: { c: RIG.fur, o: 100 }, go: 0 };
+    const ha = { t: 'path', ...smooth([[c[0] - cover[0] * 0.4, c[1] + 8 * k], [c[0], c[1] - 14 * k], [c[0] + cover[0] * 0.4, c[1] + 8 * k]], false), st: { c: RIG.line, w: lw(7), o: 100, cap: 'r' }, go: 0 };
+    face.push(hc, ha);
+    happyItems.push(hc, ha);
+  }
+  const mc = fp(RIG.mouth);
+  const mouth = { t: 'ell', sz: [lw(30), lw(26)], ps: [mc[0], r2(mc[1] + 11 * k)], fl: { c: '#E46F8A', o: 100 }, st: { c: RIG.line, w: lw(4.5), o: 100 }, ga: mc, ge: { s: { fn: 'talk', w: [], f: 15 } } };
+  face.push(mouth);
+  if (o.glasses) {
+    for (const e of RIG.eyes) {
+      const c = fp(e.c);
+      face.push({ t: 'ell', sz: [lw(e.sz[0] + 58), lw(e.sz[1] + 30)], ps: c, st: { c: '#E5352E', w: lw(9), o: 100 } });
+    }
+    const [l, r] = RIG.eyes.map((e) => fp(e.c));
+    face.push({ t: 'path', ...smooth([[r2(l[0] + lw(50)), r2(l[1] - lw(4))], [r2((l[0] + r[0]) / 2), r2((l[1] + r[1]) / 2 - lw(14))], [r2(r[0] - lw(52)), r2(r[1] - lw(2))]], false), st: { c: '#E5352E', w: lw(8), o: 100, cap: 'r' } });
+  }
+  const top = fp([60, 120]);
+  const sparkle = { t: 'path', v: [[top[0], r2(top[1] - 30 * k)], [r2(top[0] + 9 * k), r2(top[1] - 9 * k)], [r2(top[0] + 30 * k), top[1]], [r2(top[0] + 9 * k), r2(top[1] + 9 * k)], [top[0], r2(top[1] + 30 * k)], [r2(top[0] - 9 * k), r2(top[1] + 9 * k)], [r2(top[0] - 30 * k), top[1]], [r2(top[0] - 9 * k), r2(top[1] - 9 * k)]], cl: true, fl: { c: '#FFE36E', o: 100 }, st: { c: RIG.line, w: lw(5), o: 100 }, ga: top, gkf: { s: [[0, [0, 0], 'h']] } };
+  const sw = fp([420, 200]);
+  const sweat = { t: 'path', ...smooth([[sw[0], r2(sw[1] - 26 * k), 'c'], [r2(sw[0] + 13 * k), r2(sw[1] + 4 * k)], [sw[0], r2(sw[1] + 16 * k)], [r2(sw[0] - 13 * k), r2(sw[1] + 4 * k)]], true, 0.9), fl: { c: '#8FD6F5', o: 100 }, st: { c: RIG.line, w: lw(4), o: 100 }, ga: sw, gkf: { s: [[0, [0, 0], 'h']] } };
+  face.push(sparkle, sweat);
+
+  const L = [
+    root, body, tail,
+    img('tail', 'hypurr_tail.png', 'TAIL', neg(tailB)),
+    neckFill,
+    img('body', 'hypurr_body.png', 'BODY', [0, 0]),
+    headIdle, head,
+    img('head', 'hypurr_head.png', 'HEAD', neg(neck)),
+    { k: 'shape', n: 'Hypurr face rig', par: id('HEAD'), p: [0, 0], it: face, ...base },
+  ];
+  if (o.at) for (const l of L) if (l.k !== 'null') l.kf = { ...(l.kf || {}), o: [[o.at, 0, 'so'], [o.at + 0.35, 100, 'l']] };
+  S.layers.push(...L);
+
+  // keyframe builders
+  const keys = { head: [[0, 0, 'l']], lean: [[0, 0, 'l']], pos: [], happy: [[0, 0, 'h']], sparkle: [[0, [0, 0], 'h']], sweat: [[0, [0, 0], 'h']] };
+  let cur = { head: 0, lean: 0 };
+  const P = [r2(x), r2(ground)];
+  const popKeys = (arr, t, hold = 0.9) => arr.push([r2(t), [0, 0], 'o'], [r2(t + 0.22), [115, 115], 'io'], [r2(t + 0.36), [100, 100], 'l'], [r2(t + 0.36 + hold), [100, 100], 'i'], [r2(t + 0.56 + hold), [0, 0], 'h']);
+  const api = {
+    layers: L,
+    pose(t, name, d = 0.32) {
+      const m = MOODS[name] || MOODS.idle;
+      keys.head.push([r2(t), cur.head, 'o'], [r2(t + d), m.head, 'l']);
+      keys.lean.push([r2(t), cur.lean, 'o'], [r2(t + d), m.lean || 0, 'l']);
+      cur = { head: m.head, lean: m.lean || 0 };
+      for (let i = 0; i < (m.hop || 0); i++) api.hop(t + i * 0.42);
+      if (m.happy) api.happy(t, t + m.happy);
+      if (m.sparkle) popKeys(keys.sparkle, t + 0.1);
+      if (m.sweat) popKeys(keys.sweat, t + 0.15, 1.2);
+      return api;
+    },
+    wave(t, n = 3) {
+      keys.lean.push([r2(t), cur.lean, 'io']);
+      for (let i = 0; i < n * 2; i++) keys.lean.push([r2(t + 0.17 * (i + 1)), cur.lean + (i % 2 ? -5 : 5), 'io']);
+      keys.lean.push([r2(t + 0.17 * (n * 2 + 1)), cur.lean, 'l']);
+      api.happy(t, t + 0.17 * (n * 2 + 1));
+      return api;
+    },
+    happy(t0, t1) {
+      keys.happy.push([r2(t0), 100, 'h'], [r2(t1), 0, 'h']);
+      return api;
+    },
+    sparkle(t) {
+      popKeys(keys.sparkle, t);
+      return api;
+    },
+    hop(t, h = 34) {
+      keys.pos.push([r2(t), P, 'o'], [r2(t + 0.17), [P[0], r2(P[1] - h * k * 1.6)], 'io'], [r2(t + 0.38), P, 'l']);
+      return api;
+    },
+    enter(t0, t1, fromX) {
+      const n = Math.max(2, Math.round((t1 - t0) / 0.3));
+      for (let i = 0; i <= n; i++) {
+        const uu = i / n;
+        keys.pos.push([r2(t0 + (t1 - t0) * uu), [r2(fromX + (P[0] - fromX) * (1 - (1 - uu) ** 2)), r2(P[1] - (i % 2 ? 26 * k * 1.6 : 0))], 'io']);
+      }
+      return api;
+    },
+    talk(windows) {
+      mouth.ge.s.w = windows.map(([a, b]) => [r2(a), r2(b)]);
+      return api;
+    },
+    // a spot beside the character for props (comp space)
+    hand() {
+      return [r2(x + 190 * k), r2(ground - 330 * k)];
+    },
+    done() {
+      const kf = { r: keys.head };
+      sortKf(kf);
+      head.kf.r = kf.r;
+      const lk = { r: keys.lean, p: keys.pos };
+      if (!lk.p.length) delete lk.p;
+      sortKf(lk);
+      root.kf = { ...root.kf, ...lk };
+      const hk = { o: keys.happy };
+      sortKf(hk);
+      if (hk.o.length > 1) for (const it of happyItems) it.gkf = { o: hk.o };
+      for (const [item, arr] of [[sparkle, keys.sparkle], [sweat, keys.sweat]]) {
+        const g = { s: arr };
+        sortKf(g);
+        item.gkf = { s: g.s };
+      }
+      return api;
+    },
+  };
+  return api;
+}
+
+// ---------------------------------------------------------------------------
 // Main comp: paper background + vignette under the scenes, grain + fades above.
 
 export function mainLayers(video) {

@@ -5,7 +5,7 @@
 //
 // Steps (each can be run alone): voice | music | sfx | mix | all
 //   voice  TTS per narration line of both videos -> dist/audio/vo/<video>/<line>.mp3
-//          and build/narration_<video>.json (real line lengths). The storyboards
+//          and dist/audio/narration_<video>.json (real line lengths). The storyboards
 //          re-time their shots to these lengths on the next compile.
 //   music  one instrumental track per video, exactly as long as the video
 //   sfx    one sound per cue type used by the storyboards (whoosh, impact, ...)
@@ -77,7 +77,7 @@ async function post(url, body, out) {
 // Voice casting: an env voice id wins; otherwise search the shared Voice
 // Library for a native Korean narrator matching the brief (trustworthy expert:
 // male, middle-aged, informative), add it to the account, and cache the choice
-// in build/voice.json so every rerun uses the same voice.
+// in dist/audio/voice.json so every rerun uses the same voice.
 const CASTING = {
   brief: 'trustworthy Korean expert narrator',
   queries: [
@@ -97,7 +97,7 @@ async function getJSON(url) {
 
 async function castVoice() {
   if (process.env.ELEVENLABS_VOICE_ID) return process.env.ELEVENLABS_VOICE_ID;
-  const cache = path.join(ROOT, 'build', 'voice.json');
+  const cache = path.join(AUDIO, 'voice.json');
   if (!force && fs.existsSync(cache)) return JSON.parse(fs.readFileSync(cache, 'utf8')).voice_id;
   for (const q of CASTING.queries) {
     try {
@@ -150,7 +150,7 @@ async function voice() {
       }
       lines[l.id] = Math.round(durOf(out) * 100) / 100;
     }
-    fs.writeFileSync(path.join(ROOT, 'build', `narration_${id}.json`), JSON.stringify({ voice: voiceId, model: MODEL, lines }, null, 1));
+    fs.writeFileSync(path.join(AUDIO, `narration_${id}.json`), JSON.stringify({ voice: voiceId, model: MODEL, lines }, null, 1));
     console.log(`narration ${id}: ${Object.keys(lines).length} lines, ${Object.values(lines).reduce((a, b) => a + b, 0).toFixed(1)}s`);
   }
   console.log('re-timing storyboards to the real narration');
@@ -163,7 +163,14 @@ async function music() {
     const out = path.join(AUDIO, `music_${id}.mp3`);
     if (!force && fs.existsSync(out) && Math.abs(durOf(out) - v.dur) < 1) continue;
     console.log(`  music ${id} ${v.dur}s`);
-    await post('/v1/music?output_format=mp3_44100_128', { prompt: MUSIC[id], music_length_ms: Math.round(v.dur * 1000), model_id: 'music_v1', force_instrumental: true }, out);
+    const body = { prompt: MUSIC[id], music_length_ms: Math.round(v.dur * 1000), model_id: 'music_v1', force_instrumental: true };
+    try {
+      await post('/v1/music?output_format=mp3_44100_128', body, out);
+    } catch (e) {
+      if (!/ 4(00|22):/.test(e.message)) throw e;
+      delete body.force_instrumental;
+      await post('/v1/music?output_format=mp3_44100_128', body, out);
+    }
   }
 }
 
@@ -181,7 +188,8 @@ async function sfx() {
 function mix() {
   for (const id of ['pro', 'easy']) {
     const v = video(id);
-    const musicFile = path.join(AUDIO, `music_${id}.mp3`);
+    let musicFile = path.join(AUDIO, `music_${id}.mp3`);
+    if (!fs.existsSync(musicFile)) musicFile = path.join(AUDIO, `temp_music_${id}.mp3`);
     if (!fs.existsSync(musicFile)) {
       console.warn(`skip mix ${id}: no music`);
       continue;
@@ -240,7 +248,15 @@ need(KEY || step === 'mix', 'ELEVENLABS_API_KEY is not set (add it as an environ
 fs.mkdirSync(AUDIO, { recursive: true });
 if (!fs.existsSync(path.join(ROOT, 'build', 'easy.json'))) compile();
 if (step === 'voice' || step === 'all') await voice();
-if (step === 'music' || step === 'all') await music();
-if (step === 'sfx' || step === 'all') await sfx();
+const soft = async (name, fn) => {
+  try {
+    await fn();
+  } catch (e) {
+    if (step !== 'all') throw e;
+    console.warn(`✖ ${name} failed, continuing: ${e.message}`);
+  }
+};
+if (step === 'music' || step === 'all') await soft('music', music);
+if (step === 'sfx' || step === 'all') await soft('sfx', sfx);
 if (step === 'mix' || step === 'all') mix();
 console.log('done. Next: npm run jsx && npm run render');

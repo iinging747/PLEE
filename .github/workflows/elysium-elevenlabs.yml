@@ -1,0 +1,56 @@
+# Generates the Elysium promo audio (narration, music, SFX) with ElevenLabs on
+# a GitHub-hosted runner and pushes the files back to the given branch.
+# Run it from the Actions tab (or the API) with the ElevenLabs API key as input.
+name: Elysium ElevenLabs audio
+on:
+  workflow_dispatch:
+    inputs:
+      api_key:
+        description: ElevenLabs API key (read from the event payload and masked; rotate it afterwards)
+        required: true
+      branch:
+        description: Branch with the storyboards; the audio is pushed back here
+        required: true
+        default: claude/affectionate-einstein-ynncku
+      voice_id:
+        description: Optional ElevenLabs voice id (default casts a Korean expert narrator)
+        required: false
+permissions:
+  contents: write
+jobs:
+  audio:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    steps:
+      # the key never appears in a command line or an env block, so logs only show ***
+      - name: Mask the API key
+        run: |
+          KEY=$(jq -r '.inputs.api_key' "$GITHUB_EVENT_PATH")
+          echo "::add-mask::$KEY"
+          echo "ELEVENLABS_API_KEY=$KEY" >> "$GITHUB_ENV"
+          VID=$(jq -r '.inputs.voice_id // empty' "$GITHUB_EVENT_PATH")
+          if [ -n "$VID" ]; then echo "ELEVENLABS_VOICE_ID=$VID" >> "$GITHUB_ENV"; fi
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ inputs.branch }}
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Install ffmpeg, fonts and Chromium
+        working-directory: elysium-promo
+        run: |
+          sudo apt-get update -qq && sudo apt-get install -y -qq ffmpeg
+          npm ci --no-audit --no-fund
+          npm i --no-save --no-audit --no-fund playwright@1.63.0
+          npx playwright install --with-deps chromium
+      - name: Generate narration, music and SFX
+        working-directory: elysium-promo
+        run: node engine/elevenlabs.mjs all
+      - name: Push the audio back
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add elysium-promo/dist/audio
+          git commit -m "Add ElevenLabs narration, music and SFX" || { echo "nothing to commit"; exit 0; }
+          git pull --rebase origin "${{ inputs.branch }}"
+          git push origin "HEAD:${{ inputs.branch }}"
