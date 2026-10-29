@@ -1,0 +1,11 @@
+{
+ "voice_id": "m3gJBS8OofDJfycyA2Ip",
+ "name": "Taehyung - Natural, Friendly and Clear",
+ "description": "Young Korean male voice. Good for Social Media.",
+ "query": {
+  "language": "ko",
+  "gender": "male",
+  "age": "young",
+  "use_cases": "social_media"
+ }
+}
