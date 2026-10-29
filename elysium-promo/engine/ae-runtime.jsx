@@ -359,8 +359,17 @@ function buildAdjust(comp, L) {
 
 var BLENDS = { screen: 'SCREEN', add: 'ADD', multiply: 'MULTIPLY', overlay: 'OVERLAY' };
 
+var PARENTS = {}; // comp id -> { layer id -> Layer }, for parenting
+
 function finishLayer(comp, lay, L, isMatte) {
   lay.name = L.n || lay.name;
+  // parent first, so every transform value below is in the parent's space
+  var reg = PARENTS[comp.id] || (PARENTS[comp.id] = {});
+  if (L.id) reg[L.id] = lay;
+  if (L.par) {
+    if (!reg[L.par]) throw new Error('parent ' + L.par + ' not built before ' + L.n);
+    lay.parent = reg[L.par];
+  }
   var nested = L.k === 'comp' || L.k === 'slot';
   if (nested) lay.startTime = L['in'] || 0;
   var inT = L['in'] || 0, outT = L.out === undefined ? comp.duration : L.out;
@@ -372,7 +381,7 @@ function finishLayer(comp, lay, L, isMatte) {
   var tr = lay.property('ADBE Transform Group');
   var ex = L.exAE || {};
   var kf = L.kf || {};
-  if (L.a || L.k === 'text' || L.k === 'shape') tr.property('ADBE Anchor Point').setValue(fit(tr.property('ADBE Anchor Point'), L.a || [0, 0], 0));
+  if (L.a || L.k === 'text' || L.k === 'shape' || L.k === 'null') tr.property('ADBE Anchor Point').setValue(fit(tr.property('ADBE Anchor Point'), L.a || [0, 0], 0));
   if (L.k === 'img' && L.pv) tr.property('ADBE Anchor Point').setValue(fit(tr.property('ADBE Anchor Point'), [L.pv[0] * L._fw, L.pv[1] * L._fh], 0));
   drive(tr.property('ADBE Position'), L.p || [0, 0], kf.p, ex.p, 0);
   var sk = L._k || 1;
@@ -452,6 +461,7 @@ function buildLayer(comp, L, isMatte) {
   else if (L.k === 'comp') lay = comp.layers.add(CTX.scenes[L.ref]);
   else if (L.k === 'slot') lay = comp.layers.add(CTX.slots[L.ref]);
   else if (L.k === 'img') lay = buildImage(comp, L);
+  else if (L.k === 'null') { lay = comp.layers.addNull(comp.duration); lay.enabled = false; }
   else throw new Error('unknown layer kind ' + L.k);
   return finishLayer(comp, lay, L, isMatte);
 }

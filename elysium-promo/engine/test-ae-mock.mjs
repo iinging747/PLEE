@@ -248,6 +248,13 @@ class Layer {
     L.splice(L.indexOf(this), 1);
     L.push(this);
   }
+  set parent(p) {
+    if (p !== null && (!(p instanceof Layer) || p.containingComp !== this.containingComp)) fail('parent must be a layer in the same comp');
+    this._parent = p;
+  }
+  get parent() {
+    return this._parent || null;
+  }
   setTrackMatte(m) {
     if (!(m instanceof Layer)) fail('setTrackMatte needs a layer');
     this._matte = m;
@@ -256,9 +263,10 @@ class Layer {
 }
 
 class Comp {
+  static seq = 0;
   constructor(name, w, h, par, dur, fps) {
     if (!(dur > 0) || !(fps > 0) || !(w > 0)) fail(`bad comp params ${name}`);
-    Object.assign(this, { name, width: w, height: h, duration: dur, frameRate: fps, parentFolder: null });
+    Object.assign(this, { name, width: w, height: h, duration: dur, frameRate: fps, parentFolder: null, id: ++Comp.seq });
     const comp = this;
     this.layers = {
       _list: [],
@@ -272,6 +280,10 @@ class Comp {
         return l;
       },
       addShape: () => comp.layers._push(new Layer(comp, 'shape')),
+      addNull: (d) => {
+        if (!(d > 0)) fail('bad addNull duration');
+        return comp.layers._push(new Layer(comp, 'null'));
+      },
       addSolid: (c, n, w2, h2, p, d) => {
         if (c.length !== 3 || !(w2 >= 1) || !(h2 >= 1) || !(d > 0)) fail('bad addSolid args');
         return comp.layers._push(new Layer(comp, 'solid', { name: n }));

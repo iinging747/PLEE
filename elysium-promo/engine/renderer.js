@@ -110,7 +110,13 @@ export function createRenderer(canvas, video, images = {}) {
   }
   const grainPat = ctx.createPattern(grain, 'repeat');
 
-  function transform(c, L, t) {
+  // parenting: a layer's `par` names another layer (usually a null) in the
+  // same comp; its transform is applied first, exactly like AE parenting
+  function transform(c, L, t, scope) {
+    if (L.par && scope) {
+      const P = scope.get(L.par);
+      if (P) transform(c, P, t, scope);
+    }
     const p = L.ex && L.ex.p ? evalExpr(L.ex.p, t) : kfVal(L.kf && L.kf.p, t, L.p || [0, 0]);
     const a = L.a || [0, 0];
     const s = L.ex && L.ex.s ? evalExpr(L.ex.s, t) : kfVal(L.kf && L.kf.s, t, L.s || [100, 100]);
@@ -275,14 +281,27 @@ export function createRenderer(canvas, video, images = {}) {
     c.fillRect(0, 0, w, h);
   }
 
+  const scopes = new WeakMap();
+  function scopeOf(layers) {
+    let m = scopes.get(layers);
+    if (!m) {
+      m = new Map();
+      for (const L of layers) if (L.id) m.set(L.id, L);
+      scopes.set(layers, m);
+    }
+    return m;
+  }
+
   function drawComp(c, layers, t) {
+    const scope = scopeOf(layers);
     for (const L of layers) {
       if (t < L.in || t >= L.out) continue;
-      drawLayer(c, L, t);
+      drawLayer(c, L, t, scope);
     }
   }
 
-  function drawLayer(c, L, t) {
+  function drawLayer(c, L, t, scope) {
+    if (L.k === 'null') return;
     let op = L.ex && L.ex.o ? evalExpr(L.ex.o, t) : kfVal(L.kf && L.kf.o, t, L.o ?? 100);
     if (op <= 0.01) return;
     op /= 100;
@@ -307,7 +326,7 @@ export function createRenderer(canvas, video, images = {}) {
       c.save();
       c.globalAlpha *= op;
       if (L.bl) c.globalCompositeOperation = BLEND[L.bl];
-      transform(c, L, t);
+      transform(c, L, t, scope);
       drawContent(c, L, t);
       c.restore();
       return;
@@ -319,7 +338,7 @@ export function createRenderer(canvas, video, images = {}) {
         const B = acquire();
         drawComp(B.ctx, src.layers, t - L.in);
         A.ctx.save();
-        transform(A.ctx, L, t);
+        transform(A.ctx, L, t, scope);
         const sw = src.w || W;
         const sh = src.h || H;
         A.ctx.drawImage(B.c, 0, 0, sw, sh, 0, 0, sw, sh);
@@ -328,7 +347,7 @@ export function createRenderer(canvas, video, images = {}) {
       }
     } else {
       A.ctx.save();
-      transform(A.ctx, L, t);
+      transform(A.ctx, L, t, scope);
       drawContent(A.ctx, L, t);
       A.ctx.restore();
     }
@@ -343,7 +362,7 @@ export function createRenderer(canvas, video, images = {}) {
     }
     if (L.mt) {
       const M = acquire();
-      if (t >= (L.mt.in ?? 0) && t < (L.mt.out ?? 1e9)) drawLayer(M.ctx, L.mt, t);
+      if (t >= (L.mt.in ?? 0) && t < (L.mt.out ?? 1e9)) drawLayer(M.ctx, L.mt, t, scope);
       A.ctx.globalCompositeOperation = 'destination-in';
       A.ctx.drawImage(M.c, 0, 0);
       A.ctx.globalCompositeOperation = 'source-over';
