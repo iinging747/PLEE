@@ -365,7 +365,8 @@ export function createRenderer(canvas, video, images = {}) {
     const k = Math.min(L.fit[0] / img.naturalWidth, L.fit[1] / img.naturalHeight);
     const w = img.naturalWidth * k;
     const h = img.naturalHeight * k;
-    c.drawImage(img, -w / 2, -h / 2, w, h);
+    const [fx, fy] = L.pv || [0.5, 0.5]; // pivot as a fraction of the image
+    c.drawImage(img, -fx * w, -fy * h, w, h);
   }
 
   function drawContent(c, L, t) {

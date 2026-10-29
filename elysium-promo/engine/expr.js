@@ -45,6 +45,10 @@ export function evalExpr(e, t) {
     }
     case 'sway':
       return e.a * S(t * e.f + e.ph);
+    case 'breath':
+      return [100 - e.a * S(t * e.f), 100 + e.a * S(t * e.f)];
+    case 'blinkO':
+      return wrap(t + e.ph, e.per) < 0.13 ? 100 : 0;
     default:
       throw new Error('unknown expr ' + e.fn);
   }
@@ -79,6 +83,10 @@ export function aeExpr(e) {
       return `var w=${JSON.stringify(e.w)}; var on=0; for (var i=0;i<w.length;i++){ if (time>=w[i][0] && time<w[i][1]) on=1; } [100, on*(35+75*Math.abs(Math.sin(time*${fmt(e.f)})))]`;
     case 'sway':
       return `${fmt(e.a)}*Math.sin(time*${fmt(e.f)}+${fmt(e.ph)})`;
+    case 'breath':
+      return `[100-${fmt(e.a)}*Math.sin(time*${fmt(e.f)}), 100+${fmt(e.a)}*Math.sin(time*${fmt(e.f)})]`;
+    case 'blinkO':
+      return `${W(`time+${fmt(e.ph)}`, fmt(e.per))}<0.13?100:0`;
     default:
       throw new Error('unknown expr ' + e.fn);
   }

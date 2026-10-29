@@ -373,12 +373,15 @@ function finishLayer(comp, lay, L, isMatte) {
   var ex = L.exAE || {};
   var kf = L.kf || {};
   if (L.a || L.k === 'text' || L.k === 'shape') tr.property('ADBE Anchor Point').setValue(fit(tr.property('ADBE Anchor Point'), L.a || [0, 0], 0));
+  if (L.k === 'img' && L.pv) tr.property('ADBE Anchor Point').setValue(fit(tr.property('ADBE Anchor Point'), [L.pv[0] * L._fw, L.pv[1] * L._fh], 0));
   drive(tr.property('ADBE Position'), L.p || [0, 0], kf.p, ex.p, 0);
   var sk = L._k || 1;
   var sKf = kf.s;
   if (sk !== 1 && sKf) { sKf = []; for (var q = 0; q < kf.s.length; q++) sKf.push([kf.s[q][0], [kf.s[q][1][0] * sk, kf.s[q][1][1] * sk], kf.s[q][2]]); }
   var sVal = L.s ? [L.s[0] * sk, L.s[1] * sk] : (sk !== 1 ? [100 * sk, 100 * sk] : undefined);
-  drive(lay.property('ADBE Transform Group').property('ADBE Scale'), sVal, sKf, ex.s, 100);
+  // image layers carry their fit factor, so a scale expression is multiplied by it
+  var sEx = ex.s && sk !== 1 ? 'var _s = ' + ex.s + '; [_s[0]*' + sk + ', _s[1]*' + sk + ']' : ex.s;
+  drive(lay.property('ADBE Transform Group').property('ADBE Scale'), sVal, sKf, sEx, 100);
   if (L.r !== undefined || kf.r || ex.r) drive(lay.property('ADBE Transform Group').property('ADBE Rotate Z'), L.r, kf.r, ex.r);
   drive(lay.property('ADBE Transform Group').property('ADBE Opacity'), L.o, kf.o, ex.o);
   if (L.bl && BLENDS[L.bl]) lay.blendingMode = BlendingMode[BLENDS[L.bl]];
@@ -433,6 +436,8 @@ function buildImage(comp, L) {
   }
   var lay = comp.layers.add(f);
   L._k = Math.min(L.fit[0] / f.width, L.fit[1] / f.height);
+  L._fw = f.width;
+  L._fh = f.height;
   return lay;
 }
 
