@@ -14,8 +14,8 @@ const tc = (t) => {
 const esc = (s) => String(s).replace(/\|/g, '\\|').replace(/\n/g, ' / ');
 
 const out = ['# Elysium 프로모 — 장면표 · 스크립트', '', '`engine/script-doc.mjs`가 빌드 결과(build/*.json)에서 자동 생성합니다. 문구 수정은 `storyboard/*.js`에서 하세요.', ''];
-const titles = { pro: 'A. 고급자 버전 (전문가 해설)', easy: 'B. 초보자 버전 (Hypurr가 하나씩 설명)' };
-for (const id of ['pro', 'easy']) {
+const titles = { pro: 'A. 고급자 버전 (전문가 해설)', easy: 'B. 초보자 버전 (Hypurr가 하나씩 설명)', kntq: 'C. 1분 쇼츠 — 위저드 펭귄의 KNTQ 플라이휠' };
+for (const id of ['pro', 'easy', 'kntq']) {
   const v = JSON.parse(fs.readFileSync(path.join(ROOT, 'build', id + '.json'), 'utf8'));
   out.push(`## ${titles[id]} — ${v.name} (${v.dur}s, 1920×1080, 30fps)`, '');
   out.push(`내레이션 길이 기준: ${v.timingSource === 'elevenlabs' ? 'ElevenLabs 실제 음성 길이' : '읽기 속도 추정치 (ElevenLabs 생성 후 자동 재조정)'}`, '');

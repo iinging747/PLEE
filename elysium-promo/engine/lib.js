@@ -483,7 +483,7 @@ export function makeKit(measure) {
         let t = l.t;
         chunks.forEach((c, i) => {
           const d = (l.dur * len(c)) / total;
-          const L = kit.text(S, c, W / 2, o.y ?? 1000, { sz: o.sz || 32, w: 600, tr: -15, c: o.c || C.ink, al: 'c', anim: 'fade', dIn: i ? 0.08 : 0.15, at: r2(t), maxW: 1700 });
+          const L = kit.text(S, c, o.x ?? W / 2, o.y ?? 1000, { sz: o.sz || 32, w: 600, tr: -15, c: o.c || C.ink, al: 'c', anim: 'fade', dIn: i ? 0.08 : 0.15, at: r2(t), maxW: 1700 });
           L.top = true; // captions stay above full-frame cards
           const last = i === chunks.length - 1;
           const end = r2(last ? l.t + l.dur + 0.15 : t + d - 0.08);

@@ -25,8 +25,9 @@ import { makeKit } from './lib.js';
 import { createRenderer, FAM } from './renderer.js';
 import * as pro from '../storyboard/pro.js';
 import * as easy from '../storyboard/easy.js';
+import * as kntq from '../storyboard/kntq.js';
 
-const MODS = { pro, easy };
+const MODS = { pro, easy, kntq };
 const mctx = document.createElement('canvas').getContext('2d');
 function measure(str, f, w, sz, tr) {
   mctx.font = `${w} ${sz}px ${FAM[f]}`;

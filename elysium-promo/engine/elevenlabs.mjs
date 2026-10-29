@@ -28,10 +28,13 @@ const SPEED = Number(process.env.ELEVENLABS_SPEED || 1.05);
 const AUDIO = path.join(ROOT, 'dist', 'audio');
 const step = process.argv[2] || 'all';
 const force = process.argv.includes('--force');
+// every compiled video (build/<id>.json) gets narration, music and a mix
+const IDS = ['pro', 'easy', 'kntq'];
 
 const MUSIC = {
   pro: 'Refined, understated background score for an expert fintech explainer, 96 BPM. Warm felt piano motifs, soft analog synth pads, gentle sub-bass, light brushed percussion and subtle glassy digital textures. Calm, confident and trustworthy, like a premium product keynote. Steady and minimal so a voiceover sits clearly on top, no big drops, a soft lift in the final 15 seconds and a clean resolved ending. Instrumental, no vocals.',
   easy: 'Light, friendly explainer background music, 100 BPM. Soft plucked synths and warm marimba, gentle kick and shaker, bright but calm and unobtrusive so a voiceover sits clearly on top. Curious, optimistic, modern. Steady energy without big drops, soft ending. Instrumental, no vocals.',
+  kntq: 'Playful but sleek magical electronic background music for a one-minute crypto explainer, 110 BPM. Sparkling celesta and bell arpeggios over a punchy minimal beat and warm sub bass, a touch of whimsy like a wizard casting spells, confident and modern. Leaves clear room for a voiceover, small lift in the middle, clean short ending. Instrumental, no vocals.',
 };
 const SFX = {
   whoosh: { text: 'soft airy whoosh transition, short and clean', d: 0.8 },
@@ -40,8 +43,9 @@ const SFX = {
   hit: { text: 'tight punchy digital click hit, minimal UI accent', d: 0.5 },
   riser: { text: 'smooth rising synth swell building tension', d: 3.0 },
   ticks: { text: 'fast precise digital ticking clock, tiny clicks', d: 1.4 },
+  sparkle: { text: 'magic wand sparkle chime, short bright shimmering twinkle', d: 1.0 },
 };
-const SFX_GAIN = { whoosh: 0.35, impact: 0.6, boom: 0.7, hit: 0.35, riser: 0.45, ticks: 0.25 };
+const SFX_GAIN = { whoosh: 0.35, impact: 0.6, boom: 0.7, hit: 0.35, riser: 0.45, ticks: 0.25, sparkle: 0.4 };
 
 function need(cond, msg) {
   if (!cond) {
@@ -52,6 +56,7 @@ function need(cond, msg) {
 const sh = (cmd, args) => execFileSync(cmd, args, { encoding: 'utf8' }).trim();
 const durOf = (f) => Number(sh('ffprobe', ['-v', 'error', '-show_entries', 'format=duration', '-of', 'csv=p=0', f]));
 const video = (id) => JSON.parse(fs.readFileSync(path.join(ROOT, 'build', id + '.json'), 'utf8'));
+const ids = () => IDS.filter((id) => fs.existsSync(path.join(ROOT, 'build', id + '.json')));
 const compile = () => {
   const r = spawnSync('node', [path.join(ROOT, 'engine', 'render.mjs'), '--compile-only'], { stdio: 'inherit' });
   need(r.status === 0, 'compile failed');
@@ -95,11 +100,13 @@ async function getJSON(url) {
   return r.json();
 }
 
-async function castVoice() {
+// a video can bring its own casting (the penguin explainer wants a younger,
+// livelier voice); it falls back to the shared narrator
+async function castVoice(cast = CASTING, cacheName = 'voice.json') {
   if (process.env.ELEVENLABS_VOICE_ID) return process.env.ELEVENLABS_VOICE_ID;
-  const cache = path.join(AUDIO, 'voice.json');
+  const cache = path.join(AUDIO, cacheName);
   if (!force && fs.existsSync(cache)) return JSON.parse(fs.readFileSync(cache, 'utf8')).voice_id;
-  for (const q of CASTING.queries) {
+  for (const q of cast.queries) {
     try {
       const j = await getJSON(`/v1/shared-voices?${new URLSearchParams({ page_size: '10', sort: 'cloned_by_count', ...q })}`);
       const v = (j.voices || [])[0];
@@ -109,14 +116,15 @@ async function castVoice() {
       const voiceId = added.voice_id || v.voice_id;
       fs.mkdirSync(path.dirname(cache), { recursive: true });
       fs.writeFileSync(cache, JSON.stringify({ voice_id: voiceId, name: v.name, description: v.description, query: q }, null, 1));
-      console.log(`voice: ${v.name} (${voiceId}) — ${CASTING.brief}`);
+      console.log(`voice: ${v.name} (${voiceId}) — ${cast.brief}`);
       return voiceId;
     } catch (e) {
       console.warn(`voice search ${JSON.stringify(q)} failed: ${e.message}`);
     }
   }
+  if (cast.fallback === 'narrator') return castVoice();
   console.warn('No Korean library voice found; using the premade "Brian" voice. Set ELEVENLABS_VOICE_ID to choose one.');
-  return CASTING.fallback;
+  return cast.fallback;
 }
 
 // One trusted narrator for both videos; the advanced version reads calm and
@@ -124,15 +132,29 @@ async function castVoice() {
 const VOICE = {
   pro: { env: 'ELEVENLABS_VOICE_ID_PRO', settings: { stability: 0.62, similarity_boost: 0.82, style: 0.1, use_speaker_boost: true, speed: Number(process.env.ELEVENLABS_SPEED_PRO || 0.97) } },
   easy: { env: 'ELEVENLABS_VOICE_ID_EASY', settings: { stability: 0.5, similarity_boost: 0.8, style: 0.25, use_speaker_boost: true, speed: SPEED } },
+  kntq: {
+    env: 'ELEVENLABS_VOICE_ID_KNTQ',
+    settings: { stability: 0.45, similarity_boost: 0.8, style: 0.35, use_speaker_boost: true, speed: 1.08 },
+    cast: {
+      brief: 'lively young Korean presenter for the wizard penguin',
+      queries: [
+        { language: 'ko', gender: 'male', age: 'young', use_cases: 'social_media' },
+        { language: 'ko', gender: 'male', age: 'young' },
+        { language: 'ko', age: 'young', use_cases: 'social_media' },
+      ],
+      fallback: 'narrator',
+    },
+    cache: 'voice_kntq.json',
+  },
 };
 
 async function voice() {
   const narrator = await castVoice();
-  for (const id of ['pro', 'easy']) {
+  for (const id of ids()) {
     const v = video(id);
     const n = v.narration;
     if (!n.length) continue;
-    const voiceId = process.env[VOICE[id].env] || narrator;
+    const voiceId = process.env[VOICE[id].env] || (VOICE[id].cast ? await castVoice(VOICE[id].cast, VOICE[id].cache) : narrator);
     const dir = path.join(AUDIO, 'vo', id);
     const lines = {};
     for (let i = 0; i < n.length; i++) {
@@ -158,7 +180,7 @@ async function voice() {
 }
 
 async function music() {
-  for (const id of ['pro', 'easy']) {
+  for (const id of ids()) {
     const v = video(id);
     const out = path.join(AUDIO, `music_${id}.mp3`);
     if (!force && fs.existsSync(out) && Math.abs(durOf(out) - v.dur) < 1) continue;
@@ -176,7 +198,7 @@ async function music() {
 
 async function sfx() {
   const types = new Set();
-  for (const id of ['pro', 'easy']) for (const c of video(id).cues || []) types.add(c.type);
+  for (const id of ids()) for (const c of video(id).cues || []) types.add(c.type);
   for (const t of types) {
     const out = path.join(AUDIO, 'sfx', t + '.mp3');
     if (!force && fs.existsSync(out)) continue;
@@ -186,12 +208,20 @@ async function sfx() {
 }
 
 function mix() {
-  for (const id of ['pro', 'easy']) {
+  for (const id of ids()) {
     const v = video(id);
     let musicFile = path.join(AUDIO, `music_${id}.mp3`);
     if (!fs.existsSync(musicFile)) musicFile = path.join(AUDIO, `temp_music_${id}.mp3`);
     if (!fs.existsSync(musicFile)) {
       console.warn(`skip mix ${id}: no music`);
+      continue;
+    }
+    // re-mix only when the timeline or an input changed
+    const sizeOf = (f) => (fs.existsSync(f) ? fs.statSync(f).size : 0);
+    const sig = JSON.stringify({ dur: v.dur, music: [musicFile, sizeOf(musicFile)], vo: v.narration.map((l) => [l.id, l.start, sizeOf(path.join(AUDIO, 'vo', id, l.id + '.mp3'))]), cues: v.cues, sfx: [...new Set((v.cues || []).map((c) => c.type))].map((t) => sizeOf(path.join(AUDIO, 'sfx', t + '.mp3'))) });
+    const sigFile = path.join(AUDIO, `mix_${id}.json`);
+    if (!force && fs.existsSync(path.join(AUDIO, `${id}_mix.mp3`)) && fs.existsSync(sigFile) && fs.readFileSync(sigFile, 'utf8') === sig) {
+      console.log(`  mix ${id}: up to date`);
       continue;
     }
     const inputs = ['-i', musicFile];
@@ -240,6 +270,7 @@ function mix() {
     const r = spawnSync('ffmpeg', ['-y', '-loglevel', 'error', ...inputs, '-filter_complex', parts.join(';'), '-map', '[out]', '-ar', '48000', '-ac', '2', out], { stdio: 'inherit' });
     need(r.status === 0, 'ffmpeg mix failed for ' + id);
     spawnSync('ffmpeg', ['-y', '-loglevel', 'error', '-i', out, '-b:a', '256k', out.replace(/\.wav$/, '.mp3')], { stdio: 'inherit' });
+    fs.writeFileSync(sigFile, sig);
     console.log('  mix', out, '(+ .mp3)');
   }
 }

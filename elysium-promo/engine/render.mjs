@@ -19,8 +19,8 @@ const opt = (k, d) => {
   const i = args.indexOf('--' + k);
   return i < 0 ? d : args[i + 1] && !args[i + 1].startsWith('--') ? args[i + 1] : true;
 };
-const ids = opt('only') ? [opt('only')] : ['pro', 'easy'];
-const OUT = { pro: 'Elysium_Advanced', easy: 'Elysium_Beginner' };
+const ids = opt('only') ? [opt('only')] : ['pro', 'easy', 'kntq'];
+const OUT = { pro: 'Elysium_Advanced', easy: 'Elysium_Beginner', kntq: 'Elysium_KNTQ_Flywheel_Penguin' };
 
 const TYPES = { '.png': 'image/png', '.webp': 'image/webp', '.jpg': 'image/jpeg', '.html': 'text/html', '.js': 'text/javascript', '.mjs': 'text/javascript', '.css': 'text/css', '.woff2': 'font/woff2', '.woff': 'font/woff' };
 const server = http.createServer((req, res) => {

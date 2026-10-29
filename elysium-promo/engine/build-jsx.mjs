@@ -8,7 +8,7 @@ import { EASES, C } from './lib.js';
 import { aeExpr, counterAE, counterValue } from './expr.js';
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
-const ids = ['pro', 'easy'];
+const ids = ['pro', 'easy', 'kntq'];
 
 function prep(L) {
   if (L.ex) {
@@ -46,13 +46,14 @@ for (const id of ids) {
 }
 
 const CONFIG = {
-  BUILD: ['pro', 'easy'],
+  BUILD: ['pro', 'easy', 'kntq'],
   // 'sandoll' = 설치된 산돌구름 폰트를 아래 SANDOLL_PREFS 순서로 찾아 사용 (없으면 auto)
   // 'auto' = Pretendard → Apple SD 산돌고딕 Neo → Noto Sans KR → 본고딕 → 맑은 고딕 중 설치된 첫 번째
   KR_FONT: 'sandoll',
   SANDOLL_PREFS: {
     pro: ['그레타\\s*산스', 'Greta\\s*Sans', '고딕\\s*Neo\\s*3', 'Gothic\\s*Neo\\s*3', '고딕\\s*Neo\\s*1', 'Gothic\\s*Neo\\s*1'],
     easy: ['고딕\\s*Neo\\s*3', 'Gothic\\s*Neo\\s*3', '그레타\\s*산스', 'Greta\\s*Sans', '고딕\\s*Neo\\s*1', 'Gothic\\s*Neo\\s*1'],
+    kntq: ['그레타\\s*산스', 'Greta\\s*Sans', '고딕\\s*Neo\\s*3', 'Gothic\\s*Neo\\s*3', '고딕\\s*Neo\\s*1', 'Gothic\\s*Neo\\s*1'],
   },
   // 산돌 폰트가 없을 때: 본고딕(Noto Sans KR / Source Han Sans K — 한글 디자인 산돌) 우선
   KR_AUTO_ORDER: ['noto', 'source', 'notocjk', 'apple', 'pretendard', 'malgun'],
@@ -91,7 +92,7 @@ const header = `﻿/*
     2) After Effects > File > Scripts > Run Script File… 에서 이 파일 실행
        (같은 폴더의 audio/temp_music_*.wav 가 있으면 임시 음악도 자동으로 들어갑니다)
     3) 프로젝트 패널 "Elysium Promo"
-         01_MAIN       Elysium_Advanced (고급자) · Elysium_Beginner (초보자)
+         01_MAIN       Elysium_Advanced (고급자) · Elysium_Beginner (초보자) · Elysium_KNTQ_Flywheel_Penguin (1분)
          02_SCENES_*   장면별 프리컴프 — 문구·타이밍 수정은 여기서
          03_SLOTS      LOGO_Elysium(공식 로고) · STOCK_*(스톡 영상) 교체용 컴프
     4) 공식 로고: kinetiq.xyz/brand 또는 elysium.kinetiq.xyz 에서 SVG/PNG를 받아
