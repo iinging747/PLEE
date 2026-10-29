@@ -79,7 +79,10 @@ function findFamily(re) {
   return best;
 }
 
-function chooseKoreanFont() {
+// Korean text family for one video. 'sandoll' tries the installed Sandoll
+// Cloud families in CONFIG.SANDOLL_PREFS[videoId] order (그레타산스, 고딕Neo3, …),
+// then falls back to the presets in CONFIG.KR_AUTO_ORDER.
+function chooseKoreanFont(videoId) {
   var pick = CONFIG.KR_FONT;
   var P = CONFIG.KR_PRESETS;
   if (CONFIG.KR_FONT_OVERRIDE && CONFIG.KR_FONT_OVERRIDE[700]) {
@@ -87,10 +90,14 @@ function chooseKoreanFont() {
     return CONFIG.KR_FONT_OVERRIDE;
   }
   if (pick === 'sandoll') {
-    // Sandoll Cloud families (산돌구름) installed on this machine
-    var s = findFamily(/sandoll|산돌|^SD\s/i);
-    if (s) { REPORT.krFamily = s.family + ' (Sandoll)'; return s; }
-    warn('No Sandoll Cloud family found; falling back to auto.');
+    var prefs = (CONFIG.SANDOLL_PREFS && CONFIG.SANDOLL_PREFS[videoId]) || [];
+    for (var j = 0; j < prefs.length; j++) {
+      var fam = findFamily(new RegExp(prefs[j], 'i'));
+      if (fam) { REPORT.krFamily = fam.family; return fam; }
+    }
+    var any = findFamily(/sandoll|산돌/i);
+    if (any) { REPORT.krFamily = any.family; return any; }
+    if (hasFontsApi()) warn('No Sandoll family found; using ' + P[CONFIG.KR_AUTO_ORDER[0]].label + '.');
     pick = 'auto';
   }
   if (pick === 'auto') {
@@ -554,13 +561,14 @@ function main() {
   if (!app.project) app.newProject();
   app.beginUndoGroup('Build Elysium promo');
   var t0 = new Date().getTime();
-  var kr = chooseKoreanFont();
-  FONT_MAP.kr = kr;
+  var fontsUsed = [];
   var root = folder(CONFIG.ROOT_FOLDER);
   var built = [];
   for (var i = 0; i < CONFIG.BUILD.length; i++) {
     var v = DATA.videos[CONFIG.BUILD[i]];
     if (!v) continue;
+    FONT_MAP.kr = chooseKoreanFont(v.id);
+    fontsUsed.push(v.id + ': ' + REPORT.krFamily);
     built.push(buildVideo(v, root));
   }
   app.endUndoGroup();
@@ -568,7 +576,7 @@ function main() {
   var miss = [];
   for (var f in REPORT.missingFonts) if (REPORT.missingFonts.hasOwnProperty(f)) miss.push(f);
   var msg = CONFIG.TXT_DONE + ' (' + Math.round((new Date().getTime() - t0) / 1000) + 's)\r\r';
-  msg += CONFIG.TXT_KR_FONT + ' ' + REPORT.krFamily + '\r';
+  msg += CONFIG.TXT_KR_FONT + ' ' + fontsUsed.join(' / ') + '\r';
   if (miss.length) msg += '\r' + CONFIG.TXT_MISSING + '\r' + miss.join(', ') + '\r';
   msg += '\r' + CONFIG.TXT_NEXT;
   if (REPORT.warnings.length) msg += '\r\r' + CONFIG.TXT_WARN + ' ' + REPORT.warnings.length + '\r' + REPORT.warnings.slice(0, 8).join('\r');

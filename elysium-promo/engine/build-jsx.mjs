@@ -47,9 +47,13 @@ for (const id of ids) {
 
 const CONFIG = {
   BUILD: ['pro', 'easy'],
-  // 'auto' = 디자인 폰트 Pretendard → Apple SD 산돌고딕 Neo → Noto Sans KR → 본고딕 → 맑은 고딕 중 설치된 첫 번째
-  // 'sandoll' = 설치된 산돌구름 고딕 계열을 찾아 사용 (없으면 auto)
-  KR_FONT: 'auto',
+  // 'sandoll' = 설치된 산돌구름 폰트를 아래 SANDOLL_PREFS 순서로 찾아 사용 (없으면 auto)
+  // 'auto' = Pretendard → Apple SD 산돌고딕 Neo → Noto Sans KR → 본고딕 → 맑은 고딕 중 설치된 첫 번째
+  KR_FONT: 'sandoll',
+  SANDOLL_PREFS: {
+    pro: ['그레타\\s*산스', 'Greta\\s*Sans', '고딕\\s*Neo\\s*3', 'Gothic\\s*Neo\\s*3', '고딕\\s*Neo\\s*1', 'Gothic\\s*Neo\\s*1'],
+    easy: ['고딕\\s*Neo\\s*3', 'Gothic\\s*Neo\\s*3', '그레타\\s*산스', 'Greta\\s*Sans', '고딕\\s*Neo\\s*1', 'Gothic\\s*Neo\\s*1'],
+  },
   KR_AUTO_ORDER: ['pretendard', 'apple', 'noto', 'notocjk', 'source', 'malgun'],
   // 특정 폰트를 강제하려면 PostScript 이름을 넣으세요 (예: {400:'...',500:'...',600:'...',700:'...',800:'...'})
   KR_FONT_OVERRIDE: null,
@@ -81,9 +85,9 @@ const header = `﻿/*
   ---------------------------------------------------------------
   사용법
     1) 폰트 설치 (무료): DM Sans, DM Mono (Google Fonts)
-       한글: Pretendard(무료) · 주아체 Jua(무료, 눈높이 버전 제목)
-             Pretendard가 없으면 Apple SD 산돌고딕 Neo → Noto Sans KR 순으로 자동 대체
-             산돌구름 폰트를 쓰려면 아래 CONFIG.KR_FONT 를 'sandoll' 로 바꾸세요
+       한글: 산돌구름 폰트를 자동으로 찾아 사용 — 커머셜: Sandoll 그레타산스 → 고딕Neo3 → 고딕Neo1
+                                                   눈높이: Sandoll 고딕Neo3 → 그레타산스 → 고딕Neo1
+             산돌 폰트가 없으면 Pretendard(무료) → Apple SD 산돌고딕 Neo → Noto Sans KR 순으로 대체
     2) After Effects > File > Scripts > Run Script File… 에서 이 파일 실행
        (같은 폴더의 audio/temp_music_*.wav 가 있으면 임시 음악도 자동으로 들어갑니다)
     3) 프로젝트 패널 "Elysium Promo"

@@ -302,9 +302,11 @@ function FileFn(p) {
 const fontFamilies = [
   ['Pretendard', ['Regular', 'Medium', 'SemiBold', 'Bold', 'ExtraBold'], 'Pretendard'],
   ['Jua', ['Regular'], 'Jua'],
+  ['Sandoll GothicNeo3', ['04 Rg', '05 Md', '06 Sb', '07 Bd', '08 Eb'], 'SDGothicNeo3'],
+  ['Sandoll Greta Sans', ['Regular', 'Medium', 'SemiBold', 'Bold', 'ExtraBold'], 'SandollGretaSans'],
   ['DM Sans', ['Regular', 'Medium', 'SemiBold', 'Bold'], 'DMSans'],
   ['DM Mono', ['Regular', 'Medium'], 'DMMono'],
-].map(([f, styles, ps]) => styles.map((s) => ({ familyName: f, styleName: s, postScriptName: `${ps}-${s}`, isSubstitute: false })));
+].map(([f, styles, ps]) => styles.map((s) => ({ familyName: f, styleName: s, postScriptName: `${ps}-${s.replace(/\s/g, '')}`, isSubstitute: false })));
 
 const sandbox = {
   app: {

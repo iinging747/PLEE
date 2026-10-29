@@ -4,7 +4,7 @@
 
 | 버전 | 컴포지션 | 길이 | 구성 |
 |---|---|---|---|
-| A. 전문가 · 커머셜 | `Elysium_Pro_Commercial` | 41초 | 120BPM 비트 컷, 한 화면 한 메시지, 초대형 타이포 |
+| A. 전문가 · 커머셜 | `Elysium_Pro_Commercial` | 약 50초 (보이스오버 길이에 맞춰 자동 조정) | 120BPM 비트 컷, 한 화면 한 메시지, 전문가 톤 보이스오버 |
 | B. 눈높이 | `Elysium_Easy_Explainer` | 약 2분 (내레이션 길이에 맞춰 자동 조정) | 고양이 캐릭터 내레이터, 자막, 단계별 설명 |
 
 장면별 타임코드·화면 문구·내레이션 원고는 [`dist/SCRIPT.md`](dist/SCRIPT.md)에 있습니다.
@@ -24,11 +24,12 @@ engine/                     ← 미리보기 렌더러 · AE 스크립트 생성
 
 ## After Effects에서 열기
 
-1. 폰트 설치: **Pretendard**, **주아체(Jua)**, **DM Sans**, **DM Mono** (모두 무료).
-   유료 폰트를 쓰려면 `dist/Elysium_Promo_AE.jsx` 맨 위 `CONFIG`에서 바꿉니다.
-   - `KR_FONT: 'sandoll'` → 설치된 산돌구름 고딕 계열을 자동으로 찾아 사용
-   - `KR_FONT_OVERRIDE: {400:'…',500:'…',600:'…',700:'…',800:'…'}` → 원하는 폰트의 PostScript 이름 지정
-   - `KR_DISPLAY_FONTS: {400:'…'}` → 눈높이 버전 제목용 폰트
+1. 폰트: **산돌구름 폰트를 자동으로 찾아 씁니다.**
+   - 커머셜: Sandoll 그레타산스 → 고딕Neo3 → 고딕Neo1 순
+   - 눈높이: Sandoll 고딕Neo3 → 그레타산스 → 고딕Neo1 순
+   - 산돌 폰트가 없으면 Pretendard(무료) → Apple SD 산돌고딕 Neo → Noto Sans KR 순으로 대체합니다. 영문·숫자는 Kinetiq 브랜드 서체인 **DM Sans / DM Mono**(무료)를 씁니다.
+   - 순서를 바꾸거나 특정 폰트를 강제하려면 `dist/Elysium_Promo_AE.jsx` 맨 위 `CONFIG`의 `SANDOLL_PREFS`, `KR_FONT_OVERRIDE`를 수정하세요.
+   - 미리보기 MP4는 이 서버에 산돌 폰트가 없어 Pretendard로 렌더링했습니다.
 2. `File → Scripts → Run Script File…` → `dist/Elysium_Promo_AE.jsx` 실행.
    `dist/audio/`에 오디오가 있으면 자동으로 들어갑니다 (`*_mix.wav` 우선, 없으면 임시 음악).
 3. 프로젝트 패널 `Elysium Promo`:
@@ -46,7 +47,12 @@ Kinetiq 가이드에 따라 로고에는 재채색이나 효과를 넣지 않습
 배경 위에 Multiply 모드로 얹히고 Tint가 걸려 있어, 어떤 영상을 넣어도 톤이 맞춰집니다.
 
 ## 캐릭터 (눈높이 버전)
-HariShimSing 스티커 원본을 `assets/stickers/`에 넣어 주시면 그 캐릭터를 그대로 장면별 포즈로 배치해 애니메이션합니다.
+HariShimSing 스티커 원본을 `assets/stickers/`에 넣으면 그 캐릭터를 그대로 장면별로 배치해 애니메이션합니다.
+텔레그램 봇 토큰(@BotFather에서 무료 발급)이 있으면 팩 전체를 자동으로 받을 수 있습니다.
+```bash
+TELEGRAM_BOT_TOKEN=... node engine/fetch-stickers.mjs HariShimSing
+```
+정지 스티커는 PNG, 영상 스티커는 PNG와 알파 채널이 있는 ProRes 4444 `.mov`로 변환됩니다. 목록은 `manifest.json`에 저장됩니다.
 지금 미리보기의 고양이는 그 스티커를 참고해 그린 임시 캐릭터입니다.
 
 ## ElevenLabs (내레이션 · 음악 · 효과음)
@@ -56,7 +62,8 @@ export ELEVENLABS_VOICE_ID=...         # 선택: Voice Library의 한국어 보�
 node engine/elevenlabs.mjs all
 npm run build
 ```
-- `voice`: 눈높이 버전 26줄 내레이션 생성 → 실제 음성 길이로 모든 장면 타이밍 자동 재조정
+- `voice`: 커머셜 11줄(전문가 톤 보이스오버) + 눈높이 26줄 내레이션 생성 → 실제 음성 길이로 모든 장면 타이밍 자동 재조정
+  - 목소리는 Voice Library에서 신뢰감 있는 한국어 남성 내레이터(중년, 정보 전달형)를 자동으로 골라 계정에 추가하고 `build/voice.json`에 기록합니다. 직접 고르려면 `ELEVENLABS_VOICE_ID`를 지정하세요.
 - `music`: 두 버전 각각 영상 길이에 딱 맞춘 배경음악 (프롬프트는 `engine/elevenlabs.mjs`의 `MUSIC`)
 - `sfx`: 장면 전환 효과음 (whoosh · impact · boom · hit · riser · ticks)
 - `mix`: 음악은 내레이션 아래로 자동 덕킹, 효과음은 컷 타이밍에 배치 → `dist/audio/<id>_mix.wav`

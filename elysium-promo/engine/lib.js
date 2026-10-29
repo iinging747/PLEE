@@ -85,9 +85,9 @@ export function smooth(pts, closed = true, k = 1) {
 
 // Narration timing: line durations come from build/narration_<id>.json once
 // ElevenLabs audio exists, otherwise from a reading-speed estimate.
-export function estimateDur(text) {
+export function estimateDur(text, rate = 7.2) {
   const n = text.replace(/[\s.,!?·'"‘’“”~:()\-–—]/g, '').length;
-  return r2(n / 7.2 + 0.3);
+  return r2(n / rate + 0.3);
 }
 export function timeline(lines, timing, o = {}) {
   const lead = o.lead ?? 0.6;
@@ -108,7 +108,8 @@ export function timeline(lines, timing, o = {}) {
 // ---------------------------------------------------------------------------
 // Kit: builder API bound to a text measuring function.
 //   measure(str, font, weight, size, tracking) -> width in px (single line)
-// Fonts: kr = Pretendard, krd = Jua (friendly display), en = DM Sans, mono = DM Mono.
+// Fonts (preview): kr = Pretendard, krd = Jua, en = DM Sans, mono = DM Mono.
+// In After Effects `kr` resolves to an installed Sandoll family when available.
 
 export function makeKit(measure) {
   const warnings = [];
@@ -388,6 +389,11 @@ export function makeKit(measure) {
       return L;
     },
 
+    // Voice-over without subtitles (commercial): manifest entries only.
+    vo(S, lines) {
+      for (const l of lines) S.narration.push({ id: l.id, t: l.t, dur: l.dur, text: l.text, say: l.say || l.text });
+    },
+
     // Narrated subtitles + manifest entries for the ElevenLabs script.
     say(S, lines, o = {}) {
       for (const l of lines) {
@@ -655,7 +661,7 @@ function clean(L) {
 // Default (replaceable) content of the LOGO slot: a typographic wordmark.
 export function logoSlot(kit, dur) {
   const S = kit.scene('LOGO', 'LOGO', dur);
-  const T = (o) => kit.text(S, 'ELYSIUM', 600, 150, { f: 'en', w: 500, sz: 150, tr: 420, al: 'c', anim: 'none', ...o });
+  const T = (o) => kit.text(S, 'ELYSIUM', 600, 150, { f: 'en', w: 300, sz: 150, tr: 440, al: 'c', anim: 'none', ...o });
   T({ n: 'Wordmark (placeholder)' });
   const sweep = T({ n: 'Wordmark sweep', c: C.mint2 });
   sweep.mt = { k: 'shape', n: 'sweep matte', p: [0, 150], in: 0, out: dur, fx: { blur: 50 }, r: 16, it: [{ t: 'rect', sz: [180, 460], ps: [0, 0], fl: { c: C.white, o: 100 } }], kf: { p: [[0.9, [-300, 150], 'io'], [2.6, [1500, 150], 'l']] } };

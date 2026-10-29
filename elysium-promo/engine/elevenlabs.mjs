@@ -4,16 +4,17 @@
 //   ELEVENLABS_API_KEY=...  node engine/elevenlabs.mjs all
 //
 // Steps (each can be run alone): voice | music | sfx | mix | all
-//   voice  TTS per narration line of the Easy video -> dist/audio/vo/easy/<id>.mp3
-//          and build/narration_easy.json (real line lengths). The storyboard
-//          re-times every shot to these lengths on the next compile.
+//   voice  TTS per narration line of both videos -> dist/audio/vo/<video>/<line>.mp3
+//          and build/narration_<video>.json (real line lengths). The storyboards
+//          re-time their shots to these lengths on the next compile.
 //   music  one instrumental track per video, exactly as long as the video
 //   sfx    one sound per cue type used by the storyboards (whoosh, impact, ...)
 //   mix    ffmpeg: VO + music (ducked under VO) + SFX -> dist/audio/<id>_mix.wav
 //
-// Optional env: ELEVENLABS_VOICE_ID (pick a native Korean voice in the Voice
-// Library), ELEVENLABS_MODEL (default eleven_multilingual_v2),
-// ELEVENLABS_SPEED (default 1.05). Needs ffmpeg/ffprobe on PATH.
+// Optional env: ELEVENLABS_VOICE_ID (otherwise a native Korean expert narrator
+// is cast from the Voice Library), per video ELEVENLABS_VOICE_ID_PRO / _EASY,
+// ELEVENLABS_MODEL (default eleven_multilingual_v2), ELEVENLABS_SPEED (explainer,
+// default 1.05), ELEVENLABS_SPEED_PRO (default 0.98). Needs ffmpeg/ffprobe.
 import fs from 'node:fs';
 import path from 'node:path';
 import { execFileSync, spawnSync } from 'node:child_process';
@@ -73,46 +74,86 @@ async function post(url, body, out) {
   }
 }
 
-async function pickVoice() {
-  if (process.env.ELEVENLABS_VOICE_ID) return process.env.ELEVENLABS_VOICE_ID;
-  try {
-    const r = await fetch(`${API}/v2/voices?page_size=100`, { headers: { 'xi-api-key': KEY } });
-    const j = await r.json();
-    const ko = (j.voices || []).find((v) => /korean|ko\b|한국/i.test(JSON.stringify(v.labels || {}) + ' ' + v.name + ' ' + (v.description || '')));
-    if (ko) {
-      console.log(`voice: ${ko.name} (${ko.voice_id}) from your library`);
-      return ko.voice_id;
-    }
-  } catch (e) {
-    console.warn('voice lookup failed:', e.message);
-  }
-  console.warn('No Korean voice in your library; using the premade "Sarah" voice. Set ELEVENLABS_VOICE_ID for a native Korean voice.');
-  return 'EXAVITQu4vr4xnSDxMaL';
+// Voice casting: an env voice id wins; otherwise search the shared Voice
+// Library for a native Korean narrator matching the brief (trustworthy expert:
+// male, middle-aged, informative), add it to the account, and cache the choice
+// in build/voice.json so every rerun uses the same voice.
+const CASTING = {
+  brief: 'trustworthy Korean expert narrator',
+  queries: [
+    { language: 'ko', gender: 'male', age: 'middle_aged', use_cases: 'informative_educational' },
+    { language: 'ko', gender: 'male', use_cases: 'narrative_story' },
+    { language: 'ko', gender: 'male' },
+    { language: 'ko' },
+  ],
+  fallback: 'nPczCjzI2devNBz1zQrb', // premade "Brian": deep, resonant
+};
+
+async function getJSON(url) {
+  const r = await fetch(API + url, { headers: { 'xi-api-key': KEY } });
+  if (!r.ok) throw new Error(`${url} -> ${r.status}: ${(await r.text()).slice(0, 200)}`);
+  return r.json();
 }
 
-async function voice() {
-  const v = video('easy');
-  const voiceId = await pickVoice();
-  const dir = path.join(AUDIO, 'vo', 'easy');
-  const lines = {};
-  const n = v.narration;
-  for (let i = 0; i < n.length; i++) {
-    const l = n[i];
-    const out = path.join(dir, l.id + '.mp3');
-    if (force || !fs.existsSync(out)) {
-      process.stdout.write(`  tts ${l.id} ${l.text}\n`);
-      await post(`/v1/text-to-speech/${voiceId}?output_format=mp3_44100_128`, {
-        text: l.say,
-        model_id: MODEL,
-        previous_text: i > 0 ? n[i - 1].say : undefined,
-        next_text: i < n.length - 1 ? n[i + 1].say : undefined,
-        voice_settings: { stability: 0.45, similarity_boost: 0.8, style: 0.25, use_speaker_boost: true, speed: SPEED },
-      }, out);
+async function castVoice() {
+  if (process.env.ELEVENLABS_VOICE_ID) return process.env.ELEVENLABS_VOICE_ID;
+  const cache = path.join(ROOT, 'build', 'voice.json');
+  if (!force && fs.existsSync(cache)) return JSON.parse(fs.readFileSync(cache, 'utf8')).voice_id;
+  for (const q of CASTING.queries) {
+    try {
+      const j = await getJSON(`/v1/shared-voices?${new URLSearchParams({ page_size: '10', sort: 'cloned_by_count', ...q })}`);
+      const v = (j.voices || [])[0];
+      if (!v) continue;
+      const r = await fetch(`${API}/v1/voices/add/${v.public_owner_id}/${v.voice_id}`, { method: 'POST', headers: { 'xi-api-key': KEY, 'Content-Type': 'application/json' }, body: JSON.stringify({ new_name: `Elysium narrator - ${v.name}` }) });
+      const added = r.ok ? await r.json() : {};
+      const voiceId = added.voice_id || v.voice_id;
+      fs.mkdirSync(path.dirname(cache), { recursive: true });
+      fs.writeFileSync(cache, JSON.stringify({ voice_id: voiceId, name: v.name, description: v.description, query: q }, null, 1));
+      console.log(`voice: ${v.name} (${voiceId}) — ${CASTING.brief}`);
+      return voiceId;
+    } catch (e) {
+      console.warn(`voice search ${JSON.stringify(q)} failed: ${e.message}`);
     }
-    lines[l.id] = Math.round(durOf(out) * 100) / 100;
   }
-  fs.writeFileSync(path.join(ROOT, 'build', 'narration_easy.json'), JSON.stringify({ voice: voiceId, model: MODEL, speed: SPEED, lines }, null, 1));
-  console.log(`narration: ${Object.keys(lines).length} lines, ${Object.values(lines).reduce((a, b) => a + b, 0).toFixed(1)}s -> re-timing storyboard`);
+  console.warn('No Korean library voice found; using the premade "Brian" voice. Set ELEVENLABS_VOICE_ID to choose one.');
+  return CASTING.fallback;
+}
+
+// One trusted narrator for both videos; the commercial reads calm and measured,
+// the explainer a little warmer and quicker.
+const VOICE = {
+  pro: { env: 'ELEVENLABS_VOICE_ID_PRO', settings: { stability: 0.62, similarity_boost: 0.82, style: 0.1, use_speaker_boost: true, speed: Number(process.env.ELEVENLABS_SPEED_PRO || 0.97) } },
+  easy: { env: 'ELEVENLABS_VOICE_ID_EASY', settings: { stability: 0.5, similarity_boost: 0.8, style: 0.25, use_speaker_boost: true, speed: SPEED } },
+};
+
+async function voice() {
+  const narrator = await castVoice();
+  for (const id of ['pro', 'easy']) {
+    const v = video(id);
+    const n = v.narration;
+    if (!n.length) continue;
+    const voiceId = process.env[VOICE[id].env] || narrator;
+    const dir = path.join(AUDIO, 'vo', id);
+    const lines = {};
+    for (let i = 0; i < n.length; i++) {
+      const l = n[i];
+      const out = path.join(dir, l.id + '.mp3');
+      if (force || !fs.existsSync(out)) {
+        process.stdout.write(`  tts ${id}/${l.id} ${l.text}\n`);
+        await post(`/v1/text-to-speech/${voiceId}?output_format=mp3_44100_128`, {
+          text: l.say,
+          model_id: MODEL,
+          previous_text: i > 0 ? n[i - 1].say : undefined,
+          next_text: i < n.length - 1 ? n[i + 1].say : undefined,
+          voice_settings: VOICE[id].settings,
+        }, out);
+      }
+      lines[l.id] = Math.round(durOf(out) * 100) / 100;
+    }
+    fs.writeFileSync(path.join(ROOT, 'build', `narration_${id}.json`), JSON.stringify({ voice: voiceId, model: MODEL, lines }, null, 1));
+    console.log(`narration ${id}: ${Object.keys(lines).length} lines, ${Object.values(lines).reduce((a, b) => a + b, 0).toFixed(1)}s`);
+  }
+  console.log('re-timing storyboards to the real narration');
   compile();
 }
 
@@ -149,9 +190,9 @@ function mix() {
     const parts = [];
     let idx = 1;
     const vo = [];
-    if (id === 'easy') {
+    {
       for (const l of v.narration) {
-        const f = path.join(AUDIO, 'vo', 'easy', l.id + '.mp3');
+        const f = path.join(AUDIO, 'vo', id, l.id + '.mp3');
         if (!fs.existsSync(f)) continue;
         inputs.push('-i', f);
         const ms = Math.round(l.start * 1000);
