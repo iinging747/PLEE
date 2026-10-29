@@ -18,7 +18,8 @@ function nl(s) { return String(s).replace(/\n/g, '\r'); }
 
 // ---- fonts -----------------------------------------------------------------
 
-var FONT_MAP = { kr: {}, krd: CONFIG.KR_DISPLAY_FONTS, en: CONFIG.EN_FONTS, mono: CONFIG.MONO_FONTS };
+// krd (heavy display) uses the same Korean family as kr, at its heavy weights
+var FONT_MAP = { kr: {}, en: CONFIG.EN_FONTS, mono: CONFIG.MONO_FONTS };
 
 function hasFontsApi() {
   try { return !!(app.fonts && app.fonts.allFonts); } catch (e) { return false; }
@@ -123,7 +124,7 @@ function chooseKoreanFont(videoId) {
 }
 
 function fontFor(f, w) {
-  var m = FONT_MAP[f] || FONT_MAP.kr;
+  var m = (f === 'krd' ? FONT_MAP.kr : FONT_MAP[f]) || FONT_MAP.kr;
   var ps = m[w];
   if (!ps) {
     var keys = [500, 600, 700, 400, 800, 900];
@@ -132,7 +133,7 @@ function fontFor(f, w) {
   if (!psExists(ps)) {
     REPORT.missingFonts[ps] = true;
     // missing display/Latin faces -> use the Korean text family so nothing renders as a substitute font
-    if (f !== 'kr') ps = FONT_MAP.kr[f === 'krd' ? 800 : w >= 600 ? 700 : 500] || FONT_MAP.kr[700] || ps;
+    if (f !== 'kr' && f !== 'krd') ps = FONT_MAP.kr[w >= 600 ? 700 : 500] || FONT_MAP.kr[700] || ps;
   }
   return ps;
 }
@@ -411,6 +412,7 @@ function finishLayer(comp, lay, L, isMatte) {
     }
   }
   if (L.guide) lay.guideLayer = true;
+  if (L.mb) { try { lay.motionBlur = true; } catch (eMb) {} }
   if (L.mt) {
     var m = buildLayer(comp, L.mt, true);
     setMatte(lay, m);
@@ -540,6 +542,7 @@ function buildVideo(video, root) {
     var c = app.project.items.addComp(video.id.toUpperCase() + '_' + sc.name, video.w, video.h, 1, sc.dur, video.fps);
     c.parentFolder = fScenes;
     c.bgColor = rgb(DATA_BG);
+    c.motionBlur = true;
     CTX.scenes[o.id] = c;
     fillComp(c, sc.layers);
     log('scene ' + c.name + ' done');
@@ -548,6 +551,7 @@ function buildVideo(video, root) {
   var main = app.project.items.addComp(video.name, video.w, video.h, 1, video.dur, video.fps);
   main.parentFolder = fMain;
   main.bgColor = rgb(DATA_BG);
+  main.motionBlur = true;
   fillComp(main, video.layers);
   for (var m = 0; m < video.order.length; m++) {
     try { main.markerProperty.setValueAtTime(video.order[m].start, new MarkerValue(video.order[m].name)); } catch (e) {}

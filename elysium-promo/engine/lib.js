@@ -89,6 +89,26 @@ export function estimateDur(text, rate = 7.2) {
   const n = text.replace(/[\s.,!?·'"‘’“”~:()\-–—]/g, '').length;
   return r2(n / rate + 0.3);
 }
+// Split a caption at clause boundaries into chunks of at most maxChars,
+// falling back to the space nearest the middle for an overlong clause.
+export function captionChunks(text, maxChars) {
+  if (text.length <= maxChars) return [text];
+  const clauses = text.split(/(?<=[,.?!])\s+/);
+  const out = [];
+  for (const c of clauses) {
+    const prev = out[out.length - 1];
+    if (prev !== undefined && prev.length + 1 + c.length <= maxChars) out[out.length - 1] = prev + ' ' + c;
+    else out.push(c);
+  }
+  return out.flatMap((c) => {
+    if (c.length <= maxChars) return [c];
+    const mid = c.length / 2;
+    let best = -1;
+    for (let i = 0; i < c.length; i++) if (c[i] === ' ' && (best < 0 || Math.abs(i - mid) < Math.abs(best - mid))) best = i;
+    return best < 0 ? [c] : captionChunks(c.slice(0, best), maxChars).concat(captionChunks(c.slice(best + 1), maxChars));
+  });
+}
+
 export function timeline(lines, timing, o = {}) {
   const lead = o.lead ?? 0.6;
   const gap = o.gap ?? 0.35;
@@ -108,8 +128,9 @@ export function timeline(lines, timing, o = {}) {
 // ---------------------------------------------------------------------------
 // Kit: builder API bound to a text measuring function.
 //   measure(str, font, weight, size, tracking) -> width in px (single line)
-// Fonts (preview): kr = Pretendard, krd = Jua, en = DM Sans, mono = DM Mono.
-// In After Effects `kr` resolves to an installed Sandoll family when available.
+// Fonts (preview): kr / krd = Noto Sans KR (본고딕, Hangul designed by Sandoll),
+// en = DM Sans, mono = DM Mono. krd is the heavy display cut. In After Effects
+// kr / krd resolve to the installed Sandoll family (그레타산스, 고딕Neo3, ...).
 
 export function makeKit(measure) {
   const warnings = [];
@@ -169,12 +190,30 @@ export function makeKit(measure) {
     L.in = r2(Math.max(0, at));
     L.out = S.dur;
     if (o.exit !== undefined && o.exit !== false && o.exit < S.dur) {
+      // exits accelerate away: masked lines slide back out of their matte,
+      // everything else drifts up, blurs and fades
       const ex = o.exit;
-      kf.o = kf.o || [[Math.max(at, ex - 0.01), top, 'l']];
-      kf.o.push([ex, top, 'i'], [ex + 0.3, 0, 'l']);
-      L.out = r2(Math.min(S.dur, ex + 0.32));
+      if (kf.p) {
+        const last = kf.p[kf.p.length - 1][1];
+        const dy = type === 'rise' ? -o.mdy : -(o.exitDy ?? 40);
+        kf.p.push([ex, last, 'i'], [ex + 0.32, [last[0], r2(last[1] + dy)], 'l']);
+      } else if (type !== 'none' && type !== 'growX' && L.k === 'text') {
+        L.fx = { ...(L.fx || {}) };
+        L.fx.blurKf = (L.fx.blurKf || [[at, 0, 'l']]).concat([[ex, 0, 'i'], [ex + 0.3, 18, 'l']]);
+      }
+      if (type !== 'rise') {
+        kf.o = kf.o || [[Math.max(at, ex - 0.01), top, 'l']];
+        kf.o.push([ex, top, 'i'], [ex + 0.28, 0, 'l']);
+      }
+      L.out = r2(Math.min(S.dur, ex + 0.34));
     }
+    if (kf.p || ['pop', 'scale', 'focus', 'growX'].includes(type)) L.mb = true;
     sortKf(kf);
+    if (L.fx && L.fx.blurKf) {
+      const b = { b: L.fx.blurKf };
+      sortKf(b);
+      L.fx.blurKf = b.b;
+    }
     return L;
   }
 
@@ -194,8 +233,7 @@ export function makeKit(measure) {
       let f = o.f || 'kr';
       if ((f === 'en' || f === 'mono') && hasHangul(str)) f = 'kr';
       const sz = o.sz || 40;
-      let w = o.w || 500;
-      if (f === 'krd') w = 400;
+      let w = o.w || (f === 'krd' ? 800 : 500);
       const tr = o.tr ?? (f === 'kr' ? (sz >= 90 ? -35 : -15) : 0);
       const ld = o.ld || Math.round(sz * 1.32);
       const al = o.al || 'l';
@@ -207,7 +245,7 @@ export function makeKit(measure) {
         const mh = sz * 0.42;
         const my = base - sz * 0.12 + (lines.length - 1) * ld;
         const mark = { k: 'shape', n: 'highlighter', p: [r2(left - 10), r2(my)], a: [r2(left - 10), r2(my)], it: [{ t: 'rect', sz: [r2(tw + 20), r2(mh)], ps: [r2(left - 10 + (tw + 20) / 2), r2(my)], rd: r2(mh * 0.3), fl: { c: o.markC || C.mint, o: o.markO ?? 85 } }] };
-        motion(mark, { at: (o.at ?? 0) + (o.markAt ?? 0.35), anim: 'growX', dIn: 0.6 }, S);
+        motion(mark, { at: (o.at ?? 0) + (o.markAt ?? 0.35), anim: 'growX', dIn: 0.6, exit: o.exit }, S);
         S.layers.push(mark);
       }
       const L = { k: 'text', n: o.n || str.replace(/\n/g, ' ').slice(0, 28), tx: str, f, w, sz, c: o.c || C.ink, al, tr, ld, p: [r2(x), r2(base)] };
@@ -268,6 +306,46 @@ export function makeKit(measure) {
       );
     },
 
+    // Kinetic headline: every word rises out of its own mask, one after another.
+    // Words are laid out on one line (left/centre aligned); returns the width.
+    words(S, str, x, y, o = {}) {
+      const sz = o.sz || 140;
+      const f = o.f || 'krd';
+      const w = o.w || (f === 'en' ? 600 : 800);
+      const tr = o.tr ?? (f === 'en' ? -20 : -40);
+      const parts = String(str).split(' ');
+      const space = kit.measure(' ', { f, w, sz, tr }) * (o.space ?? 0.9);
+      const widths = parts.map((q) => kit.measure(q, { f, w, sz, tr }));
+      const total = widths.reduce((a, b) => a + b, 0) + space * (parts.length - 1);
+      let cx = o.al === 'c' ? x - total / 2 : x;
+      const at = o.at ?? 0;
+      parts.forEach((q, i) => {
+        const c = (o.colors && o.colors[i]) || o.c || C.ink;
+        kit.text(S, q, cx, y, { f, w, sz, tr, c, anim: 'rise', at: r2(at + i * (o.stagger ?? 0.07)), dIn: o.dIn ?? 0.7, exit: o.exit, mark: o.marks && o.marks[i], markAt: 0.3 });
+        cx += widths[i] + space;
+      });
+      if (o.maxW && total > o.maxW) warnings.push(`[${S.id}] words too wide (${Math.round(total)} > ${o.maxW}): ${str}`);
+      return total;
+    },
+
+    // Full-frame colour card wiping in from the left (punctuation beats),
+    // wiping out to the right at t1.
+    punch(S, t0, t1, o = {}) {
+      const L = { k: 'shape', n: 'punch card', p: [0, H / 2], a: [0, H / 2], it: [{ t: 'rect', sz: [W, H], ps: [W / 2, H / 2], fl: { c: o.c || C.mint, o: 100 } }] };
+      // o.full: already covering the frame at t0 (continues a wipe)
+      L.kf = { s: o.full ? [[t0, [100, 100], 'l']] : [[t0, [0, 100], 'x'], [r2(t0 + 0.45), [100, 100], 'l']] };
+      L.in = r2(t0);
+      L.out = r2(Math.min(S.dur, t1 + 0.4));
+      if (t1 < S.dur) {
+        L.kf.p = [[t1, [0, H / 2], 'i'], [r2(t1 + 0.4), [W, H / 2], 'l']];
+        L.kf.s.push([t1, [100, 100], 'i'], [r2(t1 + 0.4), [0, 100], 'l']);
+      }
+      L.mb = true;
+      sortKf(L.kf);
+      S.layers.push(L);
+      return L;
+    },
+
     // Small mono label (uppercase Latin) or small Korean caption.
     label(S, str, x, y, o = {}) {
       const kr = hasHangul(str);
@@ -309,8 +387,8 @@ export function makeKit(measure) {
       const w = tw + sz * 1.6;
       const h = sz * 2;
       const cx = o.al === 'c' ? x : x + w / 2;
-      kit.shape(S, [{ t: 'rect', sz: [r2(w), r2(h)], ps: [r2(cx), y], rd: h / 2, fl: { c: o.fill || C.mint, o: o.fillO ?? 100 } }], { n: 'pill', p: [r2(cx), y], a: [r2(cx), y], anim: 'pop', at: o.at });
-      kit.text(S, str, cx, y, { sz, w: 600, tr: -10, c: o.c || C.ink, al: 'c', anim: 'fade', dIn: 0.3, at: (o.at ?? 0) + 0.12 });
+      kit.shape(S, [{ t: 'rect', sz: [r2(w), r2(h)], ps: [r2(cx), y], rd: h / 2, fl: { c: o.fill || C.mint, o: o.fillO ?? 100 } }], { n: 'pill', p: [r2(cx), y], a: [r2(cx), y], anim: 'pop', at: o.at, exit: o.exit });
+      kit.text(S, str, cx, y, { sz, w: 600, tr: -10, c: o.c || C.ink, al: 'c', anim: 'fade', dIn: 0.3, at: (o.at ?? 0) + 0.12, exit: o.exit });
       return w;
     },
 
@@ -328,14 +406,14 @@ export function makeKit(measure) {
       const dur = o.dur ?? 1.4;
       const half = (pts, extra) => ({ t: 'path', v: pts, cl: false, st: { c: extra.c, w: extra.w, o: extra.o, cap: 'r' }, tm: { e: [[at, 0, 'x'], [at + dur, 100, 'l']] } });
       const mk = (extra) => [half([[cx, y], [x0, y]], extra), half([[cx, y], [x1, y]], extra)];
-      kit.shape(S, mk({ c: o.c || C.mint2, w: 14, o: 70 }), { n: 'horizon glow', anim: 'none', at, fx: { blur: 30 }, op: o.glow ?? 90 });
-      kit.shape(S, mk({ c: o.core || C.ink, w: 1.5, o: o.coreO ?? 45 }), { n: 'horizon', anim: 'none', at });
+      kit.shape(S, mk({ c: o.c || C.mint2, w: 14, o: 70 }), { n: 'horizon glow', anim: 'none', at, fx: { blur: 30 }, op: o.glow ?? 90, exit: o.exit });
+      kit.shape(S, mk({ c: o.core || C.ink, w: 1.5, o: o.coreO ?? 45 }), { n: 'horizon', anim: 'none', at, exit: o.exit });
       if (o.travel !== false) {
         const sp = x1 - x0 + 600;
         kit.shape(
           S,
           [{ t: 'ell', sz: [340, 4], ps: [0, 0], fl: { c: C.accent, o: 90 }, ge: { p: { fn: 'flowX', x0: r2(x0 + (o.phase ?? 0.3) * sp), v: o.v ?? 520, span: r2(sp), off: r2(300 - x0), y } } }],
-          { n: 'horizon highlight', anim: 'fade', at: at + dur * 0.6, fx: { blur: 6 } },
+          { n: 'horizon highlight', anim: 'fade', at: at + dur * 0.6, fx: { blur: 6 }, exit: o.exit },
         );
       }
     },
@@ -350,7 +428,7 @@ export function makeKit(measure) {
         const sw = (w * sg.pct) / 100 - (i < segs.length - 1 ? gap : 0);
         const t0 = at + i * (o.stagger ?? 0.25);
         const L = { k: 'shape', n: 'split ' + i, p: [cx, y], a: [cx, y], it: [{ t: 'rect', sz: [r2(sw), h], ps: [r2(cx + sw / 2), y], rd: h / 2, fl: { c: sg.c, o: 100 } }] };
-        motion(L, { at: t0, anim: 'growX', dIn: 0.9 }, S);
+        motion(L, { at: t0, anim: 'growX', dIn: 0.9, exit: o.exit }, S);
         S.layers.push(L);
         const r = { ...sg, x: cx, t: t0, w: sw };
         cx += (w * sg.pct) / 100;
@@ -394,214 +472,31 @@ export function makeKit(measure) {
       for (const l of lines) S.narration.push({ id: l.id, t: l.t, dur: l.dur, text: l.text, say: l.say || l.text });
     },
 
-    // Narrated subtitles + manifest entries for the ElevenLabs script.
+    // Narrated subtitles + manifest entries for the ElevenLabs script. Long
+    // lines are shown in clause-sized chunks (o.maxChars), timed by length.
     say(S, lines, o = {}) {
       for (const l of lines) {
         S.narration.push({ id: l.id, t: l.t, dur: l.dur, text: l.text, say: l.say || l.text });
-        const L = kit.text(S, l.text, W / 2, o.y ?? 1000, { sz: o.sz || 32, w: 600, tr: -15, c: o.c || C.ink, al: 'c', anim: 'fade', dIn: 0.15, at: l.t, maxW: 1700 });
-        const end = r2(l.t + l.dur + 0.15);
-        if (end < S.dur) {
-          L.kf.o.push([end, 100, 'io'], [r2(end + 0.15), 0, 'l']);
-          L.out = r2(Math.min(S.dur, end + 0.2));
-        }
+        const chunks = captionChunks(l.text, o.maxChars || 999);
+        const len = (s) => s.replace(/\s/g, '').length;
+        const total = chunks.reduce((a, c) => a + len(c), 0);
+        let t = l.t;
+        chunks.forEach((c, i) => {
+          const d = (l.dur * len(c)) / total;
+          const L = kit.text(S, c, W / 2, o.y ?? 1000, { sz: o.sz || 32, w: 600, tr: -15, c: o.c || C.ink, al: 'c', anim: 'fade', dIn: i ? 0.08 : 0.15, at: r2(t), maxW: 1700 });
+          L.top = true; // captions stay above full-frame cards
+          const last = i === chunks.length - 1;
+          const end = r2(last ? l.t + l.dur + 0.15 : t + d - 0.08);
+          if (end < S.dur) {
+            L.kf.o.push([end, 100, 'io'], [r2(end + (last ? 0.15 : 0.06)), 0, 'l']);
+            L.out = r2(Math.min(S.dur, end + (last ? 0.2 : 0.08)));
+          }
+          t += d;
+        });
       }
     },
   };
   return kit;
-}
-
-// ---------------------------------------------------------------------------
-// Narrator: an original cat inspired by Hyperliquid's mascot (white fur, big
-// eyes, deep-teal suit with a mint tie). One shape layer; arms rotate about the
-// shoulders, eyes blink, the mouth opens while the narration line plays.
-// Local space: feet on 0,0, y down. Rotation 0 = arm hanging straight down,
-// positive = clockwise on screen (AE convention).
-
-const CAT = {
-  line: '#1B3A40',
-  fur: '#FFFFFF',
-  shade: '#E6EEF1',
-  stripe: '#A6B8C3',
-  ear: '#F7C5D0',
-  iris: '#2D7388',
-  pupil: '#0B2328',
-  nose: '#F09AAF',
-  mouth: '#E26C88',
-  blush: '#F7B6C4',
-  suit: '#173B42',
-  tie: '#97FCE4',
-};
-const POSES = {
-  idle: { L: 14, R: -14 },
-  wave: { L: 14, R: -148 },
-  point: { L: 12, R: -100 },
-  pointUp: { L: 12, R: -150 },
-  present: { L: 55, R: -55 },
-  open: { L: 100, R: -100 },
-  cheer: { L: 155, R: -155 },
-  hold: { L: 14, R: -70 },
-  shrug: { L: 78, R: -78 },
-  stop: { L: 12, R: -128 },
-};
-const SH_L = [-60, -150];
-const SH_R = [60, -150];
-const HEAD = [0, -292];
-const ARM = 66;
-
-export function cat(kit, S, x, ground, scale = 1, o = {}) {
-  const ln = (w) => ({ c: CAT.line, w, o: 100, cap: 'r' });
-  const add = (a, b) => [r2(a[0] + b[0]), r2(a[1] + b[1])];
-  const hp = (p) => add(HEAD, p);
-  const bob = (base, a = 2.4, ph = 0) => ({ fn: 'bob', base, a, f: 2.6, ph });
-  const blinkS = { fn: 'blink', ph: 0.4, per: 3.9 };
-  const it = [];
-  const push = (item) => (it.push(item), item);
-  const headItem = (item, anchor) => push({ ...item, ga: anchor, ge: { ...(item.ge || {}), p: bob(anchor, 3, 0.25) } });
-
-  // ground shadow
-  push({ t: 'ell', sz: [190, 26], ps: [0, 2], fl: { c: CAT.line, o: 10 } });
-  // tail (sways about its base)
-  const tail = smooth([[52, -64], [112, -96], [128, -168], [104, -222]], false);
-  const tailSway = { fn: 'sway', a: 7, f: 1.7, ph: 0 };
-  push({ t: 'path', ...tail, st: ln(30), ga: [52, -64], ge: { r: tailSway } });
-  push({ t: 'path', ...tail, st: { c: CAT.fur, w: 21, o: 100, cap: 'r' }, ga: [52, -64], ge: { r: tailSway } });
-  // feet + legs
-  for (const sx of [-1, 1]) push({ t: 'ell', sz: [62, 32], ps: [sx * 32, -14], fl: { c: CAT.fur, o: 100 }, st: ln(5) });
-  push({ t: 'rect', sz: [96, 46], ps: [0, -50], rd: 16, fl: { c: CAT.suit, o: 100 }, st: ln(5) });
-  // body (suit) with shirt and mint tie
-  const body = smooth([[-66, -40], [-76, -112], [-52, -176], [0, -186], [52, -176], [76, -112], [66, -40], [0, -32]], true, 0.9);
-  push({ t: 'path', ...body, fl: { c: CAT.suit, o: 100 }, st: ln(5), ge: { p: bob([0, 0], 1.6) } });
-  push({ t: 'path', v: [[-30, -176], [30, -176], [0, -124]], cl: true, fl: { c: CAT.fur, o: 100 }, ge: { p: bob([0, 0], 1.6) } });
-  push({ t: 'path', v: [[0, -168], [9, -152], [0, -118], [-9, -152]], cl: true, fl: { c: CAT.tie, o: 100 }, st: ln(3), ge: { p: bob([0, 0], 1.6) } });
-  push({ t: 'ell', sz: [16, 16], ps: [38, -128], fl: { c: CAT.tie, o: 100 }, ge: { p: bob([38, -128], 1.6) } });
-  // arms: sleeve outline + sleeve + paw, all rotating about the shoulder
-  const arms = { L: [], R: [] };
-  for (const [side, sh] of [['L', SH_L], ['R', SH_R]]) {
-    const g = { ga: sh, ge: { p: bob(sh, 1.6) } };
-    arms[side].push(push({ t: 'path', v: [[sh[0], sh[1]], [sh[0], sh[1] + ARM]], cl: false, st: ln(38), ...g }));
-    arms[side].push(push({ t: 'path', v: [[sh[0], sh[1]], [sh[0], sh[1] + ARM]], cl: false, st: { c: CAT.suit, w: 28, o: 100, cap: 'r' }, ...g }));
-    arms[side].push(push({ t: 'ell', sz: [38, 38], ps: [sh[0], sh[1] + ARM + 8], fl: { c: CAT.fur, o: 100 }, st: ln(5), ...g }));
-  }
-  // ears (behind the head)
-  for (const sx of [-1, 1]) {
-    headItem({ t: 'path', ...smooth([[sx * 112, -38], [sx * 104, -150, 'c'], [sx * 34, -96]], true, 0.6), fl: { c: CAT.fur, o: 100 }, st: ln(5) }, HEAD.map((v, i) => v + [sx * 80, -96][i]));
-    headItem({ t: 'path', ...smooth([[sx * 98, -62], [sx * 98, -128, 'c'], [sx * 54, -92]], true, 0.5), fl: { c: CAT.ear, o: 100 } }, HEAD.map((v, i) => v + [sx * 80, -96][i]));
-  }
-  // fix ear coordinates into head space
-  for (const item of it.slice(-4)) item.v = item.v.map((p) => hp(p));
-  // head with cheek fluff
-  const headPts = [[0, -104], [64, -98], [110, -66], [128, -18], [132, 20], [146, 38, 'c'], [122, 52], [130, 66, 'c'], [86, 94], [0, 106], [-86, 94], [-130, 66, 'c'], [-122, 52], [-146, 38, 'c'], [-132, 20], [-128, -18], [-110, -66], [-64, -98]].map((p) => [...hp(p), p[2]].filter((v) => v !== undefined));
-  headItem({ t: 'path', ...smooth(headPts, true, 0.95), fl: { c: CAT.fur, o: 100 }, st: ln(5) }, HEAD);
-  // forehead stripes
-  for (const [a, b] of [[[-24, -92], [-19, -66]], [[0, -97], [0, -68]], [[24, -92], [19, -66]]]) headItem({ t: 'path', v: [hp(a), hp(b)], cl: false, st: { c: CAT.stripe, w: 8, o: 100, cap: 'r' } }, HEAD);
-  // blush
-  for (const sx of [-1, 1]) headItem({ t: 'ell', sz: [34, 16], ps: hp([sx * 86, 42]), fl: { c: CAT.blush, o: 70 } }, HEAD);
-  // eyes: open set (blinks) + happy set (^ ^), toggled with opacity
-  const openEyes = [];
-  const happyEyes = [];
-  for (const sx of [-1, 1]) {
-    const c = hp([sx * 50, -6]);
-    const eye = (item) => {
-      const e = push({ ...item, ga: c, ge: { p: bob(c, 3, 0.25), s: blinkS } });
-      openEyes.push(e);
-    };
-    eye({ t: 'ell', sz: [62, 74], ps: c, fl: { c: CAT.iris, o: 100 }, st: ln(5) });
-    eye({ t: 'ell', sz: [36, 46], ps: add(c, [0, 6]), fl: { c: CAT.pupil, o: 100 } });
-    eye({ t: 'ell', sz: [20, 20], ps: add(c, [-11, -15]), fl: { c: CAT.fur, o: 100 } });
-    eye({ t: 'ell', sz: [9, 9], ps: add(c, [12, 15]), fl: { c: CAT.fur, o: 100 } });
-    happyEyes.push(push({ t: 'path', ...smooth([add(c, [-24, 8]), add(c, [0, -14]), add(c, [24, 8])], false), st: ln(7), ga: c, ge: { p: bob(c, 3, 0.25) }, go: 0 }));
-  }
-  // nose, mouth, talking mouth, whiskers
-  headItem({ t: 'path', v: [hp([-10, 24]), hp([10, 24]), hp([0, 35])], cl: true, fl: { c: CAT.nose, o: 100 }, st: ln(3) }, HEAD);
-  headItem({ t: 'path', ...smooth([hp([-20, 38]), hp([-10, 48]), [...hp([0, 40]), 'c'], hp([10, 48]), hp([20, 38])], false), st: ln(4) }, HEAD);
-  const mouthC = hp([0, 54]);
-  const talkMouth = push({ t: 'ell', sz: [30, 26], ps: mouthC, fl: { c: CAT.mouth, o: 100 }, st: ln(4), ga: mouthC, ge: { p: bob(mouthC, 3, 0.25), s: { fn: 'talk', w: [], f: 15 } } });
-  for (const sx of [-1, 1]) {
-    headItem({ t: 'path', v: [hp([sx * 128, 20]), hp([sx * 170, 10])], cl: false, st: ln(3.5) }, HEAD);
-    headItem({ t: 'path', v: [hp([sx * 128, 36]), hp([sx * 168, 42])], cl: false, st: ln(3.5) }, HEAD);
-  }
-
-  const L = { k: 'shape', n: o.n || 'Narrator cat (Hypurr-inspired)', p: [r2(x), r2(ground)], s: [scale * 100, scale * 100], it, in: 0, out: S.dur, kf: {} };
-  S.layers.push(L);
-
-  // arm rotation keys (all three parts of an arm share them)
-  const armKeys = { L: [], R: [] };
-  let cur = { ...POSES[o.pose || 'idle'] };
-  const key = (side, t, v, e) => armKeys[side].push([r2(t), v, e]);
-  key('L', 0, cur.L, 'l');
-  key('R', 0, cur.R, 'l');
-  const setPose = (t, p, d = 0.32) => {
-    for (const side of ['L', 'R']) {
-      key(side, t, cur[side], 'o');
-      key(side, t + d, p[side], 'l');
-    }
-    cur = { ...p };
-  };
-  const happyKeys = [[0, 0, 'h']];
-  const api = {
-    layer: L,
-    pose(t, name, d) {
-      setPose(t, POSES[name], d);
-      return api;
-    },
-    wave(t, n = 3) {
-      setPose(t, POSES.wave, 0.28);
-      for (let i = 0; i < n * 2; i++) key('R', t + 0.28 + (i + 1) * 0.2, POSES.wave.R + (i % 2 ? 0 : 24), 'io');
-      key('R', t + 0.28 + (n * 2 + 1) * 0.2, POSES.wave.R, 'io');
-      return api;
-    },
-    happy(t0, t1) {
-      happyKeys.push([r2(t0), 100, 'h'], [r2(t1), 0, 'h']);
-      return api;
-    },
-    hop(t, h = 26) {
-      L.kf.p = (L.kf.p || [[0, [...L.p], 'l']]).concat([[r2(t), [...L.p], 'o'], [r2(t + 0.18), [L.p[0], r2(L.p[1] - h)], 'io'], [r2(t + 0.4), [...L.p], 'l']]);
-      L.kf.s = (L.kf.s || [[0, [scale * 100, scale * 100], 'l']]).concat([[r2(t), [scale * 100, scale * 100], 'o'], [r2(t + 0.08), [scale * 106, scale * 94], 'io'], [r2(t + 0.2), [scale * 96, scale * 104], 'io'], [r2(t + 0.42), [scale * 100, scale * 100], 'l']]);
-      return api;
-    },
-    enter(t0, t1, fromX) {
-      const n = Math.max(2, Math.round((t1 - t0) / 0.3));
-      const kp = [];
-      for (let i = 0; i <= n; i++) {
-        const u = i / n;
-        const xx = fromX + (L.p[0] - fromX) * (1 - (1 - u) ** 2);
-        kp.push([r2(t0 + (t1 - t0) * u), [r2(xx), r2(L.p[1] - (i % 2 ? 18 : 0))], 'io']);
-      }
-      L.kf.p = kp;
-      return api;
-    },
-    talk(windows) {
-      talkMouth.ge.s.w = windows.map(([a, b]) => [r2(a), r2(b)]);
-      return api;
-    },
-    hand(name = 'hold', side = 'R') {
-      const a = (POSES[name][side] * Math.PI) / 180;
-      const sh = side === 'R' ? SH_R : SH_L;
-      const lx = sh[0] - (ARM + 8) * Math.sin(a);
-      const ly = sh[1] + (ARM + 8) * Math.cos(a);
-      return [r2(L.p[0] + scale * lx), r2(L.p[1] + scale * ly)];
-    },
-    top() {
-      return [L.p[0], r2(L.p[1] - 440 * scale)];
-    },
-    done() {
-      for (const side of ['L', 'R']) {
-        const g = { r: armKeys[side] };
-        sortKf(g);
-        for (const item of arms[side]) item.gkf = { r: g.r };
-      }
-      const hk = { o: happyKeys };
-      sortKf(hk);
-      if (hk.o.length > 1) {
-        const inv = hk.o.map(([t, v, e]) => [t, 100 - v, e]);
-        for (const e of happyEyes) e.gkf = { o: hk.o };
-        for (const e of openEyes) e.gkf = { o: inv };
-      }
-      if (L.kf.p) sortKf(L.kf);
-      return api;
-    },
-  };
-  return api;
 }
 
 // ---------------------------------------------------------------------------
@@ -610,7 +505,9 @@ export function cat(kit, S, x, ground, scale = 1, o = {}) {
 //   ROOT (placement, hops, lean) > BODY (breathing) > TAIL (sway)
 //                                               > HEAD idle > HEAD (tilts)
 // Face overlays on the head add blinks, a talking mouth, happy eyes, glasses,
-// sparkles and a sweat drop, drawn in the character's own line style.
+// sparkles, a sweat drop and a "!" mark, drawn in the character's own line
+// style. Hops squash and stretch about the feet, like the sticker pack.
+// o.flip mirrors the character (it then faces right).
 
 const RIG = {
   size: [579, 813],
@@ -632,7 +529,7 @@ const MOODS = {
   cheer: { head: 0, hop: 2, happy: 1.4 },
   hold: { head: 5, lean: 1 },
   shrug: { head: -9, lean: 0, sweat: 1 },
-  stop: { head: -5, lean: -3 },
+  stop: { head: -5, lean: -3, alert: 1 },
 };
 let rigSeq = 0;
 
@@ -651,7 +548,8 @@ export function mascot(kit, S, x, ground, height, o = {}) {
   const nul = (n, extra) => ({ k: 'null', n: `Hypurr ${n}`, id: id(n), a: [0, 0], ...base, ...extra });
   const img = (n, file, par, p) => ({ k: 'img', n: `Hypurr ${n}`, src: `assets/stickers/rig/${file}`, fit, pv, par: id(par), p, ...base });
 
-  const root = nul('ROOT', { p: [r2(x), r2(ground)], kf: {} });
+  const sx = o.flip ? -1 : 1;
+  const root = nul('ROOT', { p: [r2(x), r2(ground)], s: [sx * 100, 100], kf: {} });
   const body = nul('BODY', { par: id('ROOT'), p: [0, 0], ex: { s: { fn: 'breath', a: 1.1, f: 2.3 } } });
   const tail = nul('TAIL', { par: id('BODY'), p: tailB, ex: { r: { fn: 'sway', a: 5, f: 1.7, ph: 0 } } });
   const headIdle = nul('HEAD idle', { par: id('BODY'), p: neck, ex: { r: { fn: 'sway', a: 1.6, f: 1.15, ph: 0.8 } } });
@@ -693,7 +591,13 @@ export function mascot(kit, S, x, ground, height, o = {}) {
   const sparkle = { t: 'path', v: [[top[0], r2(top[1] - 30 * k)], [r2(top[0] + 9 * k), r2(top[1] - 9 * k)], [r2(top[0] + 30 * k), top[1]], [r2(top[0] + 9 * k), r2(top[1] + 9 * k)], [top[0], r2(top[1] + 30 * k)], [r2(top[0] - 9 * k), r2(top[1] + 9 * k)], [r2(top[0] - 30 * k), top[1]], [r2(top[0] - 9 * k), r2(top[1] - 9 * k)]], cl: true, fl: { c: '#FFE36E', o: 100 }, st: { c: RIG.line, w: lw(5), o: 100 }, ga: top, gkf: { s: [[0, [0, 0], 'h']] } };
   const sw = fp([420, 200]);
   const sweat = { t: 'path', ...smooth([[sw[0], r2(sw[1] - 26 * k), 'c'], [r2(sw[0] + 13 * k), r2(sw[1] + 4 * k)], [sw[0], r2(sw[1] + 16 * k)], [r2(sw[0] - 13 * k), r2(sw[1] + 4 * k)]], true, 0.9), fl: { c: '#8FD6F5', o: 100 }, st: { c: RIG.line, w: lw(4), o: 100 }, ga: sw, gkf: { s: [[0, [0, 0], 'h']] } };
-  face.push(sparkle, sweat);
+  const am = fp([470, 95]);
+  // "!" mark: two items scaling about the same point
+  const alert = [
+    { t: 'rect', sz: [lw(20), lw(62)], ps: [am[0], r2(am[1] - 18 * k)], rd: lw(10), fl: { c: '#FFB547', o: 100 }, st: { c: RIG.line, w: lw(5), o: 100 }, ga: am },
+    { t: 'ell', sz: [lw(22), lw(22)], ps: [am[0], r2(am[1] + 34 * k)], fl: { c: '#FFB547', o: 100 }, st: { c: RIG.line, w: lw(5), o: 100 }, ga: am },
+  ];
+  face.push(sparkle, sweat, ...alert);
 
   const L = [
     root, body, tail,
@@ -705,10 +609,11 @@ export function mascot(kit, S, x, ground, height, o = {}) {
     { k: 'shape', n: 'Hypurr face rig', par: id('HEAD'), p: [0, 0], it: face, ...base },
   ];
   if (o.at) for (const l of L) if (l.k !== 'null') l.kf = { ...(l.kf || {}), o: [[o.at, 0, 'so'], [o.at + 0.35, 100, 'l']] };
+  for (const l of L) l.top = true; // the presenter stays above full-frame cards
   S.layers.push(...L);
 
   // keyframe builders
-  const keys = { head: [[0, 0, 'l']], lean: [[0, 0, 'l']], pos: [], happy: [[0, 0, 'h']], sparkle: [[0, [0, 0], 'h']], sweat: [[0, [0, 0], 'h']] };
+  const keys = { head: [[0, 0, 'l']], lean: [[0, 0, 'l']], pos: [], sq: [], happy: [[0, 0, 'h']], sparkle: [[0, [0, 0], 'h']], sweat: [[0, [0, 0], 'h']], alert: [[0, [0, 0], 'h']] };
   let cur = { head: 0, lean: 0 };
   const P = [r2(x), r2(ground)];
   const popKeys = (arr, t, hold = 0.9) => arr.push([r2(t), [0, 0], 'o'], [r2(t + 0.22), [115, 115], 'io'], [r2(t + 0.36), [100, 100], 'l'], [r2(t + 0.36 + hold), [100, 100], 'i'], [r2(t + 0.56 + hold), [0, 0], 'h']);
@@ -717,18 +622,19 @@ export function mascot(kit, S, x, ground, height, o = {}) {
     pose(t, name, d = 0.32) {
       const m = MOODS[name] || MOODS.idle;
       keys.head.push([r2(t), cur.head, 'o'], [r2(t + d), m.head, 'l']);
-      keys.lean.push([r2(t), cur.lean, 'o'], [r2(t + d), m.lean || 0, 'l']);
+      keys.lean.push([r2(t), cur.lean * sx, 'o'], [r2(t + d), (m.lean || 0) * sx, 'l']);
       cur = { head: m.head, lean: m.lean || 0 };
       for (let i = 0; i < (m.hop || 0); i++) api.hop(t + i * 0.42);
       if (m.happy) api.happy(t, t + m.happy);
       if (m.sparkle) popKeys(keys.sparkle, t + 0.1);
       if (m.sweat) popKeys(keys.sweat, t + 0.15, 1.2);
+      if (m.alert) popKeys(keys.alert, t + 0.05, 1.1);
       return api;
     },
     wave(t, n = 3) {
-      keys.lean.push([r2(t), cur.lean, 'io']);
-      for (let i = 0; i < n * 2; i++) keys.lean.push([r2(t + 0.17 * (i + 1)), cur.lean + (i % 2 ? -5 : 5), 'io']);
-      keys.lean.push([r2(t + 0.17 * (n * 2 + 1)), cur.lean, 'l']);
+      keys.lean.push([r2(t), cur.lean * sx, 'io']);
+      for (let i = 0; i < n * 2; i++) keys.lean.push([r2(t + 0.17 * (i + 1)), (cur.lean + (i % 2 ? -5 : 5)) * sx, 'io']);
+      keys.lean.push([r2(t + 0.17 * (n * 2 + 1)), cur.lean * sx, 'l']);
       api.happy(t, t + 0.17 * (n * 2 + 1));
       return api;
     },
@@ -741,7 +647,14 @@ export function mascot(kit, S, x, ground, height, o = {}) {
       return api;
     },
     hop(t, h = 34) {
-      keys.pos.push([r2(t), P, 'o'], [r2(t + 0.17), [P[0], r2(P[1] - h * k * 1.6)], 'io'], [r2(t + 0.38), P, 'l']);
+      // anticipation squash, stretch in the air, a small squash on landing
+      keys.pos.push([r2(t), P, 'l'], [r2(t + 0.07), P, 'o'], [r2(t + 0.24), [P[0], r2(P[1] - h * k * 1.6)], 'io'], [r2(t + 0.44), P, 'l']);
+      const S2 = (a, b) => [sx * a, b];
+      keys.sq.push([r2(t), S2(100, 100), 'o'], [r2(t + 0.07), S2(108, 91), 'io'], [r2(t + 0.2), S2(95, 106), 'io'], [r2(t + 0.44), S2(105, 95), 'io'], [r2(t + 0.6), S2(100, 100), 'l']);
+      return api;
+    },
+    alert(t) {
+      popKeys(keys.alert, t, 1.1);
       return api;
     },
     enter(t0, t1, fromX) {
@@ -756,22 +669,23 @@ export function mascot(kit, S, x, ground, height, o = {}) {
       mouth.ge.s.w = windows.map(([a, b]) => [r2(a), r2(b)]);
       return api;
     },
-    // a spot beside the character for props (comp space)
+    // a spot in front of the character for props (comp space)
     hand() {
-      return [r2(x + 190 * k), r2(ground - 330 * k)];
+      return [r2(x - sx * 300 * k), r2(ground - 300 * k)];
     },
     done() {
       const kf = { r: keys.head };
       sortKf(kf);
       head.kf.r = kf.r;
-      const lk = { r: keys.lean, p: keys.pos };
+      const lk = { r: keys.lean, p: keys.pos, s: keys.sq };
       if (!lk.p.length) delete lk.p;
+      if (!lk.s.length) delete lk.s;
       sortKf(lk);
       root.kf = { ...root.kf, ...lk };
       const hk = { o: keys.happy };
       sortKf(hk);
       if (hk.o.length > 1) for (const it of happyItems) it.gkf = { o: hk.o };
-      for (const [item, arr] of [[sparkle, keys.sparkle], [sweat, keys.sweat]]) {
+      for (const [item, arr] of [[sparkle, keys.sparkle], [sweat, keys.sweat], [alert[0], keys.alert], [alert[1], keys.alert]]) {
         const g = { s: arr };
         sortKf(g);
         item.gkf = { s: g.s };
@@ -783,15 +697,34 @@ export function mascot(kit, S, x, ground, height, o = {}) {
 }
 
 // ---------------------------------------------------------------------------
-// Main comp: paper background + vignette under the scenes, grain + fades above.
+// Main comp: warm paper with a mint dawn rising from the horizon and a fine
+// architectural grid under the scenes; grain, transitions and fades above.
 
 export function mainLayers(video) {
   const { dur } = video;
+  const grid = [];
+  for (let x = 120; x < W; x += 120) grid.push({ t: 'path', v: [[x, 0], [x, H]], cl: false, st: { c: C.ink, w: 1, o: 100 } });
+  for (let y = 120; y < H; y += 120) grid.push({ t: 'path', v: [[0, y], [W, y]], cl: false, st: { c: C.ink, w: 1, o: 100 } });
+  const full = { in: 0, out: dur, p: [W / 2, H / 2], a: [W / 2, H / 2], sz: [W, H] };
   return [
-    // near-flat paper: a wide, low-contrast falloff so 8-bit gradients do not band
-    { k: 'ramp', n: 'BG paper', in: 0, out: dur, p: [W / 2, H / 2], a: [W / 2, H / 2], sz: [W, H], rp: { t: 'rad', p1: [W * 0.5, H * 0.45], c1: '#FAF9F6', p2: [W * 0.5 + 1500, H * 0.45], c2: C.paper } },
-    { k: 'ramp', n: 'Vignette', in: 0, out: dur, p: [W / 2, H / 2], a: [W / 2, H / 2], sz: [W, H], bl: 'multiply', o: 50, rp: { t: 'rad', p1: [W / 2, H / 2], c1: C.white, p2: [W / 2 + 1500, H / 2], c2: C.paperEdge } },
+    { k: 'ramp', n: 'BG paper', ...full, rp: { t: 'lin', p1: [W / 2, 0], c1: '#FCFBF8', p2: [W / 2, H], c2: '#F1F6F2' } },
+    { k: 'ramp', n: 'BG horizon light', ...full, bl: 'multiply', rp: { t: 'rad', p1: [W * 0.5, H + 330], c1: '#B5F1DE', p2: [W * 0.5 + 1350, H + 330], c2: C.white } },
+    { k: 'ramp', n: 'BG top light', ...full, bl: 'multiply', o: 60, rp: { t: 'rad', p1: [W * 0.12, -260], c1: '#DCEFF6', p2: [W * 0.12 + 1100, -260], c2: C.white } },
+    { k: 'shape', n: 'BG grid', in: 0, out: dur, p: [0, 0], o: 4.5, it: grid },
+    { k: 'ramp', n: 'Vignette', ...full, bl: 'multiply', o: 55, rp: { t: 'rad', p1: [W / 2, H * 0.45], c1: C.white, p2: [W / 2 + 1400, H * 0.45], c2: C.paperEdge } },
   ];
+}
+
+// Two-panel wipe across a cut at time t: a mint panel covers the frame and
+// slides off to the right, trailed by a thin ink panel.
+function wipeLayers(t, dur, i) {
+  const rect = (c) => [{ t: 'rect', sz: [W, H], ps: [W / 2, H / 2], fl: { c, o: 100 } }];
+  const t0 = r2(Math.max(0, t - 0.3));
+  const mk = (n, c, lag) => ({
+    k: 'shape', n, in: t0, out: r2(Math.min(dur, t + 0.5 + lag)), p: [-W, 0], it: rect(c), mb: true,
+    kf: { p: [[r2(t0 + lag), [-W, 0], 'i'], [r2(t + lag * 0.5), [0, 0], 'o'], [r2(t + 0.36 + lag), [W, 0], 'l']] },
+  });
+  return [mk(`Wipe ${i} ink`, C.ink, 0.07), mk(`Wipe ${i} mint`, C.mint, 0)];
 }
 
 export function finishLayers(video) {
@@ -813,14 +746,22 @@ export function assemble(meta, scenes, slotsMeta, kit, opts = {}) {
   video.dur = r2(t);
   const layers = mainLayers(video);
   const push = opts.push ?? 3; // slow camera push-in per shot (%)
-  for (const { S, start } of placed) {
-    video.scenes[S.id] = { name: S.name, dur: S.dur, layers: S.layers.map(clean) };
+  const wipes = [];
+  placed.forEach(({ S, start }, i) => {
+    // layers flagged `top` (captions, presenter) draw above everything else
+    const ordered = [...S.layers.filter((l) => !l.top), ...S.layers.filter((l) => l.top)];
+    video.scenes[S.id] = { name: S.name, dur: S.dur, layers: ordered.map(clean) };
     video.order.push({ id: S.id, start, dur: S.dur, name: S.name });
     for (const n of S.narration) video.narration.push({ ...n, scene: S.id, start: r2(start + n.t) });
-    for (const c of S.cues || []) video.cues.push({ ...c, t: r2(start + c.t) });
-    layers.push({ k: 'comp', n: S.name, ref: S.id, in: start, out: r2(start + S.dur), p: [W / 2, H / 2], a: [W / 2, H / 2], kf: { s: [[start, [100, 100], 'l'], [r2(start + S.dur), [100 + push, 100 + push], 'l']] } });
-  }
-  layers.push(...finishLayers(video));
+    // a whoosh on a cut leads the wipe so its swell lands on the cut
+    for (const c of S.cues || []) video.cues.push({ ...c, t: r2(Math.max(0, start + c.t - (opts.wipe && i && c.type === 'whoosh' && c.t === 0 ? 0.3 : 0))) });
+    // camera: each shot lands slightly pushed in, settles, then drifts in slowly
+    const end = r2(start + S.dur);
+    const s = i && opts.wipe ? [[start, [104, 104], 'x'], [r2(start + 1.1), [100, 100], 'l'], [end, [100 + push, 100 + push], 'l']] : [[start, [100, 100], 'l'], [end, [100 + push, 100 + push], 'l']];
+    layers.push({ k: 'comp', n: S.name, ref: S.id, in: start, out: end, p: [W / 2, H / 2], a: [W / 2, H / 2], kf: { s } });
+    if (i && opts.wipe) wipes.push(...wipeLayers(start, video.dur, i));
+  });
+  layers.push(...wipes, ...finishLayers(video));
   video.layers = layers.map(clean);
   for (const [id, m] of Object.entries(slotsMeta)) video.slots[id] = { ...m, layers: (m.layers || []).map(clean) };
   video.warnings = kit.warnings;
@@ -830,7 +771,7 @@ export function assemble(meta, scenes, slotsMeta, kit, opts = {}) {
 function clean(L) {
   const out = {};
   for (const [k, v] of Object.entries(L)) {
-    if (k.startsWith('_')) continue;
+    if (k.startsWith('_') || k === 'top') continue;
     out[k] = k === 'mt' && v ? clean(v) : v;
   }
   return out;

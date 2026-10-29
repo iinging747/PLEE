@@ -30,7 +30,7 @@ const step = process.argv[2] || 'all';
 const force = process.argv.includes('--force');
 
 const MUSIC = {
-  pro: 'Premium minimal tech commercial score, 120 BPM, confident and sleek. Deep sub-bass pulses on the beat, crisp tight hi-hats, glassy airy pads, subtle digital textures. Starts sparse with a rising swell for 3 seconds, a clean impact at 7 seconds, steady driving pulse through the middle, and a wide cinematic resolve in the last 6 seconds. Instrumental, no vocals.',
+  pro: 'Refined, understated background score for an expert fintech explainer, 96 BPM. Warm felt piano motifs, soft analog synth pads, gentle sub-bass, light brushed percussion and subtle glassy digital textures. Calm, confident and trustworthy, like a premium product keynote. Steady and minimal so a voiceover sits clearly on top, no big drops, a soft lift in the final 15 seconds and a clean resolved ending. Instrumental, no vocals.',
   easy: 'Light, friendly explainer background music, 100 BPM. Soft plucked synths and warm marimba, gentle kick and shaker, bright but calm and unobtrusive so a voiceover sits clearly on top. Curious, optimistic, modern. Steady energy without big drops, soft ending. Instrumental, no vocals.',
 };
 const SFX = {
@@ -119,8 +119,8 @@ async function castVoice() {
   return CASTING.fallback;
 }
 
-// One trusted narrator for both videos; the commercial reads calm and measured,
-// the explainer a little warmer and quicker.
+// One trusted narrator for both videos; the advanced version reads calm and
+// measured, the beginner version a little warmer and quicker.
 const VOICE = {
   pro: { env: 'ELEVENLABS_VOICE_ID_PRO', settings: { stability: 0.62, similarity_boost: 0.82, style: 0.1, use_speaker_boost: true, speed: Number(process.env.ELEVENLABS_SPEED_PRO || 0.97) } },
   easy: { env: 'ELEVENLABS_VOICE_ID_EASY', settings: { stability: 0.5, similarity_boost: 0.8, style: 0.25, use_speaker_boost: true, speed: SPEED } },

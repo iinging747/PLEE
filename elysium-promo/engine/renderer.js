@@ -5,7 +5,7 @@
 import { EASES } from './lib.js';
 import { evalExpr, counterValue } from './expr.js';
 
-export const FAM = { kr: '"Pretendard"', krd: '"Jua"', en: '"DM Sans"', mono: '"DM Mono"' };
+export const FAM = { kr: '"Noto Sans KR"', krd: '"Noto Sans KR"', en: '"DM Sans"', mono: '"DM Mono"' };
 
 // cubic-bezier(x1, 0, x2, 1) solver
 function bezier(x1, x2) {

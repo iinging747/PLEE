@@ -313,7 +313,7 @@ function FileFn(p) {
 }
 const fontFamilies = [
   ['Pretendard', ['Regular', 'Medium', 'SemiBold', 'Bold', 'ExtraBold'], 'Pretendard'],
-  ['Jua', ['Regular'], 'Jua'],
+  ['Noto Sans KR', ['Regular', 'Medium', 'SemiBold', 'Bold', 'ExtraBold', 'Black'], 'NotoSansKR'],
   ['Sandoll GothicNeo3', ['04 Rg', '05 Md', '06 Sb', '07 Bd', '08 Eb'], 'SDGothicNeo3'],
   ['Sandoll Greta Sans', ['Regular', 'Medium', 'SemiBold', 'Bold', 'ExtraBold'], 'SandollGretaSans'],
   ['DM Sans', ['Regular', 'Medium', 'SemiBold', 'Bold'], 'DMSans'],

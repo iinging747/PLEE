@@ -20,7 +20,7 @@ const opt = (k, d) => {
   return i < 0 ? d : args[i + 1] && !args[i + 1].startsWith('--') ? args[i + 1] : true;
 };
 const ids = opt('only') ? [opt('only')] : ['pro', 'easy'];
-const OUT = { pro: 'Elysium_Pro_Commercial', easy: 'Elysium_Easy_Explainer' };
+const OUT = { pro: 'Elysium_Advanced', easy: 'Elysium_Beginner' };
 
 const TYPES = { '.png': 'image/png', '.webp': 'image/webp', '.jpg': 'image/jpeg', '.html': 'text/html', '.js': 'text/javascript', '.mjs': 'text/javascript', '.css': 'text/css', '.woff2': 'font/woff2', '.woff': 'font/woff' };
 const server = http.createServer((req, res) => {

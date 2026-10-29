@@ -97,10 +97,11 @@ export function counterValue(c, t) {
   let x = (t - c.t0) / (c.t1 - c.t0);
   x = x < 0 ? 0 : x > 1 ? 1 : x;
   const v = c.from + (c.to - c.from) * (c.lin ? x : 1 - Math.pow(1 - x, 4));
-  return (c.pre || '') + v.toFixed(c.dec || 0) + (c.suf || '');
+  const n = v.toFixed(c.dec || 0);
+  return (c.pre || '') + (c.sep ? n.replace(/\B(?=(\d{3})+(?!\d))/g, ',') : n) + (c.suf || '');
 }
 
 export function counterAE(c) {
   const q = (s) => JSON.stringify(s || '');
-  return `var x=(time-${fmt(c.t0)})/${fmt(c.t1 - c.t0)}; x=x<0?0:(x>1?1:x); var v=${fmt(c.from)}+${fmt(c.to - c.from)}*${c.lin ? 'x' : '(1-Math.pow(1-x,4))'}; ${q(c.pre)}+v.toFixed(${c.dec || 0})+${q(c.suf)}`;
+  return `var x=(time-${fmt(c.t0)})/${fmt(c.t1 - c.t0)}; x=x<0?0:(x>1?1:x); var v=${fmt(c.from)}+${fmt(c.to - c.from)}*${c.lin ? 'x' : '(1-Math.pow(1-x,4))'}; var n=v.toFixed(${c.dec || 0});${c.sep ? ' n=n.replace(/\\B(?=(\\d{3})+(?!\\d))/g,",");' : ''} ${q(c.pre)}+n+${q(c.suf)}`;
 }

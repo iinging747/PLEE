@@ -54,19 +54,18 @@ const CONFIG = {
     pro: ['그레타\\s*산스', 'Greta\\s*Sans', '고딕\\s*Neo\\s*3', 'Gothic\\s*Neo\\s*3', '고딕\\s*Neo\\s*1', 'Gothic\\s*Neo\\s*1'],
     easy: ['고딕\\s*Neo\\s*3', 'Gothic\\s*Neo\\s*3', '그레타\\s*산스', 'Greta\\s*Sans', '고딕\\s*Neo\\s*1', 'Gothic\\s*Neo\\s*1'],
   },
-  KR_AUTO_ORDER: ['pretendard', 'apple', 'noto', 'notocjk', 'source', 'malgun'],
+  // 산돌 폰트가 없을 때: 본고딕(Noto Sans KR / Source Han Sans K — 한글 디자인 산돌) 우선
+  KR_AUTO_ORDER: ['noto', 'source', 'notocjk', 'apple', 'pretendard', 'malgun'],
   // 특정 폰트를 강제하려면 PostScript 이름을 넣으세요 (예: {400:'...',500:'...',600:'...',700:'...',800:'...'})
   KR_FONT_OVERRIDE: null,
   KR_PRESETS: {
     pretendard: { label: 'Pretendard', 400: 'Pretendard-Regular', 500: 'Pretendard-Medium', 600: 'Pretendard-SemiBold', 700: 'Pretendard-Bold', 800: 'Pretendard-ExtraBold', 900: 'Pretendard-Black' },
     apple: { label: 'Apple SD 산돌고딕 Neo', 400: 'AppleSDGothicNeo-Regular', 500: 'AppleSDGothicNeo-Medium', 600: 'AppleSDGothicNeo-SemiBold', 700: 'AppleSDGothicNeo-Bold', 800: 'AppleSDGothicNeo-ExtraBold', 900: 'AppleSDGothicNeo-Heavy' },
-    noto: { label: 'Noto Sans KR (한글 디자인: 산돌커뮤니케이션)', 400: 'NotoSansKR-Regular', 500: 'NotoSansKR-Medium', 600: 'NotoSansKR-Medium', 700: 'NotoSansKR-Bold', 800: 'NotoSansKR-Bold', 900: 'NotoSansKR-Black' },
+    noto: { label: 'Noto Sans KR (한글 디자인: 산돌커뮤니케이션)', 400: 'NotoSansKR-Regular', 500: 'NotoSansKR-Medium', 600: 'NotoSansKR-SemiBold', 700: 'NotoSansKR-Bold', 800: 'NotoSansKR-ExtraBold', 900: 'NotoSansKR-Black' },
     notocjk: { label: 'Noto Sans CJK KR (한글 디자인: 산돌커뮤니케이션)', 400: 'NotoSansCJKkr-Regular', 500: 'NotoSansCJKkr-Medium', 600: 'NotoSansCJKkr-Medium', 700: 'NotoSansCJKkr-Bold', 800: 'NotoSansCJKkr-Bold', 900: 'NotoSansCJKkr-Black' },
     source: { label: '본고딕 Source Han Sans K (한글 디자인: 산돌커뮤니케이션)', 400: 'SourceHanSansK-Regular', 500: 'SourceHanSansK-Medium', 600: 'SourceHanSansK-Medium', 700: 'SourceHanSansK-Bold', 800: 'SourceHanSansK-Bold', 900: 'SourceHanSansK-Heavy' },
     malgun: { label: '맑은 고딕 (대체)', 400: 'MalgunGothic', 500: 'MalgunGothic', 600: 'MalgunGothicBold', 700: 'MalgunGothicBold', 800: 'MalgunGothicBold', 900: 'MalgunGothicBold' },
   },
-  // 눈높이 버전 제목용 둥근 디스플레이 폰트 (배민 주아체, 무료)
-  KR_DISPLAY_FONTS: { 400: 'Jua-Regular' },
   EN_FONTS: { 400: 'DMSans-Regular', 500: 'DMSans-Medium', 600: 'DMSans-SemiBold', 700: 'DMSans-Bold' },
   MONO_FONTS: { 400: 'DMMono-Regular', 500: 'DMMono-Medium' },
   ROOT_FOLDER: 'Elysium Promo',
@@ -85,13 +84,14 @@ const header = `﻿/*
   ---------------------------------------------------------------
   사용법
     1) 폰트 설치 (무료): DM Sans, DM Mono (Google Fonts)
-       한글: 산돌구름 폰트를 자동으로 찾아 사용 — 커머셜: Sandoll 그레타산스 → 고딕Neo3 → 고딕Neo1
-                                                   눈높이: Sandoll 고딕Neo3 → 그레타산스 → 고딕Neo1
-             산돌 폰트가 없으면 Pretendard(무료) → Apple SD 산돌고딕 Neo → Noto Sans KR 순으로 대체
+       한글: 산돌구름 폰트를 자동으로 찾아 사용 — 고급자: Sandoll 그레타산스 → 고딕Neo3 → 고딕Neo1
+                                                   초보자: Sandoll 고딕Neo3 → 그레타산스 → 고딕Neo1
+             제목은 같은 산돌 패밀리의 ExtraBold/Heavy 웨이트를 씁니다
+             산돌 폰트가 없으면 본고딕 Noto Sans KR(무료, 한글 디자인 산돌) → Apple SD 산돌고딕 Neo 순으로 대체
     2) After Effects > File > Scripts > Run Script File… 에서 이 파일 실행
        (같은 폴더의 audio/temp_music_*.wav 가 있으면 임시 음악도 자동으로 들어갑니다)
     3) 프로젝트 패널 "Elysium Promo"
-         01_MAIN       Elysium_Pro_Commercial (전문가/커머셜) · Elysium_Easy_Explainer (눈높이)
+         01_MAIN       Elysium_Advanced (고급자) · Elysium_Beginner (초보자)
          02_SCENES_*   장면별 프리컴프 — 문구·타이밍 수정은 여기서
          03_SLOTS      LOGO_Elysium(공식 로고) · STOCK_*(스톡 영상) 교체용 컴프
     4) 공식 로고: kinetiq.xyz/brand 또는 elysium.kinetiq.xyz 에서 SVG/PNG를 받아

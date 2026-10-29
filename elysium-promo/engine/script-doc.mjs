@@ -14,16 +14,17 @@ const tc = (t) => {
 const esc = (s) => String(s).replace(/\|/g, '\\|').replace(/\n/g, ' / ');
 
 const out = ['# Elysium 프로모 — 장면표 · 스크립트', '', '`engine/script-doc.mjs`가 빌드 결과(build/*.json)에서 자동 생성합니다. 문구 수정은 `storyboard/*.js`에서 하세요.', ''];
-const titles = { pro: 'A. 전문가 · 커머셜 버전', easy: 'B. 눈높이 버전 (고양이 내레이터)' };
+const titles = { pro: 'A. 고급자 버전 (전문가 해설)', easy: 'B. 초보자 버전 (Hypurr가 하나씩 설명)' };
 for (const id of ['pro', 'easy']) {
   const v = JSON.parse(fs.readFileSync(path.join(ROOT, 'build', id + '.json'), 'utf8'));
   out.push(`## ${titles[id]} — ${v.name} (${v.dur}s, 1920×1080, 30fps)`, '');
-  if (id === 'easy') out.push(`내레이션 길이 기준: ${v.timingSource === 'elevenlabs' ? 'ElevenLabs 실제 음성 길이' : '읽기 속도 추정치 (ElevenLabs 생성 후 자동 재조정)'}`, '');
+  out.push(`내레이션 길이 기준: ${v.timingSource === 'elevenlabs' ? 'ElevenLabs 실제 음성 길이' : '읽기 속도 추정치 (ElevenLabs 생성 후 자동 재조정)'}`, '');
   out.push('| # | 시작 | 길이 | 장면 | 화면 문구 |', '|---|---|---|---|---|');
   v.order.forEach((o, i) => {
     const sc = v.scenes[o.id];
-    const caps = new Set(v.narration.filter((n) => n.scene === o.id).map((n) => n.text));
-    const copy = sc.layers.filter((L) => L.k === 'text' && !caps.has(L.tx) && L.sz >= 30).map((L) => L.tx);
+    // captions may be split into chunks: skip any text that is part of a narration line
+    const caps = v.narration.filter((n) => n.scene === o.id).map((n) => n.text);
+    const copy = sc.layers.filter((L) => L.k === 'text' && !caps.some((c) => c.includes(L.tx)) && L.sz >= 30).map((L) => L.tx);
     out.push(`| ${i + 1} | ${tc(o.start)} | ${o.dur}s | ${esc(o.name)} | ${esc([...new Set(copy)].join(' · '))} |`);
   });
   out.push('');

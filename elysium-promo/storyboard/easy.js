@@ -1,12 +1,12 @@
-// Version B — 눈높이 맞춤. A stick-figure narrator explains one idea per shot.
-// Shot lengths follow the narration: line durations come from
-// build/narration_easy.json (written by engine/elevenlabs.mjs) when present,
-// otherwise from a reading-speed estimate.
+// Version B — 초보자 (beginner). The provided Hypurr character explains one
+// idea per shot, step by step. Shot lengths follow the narration: line
+// durations come from dist/audio/narration_easy.json (written by
+// engine/elevenlabs.mjs) when present, otherwise from a reading-speed estimate.
 //
 // `text` is the on-screen caption, `say` is what ElevenLabs reads (Korean
 // pronunciation for tickers and English names).
 
-import { C, W, assemble, logoSlot, cat, timeline, r2 } from '../engine/lib.js';
+import { C, W, assemble, logoSlot, mascot, timeline, r2 } from '../engine/lib.js';
 
 const X = 760; // content column (the narrator stands on the left)
 const GROUND = 885;
@@ -70,7 +70,7 @@ function shot(k, id, name, timing, o = {}) {
   const L = tl.lines;
   // soft mint halo behind the narrator
   k.shape(S, [{ t: 'ell', sz: [560, 560], ps: [CAT_X, 640], fl: { c: C.mint, o: 30 } }], { n: 'halo', anim: o.drawGround ? 'scale' : 'none', a: [CAT_X, 640], p: [CAT_X, 640], at: 0.05, fx: { blur: 40 } });
-  const fig = cat(k, S, CAT_X, GROUND, 0.95);
+  const fig = mascot(k, S, CAT_X, GROUND, 470, { flip: true });
   fig.talk(L.map((l) => [l.t, l.t + l.dur]));
   k.say(S, L);
   S.cues = [{ t: 0, type: 'whoosh' }];
@@ -155,7 +155,7 @@ function e04(k, T) {
 function e05(k, T) {
   const { S, L, fig, end } = shot(k, 'e05', '05 Gas is HYPE', T);
   fig.pose(at(L[0], 0.15), 'hold');
-  const [hx, hy] = fig.hand('hold');
+  const [hx, hy] = fig.hand();
   const cx = hx + 40;
   const cy = hy - 40;
   k.shape(S, [{ t: 'ell', sz: [92, 92], ps: [cx, cy], fl: { c: C.mint, o: 100 }, st: { c: '#1B3A40', w: 5, o: 100 } }], { anim: 'pop', a: [cx, cy], p: [cx, cy], at: at(L[0], 0.3) });
@@ -236,9 +236,13 @@ function e09(k, T) {
     if (i < steps.length - 1) pts.push([x + 240, steps[i + 1][2]]);
   });
   k.line(S, pts, { c: C.accent, sw: 4, at: at(L[0], 0.35), dur: 2.0 });
-  steps.forEach(([n, x, y], i) => k.label(S, n, x, y - 28, { c: i === 3 ? C.accent : C.ink, at: at(L[0], 0.35) + i * 0.45, tr: 200 }));
+  steps.forEach(([n, x, y], i) => {
+    const t = at(L[0], 0.35) + i * 0.45;
+    k.label(S, n, x, y - 28, { c: i === 3 ? C.accent : C.ink, at: t, tr: 200 });
+    if (i) fig.hop(t, 22 + i * 6); // a little hop per step, like climbing
+  });
   warnLine(k, S, '단계는 방향일 뿐, 자동 졸업·상장을 보장하지 않아요', at(L[1], 0.2));
-  fig.pose(at(L[0], 0.3), 'pointUp').pose(at(L[1], 0.15), 'stop');
+  fig.pose(at(L[0], 0.25), 'pointUp', 0.25).sparkle(at(L[0], 0.35) + 1.5).pose(at(L[1], 0.15), 'stop');
   end();
   return S;
 }
@@ -258,9 +262,9 @@ function e10(k, T) {
 function e11(k, T) {
   const { S, L, fig, end } = shot(k, 'e11', '11 Nest', T);
   appHead(k, S, 'NEST', '유동성이 모이는 둥지', 0.3);
-  [['스왑', X, 0.18], ['유동성 공급', X + 250, 0.42], ['락업·투표', X + 640, 0.7]].forEach(([w, x, f], i) => {
+  [['스왑', X, 0.18], ['유동성 공급', X + 250, 0.42], ['락업·투표', X + 700, 0.7]].forEach(([w, x, f], i) => {
     k.text(S, `0${i + 1}`, x, 480, { f: 'mono', sz: 18, c: C.accent, anim: 'fade', at: at(L[0], f) });
-    k.text(S, w, x, 545, { f: 'krd', sz: 70, anim: 'rise', at: at(L[0], f) });
+    k.text(S, w, x, 545, { f: 'krd', sz: 64, anim: 'rise', at: at(L[0], f) });
   });
   k.text(S, 'veNEST · 최대 6개월 락업', X, 670, { sz: 38, w: 700, anim: 'up', at: at(L[1], 0.15), mark: true });
   warnLine(k, S, '신규 토큰 LP는 가격 변동·비영구적 손실 위험이 있어요', at(L[1], 0.6));
@@ -330,7 +334,7 @@ export function build(k, timing) {
   const list = [e01, e02, e03, e04, e05, e06, e07, e08, e09, e10, e11, e12, e13, e14].map((f) => f(k, T));
   const dur = list.reduce((a, s) => a + s.dur, 0);
   const slots = { LOGO: logoSlot(k, dur) };
-  return assemble({ id: 'easy', name: 'Elysium_Easy_Explainer' }, list, slots, k, { push: 0 });
+  return assemble({ id: 'easy', name: 'Elysium_Beginner' }, list, slots, k, { push: 2, wipe: true });
 }
 
 export { SCRIPT, W };
