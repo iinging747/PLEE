@@ -59,6 +59,22 @@ out/epNN.html 에서 설명과 크게 다른 컷은 다시 만든 뒤 "assets: e
 ```
 회차 번호만 바꿔 가며 24화까지 반복한다. 진행 상황은 `python3 tools/codex_jobs.py --status`.
 
+**20부작 번호로 이미 만든 그림이 있을 때 (먼저 한 번)**
+
+24부작으로 늘리기 전(1,127컷 판)에 만든 그림은 회차 번호가 다르다. 옛 작업 폴더는 그대로 두고 새 폴더에서 옮긴다.
+```
+wolha 그림을 24부작 번호로 옮겨 줘. 지금 작업 폴더는 건드리지 말고:
+git fetch origin claude/serene-bardeen-piz2m5
+git worktree add ../plee24 origin/claude/serene-bardeen-piz2m5
+cd ../plee24/wolha
+python3 tools/import_frames.py <지금 작업 폴더>/wolha --dry-run 으로 대응표를 확인한 뒤, --dry-run 없이 다시 실행해.
+PNG 가 섞여 있으면 회차마다 python3 tools/compress_frames.py N 을 돌리고 python3 tools/codex_jobs.py --attach N 으로 다시 붙여.
+python3 tools/validate.py 오류 0, python3 tools/board.py 로 out/board.html 을 다시 만든 뒤
+git add assets storyboards && git commit -m "assets: 20부작 패널 그림을 24부작 번호로 옮김" && git push origin HEAD:claude/serene-bardeen-piz2m5
+그다음부터는 ../plee24 에서 ② 를 이어 가.
+```
+번호 대응: 1~7화는 그대로, 8~11 → 9~12, 12~15 → 14~17, 16~18 → 19~21, 19~20 → 23~24. 샷 id 는 그대로이고 옛 20화(새 24화) S03-05~08 만 S03-06~09 로 밀린다. 새 회차 8·13·18·22화 전체와 24화 S03-05 는 그림이 없으므로 ② 로 새로 만든다. 모든 S#0 은 reuse 라 --attach 가 자동으로 만든다.
+
 API 키로 직접 돌릴 때는 `OPENAI_API_KEY=... python3 tools/gen_images.py 5 --run --limit 3`도 쓸 수 있다(레퍼런스 이미지는 붙지 않는다).
 
 ## 샷을 다시 짤 때 (대본이 바뀐 경우)

@@ -22,6 +22,7 @@ wolha/
 │   ├── validate.py            형식·제작 규칙 검사
 │   ├── render.py              콘티 시트 HTML / 샷 리스트 CSV / 프롬프트 JSONL
 │   ├── board.py               24부작 전체 콘티 보드 한 장(out/board.html)
+│   ├── import_frames.py       20부작 번호로 만든 패널 그림을 24부작 번호로 옮겨 붙이기
 │   ├── check_hangul.py        한글 오타(깨진 음절) 찾기
 │   ├── codex_jobs.py          패널 이미지 작업 목록(assets/jobs/) 만들기, 생성된 그림 연결
 │   ├── compress_frames.py     생성된 PNG → 16:9 1280x720 JPEG
