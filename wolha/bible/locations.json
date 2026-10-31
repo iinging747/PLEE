@@ -280,6 +280,20 @@
       "prompt_en": "small pavilion above a rocky mountain stream"
     },
     {
+      "id": "yunhui_house",
+      "name": "윤희의 집 마당·사랑채·쪽문",
+      "match": [
+        "윤희의 집 마당",
+        "윤희의 집 사랑채",
+        "윤희의 집 쪽문",
+        "초례청"
+      ],
+      "desc": "홍 참판 댁 바깥채. 사랑채 앞마당(혼례 초례청), 쪽문 밖 골목",
+      "light": "낮 / 잔치 등롱 / 밤 사랑채 불빛",
+      "axis": "사랑채(대청)는 화면 위쪽, 마당과 하객은 아래. 쪽문은 화면 왼쪽",
+      "prompt_en": "spacious front courtyard of a Joseon vice-minister's mansion with a raised main hall, tiled roofs, a side gate opening onto a narrow alley"
+    },
+    {
       "id": "yunhui_byeoldang",
       "name": "윤희의 집 별당",
       "match": [
