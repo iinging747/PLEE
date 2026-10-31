@@ -5,22 +5,233 @@
   "hook": "새 권에 나온 남자 주인공이, 어딘가 매우 낯익다.",
   "runtime_sec": 180,
   "aspect": "16:9",
-  "status": "skeleton",
+  "status": "review",
+  "notes": "샷 수 48, 평균 3.8초. S#1 장소를 dallae_haengrang → dallae_maru 로 고쳤다(대사가 모두 마당에서 나오고, 마당 axis가 행랑채 위치까지 정해 준다). S#4의 단서 회상은 대본에 'Flash.' 표기가 없지만 지문의 회상 나열을 짧은 플래시 컷으로 풀었다(5·6화 소스 재사용). S#5 허진은 창호지 그림자로만 보인다. S#3 정겸 궐 안 복식 — 고증확인: 검서관 단령 색과 사모.",
   "scenes": [
     {
       "id": "S#1",
       "heading": "달래책방 행랑채 → 마당 (낮)",
-      "location": "dallae_haengrang",
+      "location": "dallae_maru",
       "time": "DAY",
       "tc_in": "00:00",
       "tc_out": "00:35",
       "characters": [
-        "dallae",
-        "jeonggyeom"
+        "jeonggyeom",
+        "dallae"
       ],
-      "summary": "",
+      "mood": "COMEDY",
+      "summary": "5권 하권 속 '정 검서'는 아무리 봐도 정겸이다. 빨래 널던 달래에게 따지러 간 정겸이 '개연성이 없소'라고 하는 순간 귀가 빨개지고, 달래가 보기 전에 돌아선다.",
       "source_text": "정겸이 「청상연가」 5권 하권을 읽는다.\nInsert. '키가 크고 꼿꼿하며 웃지 않는 검서관 정 아무개는, 거짓말을 하면 귀가 붉어졌다.'\n정겸의 손이 저절로 귀로 간다.\n**정겸** …이건 나잖아?\n마당. 달래가 휘파람을 불며 빨래를 넌다. 정겸이 책을 들고 성큼성큼 다가간다.\n**정겸** 이 정 검서라는 자 말이오.\n**달래** 멋있죠? 독자들 반응이 제일 좋아요.\n**정겸** 거짓말을 하면 귀가 붉어진다니. (헛기침) 개연성이 없소.\n귀가 빨개진다. 달래가 눈을 가늘게 뜨고 그 귀를 보려는 순간, 정겸이 황급히 뒤돌아선다.",
-      "shots": []
+      "shots": [
+        {
+          "id": "S01-01",
+          "size": "MS",
+          "angle": "EYE",
+          "move": "FIX",
+          "lens_mm": 35,
+          "characters": [
+            "jeonggyeom"
+          ],
+          "frame": "행랑채 방 안. 왼쪽 창호지 문으로 낮빛이 든다. 오른쪽 서안 앞에 정겸이 반듯하게 앉아 「청상연가」 5권 하권을 읽는다.",
+          "action": "정겸이 「청상연가」 5권 하권을 읽는다.",
+          "transition": "CUT",
+          "duration_sec": 3,
+          "continuity": "축: 마당 기준 대문은 화면 왼쪽, 행랑채는 오른쪽(locations.json axis). 방 안 컷은 창호지 문이 왼쪽(5화 S#1과 같은 배치). 마당에서 달래는 왼쪽 빨랫줄, 정겸은 오른쪽 행랑채에서 다가간다. 귀 ECU는 왼쪽 옆얼굴",
+          "image_prompt": "inside a tiny tidy lodger's room by day, soft light through a paper door on the left, a tall scholar sitting perfectly upright at a low desk reading a thread-bound novel"
+        },
+        {
+          "id": "S01-02",
+          "size": "INSERT",
+          "angle": "TOP",
+          "move": "FIX",
+          "lens_mm": 50,
+          "characters": [
+            "jeonggyeom"
+          ],
+          "frame": "탑샷. 책장의 한글 필사체. 손가락이 한 문장 밑을 따라가다 멈춘다.",
+          "action": "책 속에 낯익은 인물이 나온다.",
+          "insert_text": "키가 크고 꼿꼿하며 웃지 않는 검서관 정 아무개는, 거짓말을 하면 귀가 붉어졌다.",
+          "motifs": [
+            "INSERT_TEXT"
+          ],
+          "transition": "CUT",
+          "duration_sec": 4,
+          "notes": "꼭 챙길 그림: 책 속 정 검서 문장",
+          "image_prompt": "top-down insert of a hand-copied hangul page, a slender fingertip tracing beneath one sentence and stopping"
+        },
+        {
+          "id": "S01-03",
+          "size": "MCU",
+          "angle": "EYE",
+          "move": "FIX",
+          "lens_mm": 85,
+          "characters": [
+            "jeonggyeom"
+          ],
+          "frame": "정겸 정면. 시선은 책에 박힌 채, 책을 들지 않은 손이 저절로 올라가 왼쪽 귀를 만진다.",
+          "action": "정겸의 손이 저절로 귀로 간다.",
+          "transition": "CUT",
+          "duration_sec": 3,
+          "image_prompt": "medium close-up of the scholar, eyes glued to the book, his free hand drifting up to touch his own ear"
+        },
+        {
+          "id": "S01-04",
+          "size": "CU",
+          "angle": "EYE",
+          "move": "CRASH_ZOOM",
+          "lens_mm": 85,
+          "characters": [
+            "jeonggyeom"
+          ],
+          "frame": "정겸 정면으로 크래시 줌. 귀를 잡은 채 굳었다.",
+          "action": "정겸이 깨닫는다.",
+          "dialogue": [
+            {
+              "speaker": "jeonggyeom",
+              "line": "…이건 나잖아?",
+              "mode": "ON"
+            }
+          ],
+          "transition": "SMASH_CUT",
+          "duration_sec": 2,
+          "image_prompt": "crash zoom into a close-up of the scholar frozen with his hand on his ear, dawning realization"
+        },
+        {
+          "id": "S01-05",
+          "size": "LS",
+          "angle": "EYE",
+          "move": "FIX",
+          "lens_mm": 28,
+          "characters": [
+            "dallae",
+            "jeonggyeom"
+          ],
+          "frame": "마당. 화면 왼쪽 대문 쪽 빨랫줄에 달래가 휘파람을 불며 빨래를 넌다. 오른쪽 행랑채 문이 열리고 정겸이 책을 들고 성큼성큼 다가온다.",
+          "action": "달래가 휘파람을 불며 빨래를 넌다. 정겸이 책을 들고 성큼성큼 다가간다.",
+          "sound": "달래의 휘파람, 빨래 터는 소리 탁탁",
+          "transition": "CUT",
+          "duration_sec": 3,
+          "image_prompt": "wide shot of a hanok bookshop yard on a sunny day, a young woman whistling and hanging laundry on a line near the gate on the left, a tall scholar striding out of the servants' quarters on the right holding a book"
+        },
+        {
+          "id": "S01-06",
+          "size": "2S",
+          "angle": "EYE",
+          "move": "FIX",
+          "lens_mm": 35,
+          "characters": [
+            "dallae",
+            "jeonggyeom"
+          ],
+          "frame": "빨랫줄을 사이에 둔 투숏. 왼쪽 달래, 오른쪽 정겸. 정겸이 펼친 책을 들이민다.",
+          "action": "정겸이 책을 들이민다.",
+          "dialogue": [
+            {
+              "speaker": "jeonggyeom",
+              "line": "이 정 검서라는 자 말이오.",
+              "mode": "ON"
+            }
+          ],
+          "transition": "CUT",
+          "duration_sec": 3,
+          "image_prompt": "two-shot across a laundry line, the tall scholar on the right thrusting an open book at the young woman on the left"
+        },
+        {
+          "id": "S01-07",
+          "size": "MCU",
+          "angle": "EYE",
+          "move": "FIX",
+          "lens_mm": 50,
+          "characters": [
+            "dallae"
+          ],
+          "frame": "달래 정면. 빨래를 탁 털며 자랑스럽게 웃는다.",
+          "action": "달래가 자랑한다.",
+          "dialogue": [
+            {
+              "speaker": "dallae",
+              "line": "멋있죠? 독자들 반응이 제일 좋아요.",
+              "mode": "ON"
+            }
+          ],
+          "transition": "CUT",
+          "duration_sec": 3,
+          "image_prompt": "medium close-up of the young woman snapping a wet cloth and beaming proudly"
+        },
+        {
+          "id": "S01-08",
+          "size": "MCU",
+          "angle": "EYE",
+          "move": "FIX",
+          "lens_mm": 50,
+          "characters": [
+            "jeonggyeom"
+          ],
+          "frame": "정겸 정면. 책장을 손가락으로 짚으며 따지다가 헛기침을 한 번 하고 평론가 투로 끝맺는다.",
+          "action": "정겸이 헛기침을 하고 평한다.",
+          "dialogue": [
+            {
+              "speaker": "jeonggyeom",
+              "line": "거짓말을 하면 귀가 붉어진다니. (헛기침) 개연성이 없소.",
+              "mode": "ON"
+            }
+          ],
+          "transition": "CUT",
+          "duration_sec": 4,
+          "notes": "1화 S03-07 '…개연성이 없소.'와 같은 대사 톤을 반복",
+          "image_prompt": "medium close-up of the scholar jabbing at a page, clearing his throat and delivering a critic's verdict"
+        },
+        {
+          "id": "S01-09",
+          "size": "ECU",
+          "angle": "PROFILE",
+          "move": "RACK_FOCUS",
+          "lens_mm": 100,
+          "characters": [
+            "jeonggyeom"
+          ],
+          "frame": "왼쪽 옆얼굴 익스트림 클로즈업(1화 S03-06과 같은 구도). 초점이 눈에서 귀로 넘어가며 귀가 빨갛게 달아오른다. 붉은색만 채도를 올린다.",
+          "action": "귀가 빨개진다.",
+          "motifs": [
+            "EAR_RED"
+          ],
+          "transition": "CUT",
+          "duration_sec": 3,
+          "image_prompt": "extreme close-up profile, focus shifting to the young man's ear turning bright red, everything else muted"
+        },
+        {
+          "id": "S01-10",
+          "size": "MCU",
+          "angle": "EYE",
+          "move": "FIX",
+          "lens_mm": 50,
+          "characters": [
+            "dallae"
+          ],
+          "frame": "달래 정면. 눈을 가늘게 뜨고 정겸의 귀 쪽으로 고개를 기울인다.",
+          "action": "달래가 눈을 가늘게 뜨고 그 귀를 보려 한다.",
+          "transition": "CUT",
+          "duration_sec": 3,
+          "image_prompt": "medium close-up of the young woman narrowing her eyes and craning toward the man's ear"
+        },
+        {
+          "id": "S01-11",
+          "size": "2S",
+          "angle": "EYE",
+          "move": "FIX",
+          "lens_mm": 35,
+          "characters": [
+            "dallae",
+            "jeonggyeom"
+          ],
+          "frame": "S01-06과 같은 투숏. 정겸이 황급히 뒤돌아서고, 달래의 고개가 그 등을 따라 기운다.",
+          "action": "그 순간 정겸이 황급히 뒤돌아선다.",
+          "sound": "(E) 휙. 짧은 해학 효과음",
+          "transition": "CUT",
+          "duration_sec": 4,
+          "image_prompt": "same two-shot, the scholar spinning around to hide his face while the young woman cranes after him"
+        }
+      ]
     },
     {
       "id": "S#2",
@@ -31,12 +242,159 @@
       "tc_out": "01:05",
       "characters": [
         "ma_yeonggam",
-        "dallae",
-        "gangsu"
+        "gangsu",
+        "dallae"
       ],
-      "summary": "",
+      "mood": "COMEDY",
+      "summary": "마 영감은 정 검서에게 울고, 평상 뒤에서 강수는 달래 대신 월하노인 행세를 하겠다고 나선다. 매를 대신 맞는 것도 오라버니 일이다.",
       "source_text": "마 영감이 5권 하권을 끌어안고 코를 훌쩍인다.\n**마 영감** 정 검서… 사나이로다.\n평상 뒤편. 강수가 부채로 입을 가리고 달래에게 속삭인다.\n**강수** 형조가 작가를 찾는다며. 내가 월하노인 행세를 하지. 목소리 좋고, 얼굴 좋고.\n**달래** 오라버니.\n**강수** 매를 대신 맞아 주는 것도 오라버니 일이다. (부채를 쫙 펴며) 게다가 일흔다섯 살짜리 노인보다는 내가 낫지.",
-      "shots": []
+      "shots": [
+        {
+          "id": "S02-01",
+          "size": "LS",
+          "angle": "EYE",
+          "move": "FIX",
+          "lens_mm": 28,
+          "characters": [
+            "ma_yeonggam",
+            "gangsu",
+            "dallae"
+          ],
+          "frame": "담배가게 앞 정면 구도. 빈 평상이 화면 중앙. 평상 앞 전경에 마 영감이 책을 끌어안고 앉아 있다. 평상 뒤편 그늘에 강수와 달래.",
+          "action": "마 영감이 5권 하권을 끌어안고 코를 훌쩍인다.",
+          "sound": "(E) 훌쩍. 담배 써는 칼 소리",
+          "transition": "CUT",
+          "duration_sec": 4,
+          "continuity": "축: 평상은 화면 중앙, 관객 자리는 화면 아래 전경(locations.json axis). 마 영감은 전경, 평상 뒤편에서 달래 왼쪽, 강수 오른쪽",
+          "image_prompt": "street corner in front of a tobacco shop by day, an empty storyteller's platform in the center, a pudgy old moneylender in the foreground hugging a book to his chest and sniffling, two figures in the shade behind the platform"
+        },
+        {
+          "id": "S02-02",
+          "size": "INSERT",
+          "angle": "EYE",
+          "move": "FIX",
+          "lens_mm": 85,
+          "characters": [
+            "ma_yeonggam"
+          ],
+          "frame": "마 영감의 통통한 손이 끌어안은 책 표지. 눈물 한 방울이 표지에 떨어진다.",
+          "action": "마 영감이 끌어안은 책.",
+          "insert_text": "청상연가 五 下",
+          "motifs": [
+            "INSERT_TEXT"
+          ],
+          "transition": "CUT",
+          "duration_sec": 2,
+          "image_prompt": "insert, chubby hands hugging a thread-bound novel to a silk robe, a teardrop falling on the cover"
+        },
+        {
+          "id": "S02-03",
+          "size": "MCU",
+          "angle": "EYE",
+          "move": "FIX",
+          "lens_mm": 50,
+          "characters": [
+            "ma_yeonggam"
+          ],
+          "frame": "마 영감 정면. 코끝이 빨갛다. 주판은 무릎 위에 엎어 두었다.",
+          "action": "마 영감이 감격한다.",
+          "dialogue": [
+            {
+              "speaker": "ma_yeonggam",
+              "line": "정 검서… 사나이로다.",
+              "mode": "ON"
+            }
+          ],
+          "transition": "CUT",
+          "duration_sec": 4,
+          "image_prompt": "medium close-up of the old moneylender with a red nose, sniffling with deep emotion, abacus abandoned on his lap"
+        },
+        {
+          "id": "S02-04",
+          "size": "2S",
+          "angle": "EYE",
+          "move": "FIX",
+          "lens_mm": 35,
+          "characters": [
+            "dallae",
+            "gangsu"
+          ],
+          "frame": "평상 뒤편 투숏. 왼쪽 달래, 오른쪽 강수. 강수가 부채로 입을 가리고 몸을 기울여 속삭인다.",
+          "action": "강수가 부채로 입을 가리고 달래에게 속삭인다.",
+          "dialogue": [
+            {
+              "speaker": "gangsu",
+              "line": "형조가 작가를 찾는다며. 내가 월하노인 행세를 하지. 목소리 좋고, 얼굴 좋고.",
+              "mode": "WHISPER"
+            }
+          ],
+          "transition": "CUT",
+          "duration_sec": 7,
+          "image_prompt": "two-shot behind a wooden platform, the storyteller hiding his mouth behind his fan and leaning in to whisper to the young woman on the left"
+        },
+        {
+          "id": "S02-05",
+          "size": "CU",
+          "angle": "EYE",
+          "move": "FIX",
+          "lens_mm": 85,
+          "characters": [
+            "dallae"
+          ],
+          "frame": "달래 정면. 말리듯, 나무라듯.",
+          "action": "달래가 말린다.",
+          "dialogue": [
+            {
+              "speaker": "dallae",
+              "line": "오라버니.",
+              "mode": "ON"
+            }
+          ],
+          "transition": "CUT",
+          "duration_sec": 3,
+          "image_prompt": "close-up of the young woman looking at him with a mix of exasperation and worry"
+        },
+        {
+          "id": "S02-06",
+          "size": "MCU",
+          "angle": "LOW",
+          "move": "FIX",
+          "lens_mm": 50,
+          "characters": [
+            "gangsu"
+          ],
+          "frame": "약한 로우앵글. 강수가 부채를 쫙 펴며 무대 위처럼 능청스럽게 웃는다.",
+          "action": "강수가 부채를 쫙 펴며 큰소리친다.",
+          "dialogue": [
+            {
+              "speaker": "gangsu",
+              "line": "매를 대신 맞아 주는 것도 오라버니 일이다. (부채를 쫙 펴며) 게다가 일흔다섯 살짜리 노인보다는 내가 낫지.",
+              "mode": "ON"
+            }
+          ],
+          "sound": "(E) 부채 펴는 소리 촥",
+          "transition": "CUT",
+          "duration_sec": 6,
+          "notes": "1화 S01-07 부채 펴기와 같은 앵글·같은 효과음",
+          "image_prompt": "slightly low angle, the charismatic storyteller snapping open his fan with a theatrical grin"
+        },
+        {
+          "id": "S02-07",
+          "size": "2S",
+          "angle": "EYE",
+          "move": "FIX",
+          "lens_mm": 35,
+          "characters": [
+            "dallae",
+            "gangsu"
+          ],
+          "frame": "S02-04와 같은 투숏. 달래는 말을 잃고 강수를 본다. 강수는 부채질만 한다.",
+          "action": "달래가 할 말을 잃는다.",
+          "transition": "CUT",
+          "duration_sec": 4,
+          "image_prompt": "same two-shot, the young woman speechless while the storyteller fans himself smugly"
+        }
+      ]
     },
     {
       "id": "S#3",
@@ -47,11 +405,173 @@
       "tc_out": "01:40",
       "characters": [
         "lee_deokmu",
-        "jeonggyeom"
+        "jeonggyeom",
+        "extras"
       ],
-      "summary": "",
+      "mood": "MYSTERY",
+      "summary": "이덕무가 '붓을 꺾어라' 쪽지를 빛에 비춰 관아에 들어가는 조지서 종이라고 감정한다. 얼굴이 좋아졌다는 말에 정겸은 보리차 얘기로 도망간다.",
       "source_text": "선배 검서관 이덕무가 안경을 코끝에 걸치고 '붓을 꺾어라' 쪽지를 창으로 드는 빛에 비춘다.\n**이덕무** 조지서 종이일세. 관아에나 들어가는.\n**정겸** 관아가 해적판을 찍는다는 말입니까.\n**이덕무** 종이는 누가 찍었는지는 말 안 하네. 어디서 왔는지만 말하지. (안경 너머로 정겸을 보며) 그런데 자네, 요즘 얼굴이 좋아졌네. 하숙집 밥이 좋은가.\n**정겸** …보리차가 짭니다.",
-      "shots": []
+      "shots": [
+        {
+          "id": "S03-01",
+          "size": "LS",
+          "angle": "EYE",
+          "move": "FIX",
+          "lens_mm": 28,
+          "characters": [
+            "lee_deokmu",
+            "jeonggyeom",
+            "extras"
+          ],
+          "frame": "검서청. 낮은 책상마다 검서관들이 고개를 숙이고 베껴 쓴다. 화면 왼쪽 창가에 이덕무, 오른쪽에 정겸이 마주 섰다.",
+          "action": "규장각 검서청. 선배 검서관 이덕무와 정겸.",
+          "sound": "붓 소리, 책장 넘기는 소리",
+          "transition": "CUT",
+          "duration_sec": 4,
+          "continuity": "축: 창은 화면 왼쪽(빛은 왼쪽에서), 이덕무 왼쪽 창가, 정겸 오른쪽. 정겸은 궐 안 복식(단령·사모)",
+          "image_prompt": "royal library office by day, scholar-officials bent over low desks copying books, an older bespectacled scholar by a paper window on the left facing a tall young official on the right"
+        },
+        {
+          "id": "S03-02",
+          "size": "MS",
+          "angle": "EYE",
+          "move": "FIX",
+          "lens_mm": 50,
+          "characters": [
+            "lee_deokmu"
+          ],
+          "frame": "이덕무가 안경을 코끝에 걸치고 쪽지를 창 쪽으로 쳐든다. 눈을 가늘게 뜬다.",
+          "action": "이덕무가 '붓을 꺾어라' 쪽지를 창으로 드는 빛에 비춘다.",
+          "transition": "CUT",
+          "duration_sec": 4,
+          "continuity": "6화 S02-06과 같은 쪽지(접힌 자국 그대로)",
+          "image_prompt": "medium shot of a gentle bookish older scholar with round spectacles on the tip of his nose holding a slip of paper up to window light"
+        },
+        {
+          "id": "S03-03",
+          "size": "INSERT",
+          "angle": "EYE",
+          "move": "FIX",
+          "lens_mm": 100,
+          "characters": [
+            "lee_deokmu"
+          ],
+          "frame": "창빛을 받은 쪽지. 종이 결과 발 자국이 비쳐 보이고, 뒷면으로 먹 글씨가 거꾸로 배어 나온다.",
+          "action": "빛에 비친 종이 결.",
+          "insert_text": "붓을 꺾어라",
+          "motifs": [
+            "INSERT_TEXT"
+          ],
+          "transition": "CUT",
+          "duration_sec": 4,
+          "image_prompt": "insert, a slip of fine paper held against a bright paper window, the fibers and laid lines of the paper glowing, brush strokes showing through in reverse"
+        },
+        {
+          "id": "S03-04",
+          "size": "MCU",
+          "angle": "EYE",
+          "move": "FIX",
+          "lens_mm": 50,
+          "characters": [
+            "lee_deokmu"
+          ],
+          "frame": "이덕무 정면. 쪽지를 비춘 채로 덤덤하게.",
+          "action": "이덕무가 종이를 감정한다.",
+          "dialogue": [
+            {
+              "speaker": "lee_deokmu",
+              "line": "조지서 종이일세. 관아에나 들어가는.",
+              "mode": "ON"
+            }
+          ],
+          "transition": "CUT",
+          "duration_sec": 3,
+          "image_prompt": "medium close-up of the old scholar calmly identifying the paper"
+        },
+        {
+          "id": "S03-05",
+          "size": "MCU",
+          "angle": "EYE",
+          "move": "FIX",
+          "lens_mm": 50,
+          "characters": [
+            "jeonggyeom"
+          ],
+          "frame": "정겸 정면. 목소리가 낮아진다.",
+          "action": "정겸이 되묻는다.",
+          "dialogue": [
+            {
+              "speaker": "jeonggyeom",
+              "line": "관아가 해적판을 찍는다는 말입니까.",
+              "mode": "ON"
+            }
+          ],
+          "transition": "CUT",
+          "duration_sec": 3,
+          "image_prompt": "medium close-up of the young official asking in a lowered voice, troubled"
+        },
+        {
+          "id": "S03-06",
+          "size": "MCU",
+          "angle": "EYE",
+          "move": "DOLLY_IN",
+          "lens_mm": 50,
+          "characters": [
+            "lee_deokmu"
+          ],
+          "frame": "이덕무에게 천천히 다가간다. 쪽지를 내리고, 안경 너머로 눈을 치켜떠 정겸을 본다. 말끝에 장난기.",
+          "action": "이덕무가 종이 이야기를 하다 말고 정겸의 얼굴을 살핀다.",
+          "dialogue": [
+            {
+              "speaker": "lee_deokmu",
+              "line": "종이는 누가 찍었는지는 말 안 하네. 어디서 왔는지만 말하지. (안경 너머로 정겸을 보며) 그런데 자네, 요즘 얼굴이 좋아졌네. 하숙집 밥이 좋은가.",
+              "mode": "ON"
+            }
+          ],
+          "transition": "CUT",
+          "duration_sec": 9,
+          "image_prompt": "slow push-in on the old scholar lowering the paper and peering over his spectacles at the younger man with a teasing glint"
+        },
+        {
+          "id": "S03-07",
+          "size": "CU",
+          "angle": "EYE",
+          "move": "FIX",
+          "lens_mm": 85,
+          "characters": [
+            "jeonggyeom"
+          ],
+          "frame": "정겸 정면. 한 박자 늦게, 엉뚱한 대답.",
+          "action": "정겸이 엉뚱하게 둘러댄다.",
+          "dialogue": [
+            {
+              "speaker": "jeonggyeom",
+              "line": "…보리차가 짭니다.",
+              "mode": "ON"
+            }
+          ],
+          "transition": "CUT",
+          "duration_sec": 4,
+          "notes": "귀는 화면에 넣지 않는다(대본에 언급 없음)",
+          "image_prompt": "close-up of the young official answering after a beat with a deadpan non-answer"
+        },
+        {
+          "id": "S03-08",
+          "size": "MCU",
+          "angle": "EYE",
+          "move": "FIX",
+          "lens_mm": 50,
+          "characters": [
+            "lee_deokmu"
+          ],
+          "frame": "S03-04와 같은 구도. 이덕무가 안경 너머로 정겸을 한참 본다.",
+          "action": "이덕무가 정겸을 한참 본다.",
+          "sound": "붓 소리만",
+          "transition": "CUT",
+          "duration_sec": 4,
+          "image_prompt": "same medium close-up, the old scholar studying the young man over his spectacles for a long moment"
+        }
+      ]
     },
     {
       "id": "S#4",
@@ -61,14 +581,217 @@
       "tc_in": "01:40",
       "tc_out": "02:20",
       "characters": [
-        "dallae",
         "jeonggyeom",
-        "gangsu",
-        "meoksun"
+        "dallae"
       ],
-      "summary": "",
+      "mood": "ROMANCE",
+      "summary": "등잔 아래 수첩. 월하노인 후보에서 강수를 지우고 '윤달래?'라고 쓴 정겸. 단서들이 스쳐 가지만 그는 줄을 긋고 '개연성 없음'이라 적는다. 안채의 웃음소리 쪽을 한참 본다.",
       "source_text": "등잔 아래. 정겸이 수첩에 적는다.\nInsert. '월하노인 후보. 강수 — 글씨 다름. 아님.'\n붓이 멈춘다. 다음 줄에 천천히 쓴다. '윤달래?'\n한참 본다. 말이 빨라지는 버릇, 궤짝에서 뜯어 온 형조 나무패, 원작자가 굶는다며 화내던 얼굴. 그리고 반납된 책에 서생 갑을 욕하던 목소리.\n정겸이 줄을 그어 지우고 옆에 쓴다. '개연성 없음.'\n안채에서 달래의 웃음소리가 들린다. 먹순과 떠들고 있다. 정겸이 창호지 쪽을 본다. 한참 본다.",
-      "shots": []
+      "shots": [
+        {
+          "id": "S04-01",
+          "size": "MS",
+          "angle": "EYE",
+          "move": "FIX",
+          "lens_mm": 35,
+          "characters": [
+            "jeonggyeom"
+          ],
+          "frame": "밤. 서안 위 등잔 하나(화면 오른쪽). 정겸이 수첩에 붓을 놀린다. 왼쪽 창호지 문은 어둡다.",
+          "action": "등잔 아래. 정겸이 수첩에 적는다.",
+          "sound": "등잔 심지 타는 소리, 붓 소리",
+          "transition": "CUT",
+          "duration_sec": 4,
+          "continuity": "축: 창호지 문(안채 쪽)은 화면 왼쪽, 등잔과 서안은 오른쪽(5화 S#1·7화 S#1과 같은 방). 정겸 시선은 마지막에 왼쪽 창호지로",
+          "image_prompt": "a tall scholar writing in a small notebook by a single oil lamp at night in a tiny tidy room, a dark paper door on the left"
+        },
+        {
+          "id": "S04-02",
+          "size": "INSERT",
+          "angle": "TOP",
+          "move": "FIX",
+          "lens_mm": 50,
+          "characters": [
+            "jeonggyeom"
+          ],
+          "frame": "탑샷. 수첩. 반듯한 해서체.",
+          "action": "수첩에 월하노인 후보를 적는다.",
+          "insert_text": "월하노인 후보. 강수 — 글씨 다름. 아님.",
+          "motifs": [
+            "INSERT_TEXT"
+          ],
+          "transition": "CUT",
+          "duration_sec": 4,
+          "image_prompt": "top-down insert, a small notebook with neat brush handwriting in hangul by lamplight"
+        },
+        {
+          "id": "S04-03",
+          "size": "INSERT",
+          "angle": "TOP",
+          "move": "FIX",
+          "lens_mm": 50,
+          "characters": [
+            "jeonggyeom"
+          ],
+          "frame": "탑샷. 같은 장 다음 줄. 붓이 멈췄다가, 천천히 세 글자와 물음표를 쓴다.",
+          "action": "붓이 멈춘다. 다음 줄에 천천히 쓴다.",
+          "insert_text": "윤달래?",
+          "motifs": [
+            "INSERT_TEXT"
+          ],
+          "transition": "CUT",
+          "duration_sec": 4,
+          "notes": "꼭 챙길 그림: 수첩 '윤달래?'",
+          "image_prompt": "top-down insert, a brush tip pausing, then slowly writing a short name and a question mark on the next line"
+        },
+        {
+          "id": "S04-04",
+          "size": "CU",
+          "angle": "EYE",
+          "move": "DOLLY_IN",
+          "lens_mm": 85,
+          "characters": [
+            "jeonggyeom"
+          ],
+          "frame": "정겸 정면, 등잔빛이 얼굴 오른쪽을 비춘다. 수첩을 한참 내려다본다.",
+          "action": "정겸이 한참 본다.",
+          "transition": "CUT",
+          "duration_sec": 4,
+          "image_prompt": "slow push-in close-up of the scholar staring down at his notebook for a long time, lamplight on one side of his face"
+        },
+        {
+          "id": "S04-05",
+          "size": "CU",
+          "angle": "EYE",
+          "move": "FIX",
+          "lens_mm": 85,
+          "characters": [
+            "dallae"
+          ],
+          "frame": "Flash. 6화 S#1 장터의 달래. 눈알을 굴리며 두 배로 빠르게 말을 쏟아낸다. 소리는 빨리 감은 듯 뭉개진다.",
+          "action": "말이 빨라지는 버릇.",
+          "sound": "회상 속 빠른 말소리가 뭉개져 겹친다",
+          "transition": "CUT",
+          "duration_sec": 2,
+          "notes": "회상 플래시. 6화 S01-09 소스 재사용",
+          "image_prompt": "flash, desaturated memory, close-up of the young woman in a market rattling off an excuse at double speed with darting eyes"
+        },
+        {
+          "id": "S04-06",
+          "size": "INSERT",
+          "angle": "EYE",
+          "move": "FIX",
+          "lens_mm": 85,
+          "characters": [
+            "dallae"
+          ],
+          "frame": "Flash. 6화 S#4 강가. 치마 속에서 꺼낸 그을린 나무패.",
+          "action": "궤짝에서 뜯어 온 형조 나무패.",
+          "transition": "CUT",
+          "duration_sec": 2,
+          "notes": "회상 플래시. 6화 S04-05 소스 재사용",
+          "image_prompt": "flash, desaturated memory, insert of a small sooty hand holding out a scorched wooden tag on a riverbank at night"
+        },
+        {
+          "id": "S04-07",
+          "size": "CU",
+          "angle": "EYE",
+          "move": "FIX",
+          "lens_mm": 85,
+          "characters": [
+            "dallae"
+          ],
+          "frame": "Flash. 6화 S#1. 버럭 화내던 달래의 얼굴.",
+          "action": "원작자가 굶는다며 화내던 얼굴.",
+          "transition": "CUT",
+          "duration_sec": 2,
+          "notes": "회상 플래시. 6화 S01-07 소스 재사용",
+          "image_prompt": "flash, desaturated memory, close-up of the young woman shouting in indignation in a market"
+        },
+        {
+          "id": "S04-08",
+          "size": "MCU",
+          "angle": "EYE",
+          "move": "FIX",
+          "lens_mm": 50,
+          "characters": [
+            "dallae"
+          ],
+          "frame": "Flash. 5화 S#1 행랑채. 반납된 책을 흔들며 서생 갑을 욕하던 달래.",
+          "action": "반납된 책에 서생 갑을 욕하던 목소리.",
+          "sound": "회상 속 달래의 목소리가 메아리처럼 겹친다",
+          "transition": "CUT",
+          "duration_sec": 2,
+          "notes": "회상 플래시. 5화 S01-04 소스 재사용. 대사는 새로 넣지 않고 음향으로만",
+          "image_prompt": "flash, desaturated memory, the young woman fuming and shaking a returned book in a small room"
+        },
+        {
+          "id": "S04-09",
+          "size": "INSERT",
+          "angle": "TOP",
+          "move": "FIX",
+          "lens_mm": 50,
+          "characters": [
+            "jeonggyeom"
+          ],
+          "frame": "탑샷. S04-03과 같은 장. '윤달래?'에 줄을 죽 그어 지우고, 그 옆에 또박또박 쓴다.",
+          "action": "정겸이 줄을 그어 지우고 옆에 쓴다.",
+          "insert_text": "윤달래?(줄 그어 지움) 개연성 없음.",
+          "motifs": [
+            "INSERT_TEXT"
+          ],
+          "transition": "CUT",
+          "duration_sec": 4,
+          "notes": "꼭 챙길 그림: '윤달래?' → '개연성 없음'. 1화부터 이어 온 정겸의 말버릇이 수첩에 적힌다",
+          "image_prompt": "top-down insert, a brush striking a firm line through a short name in a notebook and writing a new phrase beside it"
+        },
+        {
+          "id": "S04-10",
+          "size": "MS",
+          "angle": "EYE",
+          "move": "FIX",
+          "lens_mm": 35,
+          "characters": [
+            "jeonggyeom"
+          ],
+          "frame": "S04-01과 같은 구도. 정겸이 붓을 내려놓는 순간 고개를 들어 왼쪽을 본다.",
+          "action": "안채에서 달래의 웃음소리가 들린다.",
+          "sound": "(O.S.) 안채에서 달래와 먹순의 웃음소리, 떠드는 소리",
+          "transition": "CUT",
+          "duration_sec": 3,
+          "image_prompt": "same composition, the scholar setting down his brush and lifting his head toward the paper door at the sound of laughter"
+        },
+        {
+          "id": "S04-11",
+          "size": "LS",
+          "angle": "POV",
+          "move": "FIX",
+          "lens_mm": 50,
+          "characters": [],
+          "frame": "정겸 시점. 창호지 문 너머, 마당 건너 안채의 등잔빛이 창호지에 따뜻하게 번진다.",
+          "action": "정겸이 창호지 쪽을 본다.",
+          "sound": "웃음소리가 이어진다",
+          "transition": "CUT",
+          "duration_sec": 4,
+          "image_prompt": "POV through a paper door at night, the warm glow of an oil lamp from the inner quarters across the yard bleeding through the paper"
+        },
+        {
+          "id": "S04-12",
+          "size": "CU",
+          "angle": "PROFILE",
+          "move": "DOLLY_IN",
+          "lens_mm": 100,
+          "characters": [
+            "jeonggyeom"
+          ],
+          "frame": "왼쪽 옆얼굴. 아주 느리게 다가간다. 정겸이 창호지 쪽을 한참 본다. 귀는 그대로다.",
+          "action": "정겸이 창호지 쪽을 본다. 한참 본다.",
+          "transition": "FADE_OUT",
+          "duration_sec": 5,
+          "notes": "'한참'을 살리는 무대사 컷. 귀 색은 손대지 않는다(EAR 모티프 없음)",
+          "image_prompt": "very slow push-in on the profile of the scholar gazing at a glowing paper door for a long time, lamplight behind him"
+        }
+      ]
     },
     {
       "id": "S#5",
@@ -78,13 +801,204 @@
       "tc_in": "02:20",
       "tc_out": "03:00",
       "characters": [
-        "gangsu",
-        "heojin",
-        "yul"
+        "yul",
+        "heojin"
       ],
-      "summary": "",
+      "mood": "THRILLER",
+      "summary": "장부 조각을 쥐고 아버지 방 앞에 선 율. 안에서 '소리 없이 묻어라'가 들린다. 율은 문을 두드리지 않고 물러난다. 처음으로 아버지에게 비밀이 생긴다.",
       "source_text": "율이 '판서댁' 장부 조각을 쥐고 아버지 방 앞에 선다. 숨을 한 번 고른다. 문을 두드리려는 순간, 안에서 목소리가 들린다. 누군가에게 차를 권하듯 낮고 평평하다.\n**허진** (안에서) 월하노인을 찾거든, 소리 없이 묻어라.\n율의 손이 문 앞에서 멈춘다. 늘 웃던 입이 굳는다.\n율이 한 걸음 물러선다. 마루가 삐걱하지 않도록 아주 천천히. 또 한 걸음.\n**율** (소리 없이, 입 모양으로) …묻어라.\n(N, 강수) 판서댁 외아들은 그날 밤 아버지 방문을 두드리지 않았소. 대신 처음으로, 아버지에게 비밀이 생겼소.",
-      "shots": []
+      "shots": [
+        {
+          "id": "S05-01",
+          "size": "LS",
+          "angle": "EYE",
+          "move": "FIX",
+          "lens_mm": 35,
+          "characters": [
+            "yul",
+            "heojin"
+          ],
+          "frame": "달빛 아래 사랑채 마루. 화면 오른쪽 창호지 문 안에 촛불 하나. 왼쪽 마루 끝으로 율이 걸어 들어와 문 앞에 선다.",
+          "action": "율이 아버지 방 앞에 선다.",
+          "sound": "밤벌레, 먼 순라 딱따기",
+          "transition": "CUT",
+          "duration_sec": 5,
+          "continuity": "축: 허진의 방(촛불)은 화면 오른쪽, 율은 왼쪽(locations.json axis: 허진 오른쪽, 아랫사람 왼쪽). 율 시선은 오른쪽 문으로",
+          "image_prompt": "night exterior of a noble mansion's study wing, a paper door glowing with a single candle on the right, a young nobleman stepping onto the wooden veranda from the left and stopping before the door"
+        },
+        {
+          "id": "S05-02",
+          "size": "INSERT",
+          "angle": "EYE",
+          "move": "FIX",
+          "lens_mm": 85,
+          "characters": [
+            "yul"
+          ],
+          "frame": "율의 손에 꽉 쥐인 장부 조각. 6화에서 접은 자국 그대로다.",
+          "action": "율이 '판서댁' 장부 조각을 쥐고 있다.",
+          "insert_text": "판서댁",
+          "motifs": [
+            "INSERT_TEXT"
+          ],
+          "transition": "CUT",
+          "duration_sec": 2,
+          "continuity": "6화 S05-04와 같은 조각",
+          "image_prompt": "insert, a young man's hand tightly gripping a folded half-burnt ledger scrap in the moonlight"
+        },
+        {
+          "id": "S05-03",
+          "size": "MCU",
+          "angle": "EYE",
+          "move": "FIX",
+          "lens_mm": 50,
+          "characters": [
+            "yul"
+          ],
+          "frame": "율 옆얼굴에 가까운 정면. 숨을 한 번 고른다. 부채는 허리춤에 꽂혀 있다.",
+          "action": "율이 숨을 한 번 고른다.",
+          "transition": "CUT",
+          "duration_sec": 3,
+          "image_prompt": "medium close-up of the young nobleman taking one deep breath before a door, no smile, fan tucked in his sash"
+        },
+        {
+          "id": "S05-04",
+          "size": "MS",
+          "angle": "PROFILE",
+          "move": "FIX",
+          "lens_mm": 50,
+          "characters": [
+            "yul",
+            "heojin"
+          ],
+          "frame": "측면. 왼쪽 율이 손을 들어 문을 두드리려는 순간. 오른쪽 창호지 문에 촛불이 만든 허진의 그림자가 찻잔을 기울인다.",
+          "action": "문을 두드리려는 순간, 안에서 목소리가 들린다.",
+          "dialogue": [
+            {
+              "speaker": "heojin",
+              "line": "월하노인을 찾거든, 소리 없이 묻어라.",
+              "mode": "OS"
+            }
+          ],
+          "transition": "CUT",
+          "duration_sec": 5,
+          "notes": "목소리는 누군가에게 차를 권하듯 낮고 평평하게. 듣는 상대는 화면에 넣지 않는다",
+          "image_prompt": "profile medium shot, the young man raising his hand to knock on a paper door, the shadow of a seated man pouring tea cast on the paper by candlelight"
+        },
+        {
+          "id": "S05-05",
+          "size": "INSERT",
+          "angle": "EYE",
+          "move": "FIX",
+          "lens_mm": 85,
+          "characters": [
+            "yul"
+          ],
+          "frame": "문살 한 뼘 앞에서 멈춘 율의 손. 손가락이 굳어 있다.",
+          "action": "율의 손이 문 앞에서 멈춘다.",
+          "transition": "CUT",
+          "duration_sec": 3,
+          "notes": "꼭 챙길 그림: 문 앞에서 멈춘 율의 손",
+          "image_prompt": "insert, a young man's raised hand frozen a hand's breadth from a latticed paper door glowing with candlelight"
+        },
+        {
+          "id": "S05-06",
+          "size": "CU",
+          "angle": "EYE",
+          "move": "DOLLY_IN",
+          "lens_mm": 85,
+          "characters": [
+            "yul"
+          ],
+          "frame": "율 정면, 천천히 다가간다. 늘 웃던 입이 굳는다.",
+          "action": "늘 웃던 입이 굳는다.",
+          "transition": "CUT",
+          "duration_sec": 3,
+          "image_prompt": "slow push-in close-up of the handsome young nobleman's face, his usual smile freezing into a hard line"
+        },
+        {
+          "id": "S05-07",
+          "size": "INSERT",
+          "angle": "LOW",
+          "move": "FIX",
+          "lens_mm": 50,
+          "characters": [
+            "yul"
+          ],
+          "frame": "마룻바닥 높이. 율의 발이 아주 천천히 한 걸음 물러난다. 발뒤꿈치부터 소리 없이.",
+          "action": "율이 한 걸음 물러선다. 마루가 삐걱하지 않도록 아주 천천히.",
+          "sound": "숨죽인 정적. 촛불 타는 소리",
+          "transition": "CUT",
+          "duration_sec": 5,
+          "image_prompt": "floor-level insert, a young man's feet stepping back on wooden floorboards extremely slowly and silently, heel first"
+        },
+        {
+          "id": "S05-08",
+          "size": "MS",
+          "angle": "EYE",
+          "move": "FIX",
+          "lens_mm": 50,
+          "characters": [
+            "yul",
+            "heojin"
+          ],
+          "frame": "S05-04보다 한 걸음 뒤. 또 한 걸음 물러난 율. 창호지 속 그림자는 여전히 차를 따른다.",
+          "action": "또 한 걸음.",
+          "transition": "CUT",
+          "duration_sec": 3,
+          "image_prompt": "medium shot, the young man retreating another step from the door while the shadow on the paper keeps calmly pouring tea"
+        },
+        {
+          "id": "S05-09",
+          "size": "ECU",
+          "angle": "EYE",
+          "move": "FIX",
+          "lens_mm": 100,
+          "characters": [
+            "yul"
+          ],
+          "frame": "율의 입술만. 소리 없이 입 모양으로 한 마디.",
+          "action": "율이 소리 없이 입 모양으로 따라 한다.",
+          "dialogue": [
+            {
+              "speaker": "yul",
+              "line": "…묻어라.",
+              "mode": "WHISPER"
+            }
+          ],
+          "transition": "CUT",
+          "duration_sec": 3,
+          "notes": "소리 없이 입 모양만. 믹스에서 숨소리도 뺀다",
+          "image_prompt": "extreme close-up of a young man's lips silently mouthing a word in the dark"
+        },
+        {
+          "id": "S05-10",
+          "size": "LS",
+          "angle": "HIGH",
+          "move": "CRANE_UP",
+          "lens_mm": 24,
+          "characters": [
+            "yul",
+            "heojin"
+          ],
+          "frame": "어두운 마루에 혼자 선 율에서 크레인 업. 오른쪽 창호지 문의 촛불만 밝다. 지붕 위로 올라가 판서댁 기와지붕 전체가 보이는 데서 정지.",
+          "action": "율은 아버지 방문을 두드리지 않는다.",
+          "dialogue": [
+            {
+              "speaker": "N:gangsu",
+              "line": "판서댁 외아들은 그날 밤 아버지 방문을 두드리지 않았소. 대신 처음으로, 아버지에게 비밀이 생겼소.",
+              "mode": "N"
+            }
+          ],
+          "motifs": [
+            "NARRATOR"
+          ],
+          "transition": "FREEZE",
+          "duration_sec": 8,
+          "notes": "엔딩 훅. 내레이션 끝 음절에서 프리즈",
+          "image_prompt": "high angle crane up from a lone young nobleman standing on a dark veranda before a candlelit paper door, rising over the tiled roofs of the mansion at night"
+        }
+      ]
     }
   ]
 }
