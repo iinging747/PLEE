@@ -32,10 +32,10 @@ header.top{display:grid;gap:18px 40px;grid-template-columns:minmax(0,1fr);align-
 .eyebrow{font-size:12.5px;letter-spacing:.06em;color:var(--muted)}
 header.top h1{font-family:var(--f-display);font-size:clamp(34px,6vw,58px);line-height:1.05;margin-top:8px}
 header.top h1 small{display:block;font-family:var(--f-body);font-size:15px;color:var(--muted);margin-top:10px;letter-spacing:0}
-.stats{display:grid;grid-template-columns:repeat(4,minmax(0,auto));margin:0;border:1px solid var(--line);background:var(--panel)}
+.stats{display:grid;grid-template-columns:repeat(5,minmax(0,auto));margin:0;border:1px solid var(--line);background:var(--panel)}
 .stats div{padding:10px 18px;border-right:1px solid var(--line);min-width:0}
 .stats div:last-child{border-right:0}
-@media (max-width:600px){.stats{grid-template-columns:repeat(4,minmax(0,1fr))}.stats div{padding:8px 10px}.stats dd{font-size:16px}}
+@media (max-width:600px){.stats{grid-template-columns:repeat(3,minmax(0,1fr))}.stats div{padding:8px 10px}.stats dd{font-size:16px}}
 .stats dt{font-size:11.5px;color:var(--muted);letter-spacing:.04em}
 .stats dd{margin:2px 0 0;font-family:var(--f-mono);font-size:20px}
 
@@ -132,7 +132,7 @@ footer{margin-top:60px;font-size:12.5px;color:var(--muted)}
 
   <nav class="rail" id="rail" aria-label="회차"></nav>
   <main id="ep" aria-live="polite"></main>
-  <footer>원본 데이터: 저장소 wolha/storyboards/epNN.json. 이 페이지는 tools/board.py 로 다시 만듭니다. 패널 그림은 샷 크기·인원·시간대를 나타내는 구도 가이드입니다.</footer>
+  <footer>원본 데이터: 저장소 wolha/storyboards/epNN.json. 이 페이지는 tools/board.py 로 다시 만듭니다. 이미지가 아직 없는 샷은 샷 크기·인원·시간대를 나타내는 구도 가이드로 보입니다.</footer>
 </div>
 <div class="toast" id="toast" hidden></div>
 
@@ -159,9 +159,10 @@ window.WOLHA = /*__DATA__*/null;
   // 전체 통계
   const total = EPS.reduce((a,e)=>a+e.shots,0);
   const done = EPS.filter(e=>e.shots>0).length;
+  const imgs = EPS.reduce((a,e)=>a+e.scenes.reduce((b,s)=>b+s.shots.filter(x=>x.image).length,0),0);
   const sec = EPS.reduce((a,e)=>a+e.runtime,0);
   const secDone = EPS.filter(e=>e.shots>0).reduce((a,e)=>a+e.runtime,0);
-  $("#stats").innerHTML = [["회차",`${done}/${EPS.length}`],["샷",total],["러닝타임",tc(sec)],["평균 샷",total?`${(secDone/total).toFixed(1)}초`:"-"]]
+  $("#stats").innerHTML = [["회차",`${done}/${EPS.length}`],["샷",total],["러닝타임",tc(sec)],["평균 샷",total?`${(secDone/total).toFixed(1)}초`:"-"],["패널 이미지",`${imgs}/${total}`]]
     .map(([k,v])=>`<div><dt>${k}</dt><dd>${v}</dd></div>`).join("");
 
   $("#rail").innerHTML = EPS.map((e,i)=>`<button type="button" data-i="${i}" class="${e.shots?"":"empty"}" title="${esc(e.title)}"><b>${String(e.episode).padStart(2,"0")}</b><span>${esc(e.title)}</span></button>`).join("");
@@ -194,7 +195,7 @@ window.WOLHA = /*__DATA__*/null;
     const motifs = (sh.motifs||[]).map(m=>`<span class="chip motif">${esc(MOTIF_KO[m]||m)}</span>`).join("");
     const who = (sh.characters||[]).map(name).join(", ");
     return `<article class="card" id="${esc(sh.id)}" data-motifs="${esc((sh.motifs||[]).join(" "))}">
-      ${frameSVG(sh, sc.time)}
+      ${sh.image ? `<img class="frame" src="${esc((D.imgBase||"") + sh.image)}" alt="${esc(sh.id)} 패널" loading="lazy" style="object-fit:cover">` : frameSVG(sh, sc.time)}
       <div class="cap">
         <div class="r1"><b>${esc(sh.id)}</b><span>${sh.duration_sec}초</span></div>
         <div class="chips"><span class="chip">${esc(sh.size)}</span><span class="chip">${esc(ANGLE_KO[sh.angle]||sh.angle)}</span><span class="chip">${esc(MOVE_KO[sh.move]||sh.move)}</span>${sh.lens_mm?`<span class="chip">${sh.lens_mm}mm</span>`:""}${motifs}</div>

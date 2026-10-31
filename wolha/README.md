@@ -16,15 +16,19 @@ wolha/
 ├── schema/storyboard.schema.json  스토리보드 JSON 형식
 ├── storyboards/ep01.json      ★ 견본 (완성, 샷 60개)
 ├── storyboards/ep02~20.json   뼈대 (씬·타임코드·장소·인물만 채움, shots 비어 있음)
-├── tools/                     파이썬 도구 (표준 라이브러리만 사용)
+├── tools/                     파이썬 도구 (표준 라이브러리만, 이미지 압축만 Pillow 또는 ffmpeg)
 │   ├── split_episodes.py      통합 대본 → 회차별 파일
 │   ├── skeleton.py            대본 → 스토리보드 뼈대
 │   ├── validate.py            형식·제작 규칙 검사
 │   ├── render.py              콘티 시트 HTML / 샷 리스트 CSV / 프롬프트 JSONL
 │   ├── board.py               20부작 전체 콘티 보드 한 장(out/board.html)
 │   ├── check_hangul.py        한글 오타(깨진 음절) 찾기
+│   ├── codex_jobs.py          패널 이미지 작업 목록(assets/jobs/) 만들기, 생성된 그림 연결
+│   ├── compress_frames.py     생성된 PNG → 16:9 1280x720 JPEG
 │   └── gen_images.py          (선택) 패널 이미지 생성, 기본은 드라이런
-├── assets/frames/             생성된 패널 이미지 (epNN/샷id.png)
+├── assets/jobs/               Codex 이미지 작업 목록 (refs.jsonl, ep01~20.jsonl: 샷마다 prompt·저장 경로·참고 그림)
+├── assets/refs/               인물 레퍼런스 시트·장소 레퍼런스 (패널보다 먼저 만든다)
+├── assets/frames/             패널 이미지 (epNN/샷id.jpg)
 └── out/                       렌더 결과 (커밋 안 함)
 ```
 
@@ -42,9 +46,9 @@ OPENAI_API_KEY=... python3 tools/gen_images.py 1 --run --limit 1   # 한 컷만 
 
 ## Codex에서 이어 가기
 
-1. 이 저장소를 Codex에 연결하고, 작업 디렉터리를 `wolha/`로 둔다.
-2. `TASKS.md`의 "Codex에 줄 프롬프트"를 그대로 붙여 넣는다. 한 번에 2~3회차씩 맡기는 것을 권장한다.
-3. 회차마다 `validate.py` 오류 0, `out/epNN.html` 확인, 커밋이 끝나면 다음 회차로 넘어간다.
+1. 이 저장소(브랜치 `claude/serene-bardeen-piz2m5`)를 Codex에서 열고, 작업 디렉터리를 `wolha/`로 둔다.
+2. `TASKS.md`의 "패널 이미지 에셋 만들기 (Codex)"를 순서대로 붙여 넣는다. ① 인물·장소 레퍼런스 → ② 회차별 패널(2~3화씩).
+3. 회차마다 `codex_jobs.py --attach`, `validate.py` 오류 0, `out/epNN.html` 확인, 커밋이 끝나면 다음 회차로 넘어간다.
 
 ## 출처
 

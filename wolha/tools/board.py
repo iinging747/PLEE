@@ -14,7 +14,7 @@ import sys
 from wolha_lib import OUT_DIR, ROOT, STORYBOARD_DIR, characters, load_json, tc_to_sec
 
 KEEP = ["id", "size", "angle", "move", "lens_mm", "characters", "frame", "action", "dialogue", "sound",
-        "insert_text", "transition", "duration_sec", "motifs", "continuity", "image_prompt", "notes"]
+        "insert_text", "transition", "duration_sec", "motifs", "continuity", "image_prompt", "notes", "image"]
 
 
 def main() -> int:
@@ -37,7 +37,7 @@ def main() -> int:
             "episode": d["episode"], "title": d["title"], "hook": d.get("hook", ""), "status": d.get("status", ""),
             "runtime": d.get("runtime_sec", 180), "shots": sum(len(s["shots"]) for s in scenes), "scenes": scenes,
         })
-    data = json.dumps({"episodes": eps, "chars": chars}, ensure_ascii=False, separators=(",", ":"))
+    data = json.dumps({"episodes": eps, "chars": chars, "imgBase": "../"}, ensure_ascii=False, separators=(",", ":"))
     data = data.replace("</", "<\\/")
     tpl = (ROOT / "tools" / "board_template.html").read_text(encoding="utf-8")
     OUT_DIR.mkdir(parents=True, exist_ok=True)

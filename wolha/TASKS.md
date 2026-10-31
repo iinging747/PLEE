@@ -44,11 +44,31 @@ wolha/AGENTS.md 와 wolha/docs/storyboard_guide.md 를 먼저 읽어.
 
 회차 번호만 바꿔 가며 2~3회차씩 맡기면 된다. 20화는 분량이 많으니 단독으로 맡긴다.
 
-## 이미지까지 만들 때 (선택)
+## 패널 이미지 에셋 만들기 (Codex)
 
+샷 데이터와 이미지 프롬프트는 20화 모두 채워져 있다. Codex에서 아래를 순서대로 붙여 넣으면 실제 그림으로 패널을 채운다. 작업 목록은 `assets/jobs/`에 있다.
+
+**① 레퍼런스 (한 번만)**
 ```
-wolha/tools/gen_images.py 로 ep02 의 패널 이미지를 만들어 줘.
-먼저 드라이런으로 out/ep02_image_requests.jsonl 을 보여 주고, 내가 승인하면 --run --limit 3 으로 세 컷만 시험해.
+wolha/AGENTS.md 의 "이미지 에셋" 절을 읽어.
+wolha/assets/jobs/refs.jsonl 에서 kind 가 character 인 줄(14명)을 이미지 생성 도구로 만들어 각 out 경로에 저장해.
+prompt 그대로, size 크기, 글자 없이. 다 만들면 14장을 나한테 보여 줘.
+```
+승인한 뒤:
+```
+refs.jsonl 의 location 줄도 같은 방식으로 만들어.
+끝나면 cd wolha && python3 tools/compress_frames.py --refs && python3 tools/codex_jobs.py 를 실행하고
+"assets: 레퍼런스 시트" 로 커밋·푸시해.
 ```
 
-`OPENAI_API_KEY`가 필요하다. 인물 외형은 `bible/characters.json`의 `prompt_en`에서 붙으므로, 얼굴이 회차마다 달라 보이면 그 토큰을 다듬는다.
+**② 패널 (2~3화씩)**
+```
+wolha/AGENTS.md 의 "이미지 에셋" 절대로 1화와 2화 패널을 만들어.
+wolha/assets/jobs/ep01.jsonl, ep02.jsonl 의 한 줄이 샷 하나야. refs 의 그림을 참고 이미지로 붙이고 prompt 로 생성해서 out 경로에 저장해.
+얼굴·의상·세트는 레퍼런스와 같게, 그림 안에 글자는 넣지 마.
+회차가 끝날 때마다 compress_frames → codex_jobs --attach → validate → render → board 를 돌리고,
+out/epNN.html 에서 설명과 크게 다른 컷은 다시 만든 뒤 "assets: epNN 패널 N장" 으로 커밋·푸시해.
+```
+회차 번호만 바꿔 가며 20화까지 반복한다. 진행 상황은 `python3 tools/codex_jobs.py --status`.
+
+API 키로 직접 돌릴 때는 `OPENAI_API_KEY=... python3 tools/gen_images.py 5 --run --limit 3`도 쓸 수 있다(레퍼런스 이미지는 붙지 않는다).

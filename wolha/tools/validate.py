@@ -26,7 +26,7 @@ import sys
 from pathlib import Path
 
 from wolha_lib import (
-    SCHEMA_PATH, SHORTFORM_DIR, STORYBOARD_DIR, character_ids, dialogue_lines,
+    ROOT, SCHEMA_PATH, SHORTFORM_DIR, STORYBOARD_DIR, character_ids, dialogue_lines,
     load_json, location_ids, name_to_id, normalize_text, parse_shortform,
     tc_to_sec, validate_schema,
 )
@@ -116,6 +116,8 @@ def check(path: Path) -> tuple[list[str], list[str]]:
                     errors.append(f"{shid}: final 인데 frame 이 비어 있음")
                 if not sh.get("image_prompt"):
                     errors.append(f"{shid}: final 인데 image_prompt 가 비어 있음")
+            if sh.get("image") and not (ROOT / sh["image"]).exists():
+                warns.append(f"{shid}: image 파일이 없음 → {sh['image']}")
             if sh["duration_sec"] > 12 and sh["move"] == "FIX":
                 warns.append(f"{shid}: 12초 넘는 고정 샷 — 숏폼 템포 확인")
 

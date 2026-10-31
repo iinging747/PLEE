@@ -48,7 +48,24 @@ python3 tools/gen_images.py 5                # (선택) 이미지 프롬프트�
   - 달래: 19~20화 격쟁 장면은 흰 소복
 - **고증.** 1792~1793년 한양이 무대다. 전기 조명, 근대 소품, 마고자 같은 후대 복식은 쓰지 않는다. 확실하지 않으면 `notes`에 `고증확인:`으로 적는다.
 - **image_prompt는 영어로, 장면 내용만** 적는다. 그림에 글자를 넣으라고 쓰지 않는다.
-- **네트워크 호출 금지(기본).** `gen_images.py --run`은 사용자가 명시적으로 요청하고 `OPENAI_API_KEY`가 있을 때만 실행한다.
+- **네트워크 호출 금지(기본).** `gen_images.py --run`은 사용자가 명시적으로 요청하고 `OPENAI_API_KEY`가 있을 때만 실행한다. Codex 내장 이미지 생성으로 패널을 만드는 일은 아래 "이미지 에셋" 절을 따른다.
+
+## 이미지 에셋 (패널 그림)
+
+콘티 패널마다 실제 그림을 만들어 `assets/frames/epNN/<샷id>.jpg`로 채운다. 작업 목록은 `assets/jobs/`에 미리 만들어 두었다(`python3 tools/codex_jobs.py`로 다시 만든다).
+
+1. **레퍼런스 먼저.** `assets/jobs/refs.jsonl`의 인물 시트(14명)와 장소 그림을 만든다. 각 줄의 `prompt`로, `size` 크기, 글자 없이 생성해 `out` 경로에 저장한다. 인물 시트는 사람이 승인한 뒤 장소로 넘어간다.
+   끝나면 `python3 tools/compress_frames.py --refs` → `python3 tools/codex_jobs.py`(작업 목록이 새 레퍼런스 경로를 가리키게 다시 만든다).
+2. **패널.** `assets/jobs/epNN.jsonl`의 한 줄이 샷 하나다. `refs`에 적힌 그림을 참고 이미지로 붙이고 `prompt`로 생성해 `out` 경로에 저장한다. 얼굴·의상·세트는 레퍼런스와 같아야 한다. 그림에 글자·말풍선을 넣지 않는다(INSERT 샷의 글씨는 빈 종이나 흐린 붓자국으로).
+3. **회차가 끝나면** 순서대로:
+   ```bash
+   python3 tools/compress_frames.py 5        # 16:9로 잘라 1280x720 JPEG, 원본 PNG 삭제
+   python3 tools/codex_jobs.py --attach 5    # ep05.json 의 image 필드 채우기
+   python3 tools/validate.py storyboards/ep05.json
+   python3 tools/render.py 5 && python3 tools/board.py
+   ```
+   `out/ep05.html`을 열어 패널이 `frame`/`action` 설명, 샷 크기, 화면 방향(axis)과 맞는지 보고, 크게 어긋난 컷은 다시 생성한다.
+4. **진행 확인:** `python3 tools/codex_jobs.py --status`
 
 ## 완료 기준 (회차별)
 
@@ -63,4 +80,5 @@ python3 tools/gen_images.py 5                # (선택) 이미지 프롬프트�
 ## 커밋
 
 - 회차 하나에 커밋 하나. 메시지 예: `storyboard: ep05 「연애 자료조사」 샷 41개`
-- `out/`은 생성물이라 커밋하지 않는다(.gitignore). 이미지(`assets/frames/`)는 사용자가 요청할 때만 커밋한다.
+- `out/`은 생성물이라 커밋하지 않는다(.gitignore).
+- 이미지는 `compress_frames.py`로 줄인 JPEG만 커밋한다(PNG 원본 커밋 금지). 메시지 예: `assets: ep05 패널 41장`, `assets: 레퍼런스 시트`
