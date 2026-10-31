@@ -141,10 +141,10 @@
       "tc_out": "01:10",
       "characters": [
         "dallae",
-        "yunhui",
         "jeonggyeom",
-        "extras",
-        "yul"
+        "yul",
+        "yunhui",
+        "extras"
       ],
       "mood": "COMEDY",
       "summary": "책 열 권을 배달 온 달래가 관복 차림 정겸의 혼담 자리를 본다. '김일이오'를 윤희가 받아 넘기고, 판서댁 도련님으로 나타난 율의 정체에 달래의 얼굴이 굳는다. 달래는 '김일 오라버님'에게까지 인사하고 돌아선다.",
@@ -510,9 +510,9 @@
       "tc_in": "01:10",
       "tc_out": "02:05",
       "characters": [
-        "yunhui",
         "dallae",
-        "jeonggyeom"
+        "jeonggyeom",
+        "yunhui"
       ],
       "mood": "MYSTERY",
       "summary": "윤희가 서연의 「청상연가」 여백 낙서로 월하회의 암호를 풀어 보인다. 달래는 정겸에게서 한 뼘 떨어져 앉았다. 첫 글자를 모으자 '麻浦 初三 夜 船.' 초사흘은 오늘이다.",
@@ -931,8 +931,8 @@
         "dallae",
         "jeonggyeom",
         "yul",
-        "extras",
-        "heukrip"
+        "heukrip",
+        "extras"
       ],
       "mood": "THRILLER",
       "summary": "초사흘 밤 마포나루. 배 사이를 살피던 달래와 정겸에게 율이 숨차게 달려와 아버지 사람들이 온다고 알린다. 강둑을 따라 횃불이 하나, 둘, 열로 늘어난다.",

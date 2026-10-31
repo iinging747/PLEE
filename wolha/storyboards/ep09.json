@@ -18,8 +18,8 @@
       "characters": [
         "dallae",
         "jeonggyeom",
-        "seoyeon",
         "yul",
+        "seoyeon",
         "jongsagwan",
         "extras"
       ],
@@ -287,12 +287,12 @@
       "tc_in": "00:40",
       "tc_out": "01:10",
       "characters": [
-        "extras",
+        "dallae",
+        "jeonggyeom",
+        "yul",
         "heukrip",
         "seoyeon",
-        "dallae",
-        "yul",
-        "jeonggyeom"
+        "extras"
       ],
       "mood": "WARM",
       "summary": "물안개 속 강화행 첫 배. 율이 사공에게 엽전 꾸러미를 통째로 쥐여 주고, 서연은 달래에게 깊이 고개를 숙인다. 배를 등지고 선 정겸은 '아무것도 못 봤소'. 비가 오기 시작하고, 율은 우산도 없이 혼자 나루를 떠난다.",
@@ -885,8 +885,8 @@
       "tc_in": "02:20",
       "tc_out": "03:00",
       "characters": [
-        "jeonggyeom",
-        "dallae"
+        "dallae",
+        "jeonggyeom"
       ],
       "mood": "MYSTERY",
       "summary": "비가 새는 창고에서 궤짝을 옮기던 정겸이 기름종이에 싼 미출간 6권 원고를 발견한다. 끝장의 '월하노인' 서명과 정혼자 계약서의 달래 서명이 같은 붓 버릇이다. 뒤에서 문이 열리고 젖은 우산을 든 달래가 선다.",
