@@ -1,0 +1,202 @@
+{
+  "_note": "인물 설정집. id는 스토리보드 JSON의 characters/speaker에 쓴다. names는 대본에서 화자 이름으로 쓰이는 표기(스켈레톤 생성 시 자동 매칭). prompt_en은 이미지 생성 때 그대로 붙이는 외형 토큰이라 회차가 바뀌어도 바꾸지 않는다. 의상은 1792~1793년 정조 연간 기준이며, '고증확인'이라 적힌 항목은 촬영·작화 전에 자료로 다시 확인할 것.",
+  "characters": [
+    {
+      "id": "dallae",
+      "names": ["달래", "윤달래"],
+      "age": 19,
+      "role": "달래책방(세책방) 사장, 2대 월하노인. 몰락 선비 윤경오의 서녀",
+      "look": "작은 키, 동그란 눈, 손끝에 늘 먹물. 미혼이라 땋은 댕기머리인데, 쓸 때는 머리를 틀어 올리고 비녀 대신 붓을 꽂는다",
+      "costume": {
+        "default": "옥색 무명 저고리, 쪽빛 치마, 소매를 걷어붙임. 외출 시 쓰개치마",
+        "ep23-24": "흰 소복(격쟁 장면). 그 위에 쓰개치마",
+        "ep24_ending": "연분홍 저고리, 쪽빛 치마, 쓰개치마 (〈월하정인〉 구도)"
+      },
+      "props": ["붓(머리에 꽂음)", "엽전 꾸러미", "원고 묶음", "정혼자 계약서"],
+      "palette": ["#9CC9C2", "#2F4A7A", "#1A1A1A"],
+      "tells": "거짓말할 때 말이 두 배로 빨라진다",
+      "prompt_en": "petite 19-year-old Korean woman, round bright eyes, ink-stained fingertips, single long braid with a red daenggi ribbon, a calligraphy brush stuck in her hair like a hairpin, pale jade cotton jeogori with rolled-up sleeves, indigo chima skirt"
+    },
+    {
+      "id": "jeonggyeom",
+      "names": ["정겸", "이정겸", "김일"],
+      "age": 23,
+      "role": "규장각 최연소 검서관(서얼). 정체를 숨기고 달래책방 하숙생 '김일'로 산다. 악플러 '서생 갑'",
+      "look": "키 크고 늘 꼿꼿하다. 갓끈 한 올 흐트러짐 없음. 웃지 않는 얼굴. 거짓말하면 귀가 빨갛게 달아오른다(핵심 모티프)",
+      "costume": {
+        "default": "하숙생 변장: 낡았지만 반듯한 흰 도포, 검은 갓",
+        "palace": "궐 안: 하급 관원의 단령과 사모 (색은 고증확인)",
+        "ep16-20": "갓을 잃고 맨상투가 되는 장면 있음(20화 담장)"
+      },
+      "props": ["『논어』 표지 속 「청상연가」", "수사 수첩", "검서관 호패", "초롱(24화)"],
+      "palette": ["#F2EFE6", "#111111", "#C0392B"],
+      "tells": "EAR_RED — 거짓말할 때만 귀가 붉어진다. 진심일 때는 절대 붉어지지 않는다",
+      "prompt_en": "tall 23-year-old Korean scholar, very upright posture, serious unsmiling face, neatly tied black horsehair gat hat, plain but immaculate white dopo robe, slender hands",
+      "prompt_variants": {"palace": "tall 23-year-old Korean scholar-official, very upright posture, serious unsmiling face, on duty inside the palace in a low-ranking Joseon official's round-collared dallyeong robe in muted blue-green with a black winged samo hat and a plain belt, slender hands", "bareheaded": "tall 23-year-old Korean scholar, very upright posture, tense face, bareheaded after losing his gat: only a topknot (sangtu) under a black horsehair headband (manggeon), white dopo robe dishevelled and dirty, slender hands"}
+    },
+    {
+      "id": "yul",
+      "names": ["율", "허율"],
+      "age": 21,
+      "role": "형조판서 허진의 외아들, 서브 남주. 별명 '연체 도령'",
+      "look": "화려한 미남, 웃으면 보조개. 늘 부채",
+      "costume": {
+        "default": "자주·진분홍 계열 비단 도포, 부채",
+        "ep12-20": "옆구리 상처를 감은 무명 띠(도포 속). 20화 이후 가슴 상처",
+        "ep24": "흰 두루마기, 봇짐(유배길 동행)"
+      },
+      "props": ["부채", "약과 꾸러미", "호루라기", "「삼국지」 넷째·다섯째 권"],
+      "palette": ["#8E3B6E", "#E7A3B8", "#F6E7B0"],
+      "prompt_en": "handsome 21-year-old Korean nobleman, playful smile with a dimple, silk dopo robe in plum and rose tones, holding a folding fan"
+    },
+    {
+      "id": "gangsu",
+      "names": ["강수"],
+      "age": 21,
+      "role": "종로 인기 전기수(소설 낭독꾼), 이 이야기의 내레이터. 곽 노인의 제자",
+      "look": "목소리 좋은 미남. 무대에서는 능청, 윤희 앞에서는 대사를 까먹는다",
+      "costume": {
+        "default": "회색 도포, 낡은 갓, 부채",
+        "ep12-21": "왼쪽 팔뚝에 붕대",
+        "ep19-21": "오른쪽 목덜미에 무명"
+      },
+      "props": ["부채", "평상(무대)", "몽둥이(18~20화)", "징(23화)", "담배 써는 칼(22~23화)"],
+      "palette": ["#7D7F7D", "#2B2B2B"],
+      "prompt_en": "charismatic 21-year-old Korean street storyteller (jeongisu), expressive face, grey dopo robe, worn black gat, holding an open folding fan"
+    },
+    {
+      "id": "yunhui",
+      "names": ["윤희", "홍윤희"],
+      "age": 18,
+      "role": "홍 참판 댁 서녀, 양반가 여인 독서 모임 '월하회' 회장. 강수와 서브 커플(8·13·18·22화가 두 사람의 회차). 평민 전기수와 참판댁 서녀라 신분의 벽이 있다. 22화 파혼 뒤 별당에 갇히고, 24화에서 장옷 없이 평상 맨 앞줄에 앉는다",
+      "look": "단아한 규수인데 눈치가 빠르고 진성 덕후",
+      "costume": { "default": "분홍 저고리, 남색 치마, 댕기, 외출 시 장옷", "jangot": "외출 때 머리부터 쓰는 연두 장옷. 얼굴이 반쯤 가려진다(8·13·18화)", "ep22": "혼례복: 녹원삼, 족두리, 연지곤지" },
+      "props": ["여백 낙서가 빼곡한 「청상연가」"],
+      "palette": ["#F4B6C2", "#2C3E73"],
+      "prompt_en": "graceful 18-year-old Korean noble girl, quick clever eyes, pink jeogori, navy chima, long braid with ribbon",
+      "prompt_variants": {"jangot": "graceful 18-year-old Korean noble girl, quick clever eyes, a pale green jangot cloak draped over her head and held closed under her chin so her face is half hidden, pink jeogori and navy chima glimpsed beneath", "wedding": "graceful 18-year-old Korean noble bride, quick clever eyes, green wonsam ceremonial wedding robe with rainbow-striped sleeves, small black jokduri coronet on her head, red rouge dots on her cheeks and forehead"}
+    },
+    {
+      "id": "heojin",
+      "names": ["허진"],
+      "age": 52,
+      "role": "형조판서, 메인 악역. 을사년 진휼청 당상",
+      "look": "청렴해 보이는 얼굴. 절대 목소리를 높이지 않는다. 늘 찻잔을 든다",
+      "costume": {
+        "default": "집에서는 회색·흰색 도포",
+        "official": "관복과 사모 (품계에 맞는 색·흉배는 고증확인)",
+        "ep24": "흰 두루마기, 사모 없이(유배)"
+      },
+      "props": ["찻주전자와 찻잔 두 개", "「백골전」 빼돌린 사본", "을사 장부(벽장)", "화로"],
+      "palette": ["#3B3B3B", "#6E5A3A", "#B03A2E"],
+      "tells": "TEA_OVERFLOW — 동요하면 찻물이 잔을 넘쳐도 붓기를 멈추지 않는다",
+      "prompt_en": "composed 52-year-old Korean high official, thin calm face, neatly trimmed grey beard, grey silk robe at home, holding a celadon teacup"
+    },
+    {
+      "id": "jeongjo",
+      "names": ["정조"],
+      "age": 41,
+      "role": "조선 22대 왕. 문체반정을 내렸지만 몰래 소설을 읽는다",
+      "look": "엄격하지만 눈가에 장난기",
+      "costume": {
+        "default": "곤룡포, 익선관 (고증확인)",
+        "ep12": "삿갓 쓴 선비 변장",
+        "ep23-24": "행차 복식으로 말을 탄다 (고증확인)"
+      },
+      "props": ["압수한 「청상연가」", "촛불"],
+      "palette": ["#A51C30", "#D4AF37"],
+      "prompt_en": "41-year-old Joseon king, stern dignified face with a hint of mischief in the eyes, red royal robe with gold dragon roundel, ikseongwan crown",
+      "prompt_variants": {"disguise": "41-year-old Korean man of dignified bearing travelling incognito as a plain country scholar, undecorated grey-white robe, a wide woven straw satgat hat pulled low so only his jawline shows, no royal insignia, no crown", "procession": "41-year-old Joseon king during a royal procession, stern dignified face, red military-style travel robe (yungbok) with a black jeollip hat bearing a feather ornament, a belt with a quiver, no ikseongwan crown"}
+    },
+    {
+      "id": "heukrip",
+      "names": ["흑립"],
+      "age": 38,
+      "role": "허진의 자객. 1790년 곽 노인을 찌른 범인. 기록상 처형된 자",
+      "look": "검은 옷, 검은 갓. 왼손등을 가로지르는 길고 하얀 흉터(핵심 식별 표지)",
+      "costume": { "default": "검은 철릭풍 옷, 검은 갓, 칼" },
+      "props": ["환도", "작은 칼"],
+      "palette": ["#0D0D0D", "#E8E8E8"],
+      "tells": "ROOFTOP_HEUKRIP — 대본에 나오는 회차에서 지붕 위에 작게 서 있다(1·3·5·11·12·19·20화 등). SCAR_LEFT_HAND",
+      "prompt_en": "gaunt Korean assassin in his late 30s, shadowed eyes under a wide black gat, all-black clothing, a long pale scar across the back of his left hand"
+    },
+    {
+      "id": "meoksun",
+      "names": ["먹순"],
+      "age": 18,
+      "role": "달래책방 필사쟁이. 종이 냄새로 해적판을 가려낸다. 마감 독촉 담당",
+      "costume": { "default": "무명 저고리와 앞치마, 먹 묻은 손, 허리에 꿀떡 보퉁이" },
+      "palette": ["#E9DCC3", "#5B4636"],
+      "prompt_en": "spunky 18-year-old Korean shop girl, ink-smudged hands and cheek, plain cotton clothes with apron, small cloth bundle of rice cakes at her waist"
+    },
+    {
+      "id": "ma_yeonggam",
+      "names": ["마 영감"],
+      "age": 60,
+      "role": "고리대금 빚쟁이. 알고 보면 「청상연가」 애독자",
+      "costume": { "default": "번들거리는 비단 도포, 주판" },
+      "prompt_en": "pudgy 60-year-old Korean moneylender, greedy squint, shiny silk robe, abacus in hand"
+    },
+    {
+      "id": "ma_seobang",
+      "names": ["마 서방"],
+      "age": 24,
+      "role": "마 영감의 외아들. 소심한 「청상연가」 애독자. 윤희의 혼처(13·18·22화), 사실은 먹순을 좋아한다",
+      "costume": { "default": "새 비단 도포가 어색한 차림", "ep22": "사모관대(혼례)" },
+      "prompt_en": "timid 24-year-old Korean man, round soft face like his father but anxious eyes, brand-new silk dopo robe that looks too stiff on him",
+      "prompt_variants": {"wedding": "timid 24-year-old Korean bridegroom, round soft face like his father but anxious eyes, dark blue samo-gwandae wedding costume: an official's round-collared robe with a rank badge and a black winged samo hat that keeps slipping crooked"}
+    },
+    {
+      "id": "an_naegwan",
+      "names": ["안 내관"],
+      "age": 45,
+      "role": "정조 대신 엽전을 던지는 내관. 늘 지쳐 있다",
+      "costume": { "default": "내관 복식 (고증확인), 변장 시 삿갓" },
+      "prompt_en": "tired middle-aged Joseon court eunuch, beardless, weary eyes, plain court attire",
+      "prompt_variants": {"disguise": "tired middle-aged beardless Korean man in plain undyed cotton commoner clothes, no hat, walking one step behind his master"}
+    },
+    {
+      "id": "lee_deokmu",
+      "names": ["이덕무"],
+      "age": 52,
+      "role": "실존 인물, 규장각 선배 검서관. 간서치",
+      "costume": { "default": "회색 도포, 코끝에 걸친 안경" },
+      "prompt_en": "52-year-old Korean scholar, gentle bookish face, round spectacles on the tip of his nose, grey robe"
+    },
+    {
+      "id": "seoyeon",
+      "names": ["서연"],
+      "age": 17,
+      "role": "「청상연가」를 읽고 사라진 참판댁 아씨(9~10화)",
+      "prompt_en": "frightened 17-year-old Korean noblewoman, tear-swollen eyes, fine silk clothes stained with salt"
+    },
+    {
+      "id": "guyongpal",
+      "names": ["구용팔"],
+      "role": "월하노인을 사칭하던 한량(4화 독살)",
+      "prompt_en": "boastful Korean dandy in flashy clothes standing on a tavern table"
+    },
+    {
+      "id": "cheon_seobang",
+      "names": ["천 서방"],
+      "role": "떡집 주인, 세책방 방화범(3화)",
+      "prompt_en": "overly helpful 40-year-old Korean rice-cake seller carrying two water buckets"
+    },
+    {
+      "id": "jongsagwan",
+      "names": ["종사관"],
+      "role": "형조 종사관, 허진의 실무자",
+      "prompt_en": "stern Korean police officer of the Ministry of Punishments, red-black uniform, sword"
+    },
+    {
+      "id": "extras",
+      "names": ["구경꾼", "독자들", "나졸", "하인", "의원", "혜민서 의원", "쇠돌", "박 과부", "방각소 장인", "미행꾼", "내금위 군관", "수문장", "하녀", "구경꾼 갑", "구경꾼 을", "구경꾼 병", "무당", "구경꾼들", "아낙", "세책방 주인", "장사꾼", "해적판 상인", "홍 참판", "월하회 아씨들", "아씨들", "하객들"],
+      "role": "단역 묶음. 필요하면 별도 id로 분리"
+    },
+    {
+      "id": "N:gangsu",
+      "names": ["(N, 강수)"],
+      "role": "강수의 내레이션. dialogue.speaker에만 쓴다"
+    }
+  ]
+}

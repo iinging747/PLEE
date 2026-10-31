@@ -1,0 +1,394 @@
+{
+  "_note": "장소 설정집. id는 스토리보드 scene.location에 쓴다. match는 대본 씬 제목에서 장소를 자동으로 찾을 때 쓰는 키워드(긴 것부터 비교). light는 그 장소의 기본 조명 동기(전기 조명 없음: 해, 달, 등잔, 초롱, 촛불, 횃불, 화롯불). axis는 반복 촬영 때 지킬 화면 방향 약속.",
+  "locations": [
+    {
+      "id": "dallae_maru",
+      "name": "달래책방 마루·마당",
+      "match": [
+        "달래책방 마루",
+        "달래책방 마당",
+        "달래책방 대문",
+        "달래책방 앞"
+      ],
+      "desc": "종로 뒷골목 ㄱ자 한옥 세책방. 마루 앞에 책 궤짝, 대문 옆 평상, 마당 한쪽 장독대",
+      "set_pieces": [
+        "세책 궤짝",
+        "대여 장부",
+        "평상",
+        "대문",
+        "처마의 초롱"
+      ],
+      "light": "낮은 흙마당 반사광. 해 질 녘은 주황 역광",
+      "axis": "대문은 항상 화면 왼쪽, 행랑채는 오른쪽",
+      "prompt_en": "small L-shaped hanok rental bookshop in a Jongno back alley, wooden maru porch stacked with book chests, a flat wooden bench by the gate, earthenware jars in a corner"
+    },
+    {
+      "id": "dallae_anchae",
+      "name": "달래책방 안채(달래의 방)",
+      "match": [
+        "달래책방 안채"
+      ],
+      "desc": "원고 더미, 서안, 벼루. 창호지 너머로 그림자가 비친다",
+      "light": "등잔 하나 (따뜻한 주황, 깊은 그림자)",
+      "prompt_en": "cramped inner room of a bookshop owner, piles of manuscripts, low writing desk, inkstone, paper-screen window"
+    },
+    {
+      "id": "dallae_haengrang",
+      "name": "달래책방 행랑채(정겸의 하숙방)",
+      "match": [
+        "행랑채"
+      ],
+      "desc": "작고 반듯하게 정리된 방. 접힌 이불, 『논어』, 수첩, 문간의 우산",
+      "light": "등잔. 새벽엔 문틈으로 푸른빛",
+      "prompt_en": "tiny tidy servants'-quarters room rented by a lodger, folded bedding, a few books, an oil-paper umbrella by the door"
+    },
+    {
+      "id": "dallae_storage",
+      "name": "달래책방 책 창고",
+      "match": [
+        "책 창고"
+      ],
+      "desc": "지붕이 새는 좁은 창고. 책 더미와 궤짝 사이로 한 사람 겨우 설 틈. 문틈은 손가락 하나 너비",
+      "light": "거의 암흑. 문틈으로 들어오는 줄무늬 횃불빛/초롱빛이 유일한 광원",
+      "axis": "문은 화면 오른쪽. 문틈 빛은 오른쪽에서 왼쪽으로 가로지른다",
+      "prompt_en": "narrow leaking book storeroom crammed with stacks of thread-bound books and wooden chests, a finger-wide gap in the door"
+    },
+    {
+      "id": "dallae_jangdok",
+      "name": "달래책방 장독대",
+      "match": [
+        "장독대"
+      ],
+      "desc": "된장 항아리 줄. 원고를 숨기는 곳",
+      "light": "달빛 또는 낮",
+      "prompt_en": "row of large brown earthenware soybean-paste jars on a stone platform in a hanok yard"
+    },
+    {
+      "id": "dallae_roof",
+      "name": "달래책방 지붕·맞은편 지붕",
+      "match": [
+        "지붕"
+      ],
+      "desc": "기와지붕. 흑립이 서는 맞은편 지붕은 달래 방 창이 내려다보이는 위치",
+      "light": "낮 하늘 또는 달빛 실루엣",
+      "prompt_en": "curved grey clay-tile hanok rooftops, a sea of roofs of old Seoul"
+    },
+    {
+      "id": "dallae_wall",
+      "name": "달래책방 담장 밖 골목",
+      "match": [
+        "달래책방 담장",
+        "달래책방 골목"
+      ],
+      "desc": "흙담 골목. 정겸이 등을 붙이고 서는 자리. 24화 〈월하정인〉 구도의 무대",
+      "light": "초롱, 달빛",
+      "axis": "담장은 화면 왼쪽 세로 벽. 24화 엔딩에서 〈월하정인〉과 같은 배치",
+      "prompt_en": "narrow alley beside a low earthen-and-stone wall topped with tiles"
+    },
+    {
+      "id": "jongno_tobacco",
+      "name": "종로 담배가게 앞(강수의 낭독 무대)",
+      "match": [
+        "담배가게",
+        "종로 사인회"
+      ],
+      "desc": "평상 하나가 무대. 반원으로 둘러앉은 구경꾼. 엽전이 날아든다",
+      "light": "한낮의 평평한 빛, 축제 같은 색",
+      "axis": "정면 무대 구도. 관객은 화면 아래쪽 전경",
+      "prompt_en": "street corner in front of a Joseon tobacco shop, a wooden platform used as a storyteller's stage, a semicircle of listeners"
+    },
+    {
+      "id": "jongno_alley",
+      "name": "종로 뒷골목",
+      "match": [
+        "종로 뒷골목",
+        "운종가 골목",
+        "운종가 뒷골목"
+      ],
+      "desc": "좁고 꺾인 골목. 매복·칼부림 장소",
+      "light": "달빛과 먼 순라 횃불. 로키",
+      "prompt_en": "dark narrow crooked back alley of Joseon Seoul between earthen walls"
+    },
+    {
+      "id": "jongno_market",
+      "name": "종로·운종가 장터",
+      "match": [
+        "장날",
+        "장터",
+        "운종가",
+        "세책방 앞"
+      ],
+      "desc": "좌판, 사람들, 해적판 좌판, 방(포스터)이 붙는 담벽",
+      "light": "낮",
+      "prompt_en": "busy Joseon market street with stalls, vendors and crowds, plastered walls where notices are posted"
+    },
+    {
+      "id": "munridang",
+      "name": "종로 세책방 문리당",
+      "match": [
+        "문리당"
+      ],
+      "desc": "불타는 세책방(3화). 물동이 행렬",
+      "light": "불길(강한 주황 점멸)",
+      "prompt_en": "a rental bookshop burning at night, villagers with water buckets"
+    },
+    {
+      "id": "jumak",
+      "name": "종로 주막",
+      "match": [
+        "주막"
+      ],
+      "desc": "술상, 평상, 뒤뜰. 구용팔이 쓰러지는 곳",
+      "light": "낮",
+      "prompt_en": "Joseon roadside tavern with low tables, wooden benches, earthenware bowls"
+    },
+    {
+      "id": "banggakso",
+      "name": "종로 방각소",
+      "match": [
+        "방각소"
+      ],
+      "desc": "목판을 새기는 각수들, 판목·먹 냄새",
+      "light": "등잔 여러 개",
+      "prompt_en": "commercial woodblock printing workshop, carvers bent over wooden printing blocks, stacks of paper"
+    },
+    {
+      "id": "heojin_sarang",
+      "name": "허진의 집 사랑채",
+      "match": [
+        "허진의 집 사랑채",
+        "사랑채"
+      ],
+      "desc": "차 도구가 놓인 찻상, 병풍, 벽장(「백골전」과 장부)",
+      "light": "촛불 하나. 허진 얼굴 반쪽만 밝게",
+      "axis": "허진은 항상 화면 오른쪽에 앉고, 아랫사람은 왼쪽 열 걸음 밖",
+      "prompt_en": "austere study-reception room of a high official, folding screen, low tea table with celadon tea set, a built-in cabinet"
+    },
+    {
+      "id": "heojin_seojae",
+      "name": "허진의 집 서재",
+      "match": [
+        "서재"
+      ],
+      "desc": "벽장 맨 안쪽 두 번째 칸, 화로",
+      "light": "화롯불",
+      "prompt_en": "private study with a deep built-in cabinet and a brazier of glowing coals"
+    },
+    {
+      "id": "heojin_daecheong",
+      "name": "허진의 집 대청",
+      "match": [
+        "대청"
+      ],
+      "desc": "분합문이 달린 넓은 대청. 아버지가 문을 닫는 장면",
+      "light": "낮의 차가운 빛",
+      "prompt_en": "wide wooden main hall of a noble mansion with tall latticed folding doors"
+    },
+    {
+      "id": "heojin_byeolchae",
+      "name": "허진의 집 별채",
+      "match": [
+        "별채"
+      ],
+      "desc": "감옥치고 지나치게 좋은 방. 비단 금침, 병풍, 자물쇠",
+      "light": "창살 너머 새벽빛 / 해 질 녘",
+      "prompt_en": "detached guest pavilion used as a gilded prison, silk bedding, painted screen, barred window, padlocked door"
+    },
+    {
+      "id": "heojin_yul_room",
+      "name": "허진의 집 율의 방",
+      "match": [
+        "율의 방"
+      ],
+      "desc": "뒤창 창살, 서안, 벼루",
+      "light": "등잔",
+      "prompt_en": "young nobleman's bedroom with a latticed back window and a writing desk"
+    },
+    {
+      "id": "heojin_huwon",
+      "name": "허진의 집 후원",
+      "match": [
+        "후원"
+      ],
+      "desc": "연못, 정자, 뒷담 아래 쪽문. 16~20화 클라이맥스",
+      "light": "달빛 → 담 너머 횃불",
+      "axis": "뒷담과 쪽문은 화면 왼쪽 뒤, 정자는 오른쪽",
+      "prompt_en": "rear garden of a noble mansion at night, lotus pond, small pavilion, a low gate in the back wall"
+    },
+    {
+      "id": "heojin_gate",
+      "name": "허진의 집 대문·담장 밖",
+      "match": [
+        "허진의 집 대문",
+        "허진의 집 담장 밖",
+        "허진의 집 마당"
+      ],
+      "desc": "높은 담. 순라 차림 내금위가 등을 붙이고 서는 곳",
+      "light": "밤, 순라 초롱",
+      "prompt_en": "high tiled wall and gate of a noble mansion at night"
+    },
+    {
+      "id": "jeonggyeom_home",
+      "name": "정겸의 방(하숙 전 본가)",
+      "match": [
+        "정겸의 방"
+      ],
+      "desc": "서얼 검서관의 검소한 방. 반듯하게 쌓인 책, 『논어』, 등잔",
+      "light": "등잔 하나",
+      "prompt_en": "spartan room of a low-ranking scholar, neatly stacked classics, a single oil lamp"
+    },
+    {
+      "id": "jonhyeongak",
+      "name": "창덕궁 존현각",
+      "match": [
+        "존현각"
+      ],
+      "desc": "정조의 밤 서재. 상소 더미 사이 「청상연가」",
+      "light": "촛불 여러 자루, 따뜻하고 깊다",
+      "prompt_en": "royal study hall in Changdeok Palace at night, many candles, stacks of memorials"
+    },
+    {
+      "id": "gyujanggak",
+      "name": "규장각 검서청·서고",
+      "match": [
+        "규장각",
+        "검서청",
+        "서고"
+      ],
+      "desc": "책상마다 베껴 쓰는 검서관들. 서고의 높은 서가",
+      "light": "창호지로 들어오는 부드러운 낮빛",
+      "prompt_en": "royal library office, scholar-officials copying books at low desks, tall shelves"
+    },
+    {
+      "id": "geumhomun",
+      "name": "창덕궁 금호문 앞",
+      "match": [
+        "금호문"
+      ],
+      "desc": "문관들이 드나드는 서쪽 문",
+      "light": "낮",
+      "prompt_en": "west gate of Changdeok Palace with guards"
+    },
+    {
+      "id": "sesgeomjeong",
+      "name": "세검정 정자",
+      "match": [
+        "세검정"
+      ],
+      "desc": "계곡 위 정자. 혼담 자리(9화)",
+      "light": "맑은 낮",
+      "prompt_en": "small pavilion above a rocky mountain stream"
+    },
+    {
+      "id": "yunhui_house",
+      "name": "윤희의 집 마당·사랑채·쪽문",
+      "match": [
+        "윤희의 집 마당",
+        "윤희의 집 사랑채",
+        "윤희의 집 쪽문",
+        "초례청"
+      ],
+      "desc": "홍 참판 댁 바깥채. 사랑채 앞마당(혼례 초례청), 쪽문 밖 골목",
+      "light": "낮 / 잔치 등롱 / 밤 사랑채 불빛",
+      "axis": "사랑채(대청)는 화면 위쪽, 마당과 하객은 아래. 쪽문은 화면 왼쪽",
+      "prompt_en": "spacious front courtyard of a Joseon vice-minister's mansion with a raised main hall, tiled roofs, a side gate opening onto a narrow alley"
+    },
+    {
+      "id": "yunhui_byeoldang",
+      "name": "윤희의 집 별당",
+      "match": [
+        "윤희의 집",
+        "참판댁 별당"
+      ],
+      "desc": "양반가 별당. 월하회 아지트, 23화 은신처",
+      "light": "등잔 / 눈 내린 밤",
+      "prompt_en": "elegant women's pavilion of a noble house, books and embroidery, snow outside in winter"
+    },
+    {
+      "id": "mapo",
+      "name": "마포나루·새우젓 창고",
+      "match": [
+        "마포",
+        "새우젓",
+        "창고 잿더미"
+      ],
+      "desc": "새우젓 독이 늘어선 창고, 강가 모래밭, 나룻배",
+      "light": "밤 강물 반사, 불타는 창고, 새벽 비",
+      "prompt_en": "Mapo riverside on the Han River, warehouses of salted-shrimp jars, sandy bank, ferry boats"
+    },
+    {
+      "id": "unjong_rain",
+      "name": "비 오는 골목",
+      "match": [
+        "운종가 골목 (새벽, 비)"
+      ],
+      "desc": "우산 하나 아래 두 사람(10화)",
+      "light": "푸른 새벽, 젖은 길 반사",
+      "axis": "부감 하이앵글로 우산 하나가 골목을 따라 작아진다",
+      "prompt_en": "narrow street at dawn in heavy rain, wet stones reflecting blue light"
+    },
+    {
+      "id": "seosomun",
+      "name": "서소문 밖 죄인 무덤 언덕",
+      "match": [
+        "서소문"
+      ],
+      "desc": "숯 글씨 나무 판자가 꽂힌 빈 무덤",
+      "light": "밤 / 새벽 안개",
+      "prompt_en": "hillside of criminals' graves outside Seosomun gate, a wooden marker with charcoal writing"
+    },
+    {
+      "id": "hyeminseo",
+      "name": "혜민서",
+      "match": [
+        "혜민서"
+      ],
+      "desc": "의원 방, 뒤뜰 우물가",
+      "light": "새벽",
+      "prompt_en": "Joseon public clinic, medicine room and a back-yard well"
+    },
+    {
+      "id": "namsan_seodang",
+      "name": "남산골 옛 서당 연못",
+      "match": [
+        "남산골"
+      ],
+      "desc": "버려진 서당, 반쯤 마른 연못, 진흙에 박힌 연잎",
+      "light": "초롱, 밤",
+      "prompt_en": "abandoned village schoolhouse below Namsan, half-dried lotus pond choked with mud and dead leaves"
+    },
+    {
+      "id": "noryang_bridge",
+      "name": "노량진 배다리·나루",
+      "match": [
+        "배다리",
+        "노량 나루",
+        "나룻배"
+      ],
+      "desc": "얼어붙은 한강 위 배를 이어 놓은 배다리. 행차 깃발. 24화 봄에는 나룻배",
+      "light": "겨울 아침의 차고 맑은 빛 / 봄 아침",
+      "prompt_en": "royal pontoon bridge of boats across the frozen Han River at Noryang, procession banners"
+    },
+    {
+      "id": "yongyang",
+      "name": "용양봉저정",
+      "match": [
+        "용양봉저정"
+      ],
+      "desc": "한강이 내려다보이는 언덕 위 정자. 친국을 위해 장막을 친다. 장막 한쪽이 걷혀 언덕 아래 백성이 올려다본다",
+      "light": "겨울 낮",
+      "axis": "왕은 정자 마루(화면 위쪽 중앙), 달래는 마당 한가운데, 백성은 화면 아래 전경",
+      "prompt_en": "Yongyangbongjeojeong pavilion on a hill above the Han River, cloth curtains set up for a royal interrogation, crowds below"
+    },
+    {
+      "id": "flashback_misc",
+      "name": "회상·기타",
+      "match": [
+        "회상",
+        "몽타주",
+        "쿠키"
+      ],
+      "desc": "회상과 몽타주 묶음"
+    }
+  ]
+}

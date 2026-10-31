@@ -1,0 +1,89 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "wolha/storyboard.schema.json",
+  "title": "월하노인을 잡아라 — 숏폼 회차 스토리보드",
+  "description": "한 회차(3분) 분량의 스토리보드. 씬(scene) 안에 샷(shot)이 들어간다. 필드 뜻과 작성 규칙은 docs/storyboard_guide.md 참고.",
+  "type": "object",
+  "required": ["series", "episode", "title", "runtime_sec", "scenes"],
+  "additionalProperties": false,
+  "properties": {
+    "series": { "type": "string", "const": "월하노인을 잡아라 (숏폼 24부작)" },
+    "episode": { "type": "integer", "minimum": 1, "maximum": 24 },
+    "title": { "type": "string", "minLength": 1 },
+    "hook": { "type": "string", "description": "대본의 '훅:' 줄 그대로" },
+    "runtime_sec": { "type": "integer", "minimum": 150, "maximum": 200, "description": "목표 러닝타임(초). 기본 180" },
+    "aspect": { "type": "string", "enum": ["16:9", "9:16"], "description": "기본 16:9. 세로 숏폼판은 9:16" },
+    "status": { "type": "string", "enum": ["skeleton", "draft", "review", "final"] },
+    "notes": { "type": "string" },
+    "scenes": {
+      "type": "array",
+      "minItems": 1,
+      "items": { "$ref": "#/$defs/scene" }
+    }
+  },
+  "$defs": {
+    "scene": {
+      "type": "object",
+      "required": ["id", "heading", "location", "time", "tc_in", "tc_out", "shots"],
+      "additionalProperties": false,
+      "properties": {
+        "id": { "type": "string", "pattern": "^S#[0-9]{1,2}$" },
+        "heading": { "type": "string", "description": "대본 씬 제목 원문 (타임코드 제외)" },
+        "location": { "type": "string", "description": "bible/locations.json 의 id" },
+        "time": { "type": "string", "enum": ["DAY", "NIGHT", "DAWN", "DUSK", "MORNING", "FLASHBACK"] },
+        "tc_in": { "type": "string", "pattern": "^[0-9]{2}:[0-9]{2}$" },
+        "tc_out": { "type": "string", "pattern": "^[0-9]{2}:[0-9]{2}$" },
+        "characters": { "type": "array", "items": { "type": "string" }, "description": "bible/characters.json 의 id" },
+        "looks": { "type": "array", "description": "평소와 다른 차림. variant 는 bible 의 prompt_variants 키(예: jeonggyeom→palace). 샷 값이 씬 값보다 우선", "items": { "type": "object", "required": ["character", "variant"], "additionalProperties": false, "properties": { "character": { "type": "string" }, "variant": { "type": "string" } } } },
+        "mood": { "type": "string", "enum": ["COMEDY", "ROMANCE", "THRILLER", "MYSTERY", "GRIEF", "ACTION", "WARM", "EPIC"] },
+        "summary": { "type": "string" },
+        "source_text": { "type": "string", "description": "skeleton 단계에서만 쓰는 대본 원문. final 에서는 지워도 된다" },
+        "shots": { "type": "array", "items": { "$ref": "#/$defs/shot" } }
+      }
+    },
+    "shot": {
+      "type": "object",
+      "required": ["id", "size", "angle", "move", "action", "duration_sec"],
+      "additionalProperties": false,
+      "properties": {
+        "id": { "type": "string", "pattern": "^S[0-9]{2}-[0-9]{2}[A-Z]?$", "description": "S씬번호2자리-샷번호2자리. 예: S03-04, 추가 컷은 S03-04A" },
+        "size": { "type": "string", "enum": ["ELS", "LS", "FS", "MLS", "MS", "MCU", "CU", "ECU", "INSERT", "2S", "GROUP"] },
+        "angle": { "type": "string", "enum": ["EYE", "HIGH", "LOW", "BIRD", "WORM", "DUTCH", "OTS", "POV", "TOP", "PROFILE"] },
+        "move": { "type": "string", "enum": ["FIX", "PAN_L", "PAN_R", "TILT_U", "TILT_D", "DOLLY_IN", "DOLLY_OUT", "TRACK_L", "TRACK_R", "TRACK_IN", "CRANE_UP", "CRANE_DOWN", "HANDHELD", "ZOOM_IN", "ZOOM_OUT", "CRASH_ZOOM", "RACK_FOCUS", "STEADICAM", "ORBIT", "SLOWMO"] },
+        "lens_mm": { "type": "integer", "minimum": 12, "maximum": 200 },
+        "characters": { "type": "array", "items": { "type": "string" } },
+        "looks": { "type": "array", "description": "평소와 다른 차림. variant 는 bible 의 prompt_variants 키(예: jeonggyeom→palace). 샷 값이 씬 값보다 우선", "items": { "type": "object", "required": ["character", "variant"], "additionalProperties": false, "properties": { "character": { "type": "string" }, "variant": { "type": "string" } } } },
+        "frame": { "type": "string", "description": "구도: 누가 화면 어디에, 전경/후경, 시선 방향" },
+        "action": { "type": "string", "description": "화면에서 일어나는 일 (한국어, 현재형)" },
+        "dialogue": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": ["speaker", "line"],
+            "additionalProperties": false,
+            "properties": {
+              "speaker": { "type": "string", "description": "캐릭터 id. 내레이션은 'N:gangsu'" },
+              "line": { "type": "string", "description": "대본 원문 그대로" },
+              "mode": { "type": "string", "enum": ["ON", "OS", "VO", "N", "WHISPER"] }
+            }
+          }
+        },
+        "sound": { "type": "string", "description": "효과음(E), 음악, 앰비언스" },
+        "insert_text": { "type": "string", "description": "Insert 컷에 보이는 글씨 원문" },
+        "transition": { "type": "string", "enum": ["CUT", "MATCH_CUT", "SMASH_CUT", "J_CUT", "L_CUT", "DISSOLVE", "FADE_IN", "FADE_OUT", "WIPE", "FREEZE", "WHIP_PAN"] },
+        "duration_sec": { "type": "number", "minimum": 0.5, "maximum": 30 },
+        "motifs": {
+          "type": "array",
+          "items": { "type": "string", "enum": ["EAR_RED", "EAR_NOT_RED", "UMBRELLA", "COIN_RAIN", "DOOR_GAP", "WALL", "ROOFTOP_HEUKRIP", "SCAR_LEFT_HAND", "NARRATOR", "INSERT_TEXT", "MOON", "BRUSH", "TEA_OVERFLOW", "WHISTLE", "LATE_FEE", "CONTRACT"] }
+        },
+        "continuity": { "type": "string", "description": "180도 축, 시선, 소품 위치, 의상 상태(붕대, 피 등)" },
+        "image_prompt": { "type": "string", "description": "영어. 이미지 생성용. 스타일 접두어는 tools/gen_images.py 가 붙이므로 여기에는 장면 내용만" },
+        "image": { "type": ["string", "null"], "description": "assets/frames/epNN/<shot id>.png 상대경로" },
+        "location": { "type": "string", "description": "교차편집 씬에서 이 샷만 다른 장소일 때 bible/locations.json 의 id. 없으면 씬의 location" },
+        "image_from": { "type": "string", "pattern": "^ep[0-9]{2}/S[0-9]{2}-[0-9]{2}[A-Z]?$", "description": "새로 그리지 않고 다른 샷의 그림을 재사용(예: ep01/S06-11). codex_jobs --attach 가 복사한다" },
+        "image_filter": { "type": "string", "enum": ["none", "desaturate"], "description": "image_from 그림에 줄 효과. desaturate 는 회상용 탈색" },
+        "notes": { "type": "string" }
+      }
+    }
+  }
+}

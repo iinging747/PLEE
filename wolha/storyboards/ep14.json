@@ -1,0 +1,1090 @@
+{
+  "series": "월하노인을 잡아라 (숏폼 24부작)",
+  "episode": 14,
+  "title": "빈 무덤",
+  "hook": "이 년 전 처형됐다는 죄인의 무덤이 비어 있다.",
+  "runtime_sec": 180,
+  "aspect": "16:9",
+  "status": "review",
+  "notes": "샷 수 52, 평균 3.5초. 첫 컷은 어둠 속 서가 부감(S01-01)으로 질문을 던지고, 빈 관(S02-07)이 회차 훅을 받는다. 강수 왼팔 붕대, 율 왼쪽 옆구리 피는 12화에서 이어진다. 흑립이 대본에 나오지 않는 회차라 지붕 위 흑립(ROOFTOP_HEUKRIP)은 넣지 않았다. 가이드의 '회차마다'와 AGENTS.md의 '인물 추가 금지'가 부딪히니 연출 판단 필요. S#3은 낮 장면이 '그날 밤'으로 넘어간다(S03-09 DISSOLVE, 밤 광원은 처마 초롱과 등잔). 앞 12초는 강수의 '지난 대목'(S#0, 시그니처). 그만큼 각 씬을 span 비율로 줄였다.",
+  "scenes": [
+    {
+      "id": "S#0",
+      "heading": "지난 대목 — 종로 담배가게 앞 평상 (낮)",
+      "location": "jongno_tobacco",
+      "time": "DAY",
+      "tc_in": "00:00",
+      "tc_out": "00:12",
+      "characters": [
+        "gangsu"
+      ],
+      "mood": "COMEDY",
+      "summary": "강수의 '지난 대목'(시그니처). 13화를 12초로 요약하고 부채를 접으며 오늘 대목을 연다.",
+      "source_text": "평상 위의 강수가 부채를 촥 펴고 카메라를 본다.\nFlash. (13화) 온 종로에 소문이 돈다. 참판댁 아씨의 혼처가 정해졌다. 신랑은 마 영감 댁 아들.\n(N, 강수) 지난 대목에 이르기를, 아씨가 이 몸 대신 책장을 넘겨 주었고, 책에 없는 줄이 하나 생겼소. 그리고 아씨의 혼처가 정해졌지. 마 영감 댁 아들.\n**강수** (부채를 탁 접으며) 자, 오늘 대목이오.",
+      "shots": [
+        {
+          "id": "S00-01",
+          "size": "MCU",
+          "angle": "LOW",
+          "move": "FIX",
+          "lens_mm": 50,
+          "characters": [
+            "gangsu"
+          ],
+          "frame": "평상 위 강수 정면. 부채를 촥 펴며 카메라를 본다(제4의 벽). 뒤로 구경꾼들이 흐리다.",
+          "action": "평상 위의 강수가 부채를 촥 펴고 카메라를 본다.",
+          "sound": "(E) 부채 펴는 소리 촥",
+          "motifs": [
+            "NARRATOR"
+          ],
+          "transition": "CUT",
+          "duration_sec": 2,
+          "continuity": "지난 대목은 이야기 밖 액자다. 매회 같은 구도, 1화 강수 차림 그대로(부상·붕대 없음), 평상은 화면 가운데",
+          "image_prompt": "low angle medium close-up, the storyteller on his wooden platform snapping open a folding fan and looking straight at the viewer, blurred crowd behind, warm daylight",
+          "image_from": "ep02/S00-01",
+          "image_filter": "none"
+        },
+        {
+          "id": "S00-02",
+          "size": "CU",
+          "angle": "EYE",
+          "move": "DOLLY_IN",
+          "lens_mm": 85,
+          "characters": [
+            "gangsu"
+          ],
+          "frame": "Flash. 13화 마지막 컷(S04-09)을 탈색해 다시 보여 준다. 등잔 아래 무릎에 책을 편 강수의 웃음이 그대로 굳는다. 천천히 다가가 정지.",
+          "action": "온 종로에 소문이 돈다. 참판댁 아씨의 혼처가 정해졌다. 신랑은 마 영감 댁 아들.",
+          "dialogue": [
+            {
+              "speaker": "N:gangsu",
+              "line": "지난 대목에 이르기를, 아씨가 이 몸 대신 책장을 넘겨 주었고, 책에 없는 줄이 하나 생겼소. 그리고 아씨의 혼처가 정해졌지. 마 영감 댁 아들.",
+              "mode": "N"
+            }
+          ],
+          "motifs": [
+            "NARRATOR"
+          ],
+          "transition": "CUT",
+          "duration_sec": 7,
+          "image_from": "ep13/S04-09",
+          "image_filter": "desaturate",
+          "image_prompt": "desaturated memory. slow push-in close-up, the storyteller's smile freezing on his face in the lamplight, an open book on his knees"
+        },
+        {
+          "id": "S00-03",
+          "size": "MCU",
+          "angle": "LOW",
+          "move": "FIX",
+          "lens_mm": 50,
+          "characters": [
+            "gangsu"
+          ],
+          "frame": "S00-01과 같은 구도. 부채를 탁 접고 고개를 까딱한다.",
+          "action": "강수가 부채를 탁 접으며 오늘 대목을 연다.",
+          "dialogue": [
+            {
+              "speaker": "gangsu",
+              "line": "자, 오늘 대목이오.",
+              "mode": "ON"
+            }
+          ],
+          "sound": "(E) 부채 접는 소리 탁",
+          "motifs": [
+            "NARRATOR"
+          ],
+          "transition": "SMASH_CUT",
+          "duration_sec": 3,
+          "image_prompt": "low angle medium close-up, the storyteller snapping his folding fan shut with a sly grin, looking at the viewer, warm daylight",
+          "image_from": "ep02/S00-03",
+          "image_filter": "none"
+        }
+      ]
+    },
+    {
+      "id": "S#1",
+      "heading": "규장각 서고 (밤)",
+      "location": "gyujanggak",
+      "time": "NIGHT",
+      "tc_in": "00:12",
+      "tc_out": "00:44",
+      "characters": [
+        "jeonggyeom"
+      ],
+      "looks": [
+        {
+          "character": "jeonggyeom",
+          "variant": "palace"
+        }
+      ],
+      "mood": "MYSTERY",
+      "summary": "규장각 서고에서 정겸이 「심리록」을 뒤지지만 경술년 종로 전기수 사건은 없다. 형조 계목에는 잡힌 지 이틀 만에 처형, 진휼 기록에는 을사년 진휼청 당상 허진. 정겸이 책을 덮는다.",
+      "source_text": "높은 서가 사이. 정겸이 촛불을 옆에 두고 「심리록」을 넘긴다. 사형 사건은 왕이 직접 다시 살핀 기록이다. 경술년. 종로 전기수 사건은 없다.\n형조 계목을 펼친다.\nInsert. '종로 전기수 살해 죄인, 잡힌 지 이틀 만에 처형.'\n**정겸** (낮게) 사형은 세 번을 심리하는 법인데… 이틀.\n진휼 기록을 펼친다. 손가락이 이름들을 따라 내려가다 멈춘다.\nInsert. '을사년 진휼청 당상, 허진.'\n정겸이 책을 덮는다. 촛불이 흔들린다.",
+      "shots": [
+        {
+          "id": "S01-01",
+          "size": "ELS",
+          "angle": "HIGH",
+          "move": "CRANE_DOWN",
+          "lens_mm": 18,
+          "characters": [
+            "jeonggyeom"
+          ],
+          "frame": "어둠 속 서가 꼭대기에서 내려간다. 바닥 가까이 촛불 하나와 그 옆 정겸이 점처럼 작다.",
+          "action": "높은 서가 사이. 정겸이 촛불을 옆에 두고 책을 넘긴다.",
+          "sound": "정적, 종이 넘기는 소리 하나",
+          "transition": "CUT",
+          "duration_sec": 3,
+          "continuity": "축: 높은 서가가 화면 좌우를 막는다. 정겸은 화면 왼쪽 서안 앞, 촛불은 오른쪽. 서고 문은 화면 밖 왼쪽 뒤. 글씨 인서트는 모두 TOP, 책 머리가 화면 위",
+          "image_prompt": "high angle crane down between towering dark bookshelves of a royal library at night, a single candle and a small figure of a scholar reading at a low desk far below"
+        },
+        {
+          "id": "S01-02",
+          "size": "INSERT",
+          "angle": "TOP",
+          "move": "FIX",
+          "lens_mm": 50,
+          "characters": [
+            "jeonggyeom"
+          ],
+          "frame": "탑샷. 「심리록」 표제가 보이는 책을 펼치고 손가락이 줄을 따라 내려간다. 장을 넘긴다.",
+          "action": "정겸이 「심리록」을 넘긴다. 사형 사건은 왕이 직접 다시 살핀 기록이다.",
+          "insert_text": "심리록",
+          "motifs": [
+            "INSERT_TEXT"
+          ],
+          "transition": "CUT",
+          "duration_sec": 3,
+          "notes": "TASKS 필수 컷(「심리록」 INSERT)",
+          "image_prompt": "top-down insert, a slender finger running down columns of classical Chinese records in a thick bound volume by candlelight, turning a page"
+        },
+        {
+          "id": "S01-03",
+          "size": "MCU",
+          "angle": "EYE",
+          "move": "FIX",
+          "lens_mm": 85,
+          "characters": [
+            "jeonggyeom"
+          ],
+          "frame": "정겸 정면. 촛불이 화면 오른쪽에서 얼굴을 비춘다. 경술년 마지막 장까지 넘기고 손을 멈춘다.",
+          "action": "경술년. 종로 전기수 사건은 없다.",
+          "transition": "CUT",
+          "duration_sec": 3,
+          "image_prompt": "medium close-up of the young scholar reaching the last page of a volume and pausing, puzzled, candlelight from the right"
+        },
+        {
+          "id": "S01-04",
+          "size": "INSERT",
+          "angle": "TOP",
+          "move": "FIX",
+          "lens_mm": 50,
+          "characters": [
+            "jeonggyeom"
+          ],
+          "frame": "탑샷. 형조 계목을 펼친다. 손가락이 한 줄에서 멈춘다.",
+          "action": "정겸이 형조 계목을 펼친다.",
+          "insert_text": "종로 전기수 살해 죄인, 잡힌 지 이틀 만에 처형.",
+          "motifs": [
+            "INSERT_TEXT"
+          ],
+          "transition": "CUT",
+          "duration_sec": 4,
+          "notes": "TASKS 필수 컷(계목 INSERT)",
+          "image_prompt": "top-down insert, an official report of the Ministry of Punishments unfolded on a desk, a fingertip stopping on one line, candlelight"
+        },
+        {
+          "id": "S01-05",
+          "size": "CU",
+          "angle": "EYE",
+          "move": "FIX",
+          "lens_mm": 85,
+          "characters": [
+            "jeonggyeom"
+          ],
+          "frame": "정겸 정면, S01-03보다 한 단계 가깝게. 낮게 혼잣말한다.",
+          "action": "정겸이 낮게 중얼거린다.",
+          "dialogue": [
+            {
+              "speaker": "jeonggyeom",
+              "line": "사형은 세 번을 심리하는 법인데… 이틀.",
+              "mode": "WHISPER"
+            }
+          ],
+          "transition": "CUT",
+          "duration_sec": 4,
+          "image_prompt": "close-up of the scholar murmuring to himself, eyes narrowing, candlelight"
+        },
+        {
+          "id": "S01-06",
+          "size": "INSERT",
+          "angle": "TOP",
+          "move": "FIX",
+          "lens_mm": 50,
+          "characters": [
+            "jeonggyeom"
+          ],
+          "frame": "탑샷. 진휼 기록을 펼친다. 손가락이 이름들을 따라 내려간다.",
+          "action": "정겸이 진휼 기록을 펼친다. 손가락이 이름들을 따라 내려간다.",
+          "transition": "CUT",
+          "duration_sec": 3,
+          "image_prompt": "top-down insert, a finger tracing down a list of names in a famine relief ledger, candlelight"
+        },
+        {
+          "id": "S01-07",
+          "size": "INSERT",
+          "angle": "TOP",
+          "move": "RACK_FOCUS",
+          "lens_mm": 100,
+          "characters": [
+            "jeonggyeom"
+          ],
+          "frame": "손가락이 멈춘 자리로 초점이 맞는다.",
+          "action": "손가락이 한 이름에서 멈춘다.",
+          "insert_text": "을사년 진휼청 당상, 허진.",
+          "motifs": [
+            "INSERT_TEXT"
+          ],
+          "transition": "CUT",
+          "duration_sec": 4,
+          "image_prompt": "insert, rack focus to the spot where a fingertip has stopped on a single name in the ledger, candlelight"
+        },
+        {
+          "id": "S01-08",
+          "size": "ECU",
+          "angle": "EYE",
+          "move": "FIX",
+          "lens_mm": 100,
+          "characters": [
+            "jeonggyeom"
+          ],
+          "frame": "정겸의 두 눈. 촛불이 눈동자에 비친다.",
+          "action": "정겸이 그 이름을 본다.",
+          "transition": "CUT",
+          "duration_sec": 2,
+          "image_prompt": "extreme close-up of the scholar's eyes, a candle flame reflected in them"
+        },
+        {
+          "id": "S01-09",
+          "size": "INSERT",
+          "angle": "EYE",
+          "move": "FIX",
+          "lens_mm": 50,
+          "characters": [
+            "jeonggyeom"
+          ],
+          "frame": "책이 덮인다. 그 바람에 촛불이 옆으로 눕는다.",
+          "action": "정겸이 책을 덮는다. 촛불이 흔들린다.",
+          "sound": "(E) 탁",
+          "transition": "CUT",
+          "duration_sec": 2,
+          "image_prompt": "insert, a ledger snapping shut on a desk, the candle flame beside it bending sideways"
+        },
+        {
+          "id": "S01-10",
+          "size": "LS",
+          "angle": "EYE",
+          "move": "DOLLY_OUT",
+          "lens_mm": 24,
+          "characters": [
+            "jeonggyeom"
+          ],
+          "frame": "흔들리는 촛불 그림자가 서가를 타고 올라간다. 정겸이 그 가운데 꼼짝 않고 앉아 있다.",
+          "action": "정겸이 덮은 책 위에 손을 얹은 채 움직이지 않는다.",
+          "transition": "DISSOLVE",
+          "duration_sec": 4,
+          "image_prompt": "wide shot slowly pulling back, wavering candle shadows climbing the tall bookshelves around a motionless scholar sitting with his hand on a closed book"
+        }
+      ]
+    },
+    {
+      "id": "S#2",
+      "heading": "서소문 밖 (밤)",
+      "location": "seosomun",
+      "time": "NIGHT",
+      "tc_in": "00:44",
+      "tc_out": "01:26",
+      "characters": [
+        "jeonggyeom",
+        "gangsu"
+      ],
+      "mood": "MYSTERY",
+      "summary": "서소문 밖 죄인 무덤 언덕. 정겸과 강수가 무덤을 파고 언 관 뚜껑을 연다. 관은 비었다. 강수가 달래에게 해가 되면 무덤을 하나 더 파겠다고 경고하고, 정겸은 대답 대신 무덤을 도로 덮는다.",
+      "source_text": "죄인들의 무덤이 모인 언덕. 바람. 정겸과 강수가 한 무덤을 파고 있다. 무덤 앞에 숯으로 쓴 나무 판자가 꽂혀 있다. 강수는 붕대 감은 팔 때문에 한 손으로 삽질을 한다.\n삽 끝에 언 널빤지가 닿는다. 두 사람이 눈을 마주친다. 강수가 뚜껑을 연다.\n비었다. 뼈 하나, 천 조각 하나 없다.\n**강수** 죽은 놈이 무덤에 없으면, 살아 있다는 거요.\n강수가 삽을 짚고 정겸을 본다. 항상 능청스럽던 얼굴이 아니다.\n**강수** 나리가 누구든, 달래한테 해가 되는 일이면 내가 여기에 무덤을 하나 더 팔 거요.\n정겸은 대답하지 않는다. 대신 삽을 다시 들어 무덤을 도로 덮기 시작한다.",
+      "shots": [
+        {
+          "id": "S02-01",
+          "size": "ELS",
+          "angle": "HIGH",
+          "move": "FIX",
+          "lens_mm": 18,
+          "characters": [
+            "jeonggyeom",
+            "gangsu"
+          ],
+          "frame": "부감. 나무 판자들이 비뚤게 꽂힌 무덤 언덕. 마른 풀이 바람에 눕는다. 한가운데 초롱 하나와 삽질하는 두 사람.",
+          "action": "죄인들의 무덤이 모인 언덕. 바람. 정겸과 강수가 한 무덤을 파고 있다.",
+          "sound": "(E) 바람, 삽이 언 흙을 찍는 소리",
+          "transition": "CUT",
+          "duration_sec": 3,
+          "continuity": "축: 무덤은 화면 가운데, 강수 왼쪽, 정겸 오른쪽. 서소문 성벽은 화면 오른쪽 뒤. 땅에 내려놓은 초롱 하나가 광원. 강수 왼팔 붕대(12~21화)",
+          "image_prompt": "high angle extreme wide shot of a bleak hillside of criminals' graves at night outside the city wall, crooked wooden markers, dry grass bending in the wind, two small figures digging beside a single lantern on the ground"
+        },
+        {
+          "id": "S02-02",
+          "size": "INSERT",
+          "angle": "EYE",
+          "move": "FIX",
+          "lens_mm": 50,
+          "frame": "무덤 앞에 꽂힌 나무 판자. 숯 글씨가 바람에 반쯤 지워졌다. 초롱빛이 아래에서 비춘다.",
+          "action": "무덤 앞에 숯으로 쓴 나무 판자가 꽂혀 있다.",
+          "transition": "CUT",
+          "duration_sec": 2,
+          "notes": "판자 글씨는 대본에 없으니 읽히지 않게 흐린다",
+          "image_prompt": "insert, a weathered wooden grave marker with smudged illegible charcoal marks stuck in frozen earth, lit from below by a lantern"
+        },
+        {
+          "id": "S02-03",
+          "size": "2S",
+          "angle": "PROFILE",
+          "move": "FIX",
+          "lens_mm": 35,
+          "characters": [
+            "gangsu",
+            "jeonggyeom"
+          ],
+          "frame": "측면 투숏. 왼쪽 강수는 붕대 감은 왼팔을 몸에 붙이고 오른손으로만 삽질한다. 오른쪽 정겸은 두 손으로 반듯하게 판다.",
+          "action": "강수는 붕대 감은 팔 때문에 한 손으로 삽질을 한다.",
+          "sound": "두 사람의 거친 숨, 흙 던지는 소리",
+          "transition": "CUT",
+          "duration_sec": 3,
+          "image_prompt": "profile two-shot of two men digging a grave at night by lantern light, the one on the left shoveling one-handed with his bandaged left arm held close, the tall one on the right digging neatly with both hands"
+        },
+        {
+          "id": "S02-04",
+          "size": "INSERT",
+          "angle": "HIGH",
+          "move": "FIX",
+          "lens_mm": 50,
+          "frame": "구덩이 속. 삽 끝이 언 널빤지에 닿는다.",
+          "action": "삽 끝에 언 널빤지가 닿는다.",
+          "sound": "(E) 퉁. 나무 울리는 소리",
+          "transition": "CUT",
+          "duration_sec": 2,
+          "image_prompt": "high angle insert inside a grave pit, a shovel blade striking a frozen wooden board"
+        },
+        {
+          "id": "S02-05",
+          "size": "2S",
+          "angle": "HIGH",
+          "move": "FIX",
+          "lens_mm": 35,
+          "characters": [
+            "gangsu",
+            "jeonggyeom"
+          ],
+          "frame": "구덩이 위 부감. 두 사람이 동시에 고개를 들어 서로를 본다.",
+          "action": "두 사람이 눈을 마주친다.",
+          "transition": "CUT",
+          "duration_sec": 3,
+          "image_prompt": "high angle looking down into the grave pit, the two men lifting their heads at the same moment to look at each other, lantern light"
+        },
+        {
+          "id": "S02-06",
+          "size": "INSERT",
+          "angle": "TOP",
+          "move": "FIX",
+          "lens_mm": 35,
+          "characters": [
+            "gangsu"
+          ],
+          "frame": "탑샷. 강수의 오른손이 관 뚜껑 틈에 손가락을 넣어 들어 올린다.",
+          "action": "강수가 뚜껑을 연다.",
+          "sound": "(E) 언 나무가 쩍 갈라지는 소리",
+          "transition": "CUT",
+          "duration_sec": 3,
+          "image_prompt": "top-down insert, a hand prying up the lid of a crude wooden coffin in a grave pit, frost on the wood"
+        },
+        {
+          "id": "S02-07",
+          "size": "INSERT",
+          "angle": "TOP",
+          "move": "DOLLY_IN",
+          "lens_mm": 35,
+          "frame": "탑샷. 관 안. 초롱빛이 바닥 끝까지 닿는다. 뼈 하나, 천 조각 하나 없다.",
+          "action": "비었다. 뼈 하나, 천 조각 하나 없다.",
+          "sound": "바람 소리만",
+          "transition": "CUT",
+          "duration_sec": 3,
+          "notes": "TASKS 필수 컷(빈 관)",
+          "image_prompt": "top-down slow push-in on a completely empty wooden coffin at the bottom of a grave, lantern light reaching every corner, no bones and no cloth"
+        },
+        {
+          "id": "S02-08",
+          "size": "CU",
+          "angle": "EYE",
+          "move": "FIX",
+          "lens_mm": 85,
+          "characters": [
+            "jeonggyeom"
+          ],
+          "frame": "정겸 정면. 표정 변화 없이 숨만 한 번 멈춘다.",
+          "action": "정겸이 빈 관을 내려다본다.",
+          "transition": "CUT",
+          "duration_sec": 2,
+          "image_prompt": "close-up of the expressionless scholar staring down into the grave, holding his breath, lantern light from below"
+        },
+        {
+          "id": "S02-09",
+          "size": "MCU",
+          "angle": "LOW",
+          "move": "FIX",
+          "lens_mm": 50,
+          "characters": [
+            "gangsu"
+          ],
+          "frame": "구덩이 아래에서 올려다본 강수. 등 뒤로 밤하늘.",
+          "action": "강수가 말한다.",
+          "dialogue": [
+            {
+              "speaker": "gangsu",
+              "line": "죽은 놈이 무덤에 없으면, 살아 있다는 거요.",
+              "mode": "ON"
+            }
+          ],
+          "transition": "CUT",
+          "duration_sec": 4,
+          "image_prompt": "low angle medium close-up of the storyteller looking down into the grave, night sky behind him, lantern light on his face"
+        },
+        {
+          "id": "S02-10",
+          "size": "MS",
+          "angle": "EYE",
+          "move": "FIX",
+          "lens_mm": 50,
+          "characters": [
+            "gangsu"
+          ],
+          "frame": "강수가 삽을 땅에 짚고 화면 오른쪽 정겸을 본다. 능청이 지워진 얼굴.",
+          "action": "강수가 삽을 짚고 정겸을 본다. 항상 능청스럽던 얼굴이 아니다.",
+          "transition": "CUT",
+          "duration_sec": 3,
+          "image_prompt": "medium shot, the storyteller planting his shovel in the earth and turning to face the scholar on the right, his usual playful expression gone"
+        },
+        {
+          "id": "S02-11",
+          "size": "CU",
+          "angle": "EYE",
+          "move": "DOLLY_IN",
+          "lens_mm": 85,
+          "characters": [
+            "gangsu"
+          ],
+          "frame": "강수 정면에 천천히 다가간다. 시선은 화면 오른쪽 정겸에게 고정.",
+          "action": "강수가 경고한다.",
+          "dialogue": [
+            {
+              "speaker": "gangsu",
+              "line": "나리가 누구든, 달래한테 해가 되는 일이면 내가 여기에 무덤을 하나 더 팔 거요.",
+              "mode": "ON"
+            }
+          ],
+          "transition": "CUT",
+          "duration_sec": 6,
+          "image_prompt": "slow push-in on the storyteller's face as he delivers a quiet warning, eyes fixed on the man to his right, lantern light"
+        },
+        {
+          "id": "S02-12",
+          "size": "CU",
+          "angle": "EYE",
+          "move": "FIX",
+          "lens_mm": 85,
+          "characters": [
+            "jeonggyeom"
+          ],
+          "frame": "정겸 정면, 시선은 화면 왼쪽 강수에게. 대답하지 않는다.",
+          "action": "정겸은 대답하지 않는다.",
+          "transition": "CUT",
+          "duration_sec": 2,
+          "image_prompt": "close-up of the scholar meeting the storyteller's gaze in silence, lantern light"
+        },
+        {
+          "id": "S02-13",
+          "size": "MS",
+          "angle": "EYE",
+          "move": "FIX",
+          "lens_mm": 35,
+          "characters": [
+            "jeonggyeom",
+            "gangsu"
+          ],
+          "frame": "정겸이 삽을 다시 들어 흙을 퍼 관 위로 던진다. 화면 왼쪽 강수가 그 모습을 본다.",
+          "action": "정겸이 삽을 다시 들어 무덤을 도로 덮기 시작한다.",
+          "sound": "(E) 흙이 관 뚜껑에 떨어지는 소리",
+          "transition": "CUT",
+          "duration_sec": 3,
+          "image_prompt": "medium shot, the tall scholar silently picking up his shovel and throwing earth back onto the coffin, the storyteller watching from the left"
+        },
+        {
+          "id": "S02-14",
+          "size": "ELS",
+          "angle": "HIGH",
+          "move": "FIX",
+          "lens_mm": 18,
+          "characters": [
+            "jeonggyeom",
+            "gangsu"
+          ],
+          "frame": "S02-01과 같은 부감. 초롱 하나 옆에서 흙을 덮는 두 그림자. 바람이 풀을 쓸고 간다.",
+          "action": "두 사람이 무덤을 덮는다.",
+          "sound": "바람, 삽 소리",
+          "transition": "FADE_OUT",
+          "duration_sec": 3,
+          "image_prompt": "same high wide shot of the graveyard hillside, two small figures refilling the grave beside a single lantern, wind sweeping the grass"
+        }
+      ]
+    },
+    {
+      "id": "S#3",
+      "heading": "달래책방 대문 앞 (낮)",
+      "location": "dallae_maru",
+      "time": "DAY",
+      "tc_in": "01:26",
+      "tc_out": "02:13",
+      "characters": [
+        "dallae",
+        "jeonggyeom",
+        "meoksun",
+        "extras"
+      ],
+      "mood": "COMEDY",
+      "summary": "「청상연가」 7권이 풀린 날, 독자들이 정 검서를 살려 내라며 대문 앞에 몰리고 먹순은 꿀떡을 판다. 7권에서 화살을 맞은 정 검서를 두고 정겸이 묻고 달래가 피한다. 그날 밤 반납된 7권 여백에 서생 갑의 새 낙서가 있다.",
+      "source_text": "「청상연가」 7권이 풀린 날. 대문 앞에 독자들이 몰려와 있다. 누군가 책을 흔든다.\n**독자들** 정 검서를 살려 내라! 살려 내라!\n먹순이 그 사이를 돌며 꿀떡을 판다. 목이 메니 꿀떡이 잘 팔린다.\n**먹순** 울면서 먹어도 달아요! 한 푼!\n마루. 정겸이 7권을 든 채 달래를 본다.\nInsert. 7권. '화살 세 대가 정 검서의 가슴에 꽂혔다.'\n**정겸** …나를 죽였소?\n**달래** 정 검서요. (눈을 피하며) 이야기에서 빼야 안전해요.\n정겸이 무언가 말하려다 그만둔다.\n그날 밤. 달래가 반납된 7권을 넘기다 멈춘다. 여백에 낙서가 하나 늘어 있다.\nInsert. '지키는 사람은 끝까지 살아서 지켜야 하는 법이오. — 서생 갑'\n달래가 그 줄을 오래 본다. 책을 가슴에 잠깐 대었다가, 정신이 든 듯 내려놓는다.\n**달래** …서생 갑 주제에.",
+      "shots": [
+        {
+          "id": "S03-01",
+          "size": "LS",
+          "angle": "EYE",
+          "move": "FIX",
+          "lens_mm": 24,
+          "characters": [
+            "extras",
+            "meoksun"
+          ],
+          "frame": "대문이 화면 왼쪽. 열린 대문 밖까지 독자들이 빼곡하다. 맨 앞 사람이 7권을 머리 위로 흔든다.",
+          "action": "「청상연가」 7권이 풀린 날. 대문 앞에 독자들이 몰려와 있다. 누군가 책을 흔든다.",
+          "sound": "웅성거림이 구호로 바뀐다",
+          "transition": "CUT",
+          "duration_sec": 3,
+          "continuity": "축: 대문은 항상 화면 왼쪽, 행랑채는 오른쪽(bible axis). 독자들은 대문 쪽(왼쪽)에 몰리고, 마루 위 달래와 정겸은 화면 오른쪽",
+          "image_prompt": "wide shot of a small hanok bookshop gate on the left crowded with agitated readers spilling in from the alley, one waving a thread-bound book overhead, daylight"
+        },
+        {
+          "id": "S03-02",
+          "size": "GROUP",
+          "angle": "LOW",
+          "move": "HANDHELD",
+          "lens_mm": 28,
+          "characters": [
+            "extras"
+          ],
+          "frame": "독자들 정면 로우앵글. 장옷 쓴 아낙, 갓 쓴 선비, 아이까지 주먹을 흔든다. 몇몇은 울고 있다.",
+          "action": "독자들이 한목소리로 외친다.",
+          "dialogue": [
+            {
+              "speaker": "extras",
+              "line": "정 검서를 살려 내라! 살려 내라!",
+              "mode": "ON"
+            }
+          ],
+          "transition": "CUT",
+          "duration_sec": 4,
+          "notes": "화자는 독자들(합창)",
+          "image_prompt": "low angle handheld group shot of tearful Joseon readers, women in jangot, scholars and children, shaking their fists and chanting in protest"
+        },
+        {
+          "id": "S03-03",
+          "size": "MS",
+          "angle": "EYE",
+          "move": "TRACK_R",
+          "lens_mm": 35,
+          "characters": [
+            "meoksun",
+            "extras"
+          ],
+          "frame": "먹순이 꿀떡 함지를 끼고 독자들 사이를 오른쪽으로 누빈다.",
+          "action": "먹순이 그 사이를 돌며 꿀떡을 판다.",
+          "dialogue": [
+            {
+              "speaker": "meoksun",
+              "line": "울면서 먹어도 달아요! 한 푼!",
+              "mode": "ON"
+            }
+          ],
+          "transition": "CUT",
+          "duration_sec": 4,
+          "image_prompt": "tracking right with a spunky shop girl weaving through a weeping crowd carrying a tray of honey rice cakes, calling out to buyers"
+        },
+        {
+          "id": "S03-04",
+          "size": "INSERT",
+          "angle": "EYE",
+          "move": "FIX",
+          "lens_mm": 50,
+          "characters": [
+            "meoksun",
+            "extras"
+          ],
+          "frame": "우는 선비가 꿀떡을 입에 밀어 넣으며 엽전을 내민다. 먹순의 먹 묻은 손바닥에 엽전이 떨어진다.",
+          "action": "목이 메니 꿀떡이 잘 팔린다.",
+          "sound": "(E) 엽전 짤랑, 훌쩍이는 소리",
+          "transition": "CUT",
+          "duration_sec": 2,
+          "image_prompt": "insert, a sobbing reader stuffing a honey rice cake into his mouth while dropping a coin into an ink-smudged palm"
+        },
+        {
+          "id": "S03-05",
+          "size": "MS",
+          "angle": "EYE",
+          "move": "FIX",
+          "lens_mm": 50,
+          "characters": [
+            "jeonggyeom",
+            "dallae"
+          ],
+          "frame": "마루. 화면 오른쪽 정겸이 7권을 펼쳐 든 채 왼쪽의 달래를 본다. 대문 쪽 소란은 흐린 후경.",
+          "action": "정겸이 7권을 든 채 달래를 본다.",
+          "transition": "CUT",
+          "duration_sec": 3,
+          "image_prompt": "medium shot on a wooden porch, the tall scholar on the right holding an open book and looking at the young woman on the left, the noisy crowd blurred in the background"
+        },
+        {
+          "id": "S03-06",
+          "size": "INSERT",
+          "angle": "TOP",
+          "move": "FIX",
+          "lens_mm": 50,
+          "characters": [
+            "jeonggyeom"
+          ],
+          "frame": "탑샷. 정겸 손에 펼쳐진 7권.",
+          "action": "7권의 한 대목.",
+          "insert_text": "화살 세 대가 정 검서의 가슴에 꽂혔다.",
+          "motifs": [
+            "INSERT_TEXT"
+          ],
+          "transition": "CUT",
+          "duration_sec": 3,
+          "image_prompt": "top-down insert of an open hand-copied hangul novel held in slender hands"
+        },
+        {
+          "id": "S03-07",
+          "size": "MCU",
+          "angle": "EYE",
+          "move": "FIX",
+          "lens_mm": 85,
+          "characters": [
+            "jeonggyeom"
+          ],
+          "frame": "정겸 정면. 무표정. 눈만 책에서 화면 왼쪽 달래에게 올라간다.",
+          "action": "정겸이 묻는다.",
+          "dialogue": [
+            {
+              "speaker": "jeonggyeom",
+              "line": "…나를 죽였소?",
+              "mode": "ON"
+            }
+          ],
+          "transition": "CUT",
+          "duration_sec": 2,
+          "image_prompt": "medium close-up of the deadpan scholar lifting his eyes from the book to ask a question"
+        },
+        {
+          "id": "S03-08",
+          "size": "MCU",
+          "angle": "EYE",
+          "move": "FIX",
+          "lens_mm": 85,
+          "characters": [
+            "dallae"
+          ],
+          "frame": "달래 정면(S03-07과 대칭), 시선은 화면 오른쪽. 말 중간에 시선을 옆으로 피한다.",
+          "action": "달래가 눈을 피하며 답한다.",
+          "dialogue": [
+            {
+              "speaker": "dallae",
+              "line": "정 검서요. (눈을 피하며) 이야기에서 빼야 안전해요.",
+              "mode": "ON"
+            }
+          ],
+          "transition": "CUT",
+          "duration_sec": 4,
+          "image_prompt": "medium close-up of the young woman answering and then averting her eyes"
+        },
+        {
+          "id": "S03-09",
+          "size": "CU",
+          "angle": "EYE",
+          "move": "FIX",
+          "lens_mm": 85,
+          "characters": [
+            "jeonggyeom"
+          ],
+          "frame": "정겸이 입을 연다. 한 박자. 다시 다문다.",
+          "action": "정겸이 무언가 말하려다 그만둔다.",
+          "transition": "DISSOLVE",
+          "duration_sec": 3,
+          "image_prompt": "close-up of the scholar parting his lips to say something, hesitating, then closing them"
+        },
+        {
+          "id": "S03-10",
+          "size": "INSERT",
+          "angle": "EYE",
+          "move": "FIX",
+          "lens_mm": 50,
+          "frame": "밤. 마루 끝에 반납된 7권이 쌓여 있다. 처마 초롱 하나가 그 위를 비춘다.",
+          "action": "그날 밤. 반납된 7권들.",
+          "sound": "풀벌레 소리, 정적",
+          "transition": "CUT",
+          "duration_sec": 2,
+          "image_prompt": "insert at night, a stack of returned thread-bound books at the end of a wooden porch under the glow of a paper lantern hanging from the eaves"
+        },
+        {
+          "id": "S03-11",
+          "size": "MS",
+          "angle": "EYE",
+          "move": "FIX",
+          "lens_mm": 50,
+          "characters": [
+            "dallae"
+          ],
+          "frame": "등잔 옆에 앉은 달래가 반납된 7권을 한 장씩 넘기다 멈춘다.",
+          "action": "달래가 반납된 7권을 넘기다 멈춘다. 여백에 낙서가 하나 늘어 있다.",
+          "transition": "CUT",
+          "duration_sec": 3,
+          "image_prompt": "medium shot at night, the young woman sitting by an oil lamp leafing through a returned book and suddenly stopping on a page"
+        },
+        {
+          "id": "S03-12",
+          "size": "INSERT",
+          "angle": "TOP",
+          "move": "FIX",
+          "lens_mm": 85,
+          "characters": [
+            "dallae"
+          ],
+          "frame": "탑샷. 책장 여백에 반듯한 해서체 낙서. 달래의 먹 묻은 손가락이 그 옆에 멈춰 있다.",
+          "action": "여백의 낙서.",
+          "insert_text": "지키는 사람은 끝까지 살아서 지켜야 하는 법이오. — 서생 갑",
+          "motifs": [
+            "INSERT_TEXT"
+          ],
+          "transition": "CUT",
+          "duration_sec": 3,
+          "notes": "TASKS 필수 컷(서생 갑 낙서). 필체는 11화 사인회의 정겸 글씨, 17화 글씨 대조 컷과 같아야 한다",
+          "image_prompt": "top-down insert, a neat handwritten note in the margin of a book page, an ink-stained fingertip resting beside it, lamplight"
+        },
+        {
+          "id": "S03-13",
+          "size": "CU",
+          "angle": "EYE",
+          "move": "DOLLY_IN",
+          "lens_mm": 85,
+          "characters": [
+            "dallae"
+          ],
+          "frame": "달래 얼굴에 아주 천천히 다가간다. 등잔빛. 그 줄에서 눈을 떼지 못한다.",
+          "action": "달래가 그 줄을 오래 본다.",
+          "transition": "CUT",
+          "duration_sec": 4,
+          "image_prompt": "very slow push-in on the young woman's face as she stares at a line in the book for a long time, lamplight, her expression softening"
+        },
+        {
+          "id": "S03-14",
+          "size": "MS",
+          "angle": "EYE",
+          "move": "FIX",
+          "lens_mm": 50,
+          "characters": [
+            "dallae"
+          ],
+          "frame": "달래가 책을 가슴에 잠깐 댄다. 눈을 감았다 뜨고, 퍼뜩 책을 서안에 내려놓는다.",
+          "action": "책을 가슴에 잠깐 대었다가, 정신이 든 듯 내려놓는다.",
+          "transition": "CUT",
+          "duration_sec": 4,
+          "image_prompt": "medium shot, the young woman briefly hugging the book to her chest with eyes closed, then catching herself and putting it down abruptly"
+        },
+        {
+          "id": "S03-15",
+          "size": "CU",
+          "angle": "EYE",
+          "move": "FIX",
+          "lens_mm": 85,
+          "characters": [
+            "dallae"
+          ],
+          "frame": "달래 정면. 입을 비죽이며 혼잣말. 볼이 살짝 붉다.",
+          "action": "달래가 투덜거린다.",
+          "dialogue": [
+            {
+              "speaker": "dallae",
+              "line": "…서생 갑 주제에.",
+              "mode": "WHISPER"
+            }
+          ],
+          "transition": "CUT",
+          "duration_sec": 3,
+          "image_prompt": "close-up of the young woman pouting and muttering to herself, cheeks faintly flushed, lamplight"
+        }
+      ]
+    },
+    {
+      "id": "S#4",
+      "heading": "달래책방 마당 (해 질 녘)",
+      "location": "dallae_maru",
+      "time": "DUSK",
+      "tc_in": "02:13",
+      "tc_out": "03:00",
+      "characters": [
+        "dallae",
+        "yul"
+      ],
+      "mood": "ROMANCE",
+      "summary": "해 질 녘, 율이 늘 그렇듯 웃으며 7권을 빌리러 온다. 걸음이 조금 느리다. 책을 건네던 달래가 율의 도포 옆구리에 번진 피를 보고 묻자, 율은 보조개를 지으며 연체료라고 답한다.",
+      "source_text": "율이 부채를 흔들며 들어온다. 늘 그렇듯 웃는다. 다만 걸음이 조금 느리다.\n**율** 7권 하나 빌려주시오. 연체할 거지만.\n달래가 책을 건네다 멈춘다. 율의 도포 옆구리에 피가 번져 있다. 자줏빛 비단 위에서 검게 굳어 간다.\n**달래** 도령, 이거 무슨 상처예요?\n율이 웃는다. 보조개가 팬다.\n**율** …연체료요.",
+      "shots": [
+        {
+          "id": "S04-01",
+          "size": "LS",
+          "angle": "EYE",
+          "move": "FIX",
+          "lens_mm": 24,
+          "characters": [
+            "yul",
+            "dallae"
+          ],
+          "frame": "해 질 녘 마당. 화면 왼쪽 대문으로 주황 역광을 받으며 율이 부채를 흔들며 들어온다. 오른쪽 마루에 책 궤짝과 달래.",
+          "action": "율이 부채를 흔들며 들어온다. 늘 그렇듯 웃는다.",
+          "sound": "저녁 새소리, 부채 소리",
+          "transition": "CUT",
+          "duration_sec": 3,
+          "continuity": "축: 대문은 화면 왼쪽, 행랑채는 오른쪽(bible axis). 율은 대문으로 들어와 오른쪽 마루의 달래 쪽으로 간다. 역광은 대문 쪽. 율 왼쪽 옆구리 상처(12화 S#5), 이 샷에서는 부채와 소매에 가려 피가 보이지 않는다",
+          "image_prompt": "wide shot of a hanok bookshop yard at dusk, a handsome young nobleman in a plum silk robe strolling in through the gate on the left, fanning himself and smiling, orange backlight, a young woman at the wooden porch on the right"
+        },
+        {
+          "id": "S04-02",
+          "size": "MS",
+          "angle": "EYE",
+          "move": "TRACK_R",
+          "lens_mm": 50,
+          "characters": [
+            "yul"
+          ],
+          "frame": "율의 허리 아래를 따라간다. 부채는 흔들리는데 걸음이 한 박자씩 늦다. 왼손이 옆구리 쪽 도포 자락을 슬쩍 누른다.",
+          "action": "다만 걸음이 조금 느리다.",
+          "transition": "CUT",
+          "duration_sec": 3,
+          "image_prompt": "tracking right on the lower half of the young nobleman's silk robe as he walks a little too slowly, his free hand discreetly pressing the side of his robe"
+        },
+        {
+          "id": "S04-03",
+          "size": "MS",
+          "angle": "EYE",
+          "move": "FIX",
+          "lens_mm": 50,
+          "characters": [
+            "dallae"
+          ],
+          "frame": "마루의 달래가 궤짝을 정리하다 고개를 든다. 화면 왼쪽(율 쪽)을 본다.",
+          "action": "달래가 율을 본다.",
+          "transition": "CUT",
+          "duration_sec": 3,
+          "image_prompt": "medium shot, the young woman sorting books in a wooden chest on the porch looking up toward the left, dusk light"
+        },
+        {
+          "id": "S04-04",
+          "size": "2S",
+          "angle": "EYE",
+          "move": "FIX",
+          "lens_mm": 35,
+          "characters": [
+            "yul",
+            "dallae"
+          ],
+          "frame": "마루 끝 투숏. 왼쪽 율이 마루에 팔을 걸치고 웃는다. 오른쪽 달래.",
+          "action": "율이 7권을 청한다.",
+          "dialogue": [
+            {
+              "speaker": "yul",
+              "line": "7권 하나 빌려주시오. 연체할 거지만.",
+              "mode": "ON"
+            }
+          ],
+          "transition": "CUT",
+          "duration_sec": 5,
+          "image_prompt": "two-shot at the edge of the porch at dusk, the smiling nobleman on the left leaning an elbow on the porch, the young woman on the right"
+        },
+        {
+          "id": "S04-05",
+          "size": "MCU",
+          "angle": "EYE",
+          "move": "FIX",
+          "lens_mm": 85,
+          "characters": [
+            "dallae"
+          ],
+          "frame": "달래 정면. 눈을 흘기며 궤짝에서 7권을 꺼낸다.",
+          "action": "달래가 눈을 흘기며 7권을 꺼낸다.",
+          "transition": "CUT",
+          "duration_sec": 3,
+          "image_prompt": "medium close-up, the young woman rolling her eyes as she pulls a book from the chest"
+        },
+        {
+          "id": "S04-06",
+          "size": "INSERT",
+          "angle": "EYE",
+          "move": "FIX",
+          "lens_mm": 50,
+          "characters": [
+            "dallae",
+            "yul"
+          ],
+          "frame": "화면 오른쪽에서 책을 쥔 달래의 손이 왼쪽으로 건너가다 공중에서 멈춘다.",
+          "action": "달래가 책을 건네다 멈춘다.",
+          "transition": "CUT",
+          "duration_sec": 3,
+          "image_prompt": "insert, a young woman's ink-stained hand passing a book toward a man and stopping in midair"
+        },
+        {
+          "id": "S04-07",
+          "size": "INSERT",
+          "angle": "EYE",
+          "move": "RACK_FOCUS",
+          "lens_mm": 100,
+          "characters": [
+            "yul"
+          ],
+          "frame": "초점이 책에서 그 뒤 율의 도포 옆구리로 넘어간다. 자줏빛 비단 위 검붉은 얼룩이 검게 굳어 간다.",
+          "action": "율의 도포 옆구리에 피가 번져 있다. 자줏빛 비단 위에서 검게 굳어 간다.",
+          "transition": "CUT",
+          "duration_sec": 4,
+          "continuity": "율 왼쪽 옆구리 피. 15화 S#1 상처 감기로 이어진다",
+          "image_prompt": "insert, rack focus from a book in the foreground to a spreading dark bloodstain on the side of a plum silk robe, dusk light"
+        },
+        {
+          "id": "S04-08",
+          "size": "CU",
+          "angle": "EYE",
+          "move": "FIX",
+          "lens_mm": 85,
+          "characters": [
+            "dallae"
+          ],
+          "frame": "달래 얼굴. 장난기가 가신다.",
+          "action": "달래의 얼굴이 굳는다.",
+          "transition": "CUT",
+          "duration_sec": 3,
+          "image_prompt": "close-up of the young woman's face as the teasing look drains away, dusk light"
+        },
+        {
+          "id": "S04-09",
+          "size": "MS",
+          "angle": "OTS",
+          "move": "FIX",
+          "lens_mm": 50,
+          "characters": [
+            "yul",
+            "dallae"
+          ],
+          "frame": "율 어깨 너머로 달래. 달래가 율의 얼굴을 똑바로 본다.",
+          "action": "달래가 묻는다.",
+          "dialogue": [
+            {
+              "speaker": "dallae",
+              "line": "도령, 이거 무슨 상처예요?",
+              "mode": "ON"
+            }
+          ],
+          "transition": "CUT",
+          "duration_sec": 4,
+          "image_prompt": "over the nobleman's shoulder toward the young woman looking him straight in the eye, worried, dusk light"
+        },
+        {
+          "id": "S04-10",
+          "size": "MS",
+          "angle": "EYE",
+          "move": "FIX",
+          "lens_mm": 50,
+          "characters": [
+            "yul"
+          ],
+          "frame": "율 웨이스트. 부채가 멈춘다. 웃음은 그대로 한 박자.",
+          "action": "율의 부채가 멈춘다.",
+          "transition": "CUT",
+          "duration_sec": 3,
+          "image_prompt": "medium shot of the nobleman, his fan stopping mid-wave, his smile frozen for a beat, dusk light"
+        },
+        {
+          "id": "S04-11",
+          "size": "2S",
+          "angle": "PROFILE",
+          "move": "FIX",
+          "lens_mm": 50,
+          "characters": [
+            "yul",
+            "dallae"
+          ],
+          "frame": "측면 투숏. 왼쪽 율, 오른쪽 달래. 둘 사이에 건네다 만 책. 노을빛이 둘 사이로 들어온다.",
+          "action": "둘 사이에 말이 끊긴다.",
+          "transition": "CUT",
+          "duration_sec": 3,
+          "image_prompt": "profile two-shot at dusk, the nobleman on the left and the young woman on the right with a half-offered book between them, sunset light between them, silence"
+        },
+        {
+          "id": "S04-12",
+          "size": "CU",
+          "angle": "EYE",
+          "move": "FIX",
+          "lens_mm": 85,
+          "characters": [
+            "yul"
+          ],
+          "frame": "율 얼굴. 천천히 웃는다. 보조개가 팬다.",
+          "action": "율이 웃는다. 보조개가 팬다.",
+          "motifs": [
+            "LATE_FEE"
+          ],
+          "transition": "CUT",
+          "duration_sec": 4,
+          "image_prompt": "close-up of the young nobleman slowly breaking into a smile, a deep dimple, dusk light"
+        },
+        {
+          "id": "S04-13",
+          "size": "MS",
+          "angle": "EYE",
+          "move": "DOLLY_IN",
+          "lens_mm": 50,
+          "characters": [
+            "yul"
+          ],
+          "frame": "달래 쪽에서 본 율. 웃는 얼굴과 도포 옆구리의 핏자국이 한 프레임에 들어온다. 천천히 다가가다 대사 끝에서 멈춘다.",
+          "action": "율이 웃으며 답한다.",
+          "dialogue": [
+            {
+              "speaker": "yul",
+              "line": "…연체료요.",
+              "mode": "ON"
+            }
+          ],
+          "motifs": [
+            "LATE_FEE"
+          ],
+          "transition": "FREEZE",
+          "duration_sec": 6,
+          "notes": "엔딩 훅. 웃음과 상처를 한 프레임에(LATE_FEE). 대사 뒤 2초 버티고 프리즈",
+          "image_prompt": "slow push-in on the smiling young nobleman framed waist-up, his dimpled smile and the dark bloodstain on the side of his plum silk robe in the same frame, dusk backlight"
+        }
+      ]
+    }
+  ]
+}

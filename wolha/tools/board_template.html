@@ -1,0 +1,269 @@
+<title>월하노인을 잡아라 콘티</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Song+Myung&family=Gothic+A1:wght@400;500;700&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: 쪽빛 콘티 테이블. 위에 회차 레일, 그 아래 3분 타임라인 띠, 씬마다 16:9 패널 격자. 밤 씬은 패널 바탕부터 밤색. */
+:root{
+  --bg:#EDF0F4; --panel:#FAFBFC; --raise:#E3E8EF; --ink:#17202C; --muted:#586577; --line:#D0D7E1;
+  --accent:#B3305A; --accent-ink:#FFFFFF; --moon:#9A7417; --sel:#17202C; --sel-ink:#F4F6F9;
+  --f-display:"Song Myung","Nanum Myeongjo","AppleMyungjo","Batang",serif;
+  --f-body:"Gothic A1","Apple SD Gothic Neo","Malgun Gothic","Noto Sans KR",sans-serif;
+  --f-mono:"IBM Plex Mono",ui-monospace,Menlo,Consolas,monospace;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --bg:#0F141C; --panel:#161D27; --raise:#1F2833; --ink:#E5E9EF; --muted:#94A1B3; --line:#2A3442;
+  --accent:#F27B9E; --accent-ink:#1A0E13; --moon:#E3BC5C; --sel:#E5E9EF; --sel-ink:#0F141C; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#0F141C; --panel:#161D27; --raise:#1F2833; --ink:#E5E9EF; --muted:#94A1B3; --line:#2A3442;
+  --accent:#F27B9E; --accent-ink:#1A0E13; --moon:#E3BC5C; --sel:#E5E9EF; --sel-ink:#0F141C; color-scheme:dark}
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--ink);font-family:var(--f-body);font-size:14.5px;line-height:1.6;-webkit-font-smoothing:antialiased;word-break:keep-all;overflow-wrap:anywhere}
+.wrap{max-width:1360px;margin:0 auto;padding-block:28px 80px;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+h1,h2,h3{margin:0;font-weight:400;text-wrap:balance}
+p{margin:0}
+button{font:inherit;color:inherit;cursor:pointer}
+:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.mono{font-family:var(--f-mono);font-variant-numeric:tabular-nums}
+
+header.top{display:grid;gap:18px 40px;grid-template-columns:minmax(0,1fr);align-items:end;margin-bottom:26px}
+@media (min-width:900px){header.top{grid-template-columns:minmax(0,1fr) auto}}
+.eyebrow{font-size:12.5px;letter-spacing:.06em;color:var(--muted)}
+header.top h1{font-family:var(--f-display);font-size:clamp(34px,6vw,58px);line-height:1.05;margin-top:8px}
+header.top h1 small{display:block;font-family:var(--f-body);font-size:15px;color:var(--muted);margin-top:10px;letter-spacing:0}
+.stats{display:grid;grid-template-columns:repeat(5,minmax(0,auto));margin:0;border:1px solid var(--line);background:var(--panel)}
+.stats div{padding:10px 18px;border-right:1px solid var(--line);min-width:0}
+.stats div:last-child{border-right:0}
+@media (max-width:600px){.stats{grid-template-columns:repeat(3,minmax(0,1fr))}.stats div{padding:8px 10px}.stats dd{font-size:16px}}
+.stats dt{font-size:11.5px;color:var(--muted);letter-spacing:.04em}
+.stats dd{margin:2px 0 0;font-family:var(--f-mono);font-size:20px}
+
+.rail{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:6px;margin-bottom:30px}
+.rail button{display:flex;gap:10px;align-items:baseline;text-align:left;padding:8px 10px;border:1px solid var(--line);background:var(--panel);border-radius:3px;min-width:0}
+.rail button b{font-family:var(--f-mono);font-weight:500;font-size:13px;color:var(--muted);flex:none}
+.rail button span{font-size:13.5px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.rail button:hover{border-color:var(--muted)}
+.rail button[aria-current="true"]{background:var(--sel);color:var(--sel-ink);border-color:var(--sel)}
+.rail button[aria-current="true"] b{color:var(--sel-ink);opacity:.7}
+.rail button.empty span{color:var(--muted)}
+@media (max-width:600px){.rail{display:flex;overflow-x:auto;gap:6px;padding-bottom:6px;margin-bottom:24px}.rail button{flex:none;width:150px}}
+
+.ephead{display:grid;gap:10px 32px;grid-template-columns:minmax(0,1fr);padding-bottom:16px;border-bottom:2px solid var(--ink)}
+@media (min-width:900px){.ephead{grid-template-columns:minmax(0,1fr) auto;align-items:end}}
+.ephead h2{font-family:var(--f-display);font-size:clamp(28px,4.4vw,40px);line-height:1.15}
+.ephead h2 .no{font-family:var(--f-mono);font-size:.5em;color:var(--muted);margin-right:4px;vertical-align:middle}
+.hook{margin-top:8px;max-width:62ch}
+.hook b{font-size:12px;color:var(--accent);margin-right:8px;letter-spacing:.04em}
+.epmeta{display:flex;flex-wrap:wrap;gap:8px;align-items:center}
+.pill{font-family:var(--f-mono);font-size:12px;padding:2px 9px;border-radius:999px;border:1px solid var(--line);background:var(--panel);white-space:nowrap}
+.pill.st-review{border-color:var(--moon);color:var(--moon)}
+.pill.st-final{border-color:var(--accent);color:var(--accent)}
+.btn{border:1px solid var(--ink);background:transparent;border-radius:3px;padding:5px 12px;font-size:13px}
+.btn:hover{background:var(--sel);color:var(--sel-ink)}
+
+.tl{margin-top:18px}
+.tl-scroll{overflow-x:auto}
+.tl-in{min-width:720px}
+.tl-scenes{position:relative;height:20px;font-size:11.5px;color:var(--muted)}
+.tl-scenes span{position:absolute;top:0;padding-left:5px;border-left:1px solid var(--muted);white-space:nowrap;font-family:var(--f-mono)}
+.tl-bar{display:flex;height:30px;gap:1px}
+.tl-bar button{flex:none;border:0;padding:0;border-radius:1px;position:relative;opacity:.85}
+.tl-bar button:hover,.tl-bar button:focus-visible{opacity:1;outline:1px solid var(--ink)}
+.tl-bar button.dim{opacity:.18}
+.tl-bar button.hasmotif::after{content:"";position:absolute;left:50%;top:-5px;width:5px;height:5px;margin-left:-2.5px;border-radius:50%;background:var(--accent)}
+.tl-ticks{display:flex;justify-content:space-between;font-size:11px;color:var(--muted);margin-top:4px}
+
+.filters{display:flex;flex-wrap:wrap;gap:6px;align-items:center;margin-top:16px}
+.filters .lab{font-size:12.5px;color:var(--muted);margin-right:4px}
+.filters button{font-family:var(--f-mono);font-size:12px;padding:2px 10px;border-radius:999px;border:1px solid var(--line);background:var(--panel)}
+.filters button[aria-pressed="true"]{background:var(--accent);border-color:var(--accent);color:var(--accent-ink)}
+
+.scene{margin-top:40px}
+.schead{display:flex;flex-wrap:wrap;gap:4px 14px;align-items:baseline;padding-bottom:8px;border-bottom:1px solid var(--line);margin-bottom:14px}
+.schead .sid{font-family:var(--f-mono);font-size:13px;color:var(--muted)}
+.schead h3{font-family:var(--f-display);font-size:24px;line-height:1.25}
+.schead .tc{font-family:var(--f-mono);font-size:13px}
+.schead .mood{font-size:12px;color:var(--muted);border:1px solid var(--line);padding:0 8px;border-radius:999px}
+.schead p{flex-basis:100%;color:var(--muted);font-size:13.5px;max-width:80ch}
+
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(270px,1fr));gap:14px}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:3px;min-width:0;display:flex;flex-direction:column;scroll-margin-top:20px}
+.card.dim{opacity:.28}
+.card.flash{outline:2px solid var(--accent);outline-offset:2px}
+.frame{display:block;width:100%;aspect-ratio:16/9;max-width:100%;border-bottom:1px solid var(--line)}
+.cap{padding:10px 12px 12px;display:grid;gap:7px;align-content:start}
+.r1{display:flex;justify-content:space-between;gap:8px;align-items:baseline}
+.r1 b{font-family:var(--f-mono);font-weight:500;font-size:14px}
+.r1 span{font-family:var(--f-mono);font-size:12.5px;color:var(--muted)}
+.chips{display:flex;flex-wrap:wrap;gap:4px}
+.chip{font-family:var(--f-mono);font-size:11px;padding:0 6px;border-radius:2px;background:var(--raise);white-space:nowrap}
+.chip.motif{background:transparent;border:1px solid var(--accent);color:var(--accent)}
+.chip.look{background:transparent;border:1px solid var(--moon);color:var(--moon)}
+.fr{font-size:13px;color:var(--muted)}
+.act{font-size:13.5px}
+.dl{display:grid;gap:4px;border-left:2px solid var(--accent);padding-left:9px}
+.dl p{font-family:var(--f-display);font-size:15.5px;line-height:1.5}
+.dl p .who{font-family:var(--f-body);font-size:12px;font-weight:700;margin-right:6px}
+.dl p .mode{font-family:var(--f-mono);font-size:10.5px;color:var(--muted);margin-left:4px}
+.ins{font-family:var(--f-display);font-size:15px;padding:5px 9px;background:var(--raise);border-radius:2px}
+.snd{font-size:12.5px;color:var(--muted)}
+.cont{font-size:12px;color:var(--moon)}
+.note{font-size:12px;color:var(--muted)}
+details{font-size:12.5px}
+summary{cursor:pointer;color:var(--muted);font-size:12px}
+details pre{margin:6px 0 0;white-space:pre-wrap;word-break:break-word;font-family:var(--f-mono);font-size:11.5px;line-height:1.55;background:var(--raise);padding:7px 9px;border-radius:2px}
+.copy{margin-top:6px;border:1px solid var(--line);background:transparent;border-radius:3px;padding:2px 9px;font-size:12px}
+.copy:hover{border-color:var(--muted)}
+.trans{font-family:var(--f-mono);font-size:11px;color:var(--muted);text-align:right;margin-top:auto;padding:0 12px 8px}
+.empty-ep{padding:40px 0;color:var(--muted)}
+footer{margin-top:60px;font-size:12.5px;color:var(--muted)}
+.toast{position:fixed;left:50%;bottom:calc(20px + env(safe-area-inset-bottom,0px));transform:translateX(-50%);background:var(--sel);color:var(--sel-ink);padding:6px 14px;border-radius:3px;font-size:13px}
+@media (prefers-reduced-motion:no-preference){.card{transition:opacity .15s}}
+</style>
+
+<div class="wrap">
+  <header class="top">
+    <div>
+      <p class="eyebrow">숏폼 사극 로코 · 24부작 · 회당 3분 · 16:9 · 1792년 한양</p>
+      <h1>월하노인을 잡아라<small>회차별 콘티. 패널을 누르면 타임라인 위치가, 타임라인을 누르면 그 패널이 보입니다.</small></h1>
+    </div>
+    <dl class="stats" id="stats"></dl>
+  </header>
+
+  <nav class="rail" id="rail" aria-label="회차"></nav>
+  <main id="ep" aria-live="polite"></main>
+  <footer>원본 데이터: 저장소 wolha/storyboards/epNN.json. 이 페이지는 tools/board.py 로 다시 만듭니다. 이미지가 아직 없는 샷은 샷 크기·인원·시간대를 나타내는 구도 가이드로 보입니다.</footer>
+</div>
+<div class="toast" id="toast" hidden></div>
+
+<script>
+window.WOLHA = /*__DATA__*/null;
+</script>
+<script>
+(function(){
+  const D = window.WOLHA, EPS = D.episodes, CH = D.chars;
+  const SIZE_SCALE = {ELS:.06,LS:.12,FS:.16,MLS:.22,MS:.3,MCU:.42,CU:.6,ECU:.95,"2S":.28,GROUP:.18};
+  const ANGLE_KO = {EYE:"아이레벨",HIGH:"하이",LOW:"로우",BIRD:"부감",WORM:"앙각",DUTCH:"더치",OTS:"어깨 너머",POV:"시점",TOP:"탑",PROFILE:"측면"};
+  const MOVE_KO = {FIX:"고정",PAN_L:"팬 ←",PAN_R:"팬 →",TILT_U:"틸트 ↑",TILT_D:"틸트 ↓",DOLLY_IN:"달리 인",DOLLY_OUT:"달리 아웃",TRACK_L:"트랙 ←",TRACK_R:"트랙 →",TRACK_IN:"트랙 인",CRANE_UP:"크레인 업",CRANE_DOWN:"크레인 다운",HANDHELD:"핸드헬드",ZOOM_IN:"줌 인",ZOOM_OUT:"줌 아웃",CRASH_ZOOM:"크래시 줌",RACK_FOCUS:"랙 포커스",STEADICAM:"스테디캠",ORBIT:"오비트",SLOWMO:"슬로모션"};
+  const LOOK_KO = {palace:"관복",bareheaded:"맨상투",disguise:"변장",procession:"행차 복식"};
+  const MODE_KO = {ON:"",OS:"O.S.",VO:"V.O.",N:"N",WHISPER:"속삭임"};
+  const MOTIF_KO = {EAR_RED:"귀 빨개짐",EAR_NOT_RED:"안 빨개진 귀",UMBRELLA:"우산",COIN_RAIN:"엽전 비",DOOR_GAP:"문틈",WALL:"담장",ROOFTOP_HEUKRIP:"지붕 위 흑립",SCAR_LEFT_HAND:"왼손 흉터",NARRATOR:"내레이터",INSERT_TEXT:"글씨 인서트",MOON:"달",BRUSH:"붓",TEA_OVERFLOW:"넘치는 찻물",WHISTLE:"호루라기",LATE_FEE:"연체료",CONTRACT:"계약서"};
+  // 시간대별 패널 바탕/선 (패널은 그림이므로 테마와 무관한 고정색)
+  const TONE = {DAY:["#E9E4D6","#8C8270","#4E4637"],MORNING:["#E6E9E4","#7F8A80","#3F4A42"],DUSK:["#E8D2BC","#9A6F4E","#5A3A24"],DAWN:["#C9D3DD","#6C7F94","#2F3E50"],NIGHT:["#1E2836","#7D93AE","#C9D6E6"],FLASHBACK:["#D6D2CB","#8E8578","#4D463D"]};
+  const SCENE_COL = ["#6F86A6","#A58D5F","#8C6F94","#5E8F84","#A8706A","#7B8A57"];
+  const $ = s => document.querySelector(s);
+  const esc = s => String(s ?? "").replace(/[&<>"]/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+  const tc = s => `${String(Math.floor(s/60)).padStart(2,"0")}:${String(Math.round(s%60)).padStart(2,"0")}`;
+  const name = id => CH[id] || id;
+  let cur = 0, motif = null;
+
+  // 전체 통계
+  const total = EPS.reduce((a,e)=>a+e.shots,0);
+  const done = EPS.filter(e=>e.shots>0).length;
+  const imgs = EPS.reduce((a,e)=>a+e.scenes.reduce((b,s)=>b+s.shots.filter(x=>x.image).length,0),0);
+  const sec = EPS.reduce((a,e)=>a+e.runtime,0);
+  const secDone = EPS.filter(e=>e.shots>0).reduce((a,e)=>a+e.runtime,0);
+  $("#stats").innerHTML = [["회차",`${done}/${EPS.length}`],["샷",total],["러닝타임",tc(sec)],["평균 샷",total?`${(secDone/total).toFixed(1)}초`:"-"],["패널 이미지",`${imgs}/${total}`]]
+    .map(([k,v])=>`<div><dt>${k}</dt><dd>${v}</dd></div>`).join("");
+
+  $("#rail").innerHTML = EPS.map((e,i)=>`<button type="button" data-i="${i}" class="${e.shots?"":"empty"}" title="${esc(e.title)}"><b>${String(e.episode).padStart(2,"0")}</b><span>${esc(e.title)}</span></button>`).join("");
+  $("#rail").addEventListener("click", ev => { const b = ev.target.closest("button"); if (b) go(+b.dataset.i, true); });
+
+  function frameSVG(sh, time){
+    const [bg, grid, fig] = TONE[time] || TONE.DAY, w = 320, h = 180;
+    let p = `<svg class="frame" viewBox="0 0 ${w} ${h}" role="img" aria-label="${esc(sh.size)} ${esc(ANGLE_KO[sh.angle]||sh.angle)}"><rect width="${w}" height="${h}" fill="${bg}"/>`;
+    for (const x of [w/3, 2*w/3]) p += `<line x1="${x}" y1="0" x2="${x}" y2="${h}" stroke="${grid}" stroke-width="1" stroke-dasharray="3 4" opacity=".6"/>`;
+    for (const y of [h/3, 2*h/3]) p += `<line x1="0" y1="${y}" x2="${w}" y2="${y}" stroke="${grid}" stroke-width="1" stroke-dasharray="3 4" opacity=".6"/>`;
+    if (sh.size === "INSERT") {
+      p += `<rect x="${w*.22}" y="${h*.2}" width="${w*.56}" height="${h*.6}" fill="none" stroke="${fig}" stroke-width="2"/>`;
+      if (sh.insert_text) p += `<text x="${w/2}" y="${h/2+6}" text-anchor="middle" fill="${fig}" font-family="Song Myung, serif" font-size="17">${esc(sh.insert_text.slice(0,14))}</text>`;
+    } else {
+      const r = h * (SIZE_SCALE[sh.size] || .3) / 2, n = Math.max(1, Math.min(4, (sh.characters||[]).length || 1));
+      for (let i=0;i<n;i++){
+        const cx = w*(i+1)/(n+1), cy = h/3, bottom = Math.min(h, cy + r*4.5);
+        p += `<circle cx="${cx.toFixed(1)}" cy="${cy.toFixed(1)}" r="${r.toFixed(1)}" fill="none" stroke="${fig}" stroke-width="2"/>`;
+        p += `<path d="M${(cx-r*1.7).toFixed(1)},${bottom.toFixed(1)} Q${cx.toFixed(1)},${(cy+r*.9).toFixed(1)} ${(cx+r*1.7).toFixed(1)},${bottom.toFixed(1)}" fill="none" stroke="${fig}" stroke-width="2"/>`;
+      }
+    }
+    if ((sh.motifs||[]).some(m=>m==="EAR_RED")) p += `<circle cx="${w-16}" cy="16" r="6" fill="#D2406A"/>`;
+    p += `<text x="10" y="22" fill="${fig}" font-family="IBM Plex Mono, monospace" font-size="15" font-weight="500">${esc(sh.size)}</text>`;
+    p += `<text x="10" y="${h-10}" fill="${fig}" font-family="Gothic A1, sans-serif" font-size="11.5">${esc(ANGLE_KO[sh.angle]||sh.angle)} · ${esc(MOVE_KO[sh.move]||sh.move)}${sh.lens_mm?` · ${sh.lens_mm}mm`:""}</text>`;
+    return p + `</svg>`;
+  }
+
+  function card(sh, sc){
+    const dl = (sh.dialogue||[]).map(d=>`<p><span class="who">${esc(name(d.speaker))}</span>${esc(d.line)}${MODE_KO[d.mode]?`<span class="mode">${MODE_KO[d.mode]}</span>`:""}</p>`).join("");
+    const motifs = (sh.motifs||[]).map(m=>`<span class="chip motif">${esc(MOTIF_KO[m]||m)}</span>`).join("");
+    const lk = {}; (sc.looks||[]).forEach(l=>lk[l.character]=l.variant); (sh.looks||[]).forEach(l=>lk[l.character]=l.variant);
+    const looks = (sh.characters||[]).filter(c=>lk[c]).map(c=>`<span class="chip look">${esc(name(c))} ${esc(LOOK_KO[lk[c]]||lk[c])}</span>`).join("");
+    const who = (sh.characters||[]).map(name).join(", ");
+    return `<article class="card" id="${esc(sh.id)}" data-motifs="${esc((sh.motifs||[]).join(" "))}">
+      ${sh.image ? `<img class="frame" src="${esc((D.imgBase||"") + sh.image)}" alt="${esc(sh.id)} 패널" loading="lazy" style="object-fit:cover">` : frameSVG(sh, sc.time)}
+      <div class="cap">
+        <div class="r1"><b>${esc(sh.id)}</b><span>${sh.duration_sec}초</span></div>
+        <div class="chips"><span class="chip">${esc(sh.size)}</span><span class="chip">${esc(ANGLE_KO[sh.angle]||sh.angle)}</span><span class="chip">${esc(MOVE_KO[sh.move]||sh.move)}</span>${sh.lens_mm?`<span class="chip">${sh.lens_mm}mm</span>`:""}${looks}${motifs}</div>
+        ${sh.frame?`<p class="fr">${esc(sh.frame)}</p>`:""}
+        ${sh.action?`<p class="act">${esc(sh.action)}</p>`:""}
+        ${sh.insert_text?`<p class="ins">${esc(sh.insert_text)}</p>`:""}
+        ${dl?`<div class="dl">${dl}</div>`:""}
+        ${sh.sound?`<p class="snd">소리 · ${esc(sh.sound)}</p>`:""}
+        ${sh.continuity?`<p class="cont">연속성 · ${esc(sh.continuity)}</p>`:""}
+        ${sh.notes?`<p class="note">메모 · ${esc(sh.notes)}</p>`:""}
+        ${who?`<p class="note">인물 · ${esc(who)}</p>`:""}
+        ${sh.image_prompt?`<details><summary>이미지 프롬프트</summary><pre>${esc(sh.image_prompt)}</pre><button type="button" class="copy" data-copy="${esc(sh.image_prompt)}">복사</button></details>`:""}
+      </div>
+      <p class="trans">→ ${esc(sh.transition||"CUT")}</p>
+    </article>`;
+  }
+
+  function go(i, push){
+    cur = i; motif = null;
+    const e = EPS[i];
+    document.querySelectorAll("#rail button").forEach((b,k)=>b.setAttribute("aria-current", k===i ? "true" : "false"));
+    if (push) { try { history.replaceState(null, "", "#ep" + String(e.episode).padStart(2,"0")); } catch(_) { location.hash = "ep" + String(e.episode).padStart(2,"0"); } }
+    const shots = e.scenes.flatMap(s => s.shots.map(sh => ({sh, s})));
+    const counts = {};
+    shots.forEach(({sh}) => (sh.motifs||[]).forEach(m => counts[m] = (counts[m]||0) + 1));
+    let t = 0;
+    const segs = e.scenes.map((s,si) => s.shots.map(sh => { const b = `<button type="button" data-id="${esc(sh.id)}" data-motifs="${esc((sh.motifs||[]).join(" "))}" title="${esc(sh.id)} · ${tc(t)} · ${sh.duration_sec}초" style="width:${(sh.duration_sec/e.runtime*100).toFixed(3)}%;background:${SCENE_COL[si%SCENE_COL.length]}"></button>`; t += sh.duration_sec; return b; }).join("")).join("");
+    const labels = e.scenes.map(s => `<span style="left:${(s.tc_in_sec/e.runtime*100).toFixed(2)}%">${esc(s.id)}</span>`).join("");
+    const body = shots.length ? e.scenes.map(s => `<section class="scene" aria-labelledby="h-${esc(s.id)}">
+        <div class="schead"><span class="sid">${esc(s.id)}</span><h3 id="h-${esc(s.id)}">${esc(s.heading)}</h3><span class="tc">${esc(s.tc_in)}–${esc(s.tc_out)}</span>${s.mood?`<span class="mood">${esc(s.mood)}</span>`:""}${s.summary?`<p>${esc(s.summary)}</p>`:""}</div>
+        <div class="grid">${s.shots.map(sh => card(sh, s)).join("")}</div></section>`).join("")
+      : `<p class="empty-ep">이 회차는 아직 샷이 채워지지 않았습니다.</p>`;
+    $("#ep").innerHTML = `
+      <div class="ephead">
+        <div><h2><span class="no">${String(e.episode).padStart(2,"0")}화</span>「${esc(e.title)}」</h2><p class="hook"><b>훅</b>${esc(e.hook)}</p></div>
+        <div class="epmeta"><span class="pill st-${esc(e.status)}">${esc(e.status)}</span><span class="pill">샷 ${e.shots}</span><span class="pill">${tc(e.runtime)}</span>${e.shots?`<button type="button" class="btn" id="copyall">회차 프롬프트 전체 복사</button>`:""}</div>
+      </div>
+      ${shots.length ? `<div class="tl"><div class="tl-scroll"><div class="tl-in"><div class="tl-scenes">${labels}</div><div class="tl-bar" id="tlbar">${segs}</div><div class="tl-ticks mono"><span>00:00</span><span>00:30</span><span>01:00</span><span>01:30</span><span>02:00</span><span>02:30</span><span>03:00</span></div></div></div></div>
+      <div class="filters" id="filters"><span class="lab">모티프</span>${Object.keys(counts).sort().map(m=>`<button type="button" data-m="${esc(m)}" aria-pressed="false">${esc(MOTIF_KO[m]||m)} ${counts[m]}</button>`).join("")}</div>` : ""}
+      ${body}`;
+    const bar = $("#tlbar");
+    if (bar) bar.addEventListener("click", ev => { const b = ev.target.closest("button"); if (!b) return; const c = document.getElementById(b.dataset.id); if (c) { c.scrollIntoView({behavior: matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth", block:"center"}); c.classList.add("flash"); setTimeout(()=>c.classList.remove("flash"), 1400); } });
+    const f = $("#filters");
+    if (f) f.addEventListener("click", ev => { const b = ev.target.closest("button"); if (!b) return; motif = motif === b.dataset.m ? null : b.dataset.m; applyMotif(); });
+    const ca = $("#copyall");
+    if (ca) ca.addEventListener("click", () => copy(shots.filter(x=>x.sh.image_prompt).map(x => `${x.sh.id}\t${x.sh.image_prompt}`).join("\n"), "회차 프롬프트를 복사했습니다"));
+  }
+
+  function applyMotif(){
+    document.querySelectorAll("#filters button").forEach(b => b.setAttribute("aria-pressed", b.dataset.m === motif ? "true" : "false"));
+    document.querySelectorAll(".card").forEach(c => c.classList.toggle("dim", !!motif && !c.dataset.motifs.split(" ").includes(motif)));
+    document.querySelectorAll("#tlbar button").forEach(b => { const has = !!motif && b.dataset.motifs.split(" ").includes(motif); b.classList.toggle("dim", !!motif && !has); b.classList.toggle("hasmotif", has); });
+  }
+
+  let toastT;
+  function toast(msg){ const t = $("#toast"); t.textContent = msg; t.hidden = false; clearTimeout(toastT); toastT = setTimeout(()=>t.hidden = true, 1600); }
+  function copy(text, msg){
+    const fallback = () => { const ta = document.createElement("textarea"); ta.value = text; document.body.appendChild(ta); ta.select(); try { document.execCommand("copy"); toast(msg); } catch(_) { toast("복사가 막혀 있습니다. 텍스트를 직접 선택해 주세요"); } ta.remove(); };
+    try { navigator.clipboard.writeText(text).then(()=>toast(msg), fallback); } catch(_) { fallback(); }
+  }
+  document.addEventListener("click", ev => { const b = ev.target.closest(".copy"); if (b) copy(b.dataset.copy, "프롬프트를 복사했습니다"); });
+
+  function fromHash(){ const m = /^#ep(\d{1,2})$/.exec(location.hash); const i = m ? EPS.findIndex(e => e.episode === +m[1]) : -1; return i >= 0 ? i : 0; }
+  window.addEventListener("hashchange", () => go(fromHash(), false));
+  go(fromHash(), false);
+})();
+</script>
