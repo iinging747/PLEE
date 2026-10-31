@@ -6,15 +6,110 @@
   "runtime_sec": 180,
   "aspect": "16:9",
   "status": "review",
-  "notes": "샷 수 57, 평균 3.2초. 흑립의 눈 ECU(S01-07)를 '그 눈'의 기준 컷으로 삼아 S04-06에서 같은 렌즈로 되풀이한다. 강수 부상은 왼팔(원작 10화 대본 기준), 율 상처는 왼쪽 옆구리로 정했다. 12~17화도 같은 쪽으로 이어 갈 것. WHISTLE 첫 등장 S05-05~06. 지붕 위 흑립은 S01-10. 정조 삿갓 변장 S03-06(이미지 생성 시 곤룡포 토큰 주의). S#5의 달래는 웃음소리(O.S.)로만 나와 샷 characters에서는 뺐다. 고증확인: 호루라기 재질.",
+  "notes": "샷 수 57, 평균 3.2초. 흑립의 눈 ECU(S01-07)를 '그 눈'의 기준 컷으로 삼아 S04-06에서 같은 렌즈로 되풀이한다. 강수 부상은 왼팔(원작 10화 대본 기준), 율 상처는 왼쪽 옆구리로 정했다. 12~17화도 같은 쪽으로 이어 갈 것. WHISTLE 첫 등장 S05-05~06. 지붕 위 흑립은 S01-10. 정조 삿갓 변장 S03-06(이미지 생성 시 곤룡포 토큰 주의). S#5의 달래는 웃음소리(O.S.)로만 나와 샷 characters에서는 뺐다. 고증확인: 호루라기 재질. 앞 12초는 강수의 '지난 대목'(S#0, 시그니처). 그만큼 각 씬을 span 비율로 줄였다.",
   "scenes": [
+    {
+      "id": "S#0",
+      "heading": "지난 대목 — 종로 담배가게 앞 평상 (낮)",
+      "location": "jongno_tobacco",
+      "time": "DAY",
+      "tc_in": "00:00",
+      "tc_out": "00:12",
+      "characters": [
+        "gangsu",
+        "heukrip"
+      ],
+      "mood": "COMEDY",
+      "summary": "강수의 '지난 대목'(시그니처). 10화를 12초로 요약하고 부채를 접으며 오늘 대목을 연다.",
+      "source_text": "평상 위의 강수가 부채를 촥 펴고 카메라를 본다.\nFlash. (10화) 가면을 돌리며 걷는 강수의 뒤에서, 칼날이 달빛에 번뜩인다.\n(N, 강수) 지난 대목에 이르기를, 그는 알고도 모른 척했소. 왕 앞에서도. 그리고 가면을 돌리며 걷던 이 몸 뒤에서 칼날이 번뜩였지.\n**강수** (부채를 탁 접으며) 자, 오늘 대목이오.",
+      "shots": [
+        {
+          "id": "S00-01",
+          "size": "MCU",
+          "angle": "LOW",
+          "move": "FIX",
+          "lens_mm": 50,
+          "characters": [
+            "gangsu"
+          ],
+          "frame": "평상 위 강수 정면. 부채를 촥 펴며 카메라를 본다(제4의 벽). 뒤로 구경꾼들이 흐리다.",
+          "action": "평상 위의 강수가 부채를 촥 펴고 카메라를 본다.",
+          "sound": "(E) 부채 펴는 소리 촥",
+          "motifs": [
+            "NARRATOR"
+          ],
+          "transition": "CUT",
+          "duration_sec": 2,
+          "continuity": "지난 대목은 이야기 밖 액자다. 매회 같은 구도, 1화 강수 차림 그대로(부상·붕대 없음), 평상은 화면 가운데",
+          "image_prompt": "low angle medium close-up, the storyteller on his wooden platform snapping open a folding fan and looking straight at the viewer, blurred crowd behind, warm daylight",
+          "image_from": "ep02/S00-01",
+          "image_filter": "none"
+        },
+        {
+          "id": "S00-02",
+          "size": "LS",
+          "angle": "HIGH",
+          "move": "FIX",
+          "lens_mm": 35,
+          "characters": [
+            "gangsu",
+            "heukrip"
+          ],
+          "frame": "Flash. 10화 마지막 컷(S05-10)을 탈색해 다시 보여 준다. 골목을 길게 내려다본다. 화면 왼쪽 앞에 탈을 돌리며 걷는 강수, 오른쪽 뒤 어둠 속에 칼날 빛 한 점. 칼날이 번뜩이는 순간 정지.",
+          "action": "가면을 돌리며 걷는 강수의 뒤에서, 칼날이 달빛에 번뜩인다.",
+          "dialogue": [
+            {
+              "speaker": "N:gangsu",
+              "line": "지난 대목에 이르기를, 그는 알고도 모른 척했소. 왕 앞에서도. 그리고 가면을 돌리며 걷던 이 몸 뒤에서 칼날이 번뜩였지.",
+              "mode": "N"
+            }
+          ],
+          "motifs": [
+            "NARRATOR"
+          ],
+          "transition": "CUT",
+          "duration_sec": 7,
+          "image_from": "ep10/S05-10",
+          "image_filter": "desaturate",
+          "image_prompt": "desaturated memory. high angle wide shot down the length of the alley, the storyteller on the left spinning his mask as he walks, and behind him on the right in the darkness a single glint of moonlight on a raised blade, freeze frame"
+        },
+        {
+          "id": "S00-03",
+          "size": "MCU",
+          "angle": "LOW",
+          "move": "FIX",
+          "lens_mm": 50,
+          "characters": [
+            "gangsu"
+          ],
+          "frame": "S00-01과 같은 구도. 부채를 탁 접고 고개를 까딱한다.",
+          "action": "강수가 부채를 탁 접으며 오늘 대목을 연다.",
+          "dialogue": [
+            {
+              "speaker": "gangsu",
+              "line": "자, 오늘 대목이오.",
+              "mode": "ON"
+            }
+          ],
+          "sound": "(E) 부채 접는 소리 탁",
+          "motifs": [
+            "NARRATOR"
+          ],
+          "transition": "SMASH_CUT",
+          "duration_sec": 3,
+          "image_prompt": "low angle medium close-up, the storyteller snapping his folding fan shut with a sly grin, looking at the viewer, warm daylight",
+          "image_from": "ep02/S00-03",
+          "image_filter": "none"
+        }
+      ]
+    },
     {
       "id": "S#1",
       "heading": "종로 뒷골목 (밤)",
       "location": "jongno_alley",
       "time": "NIGHT",
-      "tc_in": "00:00",
-      "tc_out": "00:30",
+      "tc_in": "00:12",
+      "tc_out": "00:40",
       "characters": [
         "gangsu",
         "heukrip"
@@ -82,7 +177,7 @@
           "action": "강수가 담벽에 부딪히며 주저앉는다.",
           "sound": "(E) 퍽. 흙담에서 흙이 부스스 떨어진다",
           "transition": "CUT",
-          "duration_sec": 3,
+          "duration_sec": 2,
           "image_prompt": "wide handheld shot of a narrow moonlit back alley, a wounded young man slamming into an earthen wall on the left and sliding down, a dark figure in a wide black gat stepping closer from the shadows on the right"
         },
         {
@@ -170,7 +265,7 @@
           "action": "흑립의 칼이 허공에서 멈춘다. 한 박자. 멀리서 딱따기 소리.",
           "sound": "(E) 멀리서 순라군의 딱따기 소리 딱, 딱",
           "transition": "CUT",
-          "duration_sec": 4,
+          "duration_sec": 3,
           "notes": "대본의 '한 박자'. 대사 없이 버틴다",
           "image_prompt": "profile two-shot in a dark alley, the wounded man slumped low on the left and the assassin standing on the right, his sword frozen in midair between them, faint torchlight far down the alley"
         },
@@ -217,8 +312,8 @@
       "heading": "달래책방 안채 (밤)",
       "location": "dallae_anchae",
       "time": "NIGHT",
-      "tc_in": "00:30",
-      "tc_out": "01:10",
+      "tc_in": "00:40",
+      "tc_out": "01:17",
       "characters": [
         "gangsu",
         "jeonggyeom",
@@ -243,7 +338,7 @@
           "action": "정겸이 바늘로 강수의 팔을 꿰맨다. 달래가 등잔을 들고 있다.",
           "sound": "(E) 실 당기는 소리. 강수의 참는 숨",
           "transition": "CUT",
-          "duration_sec": 4,
+          "duration_sec": 3,
           "continuity": "축: 강수 화면 왼쪽(다친 왼팔을 화면 가운데 쪽으로 내민다), 정겸 오른쪽, 달래는 둘 사이 뒤쪽 가운데. 방문은 강수 등 뒤 왼쪽. 광원은 달래가 든 등잔 하나. 강수 왼팔은 이 씬에서 꿰매고 S#3부터 무명 붕대",
           "image_prompt": "a cramped room lit only by a single oil lamp held in a young woman's trembling hands at the back, a wounded young man on the left resting his cut forearm on a low desk, a tall scholar on the right stitching the wound with needle and thread"
         },
@@ -449,7 +544,7 @@
           "frame": "정겸이 화면 오른쪽에서 손을 뻗어 달래 손에서 등잔을 받아 든다. 불꽃이 정겸 손에서 곧게 선다. 달래의 빈손은 그대로 떨린다.",
           "action": "정겸이 말없이 등잔을 받아 든다.",
           "transition": "DISSOLVE",
-          "duration_sec": 6,
+          "duration_sec": 4,
           "image_prompt": "two-shot, the tall scholar reaching over and quietly taking the oil lamp from the young woman's hands, the flame steadying in his grip while her empty hands still tremble"
         }
       ]
@@ -459,8 +554,8 @@
       "heading": "종로 담배가게 앞 (낮)",
       "location": "jongno_tobacco",
       "time": "DAY",
-      "tc_in": "01:10",
-      "tc_out": "01:50",
+      "tc_in": "01:17",
+      "tc_out": "01:54",
       "characters": [
         "gangsu",
         "jeonggyeom",
@@ -513,7 +608,7 @@
           "action": "강수가 키스 대목 직전까지 읽어 나가다 뚝 멈춘다.",
           "sound": "낭독 소리(알아듣지 못할 정도로), 군중이 숨을 죽인다",
           "transition": "CUT",
-          "duration_sec": 4,
+          "duration_sec": 3,
           "image_prompt": "low angle, the storyteller on his platform with a white cotton bandage wrapped around his left forearm, holding a thread-bound book in that hand and a fan in the other, pausing dramatically mid-sentence"
         },
         {
@@ -574,7 +669,7 @@
           "action": "던진 사람은 지친 얼굴의 내관. 그 뒤에 삿갓을 눌러쓴 선비 하나. 정조다.",
           "sound": "장터 소음이 한 박자 빠진다",
           "transition": "CUT",
-          "duration_sec": 5,
+          "duration_sec": 3,
           "continuity": "정조는 삿갓 쓴 선비 변장(bible ep11 의상). 안 내관은 무명옷, 삿갓 없음",
           "notes": "변장 차림은 씬 looks(jeongjo:disguise, an_naegwan:disguise)로 프롬프트에 들어간다",
           "image_prompt": "at the back of the crowd, a weary middle-aged man in plain commoner's cotton clothes lowering his throwing arm, rack focus to a scholar behind him wearing a wide bamboo satgat pulled low, only his jaw visible, plain ramie robe"
@@ -707,8 +802,8 @@
       "heading": "허진의 집 사랑채 (밤)",
       "location": "heojin_sarang",
       "time": "NIGHT",
-      "tc_in": "01:50",
-      "tc_out": "02:25",
+      "tc_in": "01:54",
+      "tc_out": "02:27",
       "characters": [
         "heojin",
         "heukrip"
@@ -731,7 +826,7 @@
           "action": "흑립이 열 걸음 밖에 엎드려 있다. 허진이 차를 따른다.",
           "sound": "찻물 소리, 정적",
           "transition": "CUT",
-          "duration_sec": 4,
+          "duration_sec": 3,
           "continuity": "축: 허진은 항상 화면 오른쪽에 앉고 흑립은 왼쪽 열 걸음 밖(bible axis). 촛불은 허진 얼굴 반쪽만 비춘다. 문은 흑립 등 뒤 왼쪽",
           "image_prompt": "wide shot of an austere reception room at night, a composed high official seated at a low tea table on the right beside a single candle, an assassin in black prostrated on the floor far to the left, ten paces away"
         },
@@ -876,7 +971,7 @@
           "frame": "S04-01과 같은 축. 천천히 물러나면 촛불 하나와 두 사람 사이의 어둠만 남는다.",
           "action": "두 사람 사이의 거리. 촛불이 흔들린다.",
           "transition": "FADE_OUT",
-          "duration_sec": 5,
+          "duration_sec": 4,
           "image_prompt": "slow dolly out from the reception room, a single candle, the official on the right and the dark prostrate figure on the left swallowed by shadow"
         }
       ]
@@ -886,7 +981,7 @@
       "heading": "달래책방 골목 (밤)",
       "location": "dallae_wall",
       "time": "NIGHT",
-      "tc_in": "02:25",
+      "tc_in": "02:27",
       "tc_out": "03:00",
       "characters": [
         "yul",
@@ -910,7 +1005,7 @@
           "action": "몽둥이와 칼을 든 완력패 다섯이 골목으로 들어선다.",
           "sound": "(E) 여러 사람의 발소리, 몽둥이 끄는 소리",
           "transition": "CUT",
-          "duration_sec": 3,
+          "duration_sec": 2,
           "continuity": "축: 담장은 화면 왼쪽 세로 벽(bible axis), 그 너머가 달래책방. 완력패는 오른쪽 골목 어귀에서 들어오고, 율은 왼쪽 담 앞에서 오른쪽을 보고 막아선다. 광원은 담 위 처마 초롱과 달빛",
           "notes": "완력패 다섯은 extras",
           "image_prompt": "low angle wide shot of a narrow alley at night, an earthen wall forming a vertical edge on the left, five thugs with clubs and swords entering from the right, backlit by the moon"
@@ -1105,7 +1200,7 @@
           "frame": "율이 담에서 몸을 떼어 화면 오른쪽 어둠으로 걸어 나간다. 카메라가 올라가면 초롱빛 아래 핏방울 자국만 남고, 담 너머 책방 불빛이 화면 왼쪽에 걸린다.",
           "action": "율이 누가 보기 전에 어둠 속으로 걸어간다.",
           "transition": "FREEZE",
-          "duration_sec": 4,
+          "duration_sec": 3,
           "notes": "엔딩 훅. 담 아래 핏방울 위에서 프리즈",
           "image_prompt": "high angle crane up, the young nobleman walking away into the dark end of the alley, leaving drops of blood in a pool of lantern light beneath the wall, the glowing bookshop windows beyond the wall on the left"
         }

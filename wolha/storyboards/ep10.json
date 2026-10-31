@@ -6,15 +6,109 @@
   "runtime_sec": 180,
   "aspect": "16:9",
   "status": "review",
-  "notes": "샷 수 57, 평균 3.2초. TASKS 필수 그림: 수첩 태우려다 멈춤(S02-04), 정조가 귀를 보는 CU(S03-05), 검은 휘장 사인회(S04-04), 강수 뒤 칼날(S05-08). 존현각(S#3)은 정겸 귀 ECU를 왼쪽 옆얼굴로 잡으려고 1화와 반대 축(정조 왼쪽 위, 정겸 오른쪽 아래)으로 찍는다. 허진은 V.O.로만 나와 S#5 등장인물에서 뺐다. 지붕 위 흑립은 S04-01.",
+  "notes": "샷 수 57, 평균 3.2초. TASKS 필수 그림: 수첩 태우려다 멈춤(S02-04), 정조가 귀를 보는 CU(S03-05), 검은 휘장 사인회(S04-04), 강수 뒤 칼날(S05-08). 존현각(S#3)은 정겸 귀 ECU를 왼쪽 옆얼굴로 잡으려고 1화와 반대 축(정조 왼쪽 위, 정겸 오른쪽 아래)으로 찍는다. 허진은 V.O.로만 나와 S#5 등장인물에서 뺐다. 지붕 위 흑립은 S04-01. 앞 12초는 강수의 '지난 대목'(S#0, 시그니처). 그만큼 각 씬을 span 비율로 줄였다.",
   "scenes": [
+    {
+      "id": "S#0",
+      "heading": "지난 대목 — 종로 담배가게 앞 평상 (낮)",
+      "location": "jongno_tobacco",
+      "time": "DAY",
+      "tc_in": "00:00",
+      "tc_out": "00:12",
+      "characters": [
+        "gangsu",
+        "dallae"
+      ],
+      "mood": "COMEDY",
+      "summary": "강수의 '지난 대목'(시그니처). 9화를 12초로 요약하고 부채를 접으며 오늘 대목을 연다.",
+      "source_text": "평상 위의 강수가 부채를 촥 펴고 카메라를 본다.\nFlash. (9화) 그날 아침 그는 원고 끝의 서명을 본다. 뒤에서 문이 열린다.\n(N, 강수) 지난 대목에 이르기를, 우산 하나 아래서 그가 처음으로 제 이야기를 했고, 그날 아침 원고 끝의 서명을 보고 말았소.\n**강수** (부채를 탁 접으며) 자, 오늘 대목이오.",
+      "shots": [
+        {
+          "id": "S00-01",
+          "size": "MCU",
+          "angle": "LOW",
+          "move": "FIX",
+          "lens_mm": 50,
+          "characters": [
+            "gangsu"
+          ],
+          "frame": "평상 위 강수 정면. 부채를 촥 펴며 카메라를 본다(제4의 벽). 뒤로 구경꾼들이 흐리다.",
+          "action": "평상 위의 강수가 부채를 촥 펴고 카메라를 본다.",
+          "sound": "(E) 부채 펴는 소리 촥",
+          "motifs": [
+            "NARRATOR"
+          ],
+          "transition": "CUT",
+          "duration_sec": 2,
+          "continuity": "지난 대목은 이야기 밖 액자다. 매회 같은 구도, 1화 강수 차림 그대로(부상·붕대 없음), 평상은 화면 가운데",
+          "image_prompt": "low angle medium close-up, the storyteller on his wooden platform snapping open a folding fan and looking straight at the viewer, blurred crowd behind, warm daylight",
+          "image_from": "ep02/S00-01",
+          "image_filter": "none"
+        },
+        {
+          "id": "S00-02",
+          "size": "FS",
+          "angle": "EYE",
+          "move": "FIX",
+          "lens_mm": 35,
+          "characters": [
+            "dallae"
+          ],
+          "frame": "Flash. 9화 마지막 컷(S04-15)을 탈색해 다시 보여 준다. 역광. 화면 오른쪽 문간에 젖은 우산을 든 달래가 서 있다. 우산 끝에서 물이 떨어진다. 시선은 왼쪽 정겸. 정지.",
+          "action": "그날 아침 그는 원고 끝의 서명을 본다. 뒤에서 문이 열린다.",
+          "dialogue": [
+            {
+              "speaker": "N:gangsu",
+              "line": "지난 대목에 이르기를, 우산 하나 아래서 그가 처음으로 제 이야기를 했고, 그날 아침 원고 끝의 서명을 보고 말았소.",
+              "mode": "N"
+            }
+          ],
+          "motifs": [
+            "NARRATOR"
+          ],
+          "transition": "CUT",
+          "duration_sec": 7,
+          "image_from": "ep09/S04-15",
+          "image_filter": "desaturate",
+          "image_prompt": "desaturated memory. full shot, backlit silhouette of the petite young woman standing in the open doorway on the right holding a wet oiled-paper umbrella dripping water, looking left into the dim storeroom, freeze frame"
+        },
+        {
+          "id": "S00-03",
+          "size": "MCU",
+          "angle": "LOW",
+          "move": "FIX",
+          "lens_mm": 50,
+          "characters": [
+            "gangsu"
+          ],
+          "frame": "S00-01과 같은 구도. 부채를 탁 접고 고개를 까딱한다.",
+          "action": "강수가 부채를 탁 접으며 오늘 대목을 연다.",
+          "dialogue": [
+            {
+              "speaker": "gangsu",
+              "line": "자, 오늘 대목이오.",
+              "mode": "ON"
+            }
+          ],
+          "sound": "(E) 부채 접는 소리 탁",
+          "motifs": [
+            "NARRATOR"
+          ],
+          "transition": "SMASH_CUT",
+          "duration_sec": 3,
+          "image_prompt": "low angle medium close-up, the storyteller snapping his folding fan shut with a sly grin, looking at the viewer, warm daylight",
+          "image_from": "ep02/S00-03",
+          "image_filter": "none"
+        }
+      ]
+    },
     {
       "id": "S#1",
       "heading": "달래책방 책 창고 (아침)",
       "location": "dallae_storage",
       "time": "MORNING",
-      "tc_in": "00:00",
-      "tc_out": "00:30",
+      "tc_in": "00:12",
+      "tc_out": "00:40",
       "characters": [
         "dallae",
         "jeonggyeom"
@@ -37,7 +131,7 @@
           "action": "정적.",
           "sound": "정적. (E) 빗물 떨어지는 소리만",
           "transition": "CUT",
-          "duration_sec": 3,
+          "duration_sec": 2,
           "continuity": "축: 9화 S04-15와 같다. 문은 화면 오른쪽, 문간에 달래, 왼쪽 궤짝 앞에 정겸. 문틈 빛은 오른쪽에서 왼쪽으로. 달래 손의 우산은 젖어 있고 정겸 도포의 오른쪽 어깨도 아직 젖어 있다",
           "image_prompt": "wide shot of the dim book storeroom, the young woman frozen in the doorway on the right holding a wet umbrella, the tall scholar frozen by the chests on the left holding a manuscript, silence"
         },
@@ -187,7 +281,7 @@
           "frame": "달래가 문설주에 등을 대고 주르륵 미끄러져 바닥에 주저앉는다. 우산이 옆으로 기운다.",
           "action": "그가 나가고 나서야 달래가 문설주에 등을 대고 주르륵 미끄러져 앉는다.",
           "transition": "CUT",
-          "duration_sec": 4,
+          "duration_sec": 3,
           "image_prompt": "full shot, the young woman sliding slowly down the door post until she sits on the floor, the wet umbrella tipping over beside her"
         },
         {
@@ -220,8 +314,8 @@
       "heading": "달래책방 행랑채 (밤)",
       "location": "dallae_haengrang",
       "time": "NIGHT",
-      "tc_in": "00:30",
-      "tc_out": "00:55",
+      "tc_in": "00:40",
+      "tc_out": "01:03",
       "characters": [
         "jeonggyeom"
       ],
@@ -262,7 +356,7 @@
             "INSERT_TEXT"
           ],
           "transition": "CUT",
-          "duration_sec": 4,
+          "duration_sec": 3,
           "notes": "7화 수첩('윤달래?' → '개연성 없음')과 같은 수첩, 같은 TOP 구도. 글씨는 후반 합성",
           "image_prompt": "top-down insert, a brush writing neat lines in a small thread-bound notebook by lamplight"
         },
@@ -310,7 +404,7 @@
           "frame": "정겸 클로즈업. 불빛이 아래에서 얼굴을 비춘다. 카메라가 아주 천천히 다가간다. 눈은 종이에 박혀 있다.",
           "action": "한참 그대로 들고 있다.",
           "transition": "CUT",
-          "duration_sec": 5,
+          "duration_sec": 4,
           "notes": "'한참'의 무대사 샷. 표정 변화 없이 눈만",
           "image_prompt": "slow push-in close-up of the scholar's face lit from below by the lamp, eyes fixed on the page he holds near the flame, motionless"
         },
@@ -367,8 +461,8 @@
       "heading": "창덕궁 존현각 (밤)",
       "location": "jonhyeongak",
       "time": "NIGHT",
-      "tc_in": "00:55",
-      "tc_out": "01:25",
+      "tc_in": "01:03",
+      "tc_out": "01:31",
       "characters": [
         "jeonggyeom",
         "jeongjo"
@@ -477,7 +571,7 @@
           "frame": "정조가 그제야 고개를 든다. 시선이 정겸의 얼굴이 아니라 귀에 머문다(화면 오른쪽 아래). 카메라가 천천히 다가간다.",
           "action": "정조가 고개를 들어 그 귀를 오래 본다.",
           "transition": "CUT",
-          "duration_sec": 4,
+          "duration_sec": 3,
           "notes": "TASKS 10화 필수 그림(정조가 귀를 보는 CU)",
           "image_prompt": "slow push-in close-up, the king finally lifting his head and gazing long and knowingly at the young man's ear, eyes slightly narrowed"
         },
@@ -561,7 +655,7 @@
           "action": "정조의 입꼬리가 아주 조금 올라간다. 다시 책으로 눈을 돌린다.",
           "sound": "짧은 해학 효과음",
           "transition": "CUT",
-          "duration_sec": 4,
+          "duration_sec": 3,
           "image_prompt": "close-up of the king, the corner of his mouth lifting ever so slightly, then focus shifting to the book in his hands as he returns to reading"
         }
       ]
@@ -571,8 +665,8 @@
       "heading": "종로 사인회 (낮)",
       "location": "jongno_tobacco",
       "time": "DAY",
-      "tc_in": "01:25",
-      "tc_out": "02:20",
+      "tc_in": "01:31",
+      "tc_out": "02:22",
       "characters": [
         "dallae",
         "jeonggyeom",
@@ -602,7 +696,7 @@
             "ROOFTOP_HEUKRIP"
           ],
           "transition": "CUT",
-          "duration_sec": 5,
+          "duration_sec": 3,
           "continuity": "축: 정면 무대 구도, 관객(줄)은 화면 아래 전경(locations.json axis). 상과 강수는 가운데, 검은 휘장은 바로 뒤, 줄은 화면 오른쪽에서 상까지 이어진다. 휘장 뒤 달래는 휘장 왼쪽 틈 쪽. 맞은편 지붕(화면 왼쪽 위)에 흑립",
           "notes": "가이드 8장의 회차별 지붕 위 흑립. 얼굴은 갓 그늘에 묻는다. S#5의 칼날을 미리 예고한다",
           "image_prompt": "high angle crane down over a bustling Jongno street corner, a banner pole beside a low table with a black curtain right behind it, a long winding queue of readers, and on a rooftop across the street at the upper left a tiny figure in a wide black gat"
@@ -814,7 +908,7 @@
             "INSERT_TEXT"
           ],
           "transition": "CUT",
-          "duration_sec": 6,
+          "duration_sec": 4,
           "notes": "글씨는 후반 합성. 끝의 서명만 1화 S04-13과 같은 필체로",
           "image_prompt": "top-down insert, forceful brush strokes filling the flyleaf of a book line by line, ink-stained fingers"
         },
@@ -903,7 +997,7 @@
       "heading": "종로 뒷골목 (밤)",
       "location": "jongno_alley",
       "time": "NIGHT",
-      "tc_in": "02:20",
+      "tc_in": "02:22",
       "tc_out": "03:00",
       "characters": [
         "gangsu",
@@ -950,7 +1044,7 @@
           "action": "강수가 콧노래를 흥얼거리며 골목을 걷는다.",
           "sound": "강수의 콧노래",
           "transition": "CUT",
-          "duration_sec": 5,
+          "duration_sec": 4,
           "image_prompt": "full shot tracking left alongside the storyteller strolling through the moonlit alley, humming happily"
         },
         {
@@ -1080,7 +1174,7 @@
           "frame": "골목을 길게 내려다본다. 화면 왼쪽 앞에 탈을 돌리며 걷는 강수, 오른쪽 뒤 어둠 속에 칼날 빛 한 점. 칼날이 번뜩이는 순간 정지.",
           "action": "가면을 돌리며 걷는 강수의 뒤에서, 칼날이 달빛에 번뜩인다.",
           "transition": "FREEZE",
-          "duration_sec": 6,
+          "duration_sec": 5,
           "notes": "엔딩 훅. 11화 S#1(칼날이 내려온다)로 이어진다",
           "image_prompt": "high angle wide shot down the length of the alley, the storyteller on the left spinning his mask as he walks, and behind him on the right in the darkness a single glint of moonlight on a raised blade, freeze frame"
         }

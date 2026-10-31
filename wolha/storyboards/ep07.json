@@ -6,15 +6,109 @@
   "runtime_sec": 180,
   "aspect": "16:9",
   "status": "review",
-  "notes": "샷 수 48, 평균 3.8초. S#1 장소를 dallae_haengrang → dallae_maru 로 고쳤다(대사가 모두 마당에서 나오고, 마당 axis가 행랑채 위치까지 정해 준다). S#4의 단서 회상은 대본에 'Flash.' 표기가 없지만 지문의 회상 나열을 짧은 플래시 컷으로 풀었다(5·6화 소스 재사용). S#5 허진은 창호지 그림자로만 보인다. S#3 정겸 궐 안 복식 — 고증확인: 검서관 단령 색과 사모.",
+  "notes": "샷 수 48, 평균 3.8초. S#1 장소를 dallae_haengrang → dallae_maru 로 고쳤다(대사가 모두 마당에서 나오고, 마당 axis가 행랑채 위치까지 정해 준다). S#4의 단서 회상은 대본에 'Flash.' 표기가 없지만 지문의 회상 나열을 짧은 플래시 컷으로 풀었다(5·6화 소스 재사용). S#5 허진은 창호지 그림자로만 보인다. S#3 정겸 궐 안 복식 — 고증확인: 검서관 단령 색과 사모. 앞 12초는 강수의 '지난 대목'(S#0, 시그니처). 그만큼 각 씬을 span 비율로 줄였다.",
   "scenes": [
+    {
+      "id": "S#0",
+      "heading": "지난 대목 — 종로 담배가게 앞 평상 (낮)",
+      "location": "jongno_tobacco",
+      "time": "DAY",
+      "tc_in": "00:00",
+      "tc_out": "00:12",
+      "characters": [
+        "gangsu",
+        "yul"
+      ],
+      "mood": "COMEDY",
+      "summary": "강수의 '지난 대목'(시그니처). 6화를 12초로 요약하고 부채를 접으며 오늘 대목을 연다.",
+      "source_text": "평상 위의 강수가 부채를 촥 펴고 카메라를 본다.\nFlash. (6화) 잿더미 속 장부 조각에 '판서댁'이라는 글자가 남아 있다.\n(N, 강수) 지난 대목에 이르기를, 해적판 창고에 불이 났고, 잿더미 속 장부 조각에 '판서댁' 세 글자가 남았소.\n**강수** (부채를 탁 접으며) 자, 오늘 대목이오.",
+      "shots": [
+        {
+          "id": "S00-01",
+          "size": "MCU",
+          "angle": "LOW",
+          "move": "FIX",
+          "lens_mm": 50,
+          "characters": [
+            "gangsu"
+          ],
+          "frame": "평상 위 강수 정면. 부채를 촥 펴며 카메라를 본다(제4의 벽). 뒤로 구경꾼들이 흐리다.",
+          "action": "평상 위의 강수가 부채를 촥 펴고 카메라를 본다.",
+          "sound": "(E) 부채 펴는 소리 촥",
+          "motifs": [
+            "NARRATOR"
+          ],
+          "transition": "CUT",
+          "duration_sec": 2,
+          "continuity": "지난 대목은 이야기 밖 액자다. 매회 같은 구도, 1화 강수 차림 그대로(부상·붕대 없음), 평상은 화면 가운데",
+          "image_prompt": "low angle medium close-up, the storyteller on his wooden platform snapping open a folding fan and looking straight at the viewer, blurred crowd behind, warm daylight",
+          "image_from": "ep02/S00-01",
+          "image_filter": "none"
+        },
+        {
+          "id": "S00-02",
+          "size": "MS",
+          "angle": "HIGH",
+          "move": "CRANE_UP",
+          "lens_mm": 35,
+          "characters": [
+            "yul"
+          ],
+          "frame": "Flash. 6화 마지막 컷(S05-06)을 탈색해 다시 보여 준다. 율이 조각을 천천히 접어 품에 넣는다. 카메라가 떠오르며 잿더미 한가운데 선 율이 작아진다. 정점에서 정지.",
+          "action": "잿더미 속 장부 조각에 '판서댁'이라는 글자가 남아 있다.",
+          "dialogue": [
+            {
+              "speaker": "N:gangsu",
+              "line": "지난 대목에 이르기를, 해적판 창고에 불이 났고, 잿더미 속 장부 조각에 '판서댁' 세 글자가 남았소.",
+              "mode": "N"
+            }
+          ],
+          "motifs": [
+            "NARRATOR"
+          ],
+          "transition": "CUT",
+          "duration_sec": 7,
+          "image_from": "ep06/S05-06",
+          "image_filter": "desaturate",
+          "image_prompt": "desaturated memory. crane up from the nobleman slowly folding a paper scrap and tucking it into his robe, rising to reveal him small and alone in the ashes at dawn"
+        },
+        {
+          "id": "S00-03",
+          "size": "MCU",
+          "angle": "LOW",
+          "move": "FIX",
+          "lens_mm": 50,
+          "characters": [
+            "gangsu"
+          ],
+          "frame": "S00-01과 같은 구도. 부채를 탁 접고 고개를 까딱한다.",
+          "action": "강수가 부채를 탁 접으며 오늘 대목을 연다.",
+          "dialogue": [
+            {
+              "speaker": "gangsu",
+              "line": "자, 오늘 대목이오.",
+              "mode": "ON"
+            }
+          ],
+          "sound": "(E) 부채 접는 소리 탁",
+          "motifs": [
+            "NARRATOR"
+          ],
+          "transition": "SMASH_CUT",
+          "duration_sec": 3,
+          "image_prompt": "low angle medium close-up, the storyteller snapping his folding fan shut with a sly grin, looking at the viewer, warm daylight",
+          "image_from": "ep02/S00-03",
+          "image_filter": "none"
+        }
+      ]
+    },
     {
       "id": "S#1",
       "heading": "달래책방 행랑채 → 마당 (낮)",
       "location": "dallae_maru",
       "time": "DAY",
-      "tc_in": "00:00",
-      "tc_out": "00:35",
+      "tc_in": "00:12",
+      "tc_out": "00:45",
       "characters": [
         "jeonggyeom",
         "dallae"
@@ -55,7 +149,7 @@
             "INSERT_TEXT"
           ],
           "transition": "CUT",
-          "duration_sec": 4,
+          "duration_sec": 3,
           "notes": "꼭 챙길 그림: 책 속 정 검서 문장",
           "image_prompt": "top-down insert of a hand-copied hangul page, a slender fingertip tracing beneath one sentence and stopping"
         },
@@ -228,7 +322,7 @@
           "action": "그 순간 정겸이 황급히 뒤돌아선다.",
           "sound": "(E) 휙. 짧은 해학 효과음",
           "transition": "CUT",
-          "duration_sec": 4,
+          "duration_sec": 3,
           "image_prompt": "same two-shot, the scholar spinning around to hide his face while the young woman cranes after him"
         }
       ]
@@ -238,8 +332,8 @@
       "heading": "종로 담배가게 앞 (낮)",
       "location": "jongno_tobacco",
       "time": "DAY",
-      "tc_in": "00:35",
-      "tc_out": "01:05",
+      "tc_in": "00:45",
+      "tc_out": "01:13",
       "characters": [
         "ma_yeonggam",
         "gangsu",
@@ -264,7 +358,7 @@
           "action": "마 영감이 5권 하권을 끌어안고 코를 훌쩍인다.",
           "sound": "(E) 훌쩍. 담배 써는 칼 소리",
           "transition": "CUT",
-          "duration_sec": 4,
+          "duration_sec": 3,
           "continuity": "축: 평상은 화면 중앙, 관객 자리는 화면 아래 전경(locations.json axis). 마 영감은 전경, 평상 뒤편에서 달래 왼쪽, 강수 오른쪽",
           "image_prompt": "street corner in front of a tobacco shop by day, an empty storyteller's platform in the center, a pudgy old moneylender in the foreground hugging a book to his chest and sniffling, two figures in the shade behind the platform"
         },
@@ -391,7 +485,7 @@
           "frame": "S02-04와 같은 투숏. 달래는 말을 잃고 강수를 본다. 강수는 부채질만 한다.",
           "action": "달래가 할 말을 잃는다.",
           "transition": "CUT",
-          "duration_sec": 4,
+          "duration_sec": 3,
           "image_prompt": "same two-shot, the young woman speechless while the storyteller fans himself smugly"
         }
       ]
@@ -401,8 +495,8 @@
       "heading": "규장각 검서청 (낮)",
       "location": "gyujanggak",
       "time": "DAY",
-      "tc_in": "01:05",
-      "tc_out": "01:40",
+      "tc_in": "01:13",
+      "tc_out": "01:46",
       "characters": [
         "lee_deokmu",
         "jeonggyeom",
@@ -433,7 +527,7 @@
           "action": "규장각 검서청. 선배 검서관 이덕무와 정겸.",
           "sound": "붓 소리, 책장 넘기는 소리",
           "transition": "CUT",
-          "duration_sec": 4,
+          "duration_sec": 3,
           "continuity": "축: 창은 화면 왼쪽(빛은 왼쪽에서), 이덕무 왼쪽 창가, 정겸 오른쪽. 정겸은 궐 안 복식(단령·사모)",
           "image_prompt": "royal library office by day, scholar-officials bent over low desks copying books, an older bespectacled scholar by a paper window on the left facing a tall young official on the right"
         },
@@ -449,7 +543,7 @@
           "frame": "이덕무가 안경을 코끝에 걸치고 쪽지를 창 쪽으로 쳐든다. 눈을 가늘게 뜬다.",
           "action": "이덕무가 '붓을 꺾어라' 쪽지를 창으로 드는 빛에 비춘다.",
           "transition": "CUT",
-          "duration_sec": 4,
+          "duration_sec": 3,
           "continuity": "6화 S02-06과 같은 쪽지(접힌 자국 그대로)",
           "image_prompt": "medium shot of a gentle bookish older scholar with round spectacles on the tip of his nose holding a slip of paper up to window light"
         },
@@ -584,8 +678,8 @@
       "heading": "달래책방 행랑채 (밤)",
       "location": "dallae_haengrang",
       "time": "NIGHT",
-      "tc_in": "01:40",
-      "tc_out": "02:20",
+      "tc_in": "01:46",
+      "tc_out": "02:23",
       "characters": [
         "jeonggyeom",
         "dallae"
@@ -607,7 +701,7 @@
           "action": "등잔 아래. 정겸이 수첩에 적는다.",
           "sound": "등잔 심지 타는 소리, 붓 소리",
           "transition": "CUT",
-          "duration_sec": 4,
+          "duration_sec": 3,
           "continuity": "축: 창호지 문(안채 쪽)은 화면 왼쪽, 등잔과 서안은 오른쪽(5화 S#1·7화 S#1과 같은 방). 정겸 시선은 마지막에 왼쪽 창호지로",
           "image_prompt": "a tall scholar writing in a small notebook by a single oil lamp at night in a tiny tidy room, a dark paper door on the left"
         },
@@ -627,7 +721,7 @@
             "INSERT_TEXT"
           ],
           "transition": "CUT",
-          "duration_sec": 4,
+          "duration_sec": 3,
           "image_prompt": "top-down insert, a small notebook with neat brush handwriting in hangul by lamplight"
         },
         {
@@ -793,7 +887,7 @@
           "frame": "왼쪽 옆얼굴. 아주 느리게 다가간다. 정겸이 창호지 쪽을 한참 본다. 귀는 그대로다.",
           "action": "정겸이 창호지 쪽을 본다. 한참 본다.",
           "transition": "FADE_OUT",
-          "duration_sec": 5,
+          "duration_sec": 4,
           "notes": "'한참'을 살리는 무대사 컷. 귀 색은 손대지 않는다(EAR 모티프 없음)",
           "image_prompt": "very slow push-in on the profile of the scholar gazing at a glowing paper door for a long time, lamplight behind him"
         }
@@ -804,7 +898,7 @@
       "heading": "허진의 집 사랑채 앞 (밤)",
       "location": "heojin_sarang",
       "time": "NIGHT",
-      "tc_in": "02:20",
+      "tc_in": "02:23",
       "tc_out": "03:00",
       "characters": [
         "yul",
@@ -828,7 +922,7 @@
           "action": "율이 아버지 방 앞에 선다.",
           "sound": "밤벌레, 먼 순라 딱따기",
           "transition": "CUT",
-          "duration_sec": 5,
+          "duration_sec": 3,
           "continuity": "축: 허진의 방(촛불)은 화면 오른쪽, 율은 왼쪽(locations.json axis: 허진 오른쪽, 아랫사람 왼쪽). 율 시선은 오른쪽 문으로",
           "image_prompt": "night exterior of a noble mansion's study wing, a paper door glowing with a single candle on the right, a young nobleman stepping onto the wooden veranda from the left and stopping before the door"
         },
@@ -935,7 +1029,7 @@
           "action": "율이 한 걸음 물러선다. 마루가 삐걱하지 않도록 아주 천천히.",
           "sound": "숨죽인 정적. 촛불 타는 소리",
           "transition": "CUT",
-          "duration_sec": 5,
+          "duration_sec": 4,
           "image_prompt": "floor-level insert, a young man's feet stepping back on wooden floorboards extremely slowly and silently, heel first"
         },
         {

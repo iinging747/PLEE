@@ -6,15 +6,115 @@
   "runtime_sec": 180,
   "aspect": "16:9",
   "status": "review",
-  "notes": "샷 수 58, 평균 3.1초. TASKS 필수 그림: 새우젓 독(S01-03), 등 돌린 정겸(S02-07), 우산 산책 부감(S03-18), EAR_NOT_RED 첫 등장(S03-10, 18화가 이 구도를 그대로 쓴다), 원고 발견(S04-04). 정겸 대사 '어미가 첩이었소…'는 길지만 한 샷(S03-05, 8초)에 통으로 넣었다. 지붕 위 흑립은 S02-01.",
+  "notes": "샷 수 58, 평균 3.1초. TASKS 필수 그림: 새우젓 독(S01-03), 등 돌린 정겸(S02-07), 우산 산책 부감(S03-18), EAR_NOT_RED 첫 등장(S03-10, 18화가 이 구도를 그대로 쓴다), 원고 발견(S04-04). 정겸 대사 '어미가 첩이었소…'는 길지만 한 샷(S03-05, 8초)에 통으로 넣었다. 지붕 위 흑립은 S02-01. 앞 12초는 강수의 '지난 대목'(S#0, 시그니처). 그만큼 각 씬을 span 비율로 줄였다.",
   "scenes": [
+    {
+      "id": "S#0",
+      "heading": "지난 대목 — 종로 담배가게 앞 평상 (낮)",
+      "location": "jongno_tobacco",
+      "time": "DAY",
+      "tc_in": "00:00",
+      "tc_out": "00:12",
+      "characters": [
+        "gangsu",
+        "dallae",
+        "yul",
+        "jeonggyeom",
+        "extras"
+      ],
+      "mood": "COMEDY",
+      "summary": "강수의 '지난 대목'(시그니처). 8화를 12초로 요약하고 부채를 접으며 오늘 대목을 연다.",
+      "source_text": "평상 위의 강수가 부채를 촥 펴고 카메라를 본다.\nFlash. (8화) 초사흘 밤 마포나루. 강둑을 따라 횃불이 다가온다.\n(N, 강수) 지난 대목에 이르기를, 「청상연가」를 읽은 아씨가 사라졌고, 여백의 암호를 따라간 마포나루로 횃불이 몰려왔소.\n**강수** (부채를 탁 접으며) 자, 오늘 대목이오.",
+      "shots": [
+        {
+          "id": "S00-01",
+          "size": "MCU",
+          "angle": "LOW",
+          "move": "FIX",
+          "lens_mm": 50,
+          "characters": [
+            "gangsu"
+          ],
+          "frame": "평상 위 강수 정면. 부채를 촥 펴며 카메라를 본다(제4의 벽). 뒤로 구경꾼들이 흐리다.",
+          "action": "평상 위의 강수가 부채를 촥 펴고 카메라를 본다.",
+          "sound": "(E) 부채 펴는 소리 촥",
+          "motifs": [
+            "NARRATOR"
+          ],
+          "transition": "CUT",
+          "duration_sec": 2,
+          "continuity": "지난 대목은 이야기 밖 액자다. 매회 같은 구도, 1화 강수 차림 그대로(부상·붕대 없음), 평상은 화면 가운데",
+          "image_prompt": "low angle medium close-up, the storyteller on his wooden platform snapping open a folding fan and looking straight at the viewer, blurred crowd behind, warm daylight",
+          "image_from": "ep02/S00-01",
+          "image_filter": "none"
+        },
+        {
+          "id": "S00-02",
+          "size": "ELS",
+          "angle": "HIGH",
+          "move": "CRANE_UP",
+          "lens_mm": 24,
+          "characters": [
+            "dallae",
+            "jeonggyeom",
+            "yul",
+            "extras"
+          ],
+          "frame": "Flash. 8화 마지막 컷(S05-11)을 탈색해 다시 보여 준다. 배들 사이의 작은 세 사람에서 크레인 업. 왼쪽 위에서 횃불 행렬이 강둑을 타고 내려와 화면을 사선으로 가른다. 정지.",
+          "action": "초사흘 밤 마포나루. 강둑을 따라 횃불이 다가온다.",
+          "dialogue": [
+            {
+              "speaker": "N:gangsu",
+              "line": "지난 대목에 이르기를, 「청상연가」를 읽은 아씨가 사라졌고, 여백의 암호를 따라간 마포나루로 횃불이 몰려왔소.",
+              "mode": "N"
+            }
+          ],
+          "motifs": [
+            "NARRATOR"
+          ],
+          "transition": "CUT",
+          "duration_sec": 7,
+          "image_from": "ep08/S05-11",
+          "image_filter": "desaturate",
+          "image_prompt": "desaturated memory. high angle crane up from three tiny figures among moored boats to a line of torches snaking down the riverbank toward them, dark river, freeze frame"
+        },
+        {
+          "id": "S00-03",
+          "size": "MCU",
+          "angle": "LOW",
+          "move": "FIX",
+          "lens_mm": 50,
+          "characters": [
+            "gangsu"
+          ],
+          "frame": "S00-01과 같은 구도. 부채를 탁 접고 고개를 까딱한다.",
+          "action": "강수가 부채를 탁 접으며 오늘 대목을 연다.",
+          "dialogue": [
+            {
+              "speaker": "gangsu",
+              "line": "자, 오늘 대목이오.",
+              "mode": "ON"
+            }
+          ],
+          "sound": "(E) 부채 접는 소리 탁",
+          "motifs": [
+            "NARRATOR"
+          ],
+          "transition": "SMASH_CUT",
+          "duration_sec": 3,
+          "image_prompt": "low angle medium close-up, the storyteller snapping his folding fan shut with a sly grin, looking at the viewer, warm daylight",
+          "image_from": "ep02/S00-03",
+          "image_filter": "none"
+        }
+      ]
+    },
     {
       "id": "S#1",
       "heading": "마포 새우젓 창고 (밤)",
       "location": "mapo",
       "time": "NIGHT",
-      "tc_in": "00:00",
-      "tc_out": "00:40",
+      "tc_in": "00:12",
+      "tc_out": "00:49",
       "characters": [
         "dallae",
         "jeonggyeom",
@@ -41,7 +141,7 @@
           "action": "비린내 나는 창고. 줄지어 선 새우젓 독 사이로 달래와 초롱을 든 정겸이 들어선다.",
           "sound": "(E) 물 떨어지는 소리, 독에 스치는 옷자락",
           "transition": "CUT",
-          "duration_sec": 3,
+          "duration_sec": 2,
           "continuity": "축: 창고 문은 화면 오른쪽, 독 줄은 왼쪽 깊숙이. 달래와 서연은 왼쪽, 율은 문 쪽 오른쪽. 정겸은 초롱을 들고 달래 뒤. 바깥 횃불빛은 오른쪽 판자 틈으로 들어온다. 8화 S#5와 같은 밤",
           "image_prompt": "dark warehouse lined with rows of large earthenware salted-shrimp jars, a single lantern entering between them, the door on the right"
         },
@@ -89,7 +189,7 @@
           "frame": "달래 시점의 부감. 독 안에 서연이 무릎을 끌어안고 웅크려 있다. 초롱빛에 퉁퉁 부은 눈이 올려다본다.",
           "action": "안에 서연이 웅크리고 있다. 눈이 통통 부었다.",
           "transition": "CUT",
-          "duration_sec": 3,
+          "duration_sec": 2,
           "image_prompt": "point of view looking down into a large jar, a frightened girl curled up inside hugging her knees, eyes swollen from crying, lit by a lantern from above"
         },
         {
@@ -186,7 +286,7 @@
           "action": "창고 밖에 횃불이 멈춘다.",
           "sound": "(E) 발소리 떼가 멈춘다, 횃불 타는 소리",
           "transition": "CUT",
-          "duration_sec": 3,
+          "duration_sec": 2,
           "image_prompt": "medium shot, stripes of red torchlight slicing through the plank gaps on the right and stopping on the jars, the young woman looking up in alarm"
         },
         {
@@ -284,8 +384,8 @@
       "heading": "마포나루 (새벽)",
       "location": "mapo",
       "time": "DAWN",
-      "tc_in": "00:40",
-      "tc_out": "01:10",
+      "tc_in": "00:49",
+      "tc_out": "01:17",
       "characters": [
         "dallae",
         "jeonggyeom",
@@ -310,7 +410,7 @@
           "action": "물안개. 강화로 가는 첫 배가 떠날 채비를 한다.",
           "sound": "(E) 물소리, 먼 물새 소리",
           "transition": "CUT",
-          "duration_sec": 3,
+          "duration_sec": 2,
           "continuity": "축: 강과 첫 배는 화면 오른쪽, 나루 밖 길은 왼쪽. 정겸은 강을 등지고 화면 왼쪽을 향해 선다. 율은 왼쪽 길로 빠져나간다",
           "notes": "사공은 단역",
           "image_prompt": "extreme wide shot of a misty riverside landing at blue dawn, a small boat waiting on the right"
@@ -328,7 +428,7 @@
           "frame": "젖은 옷차림의 서연이 뱃전을 넘어 배에 오른다. 화면 왼쪽 끝에 달래.",
           "action": "서연이 강화로 가는 첫 배에 오른다.",
           "transition": "CUT",
-          "duration_sec": 3,
+          "duration_sec": 2,
           "image_prompt": "medium shot, the frightened girl in damp salt-stained silk clothes climbing into a small boat, the bookshop owner at the left edge of frame"
         },
         {
@@ -501,8 +601,8 @@
       "heading": "운종가 골목 (새벽, 비)",
       "location": "unjong_rain",
       "time": "DAWN",
-      "tc_in": "01:10",
-      "tc_out": "02:20",
+      "tc_in": "01:17",
+      "tc_out": "02:22",
       "characters": [
         "dallae",
         "jeonggyeom"
@@ -528,7 +628,7 @@
             "UMBRELLA"
           ],
           "transition": "CUT",
-          "duration_sec": 4,
+          "duration_sec": 3,
           "continuity": "축: 정면 커버리지(두 사람이 카메라 쪽으로 걷는다)에서 정겸은 화면 왼쪽, 달래는 오른쪽. 달래는 정겸의 왼편에 서고, 우산은 달래 쪽으로 기울어 정겸의 오른쪽 어깨(화면 왼쪽)가 흠뻑 젖는다. 귀 ECU는 달래 쪽에서 본 정겸의 왼쪽 옆얼굴(1화 S03-06 구도). 마지막 수직 부감은 축 중립(locations.json axis)",
           "notes": "고증확인: 18세기 한양 기름종이 우산의 형태(살 수, 손잡이)",
           "image_prompt": "high angle crane down into a narrow alley at blue dawn in heavy rain, a single oiled-paper umbrella approaching from the far end, wet stones reflecting the sky"
@@ -549,7 +649,7 @@
             "UMBRELLA"
           ],
           "transition": "CUT",
-          "duration_sec": 5,
+          "duration_sec": 4,
           "image_prompt": "two-shot at eye level, camera leading them as they walk toward it, the tall scholar on the left holding one oiled-paper umbrella tilted over the petite young woman on the right, his right shoulder outside the umbrella and soaked dark"
         },
         {
@@ -866,7 +966,7 @@
             "UMBRELLA"
           ],
           "transition": "DISSOLVE",
-          "duration_sec": 7,
+          "duration_sec": 4,
           "notes": "TASKS 9화 필수 그림(우산 산책 부감). 수직 부감은 축 중립. 15화 '두고 간 우산'과 같은 우산",
           "image_prompt": "bird's-eye view straight down on a narrow rain-soaked alley at blue dawn, a single oiled-paper umbrella moving up the frame and shrinking as the camera rises, wet tiled roofs framing the edges"
         }
@@ -877,7 +977,7 @@
       "heading": "달래책방 책 창고 (아침)",
       "location": "dallae_storage",
       "time": "MORNING",
-      "tc_in": "02:20",
+      "tc_in": "02:22",
       "tc_out": "03:00",
       "characters": [
         "dallae",
@@ -900,7 +1000,7 @@
           "action": "빗물이 새는 창고.",
           "sound": "(E) 뚝, 뚝",
           "transition": "CUT",
-          "duration_sec": 3,
+          "duration_sec": 2,
           "continuity": "축: 문은 화면 오른쪽, 문틈 아침빛은 오른쪽에서 왼쪽으로 가로지른다(locations.json axis). 정겸은 왼쪽 궤짝 더미 앞. 정겸 도포의 오른쪽 어깨는 S#3의 비로 아직 젖어 있다",
           "image_prompt": "narrow leaking book storeroom in the morning, stripes of daylight from a door gap on the right cutting across stacks of books and wooden chests, water dripping from the ceiling, a tall silhouette by the chests on the left"
         },
@@ -930,7 +1030,7 @@
           "frame": "정겸이 소매를 걷고 궤짝을 하나씩 들어 마른 쪽(화면 왼쪽)으로 옮긴다. 도포 오른쪽 어깨가 아직 젖어 있다.",
           "action": "정겸이 젖을까 봐 책 궤짝을 옮긴다.",
           "transition": "CUT",
-          "duration_sec": 3,
+          "duration_sec": 2,
           "image_prompt": "medium shot, the tall scholar with sleeves rolled up lifting a heavy book chest away from the drip, the right shoulder of his white robe still damp"
         },
         {

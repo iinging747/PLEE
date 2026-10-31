@@ -6,15 +6,113 @@
   "runtime_sec": 180,
   "aspect": "16:9",
   "status": "review",
-  "notes": "샷 수 58, 평균 3.1초. S#3 화재는 핸드헬드·더치로, 탈출은 로우 슬로모션으로. 밤 장면 광원은 달빛 줄무늬(판자 틈)와 불길. 대본상 먹순은 창고 안으로 들어가지 않고 이후 행방이 없어 S03-02 뒤로는 화면에 넣지 않았다. 창고 문을 누가 잠갔는지도 보여 주지 않는다.",
+  "notes": "샷 수 58, 평균 3.1초. S#3 화재는 핸드헬드·더치로, 탈출은 로우 슬로모션으로. 밤 장면 광원은 달빛 줄무늬(판자 틈)와 불길. 대본상 먹순은 창고 안으로 들어가지 않고 이후 행방이 없어 S03-02 뒤로는 화면에 넣지 않았다. 창고 문을 누가 잠갔는지도 보여 주지 않는다. 앞 12초는 강수의 '지난 대목'(S#0, 시그니처). 그만큼 각 씬을 span 비율로 줄였다.",
   "scenes": [
+    {
+      "id": "S#0",
+      "heading": "지난 대목 — 종로 담배가게 앞 평상 (낮)",
+      "location": "jongno_tobacco",
+      "time": "DAY",
+      "tc_in": "00:00",
+      "tc_out": "00:12",
+      "characters": [
+        "gangsu",
+        "dallae",
+        "heukrip",
+        "jeonggyeom"
+      ],
+      "mood": "COMEDY",
+      "summary": "강수의 '지난 대목'(시그니처). 5화를 12초로 요약하고 부채를 접으며 오늘 대목을 연다.",
+      "source_text": "평상 위의 강수가 부채를 촥 펴고 카메라를 본다.\nFlash. (5화) 손을 잡고 돌아오는 두 사람을, 지붕 위의 흉터 난 손이 내려다본다.\n(N, 강수) 지난 대목에 이르기를, 키스신을 쓰려고 가짜 정혼자와 연애 연습을 했소. 손잡고 돌아오는 두 사람을, 흉터 난 손이 내려다보았지.\n**강수** (부채를 탁 접으며) 자, 오늘 대목이오.",
+      "shots": [
+        {
+          "id": "S00-01",
+          "size": "MCU",
+          "angle": "LOW",
+          "move": "FIX",
+          "lens_mm": 50,
+          "characters": [
+            "gangsu"
+          ],
+          "frame": "평상 위 강수 정면. 부채를 촥 펴며 카메라를 본다(제4의 벽). 뒤로 구경꾼들이 흐리다.",
+          "action": "평상 위의 강수가 부채를 촥 펴고 카메라를 본다.",
+          "sound": "(E) 부채 펴는 소리 촥",
+          "motifs": [
+            "NARRATOR"
+          ],
+          "transition": "CUT",
+          "duration_sec": 2,
+          "continuity": "지난 대목은 이야기 밖 액자다. 매회 같은 구도, 1화 강수 차림 그대로(부상·붕대 없음), 평상은 화면 가운데",
+          "image_prompt": "low angle medium close-up, the storyteller on his wooden platform snapping open a folding fan and looking straight at the viewer, blurred crowd behind, warm daylight",
+          "image_from": "ep02/S00-01",
+          "image_filter": "none"
+        },
+        {
+          "id": "S00-02",
+          "size": "LS",
+          "angle": "HIGH",
+          "move": "CRANE_UP",
+          "lens_mm": 35,
+          "characters": [
+            "heukrip",
+            "dallae",
+            "jeonggyeom"
+          ],
+          "frame": "Flash. 5화 마지막 컷(S04-12)을 탈색해 다시 보여 준다. 흑립 등 뒤 어깨 너머로 골목을 내려다본다. 화면 아래 대문 앞에 작은 두 사람. 카메라가 지붕 위로 올라가며 둘이 더 작아진다. 정점에서 정지.",
+          "action": "손을 잡고 돌아오는 두 사람을, 지붕 위의 흉터 난 손이 내려다본다.",
+          "dialogue": [
+            {
+              "speaker": "N:gangsu",
+              "line": "지난 대목에 이르기를, 키스신을 쓰려고 가짜 정혼자와 연애 연습을 했소. 손잡고 돌아오는 두 사람을, 흉터 난 손이 내려다보았지.",
+              "mode": "N"
+            }
+          ],
+          "motifs": [
+            "NARRATOR"
+          ],
+          "transition": "CUT",
+          "duration_sec": 7,
+          "image_from": "ep05/S04-12",
+          "image_filter": "desaturate",
+          "image_prompt": "desaturated memory. high angle crane up from behind a crouching figure in a black gat on a rooftop, looking down at two tiny figures standing apart at a hanok gate in the dusk alley"
+        },
+        {
+          "id": "S00-03",
+          "size": "MCU",
+          "angle": "LOW",
+          "move": "FIX",
+          "lens_mm": 50,
+          "characters": [
+            "gangsu"
+          ],
+          "frame": "S00-01과 같은 구도. 부채를 탁 접고 고개를 까딱한다.",
+          "action": "강수가 부채를 탁 접으며 오늘 대목을 연다.",
+          "dialogue": [
+            {
+              "speaker": "gangsu",
+              "line": "자, 오늘 대목이오.",
+              "mode": "ON"
+            }
+          ],
+          "sound": "(E) 부채 접는 소리 탁",
+          "motifs": [
+            "NARRATOR"
+          ],
+          "transition": "SMASH_CUT",
+          "duration_sec": 3,
+          "image_prompt": "low angle medium close-up, the storyteller snapping his folding fan shut with a sly grin, looking at the viewer, warm daylight",
+          "image_from": "ep02/S00-03",
+          "image_filter": "none"
+        }
+      ]
+    },
     {
       "id": "S#1",
       "heading": "종로 장터 (낮)",
       "location": "jongno_market",
       "time": "DAY",
-      "tc_in": "00:00",
-      "tc_out": "00:25",
+      "tc_in": "00:12",
+      "tc_out": "00:35",
       "characters": [
         "dallae",
         "jeonggyeom",
@@ -39,7 +137,7 @@
           "action": "좌판에 「청상연가」가 수북하다. 여인들이 줄을 선다.",
           "sound": "장터 소음, 엽전 짤랑이는 소리",
           "transition": "CUT",
-          "duration_sec": 3,
+          "duration_sec": 2,
           "continuity": "축: 좌판과 해적판 상인은 화면 오른쪽, 줄 선 여인들은 좌판에서 왼쪽으로. 달래 왼쪽, 정겸은 달래 오른쪽 한 걸음 뒤. 달래 ↔ 상인 대화는 왼쪽 ↔ 오른쪽",
           "image_prompt": "high angle wide shot of a Joseon market, a stall on the right piled high with identical cheap copies of a thread-bound novel, a long line of women in jangot cloaks queuing, a young woman and a tall scholar arriving at the left edge"
         },
@@ -79,7 +177,7 @@
             }
           ],
           "transition": "CUT",
-          "duration_sec": 4,
+          "duration_sec": 3,
           "notes": "화자는 박 과부(달래책방 단골, 단역). 19화에도 나온다",
           "image_prompt": "medium shot of a middle-aged widow in the queue clutching a cheap book to her chest, smiling apologetically at someone off-screen left"
         },
@@ -214,8 +312,8 @@
       "heading": "달래책방 안채 (낮)",
       "location": "dallae_anchae",
       "time": "DAY",
-      "tc_in": "00:25",
-      "tc_out": "01:00",
+      "tc_in": "00:35",
+      "tc_out": "01:08",
       "characters": [
         "dallae",
         "jeonggyeom",
@@ -240,7 +338,7 @@
           "action": "먹순이 해적판에 코를 박고 냄새를 맡는다. 한 번.",
           "sound": "(E) 킁",
           "transition": "CUT",
-          "duration_sec": 4,
+          "duration_sec": 2,
           "continuity": "축: 먹순 화면 왼쪽, 달래 가운데, 정겸 오른쪽(방문 쪽). 등잔은 꺼진 채 서안 왼쪽",
           "image_prompt": "cramped inner room of a bookshop by day, a shop girl on the left burying her nose in a cheap book on a low desk, a young woman in the middle and a tall scholar by the door on the right watching"
         },
@@ -460,8 +558,8 @@
       "heading": "마포 새우젓 창고 (밤)",
       "location": "mapo",
       "time": "NIGHT",
-      "tc_in": "01:00",
-      "tc_out": "02:00",
+      "tc_in": "01:08",
+      "tc_out": "02:04",
       "characters": [
         "dallae",
         "jeonggyeom",
@@ -488,7 +586,7 @@
           "action": "새우젓 창고. 네 사람이 어둠 속을 숨어든다.",
           "sound": "강물 소리, 풀벌레",
           "transition": "CUT",
-          "duration_sec": 4,
+          "duration_sec": 3,
           "continuity": "축: 강은 화면 왼쪽, 창고는 오른쪽. 창고 안에서는 문이 화면 오른쪽, 궤짝 더미는 왼쪽 안쪽. 달래 왼쪽, 정겸 오른쪽. 율은 문 밖 오른쪽",
           "image_prompt": "extreme wide night shot of the Mapo riverbank under a bright moon, dark Han River on the left, rows of warehouse roofs on the right, four small figures sneaking between the buildings"
         },
@@ -576,7 +674,7 @@
           "action": "안쪽. 궤짝 위로 해적판이 천장까지 쌓여 있다.",
           "sound": "(E) 삐걱. 쥐 소리",
           "transition": "CUT",
-          "duration_sec": 4,
+          "duration_sec": 3,
           "image_prompt": "dark warehouse interior, stripes of moonlight through gaps in the plank walls, wooden crates stacked to the ceiling with cheap books, two figures entering from a door on the right"
         },
         {
@@ -625,7 +723,7 @@
           "action": "달래와 정겸이 눈을 마주친다.",
           "sound": "정적",
           "transition": "CUT",
-          "duration_sec": 4,
+          "duration_sec": 3,
           "image_prompt": "profile two-shot in a dark storeroom, stripes of moonlight across two faces as they lock eyes in alarm"
         },
         {
@@ -778,7 +876,7 @@
           "frame": "로우앵글 슬로모션. 불길 역광 속에서 정겸이 달래를 안고 연기를 뚫고 문밖으로 뛰쳐나온다.",
           "action": "정겸이 달래를 안고 연기 속에서 뛰쳐나온다.",
           "transition": "CUT",
-          "duration_sec": 5,
+          "duration_sec": 4,
           "notes": "꼭 챙길 그림: 창고 화재",
           "image_prompt": "low angle slow motion, the scholar bursting out of a smoking warehouse doorway carrying the young woman in his arms, backlit by roaring flames"
         }
@@ -789,8 +887,8 @@
       "heading": "마포 강가 (밤)",
       "location": "mapo",
       "time": "NIGHT",
-      "tc_in": "02:00",
-      "tc_out": "02:40",
+      "tc_in": "02:04",
+      "tc_out": "02:41",
       "characters": [
         "dallae",
         "jeonggyeom",
@@ -815,7 +913,7 @@
           "action": "두 사람이 기침을 하며 모래밭에 주저앉는다. 뒤에서 창고가 탄다.",
           "sound": "기침 소리, 불길 소리, 강물",
           "transition": "CUT",
-          "duration_sec": 4,
+          "duration_sec": 2,
           "continuity": "축: 강은 화면 왼쪽, 불타는 창고는 오른쪽 후경(S#3과 같은 방향). 달래 왼쪽, 정겸 오른쪽. 둘 다 얼굴과 옷에 그을음, 달래 치맛단이 탔다",
           "image_prompt": "wide night shot on a sandy riverbank, two soot-covered people collapsing and coughing in the foreground, a warehouse burning in the right background with a lone figure watching it"
         },
@@ -831,7 +929,7 @@
           "frame": "율의 뒷모습에서 옆얼굴로. 조금 떨어진 곳에서 불을 보고 있다. 부채는 접혀 있다. 불빛이 얼굴을 물들인다.",
           "action": "율은 조금 떨어진 곳에서 불을 보고 있다.",
           "transition": "CUT",
-          "duration_sec": 3,
+          "duration_sec": 2,
           "notes": "S#5 잿더미로 이어지는 율의 얼굴. 웃음기가 없다",
           "image_prompt": "medium shot from behind and to the side, the nobleman standing apart watching the fire, folded fan in hand, face lit orange, no smile"
         },
@@ -1078,7 +1176,7 @@
       "heading": "창고 잿더미 (새벽)",
       "location": "mapo",
       "time": "DAWN",
-      "tc_in": "02:40",
+      "tc_in": "02:41",
       "tc_out": "03:00",
       "characters": [
         "yul"
@@ -1181,7 +1279,7 @@
           "frame": "율이 조각을 천천히 접어 품에 넣는다. 카메라가 떠오르며 잿더미 한가운데 선 율이 작아진다. 정점에서 정지.",
           "action": "율이 조각을 천천히 접어 품에 넣는다.",
           "transition": "FREEZE",
-          "duration_sec": 5,
+          "duration_sec": 4,
           "continuity": "장부 조각은 율의 품(왼쪽 앞섶). 7화 S#5로 이어짐",
           "notes": "엔딩 훅",
           "image_prompt": "crane up from the nobleman slowly folding a paper scrap and tucking it into his robe, rising to reveal him small and alone in the ashes at dawn"

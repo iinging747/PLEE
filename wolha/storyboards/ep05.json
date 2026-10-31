@@ -6,15 +6,115 @@
   "runtime_sec": 180,
   "aspect": "16:9",
   "status": "review",
-  "notes": "샷 수 53, 평균 3.4초. S#2 율-정겸 대사는 OTS와 정면 CU를 번갈아 귀 ECU(S02-11)를 한가운데 둔다. 발 인서트 S02-03/S04-02는 같은 구도로 대비.",
+  "notes": "샷 수 53, 평균 3.4초. S#2 율-정겸 대사는 OTS와 정면 CU를 번갈아 귀 ECU(S02-11)를 한가운데 둔다. 발 인서트 S02-03/S04-02는 같은 구도로 대비. 앞 12초는 강수의 '지난 대목'(S#0, 시그니처). 그만큼 각 씬을 span 비율로 줄였다.",
   "scenes": [
+    {
+      "id": "S#0",
+      "heading": "지난 대목 — 종로 담배가게 앞 평상 (낮)",
+      "location": "jongno_tobacco",
+      "time": "DAY",
+      "tc_in": "00:00",
+      "tc_out": "00:12",
+      "characters": [
+        "gangsu",
+        "guyongpal",
+        "dallae",
+        "jeonggyeom",
+        "extras"
+      ],
+      "mood": "COMEDY",
+      "summary": "강수의 '지난 대목'(시그니처). 4화를 12초로 요약하고 부채를 접으며 오늘 대목을 연다.",
+      "source_text": "평상 위의 강수가 부채를 촥 펴고 카메라를 본다.\nFlash. (4화) 시신 품에서 나온 쪽지. '다음은 진짜 네 차례다.'\n(N, 강수) 지난 대목에 이르기를, 판서댁 연체 도령이 나타났고, 월하노인 행세를 하던 한량이 독살되었소. 품속 쪽지엔 '다음은 진짜 네 차례다.'\n**강수** (부채를 탁 접으며) 자, 오늘 대목이오.",
+      "shots": [
+        {
+          "id": "S00-01",
+          "size": "MCU",
+          "angle": "LOW",
+          "move": "FIX",
+          "lens_mm": 50,
+          "characters": [
+            "gangsu"
+          ],
+          "frame": "평상 위 강수 정면. 부채를 촥 펴며 카메라를 본다(제4의 벽). 뒤로 구경꾼들이 흐리다.",
+          "action": "평상 위의 강수가 부채를 촥 펴고 카메라를 본다.",
+          "sound": "(E) 부채 펴는 소리 촥",
+          "motifs": [
+            "NARRATOR"
+          ],
+          "transition": "CUT",
+          "duration_sec": 2,
+          "continuity": "지난 대목은 이야기 밖 액자다. 매회 같은 구도, 1화 강수 차림 그대로(부상·붕대 없음), 평상은 화면 가운데",
+          "image_prompt": "low angle medium close-up, the storyteller on his wooden platform snapping open a folding fan and looking straight at the viewer, blurred crowd behind, warm daylight",
+          "image_from": "ep02/S00-01",
+          "image_filter": "none"
+        },
+        {
+          "id": "S00-02",
+          "size": "ELS",
+          "angle": "HIGH",
+          "move": "CRANE_UP",
+          "lens_mm": 24,
+          "characters": [
+            "dallae",
+            "jeonggyeom",
+            "guyongpal",
+            "extras"
+          ],
+          "frame": "Flash. 4화 마지막 컷(S04-12)을 탈색해 다시 보여 준다. S03-01과 같은 부감에서 크레인 업. 엎어진 술상과 쓰러진 구용팔 곁에 선 두 사람이 점점 작아지고, 장터 지붕들이 화면을 채운다. 정지.",
+          "action": "시신 품에서 나온 쪽지. '다음은 진짜 네 차례다.'",
+          "dialogue": [
+            {
+              "speaker": "N:gangsu",
+              "line": "지난 대목에 이르기를, 판서댁 연체 도령이 나타났고, 월하노인 행세를 하던 한량이 독살되었소. 품속 쪽지엔 '다음은 진짜 네 차례다.'",
+              "mode": "N"
+            }
+          ],
+          "motifs": [
+            "NARRATOR"
+          ],
+          "transition": "CUT",
+          "duration_sec": 7,
+          "image_from": "ep04/S04-12",
+          "image_filter": "desaturate",
+          "image_prompt": "desaturated memory. crane up from the two small figures standing over a collapsed man and an overturned table in the tavern yard to the market rooftops, freeze"
+        },
+        {
+          "id": "S00-03",
+          "size": "MCU",
+          "angle": "LOW",
+          "move": "FIX",
+          "lens_mm": 50,
+          "characters": [
+            "gangsu"
+          ],
+          "frame": "S00-01과 같은 구도. 부채를 탁 접고 고개를 까딱한다.",
+          "action": "강수가 부채를 탁 접으며 오늘 대목을 연다.",
+          "dialogue": [
+            {
+              "speaker": "gangsu",
+              "line": "자, 오늘 대목이오.",
+              "mode": "ON"
+            }
+          ],
+          "sound": "(E) 부채 접는 소리 탁",
+          "motifs": [
+            "NARRATOR"
+          ],
+          "transition": "SMASH_CUT",
+          "duration_sec": 3,
+          "image_prompt": "low angle medium close-up, the storyteller snapping his folding fan shut with a sly grin, looking at the viewer, warm daylight",
+          "image_from": "ep02/S00-03",
+          "image_filter": "none"
+        }
+      ]
+    },
     {
       "id": "S#1",
       "heading": "달래책방 행랑채 (낮)",
       "location": "dallae_haengrang",
       "time": "DAY",
-      "tc_in": "00:00",
-      "tc_out": "00:35",
+      "tc_in": "00:12",
+      "tc_out": "00:45",
       "characters": [
         "dallae",
         "jeonggyeom"
@@ -65,7 +165,7 @@
             "INSERT_TEXT"
           ],
           "transition": "CUT",
-          "duration_sec": 4,
+          "duration_sec": 3,
           "notes": "여백 글씨는 2화 계약서의 '김일' 서명과 같은 해서체로 쓴다(15화 글씨 대조 복선)",
           "image_prompt": "top-down insert, an open hand-copied hangul romance novel on a low desk, an ink-stained fingertip tapping a neat handwritten note in the margin beside a passage"
         },
@@ -184,7 +284,7 @@
           "action": "둘 다 숨을 참는다. 한참.",
           "sound": "숨 참는 소리, 정적",
           "transition": "CUT",
-          "duration_sec": 4,
+          "duration_sec": 3,
           "notes": "'한참 뒤'를 살리는 무대사 컷. 편집에서 줄이지 말 것",
           "image_prompt": "same profile two-shot, the two holding hands across a low desk, both frozen and holding their breath, long awkward silence"
         },
@@ -239,8 +339,8 @@
       "heading": "종로 장날 (낮)",
       "location": "jongno_market",
       "time": "DAY",
-      "tc_in": "00:35",
-      "tc_out": "01:25",
+      "tc_in": "00:45",
+      "tc_out": "01:32",
       "characters": [
         "dallae",
         "jeonggyeom",
@@ -266,7 +366,7 @@
           "action": "장터 한복판. 두 사람이 손을 잡고 걷는다.",
           "sound": "장터 소음, 흥정 소리",
           "transition": "CUT",
-          "duration_sec": 4,
+          "duration_sec": 3,
           "continuity": "축: 달래 화면 왼쪽, 정겸 오른쪽(잡은 손은 가운데). 율은 화면 왼쪽에서 들어와 달래 쪽에 선다. 이후 율 왼쪽 ↔ 정겸 오른쪽 축 유지. 귀 ECU는 정겸 왼쪽 옆얼굴",
           "image_prompt": "high angle crane down over a crowded Joseon market day, stalls and vendors, two small figures walking hand in hand through the crowd"
         },
@@ -283,7 +383,7 @@
           "frame": "정면에서 뒷걸음질하며 앞서 잡는다. 왼쪽 달래, 오른쪽 정겸. 잡은 두 팔이 나무토막처럼 곧게 뻗었다.",
           "action": "둘 다 팔이 나무토막처럼 뻣뻣하다. 발이 동시에 나간다.",
           "transition": "CUT",
-          "duration_sec": 4,
+          "duration_sec": 3,
           "notes": "꼭 챙길 그림: 나무토막 팔 걷기 투숏. 4화 S#4의 굳은 공기와 대비되는 코미디",
           "image_prompt": "frontal full shot leading two people walking hand in hand through a market, both arms stiff as planks of wood, marching in perfect sync"
         },
@@ -406,7 +506,7 @@
           "frame": "잡은 손 인서트. 달래의 손이 쏙 빠져 약과 꾸러미 쪽으로 간다. 정겸의 빈손만 허공에 남는다.",
           "action": "달래가 손을 빼서 약과를 받는다. 정겸의 빈손이 허공에 남는다.",
           "transition": "CUT",
-          "duration_sec": 4,
+          "duration_sec": 3,
           "notes": "빈손은 컷 끝까지 그대로 둔다",
           "image_prompt": "insert, a small hand slipping out of a man's grip to grab a bundle of honey cookies, leaving his empty hand hanging in mid-air"
         },
@@ -587,8 +687,8 @@
       "heading": "주막 뒤뜰 (낮)",
       "location": "jumak",
       "time": "DAY",
-      "tc_in": "01:25",
-      "tc_out": "02:20",
+      "tc_in": "01:32",
+      "tc_out": "02:23",
       "characters": [
         "jeonggyeom",
         "dallae",
@@ -613,7 +713,7 @@
           "action": "물동이 옆, 쇠돌이 평상 앞에 손을 모은 채 서 있다.",
           "sound": "(E) 물 긷는 소리, 주막 안쪽 떠드는 소리 멀리",
           "transition": "CUT",
-          "duration_sec": 4,
+          "duration_sec": 3,
           "continuity": "축: 쇠돌 화면 왼쪽(평상·물동이 앞), 정겸 오른쪽, 달래는 그 사이 가운데. 정겸 시선은 왼쪽으로",
           "image_prompt": "back yard of a Joseon tavern by day, water jars and a wooden bench on the left, a nervous young errand boy standing with clasped hands facing a tall scholar and a petite young woman on the right"
         },
@@ -707,7 +807,7 @@
           "action": "쇠돌이 자기 손등을 손가락으로 긋는다.",
           "sound": "쇠돌 대사가 이어진다(하얀 지렁이…)",
           "transition": "CUT",
-          "duration_sec": 4,
+          "duration_sec": 3,
           "notes": "3화 S#5 흑립 흉터와 같은 방향·길이로 긋는다",
           "image_prompt": "insert, a boy's index finger slowly drawing a long line across the back of his own left hand"
         },
@@ -738,7 +838,7 @@
           "frame": "정겸이 품에서 수첩을 꺼내 펼치고 붓을 놀린다. 달래가 화면 왼쪽 끝에서 고개를 기웃한다.",
           "action": "정겸이 수첩을 꺼내 적는다.",
           "transition": "CUT",
-          "duration_sec": 4,
+          "duration_sec": 3,
           "image_prompt": "medium shot of the scholar taking a small notebook from his robe and writing briskly, a curious young woman craning in at the edge of frame"
         },
         {
@@ -775,7 +875,7 @@
           "action": "달래가 수첩을 들여다본다. 정겸이 수첩을 덮는다.",
           "sound": "(E) 탁",
           "transition": "CUT",
-          "duration_sec": 4,
+          "duration_sec": 3,
           "image_prompt": "two-shot, the young woman craning her neck to peek at the notebook as the scholar snaps it shut"
         },
         {
@@ -886,7 +986,7 @@
       "heading": "달래책방 골목 (해 질 녘)",
       "location": "dallae_wall",
       "time": "DUSK",
-      "tc_in": "02:20",
+      "tc_in": "02:23",
       "tc_out": "03:00",
       "characters": [
         "dallae",
@@ -911,7 +1011,7 @@
           "action": "두 사람이 손을 잡고 돌아온다. 그림자가 길다.",
           "sound": "저녁 새소리, 먼 개 짖는 소리",
           "transition": "CUT",
-          "duration_sec": 4,
+          "duration_sec": 3,
           "continuity": "축: 담장은 화면 왼쪽 세로 벽, 대문도 왼쪽(locations.json axis). 달래 왼쪽(담 쪽), 정겸 오른쪽. 흑립의 지붕은 골목 건너편 화면 오른쪽 위",
           "image_prompt": "telephoto long shot of a narrow earthen-walled alley at sunset, the wall and a hanok gate on the left, two figures walking hand in hand toward it, long shadows, orange backlight"
         },
@@ -1082,7 +1182,7 @@
             "SCAR_LEFT_HAND"
           ],
           "transition": "CUT",
-          "duration_sec": 4,
+          "duration_sec": 3,
           "continuity": "3화 S#5와 같은 왼손, 같은 흉터(손등을 가로지르는 방향). 소매는 검은 철릭",
           "notes": "꼭 챙길 그림: 지붕 위 흑립 왼손",
           "image_prompt": "insert, a gaunt left hand pressed on roof tiles in the foreground with a long pale scar across its back, rack focus from two blurred figures at a gate far below to the scar"
@@ -1123,7 +1223,7 @@
             "ROOFTOP_HEUKRIP"
           ],
           "transition": "FREEZE",
-          "duration_sec": 5,
+          "duration_sec": 4,
           "notes": "엔딩 훅. 금 간 기와 소리 여운 위에서 프리즈",
           "image_prompt": "high angle crane up from behind a crouching figure in a black gat on a rooftop, looking down at two tiny figures standing apart at a hanok gate in the dusk alley"
         }

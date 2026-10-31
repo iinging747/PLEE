@@ -6,15 +6,111 @@
   "runtime_sec": 180,
   "aspect": "16:9",
   "status": "review",
-  "notes": "샷 수 54, 평균 3.3초. 대본에 지붕 위 흑립이 없어 넣지 않았다. 사발을 건넨 손은 대본대로 주인을 밝히지 않는다(S03-10). 쇠돌은 대본 등장인물 목록에만 있고 지문·대사가 없어 S03-01 배경에만 둔다.",
+  "notes": "샷 수 54, 평균 3.3초. 대본에 지붕 위 흑립이 없어 넣지 않았다. 사발을 건넨 손은 대본대로 주인을 밝히지 않는다(S03-10). 쇠돌은 대본 등장인물 목록에만 있고 지문·대사가 없어 S03-01 배경에만 둔다. 앞 12초는 강수의 '지난 대목'(S#0, 시그니처). 그만큼 각 씬을 span 비율로 줄였다.",
   "scenes": [
+    {
+      "id": "S#0",
+      "heading": "지난 대목 — 종로 담배가게 앞 평상 (낮)",
+      "location": "jongno_tobacco",
+      "time": "DAY",
+      "tc_in": "00:00",
+      "tc_out": "00:12",
+      "characters": [
+        "gangsu",
+        "dallae",
+        "heukrip"
+      ],
+      "mood": "COMEDY",
+      "summary": "강수의 '지난 대목'(시그니처). 3화를 12초로 요약하고 부채를 접으며 오늘 대목을 연다.",
+      "source_text": "평상 위의 강수가 부채를 촥 펴고 카메라를 본다.\nFlash. (3화) 지붕 위의 사내가 처음으로 왼손을 드러낸다.\n(N, 강수) 지난 대목에 이르기를, 막장 소설 쓰는 솜씨로 방화범을 짚었더니, 지붕 위의 사내가 처음으로 왼손을 드러냈소.\n**강수** (부채를 탁 접으며) 자, 오늘 대목이오.",
+      "shots": [
+        {
+          "id": "S00-01",
+          "size": "MCU",
+          "angle": "LOW",
+          "move": "FIX",
+          "lens_mm": 50,
+          "characters": [
+            "gangsu"
+          ],
+          "frame": "평상 위 강수 정면. 부채를 촥 펴며 카메라를 본다(제4의 벽). 뒤로 구경꾼들이 흐리다.",
+          "action": "평상 위의 강수가 부채를 촥 펴고 카메라를 본다.",
+          "sound": "(E) 부채 펴는 소리 촥",
+          "motifs": [
+            "NARRATOR"
+          ],
+          "transition": "CUT",
+          "duration_sec": 2,
+          "continuity": "지난 대목은 이야기 밖 액자다. 매회 같은 구도, 1화 강수 차림 그대로(부상·붕대 없음), 평상은 화면 가운데",
+          "image_prompt": "low angle medium close-up, the storyteller on his wooden platform snapping open a folding fan and looking straight at the viewer, blurred crowd behind, warm daylight",
+          "image_from": "ep02/S00-01",
+          "image_filter": "none"
+        },
+        {
+          "id": "S00-02",
+          "size": "ELS",
+          "angle": "HIGH",
+          "move": "CRANE_UP",
+          "lens_mm": 18,
+          "characters": [
+            "heukrip",
+            "dallae"
+          ],
+          "frame": "Flash. 3화 마지막 컷(S05-08)을 탈색해 다시 보여 준다. 흑립 뒤에서 크레인 업. 지붕 위 작은 검은 실루엣과 맞은편의 불 켜진 창 하나, 그 둘레로 끝없는 한양의 지붕 바다. 정지.",
+          "action": "지붕 위의 사내가 처음으로 왼손을 드러낸다.",
+          "dialogue": [
+            {
+              "speaker": "N:gangsu",
+              "line": "지난 대목에 이르기를, 막장 소설 쓰는 솜씨로 방화범을 짚었더니, 지붕 위의 사내가 처음으로 왼손을 드러냈소.",
+              "mode": "N"
+            }
+          ],
+          "motifs": [
+            "NARRATOR"
+          ],
+          "transition": "CUT",
+          "duration_sec": 7,
+          "image_from": "ep03/S05-08",
+          "image_filter": "desaturate",
+          "image_prompt": "desaturated memory. crane up from behind a tiny black-hatted silhouette on a rooftop to a vast sea of moonlit tiled roofs of old Seoul, one lit paper window across the way"
+        },
+        {
+          "id": "S00-03",
+          "size": "MCU",
+          "angle": "LOW",
+          "move": "FIX",
+          "lens_mm": 50,
+          "characters": [
+            "gangsu"
+          ],
+          "frame": "S00-01과 같은 구도. 부채를 탁 접고 고개를 까딱한다.",
+          "action": "강수가 부채를 탁 접으며 오늘 대목을 연다.",
+          "dialogue": [
+            {
+              "speaker": "gangsu",
+              "line": "자, 오늘 대목이오.",
+              "mode": "ON"
+            }
+          ],
+          "sound": "(E) 부채 접는 소리 탁",
+          "motifs": [
+            "NARRATOR"
+          ],
+          "transition": "SMASH_CUT",
+          "duration_sec": 3,
+          "image_prompt": "low angle medium close-up, the storyteller snapping his folding fan shut with a sly grin, looking at the viewer, warm daylight",
+          "image_from": "ep02/S00-03",
+          "image_filter": "none"
+        }
+      ]
+    },
     {
       "id": "S#1",
       "heading": "달래책방 마루 (낮)",
       "location": "dallae_maru",
       "time": "DAY",
-      "tc_in": "00:00",
-      "tc_out": "00:40",
+      "tc_in": "00:12",
+      "tc_out": "00:50",
       "characters": [
         "yul",
         "dallae",
@@ -60,7 +156,7 @@
           "frame": "책에서 위로 틸트. 화려한 자줏빛 비단 도포에 부채를 든 율의 전신. 후경 대문 밖을 지나가던 아낙 둘이 돌아본다.",
           "action": "화려한 자줏빛 비단 도포에 부채. 지나가던 아낙 둘이 돌아본다.",
           "transition": "CUT",
-          "duration_sec": 4,
+          "duration_sec": 3,
           "notes": "율 첫 등장. extras는 지나가던 아낙 둘(단역)",
           "image_prompt": "tilt up to a full shot of a handsome young nobleman in a plum silk robe holding a folding fan, two passing women turning to stare beyond the gate"
         },
@@ -205,7 +301,7 @@
           "action": "행랑채 앞에서 장작을 패던 정겸이 도끼질이 서툴러 쩔쩔맨다.",
           "sound": "(E) 탁, 빗나간 도끼 소리",
           "transition": "CUT",
-          "duration_sec": 4,
+          "duration_sec": 3,
           "image_prompt": "point of view long shot, the tall lodger in his white robe clumsily chopping firewood in front of the servants' quarters, the axe glancing off the log"
         },
         {
@@ -306,8 +402,8 @@
       "heading": "허진의 집 서재 앞 (밤, 회상)",
       "location": "heojin_seojae",
       "time": "FLASHBACK",
-      "tc_in": "00:40",
-      "tc_out": "01:05",
+      "tc_in": "00:50",
+      "tc_out": "01:13",
       "characters": [
         "heojin",
         "yul"
@@ -414,7 +510,7 @@
             "NARRATOR"
           ],
           "transition": "CUT",
-          "duration_sec": 5,
+          "duration_sec": 4,
           "image_prompt": "desaturated memory, profile medium close-up of the young nobleman frozen at the door, a vertical blade of lamplight splitting his face, slow pull back"
         },
         {
@@ -432,7 +528,7 @@
             "DOOR_GAP"
           ],
           "transition": "DISSOLVE",
-          "duration_sec": 6,
+          "duration_sec": 5,
           "image_prompt": "desaturated memory, the same door-gap point of view, the thin vertical line of light slowly blooming to white"
         }
       ]
@@ -442,8 +538,8 @@
       "heading": "종로 주막 (낮)",
       "location": "jumak",
       "time": "DAY",
-      "tc_in": "01:05",
-      "tc_out": "02:15",
+      "tc_in": "01:13",
+      "tc_out": "02:18",
       "characters": [
         "guyongpal",
         "dallae",
@@ -468,7 +564,7 @@
           "action": "낮 주막. 술상 둘레에 사람들이 몰려든다.",
           "sound": "장터 소음, 웃음소리",
           "transition": "CUT",
-          "duration_sec": 3,
+          "duration_sec": 2,
           "continuity": "축: 술상 위 구용팔은 화면 가운데 위, 서명 줄은 오른쪽으로 늘어서 줄 끝이 화면 오른쪽. 달래·정겸은 왼쪽 전경(달래 왼쪽, 정겸 오른쪽). S#4까지 유지",
           "notes": "평상 옆 심부름하는 아이는 쇠돌(대본 등장인물 목록, extras). 지문이 없어 배경에만 둔다. 5화에서 증언한다",
           "image_prompt": "high angle wide shot of a bustling roadside tavern yard beside a market, a crowd gathering around a low table, a young errand boy carrying a wine bottle by a bench"
@@ -486,7 +582,7 @@
           "frame": "로우앵글. 술상 위에 올라선 구용팔. 갓을 비뚜름하게 쓰고 두 팔을 벌린다.",
           "action": "한량 구용팔이 갓을 비뚜름하게 쓰고 술상 위에 올라섰다.",
           "transition": "CUT",
-          "duration_sec": 3,
+          "duration_sec": 2,
           "image_prompt": "low angle long shot, a boastful dandy in flashy clothes standing on a tavern table with his gat askew, arms spread wide"
         },
         {
@@ -524,7 +620,7 @@
           "action": "여인들이 줄을 선다.",
           "sound": "웃음, 수다",
           "transition": "CUT",
-          "duration_sec": 4,
+          "duration_sec": 3,
           "image_prompt": "group shot panning right along an eager line of women holding books, waiting for an autograph"
         },
         {
@@ -625,7 +721,7 @@
           "frame": "사발을 받쳐 든 손만 크게. 얼굴은 프레임 밖. 손등은 사발 그늘에 가려 흉터가 있는지 보이지 않는다. 구용팔의 손이 사발을 낚아챈다.",
           "action": "얼굴은 보이지 않고 손만 보인다.",
           "transition": "CUT",
-          "duration_sec": 4,
+          "duration_sec": 3,
           "notes": "손의 주인은 밝히지 않는다(대본). 흉터를 보여 주지도, 없다고 못 박지도 않는다",
           "image_prompt": "insert, an anonymous pair of hands holding up an earthenware bowl of rice wine, the giver's face out of frame, the backs of the hands in shadow, another hand snatching the bowl"
         },
@@ -778,7 +874,7 @@
           "frame": "햇빛 앞에 든 은비녀. 초점이 손가락에서 비녀 끝으로 넘어가며 은빛이 검게 변한 것이 드러난다.",
           "action": "은빛이 검게 변해 있다.",
           "transition": "CUT",
-          "duration_sec": 4,
+          "duration_sec": 3,
           "notes": "TASKS: 은비녀 검게 변하는 INSERT",
           "image_prompt": "insert, rack focus along a silver hairpin held up to daylight, its tip turned black"
         },
@@ -856,7 +952,7 @@
       "heading": "같은 장소 (낮)",
       "location": "jumak",
       "time": "DAY",
-      "tc_in": "02:15",
+      "tc_in": "02:18",
       "tc_out": "03:00",
       "characters": [
         "dallae",
@@ -1053,7 +1149,7 @@
           "action": "정겸은 아무 말도 하지 않는다.",
           "sound": "주변 소음이 서서히 빠진다",
           "transition": "CUT",
-          "duration_sec": 5,
+          "duration_sec": 4,
           "image_prompt": "profile two-shot in the wrecked tavern yard, the young woman and the tall man standing in silence, the bustle fading"
         },
         {
@@ -1071,7 +1167,7 @@
           "frame": "S03-01과 같은 부감에서 크레인 업. 엎어진 술상과 쓰러진 구용팔 곁에 선 두 사람이 점점 작아지고, 장터 지붕들이 화면을 채운다. 정지.",
           "action": "흩어진 주막 마당 한가운데, 두 사람.",
           "transition": "FREEZE",
-          "duration_sec": 6,
+          "duration_sec": 4,
           "notes": "엔딩 훅: 시신 품에서 나온 쪽지 '다음은 진짜 네 차례다.' 5화 「연애 자료조사」로",
           "image_prompt": "crane up from the two small figures standing over a collapsed man and an overturned table in the tavern yard to the market rooftops, freeze"
         }

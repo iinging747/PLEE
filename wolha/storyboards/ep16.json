@@ -6,15 +6,109 @@
   "runtime_sec": 180,
   "aspect": "16:9",
   "status": "review",
-  "notes": "샷 수 58, 평균 3.1초. 강수 왼쪽 아래팔 붕대는 대본('붕대 감은 팔이라 반 박자 늦다')에 따라 16화에도 유지하고, 목덜미 상처가 S01-08에서 시작된다(AGENTS.md: 붕대 11~18화). 율 상처는 왼쪽 옆구리(11~13화와 같다). S#4에서 먹순은 대사로만 언급되므로 씬 인물에서 뺐다. 지붕 위 흑립은 S01-06(대본대로).",
+  "notes": "샷 수 58, 평균 3.1초. 강수 왼쪽 아래팔 붕대는 대본('붕대 감은 팔이라 반 박자 늦다')에 따라 16화에도 유지하고, 목덜미 상처가 S01-08에서 시작된다(AGENTS.md: 붕대 11~18화). 율 상처는 왼쪽 옆구리(11~13화와 같다). S#4에서 먹순은 대사로만 언급되므로 씬 인물에서 뺐다. 지붕 위 흑립은 S01-06(대본대로). 앞 12초는 강수의 '지난 대목'(S#0, 시그니처). 그만큼 각 씬을 span 비율로 줄였다.",
   "scenes": [
+    {
+      "id": "S#0",
+      "heading": "지난 대목 — 종로 담배가게 앞 평상 (낮)",
+      "location": "jongno_tobacco",
+      "time": "DAY",
+      "tc_in": "00:00",
+      "tc_out": "00:12",
+      "characters": [
+        "gangsu",
+        "heojin"
+      ],
+      "mood": "COMEDY",
+      "summary": "강수의 '지난 대목'(시그니처). 15화를 12초로 요약하고 부채를 접으며 오늘 대목을 연다.",
+      "source_text": "평상 위의 강수가 부채를 촥 펴고 카메라를 본다.\nFlash. (15화) 허진이 두 번째 찻잔을 흑립에게 민다. \"데려오너라. …묻어라.\"\n(N, 강수) 지난 대목에 이르기를, 가난한 하숙생은 왕이 보낸 검서관이자 삼 년 묵은 악플러 서생 갑이었소. 허진은 흑립에게 두 번째 찻잔을 밀었지.\n**강수** (부채를 탁 접으며) 자, 오늘 대목이오.",
+      "shots": [
+        {
+          "id": "S00-01",
+          "size": "MCU",
+          "angle": "LOW",
+          "move": "FIX",
+          "lens_mm": 50,
+          "characters": [
+            "gangsu"
+          ],
+          "frame": "평상 위 강수 정면. 부채를 촥 펴며 카메라를 본다(제4의 벽). 뒤로 구경꾼들이 흐리다.",
+          "action": "평상 위의 강수가 부채를 촥 펴고 카메라를 본다.",
+          "sound": "(E) 부채 펴는 소리 촥",
+          "motifs": [
+            "NARRATOR"
+          ],
+          "transition": "CUT",
+          "duration_sec": 2,
+          "continuity": "지난 대목은 이야기 밖 액자다. 매회 같은 구도, 1화 강수 차림 그대로(부상·붕대 없음), 평상은 화면 가운데",
+          "image_prompt": "low angle medium close-up, the storyteller on his wooden platform snapping open a folding fan and looking straight at the viewer, blurred crowd behind, warm daylight",
+          "image_from": "ep02/S00-01",
+          "image_filter": "none"
+        },
+        {
+          "id": "S00-02",
+          "size": "CU",
+          "angle": "EYE",
+          "move": "DOLLY_IN",
+          "lens_mm": 85,
+          "characters": [
+            "heojin"
+          ],
+          "frame": "Flash. 15화 마지막 컷(S05-12)을 탈색해 다시 보여 준다. 허진 정면으로 천천히 다가간다. 촛불이 흔들린다. 마지막 단어에서 정지.",
+          "action": "허진이 두 번째 찻잔을 흑립에게 민다. \"데려오너라. …묻어라.\"",
+          "dialogue": [
+            {
+              "speaker": "N:gangsu",
+              "line": "지난 대목에 이르기를, 가난한 하숙생은 왕이 보낸 검서관이자 삼 년 묵은 악플러 서생 갑이었소. 허진은 흑립에게 두 번째 찻잔을 밀었지.",
+              "mode": "N"
+            }
+          ],
+          "motifs": [
+            "NARRATOR"
+          ],
+          "transition": "CUT",
+          "duration_sec": 7,
+          "image_from": "ep15/S05-12",
+          "image_filter": "desaturate",
+          "image_prompt": "desaturated memory. slow push-in close-up of the composed official giving a quiet order, candle flame wavering, freeze frame"
+        },
+        {
+          "id": "S00-03",
+          "size": "MCU",
+          "angle": "LOW",
+          "move": "FIX",
+          "lens_mm": 50,
+          "characters": [
+            "gangsu"
+          ],
+          "frame": "S00-01과 같은 구도. 부채를 탁 접고 고개를 까딱한다.",
+          "action": "강수가 부채를 탁 접으며 오늘 대목을 연다.",
+          "dialogue": [
+            {
+              "speaker": "gangsu",
+              "line": "자, 오늘 대목이오.",
+              "mode": "ON"
+            }
+          ],
+          "sound": "(E) 부채 접는 소리 탁",
+          "motifs": [
+            "NARRATOR"
+          ],
+          "transition": "SMASH_CUT",
+          "duration_sec": 3,
+          "image_prompt": "low angle medium close-up, the storyteller snapping his folding fan shut with a sly grin, looking at the viewer, warm daylight",
+          "image_from": "ep02/S00-03",
+          "image_filter": "none"
+        }
+      ]
+    },
     {
       "id": "S#1",
       "heading": "달래책방 담장 밖 (밤, 사경)",
       "location": "dallae_wall",
       "time": "NIGHT",
-      "tc_in": "00:00",
-      "tc_out": "00:30",
+      "tc_in": "00:12",
+      "tc_out": "00:40",
       "characters": [
         "jeonggyeom",
         "heukrip",
@@ -40,7 +134,7 @@
             "WALL"
           ],
           "transition": "CUT",
-          "duration_sec": 3,
+          "duration_sec": 2,
           "continuity": "축: 담장은 화면 왼쪽 세로 벽(locations.json axis), 정겸은 그 오른쪽에 등을 붙인다. 맞은편 지붕은 화면 오른쪽 위. 마당 장면은 대문 화면 왼쪽(dallae_maru axis). 정겸 의상은 궐 숙직 차림 그대로(고증확인: 숙직 복식). 강수 왼쪽 아래팔 붕대 유지",
           "image_prompt": "extreme wide high angle night shot of a narrow moonlit alley at the fourth watch, a low earthen wall dividing the left of frame, a lone tall figure in palace night-duty attire standing with his back against it, the moon above the eaves"
         },
@@ -123,7 +217,7 @@
             "ROOFTOP_HEUKRIP"
           ],
           "transition": "CUT",
-          "duration_sec": 4,
+          "duration_sec": 3,
           "image_prompt": "low angle wide shot, a silhouette in a wide black gat rising silently on the opposite rooftop against the moon, face lost in shadow"
         },
         {
@@ -221,8 +315,8 @@
       "heading": "달래책방 안채 / 장독대 (밤)",
       "location": "dallae_anchae",
       "time": "NIGHT",
-      "tc_in": "00:30",
-      "tc_out": "00:55",
+      "tc_in": "00:40",
+      "tc_out": "01:03",
       "characters": [
         "dallae",
         "heukrip",
@@ -248,7 +342,7 @@
             "BRUSH"
           ],
           "transition": "CUT",
-          "duration_sec": 3,
+          "duration_sec": 2,
           "continuity": "축: 안채는 창호지 문 화면 왼쪽, 서안과 달래는 오른쪽. 장독대는 항아리 뒤 먹순이 화면 오른쪽 전경, 달래를 멘 흑립은 왼쪽 후경을 지나간다. 달래 볼의 먹 자국은 S#3 별채까지 유지",
           "image_prompt": "high angle medium shot, a young woman asleep face-down on a manuscript at a low desk, a brush still in her hand, an ink smudge on her cheek, a single oil lamp burning low"
         },
@@ -268,7 +362,7 @@
             "BRUSH"
           ],
           "transition": "CUT",
-          "duration_sec": 3,
+          "duration_sec": 2,
           "notes": "붓을 정리하는 손은 오른손. 왼손 흉터는 S02-07 먹순 시점에서 드러낸다",
           "image_prompt": "insert, a hand in a black sleeve gently sliding a calligraphy brush out of a sleeping woman's fingers and laying it neatly on the manuscript, lamplight"
         },
@@ -392,8 +486,8 @@
       "heading": "허진의 집 별채 (새벽)",
       "location": "heojin_byeolchae",
       "time": "DAWN",
-      "tc_in": "00:55",
-      "tc_out": "01:55",
+      "tc_in": "01:03",
+      "tc_out": "01:59",
       "characters": [
         "dallae",
         "heojin"
@@ -415,7 +509,7 @@
           "action": "달래가 눈을 뜬다. 낯선 천장. 손목이 앞으로 묶여 있다.",
           "sound": "창살 너머 새벽 새소리",
           "transition": "CUT",
-          "duration_sec": 3,
+          "duration_sec": 2,
           "continuity": "축: 허진은 화면 오른쪽, 달래는 왼쪽(허진 쪽 인물은 오른쪽에 앉는 세력 방향). 문은 화면 오른쪽 뒤. 달래 손목은 앞으로 묶였고 볼의 먹 자국은 S#2에서 이어진다",
           "image_prompt": "high angle close-up from above, a young woman with an ink smudge on her cheek waking on a silk pillow and staring at an unfamiliar ceiling, her bound wrists rising into frame, blue dawn light through a barred window"
         },
@@ -455,7 +549,7 @@
           "action": "문이 열린다. 허진이 손수 찻상을 들고 들어와 앉는다.",
           "sound": "(E) 문 여는 소리",
           "transition": "CUT",
-          "duration_sec": 3,
+          "duration_sec": 2,
           "image_prompt": "medium shot, a composed official entering through a door on the right carrying a tea table himself and sitting down opposite the bound young woman"
         },
         {
@@ -470,7 +564,7 @@
           "frame": "찻상. 허진이 차를 두 잔 따르고 한 잔을 화면 왼쪽(달래 쪽)으로 민다.",
           "action": "허진이 차를 두 잔 따르고, 한 잔을 달래 쪽으로 민다.",
           "transition": "CUT",
-          "duration_sec": 3,
+          "duration_sec": 2,
           "image_prompt": "insert, a hand pouring two cups of tea from a celadon pot and sliding one across the low table to the left"
         },
         {
@@ -553,7 +647,7 @@
           "action": "허진의 찻잔이 입술 앞에서 아주 잠깐 멈춘다. 달래가 그걸 본다. 진짜 있구나.",
           "sound": "(E) 심장 쿵",
           "transition": "CUT",
-          "duration_sec": 4,
+          "duration_sec": 3,
           "image_prompt": "over-the-shoulder from the official, his teacup pausing for an instant just before his lips in the foreground, focus racking to the young woman's face as she notices"
         },
         {
@@ -741,8 +835,8 @@
       "heading": "허진의 집 대청 (낮)",
       "location": "heojin_daecheong",
       "time": "DAY",
-      "tc_in": "01:55",
-      "tc_out": "02:30",
+      "tc_in": "01:59",
+      "tc_out": "02:32",
       "characters": [
         "yul",
         "heojin"
@@ -765,7 +859,7 @@
           "action": "율이 대청으로 뛰어든다. 먹순에게서 흉터 이야기를 듣고 곧장 달려온 길이다.",
           "sound": "급한 발소리",
           "transition": "CUT",
-          "duration_sec": 3,
+          "duration_sec": 2,
           "continuity": "축: 허진은 화면 오른쪽 상석, 율은 왼쪽에서 들어와 무릎을 꿇는다. 분합문은 화면 뒤쪽(마당 쪽). 율 왼쪽 옆구리 무명 띠(도포 속) 유지",
           "image_prompt": "wide shot of a wide wooden main hall in cold daylight, the handsome young nobleman rushing in from the left, his father seated on the right"
         },
@@ -781,7 +875,7 @@
           "frame": "하이앵글. 율이 아버지 앞에 무릎을 꿇는다.",
           "action": "율이 무릎을 꿇는다. 이 집에서, 스스로, 처음으로.",
           "transition": "CUT",
-          "duration_sec": 3,
+          "duration_sec": 2,
           "image_prompt": "high angle medium shot, the young nobleman dropping to his knees on the polished wooden floor before his father"
         },
         {
@@ -957,7 +1051,7 @@
       "heading": "창덕궁 존현각 (낮)",
       "location": "jonhyeongak",
       "time": "DAY",
-      "tc_in": "02:30",
+      "tc_in": "02:32",
       "tc_out": "03:00",
       "characters": [
         "jeonggyeom",
@@ -1048,7 +1142,7 @@
           "frame": "정조가 고개를 돌려 화면 오른쪽 창밖을 본다. 창호지 빛이 얼굴에 걸린다.",
           "action": "정조가 창밖을 본다. 한참 말이 없다.",
           "transition": "CUT",
-          "duration_sec": 3,
+          "duration_sec": 2,
           "notes": "'한참 말이 없다' 무대사 3초",
           "image_prompt": "medium shot, the king turning to gaze out of a paper window on the right in long silence, daylight on his face"
         },
@@ -1071,7 +1165,7 @@
             }
           ],
           "transition": "CUT",
-          "duration_sec": 7,
+          "duration_sec": 6,
           "image_prompt": "slow push-in on the king giving an order to someone on his right, then turning to the left to address the young official, a sly decisiveness"
         },
         {

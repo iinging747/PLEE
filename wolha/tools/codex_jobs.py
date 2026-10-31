@@ -13,6 +13,7 @@
 
 2) 만든 이미지를 스토리보드에 붙이기
     python3 tools/codex_jobs.py --attach 5     # assets/frames/ep05/*.png|jpg|webp → ep05.json image 필드
+   "reuse" 가 있는 줄(지난 대목의 강수 컷·회상 컷)은 그리지 않는다. --attach 가 원본 그림을 복사·탈색해 만든다
 
 3) 진행 상황 보기
     python3 tools/codex_jobs.py --status
@@ -97,9 +98,37 @@ def episode_jobs(n: int) -> list[dict]:
             prompt = build_prompt(data, sc, sh, chars, locs)
             if refs:
                 prompt += ". " + CONSISTENCY
-            jobs.append({"shot": sh["id"], "out": rel(FRAMES_DIR / f"ep{n:02d}" / f"{sh['id']}.png"),
-                         "size": size, "prompt": prompt, "refs": refs})
+            job = {"shot": sh["id"], "out": rel(FRAMES_DIR / f"ep{n:02d}" / f"{sh['id']}.png"),
+                   "size": size, "prompt": prompt, "refs": refs}
+            if sh.get("image_from"):
+                # 새로 그리지 않는다. --attach 가 원본 그림을 복사(필요하면 탈색)해 만든다
+                job["reuse"] = {"from": sh["image_from"], "filter": sh.get("image_filter", "none")}
+            jobs.append(job)
     return jobs
+
+
+def make_reuse(n: int, sh: dict):
+    """image_from 샷: 원본 그림을 복사해(desaturate 면 흑백으로) assets/frames/epNN/<id>.jpg 를 만든다."""
+    src_ep, src_id = sh["image_from"].split("/")
+    src = find_image(int(src_ep[2:]), src_id)
+    if not src:
+        return None
+    dst = FRAMES_DIR / f"ep{n:02d}" / f"{sh['id']}.jpg"
+    dst.parent.mkdir(parents=True, exist_ok=True)
+    try:
+        from PIL import Image, ImageOps  # type: ignore
+        im = Image.open(src).convert("RGB")
+        if sh.get("image_filter") == "desaturate":
+            im = ImageOps.colorize(ImageOps.grayscale(im), black="#1d1b19", white="#e9e4da")
+        im.save(dst, "JPEG", quality=82, optimize=True)
+    except ImportError:
+        import shutil
+        import subprocess
+        if sh.get("image_filter") == "desaturate" and shutil.which("ffmpeg"):
+            subprocess.run(["ffmpeg", "-loglevel", "error", "-y", "-i", str(src), "-vf", "hue=s=0", str(dst)], check=True)
+        else:
+            shutil.copyfile(src, dst)
+    return dst
 
 
 def write_jsonl(path, rows) -> None:
@@ -124,6 +153,8 @@ def attach(n: int) -> int:
     for sc in data["scenes"]:
         for sh in sc.get("shots", []):
             p = find_image(n, sh["id"])
+            if not p and sh.get("image_from"):
+                p = make_reuse(n, sh)
             if p:
                 sh["image"] = rel(p)
                 got += 1

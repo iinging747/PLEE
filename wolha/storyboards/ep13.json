@@ -6,15 +6,109 @@
   "runtime_sec": 180,
   "aspect": "16:9",
   "status": "review",
-  "notes": "샷 수 51, 평균 3.5초. EAR_NOT_RED(S02-08)는 1화 S03-06과 같은 구도로 찍는다. 무너지는 달래 롱테이크는 S02-12(14초, DOLLY_IN). 허진의 찻주전자는 대본대로 넘치지 않고 멈추므로 TEA_OVERFLOW 태그를 달지 않았다(S04-03). 율 옆구리 무명 띠는 S01-10에서 감아 17화까지 도포 속에 유지. 강수 왼팔 붕대 계속. 흑립이 대본에 나오지 않는 회차라 지붕 위 흑립은 넣지 않았다(12화와 같은 판단 필요).",
+  "notes": "샷 수 51, 평균 3.5초. EAR_NOT_RED(S02-08)는 1화 S03-06과 같은 구도로 찍는다. 무너지는 달래 롱테이크는 S02-12(14초, DOLLY_IN). 허진의 찻주전자는 대본대로 넘치지 않고 멈추므로 TEA_OVERFLOW 태그를 달지 않았다(S04-03). 율 옆구리 무명 띠는 S01-10에서 감아 17화까지 도포 속에 유지. 강수 왼팔 붕대 계속. 흑립이 대본에 나오지 않는 회차라 지붕 위 흑립은 넣지 않았다(12화와 같은 판단 필요). 앞 12초는 강수의 '지난 대목'(S#0, 시그니처). 그만큼 각 씬을 span 비율로 줄였다.",
   "scenes": [
+    {
+      "id": "S#0",
+      "heading": "지난 대목 — 종로 담배가게 앞 평상 (낮)",
+      "location": "jongno_tobacco",
+      "time": "DAY",
+      "tc_in": "00:00",
+      "tc_out": "00:12",
+      "characters": [
+        "gangsu",
+        "yul"
+      ],
+      "mood": "COMEDY",
+      "summary": "강수의 '지난 대목'(시그니처). 12화를 12초로 요약하고 부채를 접으며 오늘 대목을 연다.",
+      "source_text": "평상 위의 강수가 부채를 촥 펴고 카메라를 본다.\nFlash. (12화) 웃는 율의 도포에 피가 번져 있다. \"…연체료요.\"\n(N, 강수) 지난 대목에 이르기를, 이 년 전 처형됐다던 죄인의 무덤이 비어 있었고, 도포에 피가 번진 율이 웃으며 '연체료요' 했소.\n**강수** (부채를 탁 접으며) 자, 오늘 대목이오.",
+      "shots": [
+        {
+          "id": "S00-01",
+          "size": "MCU",
+          "angle": "LOW",
+          "move": "FIX",
+          "lens_mm": 50,
+          "characters": [
+            "gangsu"
+          ],
+          "frame": "평상 위 강수 정면. 부채를 촥 펴며 카메라를 본다(제4의 벽). 뒤로 구경꾼들이 흐리다.",
+          "action": "평상 위의 강수가 부채를 촥 펴고 카메라를 본다.",
+          "sound": "(E) 부채 펴는 소리 촥",
+          "motifs": [
+            "NARRATOR"
+          ],
+          "transition": "CUT",
+          "duration_sec": 2,
+          "continuity": "지난 대목은 이야기 밖 액자다. 매회 같은 구도, 1화 강수 차림 그대로(부상·붕대 없음), 평상은 화면 가운데",
+          "image_prompt": "low angle medium close-up, the storyteller on his wooden platform snapping open a folding fan and looking straight at the viewer, blurred crowd behind, warm daylight",
+          "image_from": "ep02/S00-01",
+          "image_filter": "none"
+        },
+        {
+          "id": "S00-02",
+          "size": "MS",
+          "angle": "EYE",
+          "move": "DOLLY_IN",
+          "lens_mm": 50,
+          "characters": [
+            "yul"
+          ],
+          "frame": "Flash. 12화 마지막 컷(S04-13)을 탈색해 다시 보여 준다. 달래 쪽에서 본 율. 웃는 얼굴과 도포 옆구리의 핏자국이 한 프레임에 들어온다. 천천히 다가가다 대사 끝에서 멈춘다.",
+          "action": "웃는 율의 도포에 피가 번져 있다. \"…연체료요.\"",
+          "dialogue": [
+            {
+              "speaker": "N:gangsu",
+              "line": "지난 대목에 이르기를, 이 년 전 처형됐다던 죄인의 무덤이 비어 있었고, 도포에 피가 번진 율이 웃으며 '연체료요' 했소.",
+              "mode": "N"
+            }
+          ],
+          "motifs": [
+            "NARRATOR"
+          ],
+          "transition": "CUT",
+          "duration_sec": 7,
+          "image_from": "ep12/S04-13",
+          "image_filter": "desaturate",
+          "image_prompt": "desaturated memory. slow push-in on the smiling young nobleman framed waist-up, his dimpled smile and the dark bloodstain on the side of his plum silk robe in the same frame, dusk backlight"
+        },
+        {
+          "id": "S00-03",
+          "size": "MCU",
+          "angle": "LOW",
+          "move": "FIX",
+          "lens_mm": 50,
+          "characters": [
+            "gangsu"
+          ],
+          "frame": "S00-01과 같은 구도. 부채를 탁 접고 고개를 까딱한다.",
+          "action": "강수가 부채를 탁 접으며 오늘 대목을 연다.",
+          "dialogue": [
+            {
+              "speaker": "gangsu",
+              "line": "자, 오늘 대목이오.",
+              "mode": "ON"
+            }
+          ],
+          "sound": "(E) 부채 접는 소리 탁",
+          "motifs": [
+            "NARRATOR"
+          ],
+          "transition": "SMASH_CUT",
+          "duration_sec": 3,
+          "image_prompt": "low angle medium close-up, the storyteller snapping his folding fan shut with a sly grin, looking at the viewer, warm daylight",
+          "image_from": "ep02/S00-03",
+          "image_filter": "none"
+        }
+      ]
+    },
     {
       "id": "S#1",
       "heading": "달래책방 마루 (해 질 녘)",
       "location": "dallae_maru",
       "time": "DUSK",
-      "tc_in": "00:00",
-      "tc_out": "00:40",
+      "tc_in": "00:12",
+      "tc_out": "00:49",
       "characters": [
         "dallae",
         "yul",
@@ -122,7 +216,7 @@
           "frame": "율이 한숨을 쉬고 고름을 푼다. 도포 자락이 열리며 옆구리의 헝겊이 드러난다.",
           "action": "율이 체념하고 고름을 푼다. 옆구리에 피가 번진 헝겊.",
           "transition": "CUT",
-          "duration_sec": 3,
+          "duration_sec": 2,
           "image_prompt": "medium shot, the nobleman sighing in resignation and untying the ribbon of his robe, revealing a blood-soaked cloth wrapped at his side"
         },
         {
@@ -138,7 +232,7 @@
           "frame": "옆구리 클로즈업. 달래의 먹 묻은 손이 헝겊을 풀고 약을 바른다.",
           "action": "달래가 헝겊을 풀고 약을 바른다.",
           "transition": "CUT",
-          "duration_sec": 3,
+          "duration_sec": 2,
           "notes": "TASKS 필수 컷(상처 감기). 상처 자체는 짧게, 손 연기 위주",
           "image_prompt": "insert, a young woman's ink-stained fingers unwrapping a bloody cloth from a man's side and dabbing on medicine"
         },
@@ -299,7 +393,7 @@
           "frame": "율이 입을 다물고 고름을 맨다. 그리고 늘 웃던 대로 웃는다.",
           "action": "율이 입을 다문다. 고름을 맨다. 그리고 늘 웃던 대로 웃는다.",
           "transition": "CUT",
-          "duration_sec": 3,
+          "duration_sec": 2,
           "image_prompt": "medium shot, the nobleman closing his mouth, retying his robe and putting his usual easy smile back on"
         },
         {
@@ -327,8 +421,8 @@
       "heading": "달래책방 행랑채 (밤)",
       "location": "dallae_haengrang",
       "time": "NIGHT",
-      "tc_in": "00:40",
-      "tc_out": "01:50",
+      "tc_in": "00:49",
+      "tc_out": "01:54",
       "characters": [
         "dallae",
         "jeonggyeom"
@@ -351,7 +445,7 @@
           "action": "똑똑. 정겸이 문을 연다. 달래가 낡은 종이 한 장을 들고 서 있다.",
           "sound": "(E) 똑똑. 문 여는 소리",
           "transition": "CUT",
-          "duration_sec": 3,
+          "duration_sec": 2,
           "continuity": "축: 방문과 문턱은 화면 왼쪽, 정겸의 서안과 등잔은 오른쪽. 달래는 문턱 쪽(왼쪽), 정겸은 방 안(오른쪽). 귀 ECU는 1화와 같은 왼쪽 옆얼굴",
           "image_prompt": "a tiny tidy lodger's room lit by one oil lamp, the tall scholar on the right opening the door to find a pale young woman standing at the threshold on the left holding an old sheet of paper"
         },
@@ -408,7 +502,7 @@
             "INSERT_TEXT"
           ],
           "transition": "CUT",
-          "duration_sec": 5,
+          "duration_sec": 3,
           "notes": "TASKS 필수 컷(검시 기록 INSERT)",
           "image_prompt": "top-down insert of an old official inquest record on yellowed paper under lamplight"
         },
@@ -581,7 +675,7 @@
           "action": "정겸이 다가가 무릎을 꿇고 달래를 끌어당겨 안는다. 달래는 밀어내지 않는다.",
           "sound": "흐느낌",
           "transition": "CUT",
-          "duration_sec": 5,
+          "duration_sec": 3,
           "image_prompt": "two-shot, the scholar kneeling at the threshold and pulling the sobbing young woman into his arms, she does not push him away, lamplight"
         },
         {
@@ -627,8 +721,8 @@
       "heading": "달래책방 행랑채 (새벽)",
       "location": "dallae_haengrang",
       "time": "DAWN",
-      "tc_in": "01:50",
-      "tc_out": "02:20",
+      "tc_in": "01:54",
+      "tc_out": "02:22",
       "characters": [
         "jeonggyeom",
         "dallae"
@@ -651,7 +745,7 @@
           "action": "울다 지친 달래가 정겸의 어깨에 기대 잠들어 있다. 정겸은 밤새 같은 자세다.",
           "sound": "새벽 새소리, 고른 숨소리",
           "transition": "CUT",
-          "duration_sec": 4,
+          "duration_sec": 3,
           "continuity": "축: S#2와 같은 행랑채, 같은 방향. 문은 화면 왼쪽, 문틈 새벽빛은 왼쪽에서 들어온다. 정겸은 화면 왼쪽에서 벽에 기대 앉고, 달래는 오른쪽에서 그의 왼쪽 어깨에 기댄다. 정겸의 오른손이 비어 있다",
           "image_prompt": "two-shot at dawn in a tiny room, cold blue light through a narrow door gap on the left falling across a scholar sitting rigidly upright against the wall and a young woman asleep on his shoulder, a burnt-out oil lamp"
         },
@@ -701,7 +795,7 @@
             "INSERT_TEXT"
           ],
           "transition": "CUT",
-          "duration_sec": 5,
+          "duration_sec": 4,
           "image_prompt": "top-down insert, a brush writing slightly crooked lines in a small notebook resting on a knee, blue dawn light"
         },
         {
@@ -790,8 +884,8 @@
       "heading": "허진의 집 사랑채 (아침)",
       "location": "heojin_sarang",
       "time": "MORNING",
-      "tc_in": "02:20",
-      "tc_out": "02:40",
+      "tc_in": "02:22",
+      "tc_out": "02:41",
       "characters": [
         "heojin",
         "extras"
@@ -813,7 +907,7 @@
           "frame": "아침 사랑채. 화면 왼쪽 열 걸음 밖에 의원이 이마를 바닥에 붙이고 떤다. 오른쪽 찻상 앞의 허진이 찻주전자를 든다.",
           "action": "의원 하나가 바닥에 이마를 붙이고 떨고 있다.",
           "transition": "CUT",
-          "duration_sec": 3,
+          "duration_sec": 2,
           "continuity": "축: 허진은 항상 화면 오른쪽, 의원은 왼쪽 열 걸음 밖(bible axis). 11화 S#4와 같은 배치, 문은 의원 등 뒤 왼쪽. 아침 창호지 빛",
           "notes": "의원은 extras",
           "image_prompt": "wide shot of an austere reception room in morning light, a trembling physician prostrated with his forehead to the floor far on the left, a composed high official on the right lifting a celadon teapot"
@@ -902,7 +996,7 @@
       "heading": "달래책방 안채 (밤)",
       "location": "dallae_anchae",
       "time": "NIGHT",
-      "tc_in": "02:40",
+      "tc_in": "02:41",
       "tc_out": "03:00",
       "characters": [
         "dallae",
@@ -1039,7 +1133,7 @@
           "action": "골목 어귀에 형조 단속반의 횃불이 한 줄로 들어온다.",
           "sound": "(E) 횃불 타는 소리, 발맞춘 발소리가 가까워진다",
           "transition": "FREEZE",
-          "duration_sec": 4,
+          "duration_sec": 3,
           "notes": "엔딩 훅(대본의 '엔딩 훅' 줄). TASKS 필수 컷(단속반 횃불). 14화 창고 씬으로 이어진다",
           "image_prompt": "high angle crane up over dark hanok rooftops at night, a single file of torches entering the mouth of a narrow alley toward a small lamplit bookshop in the lower right"
         }

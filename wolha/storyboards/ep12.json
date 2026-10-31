@@ -6,15 +6,109 @@
   "runtime_sec": 180,
   "aspect": "16:9",
   "status": "review",
-  "notes": "샷 수 52, 평균 3.5초. 첫 컷은 어둠 속 서가 부감(S01-01)으로 질문을 던지고, 빈 관(S02-07)이 회차 훅을 받는다. 강수 왼팔 붕대, 율 왼쪽 옆구리 피는 11화에서 이어진다. 흑립이 대본에 나오지 않는 회차라 지붕 위 흑립(ROOFTOP_HEUKRIP)은 넣지 않았다. 가이드의 '회차마다'와 AGENTS.md의 '인물 추가 금지'가 부딪히니 연출 판단 필요. S#3은 낮 장면이 '그날 밤'으로 넘어간다(S03-09 DISSOLVE, 밤 광원은 처마 초롱과 등잔).",
+  "notes": "샷 수 52, 평균 3.5초. 첫 컷은 어둠 속 서가 부감(S01-01)으로 질문을 던지고, 빈 관(S02-07)이 회차 훅을 받는다. 강수 왼팔 붕대, 율 왼쪽 옆구리 피는 11화에서 이어진다. 흑립이 대본에 나오지 않는 회차라 지붕 위 흑립(ROOFTOP_HEUKRIP)은 넣지 않았다. 가이드의 '회차마다'와 AGENTS.md의 '인물 추가 금지'가 부딪히니 연출 판단 필요. S#3은 낮 장면이 '그날 밤'으로 넘어간다(S03-09 DISSOLVE, 밤 광원은 처마 초롱과 등잔). 앞 12초는 강수의 '지난 대목'(S#0, 시그니처). 그만큼 각 씬을 span 비율로 줄였다.",
   "scenes": [
+    {
+      "id": "S#0",
+      "heading": "지난 대목 — 종로 담배가게 앞 평상 (낮)",
+      "location": "jongno_tobacco",
+      "time": "DAY",
+      "tc_in": "00:00",
+      "tc_out": "00:12",
+      "characters": [
+        "gangsu",
+        "yul"
+      ],
+      "mood": "COMEDY",
+      "summary": "강수의 '지난 대목'(시그니처). 11화를 12초로 요약하고 부채를 접으며 오늘 대목을 연다.",
+      "source_text": "평상 위의 강수가 부채를 촥 펴고 카메라를 본다.\nFlash. (11화) 책방 앞을 막아선 율. 피가 발끝에 떨어진다.\n(N, 강수) 지난 대목에 이르기를, 칼을 맞은 이 몸이 스승을 찌른 그 눈을 다시 보았고, 책방 앞을 막아선 율의 발끝에 피가 떨어졌소.\n**강수** (부채를 탁 접으며) 자, 오늘 대목이오.",
+      "shots": [
+        {
+          "id": "S00-01",
+          "size": "MCU",
+          "angle": "LOW",
+          "move": "FIX",
+          "lens_mm": 50,
+          "characters": [
+            "gangsu"
+          ],
+          "frame": "평상 위 강수 정면. 부채를 촥 펴며 카메라를 본다(제4의 벽). 뒤로 구경꾼들이 흐리다.",
+          "action": "평상 위의 강수가 부채를 촥 펴고 카메라를 본다.",
+          "sound": "(E) 부채 펴는 소리 촥",
+          "motifs": [
+            "NARRATOR"
+          ],
+          "transition": "CUT",
+          "duration_sec": 2,
+          "continuity": "지난 대목은 이야기 밖 액자다. 매회 같은 구도, 1화 강수 차림 그대로(부상·붕대 없음), 평상은 화면 가운데",
+          "image_prompt": "low angle medium close-up, the storyteller on his wooden platform snapping open a folding fan and looking straight at the viewer, blurred crowd behind, warm daylight",
+          "image_from": "ep02/S00-01",
+          "image_filter": "none"
+        },
+        {
+          "id": "S00-02",
+          "size": "LS",
+          "angle": "HIGH",
+          "move": "CRANE_UP",
+          "lens_mm": 24,
+          "characters": [
+            "yul"
+          ],
+          "frame": "Flash. 11화 마지막 컷(S05-12)을 탈색해 다시 보여 준다. 율이 담에서 몸을 떼어 화면 오른쪽 어둠으로 걸어 나간다. 카메라가 올라가면 초롱빛 아래 핏방울 자국만 남고, 담 너머 책방 불빛이 화면 왼쪽에 걸린다.",
+          "action": "책방 앞을 막아선 율. 피가 발끝에 떨어진다.",
+          "dialogue": [
+            {
+              "speaker": "N:gangsu",
+              "line": "지난 대목에 이르기를, 칼을 맞은 이 몸이 스승을 찌른 그 눈을 다시 보았고, 책방 앞을 막아선 율의 발끝에 피가 떨어졌소.",
+              "mode": "N"
+            }
+          ],
+          "motifs": [
+            "NARRATOR"
+          ],
+          "transition": "CUT",
+          "duration_sec": 7,
+          "image_from": "ep11/S05-12",
+          "image_filter": "desaturate",
+          "image_prompt": "desaturated memory. high angle crane up, the young nobleman walking away into the dark end of the alley, leaving drops of blood in a pool of lantern light beneath the wall, the glowing bookshop windows beyond the wall on the left"
+        },
+        {
+          "id": "S00-03",
+          "size": "MCU",
+          "angle": "LOW",
+          "move": "FIX",
+          "lens_mm": 50,
+          "characters": [
+            "gangsu"
+          ],
+          "frame": "S00-01과 같은 구도. 부채를 탁 접고 고개를 까딱한다.",
+          "action": "강수가 부채를 탁 접으며 오늘 대목을 연다.",
+          "dialogue": [
+            {
+              "speaker": "gangsu",
+              "line": "자, 오늘 대목이오.",
+              "mode": "ON"
+            }
+          ],
+          "sound": "(E) 부채 접는 소리 탁",
+          "motifs": [
+            "NARRATOR"
+          ],
+          "transition": "SMASH_CUT",
+          "duration_sec": 3,
+          "image_prompt": "low angle medium close-up, the storyteller snapping his folding fan shut with a sly grin, looking at the viewer, warm daylight",
+          "image_from": "ep02/S00-03",
+          "image_filter": "none"
+        }
+      ]
+    },
     {
       "id": "S#1",
       "heading": "규장각 서고 (밤)",
       "location": "gyujanggak",
       "time": "NIGHT",
-      "tc_in": "00:00",
-      "tc_out": "00:35",
+      "tc_in": "00:12",
+      "tc_out": "00:44",
       "characters": [
         "jeonggyeom"
       ],
@@ -41,7 +135,7 @@
           "action": "높은 서가 사이. 정겸이 촛불을 옆에 두고 책을 넘긴다.",
           "sound": "정적, 종이 넘기는 소리 하나",
           "transition": "CUT",
-          "duration_sec": 4,
+          "duration_sec": 3,
           "continuity": "축: 높은 서가가 화면 좌우를 막는다. 정겸은 화면 왼쪽 서안 앞, 촛불은 오른쪽. 서고 문은 화면 밖 왼쪽 뒤. 글씨 인서트는 모두 TOP, 책 머리가 화면 위",
           "image_prompt": "high angle crane down between towering dark bookshelves of a royal library at night, a single candle and a small figure of a scholar reading at a low desk far below"
         },
@@ -61,7 +155,7 @@
             "INSERT_TEXT"
           ],
           "transition": "CUT",
-          "duration_sec": 4,
+          "duration_sec": 3,
           "notes": "TASKS 필수 컷(「심리록」 INSERT)",
           "image_prompt": "top-down insert, a slender finger running down columns of classical Chinese records in a thick bound volume by candlelight, turning a page"
         },
@@ -96,7 +190,7 @@
             "INSERT_TEXT"
           ],
           "transition": "CUT",
-          "duration_sec": 5,
+          "duration_sec": 4,
           "notes": "TASKS 필수 컷(계목 INSERT)",
           "image_prompt": "top-down insert, an official report of the Ministry of Punishments unfolded on a desk, a fingertip stopping on one line, candlelight"
         },
@@ -209,8 +303,8 @@
       "heading": "서소문 밖 (밤)",
       "location": "seosomun",
       "time": "NIGHT",
-      "tc_in": "00:35",
-      "tc_out": "01:20",
+      "tc_in": "00:44",
+      "tc_out": "01:26",
       "characters": [
         "jeonggyeom",
         "gangsu"
@@ -233,7 +327,7 @@
           "action": "죄인들의 무덤이 모인 언덕. 바람. 정겸과 강수가 한 무덤을 파고 있다.",
           "sound": "(E) 바람, 삽이 언 흙을 찍는 소리",
           "transition": "CUT",
-          "duration_sec": 4,
+          "duration_sec": 3,
           "continuity": "축: 무덤은 화면 가운데, 강수 왼쪽, 정겸 오른쪽. 서소문 성벽은 화면 오른쪽 뒤. 땅에 내려놓은 초롱 하나가 광원. 강수 왼팔 붕대(11~18화)",
           "image_prompt": "high angle extreme wide shot of a bleak hillside of criminals' graves at night outside the city wall, crooked wooden markers, dry grass bending in the wind, two small figures digging beside a single lantern on the ground"
         },
@@ -264,7 +358,7 @@
           "action": "강수는 붕대 감은 팔 때문에 한 손으로 삽질을 한다.",
           "sound": "두 사람의 거친 숨, 흙 던지는 소리",
           "transition": "CUT",
-          "duration_sec": 4,
+          "duration_sec": 3,
           "image_prompt": "profile two-shot of two men digging a grave at night by lantern light, the one on the left shoveling one-handed with his bandaged left arm held close, the tall one on the right digging neatly with both hands"
         },
         {
@@ -322,7 +416,7 @@
           "action": "비었다. 뼈 하나, 천 조각 하나 없다.",
           "sound": "바람 소리만",
           "transition": "CUT",
-          "duration_sec": 4,
+          "duration_sec": 3,
           "notes": "TASKS 필수 컷(빈 관)",
           "image_prompt": "top-down slow push-in on a completely empty wooden coffin at the bottom of a grave, lantern light reaching every corner, no bones and no cloth"
         },
@@ -456,8 +550,8 @@
       "heading": "달래책방 대문 앞 (낮)",
       "location": "dallae_maru",
       "time": "DAY",
-      "tc_in": "01:20",
-      "tc_out": "02:10",
+      "tc_in": "01:26",
+      "tc_out": "02:13",
       "characters": [
         "dallae",
         "jeonggyeom",
@@ -482,7 +576,7 @@
           "action": "「청상연가」 7권이 풀린 날. 대문 앞에 독자들이 몰려와 있다. 누군가 책을 흔든다.",
           "sound": "웅성거림이 구호로 바뀐다",
           "transition": "CUT",
-          "duration_sec": 4,
+          "duration_sec": 3,
           "continuity": "축: 대문은 항상 화면 왼쪽, 행랑채는 오른쪽(bible axis). 독자들은 대문 쪽(왼쪽)에 몰리고, 마루 위 달래와 정겸은 화면 오른쪽",
           "image_prompt": "wide shot of a small hanok bookshop gate on the left crowded with agitated readers spilling in from the alley, one waving a thread-bound book overhead, daylight"
         },
@@ -687,7 +781,7 @@
             "INSERT_TEXT"
           ],
           "transition": "CUT",
-          "duration_sec": 4,
+          "duration_sec": 3,
           "notes": "TASKS 필수 컷(서생 갑 낙서). 필체는 10화 사인회의 정겸 글씨, 15화 글씨 대조 컷과 같아야 한다",
           "image_prompt": "top-down insert, a neat handwritten note in the margin of a book page, an ink-stained fingertip resting beside it, lamplight"
         },
@@ -703,7 +797,7 @@
           "frame": "달래 얼굴에 아주 천천히 다가간다. 등잔빛. 그 줄에서 눈을 떼지 못한다.",
           "action": "달래가 그 줄을 오래 본다.",
           "transition": "CUT",
-          "duration_sec": 5,
+          "duration_sec": 4,
           "image_prompt": "very slow push-in on the young woman's face as she stares at a line in the book for a long time, lamplight, her expression softening"
         },
         {
@@ -750,7 +844,7 @@
       "heading": "달래책방 마당 (해 질 녘)",
       "location": "dallae_maru",
       "time": "DUSK",
-      "tc_in": "02:10",
+      "tc_in": "02:13",
       "tc_out": "03:00",
       "characters": [
         "dallae",
@@ -774,7 +868,7 @@
           "action": "율이 부채를 흔들며 들어온다. 늘 그렇듯 웃는다.",
           "sound": "저녁 새소리, 부채 소리",
           "transition": "CUT",
-          "duration_sec": 5,
+          "duration_sec": 3,
           "continuity": "축: 대문은 화면 왼쪽, 행랑채는 오른쪽(bible axis). 율은 대문으로 들어와 오른쪽 마루의 달래 쪽으로 간다. 역광은 대문 쪽. 율 왼쪽 옆구리 상처(11화 S#5), 이 샷에서는 부채와 소매에 가려 피가 보이지 않는다",
           "image_prompt": "wide shot of a hanok bookshop yard at dusk, a handsome young nobleman in a plum silk robe strolling in through the gate on the left, fanning himself and smiling, orange backlight, a young woman at the wooden porch on the right"
         },
@@ -874,7 +968,7 @@
           "frame": "초점이 책에서 그 뒤 율의 도포 옆구리로 넘어간다. 자줏빛 비단 위 검붉은 얼룩이 검게 굳어 간다.",
           "action": "율의 도포 옆구리에 피가 번져 있다. 자줏빛 비단 위에서 검게 굳어 간다.",
           "transition": "CUT",
-          "duration_sec": 5,
+          "duration_sec": 4,
           "continuity": "율 왼쪽 옆구리 피. 13화 S#1 상처 감기로 이어진다",
           "image_prompt": "insert, rack focus from a book in the foreground to a spreading dark bloodstain on the side of a plum silk robe, dusk light"
         },

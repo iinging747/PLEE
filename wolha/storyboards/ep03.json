@@ -6,15 +6,109 @@
   "runtime_sec": 180,
   "aspect": "16:9",
   "status": "review",
-  "notes": "샷 수 56, 평균 3.2초. 흑립 왼손 흉터 첫 공개는 S05-05·S05-06(얼굴은 계속 가림). 크래시 줌 1회(S02-13). 대본에 따라 달래는 손가락 셋을 접은 뒤 '네 번'에서 넷째를 접는다.",
+  "notes": "샷 수 56, 평균 3.2초. 흑립 왼손 흉터 첫 공개는 S05-05·S05-06(얼굴은 계속 가림). 크래시 줌 1회(S02-13). 대본에 따라 달래는 손가락 셋을 접은 뒤 '네 번'에서 넷째를 접는다. 앞 12초는 강수의 '지난 대목'(S#0, 시그니처). 그만큼 각 씬을 span 비율로 줄였다.",
   "scenes": [
+    {
+      "id": "S#0",
+      "heading": "지난 대목 — 종로 담배가게 앞 평상 (낮)",
+      "location": "jongno_tobacco",
+      "time": "DAY",
+      "tc_in": "00:00",
+      "tc_out": "00:12",
+      "characters": [
+        "gangsu",
+        "heojin"
+      ],
+      "mood": "COMEDY",
+      "summary": "강수의 '지난 대목'(시그니처). 2화를 12초로 요약하고 부채를 접으며 오늘 대목을 연다.",
+      "source_text": "평상 위의 강수가 부채를 촥 펴고 카메라를 본다.\nFlash. (2화) 형조판서가 「청상연가」의 한 줄을 읽는 동안 찻물이 찻잔을 넘친다.\n(N, 강수) 지난 대목에 이르기를, 빚쟁이를 떼려고 하숙생을 정혼자라 우겼고, 형조판서는 「청상연가」 한 줄에 찻물을 넘쳤소.\n**강수** (부채를 탁 접으며) 자, 오늘 대목이오.",
+      "shots": [
+        {
+          "id": "S00-01",
+          "size": "MCU",
+          "angle": "LOW",
+          "move": "FIX",
+          "lens_mm": 50,
+          "characters": [
+            "gangsu"
+          ],
+          "frame": "평상 위 강수 정면. 부채를 촥 펴며 카메라를 본다(제4의 벽). 뒤로 구경꾼들이 흐리다.",
+          "action": "평상 위의 강수가 부채를 촥 펴고 카메라를 본다.",
+          "sound": "(E) 부채 펴는 소리 촥",
+          "motifs": [
+            "NARRATOR"
+          ],
+          "transition": "CUT",
+          "duration_sec": 2,
+          "continuity": "지난 대목은 이야기 밖 액자다. 매회 같은 구도, 1화 강수 차림 그대로(부상·붕대 없음), 평상은 화면 가운데",
+          "image_prompt": "low angle medium close-up, the storyteller on his wooden platform snapping open a folding fan and looking straight at the viewer, blurred crowd behind, warm daylight",
+          "image_from": "ep02/S00-01",
+          "image_filter": "none"
+        },
+        {
+          "id": "S00-02",
+          "size": "INSERT",
+          "angle": "EYE",
+          "move": "FIX",
+          "lens_mm": 100,
+          "characters": [
+            "heojin"
+          ],
+          "frame": "Flash. 2화 마지막 컷(S05-09)을 탈색해 다시 보여 준다. S05-04와 같은 찻잔 높이. 찻물이 여전히 넘쳐 찻상 가장자리로 뚝뚝 떨어진다. 떨어지는 한 방울에서 정지.",
+          "action": "형조판서가 「청상연가」의 한 줄을 읽는 동안 찻물이 찻잔을 넘친다.",
+          "dialogue": [
+            {
+              "speaker": "N:gangsu",
+              "line": "지난 대목에 이르기를, 빚쟁이를 떼려고 하숙생을 정혼자라 우겼고, 형조판서는 「청상연가」 한 줄에 찻물을 넘쳤소.",
+              "mode": "N"
+            }
+          ],
+          "motifs": [
+            "NARRATOR"
+          ],
+          "transition": "CUT",
+          "duration_sec": 7,
+          "image_from": "ep02/S05-09",
+          "image_filter": "desaturate",
+          "image_prompt": "desaturated memory. insert at cup level, overflowing tea still dripping off the edge of the tea table, freeze on a falling drop, candlelight"
+        },
+        {
+          "id": "S00-03",
+          "size": "MCU",
+          "angle": "LOW",
+          "move": "FIX",
+          "lens_mm": 50,
+          "characters": [
+            "gangsu"
+          ],
+          "frame": "S00-01과 같은 구도. 부채를 탁 접고 고개를 까딱한다.",
+          "action": "강수가 부채를 탁 접으며 오늘 대목을 연다.",
+          "dialogue": [
+            {
+              "speaker": "gangsu",
+              "line": "자, 오늘 대목이오.",
+              "mode": "ON"
+            }
+          ],
+          "sound": "(E) 부채 접는 소리 탁",
+          "motifs": [
+            "NARRATOR"
+          ],
+          "transition": "SMASH_CUT",
+          "duration_sec": 3,
+          "image_prompt": "low angle medium close-up, the storyteller snapping his folding fan shut with a sly grin, looking at the viewer, warm daylight",
+          "image_from": "ep02/S00-03",
+          "image_filter": "none"
+        }
+      ]
+    },
     {
       "id": "S#1",
       "heading": "종로 문리당 앞 (밤)",
       "location": "munridang",
       "time": "NIGHT",
-      "tc_in": "00:00",
-      "tc_out": "00:30",
+      "tc_in": "00:12",
+      "tc_out": "00:40",
       "characters": [
         "dallae",
         "jeonggyeom",
@@ -38,7 +132,7 @@
           "action": "세책방 문리당이 불타고 있다. 물동이 행렬.",
           "sound": "(E) 불길 소리, 먼 고함",
           "transition": "CUT",
-          "duration_sec": 4,
+          "duration_sec": 2,
           "continuity": "축: 불타는 문리당 화면 오른쪽(1화 S#5 화재와 같은 방향), 골목 어귀의 달래·정겸은 왼쪽 전경(달래 왼쪽, 정겸 오른쪽). 물동이 행렬은 좌우로 가로지른다. S#3까지 유지. 광원은 불길과 횃불뿐",
           "image_prompt": "extreme wide night shot of dark Joseon streets, a rental bookshop at frame right engulfed in flames, lines of people with water buckets flowing toward the orange glow"
         },
@@ -207,8 +301,8 @@
       "heading": "같은 장소 (밤)",
       "location": "munridang",
       "time": "NIGHT",
-      "tc_in": "00:30",
-      "tc_out": "01:20",
+      "tc_in": "00:40",
+      "tc_out": "01:26",
       "characters": [
         "dallae",
         "jeonggyeom",
@@ -232,7 +326,7 @@
           "frame": "S#1과 같은 축. 왼쪽 전경에 달래와 정겸, 오른쪽 후경에 불길과 천 서방. 달래가 한 손을 들어 손가락을 편다.",
           "action": "달래가 손가락을 하나씩 접을 채비를 한다.",
           "transition": "CUT",
-          "duration_sec": 3,
+          "duration_sec": 2,
           "continuity": "축: S#1과 같다. 불과 천 서방은 화면 오른쪽 후경, 달래 왼쪽, 정겸 오른쪽. 달래는 오른손 손가락을 접는다(인서트 손 방향 통일)",
           "image_prompt": "two-shot at night, the young woman and the tall man in the left foreground, the fire and the busy rice-cake seller in the background right, she raises one open hand"
         },
@@ -395,7 +489,7 @@
           "frame": "정겸이 물동이 행렬 사이를 가로질러 화면 오른쪽(불 쪽)으로 걸어간다. 카메라가 나란히 따라간다.",
           "action": "정겸이 천 서방에게 다가간다.",
           "transition": "CUT",
-          "duration_sec": 3,
+          "duration_sec": 2,
           "image_prompt": "tracking shot, the tall man walking calmly through the bucket line toward the fire"
         },
         {
@@ -411,7 +505,7 @@
           "frame": "측면 투숏. 왼쪽 정겸이 오른쪽 천 서방의 소매를 잡아 코에 대고 맡는다. 천 서방은 물동이를 든 채 얼어붙는다.",
           "action": "정겸이 천 서방의 소매를 잡아 코에 대고 맡는다.",
           "transition": "CUT",
-          "duration_sec": 4,
+          "duration_sec": 3,
           "image_prompt": "profile two-shot, the tall man lifting the rice-cake seller's sleeve to his nose and sniffing, the seller frozen holding a bucket"
         },
         {
@@ -467,7 +561,7 @@
           "action": "천 서방이 물동이를 내던지고 달아나다 다른 물동이에 걸려 넘어진다.",
           "sound": "(E) 물동이 구르는 소리, 물 쏟아지는 소리",
           "transition": "CUT",
-          "duration_sec": 4,
+          "duration_sec": 3,
           "image_prompt": "handheld long shot, the rice-cake seller throwing down his buckets, bolting and tripping over another bucket, water splashing everywhere"
         },
         {
@@ -537,8 +631,8 @@
       "heading": "같은 장소 (밤)",
       "location": "munridang",
       "time": "NIGHT",
-      "tc_in": "01:20",
-      "tc_out": "01:55",
+      "tc_in": "01:26",
+      "tc_out": "01:59",
       "characters": [
         "dallae",
         "jeonggyeom",
@@ -566,7 +660,7 @@
           "action": "형조 나졸들이 들이닥친다. 너무 빠르다.",
           "sound": "(E) 발소리, 호령",
           "transition": "CUT",
-          "duration_sec": 4,
+          "duration_sec": 3,
           "continuity": "축: S#1·S#2와 같다(불 화면 오른쪽, 달래·정겸 왼쪽 전경). 나졸과 종사관은 후경 골목 안쪽에서 들어와 화면 가운데를 차지한다. 광원은 잔불과 나졸들의 횃불",
           "notes": "고증확인: 종사관은 본래 포도청 직제다. 대본과 설정집(형조 종사관)을 따른다. 나졸 복식도 확인",
           "image_prompt": "handheld long shot at night, a squad of police runners with torches pouring into the alley from deep background, the young woman and the tall man stepping back in the left foreground"
@@ -658,7 +752,7 @@
           "frame": "천 서방이 나졸들에게 끌려 후경 골목 안쪽으로 멀어진다. 맨 뒤에 종사관의 등.",
           "action": "천 서방이 끌려간다.",
           "transition": "CUT",
-          "duration_sec": 4,
+          "duration_sec": 3,
           "image_prompt": "long shot, police runners dragging the gagged man away down the dark alley, the officer's back last, torches receding"
         },
         {
@@ -766,8 +860,8 @@
       "heading": "달래책방 마루 (밤)",
       "location": "dallae_maru",
       "time": "NIGHT",
-      "tc_in": "01:55",
-      "tc_out": "02:30",
+      "tc_in": "01:59",
+      "tc_out": "02:32",
       "characters": [
         "dallae",
         "jeonggyeom"
@@ -790,7 +884,7 @@
           "action": "달래가 보리차를 두 잔 내온다.",
           "sound": "풀벌레 소리",
           "transition": "CUT",
-          "duration_sec": 4,
+          "duration_sec": 3,
           "continuity": "축: 대문 화면 왼쪽, 행랑채 오른쪽(locations.json). 달래 왼쪽, 정겸 오른쪽(2화와 같은 좌우). 광원은 처마의 초롱",
           "image_prompt": "night on the wooden porch of a hanok bookshop lit by a single paper lantern under the eaves, the young woman bringing two cups of barley tea and sitting down at frame left, the upright man at frame right, the closed gate in the background left"
         },
@@ -930,7 +1024,7 @@
             "INSERT_TEXT"
           ],
           "transition": "CUT",
-          "duration_sec": 4,
+          "duration_sec": 3,
           "notes": "수사 수첩 첫 인서트. 이후 회차의 수첩 인서트와 같은 TOP 구도로 맞춘다",
           "image_prompt": "top-down insert of a small notebook page with a freshly brushed line of writing, ink still wet, lantern light"
         },
@@ -996,7 +1090,7 @@
       "heading": "달래책방 맞은편 지붕 (밤)",
       "location": "dallae_roof",
       "time": "NIGHT",
-      "tc_in": "02:30",
+      "tc_in": "02:32",
       "tc_out": "03:00",
       "characters": [
         "dallae",
@@ -1038,7 +1132,7 @@
             "BRUSH"
           ],
           "transition": "CUT",
-          "duration_sec": 4,
+          "duration_sec": 3,
           "image_prompt": "a paper-screen window glowing with lamplight, the shadow of a young woman pulling a brush from her hair and writing at a low desk"
         },
         {
@@ -1148,7 +1242,7 @@
             "ROOFTOP_HEUKRIP"
           ],
           "transition": "FREEZE",
-          "duration_sec": 5,
+          "duration_sec": 4,
           "notes": "엔딩 훅: 지붕 위의 사내가 처음으로 왼손을 드러냈다. 4화 「연체 도령」로",
           "image_prompt": "crane up from behind a tiny black-hatted silhouette on a rooftop to a vast sea of moonlit tiled roofs of old Seoul, one lit paper window across the way"
         }

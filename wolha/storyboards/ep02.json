@@ -6,15 +6,107 @@
   "runtime_sec": 180,
   "aspect": "16:9",
   "status": "review",
-  "notes": "샷 수 59, 평균 3.1초. 흑립은 S#5 어둠 속 무릎 꿇은 그림자로만 나온다(얼굴·왼손 비공개). 대본에 지붕 위 흑립이 없고 S#5에서야 허진이 '찾아라'를 명하므로, 그 전에 책방 지붕에 세우지 않았다. 마 서방은 대사 없는 단역(extras). 크래시 줌 1회(S02-05).",
+  "notes": "샷 수 59, 평균 3.1초. 흑립은 S#5 어둠 속 무릎 꿇은 그림자로만 나온다(얼굴·왼손 비공개). 대본에 지붕 위 흑립이 없고 S#5에서야 허진이 '찾아라'를 명하므로, 그 전에 책방 지붕에 세우지 않았다. 마 서방은 대사 없는 단역(extras). 크래시 줌 1회(S02-05). 앞 12초는 강수의 '지난 대목'(S#0, 시그니처). 그만큼 각 씬을 span 비율로 줄였다.",
   "scenes": [
+    {
+      "id": "S#0",
+      "heading": "지난 대목 — 종로 담배가게 앞 평상 (낮)",
+      "location": "jongno_tobacco",
+      "time": "DAY",
+      "tc_in": "00:00",
+      "tc_out": "00:12",
+      "characters": [
+        "gangsu",
+        "dallae",
+        "jeonggyeom"
+      ],
+      "mood": "COMEDY",
+      "summary": "강수의 '지난 대목'(시그니처). 1화를 12초로 요약하고 부채를 접으며 오늘 대목을 연다.",
+      "source_text": "평상 위의 강수가 부채를 촥 펴고 카메라를 본다.\nFlash. (1화) 작가를 잡으러 온 사내가, 하필 작가의 집 대문을 두드린다.\n(N, 강수) 지난 대목에 이르기를, 금서를 제일 싫어한다는 검서관이 금서 작가를 잡으러 나섰다가, 하필 그 작가의 집에 세를 들었소.\n**강수** (부채를 탁 접으며) 자, 오늘 대목이오.",
+      "shots": [
+        {
+          "id": "S00-01",
+          "size": "MCU",
+          "angle": "LOW",
+          "move": "FIX",
+          "lens_mm": 50,
+          "characters": [
+            "gangsu"
+          ],
+          "frame": "평상 위 강수 정면. 부채를 촥 펴며 카메라를 본다(제4의 벽). 뒤로 구경꾼들이 흐리다.",
+          "action": "평상 위의 강수가 부채를 촥 펴고 카메라를 본다.",
+          "sound": "(E) 부채 펴는 소리 촥",
+          "motifs": [
+            "NARRATOR"
+          ],
+          "transition": "CUT",
+          "duration_sec": 2,
+          "continuity": "지난 대목은 이야기 밖 액자다. 매회 같은 구도, 1화 강수 차림 그대로(부상·붕대 없음), 평상은 화면 가운데",
+          "image_prompt": "low angle medium close-up, the storyteller on his wooden platform snapping open a folding fan and looking straight at the viewer, blurred crowd behind, warm daylight"
+        },
+        {
+          "id": "S00-02",
+          "size": "LS",
+          "angle": "HIGH",
+          "move": "CRANE_UP",
+          "lens_mm": 24,
+          "characters": [
+            "jeonggyeom",
+            "dallae"
+          ],
+          "frame": "Flash. 1화 마지막 컷(S06-11)을 탈색해 다시 보여 준다. 대문 앞 두 사람에서 크레인 업, 지붕 너머 골목 전체로. 프리즈 직전에 정지.",
+          "action": "작가를 잡으러 온 사내가, 하필 작가의 집 대문을 두드린다.",
+          "dialogue": [
+            {
+              "speaker": "N:gangsu",
+              "line": "지난 대목에 이르기를, 금서를 제일 싫어한다는 검서관이 금서 작가를 잡으러 나섰다가, 하필 그 작가의 집에 세를 들었소.",
+              "mode": "N"
+            }
+          ],
+          "motifs": [
+            "NARRATOR"
+          ],
+          "transition": "CUT",
+          "duration_sec": 7,
+          "image_from": "ep01/S06-11",
+          "image_filter": "desaturate",
+          "image_prompt": "desaturated memory. high angle crane up from two figures facing each other at a hanok gate to the rooftops of the alley, morning"
+        },
+        {
+          "id": "S00-03",
+          "size": "MCU",
+          "angle": "LOW",
+          "move": "FIX",
+          "lens_mm": 50,
+          "characters": [
+            "gangsu"
+          ],
+          "frame": "S00-01과 같은 구도. 부채를 탁 접고 고개를 까딱한다.",
+          "action": "강수가 부채를 탁 접으며 오늘 대목을 연다.",
+          "dialogue": [
+            {
+              "speaker": "gangsu",
+              "line": "자, 오늘 대목이오.",
+              "mode": "ON"
+            }
+          ],
+          "sound": "(E) 부채 접는 소리 탁",
+          "motifs": [
+            "NARRATOR"
+          ],
+          "transition": "SMASH_CUT",
+          "duration_sec": 3,
+          "image_prompt": "low angle medium close-up, the storyteller snapping his folding fan shut with a sly grin, looking at the viewer, warm daylight"
+        }
+      ]
+    },
     {
       "id": "S#1",
       "heading": "달래책방 마당 (아침)",
       "location": "dallae_maru",
       "time": "MORNING",
-      "tc_in": "00:00",
-      "tc_out": "00:20",
+      "tc_in": "00:12",
+      "tc_out": "00:31",
       "characters": [
         "dallae",
         "jeonggyeom"
@@ -44,7 +136,7 @@
           ],
           "sound": "(E) 주판알 튕기는 소리 딱딱",
           "transition": "CUT",
-          "duration_sec": 5,
+          "duration_sec": 4,
           "continuity": "축: 대문 화면 왼쪽, 행랑채 오른쪽(locations.json). 달래 왼쪽, 정겸 오른쪽으로 1화 S#6의 좌우 관계를 잇는다. 정겸은 1화 S#6과 같은 낡은 흰 도포에 보따리",
           "notes": "고증확인: 18세기 말 한양 상인의 주판 사용(대본 지시 소품)",
           "image_prompt": "morning in a small hanok bookshop yard, a petite young woman sitting on a wooden bench by the gate flicking abacus beads, a tall lodger standing with a travel bundle, book chests stacked on the porch behind"
@@ -174,8 +266,8 @@
       "heading": "달래책방 마당 (아침)",
       "location": "dallae_maru",
       "time": "MORNING",
-      "tc_in": "00:20",
-      "tc_out": "01:10",
+      "tc_in": "00:31",
+      "tc_out": "01:18",
       "characters": [
         "ma_yeonggam",
         "dallae",
@@ -202,7 +294,7 @@
           "action": "대문이 벌컥 열린다. 마 영감과 장정 둘, 그 뒤에 들국화를 수줍게 쥔 노총각 마 서방.",
           "sound": "(E) 쾅!",
           "transition": "CUT",
-          "duration_sec": 3,
+          "duration_sec": 2,
           "continuity": "축: 대문 화면 왼쪽. 마 영감 일행은 대문으로 들어와 화면 왼쪽에 서고, 달래와 정겸은 오른쪽(달래가 정겸의 왼편). 마 영감은 오른쪽을, 두 사람은 왼쪽을 본다. 씬 내내 유지",
           "notes": "extras는 장정 둘과 마 서방(마 영감의 아들, 대사 없는 단역)",
           "image_prompt": "wide shot, a hanok gate bursting open at frame left, a pudgy moneylender striding in with two burly men, a big shy bachelor behind them clutching a bunch of wild chrysanthemums, the young woman and the lodger turning at frame right"
@@ -501,7 +593,7 @@
           "action": "마 영감이 나간다. 마 서방이 꽃을 품에 넣고 고개를 숙인 채 따라 나간다. 대문이 닫힌다.",
           "sound": "(E) 대문 닫히는 소리 쿵",
           "transition": "CUT",
-          "duration_sec": 4,
+          "duration_sec": 3,
           "image_prompt": "same wide shot of the gate, the moneylender and his men leaving through the gate at frame left, the shy bachelor tucking the flowers into his robe and trudging after them with head hung, the gate closing"
         },
         {
@@ -535,7 +627,7 @@
             "EAR_RED"
           ],
           "transition": "CUT",
-          "duration_sec": 4,
+          "duration_sec": 3,
           "image_prompt": "medium close-up profile, the tall man staring down at his open palm, his ear still bright red, muted colors except the ear"
         }
       ]
@@ -545,8 +637,8 @@
       "heading": "달래책방 행랑채 (밤)",
       "location": "dallae_haengrang",
       "time": "NIGHT",
-      "tc_in": "01:10",
-      "tc_out": "01:50",
+      "tc_in": "01:18",
+      "tc_out": "01:55",
       "characters": [
         "dallae",
         "jeonggyeom"
@@ -679,7 +771,7 @@
             "CONTRACT"
           ],
           "transition": "CUT",
-          "duration_sec": 7,
+          "duration_sec": 4,
           "continuity": "계약서는 종이 한 장, 다섯 조항, 왼쪽 끝에 서명 두 자리",
           "notes": "CONTRACT 첫 등장. 15화 찢기, 20화 새 계약서와 같은 TOP 구도·같은 종이 크기로 찍는다. 글씨는 후반 합성",
           "image_prompt": "top-down insert, a brush tip writing neat vertical columns of regular-script calligraphy on a sheet of hanji by lamplight, moving from right to left"
@@ -836,8 +928,8 @@
       "heading": "달래책방 대문 앞 (낮)",
       "location": "dallae_maru",
       "time": "DAY",
-      "tc_in": "01:50",
-      "tc_out": "02:30",
+      "tc_in": "01:55",
+      "tc_out": "02:32",
       "characters": [
         "dallae",
         "jeonggyeom",
@@ -862,7 +954,7 @@
           "action": "「청상연가」 5권 상권이 풀린 날. 대문 앞 줄이 골목을 두 번 꺾는다.",
           "sound": "웅성거림, 엽전 소리",
           "transition": "CUT",
-          "duration_sec": 4,
+          "duration_sec": 3,
           "continuity": "축: 대문 화면 왼쪽(locations.json). 줄은 대문에서 시작해 오른쪽으로 두 번 꺾인다. 정겸은 줄 맨 끝(화면 오른쪽), 달래는 대문 안 마당",
           "image_prompt": "high angle wide shot of a narrow Jongno back alley, a long queue of readers starting at a hanok bookshop gate on the left and bending twice through the alley"
         },
@@ -946,7 +1038,7 @@
             "INSERT_TEXT"
           ],
           "transition": "CUT",
-          "duration_sec": 4,
+          "duration_sec": 3,
           "notes": "S05-02 허진의 책장과 같은 장, 같은 구도",
           "image_prompt": "top-down insert of a woodblock-printed novel page, a slender fingertip stopped beside one line"
         },
@@ -1042,7 +1134,7 @@
           "frame": "정겸 시점, 망원. 줄 선 사람들 어깨 너머, 열린 대문 안 마당에서 달래가 웃으며 손을 흔든다.",
           "action": "마당 안쪽에서 달래가 줄 선 사람들에게 웃으며 손을 흔들고 있다.",
           "transition": "CUT",
-          "duration_sec": 4,
+          "duration_sec": 3,
           "image_prompt": "telephoto point of view over the shoulders of a queue, through an open hanok gate the young woman in the yard smiling and waving at the customers"
         },
         {
@@ -1083,7 +1175,7 @@
       "heading": "허진의 집 사랑채 (밤)",
       "location": "heojin_sarang",
       "time": "NIGHT",
-      "tc_in": "02:30",
+      "tc_in": "02:32",
       "tc_out": "03:00",
       "characters": [
         "heojin",
@@ -1161,7 +1253,7 @@
             "TEA_OVERFLOW"
           ],
           "transition": "CUT",
-          "duration_sec": 5,
+          "duration_sec": 3,
           "notes": "TEA_OVERFLOW 첫 등장. 이후 회차에서도 같은 찻잔 높이, 같은 렌즈로 찍는다",
           "image_prompt": "insert at cup level, tea overflowing a celadon cup and spreading across the lacquered tea table while the pot keeps pouring, candlelight"
         },

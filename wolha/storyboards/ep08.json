@@ -6,15 +6,111 @@
   "runtime_sec": 180,
   "aspect": "16:9",
   "status": "review",
-  "notes": "샷 수 57, 평균 3.2초. 세검정 '김일이오'에 EAR_RED를 한 번 심어 9화 EAR_NOT_RED와 대비시켰다(S02-07). 서연의 별당(S#1)은 별도 장소 id가 없어 yunhui_byeoldang 세트를 꾸며 쓴다. 지붕 위 흑립은 S05-09. 대사가 긴 윤희 대사(S02-08, S03-04)는 한 샷에 통으로 넣었다.",
+  "notes": "샷 수 57, 평균 3.2초. 세검정 '김일이오'에 EAR_RED를 한 번 심어 9화 EAR_NOT_RED와 대비시켰다(S02-07). 서연의 별당(S#1)은 별도 장소 id가 없어 yunhui_byeoldang 세트를 꾸며 쓴다. 지붕 위 흑립은 S05-09. 대사가 긴 윤희 대사(S02-08, S03-04)는 한 샷에 통으로 넣었다. 앞 12초는 강수의 '지난 대목'(S#0, 시그니처). 그만큼 각 씬을 span 비율로 줄였다.",
   "scenes": [
+    {
+      "id": "S#0",
+      "heading": "지난 대목 — 종로 담배가게 앞 평상 (낮)",
+      "location": "jongno_tobacco",
+      "time": "DAY",
+      "tc_in": "00:00",
+      "tc_out": "00:12",
+      "characters": [
+        "gangsu",
+        "yul",
+        "heojin"
+      ],
+      "mood": "COMEDY",
+      "summary": "강수의 '지난 대목'(시그니처). 7화를 12초로 요약하고 부채를 접으며 오늘 대목을 연다.",
+      "source_text": "평상 위의 강수가 부채를 촥 펴고 카메라를 본다.\nFlash. (7화) 아버지의 문 앞에서 율이 엿들은 한마디. \"소리 없이 묻어라.\"\n(N, 강수) 지난 대목에 이르기를, 새 권의 남자 주인공이 어쩐지 하숙생을 닮았고, 율은 아버지 문 앞에서 '소리 없이 묻어라'를 들었소.\n**강수** (부채를 탁 접으며) 자, 오늘 대목이오.",
+      "shots": [
+        {
+          "id": "S00-01",
+          "size": "MCU",
+          "angle": "LOW",
+          "move": "FIX",
+          "lens_mm": 50,
+          "characters": [
+            "gangsu"
+          ],
+          "frame": "평상 위 강수 정면. 부채를 촥 펴며 카메라를 본다(제4의 벽). 뒤로 구경꾼들이 흐리다.",
+          "action": "평상 위의 강수가 부채를 촥 펴고 카메라를 본다.",
+          "sound": "(E) 부채 펴는 소리 촥",
+          "motifs": [
+            "NARRATOR"
+          ],
+          "transition": "CUT",
+          "duration_sec": 2,
+          "continuity": "지난 대목은 이야기 밖 액자다. 매회 같은 구도, 1화 강수 차림 그대로(부상·붕대 없음), 평상은 화면 가운데",
+          "image_prompt": "low angle medium close-up, the storyteller on his wooden platform snapping open a folding fan and looking straight at the viewer, blurred crowd behind, warm daylight",
+          "image_from": "ep02/S00-01",
+          "image_filter": "none"
+        },
+        {
+          "id": "S00-02",
+          "size": "LS",
+          "angle": "HIGH",
+          "move": "CRANE_UP",
+          "lens_mm": 24,
+          "characters": [
+            "yul",
+            "heojin"
+          ],
+          "frame": "Flash. 7화 마지막 컷(S05-10)을 탈색해 다시 보여 준다. 어두운 마루에 혼자 선 율에서 크레인 업. 오른쪽 창호지 문의 촛불만 밝다. 지붕 위로 올라가 판서댁 기와지붕 전체가 보이는 데서 정지.",
+          "action": "아버지의 문 앞에서 율이 엿들은 한마디. \"소리 없이 묻어라.\"",
+          "dialogue": [
+            {
+              "speaker": "N:gangsu",
+              "line": "지난 대목에 이르기를, 새 권의 남자 주인공이 어쩐지 하숙생을 닮았고, 율은 아버지 문 앞에서 '소리 없이 묻어라'를 들었소.",
+              "mode": "N"
+            }
+          ],
+          "motifs": [
+            "NARRATOR"
+          ],
+          "transition": "CUT",
+          "duration_sec": 7,
+          "image_from": "ep07/S05-10",
+          "image_filter": "desaturate",
+          "image_prompt": "desaturated memory. high angle crane up from a lone young nobleman standing on a dark veranda before a candlelit paper door, rising over the tiled roofs of the mansion at night"
+        },
+        {
+          "id": "S00-03",
+          "size": "MCU",
+          "angle": "LOW",
+          "move": "FIX",
+          "lens_mm": 50,
+          "characters": [
+            "gangsu"
+          ],
+          "frame": "S00-01과 같은 구도. 부채를 탁 접고 고개를 까딱한다.",
+          "action": "강수가 부채를 탁 접으며 오늘 대목을 연다.",
+          "dialogue": [
+            {
+              "speaker": "gangsu",
+              "line": "자, 오늘 대목이오.",
+              "mode": "ON"
+            }
+          ],
+          "sound": "(E) 부채 접는 소리 탁",
+          "motifs": [
+            "NARRATOR"
+          ],
+          "transition": "SMASH_CUT",
+          "duration_sec": 3,
+          "image_prompt": "low angle medium close-up, the storyteller snapping his folding fan shut with a sly grin, looking at the viewer, warm daylight",
+          "image_from": "ep02/S00-03",
+          "image_filter": "none"
+        }
+      ]
+    },
     {
       "id": "S#1",
       "heading": "참판댁 별당 (아침)",
       "location": "yunhui_byeoldang",
       "time": "MORNING",
-      "tc_in": "00:00",
-      "tc_out": "00:20",
+      "tc_in": "00:12",
+      "tc_out": "00:31",
       "characters": [
         "extras"
       ],
@@ -126,7 +222,7 @@
           "action": "한양의 세책방들이 문을 닫는다.",
           "sound": "(E) 판자문 닫히는 소리, 빗장 소리",
           "transition": "CUT",
-          "duration_sec": 4,
+          "duration_sec": 3,
           "notes": "내레이션을 받는 컷어웨이. 세책방 주인은 단역",
           "image_prompt": "a small rental bookshop in a Jongno back alley being shut, its owner carrying book chests inside, sliding the wooden shutters closed and barring them"
         }
@@ -137,8 +233,8 @@
       "heading": "세검정 정자 (낮)",
       "location": "sesgeomjeong",
       "time": "DAY",
-      "tc_in": "00:20",
-      "tc_out": "01:10",
+      "tc_in": "00:31",
+      "tc_out": "01:18",
       "characters": [
         "dallae",
         "jeonggyeom",
@@ -302,7 +398,7 @@
             }
           ],
           "transition": "CUT",
-          "duration_sec": 5,
+          "duration_sec": 4,
           "image_prompt": "medium close-up, the graceful noble girl turning halfway toward the steps and brightly covering for the young man without missing a beat, quick clever eyes"
         },
         {
@@ -487,7 +583,7 @@
           "action": "달래가 돌아서서 간다. 걸음이 평소보다 빠르다.",
           "sound": "(E) 빠른 발소리, 계곡 물소리",
           "transition": "CUT",
-          "duration_sec": 3,
+          "duration_sec": 2,
           "image_prompt": "wide shot panning left, the petite young woman walking away down the stone steps much faster than usual"
         },
         {
@@ -503,7 +599,7 @@
           "frame": "정자 안. 화면 왼쪽에 관복의 정겸, 오른쪽 계단참에 율. 둘이 동시에 반쯤 일어서다 멈추고 서로를 본다.",
           "action": "정겸과 율이 동시에 일어서다가, 서로를 본다.",
           "transition": "CUT",
-          "duration_sec": 3,
+          "duration_sec": 2,
           "image_prompt": "two-shot, the young man in formal official robe and samo hat and the nobleman with a fan both half-rising at the same moment to follow her, then freezing and staring at each other"
         }
       ]
@@ -513,8 +609,8 @@
       "heading": "윤희의 집 별당 (밤)",
       "location": "yunhui_byeoldang",
       "time": "NIGHT",
-      "tc_in": "01:10",
-      "tc_out": "02:05",
+      "tc_in": "01:18",
+      "tc_out": "02:09",
       "characters": [
         "dallae",
         "jeonggyeom",
@@ -555,7 +651,7 @@
           "frame": "탑샷. 펼친 책장 여백마다 여러 사람의 필체로 낙서가 빼곡하다. 초점이 이 낙서에서 저 낙서로 옮겨 간다.",
           "action": "여백마다 여인들의 낙서가 빼곡하다.",
           "transition": "CUT",
-          "duration_sec": 5,
+          "duration_sec": 4,
           "notes": "낙서 글씨는 후반 합성. 이 컷에서는 읽히지 않을 만큼 작게",
           "image_prompt": "top-down insert, margins of a hand-copied novel crowded with tiny notes in many different hands, focus drifting from one note to another, lamplight"
         },
@@ -678,7 +774,7 @@
           "action": "윤희가 손가락으로 낙서의 첫 글자를 하나씩 짚는다.",
           "sound": "(E) 손톱이 종이를 톡, 톡 짚는 소리",
           "transition": "CUT",
-          "duration_sec": 6,
+          "duration_sec": 4,
           "image_prompt": "top-down insert, a delicate fingertip tapping the first character of each margin note one by one across the page, lamplight"
         },
         {
@@ -695,7 +791,7 @@
             "INSERT_TEXT"
           ],
           "transition": "CUT",
-          "duration_sec": 5,
+          "duration_sec": 4,
           "notes": "TASKS 8화 필수 그림. 글씨는 후반 합성",
           "image_prompt": "top-down insert, a few chosen characters in the margins glowing faintly while all the other notes fade away, as if gathering into a single line, lamplight"
         },
@@ -782,8 +878,8 @@
       "heading": "허진의 집 사랑채 (밤)",
       "location": "heojin_sarang",
       "time": "NIGHT",
-      "tc_in": "02:05",
-      "tc_out": "02:30",
+      "tc_in": "02:09",
+      "tc_out": "02:32",
       "characters": [
         "heojin",
         "jongsagwan"
@@ -906,7 +1002,7 @@
           "action": "종사관이 물러간다.",
           "sound": "(E) 문 닫히는 소리",
           "transition": "CUT",
-          "duration_sec": 4,
+          "duration_sec": 3,
           "image_prompt": "same high angle, the officer touching his forehead to the floor, rising and backing out through the door on the left"
         },
         {
@@ -921,7 +1017,7 @@
           "frame": "혼자 남은 허진. 다시 찻잔을 채운다. 카메라가 천천히 다가가고, 촛불이 한 번 흔들린다.",
           "action": "허진이 혼자 차를 마신다.",
           "transition": "CUT",
-          "duration_sec": 4,
+          "duration_sec": 3,
           "image_prompt": "slow push-in, the official alone at his tea table refilling his cup, the single candle flame wavering once"
         }
       ]
@@ -931,7 +1027,7 @@
       "heading": "마포나루 (밤)",
       "location": "mapo",
       "time": "NIGHT",
-      "tc_in": "02:30",
+      "tc_in": "02:32",
       "tc_out": "03:00",
       "characters": [
         "dallae",
@@ -957,7 +1053,7 @@
           "action": "어두운 나루. 달래와 정겸이 매어 둔 배들 사이를 살핀다.",
           "sound": "(E) 물소리, 배가 서로 부딪히는 소리",
           "transition": "CUT",
-          "duration_sec": 3,
+          "duration_sec": 2,
           "continuity": "축: 강물과 매어 둔 배들은 화면 오른쪽, 강둑 언덕과 창고는 왼쪽 위. 율은 왼쪽 뒤 어둠에서 달려오고, 횃불 행렬은 왼쪽 위 강둑을 따라 내려온다. 광원은 정겸이 든 초롱 하나(초승달은 이미 졌다)",
           "image_prompt": "extreme wide night shot of a dark riverside ferry landing, silhouettes of moored boats on black water to the right, a single small lantern moving between them"
         },
@@ -1134,7 +1230,7 @@
           "frame": "배들 사이의 작은 세 사람에서 크레인 업. 왼쪽 위에서 횃불 행렬이 강둑을 타고 내려와 화면을 사선으로 가른다. 정지.",
           "action": "초사흘 밤 마포나루. 강둑을 따라 횃불이 다가온다.",
           "transition": "FREEZE",
-          "duration_sec": 4,
+          "duration_sec": 3,
           "notes": "엔딩 훅. 9화 S#1(새우젓 창고)로 이어진다",
           "image_prompt": "high angle crane up from three tiny figures among moored boats to a line of torches snaking down the riverbank toward them, dark river, freeze frame"
         }

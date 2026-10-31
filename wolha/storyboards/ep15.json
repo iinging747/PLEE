@@ -6,15 +6,111 @@
   "runtime_sec": 180,
   "aspect": "16:9",
   "status": "review",
-  "notes": "샷 수 58, 평균 3.1초. S#2 안채 창호지 그림자는 대본이 이름을 밝히지 않지만 달래로 보고 씬 인물에 넣었다. S#5에서 달래는 대사로만 언급되므로 씬 인물에서 뺐다. 강수 왼쪽 아래팔 붕대는 대본('성한 손')에 따라 15화에도 유지(AGENTS.md: 11~18화). 율 상처는 왼쪽 옆구리(11~13화와 같다). 대본에 지붕 위 흑립이 없어 ROOFTOP_HEUKRIP 컷은 넣지 않았다.",
+  "notes": "샷 수 58, 평균 3.1초. S#2 안채 창호지 그림자는 대본이 이름을 밝히지 않지만 달래로 보고 씬 인물에 넣었다. S#5에서 달래는 대사로만 언급되므로 씬 인물에서 뺐다. 강수 왼쪽 아래팔 붕대는 대본('성한 손')에 따라 15화에도 유지(AGENTS.md: 11~18화). 율 상처는 왼쪽 옆구리(11~13화와 같다). 대본에 지붕 위 흑립이 없어 ROOFTOP_HEUKRIP 컷은 넣지 않았다. 앞 12초는 강수의 '지난 대목'(S#0, 시그니처). 그만큼 각 씬을 span 비율로 줄였다.",
   "scenes": [
+    {
+      "id": "S#0",
+      "heading": "지난 대목 — 종로 담배가게 앞 평상 (낮)",
+      "location": "jongno_tobacco",
+      "time": "DAY",
+      "tc_in": "00:00",
+      "tc_out": "00:12",
+      "characters": [
+        "gangsu",
+        "dallae",
+        "jeonggyeom"
+      ],
+      "mood": "COMEDY",
+      "summary": "강수의 '지난 대목'(시그니처). 14화를 12초로 요약하고 부채를 접으며 오늘 대목을 연다.",
+      "source_text": "평상 위의 강수가 부채를 촥 펴고 카메라를 본다.\nFlash. (14화) 새벽, 달래가 그의 수첩에서 자기 이름을 발견한다.\n(N, 강수) 지난 대목에 이르기를, 숨소리도 못 내는 창고에서 두 사람이 입을 맞췄고, 새벽에 달래는 그의 수첩에서 제 이름을 보았소.\n**강수** (부채를 탁 접으며) 자, 오늘 대목이오.",
+      "shots": [
+        {
+          "id": "S00-01",
+          "size": "MCU",
+          "angle": "LOW",
+          "move": "FIX",
+          "lens_mm": 50,
+          "characters": [
+            "gangsu"
+          ],
+          "frame": "평상 위 강수 정면. 부채를 촥 펴며 카메라를 본다(제4의 벽). 뒤로 구경꾼들이 흐리다.",
+          "action": "평상 위의 강수가 부채를 촥 펴고 카메라를 본다.",
+          "sound": "(E) 부채 펴는 소리 촥",
+          "motifs": [
+            "NARRATOR"
+          ],
+          "transition": "CUT",
+          "duration_sec": 2,
+          "continuity": "지난 대목은 이야기 밖 액자다. 매회 같은 구도, 1화 강수 차림 그대로(부상·붕대 없음), 평상은 화면 가운데",
+          "image_prompt": "low angle medium close-up, the storyteller on his wooden platform snapping open a folding fan and looking straight at the viewer, blurred crowd behind, warm daylight",
+          "image_from": "ep02/S00-01",
+          "image_filter": "none"
+        },
+        {
+          "id": "S00-02",
+          "size": "2S",
+          "angle": "PROFILE",
+          "move": "DOLLY_IN",
+          "lens_mm": 50,
+          "characters": [
+            "jeonggyeom",
+            "dallae"
+          ],
+          "frame": "Flash. 14화 마지막 컷(S06-06)을 탈색해 다시 보여 준다. 측면 투숏. 문간의 정겸 왼쪽, 서안 앞 달래 오른쪽. 붉은 인장 종이가 두 사람 사이 바닥에. 천천히 다가가다 정지.",
+          "action": "새벽, 달래가 그의 수첩에서 자기 이름을 발견한다.",
+          "dialogue": [
+            {
+              "speaker": "N:gangsu",
+              "line": "지난 대목에 이르기를, 숨소리도 못 내는 창고에서 두 사람이 입을 맞췄고, 새벽에 달래는 그의 수첩에서 제 이름을 보았소.",
+              "mode": "N"
+            }
+          ],
+          "motifs": [
+            "NARRATOR"
+          ],
+          "transition": "CUT",
+          "duration_sec": 7,
+          "image_from": "ep14/S06-06",
+          "image_filter": "desaturate",
+          "image_prompt": "desaturated memory. profile two-shot at dawn, the man in the doorway on the left and the young woman by the desk on the right, a folded sealed paper on the floor between them, eyes locked, freeze frame"
+        },
+        {
+          "id": "S00-03",
+          "size": "MCU",
+          "angle": "LOW",
+          "move": "FIX",
+          "lens_mm": 50,
+          "characters": [
+            "gangsu"
+          ],
+          "frame": "S00-01과 같은 구도. 부채를 탁 접고 고개를 까딱한다.",
+          "action": "강수가 부채를 탁 접으며 오늘 대목을 연다.",
+          "dialogue": [
+            {
+              "speaker": "gangsu",
+              "line": "자, 오늘 대목이오.",
+              "mode": "ON"
+            }
+          ],
+          "sound": "(E) 부채 접는 소리 탁",
+          "motifs": [
+            "NARRATOR"
+          ],
+          "transition": "SMASH_CUT",
+          "duration_sec": 3,
+          "image_prompt": "low angle medium close-up, the storyteller snapping his folding fan shut with a sly grin, looking at the viewer, warm daylight",
+          "image_from": "ep02/S00-03",
+          "image_filter": "none"
+        }
+      ]
+    },
     {
       "id": "S#1",
       "heading": "달래책방 행랑채 (새벽)",
       "location": "dallae_haengrang",
       "time": "DAWN",
-      "tc_in": "00:00",
-      "tc_out": "00:50",
+      "tc_in": "00:12",
+      "tc_out": "00:59",
       "characters": [
         "dallae",
         "jeonggyeom"
@@ -39,7 +135,7 @@
             "INSERT_TEXT"
           ],
           "transition": "CUT",
-          "duration_sec": 4,
+          "duration_sec": 3,
           "continuity": "축: 14화 S#6과 같다. 행랑채 방문(문간의 정겸)은 화면 왼쪽, 서안 앞 달래는 오른쪽. 14화 엔딩 정지 화면에서 바로 이어진다",
           "notes": "꼭 챙길 그림: 밀명 INSERT",
           "image_prompt": "top-down insert, small ink-stained hands unfolding an official document stamped with a large red royal seal, blue dawn light"
@@ -82,7 +178,7 @@
             "INSERT_TEXT"
           ],
           "transition": "CUT",
-          "duration_sec": 5,
+          "duration_sec": 3,
           "notes": "꼭 챙길 그림: 같은 글씨 대조. 두 글씨의 삐침이 겹쳐 보이게 놓는다",
           "image_prompt": "top-down insert, a rented novel with brush notes in its margins laid side by side with an open notebook, rack focus between the two identical handwriting styles, a small ink-stained finger tracing a matching stroke"
         },
@@ -352,8 +448,8 @@
       "heading": "달래책방 행랑채 문간 (아침)",
       "location": "dallae_haengrang",
       "time": "MORNING",
-      "tc_in": "00:50",
-      "tc_out": "01:20",
+      "tc_in": "00:59",
+      "tc_out": "01:27",
       "characters": [
         "jeonggyeom",
         "gangsu",
@@ -474,7 +570,7 @@
             }
           ],
           "transition": "CUT",
-          "duration_sec": 5,
+          "duration_sec": 4,
           "image_prompt": "over-the-shoulder from the storyteller, the scholar with a disheveled collar giving a grave warning"
         },
         {
@@ -514,7 +610,7 @@
             "UMBRELLA"
           ],
           "transition": "CUT",
-          "duration_sec": 3,
+          "duration_sec": 2,
           "notes": "9화 우산 산책의 그 우산. 같은 색, 같은 살",
           "image_prompt": "insert, an oil-paper umbrella leaning against a doorway post, a man's hand reaching toward it, hesitating and withdrawing"
         },
@@ -591,8 +687,8 @@
       "heading": "달래책방 마루 (해 질 녘)",
       "location": "dallae_maru",
       "time": "DUSK",
-      "tc_in": "01:20",
-      "tc_out": "02:00",
+      "tc_in": "01:27",
+      "tc_out": "02:04",
       "characters": [
         "dallae",
         "yul"
@@ -616,7 +712,7 @@
             "UMBRELLA"
           ],
           "transition": "CUT",
-          "duration_sec": 3,
+          "duration_sec": 2,
           "continuity": "축: 대문 화면 왼쪽, 행랑채 오른쪽(locations.json axis). 마루 끝 달래는 왼쪽, 한 사람 거리를 두고 앉는 율은 오른쪽. 해 질 녘 주황 역광. 율 왼쪽 옆구리 무명 띠(도포 속) 유지",
           "image_prompt": "high angle wide shot of a small hanok yard at sunset, the young woman sitting alone at the edge of the wooden porch on the left, an empty lodger's room on the right with a single oil-paper umbrella in its doorway"
         },
@@ -790,7 +886,7 @@
           "frame": "달래가 약과를 베어 문다. 천천히 다가간다. 씹다가 눈물이 차오른다.",
           "action": "달래가 약과를 베어 문다. 달다. 그래서 눈물이 난다.",
           "transition": "CUT",
-          "duration_sec": 4,
+          "duration_sec": 2,
           "image_prompt": "slow push-in close-up of the young woman biting into a honey cookie, tears welling up as she chews, sunset light"
         },
         {
@@ -884,8 +980,8 @@
       "heading": "종로 방각소 (밤)",
       "location": "banggakso",
       "time": "NIGHT",
-      "tc_in": "02:00",
-      "tc_out": "02:20",
+      "tc_in": "02:04",
+      "tc_out": "02:23",
       "characters": [
         "yul",
         "extras"
@@ -1001,7 +1097,7 @@
           "frame": "창밖 처마 그늘. 전경에 짚신 꾸러미를 멘 미행꾼의 어깨, 후경 창 안에 율과 장인이 작게.",
           "action": "창밖 처마 그늘. 짚신 장수 차림의 미행꾼이 귀를 기울이고 있다.",
           "transition": "CUT",
-          "duration_sec": 4,
+          "duration_sec": 3,
           "notes": "미행꾼(단역). 15화 S#5와 같은 배우",
           "image_prompt": "from outside the workshop window in the shadow of the eaves, a man disguised as a straw-sandal peddler eavesdropping in the foreground, the nobleman and the craftsman small inside the lamplit window"
         },
@@ -1027,7 +1123,7 @@
       "heading": "허진의 집 사랑채 (밤)",
       "location": "heojin_sarang",
       "time": "NIGHT",
-      "tc_in": "02:20",
+      "tc_in": "02:23",
       "tc_out": "03:00",
       "characters": [
         "heojin",
@@ -1054,7 +1150,7 @@
           "action": "미행꾼이 엎드려 있다. 허진이 차를 따른다.",
           "sound": "찻물 따르는 소리",
           "transition": "CUT",
-          "duration_sec": 3,
+          "duration_sec": 2,
           "continuity": "축: 허진은 화면 오른쪽에 앉고, 미행꾼·종사관·흑립은 왼쪽 열 걸음 밖(locations.json axis). 촛불 하나, 허진 얼굴 반쪽만 밝다",
           "image_prompt": "wide shot of an austere reception room lit by a single candle, the composed official seated at a tea table on the right, a spy prostrated far away on the left with an officer standing behind him"
         },
@@ -1097,7 +1193,7 @@
             "TEA_OVERFLOW"
           ],
           "transition": "CUT",
-          "duration_sec": 3,
+          "duration_sec": 2,
           "image_prompt": "insert, tea overflowing a celadon cup and spreading across a lacquered tea table while the pouring hand does not stop, candlelight"
         },
         {
@@ -1134,7 +1230,7 @@
           "frame": "허진이 벽장 맨 안쪽에 손을 넣어 낡은 책 한 권을 꺼낸다.",
           "action": "허진이 벽장 깊은 곳에서 낡은 「백골전」을 꺼낸다.",
           "transition": "CUT",
-          "duration_sec": 3,
+          "duration_sec": 2,
           "image_prompt": "medium shot, the official reaching deep into a built-in wall cabinet and drawing out an old worn book, candlelight"
         },
         {

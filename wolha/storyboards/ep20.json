@@ -6,15 +6,115 @@
   "runtime_sec": 180,
   "aspect": "16:9",
   "status": "review",
-  "notes": "최종회. 샷 수 60, 평균 3.0초. S#2 친국(85초, 대사 16줄)은 긴 대사를 리액션·인서트 샷에 걸쳐 시간을 벌고 대사 줄은 첫 샷에만 넣었다(S02-04→05, S02-12→14, S02-22→23). 짧은 대사는 한 샷에 두세 줄씩 묶었다(S04-03, S05-02~04). 〈월하정인〉은 가이드 8장대로 S05-07 FREEZE 다음 S05-08 DISSOLVE. noryang_bridge 는 bible 에 axis 가 없어 S#1·S#4 첫 샷에 축을 정해 적었다. 가이드 모티프 표의 CONTRACT(20화 새 계약서)는 숏폼 대본에 없어 넣지 않았다. S05-06 EAR_NOT_RED 는 축 때문에 오른쪽 옆얼굴(EAR_RED 견본은 왼쪽) — 감독 확인 필요.",
+  "notes": "최종회. 샷 수 60, 평균 3.0초. S#2 친국(85초, 대사 16줄)은 긴 대사를 리액션·인서트 샷에 걸쳐 시간을 벌고 대사 줄은 첫 샷에만 넣었다(S02-04→05, S02-12→14, S02-22→23). 짧은 대사는 한 샷에 두세 줄씩 묶었다(S04-03, S05-02~04). 〈월하정인〉은 가이드 8장대로 S05-07 FREEZE 다음 S05-08 DISSOLVE. noryang_bridge 는 bible 에 axis 가 없어 S#1·S#4 첫 샷에 축을 정해 적었다. 가이드 모티프 표의 CONTRACT(20화 새 계약서)는 숏폼 대본에 없어 넣지 않았다. S05-06 EAR_NOT_RED 는 축 때문에 오른쪽 옆얼굴(EAR_RED 견본은 왼쪽) — 감독 확인 필요. 앞 12초는 강수의 '지난 대목'(S#0, 시그니처). 그만큼 각 씬을 span 비율로 줄였다.",
   "scenes": [
+    {
+      "id": "S#0",
+      "heading": "지난 대목 — 종로 담배가게 앞 평상 (낮)",
+      "location": "jongno_tobacco",
+      "time": "DAY",
+      "tc_in": "00:00",
+      "tc_out": "00:12",
+      "characters": [
+        "gangsu",
+        "jeongjo"
+      ],
+      "mood": "COMEDY",
+      "summary": "강수의 '지난 대목'(시그니처). 19화를 12초로 요약하고 부채를 접으며 오늘 대목을 연다.",
+      "source_text": "평상 위의 강수가 부채를 촥 펴고 카메라를 본다.\nFlash. (19화) 왕의 행렬 앞에서. \"제가 월하노인, 윤달래입니다!\"\n(N, 강수) 지난 대목에 이르기를, 도성 담벼락마다 달래의 얼굴이 붙었고, 달래는 숨는 대신 징을 들었소. '제가 월하노인, 윤달래입니다!'\n**강수** (부채를 탁 접으며) 자, 오늘 대목이오.",
+      "shots": [
+        {
+          "id": "S00-01",
+          "size": "MCU",
+          "angle": "LOW",
+          "move": "FIX",
+          "lens_mm": 50,
+          "characters": [
+            "gangsu"
+          ],
+          "frame": "평상 위 강수 정면. 부채를 촥 펴며 카메라를 본다(제4의 벽). 뒤로 구경꾼들이 흐리다.",
+          "action": "평상 위의 강수가 부채를 촥 펴고 카메라를 본다.",
+          "sound": "(E) 부채 펴는 소리 촥",
+          "motifs": [
+            "NARRATOR"
+          ],
+          "transition": "CUT",
+          "duration_sec": 2,
+          "continuity": "지난 대목은 이야기 밖 액자다. 매회 같은 구도, 1화 강수 차림 그대로(부상·붕대 없음), 평상은 화면 가운데",
+          "image_prompt": "low angle medium close-up, the storyteller on his wooden platform snapping open a folding fan and looking straight at the viewer, blurred crowd behind, warm daylight",
+          "image_from": "ep02/S00-01",
+          "image_filter": "none"
+        },
+        {
+          "id": "S00-02",
+          "size": "CU",
+          "angle": "LOW",
+          "move": "FIX",
+          "lens_mm": 85,
+          "characters": [
+            "jeongjo"
+          ],
+          "frame": "Flash. 19화 마지막 컷(S05-11)을 탈색해 다시 보여 준다. 달래 시점의 로우앵글. 화면 오른쪽 위, 말 위의 정조가 왼쪽 아래의 달래를 내려다본다. 표정이 읽히기 직전에 화면이 멈춘다.",
+          "action": "왕의 행렬 앞에서. \"제가 월하노인, 윤달래입니다!\"",
+          "dialogue": [
+            {
+              "speaker": "N:gangsu",
+              "line": "지난 대목에 이르기를, 도성 담벼락마다 달래의 얼굴이 붙었고, 달래는 숨는 대신 징을 들었소. '제가 월하노인, 윤달래입니다!'",
+              "mode": "N"
+            }
+          ],
+          "motifs": [
+            "NARRATOR"
+          ],
+          "transition": "CUT",
+          "duration_sec": 7,
+          "image_from": "ep19/S05-11",
+          "image_filter": "desaturate",
+          "image_prompt": "desaturated memory. low angle close-up of the king on horseback looking down to the left, his expression unreadable, frozen frame",
+          "looks": [
+            {
+              "character": "jeongjo",
+              "variant": "procession"
+            }
+          ]
+        },
+        {
+          "id": "S00-03",
+          "size": "MCU",
+          "angle": "LOW",
+          "move": "FIX",
+          "lens_mm": 50,
+          "characters": [
+            "gangsu"
+          ],
+          "frame": "S00-01과 같은 구도. 부채를 탁 접고 고개를 까딱한다.",
+          "action": "강수가 부채를 탁 접으며 오늘 대목을 연다.",
+          "dialogue": [
+            {
+              "speaker": "gangsu",
+              "line": "자, 오늘 대목이오.",
+              "mode": "ON"
+            }
+          ],
+          "sound": "(E) 부채 접는 소리 탁",
+          "motifs": [
+            "NARRATOR"
+          ],
+          "transition": "SMASH_CUT",
+          "duration_sec": 3,
+          "image_prompt": "low angle medium close-up, the storyteller snapping his folding fan shut with a sly grin, looking at the viewer, warm daylight",
+          "image_from": "ep02/S00-03",
+          "image_filter": "none"
+        }
+      ]
+    },
     {
       "id": "S#1",
       "heading": "노량 배다리 앞 (아침)",
       "location": "noryang_bridge",
       "time": "MORNING",
-      "tc_in": "00:00",
-      "tc_out": "00:15",
+      "tc_in": "00:12",
+      "tc_out": "00:26",
       "characters": [
         "dallae",
         "heojin",
@@ -47,7 +147,7 @@
           "action": "행차가 멈췄다. 징 소리의 여운 속에 군중도 신하들도 얼어붙어 있다.",
           "sound": "(E) 징 소리의 긴 여운, 강바람에 깃발 펄럭이는 소리",
           "transition": "CUT",
-          "duration_sec": 3,
+          "duration_sec": 2,
           "continuity": "축: 행렬과 왕의 말은 화면 오른쪽 위, 격쟁한 달래는 왼쪽 아래, 군중은 화면 아래 전경. 이 씬 내내 유지(locations.json 의 noryang_bridge 에 axis 가 없어 이 회차에서 정함). 달래 흰 소복, 쓰개치마는 벗었다. 징은 달래 발치(19화 S#5에서 이어짐)",
           "image_prompt": "extreme wide high-angle shot of a royal procession halted before a pontoon bridge of boats across the frozen Han River on a winter morning, red and yellow banners and mounted guards filling the right of frame, a lone young woman in a white mourning sobok prostrate on the bare ground before the king's horse with a brass gong beside her, the heads of a hushed crowd in the foreground"
         },
@@ -139,8 +239,8 @@
       "heading": "용양봉저정 (낮)",
       "location": "yongyang",
       "time": "DAY",
-      "tc_in": "00:15",
-      "tc_out": "01:40",
+      "tc_in": "00:26",
+      "tc_out": "01:45",
       "characters": [
         "jeongjo",
         "dallae",
@@ -180,7 +280,7 @@
           "action": "한강이 내려다보이는 언덕 위 정자. 장막 밖으로 백성들이 언덕 아래에서 올려다본다. 왕은 정자 마루에, 달래는 마당 한가운데에 엎드려 있다.",
           "sound": "(E) 강바람에 장막 펄럭이는 소리. 백성들의 웅성거림이 잦아든다",
           "transition": "CUT",
-          "duration_sec": 3,
+          "duration_sec": 2,
           "continuity": "축: 왕은 정자 마루 화면 위쪽 중앙, 달래는 마당 한가운데, 백성은 화면 아래 전경(locations.json axis). 허진은 마루 화면 오른쪽 맨 앞, 안 내관은 왕의 왼쪽, 정겸은 달래 왼쪽 뒤. 허진 쪽 인물은 오른쪽, 달래 편은 왼쪽으로 이 씬 내내 유지. 달래 흰 소복. 허진 관복과 사모(S02-20에서 벗는다). 정겸은 되찾은 갓을 썼다(17화에서 잃음)",
           "notes": "TASKS 20화 필수 그림: 친국 배치(왕 위, 달래 가운데, 백성 아래). 세 층이 한 화면에 다 들어와야 한다",
           "image_prompt": "extreme wide low-angle shot from behind a crowd of commoners at the foot of a hill, looking up at a riverside pavilion with its cloth curtains drawn back: the king seated at the top center on the pavilion floor with ministers on both sides, and a young woman in a white mourning sobok (not her usual jade jeogori) prostrate alone on a straw mat in the middle of the yard, winter daylight, the Han River glinting behind"
@@ -266,7 +366,7 @@
           "action": "종이 속 발 무늬와 붉은 인이 떠오른다.",
           "sound": "정겸의 목소리가 이어진다. (E) 바람에 종이가 가볍게 떨린다",
           "transition": "CUT",
-          "duration_sec": 3,
+          "duration_sec": 2,
           "notes": "S02-04 대사가 이 샷까지 이어진다",
           "image_prompt": "insert, a sheet of old mulberry paper backlit by the sun between two slender fingers, rack focus revealing fine laid lines inside the paper and a faded red square seal impression in the corner"
         },
@@ -434,7 +534,7 @@
           "frame": "정겸 왼쪽 어깨 너머. 정겸이 고개를 돌려 화면 오른쪽 위 마루의 허진을 본다. 허진도 시선을 피하지 않는다.",
           "action": "정겸이 허진을 보며 장부의 글을 말한다.",
           "transition": "CUT",
-          "duration_sec": 4,
+          "duration_sec": 2,
           "image_prompt": "over-the-shoulder from the kneeling scholar toward the high official seated on the pavilion floor at upper right, the two locking eyes"
         },
         {
@@ -449,7 +549,7 @@
           "frame": "정겸 클로즈업. 얼굴은 무표정 그대로, 마지막 물음만 또렷하다. 시선은 화면 오른쪽 위.",
           "action": "정겸이 마지막 물음을 던진다.",
           "transition": "CUT",
-          "duration_sec": 3,
+          "duration_sec": 2,
           "image_prompt": "close-up of the expressionless scholar delivering a final question, eyes fixed up and to the right"
         },
         {
@@ -489,7 +589,7 @@
           "frame": "마당 어귀 화면 오른쪽에서 율이 들어선다. 창백한 얼굴, 벌어진 도포 사이로 가슴에 감은 무명이 보인다. 달래 오른쪽 곁에 엎드린다.",
           "action": "율이 들어와 달래 곁에 엎드린다.",
           "transition": "CUT",
-          "duration_sec": 3,
+          "duration_sec": 2,
           "continuity": "율 가슴 상처: 도포 속 무명 붕대(17화~). 11화의 옛 옆구리 상처는 왼쪽(11~13화와 같음), 옷 속이라 보이지 않는다. 흑립 반대편, 달래 오른쪽에 엎드린다",
           "image_prompt": "full shot, a pale young nobleman with no smile entering the yard from the right, white cotton bandage visible across his chest between the folds of his robe, kneeling down beside the young woman in white"
         },
@@ -711,8 +811,8 @@
       "heading": "몽타주 (봄)",
       "location": "flashback_misc",
       "time": "DAY",
-      "tc_in": "01:40",
-      "tc_out": "02:00",
+      "tc_in": "01:45",
+      "tc_out": "02:04",
       "characters": [
         "ma_yeonggam",
         "dallae",
@@ -799,7 +899,7 @@
           "action": "강수가 반성문을 낭독한다. 맨 앞줄에 윤희. 한 번도 틀리지 않는다.",
           "sound": "낭독의 리듬, 군중의 웃음",
           "transition": "CUT",
-          "duration_sec": 3,
+          "duration_sec": 2,
           "image_prompt": "low angle wide shot of a storyteller on a wooden platform in front of a tobacco shop reading aloud from a booklet with total confidence, a graceful noble girl sitting at the center of the front row, laughing crowd"
         },
         {
@@ -889,8 +989,8 @@
       "heading": "노량 나루 (봄 아침)",
       "location": "noryang_bridge",
       "time": "MORNING",
-      "tc_in": "02:00",
-      "tc_out": "02:25",
+      "tc_in": "02:04",
+      "tc_out": "02:27",
       "characters": [
         "dallae",
         "jeonggyeom",
@@ -918,7 +1018,7 @@
           "frame": "풀린 강물. 나루에 댄 나룻배는 화면 오른쪽, 배 앞에 흰 두루마기의 허진, 그 뒤에 봇짐을 멘 율. 화면 왼쪽에서 달래가 책 한 권을 흔들며 뛰어 들어오고, 몇 걸음 뒤에 정겸.",
           "action": "달래가 뛰어와 숨을 고른다. 칼자국이 난 「삼국지」 넷째 권을 흔든다.",
           "transition": "CUT",
-          "duration_sec": 3,
+          "duration_sec": 2,
           "continuity": "축: 강과 나룻배는 화면 오른쪽, 뭍(달래와 정겸이 오는 쪽)은 왼쪽. 이 씬 내내 유지(noryang_bridge 에 axis 가 없어 정함). 허진 흰 두루마기, 사모 없음. 율 흰 두루마기에 봇짐, 가슴 무명(17화~)과 왼쪽 옆구리 옛 상처는 옷 속. 달래 평상복(옥색 저고리, 쪽빛 치마)에 머리의 붓. 정겸 흰 도포와 갓",
           "image_prompt": "wide shot of a spring morning ferry landing on the thawed Han River, a ferry boat moored at the right, an older man in a plain white durumagi with no official hat standing before it with a young man in a plain white durumagi instead of silk carrying a travel bundle behind him, a petite young woman running in from the left waving a book with a slash across its cover, a tall scholar following a few steps behind"
         },
@@ -1086,7 +1186,7 @@
           "action": "배가 떠난다. 허진이 아들의 봇짐을 받아 자기 어깨에 멨다. 율이 책을 들어 흔든다.",
           "sound": "(E) 삿대가 물을 미는 소리, 봄 강바람",
           "transition": "DISSOLVE",
-          "duration_sec": 4,
+          "duration_sec": 3,
           "image_prompt": "wide shot from the riverbank as a ferry boat poled by a boatman pulls away to the right, on board the older man in white carrying his son's travel bundle on his own shoulder while the young man raises a book and waves it, the young woman and the tall scholar seen from behind on the landing at lower left"
         }
       ]
@@ -1096,7 +1196,7 @@
       "heading": "달래책방 담장 아래 (1793년 여름 밤, 월식)",
       "location": "dallae_wall",
       "time": "NIGHT",
-      "tc_in": "02:25",
+      "tc_in": "02:27",
       "tc_out": "02:50",
       "characters": [
         "dallae",
@@ -1124,7 +1224,7 @@
             "MOON"
           ],
           "transition": "CUT",
-          "duration_sec": 3,
+          "duration_sec": 2,
           "continuity": "축: 담장은 화면 왼쪽 세로 벽(locations.json axis). 정겸은 담 쪽(왼쪽), 달래는 오른쪽, 달은 오른쪽 위. 이 씬 내내 유지하고 마지막 〈월하정인〉 구도로 모은다. 광원은 초롱과 달뿐. 정겸 갓과 흰 도포, 초롱. 달래 연분홍 저고리, 쪽빛 치마, 쓰개치마(bible ep20_ending)",
           "notes": "WALL 모티프의 끝: 담장이 화면을 나누지만 두 사람은 같은 쪽에 있다",
           "image_prompt": "wide night shot of a narrow alley beside a low earthen wall standing vertically along the left of frame, a tall man in a gat holding a paper lantern walking beside the wall with a young woman wearing a sseugaechima veil over a pale pink jeogori and indigo skirt, a full moon at upper right with one edge beginning to darken in a lunar eclipse"
@@ -1282,7 +1382,7 @@
             "MOON"
           ],
           "transition": "FREEZE",
-          "duration_sec": 3,
+          "duration_sec": 2,
           "notes": "TASKS 20화 필수 그림: 〈월하정인〉 마지막 컷. 가이드 8장 배치를 그대로 따른다. 소매를 잡는 손이 화면 가운데에 오게",
           "image_prompt": "full shot recreating the composition of Shin Yun-bok's painting Lovers under the Moon: a vertical earthen wall on the left, beneath it a tall man in a gat holding a paper lantern bows his head, a young woman in a sseugaechima veil over a pale pink jeogori half-turns toward him and holds the end of his sleeve, a heavily eclipsed moon at upper right, empty night sky at upper left, frozen moment, full color"
         },
