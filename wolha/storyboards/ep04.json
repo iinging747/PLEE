@@ -5,7 +5,8 @@
   "hook": "판서댁 외아들이 책방에 나타나고, 월하노인을 사칭하던 한량이 독살된다.",
   "runtime_sec": 180,
   "aspect": "16:9",
-  "status": "skeleton",
+  "status": "review",
+  "notes": "샷 수 54, 평균 3.3초. 대본에 지붕 위 흑립이 없어 넣지 않았다. 사발을 건넨 손은 대본대로 주인을 밝히지 않는다(S03-10). 쇠돌은 대본 등장인물 목록에만 있고 지문·대사가 없어 S03-01 배경에만 둔다. 고증확인: 「옥루몽」(S01-01).",
   "scenes": [
     {
       "id": "S#1",
@@ -15,13 +16,290 @@
       "tc_in": "00:00",
       "tc_out": "00:40",
       "characters": [
+        "yul",
         "dallae",
         "jeonggyeom",
-        "yul"
+        "extras"
       ],
-      "summary": "",
+      "mood": "COMEDY",
+      "summary": "판서댁 외아들 허율이 사흘 늦은 「옥루몽」을 반납하며 연체료를 미리 얹는다. '연체 도령'이라는 별명에 보조개가 팬다. 장작 패다 쩔쩔매는 정겸을 달래가 정혼자라 소개하고, 율은 5권 하권 줄을 선다.",
       "source_text": "화려한 자줏빛 비단 도포에 부채. 허율이 「옥루몽」 한 권을 마루에 툭 내려놓는다. 지나가던 아낙 둘이 돌아본다.\n**율** 반납이오. 사흘 늦었소.\n**달래** 연체료 서 푼.\n**율** (엽전을 더 얹으며) 다섯 푼. 내일도 늦을 거라서.\n**달래** (엽전을 쓸어 담으며) 그럼 연체 도령이네요.\n**율** (보조개가 패며) 처음 들어 보는 별명인데, 마음에 드오.\n율의 눈이 행랑채 앞에서 장작을 패다가 도끼질이 서툴러 쩔쩔매는 정겸에게 간다.\n**율** 저 사람은.\n**달래** 정혼자요.\n**율** (부채를 접으며) 재밌네. (사이) 5권 하권 있소?\n**달래** 서른일곱 번째예요. 줄 서세요.",
-      "shots": []
+      "shots": [
+        {
+          "id": "S01-01",
+          "size": "INSERT",
+          "angle": "EYE",
+          "move": "FIX",
+          "lens_mm": 50,
+          "characters": [
+            "yul"
+          ],
+          "frame": "마루 끝. 자줏빛 비단 소매에서 책 한 권이 툭 떨어진다.",
+          "action": "허율이 「옥루몽」 한 권을 마루에 툭 내려놓는다.",
+          "sound": "(E) 툭",
+          "insert_text": "옥루몽",
+          "motifs": [
+            "INSERT_TEXT"
+          ],
+          "transition": "CUT",
+          "duration_sec": 2,
+          "continuity": "축: 대문 화면 왼쪽, 행랑채 오른쪽(locations.json). 율은 대문 쪽(왼쪽)에서 들어와 마루 앞 왼쪽에 서고, 달래는 마루 가운데, 정겸은 오른쪽 행랑채 앞 후경. 율과 달래의 대화선은 씬 내내 유지",
+          "notes": "고증확인: 「옥루몽」은 19세기 남영로의 작품으로 알려져 1792년 배경과 맞지 않을 수 있다. 대본 그대로 두고 확인을 요청한다",
+          "image_prompt": "insert, a book dropped from a plum-colored silk sleeve onto the wooden porch of a hanok bookshop"
+        },
+        {
+          "id": "S01-02",
+          "size": "FS",
+          "angle": "EYE",
+          "move": "TILT_U",
+          "lens_mm": 35,
+          "characters": [
+            "yul",
+            "extras"
+          ],
+          "frame": "책에서 위로 틸트. 화려한 자줏빛 비단 도포에 부채를 든 율의 전신. 후경 대문 밖을 지나가던 아낙 둘이 돌아본다.",
+          "action": "화려한 자줏빛 비단 도포에 부채. 지나가던 아낙 둘이 돌아본다.",
+          "transition": "CUT",
+          "duration_sec": 4,
+          "notes": "율 첫 등장. extras는 지나가던 아낙 둘(단역)",
+          "image_prompt": "tilt up to a full shot of a handsome young nobleman in a plum silk robe holding a folding fan, two passing women turning to stare beyond the gate"
+        },
+        {
+          "id": "S01-03",
+          "size": "MS",
+          "angle": "EYE",
+          "move": "FIX",
+          "lens_mm": 50,
+          "characters": [
+            "yul"
+          ],
+          "frame": "율 웨이스트. 접은 부채로 손바닥을 톡톡 치며 미안한 기색 없이 말한다. 시선은 화면 오른쪽(달래).",
+          "action": "율이 연체를 당당히 밝힌다.",
+          "dialogue": [
+            {
+              "speaker": "yul",
+              "line": "반납이오. 사흘 늦었소.",
+              "mode": "ON"
+            }
+          ],
+          "transition": "CUT",
+          "duration_sec": 4,
+          "image_prompt": "medium shot, the nobleman tapping his folded fan against his palm and announcing a late return without a hint of apology"
+        },
+        {
+          "id": "S01-04",
+          "size": "MCU",
+          "angle": "EYE",
+          "move": "FIX",
+          "lens_mm": 85,
+          "characters": [
+            "dallae"
+          ],
+          "frame": "달래 정면. 대여 장부에서 고개도 들지 않는다.",
+          "action": "달래가 사무적으로 연체료를 부른다.",
+          "dialogue": [
+            {
+              "speaker": "dallae",
+              "line": "연체료 서 푼.",
+              "mode": "ON"
+            }
+          ],
+          "transition": "CUT",
+          "duration_sec": 2,
+          "image_prompt": "medium close-up, the young woman not even looking up from her rental ledger, businesslike"
+        },
+        {
+          "id": "S01-05",
+          "size": "INSERT",
+          "angle": "EYE",
+          "move": "FIX",
+          "lens_mm": 85,
+          "characters": [
+            "yul"
+          ],
+          "frame": "마루 위. 비단 소매 끝의 손이 엽전을 하나씩 더 얹는다.",
+          "action": "율이 엽전을 더 얹는다.",
+          "dialogue": [
+            {
+              "speaker": "yul",
+              "line": "다섯 푼. 내일도 늦을 거라서.",
+              "mode": "ON"
+            }
+          ],
+          "sound": "(E) 엽전 소리 짤랑, 짤랑",
+          "transition": "CUT",
+          "duration_sec": 3,
+          "image_prompt": "insert, a refined hand in a silk sleeve stacking brass coins one by one on the porch boards"
+        },
+        {
+          "id": "S01-06",
+          "size": "MS",
+          "angle": "EYE",
+          "move": "FIX",
+          "lens_mm": 50,
+          "characters": [
+            "dallae"
+          ],
+          "frame": "달래가 엽전을 손바닥으로 쓸어 담는다. 그제야 율을 올려다본다.",
+          "action": "달래가 엽전을 쓸어 담으며 별명을 붙인다.",
+          "dialogue": [
+            {
+              "speaker": "dallae",
+              "line": "그럼 연체 도령이네요.",
+              "mode": "ON"
+            }
+          ],
+          "transition": "CUT",
+          "duration_sec": 3,
+          "image_prompt": "medium shot, the young woman sweeping the coins into her palm and finally glancing up at him"
+        },
+        {
+          "id": "S01-07",
+          "size": "CU",
+          "angle": "EYE",
+          "move": "DOLLY_IN",
+          "lens_mm": 85,
+          "characters": [
+            "yul"
+          ],
+          "frame": "율 클로즈업, 천천히 다가간다. 웃는 순간 보조개가 깊게 팬다. 망원으로 배경을 날린다.",
+          "action": "율이 웃는다. 보조개가 팬다.",
+          "dialogue": [
+            {
+              "speaker": "yul",
+              "line": "처음 들어 보는 별명인데, 마음에 드오.",
+              "mode": "ON"
+            }
+          ],
+          "transition": "CUT",
+          "duration_sec": 5,
+          "notes": "TASKS: 율 첫 등장 보조개 CU",
+          "image_prompt": "close-up slow push-in, the handsome nobleman breaking into a smile, a deep dimple forming, background blurred"
+        },
+        {
+          "id": "S01-08",
+          "size": "CU",
+          "angle": "EYE",
+          "move": "FIX",
+          "lens_mm": 85,
+          "characters": [
+            "dallae"
+          ],
+          "frame": "달래 정면. 보조개 앞에서도 눈 하나 깜짝하지 않고 엽전을 센다.",
+          "action": "달래는 눈 하나 깜짝하지 않는다.",
+          "transition": "CUT",
+          "duration_sec": 2,
+          "notes": "S#2 내레이션 '눈 하나 깜짝 안 해서'의 근거 컷",
+          "image_prompt": "close-up, the young woman unmoved, already counting the coins"
+        },
+        {
+          "id": "S01-09",
+          "size": "LS",
+          "angle": "POV",
+          "move": "FIX",
+          "lens_mm": 85,
+          "characters": [
+            "jeonggyeom"
+          ],
+          "frame": "율 시점, 화면 오른쪽 행랑채 앞. 정겸이 흰 도포 차림 그대로 장작을 패다가 도끼가 빗나가 쩔쩔맨다.",
+          "action": "행랑채 앞에서 장작을 패던 정겸이 도끼질이 서툴러 쩔쩔맨다.",
+          "sound": "(E) 탁, 빗나간 도끼 소리",
+          "transition": "CUT",
+          "duration_sec": 4,
+          "image_prompt": "point of view long shot, the tall lodger in his white robe clumsily chopping firewood in front of the servants' quarters, the axe glancing off the log"
+        },
+        {
+          "id": "S01-10",
+          "size": "MCU",
+          "angle": "EYE",
+          "move": "FIX",
+          "lens_mm": 85,
+          "characters": [
+            "yul"
+          ],
+          "frame": "율이 부채 끝으로 화면 오른쪽(정겸)을 가리킨다.",
+          "action": "율이 정겸을 가리킨다.",
+          "dialogue": [
+            {
+              "speaker": "yul",
+              "line": "저 사람은.",
+              "mode": "ON"
+            }
+          ],
+          "transition": "CUT",
+          "duration_sec": 2,
+          "image_prompt": "medium close-up, the nobleman pointing his fan toward the lodger offscreen"
+        },
+        {
+          "id": "S01-11",
+          "size": "MCU",
+          "angle": "EYE",
+          "move": "FIX",
+          "lens_mm": 85,
+          "characters": [
+            "dallae"
+          ],
+          "frame": "S01-04와 같은 구도. 달래가 장부에 적으며 무심하게 답한다.",
+          "action": "달래가 무심하게 답한다.",
+          "dialogue": [
+            {
+              "speaker": "dallae",
+              "line": "정혼자요.",
+              "mode": "ON"
+            }
+          ],
+          "transition": "CUT",
+          "duration_sec": 2,
+          "image_prompt": "medium close-up, the young woman answering offhandedly while writing in the ledger"
+        },
+        {
+          "id": "S01-12",
+          "size": "MCU",
+          "angle": "EYE",
+          "move": "FIX",
+          "lens_mm": 85,
+          "characters": [
+            "yul"
+          ],
+          "frame": "율이 부채를 탁 접는다. 사이. 다시 달래 쪽으로 눈을 돌린다.",
+          "action": "율이 부채를 접으며 웃는다. 사이를 두고 5권 하권을 묻는다.",
+          "dialogue": [
+            {
+              "speaker": "yul",
+              "line": "재밌네. (사이) 5권 하권 있소?",
+              "mode": "ON"
+            }
+          ],
+          "sound": "(E) 부채 접는 소리 탁",
+          "transition": "CUT",
+          "duration_sec": 4,
+          "image_prompt": "medium close-up, the nobleman snapping his fan shut with an amused look, pausing, then turning back to her"
+        },
+        {
+          "id": "S01-13",
+          "size": "2S",
+          "angle": "EYE",
+          "move": "FIX",
+          "lens_mm": 35,
+          "characters": [
+            "yul",
+            "dallae",
+            "jeonggyeom"
+          ],
+          "frame": "마루 투숏. 왼쪽 율, 오른쪽 달래. 달래가 붓으로 대문 밖(왼쪽)을 가리킨다. 후경 행랑채 앞의 정겸은 아직 도끼와 씨름 중이다.",
+          "action": "달래가 줄 서라며 대문 쪽을 가리킨다.",
+          "dialogue": [
+            {
+              "speaker": "dallae",
+              "line": "서른일곱 번째예요. 줄 서세요.",
+              "mode": "ON"
+            }
+          ],
+          "transition": "CUT",
+          "duration_sec": 3,
+          "image_prompt": "two-shot on the porch, the young woman pointing toward the gate with her brush, the nobleman amused, the lodger still wrestling with the axe in the background"
+        }
+      ]
     },
     {
       "id": "S#2",
@@ -31,13 +309,133 @@
       "tc_in": "00:40",
       "tc_out": "01:05",
       "characters": [
-        "gangsu",
         "heojin",
         "yul"
       ],
-      "summary": "",
+      "mood": "MYSTERY",
+      "summary": "회상. 문틈 너머 「청상연가」을 든 채 손을 떠는 아버지 허진을 율이 본다. 강수의 내레이션이 율이 책방에 온 이유를 밝힌다.",
       "source_text": "Flash. 문틈. 서재 안에서 허진이 「청상연가」를 펼쳐 든 채 손을 떨고 있다. 문틈 밖에서 율이 그걸 본다. 아버지의 손이 떨리는 걸 처음 본다.\n(N, 강수) 판서댁 외아들은, 아버지가 무서워하는 소설이 궁금해서 왔소. 그리고 그 소설을 파는 책방 아가씨가 자기를 보고도 눈 하나 깜짝 안 해서, 더 궁금해졌소.",
-      "shots": []
+      "shots": [
+        {
+          "id": "S02-01",
+          "size": "LS",
+          "angle": "EYE",
+          "move": "FIX",
+          "lens_mm": 35,
+          "characters": [
+            "yul"
+          ],
+          "frame": "Flash. 탈색된 밤 툇마루. 화면 왼쪽에 율, 가운데 서재 문이 손가락 하나 너비로 열려 있고 그 틈으로 등잔빛 한 줄이 새어 나온다.",
+          "action": "Flash. 율이 아버지 서재 문 앞에 멈춰 선다. 문틈.",
+          "sound": "정적",
+          "transition": "CUT",
+          "duration_sec": 3,
+          "continuity": "축: 문 밖 율은 화면 왼쪽, 서재 안 허진은 문틈 너머 오른쪽(사랑채와 같이 허진은 오른쪽). 문틈은 세로로 가늘게 화면 가운데. 최근의 회상이라 율의 나이·차림은 지금과 같다. 광원은 서재 안 등잔",
+          "image_prompt": "desaturated memory, a dark veranda at night, a young nobleman stopping before a study door left open a finger's width, a thin vertical line of lamplight spilling out"
+        },
+        {
+          "id": "S02-02",
+          "size": "MS",
+          "angle": "POV",
+          "move": "FIX",
+          "lens_mm": 135,
+          "characters": [
+            "heojin"
+          ],
+          "frame": "Flash. 율 시점. 세로로 가는 문틈 속 프레임. 등잔 아래 허진이 「청상연가」을 펼쳐 들었다.",
+          "action": "Flash. 서재 안에서 허진이 「청상연가」을 펼쳐 든 채 앉아 있다.",
+          "motifs": [
+            "DOOR_GAP"
+          ],
+          "transition": "CUT",
+          "duration_sec": 4,
+          "notes": "TASKS: 문틈 회상",
+          "image_prompt": "desaturated memory, point of view through a finger-wide door gap, a frame within a frame, an official alone in his study by an oil lamp holding open a novel"
+        },
+        {
+          "id": "S02-03",
+          "size": "INSERT",
+          "angle": "EYE",
+          "move": "RACK_FOCUS",
+          "lens_mm": 100,
+          "characters": [
+            "heojin"
+          ],
+          "frame": "Flash. 문틈 너머 망원. 초점이 책 표지에서 책을 쥔 허진의 손으로 넘어간다. 손이 떨린다.",
+          "action": "Flash. 허진의 손이 떨린다.",
+          "dialogue": [
+            {
+              "speaker": "N:gangsu",
+              "line": "판서댁 외아들은, 아버지가 무서워하는 소설이 궁금해서 왔소. 그리고 그 소설을 파는 책방 아가씨가 자기를 보고도 눈 하나 깜짝 안 해서, 더 궁금해졌소.",
+              "mode": "N"
+            }
+          ],
+          "motifs": [
+            "DOOR_GAP",
+            "NARRATOR"
+          ],
+          "transition": "CUT",
+          "duration_sec": 4,
+          "image_prompt": "desaturated memory, telephoto insert through a door gap, rack focus to an older man's hands trembling as they hold a book"
+        },
+        {
+          "id": "S02-04",
+          "size": "ECU",
+          "angle": "EYE",
+          "move": "FIX",
+          "lens_mm": 100,
+          "characters": [
+            "yul"
+          ],
+          "frame": "Flash. 문틈 밖 율의 한쪽 눈. 문틈 빛 한 줄이 눈 위로 세로로 지나간다. 눈동자가 흔들린다.",
+          "action": "Flash. 아버지의 손이 떨리는 걸 처음 본다.",
+          "sound": "내레이션 이어짐",
+          "motifs": [
+            "DOOR_GAP",
+            "NARRATOR"
+          ],
+          "transition": "CUT",
+          "duration_sec": 3,
+          "image_prompt": "desaturated memory, extreme close-up of a young man's eye at a door gap, a vertical sliver of lamplight across it, the pupil trembling"
+        },
+        {
+          "id": "S02-05",
+          "size": "MCU",
+          "angle": "PROFILE",
+          "move": "DOLLY_OUT",
+          "lens_mm": 50,
+          "characters": [
+            "yul"
+          ],
+          "frame": "Flash. 문 앞 율의 옆얼굴. 문틈 빛이 얼굴을 세로로 가른다. 카메라가 천천히 물러난다.",
+          "action": "Flash. 율이 문 앞에 그대로 서 있다.",
+          "sound": "내레이션 이어짐",
+          "motifs": [
+            "NARRATOR"
+          ],
+          "transition": "CUT",
+          "duration_sec": 5,
+          "image_prompt": "desaturated memory, profile medium close-up of the young nobleman frozen at the door, a vertical blade of lamplight splitting his face, slow pull back"
+        },
+        {
+          "id": "S02-06",
+          "size": "MS",
+          "angle": "POV",
+          "move": "DOLLY_IN",
+          "lens_mm": 135,
+          "characters": [
+            "heojin"
+          ],
+          "frame": "Flash. S02-02와 같은 문틈 POV. 문틈이 화면 가운데 가는 빛줄기로 남았다가 하얗게 번진다.",
+          "action": "Flash. 문틈의 빛이 하얗게 번진다.",
+          "motifs": [
+            "DOOR_GAP"
+          ],
+          "transition": "DISSOLVE",
+          "duration_sec": 6,
+          "image_prompt": "desaturated memory, the same door-gap point of view, the thin vertical line of light slowly blooming to white"
+        }
+      ]
     },
     {
       "id": "S#3",
@@ -49,11 +447,409 @@
       "characters": [
         "guyongpal",
         "dallae",
-        "jeonggyeom"
+        "jeonggyeom",
+        "extras"
       ],
-      "summary": "",
+      "mood": "THRILLER",
+      "summary": "주막 술상 위에서 월하노인을 사칭하던 한량 구용팔이 줄 끝에서 누군가 건넨 약주를 들이켜고 쓰러진다. 정겸이 아낙의 은비녀로 비상을 확인하고, 품에서 유난히 곱고 흰 종이를 꺼낸다.",
       "source_text": "술상 위에 올라선 한량 구용팔이 갓을 비뚜름하게 쓰고 떠든다.\n**구용팔** 내가 바로 월하노인이오! 서명 받을 사람?\n여인들이 줄을 선다. 장 보러 나왔던 달래가 그 꼴을 보고 기가 차서 웃는다. 옆의 정겸은 웃지 않는다.\n**달래** (작게) 월하노인이 저렇게 생겼으면 책이 안 팔리죠.\n줄 끝에서 누군가 약주 한 사발을 구용팔에게 건넨다. 얼굴은 보이지 않고 손만 보인다. 구용팔이 단숨에 들이켠다. 그리고 그대로 무너진다. 비명.\n정겸이 달려간다. 줄 선 아낙의 머리에서 은비녀를 뽑는다.\n**정겸** 빌리겠소.\n은비녀를 구용팔의 입에 넣었다 뺀다. 은빛이 검게 변해 있다.\n**정겸** 비상이오.\n구용팔의 품에서 접힌 종이 한 장이 비어져 나온다. 정겸이 편다. 종이가 유난히 곱고 희다.",
-      "shots": []
+      "shots": [
+        {
+          "id": "S03-01",
+          "size": "ELS",
+          "angle": "HIGH",
+          "move": "FIX",
+          "lens_mm": 24,
+          "characters": [
+            "guyongpal",
+            "extras"
+          ],
+          "frame": "장터 옆 주막 마당을 내려다본다. 화면 가운데 술상 둘레로 사람들이 몰려 있고, 평상 옆에서 심부름하는 아이가 술병을 나른다.",
+          "action": "낮 주막. 술상 둘레에 사람들이 몰려든다.",
+          "sound": "장터 소음, 웃음소리",
+          "transition": "CUT",
+          "duration_sec": 3,
+          "continuity": "축: 술상 위 구용팔은 화면 가운데 위, 서명 줄은 오른쪽으로 늘어서 줄 끝이 화면 오른쪽. 달래·정겸은 왼쪽 전경(달래 왼쪽, 정겸 오른쪽). S#4까지 유지",
+          "notes": "평상 옆 심부름하는 아이는 쇠돌(대본 등장인물 목록, extras). 지문이 없어 배경에만 둔다. 5화에서 증언한다",
+          "image_prompt": "high angle wide shot of a bustling roadside tavern yard beside a market, a crowd gathering around a low table, a young errand boy carrying a wine bottle by a bench"
+        },
+        {
+          "id": "S03-02",
+          "size": "LS",
+          "angle": "LOW",
+          "move": "FIX",
+          "lens_mm": 24,
+          "characters": [
+            "guyongpal",
+            "extras"
+          ],
+          "frame": "로우앵글. 술상 위에 올라선 구용팔. 갓을 비뚜름하게 쓰고 두 팔을 벌린다.",
+          "action": "한량 구용팔이 갓을 비뚜름하게 쓰고 술상 위에 올라섰다.",
+          "transition": "CUT",
+          "duration_sec": 3,
+          "image_prompt": "low angle long shot, a boastful dandy in flashy clothes standing on a tavern table with his gat askew, arms spread wide"
+        },
+        {
+          "id": "S03-03",
+          "size": "MS",
+          "angle": "LOW",
+          "move": "FIX",
+          "lens_mm": 35,
+          "characters": [
+            "guyongpal"
+          ],
+          "frame": "약한 로우앵글. 구용팔이 제 가슴을 치며 떠든다.",
+          "action": "구용팔이 월하노인을 사칭한다.",
+          "dialogue": [
+            {
+              "speaker": "guyongpal",
+              "line": "내가 바로 월하노인이오! 서명 받을 사람?",
+              "mode": "ON"
+            }
+          ],
+          "transition": "CUT",
+          "duration_sec": 4,
+          "image_prompt": "slightly low angle medium shot, the dandy thumping his chest and boasting loudly"
+        },
+        {
+          "id": "S03-04",
+          "size": "GROUP",
+          "angle": "EYE",
+          "move": "PAN_R",
+          "lens_mm": 35,
+          "characters": [
+            "extras"
+          ],
+          "frame": "여인들이 앞다투어 줄을 선다. 카메라가 줄을 따라 오른쪽으로 흐른다. 손에 손에 책을 들었다.",
+          "action": "여인들이 줄을 선다.",
+          "sound": "웃음, 수다",
+          "transition": "CUT",
+          "duration_sec": 4,
+          "image_prompt": "group shot panning right along an eager line of women holding books, waiting for an autograph"
+        },
+        {
+          "id": "S03-05",
+          "size": "2S",
+          "angle": "EYE",
+          "move": "FIX",
+          "lens_mm": 50,
+          "characters": [
+            "dallae",
+            "jeonggyeom"
+          ],
+          "frame": "왼쪽 전경. 장바구니를 든 달래가 기가 차서 웃음을 터뜨리고, 옆의 정겸은 웃지 않는다.",
+          "action": "장 보러 나왔던 달래가 그 꼴을 보고 기가 차서 웃는다. 옆의 정겸은 웃지 않는다.",
+          "transition": "CUT",
+          "duration_sec": 3,
+          "continuity": "달래는 외출 차림(쓰개치마를 어깨로 넘김)",
+          "image_prompt": "two-shot, the young woman with a market basket bursting into disbelieving laughter, the tall man beside her not smiling"
+        },
+        {
+          "id": "S03-06",
+          "size": "CU",
+          "angle": "EYE",
+          "move": "FIX",
+          "lens_mm": 85,
+          "characters": [
+            "dallae"
+          ],
+          "frame": "달래가 정겸 쪽(화면 오른쪽)으로 고개를 기울여 작게 말한다.",
+          "action": "달래가 작게 빈정댄다.",
+          "dialogue": [
+            {
+              "speaker": "dallae",
+              "line": "월하노인이 저렇게 생겼으면 책이 안 팔리죠.",
+              "mode": "WHISPER"
+            }
+          ],
+          "transition": "CUT",
+          "duration_sec": 4,
+          "image_prompt": "close-up, the young woman leaning toward him and whispering a snarky remark"
+        },
+        {
+          "id": "S03-07",
+          "size": "MCU",
+          "angle": "EYE",
+          "move": "FIX",
+          "lens_mm": 85,
+          "characters": [
+            "jeonggyeom"
+          ],
+          "frame": "정겸 정면. 웃지 않는다. 시선은 술상 위.",
+          "action": "정겸은 웃지 않는다.",
+          "transition": "CUT",
+          "duration_sec": 2,
+          "image_prompt": "medium close-up, the tall man unsmiling, eyes on the man on the table"
+        },
+        {
+          "id": "S03-08",
+          "size": "MS",
+          "angle": "EYE",
+          "move": "FIX",
+          "lens_mm": 35,
+          "characters": [
+            "guyongpal",
+            "extras"
+          ],
+          "frame": "구용팔이 줄 맨 앞 여인이 내민 책에 붓으로 휘갈겨 서명한다. 거들먹거린다.",
+          "action": "구용팔이 거들먹거리며 서명해 준다.",
+          "transition": "CUT",
+          "duration_sec": 3,
+          "image_prompt": "medium shot, the dandy scrawling an autograph with a brush on a book held up by a giggling woman"
+        },
+        {
+          "id": "S03-09",
+          "size": "LS",
+          "angle": "EYE",
+          "move": "FIX",
+          "lens_mm": 50,
+          "characters": [
+            "extras"
+          ],
+          "frame": "줄 끝, 화면 오른쪽. 사람들 어깨 사이로 약주 사발 하나가 구용팔 쪽으로 내밀어진다. 내민 사람은 사람들 뒤에 가려 있다.",
+          "action": "줄 끝에서 누군가 약주 한 사발을 구용팔에게 건넨다.",
+          "transition": "CUT",
+          "duration_sec": 3,
+          "image_prompt": "long shot along the queue, between shoulders a bowl of rice wine being held out toward the man on the table, the giver hidden behind the crowd"
+        },
+        {
+          "id": "S03-10",
+          "size": "INSERT",
+          "angle": "EYE",
+          "move": "FIX",
+          "lens_mm": 85,
+          "characters": [
+            "extras",
+            "guyongpal"
+          ],
+          "frame": "사발을 받쳐 든 손만 크게. 얼굴은 프레임 밖. 손등은 사발 그늘에 가려 흉터가 있는지 보이지 않는다. 구용팔의 손이 사발을 낚아챈다.",
+          "action": "얼굴은 보이지 않고 손만 보인다.",
+          "transition": "CUT",
+          "duration_sec": 4,
+          "notes": "손의 주인은 밝히지 않는다(대본). 흉터를 보여 주지도, 없다고 못 박지도 않는다",
+          "image_prompt": "insert, an anonymous pair of hands holding up an earthenware bowl of rice wine, the giver's face out of frame, the backs of the hands in shadow, another hand snatching the bowl"
+        },
+        {
+          "id": "S03-11",
+          "size": "MS",
+          "angle": "LOW",
+          "move": "FIX",
+          "lens_mm": 35,
+          "characters": [
+            "guyongpal"
+          ],
+          "frame": "약한 로우앵글. 구용팔이 사발을 들어 단숨에 들이켠다.",
+          "action": "구용팔이 단숨에 들이켠다.",
+          "sound": "술 넘기는 소리, 환호",
+          "transition": "CUT",
+          "duration_sec": 3,
+          "image_prompt": "slightly low angle, the dandy tilting back the bowl and gulping it down in one go, the crowd cheering"
+        },
+        {
+          "id": "S03-12",
+          "size": "CU",
+          "angle": "EYE",
+          "move": "FIX",
+          "lens_mm": 85,
+          "characters": [
+            "guyongpal"
+          ],
+          "frame": "구용팔 얼굴. 웃음이 그대로 굳는다.",
+          "action": "구용팔의 웃음이 굳는다.",
+          "sound": "환호가 뚝 끊긴다",
+          "transition": "CUT",
+          "duration_sec": 2,
+          "image_prompt": "close-up, the dandy's grin freezing on his face"
+        },
+        {
+          "id": "S03-13",
+          "size": "INSERT",
+          "angle": "HIGH",
+          "move": "FIX",
+          "lens_mm": 50,
+          "characters": [
+            "guyongpal"
+          ],
+          "frame": "손에서 빠진 사발이 술상 위에 떨어져 깨진다.",
+          "action": "사발이 떨어진다.",
+          "sound": "(E) 쨍그랑",
+          "transition": "CUT",
+          "duration_sec": 2,
+          "image_prompt": "insert from above, an earthenware bowl slipping from a hand and shattering on the tavern table"
+        },
+        {
+          "id": "S03-14",
+          "size": "FS",
+          "angle": "DUTCH",
+          "move": "HANDHELD",
+          "lens_mm": 28,
+          "characters": [
+            "guyongpal",
+            "extras"
+          ],
+          "frame": "사선 앵글. 구용팔이 술상 위에서 그대로 무너져 바닥으로 쓰러진다.",
+          "action": "구용팔이 그대로 무너진다.",
+          "sound": "(E) 쿵. 비명",
+          "transition": "CUT",
+          "duration_sec": 2,
+          "image_prompt": "dutch angle handheld full shot, the dandy collapsing off the tavern table onto the ground"
+        },
+        {
+          "id": "S03-15",
+          "size": "GROUP",
+          "angle": "EYE",
+          "move": "HANDHELD",
+          "lens_mm": 24,
+          "characters": [
+            "extras"
+          ],
+          "frame": "흔들리는 카메라. 비명과 함께 줄이 흩어지고 술상이 엎어진다.",
+          "action": "비명. 줄 선 사람들이 흩어진다.",
+          "sound": "비명, 그릇 깨지는 소리",
+          "transition": "CUT",
+          "duration_sec": 3,
+          "image_prompt": "handheld group shot, screaming women scattering, a table knocked over, chaos in the tavern yard"
+        },
+        {
+          "id": "S03-16",
+          "size": "MS",
+          "angle": "EYE",
+          "move": "HANDHELD",
+          "lens_mm": 35,
+          "characters": [
+            "jeonggyeom",
+            "extras"
+          ],
+          "frame": "흩어지는 사람들을 거슬러 정겸이 화면 왼쪽에서 오른쪽으로 달려 들어간다.",
+          "action": "정겸이 달려간다.",
+          "transition": "CUT",
+          "duration_sec": 3,
+          "image_prompt": "handheld medium shot, the tall man running against the fleeing crowd toward the fallen man"
+        },
+        {
+          "id": "S03-17",
+          "size": "MS",
+          "angle": "EYE",
+          "move": "FIX",
+          "lens_mm": 50,
+          "characters": [
+            "jeonggyeom",
+            "extras"
+          ],
+          "frame": "정겸이 줄 서 있던 아낙의 쪽진 머리에서 은비녀를 쑥 뽑는다. 아낙이 머리를 감싼다.",
+          "action": "정겸이 줄 선 아낙의 머리에서 은비녀를 뽑는다.",
+          "dialogue": [
+            {
+              "speaker": "jeonggyeom",
+              "line": "빌리겠소.",
+              "mode": "ON"
+            }
+          ],
+          "transition": "CUT",
+          "duration_sec": 3,
+          "notes": "extras는 은비녀를 빼앗긴 아낙(단역)",
+          "image_prompt": "medium shot, the tall man plucking a silver hairpin from a startled married woman's hair bun with a curt word"
+        },
+        {
+          "id": "S03-18",
+          "size": "INSERT",
+          "angle": "HIGH",
+          "move": "FIX",
+          "lens_mm": 100,
+          "characters": [
+            "jeonggyeom",
+            "guyongpal"
+          ],
+          "frame": "부감. 쓰러진 구용팔의 입가. 정겸의 손이 은비녀를 입에 넣었다 뺀다.",
+          "action": "은비녀를 구용팔의 입에 넣었다 뺀다.",
+          "transition": "CUT",
+          "duration_sec": 3,
+          "image_prompt": "insert from above, a slender hand slipping a silver hairpin into a collapsed man's mouth and drawing it out"
+        },
+        {
+          "id": "S03-19",
+          "size": "INSERT",
+          "angle": "EYE",
+          "move": "RACK_FOCUS",
+          "lens_mm": 100,
+          "characters": [
+            "jeonggyeom"
+          ],
+          "frame": "햇빛 앞에 든 은비녀. 초점이 손가락에서 비녀 끝으로 넘어가며 은빛이 검게 변한 것이 드러난다.",
+          "action": "은빛이 검게 변해 있다.",
+          "transition": "CUT",
+          "duration_sec": 4,
+          "notes": "TASKS: 은비녀 검게 변하는 INSERT",
+          "image_prompt": "insert, rack focus along a silver hairpin held up to daylight, its tip turned black"
+        },
+        {
+          "id": "S03-20",
+          "size": "CU",
+          "angle": "EYE",
+          "move": "FIX",
+          "lens_mm": 85,
+          "characters": [
+            "jeonggyeom"
+          ],
+          "frame": "정겸 정면. 검게 변한 비녀 너머로 낮게 단언한다.",
+          "action": "정겸이 독을 짚는다.",
+          "dialogue": [
+            {
+              "speaker": "jeonggyeom",
+              "line": "비상이오.",
+              "mode": "ON"
+            }
+          ],
+          "transition": "CUT",
+          "duration_sec": 3,
+          "image_prompt": "close-up, the tall man looking past the blackened hairpin, grave"
+        },
+        {
+          "id": "S03-21",
+          "size": "CU",
+          "angle": "EYE",
+          "move": "FIX",
+          "lens_mm": 85,
+          "characters": [
+            "dallae"
+          ],
+          "frame": "달래 정면. 웃음기가 싹 가셨다.",
+          "action": "달래의 얼굴이 굳는다.",
+          "transition": "CUT",
+          "duration_sec": 3,
+          "image_prompt": "close-up, the young woman's face drained of all amusement"
+        },
+        {
+          "id": "S03-22",
+          "size": "INSERT",
+          "angle": "HIGH",
+          "move": "FIX",
+          "lens_mm": 85,
+          "characters": [
+            "guyongpal"
+          ],
+          "frame": "부감. 구용팔의 앞섶 사이로 접힌 종이 한 장이 비어져 나와 있다.",
+          "action": "구용팔의 품에서 접힌 종이 한 장이 비어져 나온다.",
+          "transition": "CUT",
+          "duration_sec": 3,
+          "image_prompt": "insert from above, a folded sheet of paper sticking out of the collapsed man's robe front"
+        },
+        {
+          "id": "S03-23",
+          "size": "INSERT",
+          "angle": "EYE",
+          "move": "FIX",
+          "lens_mm": 100,
+          "characters": [
+            "jeonggyeom"
+          ],
+          "frame": "정겸이 종이를 편다. 햇빛에 종이 결이 곱고 희게 빛난다. 글씨는 아직 보이지 않는다.",
+          "action": "정겸이 종이를 편다. 종이가 유난히 곱고 희다.",
+          "transition": "CUT",
+          "duration_sec": 3,
+          "image_prompt": "insert, slender hands unfolding an unusually fine, bright white sheet of paper in daylight, its writing not yet visible"
+        }
+      ]
     },
     {
       "id": "S#4",
@@ -64,11 +860,222 @@
       "tc_out": "03:00",
       "characters": [
         "dallae",
-        "jeonggyeom"
+        "jeonggyeom",
+        "guyongpal",
+        "extras"
       ],
-      "summary": "",
+      "mood": "MYSTERY",
+      "summary": "쪽지 '다음은 진짜 네 차례다.' 관아에나 들어가는 종이다. '진짜가 누군데요' 묻는 달래의 치맛자락 쥔 손이 떨리고, 정겸은 그 손을 보며 아무 말도 하지 않는다.",
       "source_text": "Insert. 종이. '다음은 진짜 네 차례다.'\n달래가 그 글자를 본다. 목이 마른다. 침을 삼킨다.\n**정겸** (종이를 빛에 비추며) 저잣거리에서는 못 구하는 종이요. 관아에나 들어가는 것이지.\n**달래** …진짜가 누군데요.\n정겸이 달래를 본다. 달래는 종이만 본다. 치맛자락을 쥔 손이 아주 조금 떨린다. 정겸이 그 손을 본다. 아무 말도 하지 않는다.",
-      "shots": []
+      "shots": [
+        {
+          "id": "S04-01",
+          "size": "INSERT",
+          "angle": "TOP",
+          "move": "FIX",
+          "lens_mm": 100,
+          "characters": [
+            "jeonggyeom"
+          ],
+          "frame": "탑샷. 정겸의 두 손이 펼쳐 든 흰 종이. 한 줄.",
+          "action": "종이에 적힌 한 줄.",
+          "insert_text": "다음은 진짜 네 차례다.",
+          "motifs": [
+            "INSERT_TEXT"
+          ],
+          "transition": "CUT",
+          "duration_sec": 4,
+          "continuity": "축: S#3과 같다. 달래 왼쪽, 정겸 오른쪽. 쓰러진 구용팔은 화면 아래 전경, 흩어진 구경꾼은 후경",
+          "notes": "TASKS: 협박 쪽지. 글씨는 후반 합성",
+          "image_prompt": "top-down insert, two slender hands holding open a fine white sheet with a single line of brushwork, daylight"
+        },
+        {
+          "id": "S04-02",
+          "size": "CU",
+          "angle": "EYE",
+          "move": "FIX",
+          "lens_mm": 85,
+          "characters": [
+            "dallae"
+          ],
+          "frame": "달래 정면. 종이 위 글자를 읽어 내려가는 눈.",
+          "action": "달래가 그 글자를 본다.",
+          "transition": "CUT",
+          "duration_sec": 3,
+          "image_prompt": "close-up, the young woman reading the note, her eyes widening slightly"
+        },
+        {
+          "id": "S04-03",
+          "size": "ECU",
+          "angle": "PROFILE",
+          "move": "FIX",
+          "lens_mm": 100,
+          "characters": [
+            "dallae"
+          ],
+          "frame": "달래 목선 옆얼굴. 마른 목이 한 번 크게 움직인다.",
+          "action": "목이 마른다. 침을 삼킨다.",
+          "sound": "침 삼키는 소리",
+          "transition": "CUT",
+          "duration_sec": 2,
+          "image_prompt": "extreme close-up profile of the young woman's throat as she swallows hard"
+        },
+        {
+          "id": "S04-04",
+          "size": "MS",
+          "angle": "EYE",
+          "move": "FIX",
+          "lens_mm": 50,
+          "characters": [
+            "jeonggyeom"
+          ],
+          "frame": "정겸이 종이를 해 쪽으로 들어 비춘다. 화면 오른쪽 위에서 햇빛.",
+          "action": "정겸이 종이를 빛에 비춘다.",
+          "dialogue": [
+            {
+              "speaker": "jeonggyeom",
+              "line": "저잣거리에서는 못 구하는 종이요. 관아에나 들어가는 것이지.",
+              "mode": "ON"
+            }
+          ],
+          "transition": "CUT",
+          "duration_sec": 5,
+          "image_prompt": "medium shot, the tall man holding the sheet up against the sun, studying the paper"
+        },
+        {
+          "id": "S04-05",
+          "size": "INSERT",
+          "angle": "LOW",
+          "move": "FIX",
+          "lens_mm": 100,
+          "characters": [
+            "jeonggyeom"
+          ],
+          "frame": "역광의 종이. 촘촘한 종이 결이 햇빛에 비친다. 뒤집힌 붓 자국이 흐릿하게 비친다.",
+          "action": "역광에 비친 종이의 결.",
+          "transition": "CUT",
+          "duration_sec": 3,
+          "image_prompt": "insert, low angle, fine mulberry-fiber texture of a sheet of paper backlit by the sun, faint brushwork showing through in reverse"
+        },
+        {
+          "id": "S04-06",
+          "size": "CU",
+          "angle": "EYE",
+          "move": "FIX",
+          "lens_mm": 85,
+          "characters": [
+            "dallae"
+          ],
+          "frame": "S04-02보다 한 걸음 가까이. 달래가 종이에서 눈을 떼지 못한 채 묻는다.",
+          "action": "달래가 묻는다.",
+          "dialogue": [
+            {
+              "speaker": "dallae",
+              "line": "…진짜가 누군데요.",
+              "mode": "ON"
+            }
+          ],
+          "transition": "CUT",
+          "duration_sec": 4,
+          "image_prompt": "close-up, the young woman unable to take her eyes off the note, asking in a small voice"
+        },
+        {
+          "id": "S04-07",
+          "size": "MCU",
+          "angle": "EYE",
+          "move": "FIX",
+          "lens_mm": 85,
+          "characters": [
+            "jeonggyeom"
+          ],
+          "frame": "정겸 정면. 종이를 내리고 화면 왼쪽(달래)을 본다.",
+          "action": "정겸이 달래를 본다.",
+          "transition": "CUT",
+          "duration_sec": 3,
+          "image_prompt": "medium close-up, the man lowering the paper and turning his gaze to her"
+        },
+        {
+          "id": "S04-08",
+          "size": "CU",
+          "angle": "PROFILE",
+          "move": "FIX",
+          "lens_mm": 85,
+          "characters": [
+            "dallae"
+          ],
+          "frame": "달래 옆얼굴. 정겸 쪽은 보지 않고 종이만 본다.",
+          "action": "달래는 종이만 본다.",
+          "transition": "CUT",
+          "duration_sec": 3,
+          "image_prompt": "close-up profile, the young woman staring only at the note, not meeting his eyes"
+        },
+        {
+          "id": "S04-09",
+          "size": "INSERT",
+          "angle": "EYE",
+          "move": "DOLLY_IN",
+          "lens_mm": 100,
+          "characters": [
+            "dallae"
+          ],
+          "frame": "치맛자락을 쥔 먹물 묻은 손. 카메라가 아주 천천히 다가간다. 손이 아주 조금 떨린다.",
+          "action": "치맛자락을 쥔 손이 아주 조금 떨린다.",
+          "transition": "CUT",
+          "duration_sec": 4,
+          "image_prompt": "insert, slow push-in on an ink-stained hand gripping an indigo skirt, trembling ever so slightly"
+        },
+        {
+          "id": "S04-10",
+          "size": "MCU",
+          "angle": "HIGH",
+          "move": "FIX",
+          "lens_mm": 85,
+          "characters": [
+            "jeonggyeom"
+          ],
+          "frame": "정겸 정면, 시선이 아래(달래의 손)로 내려간다.",
+          "action": "정겸이 그 손을 본다.",
+          "transition": "CUT",
+          "duration_sec": 3,
+          "image_prompt": "medium close-up, the man's eyes dropping to her trembling hand"
+        },
+        {
+          "id": "S04-11",
+          "size": "2S",
+          "angle": "PROFILE",
+          "move": "FIX",
+          "lens_mm": 50,
+          "characters": [
+            "dallae",
+            "jeonggyeom"
+          ],
+          "frame": "측면 투숏. 왼쪽 달래, 오른쪽 정겸. 둘 다 말이 없다. 주막의 소란이 멀어진다.",
+          "action": "정겸은 아무 말도 하지 않는다.",
+          "sound": "주변 소음이 서서히 빠진다",
+          "transition": "CUT",
+          "duration_sec": 5,
+          "image_prompt": "profile two-shot in the wrecked tavern yard, the young woman and the tall man standing in silence, the bustle fading"
+        },
+        {
+          "id": "S04-12",
+          "size": "ELS",
+          "angle": "HIGH",
+          "move": "CRANE_UP",
+          "lens_mm": 24,
+          "characters": [
+            "dallae",
+            "jeonggyeom",
+            "guyongpal",
+            "extras"
+          ],
+          "frame": "S03-01과 같은 부감에서 크레인 업. 엎어진 술상과 쓰러진 구용팔 곁에 선 두 사람이 점점 작아지고, 장터 지붕들이 화면을 채운다. 정지.",
+          "action": "흩어진 주막 마당 한가운데, 두 사람.",
+          "transition": "FREEZE",
+          "duration_sec": 6,
+          "notes": "엔딩 훅: 시신 품에서 나온 쪽지 '다음은 진짜 네 차례다.' 5화 「연애 자료조사」로",
+          "image_prompt": "crane up from the two small figures standing over a collapsed man and an overturned table in the tavern yard to the market rooftops, freeze"
+        }
+      ]
     }
   ]
 }
