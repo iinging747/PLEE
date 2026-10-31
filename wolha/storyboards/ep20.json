@@ -19,11 +19,10 @@
         "dallae",
         "heojin",
         "jeongjo",
-        "heukrip",
         "extras"
       ],
       "mood": "EPIC",
-      "summary": "19화 징 소리에서 바로 잇는다. 허진이 흰 소복의 달래를 끌어내라 하자 정조가 손을 들어 나졸을 멈추고, 말에서 내려 용양봉저정 친국을 명한다. 시리즈 마지막 지붕 위 흑립.",
+      "summary": "19화 징 소리에서 바로 잇는다. 허진이 흰 소복의 달래를 끌어내라 하자 정조가 손을 들어 나졸을 멈추고, 말에서 내려 용양봉저정 친국을 명한다.",
       "source_text": "**허진** 저것은 형조의 죄인이다! 끌어내라!\n나졸들이 달려든다. 정조가 손을 든다.\n**정조** 격쟁한 백성을 끌어내는 법은 어느 책에 있느냐, 형판. (말에서 내리며) 용양봉저정에 장막을 쳐라. 과인이 친히 묻겠다.",
       "shots": [
         {
@@ -36,20 +35,15 @@
             "dallae",
             "jeongjo",
             "heojin",
-            "heukrip",
             "extras"
           ],
-          "frame": "얼어붙은 한강 위 배다리 앞을 내려다본다. 멈춰 선 행렬의 깃발이 화면 오른쪽을 채우고, 왕의 말 앞 빈 땅에 흰 소복 하나가 엎드려 있다. 화면 왼쪽 위, 나루터 주막 지붕 끝에 검은 갓의 사내가 점처럼 서 있다.",
+          "frame": "얼어붙은 한강 위 배다리 앞을 내려다본다. 멈춰 선 행렬의 깃발이 화면 오른쪽을 채우고, 왕의 말 앞 빈 땅에 흰 소복 하나가 엎드려 있다. 화면 아래 전경에 숨죽인 군중의 머리들.",
           "action": "행차가 멈췄다. 징 소리의 여운 속에 군중도 신하들도 얼어붙어 있다.",
           "sound": "(E) 징 소리의 긴 여운, 강바람에 깃발 펄럭이는 소리",
-          "motifs": [
-            "ROOFTOP_HEUKRIP"
-          ],
           "transition": "CUT",
           "duration_sec": 3,
           "continuity": "축: 행렬과 왕의 말은 화면 오른쪽 위, 격쟁한 달래는 왼쪽 아래, 군중은 화면 아래 전경. 이 씬 내내 유지(locations.json 의 noryang_bridge 에 axis 가 없어 이 회차에서 정함). 달래 흰 소복, 쓰개치마는 벗었다. 징은 달래 발치(19화 S#5에서 이어짐)",
-          "notes": "시리즈 마지막 지붕 위 흑립. 관객만 본다. 얼굴은 보이지 않는다. S#2에서 강수 뒤에 서 있다가 갓을 벗는 사내로 이어진다",
-          "image_prompt": "extreme wide high-angle shot of a royal procession halted before a pontoon bridge of boats across the frozen Han River on a winter morning, red and yellow banners and mounted guards filling the right of frame, a lone young woman in a white mourning sobok prostrate on the bare ground before the king's horse with a brass gong beside her, and a tiny silhouette in a wide black gat standing on the roof edge of a riverside tavern at the upper left"
+          "image_prompt": "extreme wide high-angle shot of a royal procession halted before a pontoon bridge of boats across the frozen Han River on a winter morning, red and yellow banners and mounted guards filling the right of frame, a lone young woman in a white mourning sobok prostrate on the bare ground before the king's horse with a brass gong beside her, the heads of a hushed crowd in the foreground"
         },
         {
           "id": "S01-02",
@@ -325,6 +319,7 @@
           "sound": "(E) 신하들과 백성들이 숨을 들이켠다",
           "transition": "CUT",
           "duration_sec": 2,
+          "continuity": "강수 팔 붕대는 14화까지라 이 회차에는 없다. 옛 상처는 왼쪽 팔뚝(11~13화와 같음)",
           "image_prompt": "medium shot at the entrance of the yard, the storyteller stepping aside as the gaunt man behind him takes off his wide black gat, revealing his shadowed face in broad daylight"
         },
         {
@@ -483,7 +478,7 @@
           "action": "율이 들어와 달래 곁에 엎드린다.",
           "transition": "CUT",
           "duration_sec": 3,
-          "continuity": "율 가슴 상처: 도포 속 무명 붕대(17화~). 흑립 반대편, 달래 오른쪽에 엎드린다",
+          "continuity": "율 가슴 상처: 도포 속 무명 붕대(17화~). 11화의 옛 옆구리 상처는 왼쪽(11~13화와 같음), 옷 속이라 보이지 않는다. 흑립 반대편, 달래 오른쪽에 엎드린다",
           "image_prompt": "full shot, a pale young nobleman with no smile entering the yard from the right, white cotton bandage visible across his chest between the folds of his robe, kneeling down beside the young woman in white"
         },
         {
@@ -912,7 +907,7 @@
           "action": "달래가 뛰어와 숨을 고른다. 칼자국이 난 「삼국지」 넷째 권을 흔든다.",
           "transition": "CUT",
           "duration_sec": 3,
-          "continuity": "축: 강과 나룻배는 화면 오른쪽, 뭍(달래와 정겸이 오는 쪽)은 왼쪽. 이 씬 내내 유지(noryang_bridge 에 axis 가 없어 정함). 허진 흰 두루마기, 사모 없음. 율 흰 두루마기에 봇짐, 가슴 무명은 옷 속. 달래 평상복(옥색 저고리, 쪽빛 치마)에 머리의 붓. 정겸 흰 도포와 갓",
+          "continuity": "축: 강과 나룻배는 화면 오른쪽, 뭍(달래와 정겸이 오는 쪽)은 왼쪽. 이 씬 내내 유지(noryang_bridge 에 axis 가 없어 정함). 허진 흰 두루마기, 사모 없음. 율 흰 두루마기에 봇짐, 가슴 무명(17화~)과 왼쪽 옆구리 옛 상처는 옷 속. 달래 평상복(옥색 저고리, 쪽빛 치마)에 머리의 붓. 정겸 흰 도포와 갓",
           "image_prompt": "wide shot of a spring morning ferry landing on the thawed Han River, a ferry boat moored at the right, an older man in a plain white durumagi with no official hat standing before it with a young man in a plain white durumagi instead of silk carrying a travel bundle behind him, a petite young woman running in from the left waving a book with a slash across its cover, a tall scholar following a few steps behind"
         },
         {
