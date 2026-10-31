@@ -330,6 +330,7 @@
           ],
           "transition": "CUT",
           "duration_sec": 4,
+          "notes": "화자는 혜민서 의원(단역)",
           "image_prompt": "the physician tracing the cut on the book's cover with his finger as he asks a question"
         },
         {
@@ -374,6 +375,7 @@
           ],
           "transition": "CUT",
           "duration_sec": 3,
+          "notes": "화자는 혜민서 의원(단역)",
           "image_prompt": "the physician holding out the bloodied book toward her"
         },
         {
