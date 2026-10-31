@@ -24,7 +24,9 @@ cd wolha
 python3 tools/skeleton.py 5                  # 뼈대가 없거나 대본이 바뀌었을 때만
 # storyboards/ep05.json 의 각 scene.shots 를 채운다 (status 를 "draft" 로)
 python3 tools/validate.py storyboards/ep05.json
+python3 tools/check_hangul.py storyboards/ep05.json   # 깨진 한글 음절 확인
 python3 tools/render.py 5                    # out/ep05.html 콘티 시트 확인
+python3 tools/board.py                       # out/board.html 전체 보드 갱신
 python3 tools/gen_images.py 5                # (선택) 이미지 프롬프트만 기록, 드라이런
 ```
 

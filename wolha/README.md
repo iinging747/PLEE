@@ -21,6 +21,8 @@ wolha/
 │   ├── skeleton.py            대본 → 스토리보드 뼈대
 │   ├── validate.py            형식·제작 규칙 검사
 │   ├── render.py              콘티 시트 HTML / 샷 리스트 CSV / 프롬프트 JSONL
+│   ├── board.py               20부작 전체 콘티 보드 한 장(out/board.html)
+│   ├── check_hangul.py        한글 오타(깨진 음절) 찾기
 │   └── gen_images.py          (선택) 패널 이미지 생성, 기본은 드라이런
 ├── assets/frames/             생성된 패널 이미지 (epNN/샷id.png)
 └── out/                       렌더 결과 (커밋 안 함)
@@ -32,6 +34,8 @@ wolha/
 cd wolha
 python3 tools/validate.py                 # 전체 검사
 python3 tools/render.py 1                 # out/ep01.html 생성 → 브라우저로 열기
+python3 tools/board.py                    # out/board.html: 20화 전체를 한 페이지에서 넘겨 보기
+python3 tools/check_hangul.py             # 스토리보드 글에 깨진 한글 음절이 있는지 확인
 python3 tools/gen_images.py 1             # 1화 이미지 프롬프트를 out/ep01_image_requests.jsonl 에 기록
 OPENAI_API_KEY=... python3 tools/gen_images.py 1 --run --limit 1   # 한 컷만 실제 생성해 보기
 ```
