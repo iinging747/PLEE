@@ -1273,6 +1273,12 @@
           "characters": [
             "jeonggyeom"
           ],
+          "looks": [
+            {
+              "character": "jeonggyeom",
+              "variant": "bareheaded"
+            }
+          ],
           "frame": "횃불을 등진 담 위에 정겸이 선다. 갓이 없다. 맨상투에 흐트러진 도포. 그대로 뛰어내린다.",
           "action": "갓도 어디서 떨어뜨린 정겸이 담 위에 서서, 뛰어내린다.",
           "motifs": [
@@ -1292,6 +1298,12 @@
           "lens_mm": 50,
           "characters": [
             "jeonggyeom"
+          ],
+          "looks": [
+            {
+              "character": "jeonggyeom",
+              "variant": "bareheaded"
+            }
           ],
           "frame": "착지한 정겸이 고개를 든다. 로우앵글, 뒤로 횃불. 외치는 입 모양에서 화면이 멈춘다.",
           "action": "정겸이 흑립을 향해 외친다. 화면이 멈춘다.",

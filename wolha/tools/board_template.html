@@ -99,6 +99,7 @@ header.top h1 small{display:block;font-family:var(--f-body);font-size:15px;color
 .chips{display:flex;flex-wrap:wrap;gap:4px}
 .chip{font-family:var(--f-mono);font-size:11px;padding:0 6px;border-radius:2px;background:var(--raise);white-space:nowrap}
 .chip.motif{background:transparent;border:1px solid var(--accent);color:var(--accent)}
+.chip.look{background:transparent;border:1px solid var(--moon);color:var(--moon)}
 .fr{font-size:13px;color:var(--muted)}
 .act{font-size:13.5px}
 .dl{display:grid;gap:4px;border-left:2px solid var(--accent);padding-left:9px}
@@ -145,6 +146,7 @@ window.WOLHA = /*__DATA__*/null;
   const SIZE_SCALE = {ELS:.06,LS:.12,FS:.16,MLS:.22,MS:.3,MCU:.42,CU:.6,ECU:.95,"2S":.28,GROUP:.18};
   const ANGLE_KO = {EYE:"아이레벨",HIGH:"하이",LOW:"로우",BIRD:"부감",WORM:"앙각",DUTCH:"더치",OTS:"어깨 너머",POV:"시점",TOP:"탑",PROFILE:"측면"};
   const MOVE_KO = {FIX:"고정",PAN_L:"팬 ←",PAN_R:"팬 →",TILT_U:"틸트 ↑",TILT_D:"틸트 ↓",DOLLY_IN:"달리 인",DOLLY_OUT:"달리 아웃",TRACK_L:"트랙 ←",TRACK_R:"트랙 →",TRACK_IN:"트랙 인",CRANE_UP:"크레인 업",CRANE_DOWN:"크레인 다운",HANDHELD:"핸드헬드",ZOOM_IN:"줌 인",ZOOM_OUT:"줌 아웃",CRASH_ZOOM:"크래시 줌",RACK_FOCUS:"랙 포커스",STEADICAM:"스테디캠",ORBIT:"오비트",SLOWMO:"슬로모션"};
+  const LOOK_KO = {palace:"관복",bareheaded:"맨상투",disguise:"변장",procession:"행차 복식"};
   const MODE_KO = {ON:"",OS:"O.S.",VO:"V.O.",N:"N",WHISPER:"속삭임"};
   const MOTIF_KO = {EAR_RED:"귀 빨개짐",EAR_NOT_RED:"안 빨개진 귀",UMBRELLA:"우산",COIN_RAIN:"엽전 비",DOOR_GAP:"문틈",WALL:"담장",ROOFTOP_HEUKRIP:"지붕 위 흑립",SCAR_LEFT_HAND:"왼손 흉터",NARRATOR:"내레이터",INSERT_TEXT:"글씨 인서트",MOON:"달",BRUSH:"붓",TEA_OVERFLOW:"넘치는 찻물",WHISTLE:"호루라기",LATE_FEE:"연체료",CONTRACT:"계약서"};
   // 시간대별 패널 바탕/선 (패널은 그림이므로 테마와 무관한 고정색)
@@ -193,12 +195,14 @@ window.WOLHA = /*__DATA__*/null;
   function card(sh, sc){
     const dl = (sh.dialogue||[]).map(d=>`<p><span class="who">${esc(name(d.speaker))}</span>${esc(d.line)}${MODE_KO[d.mode]?`<span class="mode">${MODE_KO[d.mode]}</span>`:""}</p>`).join("");
     const motifs = (sh.motifs||[]).map(m=>`<span class="chip motif">${esc(MOTIF_KO[m]||m)}</span>`).join("");
+    const lk = {}; (sc.looks||[]).forEach(l=>lk[l.character]=l.variant); (sh.looks||[]).forEach(l=>lk[l.character]=l.variant);
+    const looks = (sh.characters||[]).filter(c=>lk[c]).map(c=>`<span class="chip look">${esc(name(c))} ${esc(LOOK_KO[lk[c]]||lk[c])}</span>`).join("");
     const who = (sh.characters||[]).map(name).join(", ");
     return `<article class="card" id="${esc(sh.id)}" data-motifs="${esc((sh.motifs||[]).join(" "))}">
       ${sh.image ? `<img class="frame" src="${esc((D.imgBase||"") + sh.image)}" alt="${esc(sh.id)} 패널" loading="lazy" style="object-fit:cover">` : frameSVG(sh, sc.time)}
       <div class="cap">
         <div class="r1"><b>${esc(sh.id)}</b><span>${sh.duration_sec}초</span></div>
-        <div class="chips"><span class="chip">${esc(sh.size)}</span><span class="chip">${esc(ANGLE_KO[sh.angle]||sh.angle)}</span><span class="chip">${esc(MOVE_KO[sh.move]||sh.move)}</span>${sh.lens_mm?`<span class="chip">${sh.lens_mm}mm</span>`:""}${motifs}</div>
+        <div class="chips"><span class="chip">${esc(sh.size)}</span><span class="chip">${esc(ANGLE_KO[sh.angle]||sh.angle)}</span><span class="chip">${esc(MOVE_KO[sh.move]||sh.move)}</span>${sh.lens_mm?`<span class="chip">${sh.lens_mm}mm</span>`:""}${looks}${motifs}</div>
         ${sh.frame?`<p class="fr">${esc(sh.frame)}</p>`:""}
         ${sh.action?`<p class="act">${esc(sh.action)}</p>`:""}
         ${sh.insert_text?`<p class="ins">${esc(sh.insert_text)}</p>`:""}

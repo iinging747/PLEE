@@ -34,6 +34,7 @@
         "tc_in": { "type": "string", "pattern": "^[0-9]{2}:[0-9]{2}$" },
         "tc_out": { "type": "string", "pattern": "^[0-9]{2}:[0-9]{2}$" },
         "characters": { "type": "array", "items": { "type": "string" }, "description": "bible/characters.json 의 id" },
+        "looks": { "type": "array", "description": "평소와 다른 차림. variant 는 bible 의 prompt_variants 키(예: jeonggyeom→palace). 샷 값이 씬 값보다 우선", "items": { "type": "object", "required": ["character", "variant"], "additionalProperties": false, "properties": { "character": { "type": "string" }, "variant": { "type": "string" } } } },
         "mood": { "type": "string", "enum": ["COMEDY", "ROMANCE", "THRILLER", "MYSTERY", "GRIEF", "ACTION", "WARM", "EPIC"] },
         "summary": { "type": "string" },
         "source_text": { "type": "string", "description": "skeleton 단계에서만 쓰는 대본 원문. final 에서는 지워도 된다" },
@@ -51,6 +52,7 @@
         "move": { "type": "string", "enum": ["FIX", "PAN_L", "PAN_R", "TILT_U", "TILT_D", "DOLLY_IN", "DOLLY_OUT", "TRACK_L", "TRACK_R", "TRACK_IN", "CRANE_UP", "CRANE_DOWN", "HANDHELD", "ZOOM_IN", "ZOOM_OUT", "CRASH_ZOOM", "RACK_FOCUS", "STEADICAM", "ORBIT", "SLOWMO"] },
         "lens_mm": { "type": "integer", "minimum": 12, "maximum": 200 },
         "characters": { "type": "array", "items": { "type": "string" } },
+        "looks": { "type": "array", "description": "평소와 다른 차림. variant 는 bible 의 prompt_variants 키(예: jeonggyeom→palace). 샷 값이 씬 값보다 우선", "items": { "type": "object", "required": ["character", "variant"], "additionalProperties": false, "properties": { "character": { "type": "string" }, "variant": { "type": "string" } } } },
         "frame": { "type": "string", "description": "구도: 누가 화면 어디에, 전경/후경, 시선 방향" },
         "action": { "type": "string", "description": "화면에서 일어나는 일 (한국어, 현재형)" },
         "dialogue": {

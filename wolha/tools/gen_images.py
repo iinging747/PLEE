@@ -47,8 +47,23 @@ TIME_EN = {"DAY": "daylight", "NIGHT": "night, lit only by oil lamps, lanterns o
            "FLASHBACK": "desaturated memory tone"}
 
 
+def looks_for(scene: dict, shot: dict) -> dict:
+    """씬·샷의 looks 를 {인물 id: variant} 로. 샷 값이 씬 값보다 우선한다."""
+    out = {l["character"]: l["variant"] for l in scene.get("looks", [])}
+    out.update({l["character"]: l["variant"] for l in shot.get("looks", [])})
+    return out
+
+
+def char_prompt(c: dict, variant: str | None) -> str:
+    """인물 외형 프롬프트. 변장·관복처럼 차림이 다르면 bible 의 prompt_variants 를 쓴다."""
+    if variant and variant in c.get("prompt_variants", {}):
+        return c["prompt_variants"][variant]
+    return c.get("prompt_en", "")
+
+
 def build_prompt(data: dict, scene: dict, shot: dict, chars: dict, locs: dict) -> str:
-    who = [chars[c]["prompt_en"] for c in shot.get("characters", []) if c in chars and chars[c].get("prompt_en")]
+    lk = looks_for(scene, shot)
+    who = [char_prompt(chars[c], lk.get(c)) for c in shot.get("characters", []) if c in chars and chars[c].get("prompt_en")]
     loc = locs.get(scene["location"], {})
     parts = [STYLE,
              f'{SIZE_EN.get(shot["size"], shot["size"])}, {ANGLE_EN.get(shot["angle"], shot["angle"])}',

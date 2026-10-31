@@ -23,7 +23,7 @@ import argparse
 import json
 import sys
 
-from gen_images import build_prompt, STYLE
+from gen_images import STYLE, build_prompt, looks_for
 from wolha_lib import FRAMES_DIR, ROOT, STORYBOARD_DIR, characters, dump_json, load_json, locations
 
 JOBS_DIR = ROOT / "assets" / "jobs"
@@ -62,6 +62,16 @@ def ref_jobs(used_locs: set[str]) -> list[dict]:
                        f"full-body three-quarter view, and a head-and-shoulders close-up of the same person, side by side. "
                        f"Even soft light, no props, no text. Character: {c['prompt_en']}"),
         })
+        # 관복·변장처럼 차림이 다른 버전: 기본 시트를 참고 이미지로 붙여 같은 얼굴로 만든다
+        for vname, vprompt in c.get("prompt_variants", {}).items():
+            jobs.append({
+                "ref": f"{cid}__{vname}", "kind": "character", "out": rel(REFS_DIR / "chars" / f"{cid}__{vname}.png"),
+                "size": "1536x1024", "refs": [ref_path("chars", cid)],
+                "prompt": (f"{STYLE}. Character reference sheet on a plain warm-grey background: full-body front view, "
+                           f"full-body three-quarter view, and a head-and-shoulders close-up, side by side. Same person, same face "
+                           f"as the attached reference sheet, only the clothing changes. Even soft light, no props, no text. "
+                           f"Character: {vprompt}"),
+            })
     for loc in locations():
         if loc["id"] in used_locs and loc.get("prompt_en"):
             jobs.append({
@@ -79,7 +89,9 @@ def episode_jobs(n: int) -> list[dict]:
     jobs = []
     for sc in data["scenes"]:
         for sh in sc.get("shots", []):
-            refs = [ref_path("chars", c) for c in sh.get("characters", []) if c in REF_CAST][:3]
+            lk = looks_for(sc, sh)
+            refs = [ref_path("chars", f"{c}__{lk[c]}" if lk.get(c) in chars[c].get("prompt_variants", {}) else c)
+                    for c in sh.get("characters", []) if c in REF_CAST][:3]
             if sc["location"] in locs and sc["location"] != "flashback_misc":
                 refs.append(ref_path("locs", sc["location"]))
             prompt = build_prompt(data, sc, sh, chars, locs)

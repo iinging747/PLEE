@@ -959,6 +959,12 @@
           "characters": [
             "jeonggyeom"
           ],
+          "looks": [
+            {
+              "character": "jeonggyeom",
+              "variant": "palace"
+            }
+          ],
           "frame": "Flash. 탈색된 화면. 규장각 서고의 높은 서가 사이에서 정겸이 압수 금서 목록을 펼쳐 든다.",
           "action": "Flash. 규장각 서고. 정겸이 압수 금서 목록을 넘긴다.",
           "transition": "CUT",

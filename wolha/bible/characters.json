@@ -31,7 +31,8 @@
       "props": ["『논어』 표지 속 「청상연가」", "수사 수첩", "검서관 호패", "초롱(20화)"],
       "palette": ["#F2EFE6", "#111111", "#C0392B"],
       "tells": "EAR_RED — 거짓말할 때만 귀가 붉어진다. 진심일 때는 절대 붉어지지 않는다",
-      "prompt_en": "tall 23-year-old Korean scholar, very upright posture, serious unsmiling face, neatly tied black horsehair gat hat, plain but immaculate white dopo robe, slender hands"
+      "prompt_en": "tall 23-year-old Korean scholar, very upright posture, serious unsmiling face, neatly tied black horsehair gat hat, plain but immaculate white dopo robe, slender hands",
+      "prompt_variants": {"palace": "tall 23-year-old Korean scholar-official, very upright posture, serious unsmiling face, on duty inside the palace in a low-ranking Joseon official's round-collared dallyeong robe in muted blue-green with a black winged samo hat and a plain belt, slender hands", "bareheaded": "tall 23-year-old Korean scholar, very upright posture, tense face, bareheaded after losing his gat: only a topknot (sangtu) under a black horsehair headband (manggeon), white dopo robe dishevelled and dirty, slender hands"}
     },
     {
       "id": "yul",
@@ -103,7 +104,8 @@
       },
       "props": ["압수한 「청상연가」", "촛불"],
       "palette": ["#A51C30", "#D4AF37"],
-      "prompt_en": "41-year-old Joseon king, stern dignified face with a hint of mischief in the eyes, red royal robe with gold dragon roundel, ikseongwan crown"
+      "prompt_en": "41-year-old Joseon king, stern dignified face with a hint of mischief in the eyes, red royal robe with gold dragon roundel, ikseongwan crown",
+      "prompt_variants": {"disguise": "41-year-old Korean man of dignified bearing travelling incognito as a plain country scholar, undecorated grey-white robe, a wide woven straw satgat hat pulled low so only his jawline shows, no royal insignia, no crown", "procession": "41-year-old Joseon king during a royal procession, stern dignified face, red military-style travel robe (yungbok) with a black jeollip hat bearing a feather ornament, a belt with a quiver, no ikseongwan crown"}
     },
     {
       "id": "heukrip",
@@ -140,7 +142,8 @@
       "age": 45,
       "role": "정조 대신 엽전을 던지는 내관. 늘 지쳐 있다",
       "costume": { "default": "내관 복식 (고증확인), 변장 시 삿갓" },
-      "prompt_en": "tired middle-aged Joseon court eunuch, beardless, weary eyes, plain court attire"
+      "prompt_en": "tired middle-aged Joseon court eunuch, beardless, weary eyes, plain court attire",
+      "prompt_variants": {"disguise": "tired middle-aged beardless Korean man in plain undyed cotton commoner clothes, no hat, walking one step behind his master"}
     },
     {
       "id": "lee_deokmu",

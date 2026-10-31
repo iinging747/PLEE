@@ -468,6 +468,16 @@
         "an_naegwan",
         "extras"
       ],
+      "looks": [
+        {
+          "character": "jeongjo",
+          "variant": "disguise"
+        },
+        {
+          "character": "an_naegwan",
+          "variant": "disguise"
+        }
+      ],
       "mood": "COMEDY",
       "summary": "며칠 뒤, 팔에 붕대를 감은 강수가 다시 평상에 선다. 엽전 꾸러미를 던진 지친 내관 뒤에 삿갓 쓴 정조. 무릎을 꿇으려다 멈춘 정겸 옆을 지나며 정조가 다음 권과 이 년 전 종로 일을 흘린다.",
       "source_text": "며칠 뒤. 팔에 붕대를 감은 강수가 다시 평상에 선다. 구경꾼이 전보다 많다. 키스 대목 직전에서 뚝 멈춘다.\n엽전 대신 묵직한 엽전 꾸러미 하나가 날아와 평상 위에 (E) 쿵 떨어진다. 던진 사람은 지친 얼굴의 내관. 그 뒤에 삿갓을 눌러쓴 선비 하나. 정조다.\n구경꾼 사이의 정겸이 굳는다. 무릎을 꿇으려다 멈춘다. 정조가 그 옆을 지나가며 정겸에게만 들리게 말한다.\n**정조** 잡아라. 단, 다음 권은 나오게 하고. (사이) 이 년 전 종로 일이, 나는 영 개운치가 않다.",
@@ -566,7 +576,7 @@
           "transition": "CUT",
           "duration_sec": 5,
           "continuity": "정조는 삿갓 쓴 선비 변장(bible ep11 의상). 안 내관은 무명옷, 삿갓 없음",
-          "notes": "이미지 생성 때 bible의 곤룡포·익선관·내관 복식 토큰이 붙으니 변장 차림으로 손볼 것",
+          "notes": "변장 차림은 씬 looks(jeongjo:disguise, an_naegwan:disguise)로 프롬프트에 들어간다",
           "image_prompt": "at the back of the crowd, a weary middle-aged man in plain commoner's cotton clothes lowering his throwing arm, rack focus to a scholar behind him wearing a wide bamboo satgat pulled low, only his jaw visible, plain ramie robe"
         },
         {

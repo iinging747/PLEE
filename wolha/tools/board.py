@@ -14,7 +14,7 @@ import sys
 from wolha_lib import OUT_DIR, ROOT, STORYBOARD_DIR, characters, load_json, tc_to_sec
 
 KEEP = ["id", "size", "angle", "move", "lens_mm", "characters", "frame", "action", "dialogue", "sound",
-        "insert_text", "transition", "duration_sec", "motifs", "continuity", "image_prompt", "notes", "image"]
+        "insert_text", "transition", "duration_sec", "motifs", "continuity", "image_prompt", "notes", "image", "looks"]
 
 
 def main() -> int:
@@ -30,7 +30,7 @@ def main() -> int:
         for s in d["scenes"]:
             scenes.append({
                 "id": s["id"], "heading": s["heading"], "time": s["time"], "tc_in": s["tc_in"], "tc_out": s["tc_out"],
-                "tc_in_sec": tc_to_sec(s["tc_in"]), "mood": s.get("mood", ""), "summary": s.get("summary", ""),
+                "tc_in_sec": tc_to_sec(s["tc_in"]), "mood": s.get("mood", ""), "summary": s.get("summary", ""), "looks": s.get("looks", []),
                 "shots": [{k: sh[k] for k in KEEP if k in sh} for sh in s.get("shots", [])],
             })
         eps.append({

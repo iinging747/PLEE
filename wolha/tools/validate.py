@@ -26,7 +26,7 @@ import sys
 from pathlib import Path
 
 from wolha_lib import (
-    ROOT, SCHEMA_PATH, SHORTFORM_DIR, STORYBOARD_DIR, character_ids, dialogue_lines,
+    ROOT, SCHEMA_PATH, SHORTFORM_DIR, STORYBOARD_DIR, character_ids, characters, dialogue_lines,
     load_json, location_ids, name_to_id, normalize_text, parse_shortform,
     tc_to_sec, validate_schema,
 )
@@ -49,6 +49,14 @@ def check(path: Path) -> tuple[list[str], list[str]]:
     chars = character_ids()
     locs = location_ids()
     names = name_to_id()
+    variants = {c["id"]: set(c.get("prompt_variants", {})) for c in characters()}
+
+    def check_looks(owner: str, looks: list) -> None:
+        for l in looks:
+            if l["character"] not in variants:
+                errors.append(f"{owner}: looks 의 인물 id '{l['character']}' 없음")
+            elif l["variant"] not in variants[l["character"]]:
+                errors.append(f"{owner}: looks '{l['character']}:{l['variant']}' 가 bible prompt_variants 에 없음")
 
     # 대본 원문
     md = SHORTFORM_DIR / f"ep{data['episode']:02d}.md"
@@ -74,6 +82,7 @@ def check(path: Path) -> tuple[list[str], list[str]]:
         for c in sc.get("characters", []):
             if c not in chars:
                 errors.append(f"{sid}: 인물 id '{c}' 가 bible/characters.json 에 없음")
+        check_looks(sid, sc.get("looks", []))
 
         shots = sc.get("shots", [])
         if not shots:
@@ -99,6 +108,7 @@ def check(path: Path) -> tuple[list[str], list[str]]:
             for c in sh.get("characters", []):
                 if c not in chars:
                     errors.append(f"{shid}: 인물 id '{c}' 없음")
+            check_looks(shid, sh.get("looks", []))
             for d in sh.get("dialogue", []):
                 if d["speaker"] not in chars:
                     errors.append(f"{shid}: 화자 id '{d['speaker']}' 없음")

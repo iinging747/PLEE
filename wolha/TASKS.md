@@ -34,12 +34,13 @@
 **① 레퍼런스 (한 번만)**
 ```
 wolha/AGENTS.md 의 "이미지 에셋" 절을 읽어.
-wolha/assets/jobs/refs.jsonl 에서 kind 가 character 인 줄(14명)을 이미지 생성 도구로 만들어 각 out 경로에 저장해.
+wolha/assets/jobs/refs.jsonl 에서 kind 가 character 이고 ref 에 "__" 가 없는 줄(14명)을 이미지 생성 도구로 만들어 각 out 경로에 저장해.
 prompt 그대로, size 크기, 글자 없이. 다 만들면 14장을 나한테 보여 줘.
 ```
 승인한 뒤:
 ```
-refs.jsonl 의 location 줄도 같은 방식으로 만들어.
+refs.jsonl 에서 ref 에 "__" 가 들어간 변형 시트 5장(정겸 관복·맨상투, 정조 삿갓 변장·행차 복식, 안 내관 변장)을
+각 줄의 refs 에 적힌 기본 시트를 참고 이미지로 붙여서, 같은 얼굴로 만들어. 그다음 location 줄도 같은 방식으로 만들어.
 끝나면 cd wolha && python3 tools/compress_frames.py --refs && python3 tools/codex_jobs.py 를 실행하고
 "assets: 레퍼런스 시트" 로 커밋·푸시해.
 ```
