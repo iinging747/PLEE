@@ -931,7 +931,6 @@
         "dallae",
         "jeonggyeom",
         "yul",
-        "heukrip",
         "extras"
       ],
       "mood": "THRILLER",
@@ -1088,18 +1087,13 @@
           "move": "FIX",
           "lens_mm": 35,
           "characters": [
-            "extras",
-            "heukrip"
+            "extras"
           ],
-          "frame": "같은 구도. 열 개의 횃불이 강둑을 따라 줄지어 내려온다. 화면 오른쪽 위 창고 지붕 끝에 검은 갓 하나가 횃불빛에 윤곽만 드러난다(관객만 본다).",
+          "frame": "같은 구도. 열 개의 횃불이 강둑을 따라 줄지어 내려온다.",
           "action": "열. 횃불의 행렬이 강둑을 따라 다가온다.",
-          "motifs": [
-            "ROOFTOP_HEUKRIP"
-          ],
           "transition": "CUT",
           "duration_sec": 3,
-          "notes": "가이드 8장의 회차별 지붕 위 흑립. 작게, 얼굴과 손은 어둠 속. 세 인물은 모른다",
-          "image_prompt": "same composition, a procession of ten torches descending along the riverbank, and on the edge of a warehouse roof at the upper right a tiny silhouette in a wide black gat, faintly rim-lit by torchlight, face unseen"
+          "image_prompt": "same composition, a procession of ten torches descending along the riverbank"
         },
         {
           "id": "S05-10",

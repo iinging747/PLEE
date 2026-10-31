@@ -290,7 +290,6 @@
         "dallae",
         "jeonggyeom",
         "yul",
-        "heukrip",
         "seoyeon",
         "extras"
       ],
@@ -305,20 +304,16 @@
           "move": "FIX",
           "lens_mm": 24,
           "characters": [
-            "extras",
-            "heukrip"
+            "extras"
           ],
-          "frame": "물안개가 낀 새벽 나루. 화면 오른쪽에 첫 배가 떠 있다. 왼쪽 창고 지붕 위, 안개 속에 검은 갓 하나가 희미하게 서 있다(관객만 본다).",
+          "frame": "물안개가 낀 새벽 나루. 화면 오른쪽에 첫 배가 떠 있다.",
           "action": "물안개. 강화로 가는 첫 배가 떠날 채비를 한다.",
           "sound": "(E) 물소리, 먼 물새 소리",
-          "motifs": [
-            "ROOFTOP_HEUKRIP"
-          ],
           "transition": "CUT",
           "duration_sec": 3,
           "continuity": "축: 강과 첫 배는 화면 오른쪽, 나루 밖 길은 왼쪽. 정겸은 강을 등지고 화면 왼쪽을 향해 선다. 율은 왼쪽 길로 빠져나간다",
-          "notes": "가이드 8장의 회차별 지붕 위 흑립. 안개 속 실루엣으로 작게, 얼굴과 손은 보이지 않는다. 사공은 단역",
-          "image_prompt": "extreme wide shot of a misty riverside landing at blue dawn, a small boat waiting on the right, and on a warehouse roof at the left a faint tiny silhouette in a wide black gat half-hidden in the mist"
+          "notes": "사공은 단역",
+          "image_prompt": "extreme wide shot of a misty riverside landing at blue dawn, a small boat waiting on the right"
         },
         {
           "id": "S02-02",
