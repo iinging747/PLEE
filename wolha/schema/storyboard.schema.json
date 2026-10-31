@@ -7,8 +7,8 @@
   "required": ["series", "episode", "title", "runtime_sec", "scenes"],
   "additionalProperties": false,
   "properties": {
-    "series": { "type": "string", "const": "월하노인을 잡아라 (숏폼 20부작)" },
-    "episode": { "type": "integer", "minimum": 1, "maximum": 20 },
+    "series": { "type": "string", "const": "월하노인을 잡아라 (숏폼 24부작)" },
+    "episode": { "type": "integer", "minimum": 1, "maximum": 24 },
     "title": { "type": "string", "minLength": 1 },
     "hook": { "type": "string", "description": "대본의 '훅:' 줄 그대로" },
     "runtime_sec": { "type": "integer", "minimum": 150, "maximum": 200, "description": "목표 러닝타임(초). 기본 180" },

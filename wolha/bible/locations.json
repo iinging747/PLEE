@@ -80,9 +80,9 @@
         "달래책방 담장",
         "달래책방 골목"
       ],
-      "desc": "흙담 골목. 정겸이 등을 붙이고 서는 자리. 20화 〈월하정인〉 구도의 무대",
+      "desc": "흙담 골목. 정겸이 등을 붙이고 서는 자리. 24화 〈월하정인〉 구도의 무대",
       "light": "초롱, 달빛",
-      "axis": "담장은 화면 왼쪽 세로 벽. 20화 엔딩에서 〈월하정인〉과 같은 배치",
+      "axis": "담장은 화면 왼쪽 세로 벽. 24화 엔딩에서 〈월하정인〉과 같은 배치",
       "prompt_en": "narrow alley beside a low earthen-and-stone wall topped with tiles"
     },
     {
@@ -210,7 +210,7 @@
       "match": [
         "후원"
       ],
-      "desc": "연못, 정자, 뒷담 아래 쪽문. 14~17화 클라이맥스",
+      "desc": "연못, 정자, 뒷담 아래 쪽문. 16~20화 클라이맥스",
       "light": "달빛 → 담 너머 횃불",
       "axis": "뒷담과 쪽문은 화면 왼쪽 뒤, 정자는 오른쪽",
       "prompt_en": "rear garden of a noble mansion at night, lotus pond, small pavilion, a low gate in the back wall"
@@ -275,7 +275,7 @@
       "match": [
         "세검정"
       ],
-      "desc": "계곡 위 정자. 혼담 자리(8화)",
+      "desc": "계곡 위 정자. 혼담 자리(9화)",
       "light": "맑은 낮",
       "prompt_en": "small pavilion above a rocky mountain stream"
     },
@@ -300,7 +300,7 @@
         "윤희의 집",
         "참판댁 별당"
       ],
-      "desc": "양반가 별당. 월하회 아지트, 19화 은신처",
+      "desc": "양반가 별당. 월하회 아지트, 23화 은신처",
       "light": "등잔 / 눈 내린 밤",
       "prompt_en": "elegant women's pavilion of a noble house, books and embroidery, snow outside in winter"
     },
@@ -322,7 +322,7 @@
       "match": [
         "운종가 골목 (새벽, 비)"
       ],
-      "desc": "우산 하나 아래 두 사람(9화)",
+      "desc": "우산 하나 아래 두 사람(10화)",
       "light": "푸른 새벽, 젖은 길 반사",
       "axis": "부감 하이앵글로 우산 하나가 골목을 따라 작아진다",
       "prompt_en": "narrow street at dawn in heavy rain, wet stones reflecting blue light"
@@ -365,7 +365,7 @@
         "노량 나루",
         "나룻배"
       ],
-      "desc": "얼어붙은 한강 위 배를 이어 놓은 배다리. 행차 깃발. 20화 봄에는 나룻배",
+      "desc": "얼어붙은 한강 위 배를 이어 놓은 배다리. 행차 깃발. 24화 봄에는 나룻배",
       "light": "겨울 아침의 차고 맑은 빛 / 봄 아침",
       "prompt_en": "royal pontoon bridge of boats across the frozen Han River at Noryang, procession banners"
     },

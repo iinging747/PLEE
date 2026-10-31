@@ -1,5 +1,5 @@
 {
-  "series": "월하노인을 잡아라 (숏폼 20부작)",
+  "series": "월하노인을 잡아라 (숏폼 24부작)",
   "episode": 5,
   "title": "연애 자료조사",
   "hook": "키스신을 상상으로만 쓴 작가가, 가짜 정혼자에게 연습을 청한다.",
@@ -166,7 +166,7 @@
           ],
           "transition": "CUT",
           "duration_sec": 3,
-          "notes": "여백 글씨는 2화 계약서의 '김일' 서명과 같은 해서체로 쓴다(15화 글씨 대조 복선)",
+          "notes": "여백 글씨는 2화 계약서의 '김일' 서명과 같은 해서체로 쓴다(17화 글씨 대조 복선)",
           "image_prompt": "top-down insert, an open hand-copied hangul romance novel on a low desk, an ink-stained fingertip tapping a neat handwritten note in the margin beside a passage"
         },
         {

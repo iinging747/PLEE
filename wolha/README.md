@@ -1,6 +1,6 @@
 # 「월하노인을 잡아라」 숏폼 스토리보드 에셋
 
-1792년 한양을 배경으로 한 사극 로맨틱 코미디 미스터리다. 20부작이고 회당 3분이다. 내레이션은 전기수 강수 한 사람이 맡고, 2화부터는 매회 강수의 '지난 대목'(12초 요약)으로 연다. 이 폴더는 대본을 콘티로 바꾸는 작업장이다. Codex 같은 코딩 에이전트가 이어서 작업할 수 있도록 규칙, 데이터 형식, 도구를 함께 담았다.
+1792년 한양을 배경으로 한 사극 로맨틱 코미디 미스터리다. 24부작이고 회당 3분이다. 내레이션은 전기수 강수 한 사람이 맡고, 2화부터는 매회 강수의 '지난 대목'(12초 요약)으로 연다. 이 폴더는 대본을 콘티로 바꾸는 작업장이다. Codex 같은 코딩 에이전트가 이어서 작업할 수 있도록 규칙, 데이터 형식, 도구를 함께 담았다.
 
 ## 구성
 
@@ -9,24 +9,24 @@ wolha/
 ├── AGENTS.md                  Codex 작업 지침 (여기부터 읽기)
 ├── TASKS.md                   회차별 진행표와 Codex에 줄 프롬프트
 ├── docs/storyboard_guide.md   스토리보드 기법 가이드 (샷 크기·앵글·무빙·모티프·검수 규칙)
-├── shortform/ep01~20.md       숏폼 대본 (회당 3분, 씬별 타임코드)
+├── shortform/ep01~24.md       숏폼 대본 (회당 3분, 씬별 타임코드)
 ├── source/                    원작 자료: 16부작 대본(회당 60분), 기획안, 1화 원작 스토리보드
 ├── bible/characters.json      인물 설정 (id, 외형, 의상, 이미지 프롬프트 토큰)
 ├── bible/locations.json       장소 설정 (id, 세트, 조명 동기, 화면 방향)
 ├── schema/storyboard.schema.json  스토리보드 JSON 형식
 ├── storyboards/ep01.json      ★ 견본 (완성, 샷 60개)
-├── storyboards/ep02~20.json   완성 (회차당 샷 48~60개, 검사 오류·경고 0, status review)
+├── storyboards/ep02~24.json   완성 (회차당 샷 48~60개, 검사 오류·경고 0, status review)
 ├── tools/                     파이썬 도구 (표준 라이브러리만, 이미지 압축만 Pillow 또는 ffmpeg)
 │   ├── split_episodes.py      통합 대본 → 회차별 파일
 │   ├── skeleton.py            대본 → 스토리보드 뼈대
 │   ├── validate.py            형식·제작 규칙 검사
 │   ├── render.py              콘티 시트 HTML / 샷 리스트 CSV / 프롬프트 JSONL
-│   ├── board.py               20부작 전체 콘티 보드 한 장(out/board.html)
+│   ├── board.py               24부작 전체 콘티 보드 한 장(out/board.html)
 │   ├── check_hangul.py        한글 오타(깨진 음절) 찾기
 │   ├── codex_jobs.py          패널 이미지 작업 목록(assets/jobs/) 만들기, 생성된 그림 연결
 │   ├── compress_frames.py     생성된 PNG → 16:9 1280x720 JPEG
 │   └── gen_images.py          (선택) 패널 이미지 생성, 기본은 드라이런
-├── assets/jobs/               Codex 이미지 작업 목록 (refs.jsonl, ep01~20.jsonl: 샷마다 prompt·저장 경로·참고 그림)
+├── assets/jobs/               Codex 이미지 작업 목록 (refs.jsonl, ep01~24.jsonl: 샷마다 prompt·저장 경로·참고 그림)
 ├── assets/refs/               인물 레퍼런스 시트·장소 레퍼런스 (패널보다 먼저 만든다)
 ├── assets/frames/             패널 이미지 (epNN/샷id.jpg)
 └── out/                       렌더 결과 (커밋 안 함)
@@ -38,7 +38,7 @@ wolha/
 cd wolha
 python3 tools/validate.py                 # 전체 검사
 python3 tools/render.py 1                 # out/ep01.html 생성 → 브라우저로 열기
-python3 tools/board.py                    # out/board.html: 20화 전체를 한 페이지에서 넘겨 보기
+python3 tools/board.py                    # out/board.html: 24화 전체를 한 페이지에서 넘겨 보기
 python3 tools/check_hangul.py             # 스토리보드 글에 깨진 한글 음절이 있는지 확인
 python3 tools/gen_images.py 1             # 1화 이미지 프롬프트를 out/ep01_image_requests.jsonl 에 기록
 OPENAI_API_KEY=... python3 tools/gen_images.py 1 --run --limit 1   # 한 컷만 실제 생성해 보기
@@ -53,4 +53,4 @@ OPENAI_API_KEY=... python3 tools/gen_images.py 1 --run --limit 1   # 한 컷만 
 ## 출처
 
 - 숏폼 대본과 원작 대본은 Claude Docs 문서 「월하노인을 잡아라」에서 내보냈다.
-- 대본을 고칠 때는 문서 쪽을 고치고, 그다음 `source/shortform_20부작.md`를 다시 내보내 `tools/split_episodes.py source/shortform_20부작.md shortform`을 실행한다.
+- 대본을 고칠 때는 문서 쪽을 고치고, 그다음 `source/shortform_24부작.md`를 다시 내보내 `tools/split_episodes.py source/shortform_24부작.md shortform`을 실행한다.

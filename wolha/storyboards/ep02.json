@@ -1,5 +1,5 @@
 {
-  "series": "월하노인을 잡아라 (숏폼 20부작)",
+  "series": "월하노인을 잡아라 (숏폼 24부작)",
   "episode": 2,
   "title": "가짜 정혼자",
   "hook": "빚쟁이 앞에서 달래가 처음 본 하숙생의 팔을 붙잡는다.",
@@ -773,7 +773,7 @@
           "transition": "CUT",
           "duration_sec": 4,
           "continuity": "계약서는 종이 한 장, 다섯 조항, 왼쪽 끝에 서명 두 자리",
-          "notes": "CONTRACT 첫 등장. 15화 찢기, 20화 새 계약서와 같은 TOP 구도·같은 종이 크기로 찍는다. 글씨는 후반 합성",
+          "notes": "CONTRACT 첫 등장. 17화 찢기, 24화 새 계약서와 같은 TOP 구도·같은 종이 크기로 찍는다. 글씨는 후반 합성",
           "image_prompt": "top-down insert, a brush tip writing neat vertical columns of regular-script calligraphy on a sheet of hanji by lamplight, moving from right to left"
         },
         {
