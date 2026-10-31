@@ -6,7 +6,7 @@
   "runtime_sec": 180,
   "aspect": "16:9",
   "status": "review",
-  "notes": "샷 수 58, 평균 3.1초. 강수 팔 붕대는 대본('붕대 감은 팔이라 반 박자 늦다')에 따라 16화에도 유지하고, 목덜미 상처가 S01-08에서 시작된다(AGENTS.md는 붕대를 11~14화로 적음). S#4에서 먹순은 대사로만 언급되므로 씬 인물에서 뺐다. 지붕 위 흑립은 S01-06(대본대로).",
+  "notes": "샷 수 58, 평균 3.1초. 강수 왼쪽 아래팔 붕대는 대본('붕대 감은 팔이라 반 박자 늦다')에 따라 16화에도 유지하고, 목덜미 상처가 S01-08에서 시작된다(AGENTS.md는 붕대를 11~14화로 적음). 율 상처는 왼쪽 옆구리(11~13화와 같다). S#4에서 먹순은 대사로만 언급되므로 씬 인물에서 뺐다. 지붕 위 흑립은 S01-06(대본대로).",
   "scenes": [
     {
       "id": "S#1",
@@ -41,7 +41,7 @@
           ],
           "transition": "CUT",
           "duration_sec": 3,
-          "continuity": "축: 담장은 화면 왼쪽 세로 벽(locations.json axis), 정겸은 그 오른쪽에 등을 붙인다. 맞은편 지붕은 화면 오른쪽 위. 마당 장면은 대문 화면 왼쪽(dallae_maru axis). 정겸 의상은 궐 숙직 차림 그대로(고증확인: 숙직 복식). 강수 팔 붕대 유지",
+          "continuity": "축: 담장은 화면 왼쪽 세로 벽(locations.json axis), 정겸은 그 오른쪽에 등을 붙인다. 맞은편 지붕은 화면 오른쪽 위. 마당 장면은 대문 화면 왼쪽(dallae_maru axis). 정겸 의상은 궐 숙직 차림 그대로(고증확인: 숙직 복식). 강수 왼쪽 아래팔 붕대 유지",
           "image_prompt": "extreme wide high angle night shot of a narrow moonlit alley at the fourth watch, a low earthen wall dividing the left of frame, a lone tall figure in palace night-duty attire standing with his back against it, the moon above the eaves"
         },
         {
@@ -135,12 +135,12 @@
           "characters": [
             "gangsu"
           ],
-          "frame": "마당의 마루. 몽둥이를 끌어안고 졸던 강수가 눈을 번쩍 뜬다. 한쪽 팔에 붕대.",
+          "frame": "마당의 마루. 몽둥이를 끌어안고 졸던 강수가 눈을 번쩍 뜬다. 왼쪽 아래팔에 붕대.",
           "action": "마루 널 우는 소리에 강수가 눈을 뜬다.",
           "sound": "(E) 삐걱, 마루 널 우는 소리",
           "transition": "CUT",
           "duration_sec": 3,
-          "image_prompt": "medium shot on a moonlit wooden porch, the storyteller with one arm bandaged dozing with a wooden club in his arms, his eyes snapping open"
+          "image_prompt": "medium shot on a moonlit wooden porch, the storyteller with his left forearm bandaged dozing with a wooden club in his arms, his eyes snapping open"
         },
         {
           "id": "S01-08",
@@ -152,12 +152,12 @@
             "gangsu",
             "heukrip"
           ],
-          "frame": "사선 앵글. 강수가 몽둥이를 휘두르지만 붕대 감은 팔이라 반 박자 늦다. 검은 그림자가 먼저 파고들어 칼자루 끝으로 목덜미를 친다.",
+          "frame": "사선 앵글. 강수가 몽둥이를 휘두르지만 붕대 감은 왼팔이라 반 박자 늦다. 검은 그림자가 먼저 파고들어 칼자루 끝으로 목덜미를 친다.",
           "action": "강수가 휘두른다. 반 박자 늦다. 칼자루 끝이 목덜미를 친다.",
           "sound": "(E) 휙, 퍽",
           "transition": "CUT",
           "duration_sec": 3,
-          "image_prompt": "handheld dutch angle, the storyteller swinging a club a half beat too late because of his bandaged arm, a black-clad figure slipping inside and striking his neck with the pommel of a sword"
+          "image_prompt": "handheld dutch angle, the storyteller swinging a club a half beat too late because of his bandaged left forearm, a black-clad figure slipping inside and striking his neck with the pommel of a sword"
         },
         {
           "id": "S01-09",
@@ -766,7 +766,7 @@
           "sound": "급한 발소리",
           "transition": "CUT",
           "duration_sec": 3,
-          "continuity": "축: 허진은 화면 오른쪽 상석, 율은 왼쪽에서 들어와 무릎을 꿇는다. 분합문은 화면 뒤쪽(마당 쪽). 율 옆구리 무명 띠(도포 속) 유지",
+          "continuity": "축: 허진은 화면 오른쪽 상석, 율은 왼쪽에서 들어와 무릎을 꿇는다. 분합문은 화면 뒤쪽(마당 쪽). 율 왼쪽 옆구리 무명 띠(도포 속) 유지",
           "image_prompt": "wide shot of a wide wooden main hall in cold daylight, the handsome young nobleman rushing in from the left, his father seated on the right"
         },
         {

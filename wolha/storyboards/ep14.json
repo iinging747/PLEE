@@ -6,7 +6,7 @@
   "runtime_sec": 180,
   "aspect": "16:9",
   "status": "review",
-  "notes": "샷 수 59, 평균 3.1초. S#4 장소를 dallae_storage에서 dallae_maru로 고쳤다(창고 문 앞 마당과 마루). S#1의 O.S. 화자(종사관·강수·나졸·먹순)는 씬 인물에는 넣고 샷 인물에서는 뺐다(이미지 프롬프트에 안 보이는 인물이 붙지 않게). 대본에 지붕 위 흑립이 없어 ROOFTOP_HEUKRIP 컷은 넣지 않았다. S#3 귀(S03-13)는 1화 S03-06과 같은 왼쪽 옆얼굴 구도이고, 15화 S01-10 EAR_NOT_RED가 이 구도를 그대로 받는다.",
+  "notes": "샷 수 59, 평균 3.1초. S#4 장소를 dallae_storage에서 dallae_maru로 고쳤다(창고 문 앞 마당과 마루). S#1의 O.S. 화자(종사관·강수·나졸·먹순)는 씬 인물에는 넣고 샷 인물에서는 뺐다(이미지 프롬프트에 안 보이는 인물이 붙지 않게). 부상 위치는 11~13화에 맞춰 강수 왼쪽 아래팔 붕대, 율 왼쪽 옆구리. 대본에 지붕 위 흑립이 없어 ROOFTOP_HEUKRIP 컷은 넣지 않았다. S#3 귀(S03-13)는 1화 S03-06과 같은 왼쪽 옆얼굴 구도이고, 15화 S01-10 EAR_NOT_RED가 이 구도를 그대로 받는다.",
   "scenes": [
     {
       "id": "S#1",
@@ -333,8 +333,8 @@
           "sound": "(E) 항아리 쓰러지는 소리, 된장 쏟아지는 소리",
           "transition": "CUT",
           "duration_sec": 2,
-          "continuity": "축: 장독대는 화면 오른쪽, 종사관 가운데, 강수·먹순 왼쪽. 대문(단속반 퇴장 방향)은 화면 왼쪽. 강수 팔 붕대 유지",
-          "image_prompt": "high angle wide night shot, a torchlit row of large earthenware jars on the right, constables tipping them over, an officer in the middle, a storyteller with a bandaged arm and a shop girl watching from the left"
+          "continuity": "축: 장독대는 화면 오른쪽, 종사관 가운데, 강수·먹순 왼쪽. 대문(단속반 퇴장 방향)은 화면 왼쪽. 강수 왼쪽 아래팔 붕대 유지",
+          "image_prompt": "high angle wide night shot, a torchlit row of large earthenware jars on the right, constables tipping them over, an officer in the middle, a storyteller with a bandaged left forearm and a shop girl watching from the left"
         },
         {
           "id": "S02-02",
@@ -402,7 +402,7 @@
           "characters": [
             "gangsu"
           ],
-          "frame": "강수 정면. 붕대 감은 팔을 가슴에 붙이고, 성한 손으로 부채를 펴며 능청스럽게 웃는다.",
+          "frame": "강수 정면. 붕대 감은 왼팔을 가슴에 붙이고, 성한 오른손으로 부채를 펴며 능청스럽게 웃는다.",
           "action": "강수가 능청을 떤다.",
           "dialogue": [
             {
@@ -413,7 +413,7 @@
           ],
           "transition": "CUT",
           "duration_sec": 3,
-          "image_prompt": "medium shot, the storyteller with one arm in a bandage, opening a folding fan with his good hand and smiling slyly, torchlight"
+          "image_prompt": "medium shot, the storyteller with his left forearm bandaged, opening a folding fan with his good right hand and smiling slyly, torchlight"
         },
         {
           "id": "S02-06",
@@ -810,14 +810,14 @@
           "characters": [
             "yul"
           ],
-          "frame": "밖에서 본 창고 문(화면 왼쪽) 앞에 초롱을 든 율. 어깨가 들썩인다. 도포 옆구리로 피가 배어 나온다.",
+          "frame": "밖에서 본 창고 문(화면 왼쪽) 앞에 초롱을 든 율. 어깨가 들썩인다. 도포 왼쪽 옆구리로 피가 배어 나온다.",
           "action": "초롱을 든 율이 창고 문 앞에 서 있다. 숨이 차다. 단속 소식을 듣고 달려왔지만 행렬보다 한 걸음 늦었다.",
           "sound": "가쁜 숨, 빗물 떨어지는 소리",
           "transition": "CUT",
           "duration_sec": 3,
-          "continuity": "축: 밖에서 본 역방향. 창고 문은 화면 왼쪽, 마루(강수)는 화면 오른쪽. 율은 가운데에서 왼쪽 뒤 어둠으로 퇴장. 율 옆구리 무명 띠(도포 속)가 피로 젖었다. 강수 팔 붕대 유지",
+          "continuity": "축: 밖에서 본 역방향. 창고 문은 화면 왼쪽, 마루(강수)는 화면 오른쪽. 율은 가운데에서 왼쪽 뒤 어둠으로 퇴장. 율 왼쪽 옆구리 무명 띠(도포 속)가 피로 젖었다. 강수 왼쪽 아래팔 붕대 유지",
           "notes": "장소를 dallae_storage에서 dallae_maru로 고침. 창고 안이 아니라 창고 앞 마당과 마루에서 벌어지는 씬",
-          "image_prompt": "full shot at night, a handsome young nobleman in a plum silk robe holding a small paper lantern, panting in front of a weathered storeroom door, blood seeping through the side of his robe"
+          "image_prompt": "full shot at night, a handsome young nobleman in a plum silk robe holding a small paper lantern, panting in front of a weathered storeroom door, blood seeping through the left side of his robe"
         },
         {
           "id": "S04-02",
@@ -873,7 +873,7 @@
           ],
           "transition": "CUT",
           "duration_sec": 3,
-          "image_prompt": "wide night shot of a small hanok yard lit only by a lantern under the eaves, the young nobleman turning away from the storeroom, a storyteller with a bandaged arm sitting on the wooden porch meeting his eyes"
+          "image_prompt": "wide night shot of a small hanok yard lit only by a lantern under the eaves, the young nobleman turning away from the storeroom, a storyteller with a bandaged left forearm sitting on the wooden porch meeting his eyes"
         },
         {
           "id": "S04-05",
@@ -906,7 +906,7 @@
           "characters": [
             "gangsu"
           ],
-          "frame": "강수 정면. 마루에 걸터앉아 붕대 감은 팔을 무릎에 얹었다. 시선은 율의 옆구리로.",
+          "frame": "강수 정면. 마루에 걸터앉아 붕대 감은 왼팔을 무릎에 얹었다. 시선은 율의 왼쪽 옆구리로.",
           "action": "강수가 율의 옆구리를 본다.",
           "dialogue": [
             {
@@ -917,7 +917,7 @@
           ],
           "transition": "CUT",
           "duration_sec": 3,
-          "image_prompt": "medium close-up of the storyteller sitting on the porch with his bandaged arm resting on his knee, glancing at the young man's bleeding side"
+          "image_prompt": "medium close-up of the storyteller sitting on the porch with his bandaged left forearm resting on his knee, glancing at the young man's bleeding left side"
         },
         {
           "id": "S04-07",
@@ -954,11 +954,11 @@
           "characters": [
             "yul"
           ],
-          "frame": "율의 뒷모습이 화면 왼쪽 뒤 어둠으로 걸어 나간다. 옆구리를 짚었지만 허리는 꼿꼿하다.",
+          "frame": "율의 뒷모습이 화면 왼쪽 뒤 어둠으로 걸어 나간다. 왼쪽 옆구리를 짚었지만 허리는 꼿꼿하다.",
           "action": "율이 어둠 속으로 나간다.",
           "transition": "FADE_OUT",
           "duration_sec": 2,
-          "image_prompt": "wide shot from behind, the young nobleman walking away into the darkness, one hand pressed to his side but his back held straight"
+          "image_prompt": "wide shot from behind, the young nobleman walking away into the darkness, one hand pressed to his left side but his back held straight"
         }
       ]
     },

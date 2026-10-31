@@ -6,7 +6,7 @@
   "runtime_sec": 180,
   "aspect": "16:9",
   "status": "review",
-  "notes": "샷 수 58, 평균 3.1초. S#2 안채 창호지 그림자는 대본이 이름을 밝히지 않지만 달래로 보고 씬 인물에 넣었다. S#5에서 달래는 대사로만 언급되므로 씬 인물에서 뺐다. 강수 팔 붕대는 대본('성한 손')에 따라 15화에도 유지(AGENTS.md는 11~14화로 적음). 대본에 지붕 위 흑립이 없어 ROOFTOP_HEUKRIP 컷은 넣지 않았다.",
+  "notes": "샷 수 58, 평균 3.1초. S#2 안채 창호지 그림자는 대본이 이름을 밝히지 않지만 달래로 보고 씬 인물에 넣었다. S#5에서 달래는 대사로만 언급되므로 씬 인물에서 뺐다. 강수 왼쪽 아래팔 붕대는 대본('성한 손')에 따라 15화에도 유지(AGENTS.md는 11~14화로 적음). 율 상처는 왼쪽 옆구리(11~13화와 같다). 대본에 지붕 위 흑립이 없어 ROOFTOP_HEUKRIP 컷은 넣지 않았다.",
   "scenes": [
     {
       "id": "S#1",
@@ -373,7 +373,7 @@
             "jeonggyeom",
             "gangsu"
           ],
-          "frame": "방 안 화면 오른쪽에서 정겸이 몇 권 안 되는 책을 보따리에 싼다. 화면 왼쪽 문간에 강수가 붕대 감은 팔을 늘어뜨리고 서 있다.",
+          "frame": "방 안 화면 오른쪽에서 정겸이 몇 권 안 되는 책을 보따리에 싼다. 화면 왼쪽 문간에 강수가 붕대 감은 왼팔을 늘어뜨리고 서 있다.",
           "action": "정겸이 보따리를 싼다. 문간의 강수가 묻는다.",
           "dialogue": [
             {
@@ -384,8 +384,8 @@
           ],
           "transition": "CUT",
           "duration_sec": 3,
-          "continuity": "축: 행랑채 방문은 화면 왼쪽, 방 안 정겸은 오른쪽. 대문은 화면 왼쪽(dallae_maru axis). 우산은 문간 왼쪽 기둥에 기대 있다. 강수 팔 붕대 유지(대본 '성한 손')",
-          "image_prompt": "medium shot, the tall scholar packing a cloth bundle with a few books in a tiny tidy room, the storyteller with a bandaged arm standing in the doorway on the left, morning light"
+          "continuity": "축: 행랑채 방문은 화면 왼쪽, 방 안 정겸은 오른쪽. 대문은 화면 왼쪽(dallae_maru axis). 우산은 문간 왼쪽 기둥에 기대 있다. 강수 왼쪽 아래팔 붕대 유지(대본 '성한 손')",
+          "image_prompt": "medium shot, the tall scholar packing a cloth bundle with a few books in a tiny tidy room, the storyteller with a bandaged left forearm standing in the doorway on the left, morning light"
         },
         {
           "id": "S02-02",
@@ -419,7 +419,7 @@
             "gangsu",
             "jeonggyeom"
           ],
-          "frame": "측면 투숏. 강수(왼쪽)가 성한 손으로 정겸(오른쪽)의 멱살을 잡아 끌어당긴다. 정겸은 피하지 않는다.",
+          "frame": "측면 투숏. 강수(왼쪽)가 성한 오른손으로 정겸(오른쪽)의 멱살을 잡아 끌어당긴다. 정겸은 피하지 않는다.",
           "action": "강수가 성한 손으로 멱살을 잡는다. 정겸은 피하지 않는다.",
           "dialogue": [
             {
@@ -430,7 +430,7 @@
           ],
           "transition": "CUT",
           "duration_sec": 4,
-          "image_prompt": "handheld profile two-shot, the storyteller grabbing the taller man's collar with his good hand, his other arm bandaged, the scholar not resisting"
+          "image_prompt": "handheld profile two-shot, the storyteller grabbing the taller man's collar with his good right hand, his left forearm bandaged, the scholar not resisting"
         },
         {
           "id": "S02-04",
@@ -497,7 +497,7 @@
           ],
           "transition": "CUT",
           "duration_sec": 2,
-          "image_prompt": "medium close-up of the storyteller with a bandaged arm retorting bitterly"
+          "image_prompt": "medium close-up of the storyteller with a bandaged left forearm retorting bitterly"
         },
         {
           "id": "S02-07",
@@ -617,7 +617,7 @@
           ],
           "transition": "CUT",
           "duration_sec": 3,
-          "continuity": "축: 대문 화면 왼쪽, 행랑채 오른쪽(locations.json axis). 마루 끝 달래는 왼쪽, 한 사람 거리를 두고 앉는 율은 오른쪽. 해 질 녘 주황 역광. 율 옆구리 무명 띠(도포 속) 유지",
+          "continuity": "축: 대문 화면 왼쪽, 행랑채 오른쪽(locations.json axis). 마루 끝 달래는 왼쪽, 한 사람 거리를 두고 앉는 율은 오른쪽. 해 질 녘 주황 역광. 율 왼쪽 옆구리 무명 띠(도포 속) 유지",
           "image_prompt": "high angle wide shot of a small hanok yard at sunset, the young woman sitting alone at the edge of the wooden porch on the left, an empty lodger's room on the right with a single oil-paper umbrella in its doorway"
         },
         {
@@ -908,7 +908,7 @@
           "sound": "(E) 칼로 나무 파는 소리가 여기저기서",
           "transition": "CUT",
           "duration_sec": 3,
-          "continuity": "축: 작업대는 화면 가운데, 장인은 왼쪽, 율은 오른쪽. 창은 화면 왼쪽 뒤. 율 옆구리 무명 띠(도포 속) 유지",
+          "continuity": "축: 작업대는 화면 가운데, 장인은 왼쪽, 율은 오른쪽. 창은 화면 왼쪽 뒤. 율 왼쪽 옆구리 무명 띠(도포 속) 유지",
           "image_prompt": "wide shot of a woodblock printing workshop at night lit by several oil lamps, carvers bent over wooden printing blocks, stacks of paper"
         },
         {
