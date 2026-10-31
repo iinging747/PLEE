@@ -32,7 +32,7 @@ REFS_DIR = ROOT / "assets" / "refs"
 EXTS = (".jpg", ".jpeg", ".webp", ".png")
 # 레퍼런스 시트를 만들 인물(반복 등장하는 주·조연). 단역·내레이션은 제외
 REF_CAST = ["dallae", "jeonggyeom", "yul", "gangsu", "yunhui", "heojin", "jeongjo", "heukrip",
-            "meoksun", "ma_yeonggam", "an_naegwan", "lee_deokmu", "jongsagwan", "seoyeon"]
+            "meoksun", "ma_yeonggam", "an_naegwan", "lee_deokmu", "jongsagwan", "seoyeon", "ma_seobang"]
 CONSISTENCY = ("Keep every character's face, hairstyle and costume identical to the attached reference sheets, "
                "and keep the set consistent with the attached location reference.")
 
@@ -93,8 +93,9 @@ def episode_jobs(n: int) -> list[dict]:
             lk = looks_for(sc, sh)
             refs = [ref_path("chars", f"{c}__{lk[c]}" if lk.get(c) in chars[c].get("prompt_variants", {}) else c)
                     for c in sh.get("characters", []) if c in REF_CAST][:3]
-            if sc["location"] in locs and sc["location"] != "flashback_misc":
-                refs.append(ref_path("locs", sc["location"]))
+            loc_id = sh.get("location") or sc["location"]
+            if loc_id in locs and loc_id != "flashback_misc":
+                refs.append(ref_path("locs", loc_id))
             prompt = build_prompt(data, sc, sh, chars, locs)
             if refs:
                 prompt += ". " + CONSISTENCY
@@ -190,7 +191,8 @@ def main(argv=None) -> int:
     eps = a.episodes or [int(p.stem[2:]) for p in sorted(STORYBOARD_DIR.glob("ep*.json"))]
     used_locs = set()
     for p in sorted(STORYBOARD_DIR.glob("ep*.json")):
-        used_locs |= {sc["location"] for sc in load_json(p)["scenes"]}
+        for sc in load_json(p)["scenes"]:
+            used_locs |= {sc["location"]} | {sh["location"] for sh in sc.get("shots", []) if sh.get("location")}
     write_jsonl(JOBS_DIR / "refs.jsonl", ref_jobs(used_locs))
     total = 0
     for n in eps:

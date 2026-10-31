@@ -176,7 +176,7 @@ def write_prompts(data: dict, path: Path) -> None:
     with open(path, "w", encoding="utf-8") as f:
         for sc in data["scenes"]:
             for sh in sc.get("shots", []):
-                f.write(json.dumps({"episode": data["episode"], "shot": sh["id"], "location": sc["location"],
+                f.write(json.dumps({"episode": data["episode"], "shot": sh["id"], "location": sh.get("location") or sc["location"],
                                     "time": sc["time"], "size": sh["size"], "angle": sh["angle"],
                                     "characters": sh.get("characters", []),
                                     "prompt": sh.get("image_prompt", "")}, ensure_ascii=False) + "\n")

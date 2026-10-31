@@ -46,12 +46,14 @@
         },
         {
           "id": "S00-02",
-          "size": "LS",
-          "angle": "HIGH",
-          "move": "CRANE_UP",
-          "lens_mm": 24,
-          "characters": [],
-          "frame": "Flash. 13화 마지막 컷을 탈색해 다시 보여 준다.",
+          "size": "CU",
+          "angle": "EYE",
+          "move": "DOLLY_IN",
+          "lens_mm": 85,
+          "characters": [
+            "gangsu"
+          ],
+          "frame": "Flash. 13화 마지막 컷(S04-09)을 탈색해 다시 보여 준다. 등잔 아래 무릎에 책을 편 강수의 웃음이 그대로 굳는다. 천천히 다가가 정지.",
           "action": "온 종로에 소문이 돈다. 참판댁 아씨의 혼처가 정해졌다. 신랑은 마 영감 댁 아들.",
           "dialogue": [
             {
@@ -65,10 +67,9 @@
           ],
           "transition": "CUT",
           "duration_sec": 7,
-          "image_from": "ep13/S00-01",
+          "image_from": "ep13/S04-09",
           "image_filter": "desaturate",
-          "image_prompt": "desaturated memory.",
-          "notes": "TODO: 새 회차 마지막 컷으로 교체"
+          "image_prompt": "desaturated memory. slow push-in close-up, the storyteller's smile freezing on his face in the lamplight, an open book on his knees"
         },
         {
           "id": "S00-03",

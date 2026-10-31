@@ -109,6 +109,8 @@ def check(path: Path) -> tuple[list[str], list[str]]:
                 if c not in chars:
                     errors.append(f"{shid}: 인물 id '{c}' 없음")
             check_looks(shid, sh.get("looks", []))
+            if sh.get("location") and sh["location"] not in locs:
+                errors.append(f"{shid}: 장소 id '{sh['location']}' 가 bible/locations.json 에 없음")
             for d in sh.get("dialogue", []):
                 if d["speaker"] not in chars:
                     errors.append(f"{shid}: 화자 id '{d['speaker']}' 없음")

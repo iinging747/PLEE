@@ -46,12 +46,14 @@
         },
         {
           "id": "S00-02",
-          "size": "MS",
+          "size": "LS",
           "angle": "EYE",
           "move": "CRANE_UP",
           "lens_mm": 35,
-          "characters": [],
-          "frame": "Flash. 22화 마지막 컷을 탈색해 다시 보여 준다.",
+          "characters": [
+            "gangsu"
+          ],
+          "frame": "Flash. 22화 마지막 컷(S05-05)을 탈색해 다시 보여 준다. 뒷모습. 담배 써는 칼을 든 강수가 서소문 쪽 안개 속으로 걸어가고, 카메라가 올라가며 안개가 그를 삼킨다.",
           "action": "동트기 전, 강수가 담배가게에서 담배 써는 칼을 들고 서소문 쪽 안개 속으로 걸어간다.",
           "dialogue": [
             {
@@ -65,10 +67,9 @@
           ],
           "transition": "CUT",
           "duration_sec": 7,
-          "image_from": "ep22/S00-01",
+          "image_from": "ep22/S05-05",
           "image_filter": "desaturate",
-          "image_prompt": "desaturated memory.",
-          "notes": "TODO: 새 회차 마지막 컷으로 교체"
+          "image_prompt": "desaturated memory. pre-dawn long shot from behind, a lone man carrying a broad knife walking away into thick fog toward the west gate of Seoul, camera slowly rising as the mist swallows him"
         },
         {
           "id": "S00-03",

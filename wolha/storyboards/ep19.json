@@ -16,7 +16,9 @@
       "tc_in": "00:00",
       "tc_out": "00:12",
       "characters": [
-        "gangsu"
+        "gangsu",
+        "jeonggyeom",
+        "heukrip"
       ],
       "mood": "COMEDY",
       "summary": "강수의 '지난 대목'(시그니처). 18화를 12초로 요약하고 부채를 접으며 오늘 대목을 연다.",
@@ -46,12 +48,16 @@
         },
         {
           "id": "S00-02",
-          "size": "CU",
-          "angle": "EYE",
-          "move": "DOLLY_IN",
-          "lens_mm": 85,
-          "characters": [],
-          "frame": "Flash. 18화 마지막 컷을 탈색해 다시 보여 준다.",
+          "size": "ELS",
+          "angle": "HIGH",
+          "move": "CRANE_UP",
+          "lens_mm": 24,
+          "characters": [
+            "gangsu",
+            "jeonggyeom",
+            "heukrip"
+          ],
+          "frame": "Flash. 18화 마지막 컷(S04-14)을 탈색해 다시 보여 준다. 크레인 업. 담 하나를 사이에 두고 등을 기댄 두 사내가 작아지고, 맞은편 지붕 그늘에 검은 것이 웅크리고 있다.",
           "action": "담 하나를 사이에 두고 밤을 새우는 두 사내. 정겸이 부탁한다. \"이번엔 그쪽이 깨 주시오.\" 맞은편 지붕 그늘에 무언가 웅크리고 있다.",
           "dialogue": [
             {
@@ -61,14 +67,15 @@
             }
           ],
           "motifs": [
-            "NARRATOR"
+            "NARRATOR",
+            "ROOFTOP_HEUKRIP",
+            "WALL"
           ],
           "transition": "CUT",
           "duration_sec": 7,
-          "image_from": "ep18/S00-01",
+          "image_from": "ep18/S04-14",
           "image_filter": "desaturate",
-          "image_prompt": "desaturated memory.",
-          "notes": "TODO: 새 회차 마지막 컷으로 교체"
+          "image_prompt": "desaturated memory. extreme long shot at night, crane rising over a small hanok bookshop, two tiny figures leaning on either side of a wall below, and in the shadow of the opposite rooftop a small dark crouching figure"
         },
         {
           "id": "S00-03",
@@ -402,6 +409,7 @@
           "angle": "EYE",
           "move": "FIX",
           "lens_mm": 50,
+          "location": "dallae_jangdok",
           "characters": [
             "meoksun"
           ],
@@ -417,6 +425,7 @@
           "angle": "POV",
           "move": "FIX",
           "lens_mm": 50,
+          "location": "dallae_maru",
           "characters": [
             "heukrip",
             "dallae"
@@ -434,6 +443,7 @@
           "angle": "EYE",
           "move": "FIX",
           "lens_mm": 135,
+          "location": "dallae_maru",
           "characters": [
             "heukrip"
           ],
@@ -452,6 +462,7 @@
           "angle": "EYE",
           "move": "DOLLY_IN",
           "lens_mm": 100,
+          "location": "dallae_jangdok",
           "characters": [
             "meoksun"
           ],
@@ -468,6 +479,7 @@
           "angle": "HIGH",
           "move": "FIX",
           "lens_mm": 28,
+          "location": "dallae_maru",
           "characters": [
             "meoksun"
           ],

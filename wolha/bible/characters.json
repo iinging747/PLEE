@@ -60,7 +60,7 @@
         "ep12-21": "왼쪽 팔뚝에 붕대",
         "ep19-21": "오른쪽 목덜미에 무명"
       },
-      "props": ["부채", "평상(무대)", "몽둥이(19~20화)", "징(23화)", "담배 써는 칼(23화)"],
+      "props": ["부채", "평상(무대)", "몽둥이(18~20화)", "징(23화)", "담배 써는 칼(22~23화)"],
       "palette": ["#7D7F7D", "#2B2B2B"],
       "prompt_en": "charismatic 21-year-old Korean street storyteller (jeongisu), expressive face, grey dopo robe, worn black gat, holding an open folding fan"
     },
@@ -70,10 +70,11 @@
       "age": 18,
       "role": "홍 참판 댁 서녀, 양반가 여인 독서 모임 '월하회' 회장. 강수와 서브 커플(8·13·18·22화가 두 사람의 회차)",
       "look": "단아한 규수인데 눈치가 빠르고 진성 덕후",
-      "costume": { "default": "분홍 저고리, 남색 치마, 댕기, 외출 시 장옷" },
+      "costume": { "default": "분홍 저고리, 남색 치마, 댕기, 외출 시 장옷", "jangot": "외출 때 머리부터 쓰는 연두 장옷. 얼굴이 반쯤 가려진다(8·13·18화)", "ep22": "혼례복: 녹원삼, 족두리, 연지곤지" },
       "props": ["여백 낙서가 빼곡한 「청상연가」"],
       "palette": ["#F4B6C2", "#2C3E73"],
-      "prompt_en": "graceful 18-year-old Korean noble girl, quick clever eyes, pink jeogori, navy chima, long braid with ribbon"
+      "prompt_en": "graceful 18-year-old Korean noble girl, quick clever eyes, pink jeogori, navy chima, long braid with ribbon",
+      "prompt_variants": {"jangot": "graceful 18-year-old Korean noble girl, quick clever eyes, a pale green jangot cloak draped over her head and held closed under her chin so her face is half hidden, pink jeogori and navy chima glimpsed beneath", "wedding": "graceful 18-year-old Korean noble bride, quick clever eyes, green wonsam ceremonial wedding robe with rainbow-striped sleeves, small black jokduri coronet on her head, red rouge dots on her cheeks and forehead"}
     },
     {
       "id": "heojin",
@@ -142,7 +143,8 @@
       "age": 24,
       "role": "마 영감의 외아들. 소심한 「청상연가」 애독자. 윤희의 혼처(13·18·22화), 사실은 먹순을 좋아한다",
       "costume": { "default": "새 비단 도포가 어색한 차림", "ep22": "사모관대(혼례)" },
-      "prompt_en": "timid 24-year-old Korean man, round soft face like his father but anxious eyes, brand-new silk dopo robe that looks too stiff on him"
+      "prompt_en": "timid 24-year-old Korean man, round soft face like his father but anxious eyes, brand-new silk dopo robe that looks too stiff on him",
+      "prompt_variants": {"wedding": "timid 24-year-old Korean bridegroom, round soft face like his father but anxious eyes, dark blue samo-gwandae wedding costume: an official's round-collared robe with a rank badge and a black winged samo hat that keeps slipping crooked"}
     },
     {
       "id": "an_naegwan",

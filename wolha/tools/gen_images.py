@@ -64,11 +64,12 @@ def char_prompt(c: dict, variant: str | None) -> str:
 def build_prompt(data: dict, scene: dict, shot: dict, chars: dict, locs: dict) -> str:
     lk = looks_for(scene, shot)
     who = [char_prompt(chars[c], lk.get(c)) for c in shot.get("characters", []) if c in chars and chars[c].get("prompt_en")]
-    loc = locs.get(scene["location"], {})
+    loc_id = shot.get("location") or scene["location"]  # 교차편집 샷은 샷 장소가 우선
+    loc = locs.get(loc_id, {})
     parts = [STYLE,
              f'{SIZE_EN.get(shot["size"], shot["size"])}, {ANGLE_EN.get(shot["angle"], shot["angle"])}',
              TIME_EN.get(scene["time"], ""),
-             f'location: {loc.get("prompt_en") or loc.get("name", scene["location"])}']
+             f'location: {loc.get("prompt_en") or loc.get("name", loc_id)}']
     if who:
         parts.append("characters: " + " | ".join(who))
     if shot.get("image_prompt"):

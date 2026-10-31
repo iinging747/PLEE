@@ -16,7 +16,8 @@
       "tc_in": "00:00",
       "tc_out": "00:12",
       "characters": [
-        "gangsu"
+        "gangsu",
+        "seoyeon"
       ],
       "mood": "COMEDY",
       "summary": "강수의 '지난 대목'(시그니처). 8화를 12초로 요약하고 부채를 접으며 오늘 대목을 연다.",
@@ -47,11 +48,14 @@
         {
           "id": "S00-02",
           "size": "LS",
-          "angle": "HIGH",
-          "move": "CRANE_UP",
-          "lens_mm": 24,
-          "characters": [],
-          "frame": "Flash. 8화 마지막 컷을 탈색해 다시 보여 준다.",
+          "angle": "OTS",
+          "move": "FIX",
+          "lens_mm": 35,
+          "characters": [
+            "gangsu",
+            "seoyeon"
+          ],
+          "frame": "Flash. 8화 마지막 컷(S04-08)을 탈색해 다시 보여 준다. 골목 끝에서 서연이 손가락을 입술에 댄 채 한 번 돌아보는 순간. 강수의 어깨 너머, 왼쪽에 열린 쪽문.",
           "action": "그날 밤, 서연 아씨가 혼자 쪽문을 나선다. 손가락을 입술에 대고, 웃으며.",
           "dialogue": [
             {
@@ -65,10 +69,9 @@
           ],
           "transition": "CUT",
           "duration_sec": 7,
-          "image_from": "ep08/S00-01",
+          "image_from": "ep08/S04-08",
           "image_filter": "desaturate",
-          "image_prompt": "desaturated memory.",
-          "notes": "TODO: 새 회차 마지막 컷으로 교체"
+          "image_prompt": "desaturated memory. over-the-shoulder long shot from behind the storyteller, an open side gate on the left, at the far end of the dark alley a girl hugging a book looks back once with a finger to her lips and a smile, frozen frame"
         },
         {
           "id": "S00-03",

@@ -1272,6 +1272,7 @@
           "angle": "EYE",
           "move": "FIX",
           "lens_mm": 50,
+          "location": "heojin_gate",
           "characters": [
             "extras",
             "jeonggyeom",
@@ -1299,6 +1300,7 @@
           "angle": "EYE",
           "move": "FIX",
           "lens_mm": 85,
+          "location": "heojin_gate",
           "characters": [
             "jeonggyeom"
           ],
