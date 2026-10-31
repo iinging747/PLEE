@@ -240,7 +240,7 @@
       "location": "yongyang",
       "time": "DAY",
       "tc_in": "00:26",
-      "tc_out": "01:45",
+      "tc_out": "01:41",
       "characters": [
         "jeongjo",
         "dallae",
@@ -304,7 +304,7 @@
             }
           ],
           "transition": "CUT",
-          "duration_sec": 8,
+          "duration_sec": 7,
           "notes": "1화 S02-05처럼 '사이'는 한 샷 안에서 무빙을 멈춰 살린다",
           "image_prompt": "high angle slow push-in on a young woman in a white mourning sobok kneeling on a straw mat, lifting her head to address the king above, composed and steady, then looking straight up, winter light"
         },
@@ -350,7 +350,7 @@
             }
           ],
           "transition": "CUT",
-          "duration_sec": 3,
+          "duration_sec": 2,
           "image_prompt": "low angle medium shot of the tall scholar kneeling in the yard and holding a single page of an old ledger up against the winter sun, light glowing through the paper"
         },
         {
@@ -472,7 +472,7 @@
             }
           ],
           "transition": "CUT",
-          "duration_sec": 5,
+          "duration_sec": 4,
           "continuity": "흑립은 달래 왼쪽 한 걸음. 허진 사랑채의 '아랫사람은 왼쪽 열 걸음 밖' 배치를 뒤집는 거리. 씬 끝까지 유지",
           "image_prompt": "high angle two-shot, the gaunt assassin kneeling on the straw mat just one step to the left of the young woman in white mourning clothes, both facing the pavilion, he does not look at her"
         },
@@ -715,7 +715,7 @@
             }
           ],
           "transition": "CUT",
-          "duration_sec": 6,
+          "duration_sec": 5,
           "notes": "마지막 문장('그리고 월하노인은…')은 S02-23 달래 리액션에 걸린다",
           "image_prompt": "low angle slow push-in on the king delivering his verdict from the pavilion, solemn, winter light behind him"
         },
@@ -811,7 +811,7 @@
       "heading": "몽타주 (봄)",
       "location": "flashback_misc",
       "time": "DAY",
-      "tc_in": "01:45",
+      "tc_in": "01:41",
       "tc_out": "02:04",
       "characters": [
         "ma_yeonggam",
@@ -823,8 +823,8 @@
         "extras"
       ],
       "mood": "COMEDY",
-      "summary": "봄. 「월하노인 반성문」을 사려는 줄이 골목 끝까지 늘어서고 마 영감은 빚 탕감에 서명본을 건다. 종로의 강수는 맨 앞줄 윤희 앞에서 한 번도 틀리지 않고 낭독하고 윤희의 첫 엽전을 받는다. 존현각의 정조는 반성문을 읽다 웃는다.",
-      "source_text": "달래책방 앞에 「월하노인 반성문」을 사려는 줄이 골목 끝까지 이어져 있다. 맨 앞에 마 영감.\n**마 영감** 빚은 탕감이오. 대신 서명본.\n종로. 강수가 반성문을 낭독한다. 맨 앞줄에 윤희. 한 번도 틀리지 않는다. 윤희가 처음으로 엽전을 던진다. 강수가 받는다. 얼굴이 담뱃불처럼 달아오른다.\n존현각. 정조가 반성문을 읽다 픽 웃는다.\n**안 내관** 반성문을 읽으시면서 어찌 웃으십니까.\n**정조** 반성을 너무 잘해서.",
+      "summary": "반성문을 사려는 줄, 서명본을 받는 마 영감. 종로 평상 맨 앞줄에 장옷을 벗은 윤희가 앉고 구경꾼들이 수군거린다. 윤희가 처음으로 엽전을 던진다. 신분도 담도 그대로지만, 아씨는 낭독 날마다 쪽문을 넘는다. 존현각의 정조는 반성문을 읽다 웃는다.",
+      "source_text": "달래책방 앞에 「월하노인 반성문」을 사려는 줄이 골목 끝까지 이어져 있다. 맨 앞에 마 영감.\n**마 영감** 빚은 탕감이오. 대신 서명본.\n종로. 강수가 반성문을 낭독한다. 맨 앞줄에 장옷을 벗은 윤희. 구경꾼들이 수군거린다.\n**아낙** (소곤소곤) 저기 참판댁 아씨 아니야?\n강수는 한 번도 틀리지 않는다. 윤희가 처음으로 엽전을 던진다. 강수가 받는다. 얼굴이 담뱃불처럼 달아오른다.\n(N, 강수) 신분은 그대로였소. 담도 그대로였지. 다만 아씨가 낭독 날마다 쪽문을 넘었소.\n존현각. 정조가 반성문을 읽다 픽 웃는다.\n**안 내관** 반성문을 읽으시면서 어찌 웃으십니까.\n**정조** 반성을 너무 잘해서.",
       "shots": [
         {
           "id": "S03-01",
@@ -895,15 +895,37 @@
             "yunhui",
             "extras"
           ],
-          "frame": "종로 담배가게 앞, 정면 무대 구도. 평상 위 강수가 반성문을 펴 들고 낭독한다. 화면 아래 전경, 맨 앞줄 한가운데에 윤희.",
+          "frame": "종로 담배가게 앞, 정면 무대 구도. 평상 위 강수가 반성문을 펴 들고 낭독한다. 화면 아래 전경, 맨 앞줄 한가운데에 장옷을 벗은 윤희. 양반 아씨 하나가 장꾼과 아낙들 틈에 맨얼굴로 앉아 있다.",
           "action": "강수가 반성문을 낭독한다. 맨 앞줄에 윤희. 한 번도 틀리지 않는다.",
           "sound": "낭독의 리듬, 군중의 웃음",
           "transition": "CUT",
-          "duration_sec": 2,
-          "image_prompt": "low angle wide shot of a storyteller on a wooden platform in front of a tobacco shop reading aloud from a booklet with total confidence, a graceful noble girl sitting at the center of the front row, laughing crowd"
+          "duration_sec": 3,
+          "image_prompt": "street corner in front of a tobacco shop, frontal stage composition, the storyteller reading from a book on his platform, in the very front row of commoners a young noblewoman in fine pink silk sitting bare-faced without any cloak, conspicuous among them"
         },
         {
           "id": "S03-05",
+          "size": "MS",
+          "angle": "EYE",
+          "move": "FIX",
+          "lens_mm": 35,
+          "characters": [
+            "extras"
+          ],
+          "frame": "구경꾼 아낙 둘이 맨 앞줄의 윤희를 힐끔거리며 입을 가리고 소곤댄다.",
+          "action": "구경꾼들이 수군거린다.",
+          "dialogue": [
+            {
+              "speaker": "extras",
+              "line": "저기 참판댁 아씨 아니야?",
+              "mode": "WHISPER"
+            }
+          ],
+          "transition": "CUT",
+          "duration_sec": 2,
+          "image_prompt": "medium shot of two village women in the crowd glancing sideways at the noblewoman in the front row and whispering behind their hands"
+        },
+        {
+          "id": "S03-06",
           "size": "MS",
           "angle": "LOW",
           "move": "SLOWMO",
@@ -913,17 +935,25 @@
           ],
           "frame": "로우앵글 슬로모션. 맨 앞줄 윤희가 소매에서 엽전 한 닢을 꺼내 던진다. 엽전 한 닢이 하늘을 배경으로 천천히 돈다.",
           "action": "윤희가 처음으로 엽전을 던진다.",
+          "dialogue": [
+            {
+              "speaker": "N:gangsu",
+              "line": "신분은 그대로였소. 담도 그대로였지.",
+              "mode": "N"
+            }
+          ],
           "sound": "(E) 엽전이 공기를 가르는 소리",
           "motifs": [
-            "COIN_RAIN"
+            "COIN_RAIN",
+            "NARRATOR"
           ],
           "transition": "CUT",
-          "duration_sec": 2,
+          "duration_sec": 3,
           "notes": "엽전 비 모티프의 변주. 쏟아지는 엽전이 아니라 단 한 닢",
           "image_prompt": "low angle slow motion, the noble girl in the front row tossing a single brass coin upward, the coin turning against the spring sky"
         },
         {
-          "id": "S03-06",
+          "id": "S03-07",
           "size": "CU",
           "angle": "EYE",
           "move": "FIX",
@@ -933,12 +963,22 @@
           ],
           "frame": "강수 클로즈업. 엽전을 한 손으로 받아 쥔다. 얼굴이 담뱃불처럼 달아오른다.",
           "action": "강수가 엽전을 받는다. 얼굴이 빨개진다.",
+          "dialogue": [
+            {
+              "speaker": "N:gangsu",
+              "line": "다만 아씨가 낭독 날마다 쪽문을 넘었소.",
+              "mode": "N"
+            }
+          ],
+          "motifs": [
+            "NARRATOR"
+          ],
           "transition": "CUT",
-          "duration_sec": 2,
+          "duration_sec": 3,
           "image_prompt": "close-up of the storyteller catching a single coin in his fist, his face flushing red like a glowing tobacco ember, speechless"
         },
         {
-          "id": "S03-07",
+          "id": "S03-08",
           "size": "2S",
           "angle": "EYE",
           "move": "FIX",
@@ -957,11 +997,11 @@
             }
           ],
           "transition": "CUT",
-          "duration_sec": 5,
+          "duration_sec": 4,
           "image_prompt": "candle-lit royal study at night, the king at upper right reading a thin booklet and letting out a small involuntary laugh, a weary eunuch standing at the lower left asking a question, stacks of memorials pushed aside"
         },
         {
-          "id": "S03-08",
+          "id": "S03-09",
           "size": "MCU",
           "angle": "EYE",
           "move": "FIX",
