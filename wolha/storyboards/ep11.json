@@ -51,7 +51,7 @@
           "sound": "(E) 천 찢어지는 소리, 짧은 신음",
           "transition": "CUT",
           "duration_sec": 2,
-          "continuity": "강수 왼팔 부상 시작. 11~14화 왼팔 붕대로 이어진다(왼팔은 원작 10화 대본 기준)",
+          "continuity": "강수 왼팔 부상 시작. 11~18화 왼팔 붕대로 이어진다(왼팔은 원작 10화 대본 기준)",
           "image_prompt": "dutch angle handheld, a young storyteller twisting away and raising his left forearm to block a falling sword at night, his grey sleeve splitting open, a spray of blood, moonlight"
         },
         {
@@ -487,7 +487,7 @@
           "sound": "장터 소음, 담배 써는 칼 소리",
           "transition": "CUT",
           "duration_sec": 3,
-          "continuity": "축: 정면 무대 구도(bible). 평상 위 강수는 화면 위 가운데, 관객은 화면 아래 전경. 정겸은 군중 속 왼쪽, 안 내관과 삿갓 정조는 군중 뒤 오른쪽에서 왼쪽으로 지나간다. 강수 왼팔 무명 붕대(11~14화)",
+          "continuity": "축: 정면 무대 구도(bible). 평상 위 강수는 화면 위 가운데, 관객은 화면 아래 전경. 정겸은 군중 속 왼쪽, 안 내관과 삿갓 정조는 군중 뒤 오른쪽에서 왼쪽으로 지나간다. 강수 왼팔 무명 붕대(11~18화)",
           "image_prompt": "high angle crane down onto a Joseon street corner in daylight, an even larger semicircle crowd packed around a wooden storyteller's platform in front of a tobacco shop"
         },
         {

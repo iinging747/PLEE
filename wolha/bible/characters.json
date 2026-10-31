@@ -114,7 +114,7 @@
       "costume": { "default": "검은 철릭풍 옷, 검은 갓, 칼" },
       "props": ["환도", "작은 칼"],
       "palette": ["#0D0D0D", "#E8E8E8"],
-      "tells": "ROOFTOP_HEUKRIP — 매회 어딘가 지붕 위에 작게 서 있다. SCAR_LEFT_HAND",
+      "tells": "ROOFTOP_HEUKRIP — 대본에 나오는 회차에서 지붕 위에 작게 서 있다(1·3·5·10·11·16·17화 등). SCAR_LEFT_HAND",
       "prompt_en": "gaunt Korean assassin in his late 30s, shadowed eyes under a wide black gat, all-black clothing, a long pale scar across the back of his left hand"
     },
     {

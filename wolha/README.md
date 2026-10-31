@@ -15,7 +15,7 @@ wolha/
 ├── bible/locations.json       장소 설정 (id, 세트, 조명 동기, 화면 방향)
 ├── schema/storyboard.schema.json  스토리보드 JSON 형식
 ├── storyboards/ep01.json      ★ 견본 (완성, 샷 60개)
-├── storyboards/ep02~20.json   뼈대 (씬·타임코드·장소·인물만 채움, shots 비어 있음)
+├── storyboards/ep02~20.json   완성 (회차당 샷 48~60개, 검사 오류·경고 0, status review)
 ├── tools/                     파이썬 도구 (표준 라이브러리만, 이미지 압축만 Pillow 또는 ffmpeg)
 │   ├── split_episodes.py      통합 대본 → 회차별 파일
 │   ├── skeleton.py            대본 → 스토리보드 뼈대
