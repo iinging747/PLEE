@@ -6,7 +6,7 @@
   "runtime_sec": 180,
   "aspect": "16:9",
   "status": "review",
-  "notes": "샷 수 59, 평균 3.1초. S#1 장면 인물 추정에서 구용팔(대사 속 언급만)을 뺐다. S#6은 담장 밖/후원 교차라 location 은 heojin_huwon 으로 두고 담장 밖 컷(S06-01~02)은 frame 에 적었다. 별채·율의 방·허진 집 담장 밖은 bible 에 axis 가 없어 각 씬 첫 샷 continuity 에 축을 정했다(별채 문 왼쪽/달래 오른쪽, 허진 집 담장 화면 왼쪽). 지붕 위 흑립은 S05-01 정자 지붕. 연속성: 강수 목덜미 무명, 율 옆구리 상처 재출혈 + 가슴 상처 시작, 정겸 갓 분실(S06-06), 달래 피 묻은 손.",
+  "notes": "샷 수 59, 평균 3.1초. S#1 장면 인물 추정에서 구용팔(대사 속 언급만)을 뺐다. S#6은 담장 밖/후원 교차라 location 은 heojin_huwon 으로 두고 담장 밖 컷(S06-01~02)은 frame 에 적었다. 별채·율의 방·허진 집 담장 밖은 bible 에 axis 가 없어 각 씬 첫 샷 continuity 에 축을 정했다(별채 문 왼쪽/달래 오른쪽, 허진 집 담장 화면 왼쪽). 지붕 위 흑립은 S05-01 정자 지붕. 연속성: 강수 오른쪽 목덜미 무명·왼팔 붕대, 율 왼쪽 옆구리 상처 재출혈 + 가슴 상처 시작, 정겸 갓 분실(S06-06), 달래 피 묻은 손.",
   "scenes": [
     {
       "id": "S#1",
@@ -296,7 +296,7 @@
           "sound": "(E) 붓 끄는 소리. 문밖 헛기침",
           "transition": "CUT",
           "duration_sec": 4,
-          "continuity": "축: 문(하인 그림자)은 화면 왼쪽, 뒤창 창살은 화면 오른쪽. 율은 오른쪽 창으로 빠져나간다. 율은 11화부터 감은 옆구리 무명 띠 그대로, 얼굴에 웃음기가 없다",
+          "continuity": "축: 문(하인 그림자)은 화면 왼쪽, 뒤창 창살은 화면 오른쪽. 율은 오른쪽 창으로 빠져나간다. 율은 11화부터 감은 왼쪽 옆구리 무명 띠 그대로, 얼굴에 웃음기가 없다",
           "notes": "그림자는 문간을 지키는 하인 둘(단역, 16화 S#4 '문간에 사람을 세워라')",
           "image_prompt": "a young nobleman hurriedly writing a letter at a low desk by a single oil lamp, two servants' shadows cast on the paper door by a lantern outside"
         },
@@ -362,12 +362,12 @@
           "characters": [
             "yul"
           ],
-          "frame": "이를 악문 율의 얼굴에서 초점이 저고리 옆선으로 내려간다. 무명 띠 위로 피가 번진다.",
-          "action": "옆구리의 상처가 당긴다. 저고리 옆선에 피가 번진다.",
+          "frame": "이를 악문 율의 얼굴에서 초점이 저고리 왼쪽 옆선으로 내려간다. 무명 띠 위로 피가 번진다.",
+          "action": "왼쪽 옆구리의 상처가 당긴다. 저고리 옆선에 피가 번진다.",
           "transition": "CUT",
           "duration_sec": 3,
-          "continuity": "옆구리 상처(11화~)가 다시 터짐. 저고리 옆선의 피는 S#3·S#5까지 남는다",
-          "image_prompt": "close-up, the young nobleman gritting his teeth, focus shifting down to blood spreading along the side seam of his jeogori"
+          "continuity": "왼쪽 옆구리 상처(11화~)가 다시 터짐. 저고리 왼쪽 옆선의 피는 S#3·S#5까지 남는다",
+          "image_prompt": "close-up, the young nobleman gritting his teeth, focus shifting down to blood spreading along the left side seam of his jeogori"
         },
         {
           "id": "S02-06",
@@ -426,7 +426,7 @@
           "characters": [
             "yul"
           ],
-          "frame": "로우앵글. 화면 왼쪽의 율이 오른쪽 별채 문의 자물쇠를 향해 도끼를 내리친다. 저고리 옆선의 피.",
+          "frame": "로우앵글. 화면 왼쪽의 율이 오른쪽 별채 문의 자물쇠를 향해 도끼를 내리친다. 저고리 왼쪽 옆선의 피.",
           "action": "율이 자물쇠를 내리친다.",
           "sound": "(E) 쾅!",
           "transition": "CUT",
@@ -607,7 +607,7 @@
           ],
           "transition": "CUT",
           "duration_sec": 3,
-          "continuity": "축: 담장은 화면 왼쪽 세로 벽, 내금위는 담을 따라 오른쪽으로 늘어선다. 정겸은 담에 등을 붙인 맨 왼쪽, 강수는 그 오른쪽. 강수 목덜미 무명(16화 부상), 정겸은 아직 갓을 쓰고 있다(S#6에서 잃음)",
+          "continuity": "축: 담장은 화면 왼쪽 세로 벽, 내금위는 담을 따라 오른쪽으로 늘어선다. 정겸은 담에 등을 붙인 맨 왼쪽, 강수는 그 오른쪽. 강수 오른쪽 목덜미 무명(16화 S#1 칼자루)과 왼팔 붕대(16화 S#1 '붕대 감은 팔'에서 이어짐), 정겸은 아직 갓을 쓰고 있다(S#6에서 잃음)",
           "image_prompt": "wide night shot panning along a high mansion wall, ten men in night-watch uniforms standing far too straight, ending on a tall scholar with his back pressed to the wall and a storyteller gripping a club, a few watch lanterns"
         },
         {
@@ -634,7 +634,7 @@
           ],
           "transition": "CUT",
           "duration_sec": 3,
-          "image_prompt": "two-shot, a wall dividing the left of frame, the scholar pressed against it staring ahead, the storyteller with a bandaged neck whispering beside him"
+          "image_prompt": "two-shot, a wall dividing the left of frame, the scholar pressed against it staring ahead, the storyteller with a cloth bandage on the right side of his neck and a bandaged left forearm whispering beside him"
         },
         {
           "id": "S04-03",
@@ -732,7 +732,7 @@
           ],
           "transition": "CUT",
           "duration_sec": 5,
-          "continuity": "축: 뒷담과 쪽문은 화면 왼쪽 뒤, 정자는 오른쪽(locations axis). 흑립이 내려선 뒤로는 흑립 화면 왼쪽(담 쪽), 율·달래 화면 오른쪽(정자 쪽). 율 저고리 옆선에 피, 달래 손에 숟가락. 주광은 달빛, 뒤쪽 초롱이 하나둘 켜진다",
+          "continuity": "축: 뒷담과 쪽문은 화면 왼쪽 뒤, 정자는 오른쪽(locations axis). 흑립이 내려선 뒤로는 흑립 화면 왼쪽(담 쪽), 율·달래 화면 오른쪽(정자 쪽). 율 저고리 왼쪽 옆선에 피, 달래 손에 숟가락. 주광은 달빛, 뒤쪽 초롱이 하나둘 켜진다",
           "notes": "지붕 위 흑립은 관객만 본다. 바로 다음 컷에서 내려선다",
           "image_prompt": "extreme wide high-angle night shot of a mansion rear garden, moonlit lotus pond and small pavilion, two tiny figures running toward a low gate in the back wall, a small silhouette in a wide black gat standing on the pavilion roof, lanterns lighting up one by one in the distance"
         },
@@ -930,7 +930,7 @@
           "sound": "소리가 빠진다. 숨소리 하나",
           "transition": "CUT",
           "duration_sec": 3,
-          "continuity": "율 가슴 상처 시작(17화~). 칼날은 품 속 책을 스치고 들어간다(18화 S#2에서 밝혀짐). 이 컷에서는 책이 보이지 않게",
+          "continuity": "율 가슴 상처 시작(17화~, 왼쪽 옆구리 상처와 별개인 새 상처). 칼날은 품 속 책을 스치고 들어간다(18화 S#2에서 밝혀짐). 이 컷에서는 책이 보이지 않게",
           "image_prompt": "dutch angle slow motion, the young nobleman throwing himself in front of the young woman as a sword slashes across his chest"
         },
         {

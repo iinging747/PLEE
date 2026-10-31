@@ -6,7 +6,7 @@
   "runtime_sec": 180,
   "aspect": "16:9",
   "status": "review",
-  "notes": "샷 수 57, 평균 3.2초. 우물가 귀 ECU(S03-05)는 9화 S#3 우산 장면·1화 S03-06과 같은 왼쪽 옆얼굴 100mm 구도의 EAR_NOT_RED. S#1·S#2는 17화와 같은 밤이라 강수 목덜미 무명, 정겸 맨상투, 달래 피 묻은 손을 그대로 둔다. 정겸 갓은 S#4부터 다시 쓴 것으로 두었다(19화 S#4 '갓의 눈을 털며'와 연결, 연속성 확인 필요). 이번 회차에는 ROOFTOP_HEUKRIP 이 없다: 흑립은 S#1에서 정자 그늘로 사라진 뒤 대본에 나오지 않아 지붕 위 등장을 만들지 않았다. S#1 장면 인물에 율·단역(내금위 군관, 초롱 든 하인), S#2에 단역(혜민서 의원)을 더했다.",
+  "notes": "샷 수 57, 평균 3.2초. 우물가 귀 ECU(S03-05)는 9화 S#3 우산 장면·1화 S03-06과 같은 왼쪽 옆얼굴 100mm 구도의 EAR_NOT_RED. S#1·S#2는 17화와 같은 밤이라 강수 오른쪽 목덜미 무명·왼팔 붕대, 정겸 맨상투, 달래 피 묻은 손을 그대로 둔다. 정겸 갓은 S#4부터 다시 쓴 것으로 두었다(19화 S#4 '갓의 눈을 털며'와 연결, 연속성 확인 필요). 이번 회차에는 ROOFTOP_HEUKRIP 이 없다: 흑립은 S#1에서 정자 그늘로 사라진 뒤 대본에 나오지 않아 지붕 위 등장을 만들지 않았다. S#1 장면 인물에 율·단역(내금위 군관, 초롱 든 하인), S#2에 단역(혜민서 의원)을 더했다.",
   "scenes": [
     {
       "id": "S#1",
@@ -42,7 +42,7 @@
           "sound": "(E) 횃불 타는 소리, 몰려드는 발소리",
           "transition": "CUT",
           "duration_sec": 2,
-          "continuity": "축: 담장·쪽문과 담을 넘어온 내금위·정겸·강수는 화면 왼쪽, 허진과 초롱 든 하인들은 화면 오른쪽(정자·사랑채 쪽). 달래와 율은 가운데 흙바닥. 17화 S#6에서 이어짐: 정겸 맨상투, 강수 목덜미 무명, 율 가슴 상처, 달래 두 손에 피",
+          "continuity": "축: 담장·쪽문과 담을 넘어온 내금위·정겸·강수는 화면 왼쪽, 허진과 초롱 든 하인들은 화면 오른쪽(정자·사랑채 쪽). 달래와 율은 가운데 흙바닥. 17화 S#6에서 이어짐: 정겸 맨상투, 강수 오른쪽 목덜미 무명·왼팔 붕대, 율 가슴 상처(17화 새 상처)와 왼쪽 옆구리 상처, 달래 두 손에 피",
           "image_prompt": "extreme close-up of the assassin's eyes reflecting many torches, his gaze locking on someone"
         },
         {
@@ -55,12 +55,12 @@
             "gangsu",
             "extras"
           ],
-          "frame": "흑립 시점. 횃불 든 내금위 사이에 몽둥이를 쥔 강수. 목덜미의 무명.",
+          "frame": "흑립 시점. 횃불 든 내금위 사이에 몽둥이를 쥔 강수. 오른쪽 목덜미의 무명.",
           "action": "횃불 사이에 강수가 있다.",
           "transition": "CUT",
           "duration_sec": 2,
           "notes": "흑립이 그날(1790) 쫓지 못한 아이. 19화 S#1의 복선",
-          "image_prompt": "point of view through a line of torch-bearing guards, the young storyteller gripping a club, a cloth bandage on his neck"
+          "image_prompt": "point of view through a line of torch-bearing guards, the young storyteller gripping a club, a cloth bandage on the right side of his neck"
         },
         {
           "id": "S01-03",
@@ -286,7 +286,7 @@
           "action": "의원이 율의 품에서 피에 젖은 책 한 권을 꺼낸다.",
           "transition": "CUT",
           "duration_sec": 3,
-          "continuity": "축: 누운 율은 화면 가운데 아래, 의원은 화면 왼쪽, 달래는 오른쪽. 창호지로 푸른 새벽빛, 방 안에 등잔 하나. 달래 두 손과 소매에 피(17화 S#5). 정겸은 이 씬에 없다",
+          "continuity": "축: 누운 율은 화면 가운데 아래, 의원은 화면 왼쪽, 달래는 오른쪽. 창호지로 푸른 새벽빛, 방 안에 등잔 하나. 율은 가슴 상처(17화)와 왼쪽 옆구리 상처(11화)를 함께 싸맨다. 달래 두 손과 소매에 피(17화 S#5). 정겸은 이 씬에 없다",
           "notes": "의원은 혜민서 의원(단역)",
           "image_prompt": "high angle, a clinic room at dawn with one oil lamp, a physician pulling a blood-soaked book from the robe of an unconscious young nobleman, the young woman kneeling beside"
         },
