@@ -1,0 +1,87 @@
+{
+  "series": "월하노인을 잡아라 (숏폼 20부작)",
+  "episode": 13,
+  "title": "무원록",
+  "hook": "「무원록」대로라면, 아버지는 물에 빠지기 전에 이미 죽어 있었다.",
+  "runtime_sec": 180,
+  "aspect": "16:9",
+  "status": "skeleton",
+  "scenes": [
+    {
+      "id": "S#1",
+      "heading": "달래책방 마루 (해 질 녘)",
+      "location": "dallae_maru",
+      "time": "DUSK",
+      "tc_in": "00:00",
+      "tc_out": "00:40",
+      "characters": [
+        "dallae",
+        "jeonggyeom",
+        "yul"
+      ],
+      "summary": "",
+      "source_text": "달래가 율의 옆구리에 무명 띠를 감는다. 율이 이를 문다.\n**달래** 며칠 전 밤 골목에서 호루라기 분 사람.\n**율** …연체료라니까.\n**달래** (매듭을 지으며) 도령 연체료는요, 평생 안 받을게요.\n**율** 낭자, 나는—\n**정겸** (O.S.) 보리차 끓였소.\n율이 입을 다문다. 그리고 웃는다.",
+      "shots": []
+    },
+    {
+      "id": "S#2",
+      "heading": "달래책방 행랑채 (밤)",
+      "location": "dallae_haengrang",
+      "time": "NIGHT",
+      "tc_in": "00:40",
+      "tc_out": "01:50",
+      "characters": [
+        "dallae",
+        "jeonggyeom"
+      ],
+      "summary": "",
+      "source_text": "달래가 아버지의 검시 기록 사본을 정겸에게 내민다.\nInsert. '죽은 자 윤경오. 입과 코에 거품 없음. 손톱 밑에 진흙 없음. 뒤통수에 상처. 술에 취해 실족.'\n**정겸** 「무원록」에 이르기를, 살아서 물에 빠진 자는 입과 코에 하얀 거품이 남고 손톱 밑에 진흙이 끼오. (사이) 물에 들어가기 전에, 이미 숨을 쉬지 않으셨다는 뜻이오.\n달래의 다리에서 힘이 빠진다. 문턱에 주저앉는다.\n**달래** 우리 아버지… 술 한 잔도 못 드셨는데. 나는 그동안 아버지한테 화냈는데…\n얼굴이 무너진다. 이 년 동안 목에 걸려 있던 소리가 터져 나온다. 정겸이 달래를 끌어당겨 안는다.\n**정겸** 울어도 되오.",
+      "shots": []
+    },
+    {
+      "id": "S#3",
+      "heading": "달래책방 행랑채 (새벽)",
+      "location": "dallae_haengrang",
+      "time": "DAWN",
+      "tc_in": "01:50",
+      "tc_out": "02:20",
+      "characters": [
+        "dallae",
+        "jeonggyeom"
+      ],
+      "summary": "",
+      "source_text": "울다 지친 달래가 정겸의 어깨에 기대 잠들었다. 정겸이 남은 한 손으로 수첩에 쓴다.\nInsert. '윤경오. 물에 들어가기 전에 죽었음.'\n정겸이 엄지로 달래의 눈물 자국을 아주 조심스럽게 닦는다.",
+      "shots": []
+    },
+    {
+      "id": "S#4",
+      "heading": "허진의 집 사랑채 (아침)",
+      "location": "heojin_sarang",
+      "time": "MORNING",
+      "tc_in": "02:20",
+      "tc_out": "02:40",
+      "characters": [
+        "dallae",
+        "heojin"
+      ],
+      "summary": "",
+      "source_text": "의원 하나가 바닥에 이마를 붙이고 떨고 있다.\n**의원** 며칠 전 밤… 도련님 옆구리가 칼에 베여 있었습니다.\n허진의 찻주전자가 멈춘다. 완력패를 보낸 그 밤이다.\n**허진** 오늘 밤 달래책방을 뒤져라. 형조의 이름으로.",
+      "shots": []
+    },
+    {
+      "id": "S#5",
+      "heading": "달래책방 안채 (밤)",
+      "location": "dallae_anchae",
+      "time": "NIGHT",
+      "tc_in": "02:40",
+      "tc_out": "03:00",
+      "characters": [
+        "gangsu",
+        "meoksun"
+      ],
+      "summary": "",
+      "source_text": "**먹순** (뛰어 들어오며) 사장님! 횃불이에요! 형조 패를 찼어요!\n**강수** 창고! 둘 다!",
+      "shots": []
+    }
+  ]
+}

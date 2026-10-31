@@ -1,0 +1,73 @@
+{
+  "series": "월하노인을 잡아라 (숏폼 20부작)",
+  "episode": 5,
+  "title": "연애 자료조사",
+  "hook": "키스신을 상상으로만 쓴 작가가, 가짜 정혼자에게 연습을 청한다.",
+  "runtime_sec": 180,
+  "aspect": "16:9",
+  "status": "skeleton",
+  "scenes": [
+    {
+      "id": "S#1",
+      "heading": "달래책방 행랑채 (낮)",
+      "location": "dallae_haengrang",
+      "time": "DAY",
+      "tc_in": "00:00",
+      "tc_out": "00:30",
+      "characters": [
+        "ma_yeonggam",
+        "dallae",
+        "jeonggyeom"
+      ],
+      "summary": "",
+      "source_text": "**달래** 손 좀 잡아 봐요.\n**정겸** 둘째 조항.\n**달래** 손목 아래잖아요. 손은. 자료조사예요. 마 영감한테 들키면 안 되니까.\n정겸이 머뭇거리다 손을 내민다. 두 손이 맞닿는다.\n**정겸** (한참 뒤) …축축하오.\n**달래** 선비님 손이에요.",
+      "shots": []
+    },
+    {
+      "id": "S#2",
+      "heading": "종로 장날 (낮)",
+      "location": "jongno_market",
+      "time": "DAY",
+      "tc_in": "00:30",
+      "tc_out": "01:20",
+      "characters": [
+        "dallae",
+        "jeonggyeom",
+        "yul"
+      ],
+      "summary": "",
+      "source_text": "장터 한복판. 두 사람이 손을 잡고 걷는다. 둘 다 팔이 나무토막처럼 뻣뻣하다.\n아니나 다를까, 율이 약과 꾸러미를 들고 나타난다.\n**율** 낭자, 약과. 연체료 대신.\n달래가 손을 빼서 약과를 받는다. 정겸의 빈손이 허공에 남는다.\n**율** (정겸에게) 기분 나빠요?\n**정겸** 질투 아니오.\n귀가 제일 빨갛다.",
+      "shots": []
+    },
+    {
+      "id": "S#3",
+      "heading": "주막 뒤뜰 (낮)",
+      "location": "jumak",
+      "time": "DAY",
+      "tc_in": "01:20",
+      "tc_out": "02:20",
+      "characters": [
+        "guyongpal",
+        "dallae",
+        "jeonggyeom"
+      ],
+      "summary": "",
+      "source_text": "주막 심부름꾼 쇠돌이 평상 앞에 서 있다. 정겸이 묻는다.\n**정겸** 구용팔에게 약주를 건넨 자, 얼굴을 봤소?\n**쇠돌** 못 봤어요. 근데 약봉지를 건네는 손에… 흉터가 있었어요. 왼손등에 길게.\nInsert. 정겸의 수첩. '검은 갓. 왼손등에 긴 흉터.'\n달래가 수첩을 들여다본다. 정겸이 수첩을 덮는다.\n**달래** 선비님은 왜 이런 걸 적어요?\n**정겸** …선비는 원래 적소.",
+      "shots": []
+    },
+    {
+      "id": "S#4",
+      "heading": "달래책방 골목 (해 질 녘)",
+      "location": "dallae_wall",
+      "time": "DUSK",
+      "tc_in": "02:20",
+      "tc_out": "03:00",
+      "characters": [
+        "heukrip"
+      ],
+      "summary": "",
+      "source_text": "두 사람이 손을 잡고 돌아온다. 이번에는 팔이 조금 덜 뻣뻣하다.\n골목 위 지붕. 기와를 짚은 흑립의 왼손. 길고 하얀 흉터. 그 손가락에 힘이 들어간다.",
+      "shots": []
+    }
+  ]
+}

@@ -1,0 +1,74 @@
+{
+  "series": "월하노인을 잡아라 (숏폼 20부작)",
+  "episode": 4,
+  "title": "연체 도령",
+  "hook": "판서댁 도령이 책방에 나타나고, 월하노인을 사칭하던 한량이 독살당한다.",
+  "runtime_sec": 180,
+  "aspect": "16:9",
+  "status": "skeleton",
+  "scenes": [
+    {
+      "id": "S#1",
+      "heading": "달래책방 마루 (낮)",
+      "location": "dallae_maru",
+      "time": "DAY",
+      "tc_in": "00:00",
+      "tc_out": "00:40",
+      "characters": [
+        "dallae",
+        "jeonggyeom",
+        "yul"
+      ],
+      "summary": "",
+      "source_text": "화려한 비단 도포에 부채. 허율이 책 한 권을 마루에 탁 내려놓는다.\n**율** 반납이오. 사흘 늦었소.\n**달래** 연체료 서 푼.\n**율** (엽전을 더 얹으며) 다섯 푼. 내일도 늦을 거라서.\n율이 행랑채 앞의 정겸을 본다.\n**율** 저 사람은.\n**달래** 정혼자요.\n**율** (보조개가 패며) 재밌네.",
+      "shots": []
+    },
+    {
+      "id": "S#2",
+      "heading": "허진의 집 서재 앞 (밤, 회상)",
+      "location": "heojin_seojae",
+      "time": "FLASHBACK",
+      "tc_in": "00:40",
+      "tc_out": "01:05",
+      "characters": [
+        "gangsu",
+        "heojin",
+        "yul"
+      ],
+      "summary": "",
+      "source_text": "Flash. 문틈. 허진이 「청상연가」를 펼친 채 손을 떨고 있다. 문틈 밖에서 율이 그걸 본다.\n(N, 강수) 판서댁 외아들은, 아버지가 무서워하는 소설이 궁금해서 왔소.",
+      "shots": []
+    },
+    {
+      "id": "S#3",
+      "heading": "종로 주막 (낮)",
+      "location": "jumak",
+      "time": "DAY",
+      "tc_in": "01:05",
+      "tc_out": "02:15",
+      "characters": [
+        "guyongpal",
+        "dallae",
+        "jeonggyeom"
+      ],
+      "summary": "",
+      "source_text": "술상 위에 올라서 떠드는 한량 구용팔.\n**구용팔** 내가 바로 월하노인이오! 서명 받을 사람?\n여인들이 줄을 선다. 달래가 이를 갈며 본다. 구용팔이 누군가 건넨 약주를 들이켠다. 그대로 무너진다. 비명.\n정겸이 달려와 그 입에 은비녀를 넣는다. 빼낸다. 검게 변해 있다.\n**정겸** 비상이오.\n구용팔의 품에서 접힌 종이가 비어져 나온다. 정겸이 편다. 종이가 유난히 고운 한지다.",
+      "shots": []
+    },
+    {
+      "id": "S#4",
+      "heading": "같은 장소 (낮)",
+      "location": "jumak",
+      "time": "DAY",
+      "tc_in": "02:15",
+      "tc_out": "03:00",
+      "characters": [
+        "dallae",
+        "jeonggyeom"
+      ],
+      "summary": "",
+      "source_text": "Insert. 종이. '다음은 진짜 네 차례다.'\n달래가 그 글자를 본다. 목이 마른다.\n**정겸** (종이를 빛에 비추며) 저잣거리에서는 못 구하는 종이오.\n**달래** …진짜가 누군데요.\n정겸이 달래를 본다. 달래는 종이만 본다.",
+      "shots": []
+    }
+  ]
+}

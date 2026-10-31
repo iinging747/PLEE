@@ -1,0 +1,87 @@
+{
+  "series": "월하노인을 잡아라 (숏폼 20부작)",
+  "episode": 10,
+  "title": "알고도 모른 척",
+  "hook": "그는 보고도 못 본 척한다. 왕 앞에서도.",
+  "runtime_sec": 180,
+  "aspect": "16:9",
+  "status": "skeleton",
+  "scenes": [
+    {
+      "id": "S#1",
+      "heading": "달래책방 책 창고 (아침)",
+      "location": "dallae_storage",
+      "time": "MORNING",
+      "tc_in": "00:00",
+      "tc_out": "00:30",
+      "characters": [
+        "dallae",
+        "jeonggyeom"
+      ],
+      "summary": "",
+      "source_text": "정적. 정겸이 원고를 궤짝에 도로 넣는다. 뚜껑을 덮는다. 달래 쪽을 보지 않고 지나친다.\n**정겸** 비가 새오. 궤짝을 옮겨 두시오.\n달래가 숨도 못 쉰다.",
+      "shots": []
+    },
+    {
+      "id": "S#2",
+      "heading": "달래책방 행랑채 (밤)",
+      "location": "dallae_haengrang",
+      "time": "NIGHT",
+      "tc_in": "00:30",
+      "tc_out": "00:55",
+      "characters": [
+        "dallae",
+        "jeonggyeom"
+      ],
+      "summary": "",
+      "source_text": "정겸이 수첩에 쓴다.\nInsert. '윤달래, 월하노인 확인. 우산을 같이 쓴 밤.'\n정겸이 그 장을 등잔불에 가져간다. 불길이 종이 끝에 닿기 직전, 멈춘다. 태우지 못하고 수첩을 덮는다.",
+      "shots": []
+    },
+    {
+      "id": "S#3",
+      "heading": "창덕궁 존현각 (밤)",
+      "location": "jonhyeongak",
+      "time": "NIGHT",
+      "tc_in": "00:55",
+      "tc_out": "01:25",
+      "characters": [
+        "jeonggyeom",
+        "jeongjo"
+      ],
+      "summary": "",
+      "source_text": "**정조** 찾았느냐.\n**정겸** …아직 못 찾았습니다.\n정겸의 귀가 빨갛다. 정조가 그 귀를 오래 본다.\n**정조** …그래. 계속 찾아라.\n정겸이 물러간다. 정조의 입꼬리가 아주 조금 올라간다.",
+      "shots": []
+    },
+    {
+      "id": "S#4",
+      "heading": "종로 사인회 (낮)",
+      "location": "jongno_tobacco",
+      "time": "DAY",
+      "tc_in": "01:25",
+      "tc_out": "02:20",
+      "characters": [
+        "dallae",
+        "jeonggyeom",
+        "gangsu"
+      ],
+      "summary": "",
+      "source_text": "가면을 쓴 강수가 '월하노인'으로 상 앞에 앉아 있다. 뒤로 검은 휘장. 그 뒤에서 달래가 몰래 서명한다. 줄이 길다.\n줄 끝에서 정겸이 책을 내민다.\n**정겸** 서생 갑에게, 라고 써 주시오.\n휘장 뒤의 달래가 굳는다. 서생 갑. 삼 년 동안 내 책마다 혹평을 남긴 그자다. 달래가 이를 악물고 쓴다.\nInsert. '서생 갑에게. 비는 오게 해 줬다. 다음엔 칭찬도 길게 쓰시오. 월하노인.'\n강수가 책을 돌려준다. 정겸이 읽는다. 입꼬리가 움직인다.",
+      "shots": []
+    },
+    {
+      "id": "S#5",
+      "heading": "종로 뒷골목 (밤)",
+      "location": "jongno_alley",
+      "time": "NIGHT",
+      "tc_in": "02:20",
+      "tc_out": "03:00",
+      "characters": [
+        "gangsu",
+        "heojin"
+      ],
+      "summary": "",
+      "source_text": "**허진** (V.O.) 월하노인 행세를 한다는 그 전기수. 치워라.\n강수가 콧노래를 흥얼거리며 골목을 걷는다. 가면을 손가락에 걸고 빙빙 돌린다.\n그 뒤 어둠 속에서, 칼날 하나가 달빛에 번뜩인다.",
+      "shots": []
+    }
+  ]
+}
