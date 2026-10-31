@@ -5,7 +5,8 @@
   "hook": "키스신을 상상으로만 쓴 작가가, 가짜 정혼자에게 연습을 청한다.",
   "runtime_sec": 180,
   "aspect": "16:9",
-  "status": "skeleton",
+  "status": "review",
+  "notes": "샷 수 53, 평균 3.4초. S#2 율-정겸 대사는 OTS와 정면 CU를 번갈아 귀 ECU(S02-11)를 한가운데 둔다. 발 인서트 S02-03/S04-02는 같은 구도로 대비. 확인: 쇠돌 대사의 '약봉지를 건네는 손'은 4화 S#3 지문의 '약주 한 사발을 건넨다'와 소품이 다르다(대본 그대로 둠).",
   "scenes": [
     {
       "id": "S#1",
@@ -15,13 +16,223 @@
       "tc_in": "00:00",
       "tc_out": "00:35",
       "characters": [
-        "ma_yeonggam",
         "dallae",
         "jeonggyeom"
       ],
-      "summary": "",
+      "mood": "COMEDY",
+      "summary": "달래가 서생 갑의 여백 낙서를 들고 쳐들어온다. 자기 글씨인 걸 아는 정겸은 헛기침만. '자료조사'라며 손을 잡자는 달래, 손이 맞닿고 둘 다 숨을 참는다. \"…축축하오.\"",
       "source_text": "달래가 반납된 세책본 한 권을 들고 들이닥친다. 정겸이 읽던 『논어』를 황급히 덮는다.\n**달래** 이것 좀 보세요. 또 이 인간이에요.\nInsert. 「청상연가」 키스 대목 옆 여백. 반듯한 글씨. '이 대목, 나무토막 둘이 부딪히는 소리가 남. — 서생 갑'\n정겸이 그 글씨를 본다. 자기 글씨다. 헛기침을 한다.\n**달래** 서생 갑 이 인간은 진짜… 근데 틀린 말은 아니라서 더 화가 나요. (사이) 손 좀 잡아 봐요.\n**정겸** 둘째 조항.\n**달래** 손목 아래잖아요. 손은. 자료조사예요. 마 영감한테 들키면 안 되니까 연습도 해야 하고.\n정겸이 머뭇거리다 손을 내민다. 두 손이 맞닿는다. 둘 다 숨을 참는다.\n**정겸** (한참 뒤) …축축하오.\n**달래** 선비님 손이에요.",
-      "shots": []
+      "shots": [
+        {
+          "id": "S01-01",
+          "size": "MS",
+          "angle": "EYE",
+          "move": "FIX",
+          "lens_mm": 28,
+          "characters": [
+            "jeonggyeom",
+            "dallae"
+          ],
+          "frame": "행랑채 방. 왼쪽 방문이 벌컥 열리고 달래가 세책본 한 권을 쳐들고 들어선다. 오른쪽 서안 앞의 정겸이 『논어』를 황급히 덮는다. 덮이는 순간 표지 속 한글 책장이 언뜻 보인다.",
+          "action": "달래가 반납된 세책본을 들고 들이닥친다. 정겸이 읽던 『논어』를 황급히 덮는다.",
+          "dialogue": [
+            {
+              "speaker": "dallae",
+              "line": "이것 좀 보세요. 또 이 인간이에요.",
+              "mode": "ON"
+            }
+          ],
+          "sound": "(E) 문 벌컥, 책 덮는 소리 탁",
+          "transition": "CUT",
+          "duration_sec": 3,
+          "continuity": "축: 방문(창호지 문)은 화면 왼쪽, 서안과 정겸은 오른쪽. 달래는 문 쪽(왼쪽)에 앉는다. 행랑채 장면은 이후 회차도 이 배치로 통일",
+          "notes": "1화 『논어』 표지 속 「청상연가」 개그를 이어받는다. 책장은 1초 안에만 보인다",
+          "image_prompt": "a petite young woman bursting through the paper door of a tiny tidy lodger's room holding up a returned rental book, a tall scholar at a low desk on the right hastily slamming shut a Confucian classic"
+        },
+        {
+          "id": "S01-02",
+          "size": "INSERT",
+          "angle": "TOP",
+          "move": "FIX",
+          "lens_mm": 50,
+          "characters": [
+            "dallae"
+          ],
+          "frame": "탑샷. 서안 위에 펼쳐진 「청상연가」. 달래의 먹 묻은 손가락이 키스 대목 옆 여백을 탁탁 친다. 반듯한 해서체 글씨.",
+          "action": "「청상연가」 키스 대목 옆 여백에 서생 갑의 낙서가 있다.",
+          "insert_text": "이 대목, 나무토막 둘이 부딪히는 소리가 남. — 서생 갑",
+          "motifs": [
+            "INSERT_TEXT"
+          ],
+          "transition": "CUT",
+          "duration_sec": 4,
+          "notes": "여백 글씨는 2화 계약서의 '김일' 서명과 같은 해서체로 쓴다(15화 글씨 대조 복선)",
+          "image_prompt": "top-down insert, an open hand-copied hangul romance novel on a low desk, an ink-stained fingertip tapping a neat handwritten note in the margin beside a passage"
+        },
+        {
+          "id": "S01-03",
+          "size": "CU",
+          "angle": "EYE",
+          "move": "FIX",
+          "lens_mm": 85,
+          "characters": [
+            "jeonggyeom"
+          ],
+          "frame": "정겸 정면. 시선이 여백 글씨에 박혀 움직이지 않는다. 자기 글씨다.",
+          "action": "정겸이 그 글씨를 알아본다. 헛기침을 한다.",
+          "sound": "(E) 흠, 헛기침",
+          "transition": "CUT",
+          "duration_sec": 2,
+          "image_prompt": "close-up of the stern young scholar staring down at a handwritten margin note, recognizing it, a stiff dry cough"
+        },
+        {
+          "id": "S01-04",
+          "size": "MCU",
+          "angle": "EYE",
+          "move": "FIX",
+          "lens_mm": 50,
+          "characters": [
+            "dallae"
+          ],
+          "frame": "달래 정면. 책을 흔들며 씩씩대다가, '사이'에서 뚝 멈추고 눈빛이 바뀐다. 손을 쓱 내민다.",
+          "action": "달래가 서생 갑을 욕하다가 한 박자 쉬고 엉뚱한 부탁을 한다.",
+          "dialogue": [
+            {
+              "speaker": "dallae",
+              "line": "서생 갑 이 인간은 진짜… 근데 틀린 말은 아니라서 더 화가 나요. (사이) 손 좀 잡아 봐요.",
+              "mode": "ON"
+            }
+          ],
+          "transition": "CUT",
+          "duration_sec": 5,
+          "image_prompt": "medium close-up, the young woman fuming and shaking the book, then pausing with a sudden idea and holding out her hand"
+        },
+        {
+          "id": "S01-05",
+          "size": "CU",
+          "angle": "EYE",
+          "move": "FIX",
+          "lens_mm": 85,
+          "characters": [
+            "jeonggyeom"
+          ],
+          "frame": "정겸 정면. 표정 변화 없이 짧게 끊는다.",
+          "action": "정겸이 계약 조항을 꺼낸다.",
+          "dialogue": [
+            {
+              "speaker": "jeonggyeom",
+              "line": "둘째 조항.",
+              "mode": "ON"
+            }
+          ],
+          "transition": "CUT",
+          "duration_sec": 2,
+          "image_prompt": "close-up of the deadpan scholar replying curtly, unmoved"
+        },
+        {
+          "id": "S01-06",
+          "size": "2S",
+          "angle": "PROFILE",
+          "move": "FIX",
+          "lens_mm": 50,
+          "characters": [
+            "dallae",
+            "jeonggyeom"
+          ],
+          "frame": "측면 투숏. 왼쪽 달래, 오른쪽 정겸. 달래가 제 손목을 다른 손가락으로 짚어 가며 경계선을 보여 준다.",
+          "action": "달래가 손목 아래는 괜찮다며 '자료조사'라고 우긴다.",
+          "dialogue": [
+            {
+              "speaker": "dallae",
+              "line": "손목 아래잖아요. 손은. 자료조사예요. 마 영감한테 들키면 안 되니까 연습도 해야 하고.",
+              "mode": "ON"
+            }
+          ],
+          "transition": "CUT",
+          "duration_sec": 5,
+          "notes": "2화 계약서 둘째 조항 '손목 위로는 닿지 않는다'를 받는 대사",
+          "image_prompt": "profile two-shot in a small room, the young woman on the left pointing at her own wrist to argue a contract clause, the tall scholar on the right listening stiffly"
+        },
+        {
+          "id": "S01-07",
+          "size": "INSERT",
+          "angle": "EYE",
+          "move": "FIX",
+          "lens_mm": 100,
+          "characters": [
+            "jeonggyeom",
+            "dallae"
+          ],
+          "frame": "서안 위 허공. 오른쪽에서 정겸의 손이 머뭇거리며 들어오고, 왼쪽에서 기다리던 달래의 손과 맞닿는다. 얕은 심도.",
+          "action": "정겸이 머뭇거리다 손을 내민다. 두 손이 맞닿는다.",
+          "sound": "정적. 등 뒤 마당 소리가 빠진다",
+          "transition": "CUT",
+          "duration_sec": 3,
+          "image_prompt": "insert, a man's slender hand hesitantly reaching in from the right to meet a small ink-stained hand from the left above a low desk, shallow depth of field"
+        },
+        {
+          "id": "S01-08",
+          "size": "2S",
+          "angle": "PROFILE",
+          "move": "FIX",
+          "lens_mm": 50,
+          "characters": [
+            "dallae",
+            "jeonggyeom"
+          ],
+          "frame": "S01-06과 같은 측면 투숏. 손을 맞잡은 채 둘 다 숨을 참는다. 아무도 움직이지 않는다.",
+          "action": "둘 다 숨을 참는다. 한참.",
+          "sound": "숨 참는 소리, 정적",
+          "transition": "CUT",
+          "duration_sec": 4,
+          "notes": "'한참 뒤'를 살리는 무대사 컷. 편집에서 줄이지 말 것",
+          "image_prompt": "same profile two-shot, the two holding hands across a low desk, both frozen and holding their breath, long awkward silence"
+        },
+        {
+          "id": "S01-09",
+          "size": "CU",
+          "angle": "EYE",
+          "move": "FIX",
+          "lens_mm": 85,
+          "characters": [
+            "jeonggyeom"
+          ],
+          "frame": "정겸 정면. 얼굴은 굳었는데 목울대만 한 번 움직인다.",
+          "action": "정겸이 한참 만에 입을 연다.",
+          "dialogue": [
+            {
+              "speaker": "jeonggyeom",
+              "line": "…축축하오.",
+              "mode": "ON"
+            }
+          ],
+          "transition": "CUT",
+          "duration_sec": 3,
+          "image_prompt": "close-up of the rigid scholar finally speaking after a long silence, throat swallowing once"
+        },
+        {
+          "id": "S01-10",
+          "size": "CU",
+          "angle": "EYE",
+          "move": "FIX",
+          "lens_mm": 85,
+          "characters": [
+            "dallae"
+          ],
+          "frame": "달래 정면(S01-09와 대칭). 손을 놓지 않은 채 정색하고 받아친다.",
+          "action": "달래가 바로 받아친다.",
+          "dialogue": [
+            {
+              "speaker": "dallae",
+              "line": "선비님 손이에요.",
+              "mode": "ON"
+            }
+          ],
+          "transition": "CUT",
+          "duration_sec": 4,
+          "image_prompt": "close-up of the young woman answering flatly without letting go of his hand, mock-serious"
+        }
+      ]
     },
     {
       "id": "S#2",
@@ -33,11 +244,343 @@
       "characters": [
         "dallae",
         "jeonggyeom",
-        "yul"
+        "yul",
+        "extras"
       ],
-      "summary": "",
+      "mood": "COMEDY",
+      "summary": "나무토막 팔로 장터를 걷는 두 사람. 율이 약과로 달래의 손을 빼 가고, \"질투 아니오\"라는 정겸의 귀가 지금까지 중 가장 빨갛다. 율이 그 귀를 알아본다.",
       "source_text": "장터 한복판. 두 사람이 손을 잡고 걷는다. 둘 다 팔이 나무토막처럼 뻣뻣하고, 발이 동시에 나간다. 달래는 남은 손으로 수첩에 무언가를 적으며 걷는다.\n**달래** (중얼거리며 적는다) 손잡고 걸을 때, 심장이… (자기 가슴에 귀를 기울이는 시늉) 별로 안 뛰네.\n**장사꾼** (지나가며) 아이고, 새신랑 각시가 꼭 포졸이 죄인 끌고 가는 꼴일세!\n아니나 다를까, 부채를 편 율이 약과 꾸러미를 들고 나타난다.\n**율** 낭자, 약과. 연체료 대신.\n달래가 손을 빼서 약과를 받는다. 정겸의 빈손이 허공에 남는다.\n**율** (정겸에게) 기분 나빠요?\n**정겸** 질투 아니오.\n귀가 지금까지 중 제일 빨갛다. 율이 그 귀를 빤히 본다.\n**율** (약과를 하나 내밀며) 하나 드시오.\n**정겸** 단 건 안 먹소.\n**율** (고개를 갸웃하며) 귀가 빨간데.\n정겸이 고개를 홱 돌린다. 율이 부채 뒤에서 웃는다.\n**율** 재밌네.",
-      "shots": []
+      "shots": [
+        {
+          "id": "S02-01",
+          "size": "ELS",
+          "angle": "HIGH",
+          "move": "CRANE_DOWN",
+          "lens_mm": 24,
+          "characters": [
+            "dallae",
+            "jeonggyeom",
+            "extras"
+          ],
+          "frame": "장날 종로를 내려다보다 인파 한복판으로 내려앉는다. 좌판과 장꾼 사이로 손을 잡은 두 사람이 작게 보인다.",
+          "action": "장터 한복판. 두 사람이 손을 잡고 걷는다.",
+          "sound": "장터 소음, 흥정 소리",
+          "transition": "CUT",
+          "duration_sec": 4,
+          "continuity": "축: 달래 화면 왼쪽, 정겸 오른쪽(잡은 손은 가운데). 율은 화면 왼쪽에서 들어와 달래 쪽에 선다. 이후 율 왼쪽 ↔ 정겸 오른쪽 축 유지. 귀 ECU는 정겸 왼쪽 옆얼굴",
+          "image_prompt": "high angle crane down over a crowded Joseon market day, stalls and vendors, two small figures walking hand in hand through the crowd"
+        },
+        {
+          "id": "S02-02",
+          "size": "FS",
+          "angle": "EYE",
+          "move": "STEADICAM",
+          "lens_mm": 35,
+          "characters": [
+            "dallae",
+            "jeonggyeom"
+          ],
+          "frame": "정면에서 뒷걸음질하며 앞서 잡는다. 왼쪽 달래, 오른쪽 정겸. 잡은 두 팔이 나무토막처럼 곧게 뻗었다.",
+          "action": "둘 다 팔이 나무토막처럼 뻣뻣하다. 발이 동시에 나간다.",
+          "transition": "CUT",
+          "duration_sec": 4,
+          "notes": "꼭 챙길 그림: 나무토막 팔 걷기 투숏. 4화 S#4의 굳은 공기와 대비되는 코미디",
+          "image_prompt": "frontal full shot leading two people walking hand in hand through a market, both arms stiff as planks of wood, marching in perfect sync"
+        },
+        {
+          "id": "S02-03",
+          "size": "INSERT",
+          "angle": "EYE",
+          "move": "TRACK_L",
+          "lens_mm": 35,
+          "characters": [
+            "dallae",
+            "jeonggyeom"
+          ],
+          "frame": "발만 낮게. 짚신과 꽃신이 같은 쪽 발로 동시에 땅을 찍는다. 한 번, 또 한 번.",
+          "action": "두 사람의 발이 동시에 나간다.",
+          "sound": "(E) 척, 척 — 행진하듯",
+          "transition": "CUT",
+          "duration_sec": 2,
+          "notes": "S04-02(엇갈려 나가는 발)와 같은 구도로 대비",
+          "image_prompt": "low insert tracking two pairs of feet, straw sandals and embroidered shoes, stepping with the same foot at exactly the same time"
+        },
+        {
+          "id": "S02-04",
+          "size": "MS",
+          "angle": "EYE",
+          "move": "STEADICAM",
+          "lens_mm": 35,
+          "characters": [
+            "dallae"
+          ],
+          "frame": "달래가 남은 손으로 수첩에 적으며 걷는다. 중얼거리다 고개를 숙여 제 가슴에 귀를 기울이는 시늉을 한다.",
+          "action": "달래가 걸으며 수첩에 적는다.",
+          "dialogue": [
+            {
+              "speaker": "dallae",
+              "line": "손잡고 걸을 때, 심장이… (자기 가슴에 귀를 기울이는 시늉) 별로 안 뛰네.",
+              "mode": "WHISPER"
+            }
+          ],
+          "transition": "CUT",
+          "duration_sec": 6,
+          "image_prompt": "medium shot of the young woman walking while scribbling in a small notebook with her free hand, tilting her head toward her own chest as if listening to her heartbeat"
+        },
+        {
+          "id": "S02-05",
+          "size": "MLS",
+          "angle": "EYE",
+          "move": "PAN_R",
+          "lens_mm": 35,
+          "characters": [
+            "extras",
+            "dallae",
+            "jeonggyeom"
+          ],
+          "frame": "지게를 진 장사꾼이 화면 왼쪽에서 들어와 두 사람을 스치며 오른쪽으로 빠진다. 지나가며 혀를 찬다.",
+          "action": "장사꾼이 지나가며 놀린다.",
+          "dialogue": [
+            {
+              "speaker": "extras",
+              "line": "아이고, 새신랑 각시가 꼭 포졸이 죄인 끌고 가는 꼴일세!",
+              "mode": "ON"
+            }
+          ],
+          "transition": "CUT",
+          "duration_sec": 3,
+          "notes": "화자는 장사꾼(단역)",
+          "image_prompt": "a passing vendor with an A-frame carrier on his back clicking his tongue at the stiff couple as he walks by"
+        },
+        {
+          "id": "S02-06",
+          "size": "2S",
+          "angle": "EYE",
+          "move": "FIX",
+          "lens_mm": 50,
+          "characters": [
+            "dallae",
+            "jeonggyeom"
+          ],
+          "frame": "두 사람 정면 투숏. 손은 잡은 채, 둘 다 장사꾼 쪽으로 고개만 돌린다. 팔은 여전히 뻣뻣하다.",
+          "action": "두 사람이 굳은 채 장사꾼을 돌아본다.",
+          "sound": "짧은 해학 효과음",
+          "transition": "CUT",
+          "duration_sec": 2,
+          "image_prompt": "frontal two-shot, the stiff couple still holding hands turning only their heads to glare at the passer-by"
+        },
+        {
+          "id": "S02-07",
+          "size": "MS",
+          "angle": "EYE",
+          "move": "FIX",
+          "lens_mm": 50,
+          "characters": [
+            "yul",
+            "dallae",
+            "jeonggyeom"
+          ],
+          "frame": "화면 왼쪽에서 부채를 편 율이 약과 꾸러미를 들고 쑥 들어와 두 사람 앞을 막는다. 보조개.",
+          "action": "아니나 다를까, 율이 약과 꾸러미를 들고 나타난다.",
+          "dialogue": [
+            {
+              "speaker": "yul",
+              "line": "낭자, 약과. 연체료 대신.",
+              "mode": "ON"
+            }
+          ],
+          "transition": "CUT",
+          "duration_sec": 4,
+          "image_prompt": "a handsome nobleman with an open folding fan stepping into frame from the left holding out a bundle of yakgwa honey cookies, blocking the couple's path, dimpled smile"
+        },
+        {
+          "id": "S02-08",
+          "size": "INSERT",
+          "angle": "EYE",
+          "move": "FIX",
+          "lens_mm": 85,
+          "characters": [
+            "dallae",
+            "jeonggyeom"
+          ],
+          "frame": "잡은 손 인서트. 달래의 손이 쏙 빠져 약과 꾸러미 쪽으로 간다. 정겸의 빈손만 허공에 남는다.",
+          "action": "달래가 손을 빼서 약과를 받는다. 정겸의 빈손이 허공에 남는다.",
+          "transition": "CUT",
+          "duration_sec": 4,
+          "notes": "빈손은 컷 끝까지 그대로 둔다",
+          "image_prompt": "insert, a small hand slipping out of a man's grip to grab a bundle of honey cookies, leaving his empty hand hanging in mid-air"
+        },
+        {
+          "id": "S02-09",
+          "size": "MCU",
+          "angle": "OTS",
+          "move": "FIX",
+          "lens_mm": 50,
+          "characters": [
+            "yul",
+            "jeonggyeom"
+          ],
+          "frame": "정겸 어깨 너머로 율. 율이 부채를 살랑이며 정겸을 들여다본다.",
+          "action": "율이 정겸에게 묻는다.",
+          "dialogue": [
+            {
+              "speaker": "yul",
+              "line": "기분 나빠요?",
+              "mode": "ON"
+            }
+          ],
+          "transition": "CUT",
+          "duration_sec": 2,
+          "image_prompt": "over-the-shoulder from the tall scholar, the playful nobleman fanning himself and peering at him"
+        },
+        {
+          "id": "S02-10",
+          "size": "CU",
+          "angle": "EYE",
+          "move": "FIX",
+          "lens_mm": 85,
+          "characters": [
+            "jeonggyeom"
+          ],
+          "frame": "정겸 정면. 시선은 율에게서 비껴 정면 허공. 대답이 너무 빠르다.",
+          "action": "정겸이 바로 부정한다.",
+          "dialogue": [
+            {
+              "speaker": "jeonggyeom",
+              "line": "질투 아니오.",
+              "mode": "ON"
+            }
+          ],
+          "transition": "CUT",
+          "duration_sec": 2,
+          "image_prompt": "close-up of the deadpan scholar answering too quickly, eyes fixed straight ahead"
+        },
+        {
+          "id": "S02-11",
+          "size": "ECU",
+          "angle": "PROFILE",
+          "move": "RACK_FOCUS",
+          "lens_mm": 100,
+          "characters": [
+            "jeonggyeom"
+          ],
+          "frame": "왼쪽 옆얼굴 익스트림 클로즈업(1화 S03-06과 같은 구도). 초점이 뺨에서 귀로 넘어가며 귀가 지금까지 중 가장 빨갛게 달아오른다. 붉은색만 채도를 올린다.",
+          "action": "정겸의 귀가 지금까지 중 제일 빨갛다.",
+          "motifs": [
+            "EAR_RED"
+          ],
+          "transition": "CUT",
+          "duration_sec": 3,
+          "notes": "꼭 챙길 그림: '질투 아니오' 귀 최고조. 1~4화 귀 컷보다 붉은 채도를 한 단계 더 올린다",
+          "image_prompt": "extreme close-up profile, focus shifting to the young man's ear burning the deepest red yet, everything else muted"
+        },
+        {
+          "id": "S02-12",
+          "size": "MCU",
+          "angle": "OTS",
+          "move": "FIX",
+          "lens_mm": 50,
+          "characters": [
+            "yul",
+            "jeonggyeom"
+          ],
+          "frame": "S02-09와 같은 어깨 너머. 율의 시선이 정겸의 귀에 꽂혀 있다. 약과 하나를 집어 내민다.",
+          "action": "율이 그 귀를 빤히 보며 약과를 하나 내민다.",
+          "dialogue": [
+            {
+              "speaker": "yul",
+              "line": "하나 드시오.",
+              "mode": "ON"
+            }
+          ],
+          "transition": "CUT",
+          "duration_sec": 3,
+          "image_prompt": "same over-the-shoulder, the nobleman staring pointedly at the scholar's ear while offering him a single honey cookie"
+        },
+        {
+          "id": "S02-13",
+          "size": "CU",
+          "angle": "EYE",
+          "move": "FIX",
+          "lens_mm": 85,
+          "characters": [
+            "jeonggyeom"
+          ],
+          "frame": "정겸 정면. 약과는 보지도 않는다.",
+          "action": "정겸이 거절한다.",
+          "dialogue": [
+            {
+              "speaker": "jeonggyeom",
+              "line": "단 건 안 먹소.",
+              "mode": "ON"
+            }
+          ],
+          "transition": "CUT",
+          "duration_sec": 2,
+          "image_prompt": "close-up of the scholar refusing without looking at the cookie"
+        },
+        {
+          "id": "S02-14",
+          "size": "MCU",
+          "angle": "EYE",
+          "move": "FIX",
+          "lens_mm": 50,
+          "characters": [
+            "yul"
+          ],
+          "frame": "율 정면. 고개를 갸웃하며 정겸의 귀 쪽을 부채 끝으로 가리킨다.",
+          "action": "율이 고개를 갸웃한다.",
+          "dialogue": [
+            {
+              "speaker": "yul",
+              "line": "귀가 빨간데.",
+              "mode": "ON"
+            }
+          ],
+          "transition": "CUT",
+          "duration_sec": 3,
+          "image_prompt": "medium close-up, the nobleman tilting his head and pointing his fan tip toward the other man's ear, amused"
+        },
+        {
+          "id": "S02-15",
+          "size": "CU",
+          "angle": "EYE",
+          "move": "CRASH_ZOOM",
+          "lens_mm": 85,
+          "characters": [
+            "jeonggyeom"
+          ],
+          "frame": "정겸 정면에서 크래시 줌. 고개를 홱 돌려 화면 밖을 본다.",
+          "action": "정겸이 고개를 홱 돌린다.",
+          "sound": "(E) 휙",
+          "transition": "CUT",
+          "duration_sec": 2,
+          "image_prompt": "close-up crash zoom as the scholar snaps his head away"
+        },
+        {
+          "id": "S02-16",
+          "size": "MCU",
+          "angle": "EYE",
+          "move": "FIX",
+          "lens_mm": 50,
+          "characters": [
+            "yul"
+          ],
+          "frame": "율 정면. 부채를 들어 입을 가리고, 부채 위로 눈만 웃는다. 보조개.",
+          "action": "율이 부채 뒤에서 웃는다.",
+          "dialogue": [
+            {
+              "speaker": "yul",
+              "line": "재밌네.",
+              "mode": "ON"
+            }
+          ],
+          "transition": "CUT",
+          "duration_sec": 4,
+          "notes": "4화 첫 등장 때의 '재밌네'와 같은 톤. 율의 말버릇",
+          "image_prompt": "medium close-up, the nobleman hiding a grin behind his open fan, only his laughing eyes and dimple visible"
+        }
+      ]
     },
     {
       "id": "S#3",
@@ -47,13 +590,296 @@
       "tc_in": "01:25",
       "tc_out": "02:20",
       "characters": [
-        "guyongpal",
+        "jeonggyeom",
         "dallae",
-        "jeonggyeom"
+        "extras"
       ],
-      "summary": "",
+      "mood": "MYSTERY",
+      "summary": "주막 심부름꾼 쇠돌이 약과에 입을 연다. 구용팔에게 독주를 건넨 손에 하얀 흉터가 있었다. 정겸의 수사 수첩과 달래의 연애 수첩이 나란히 펼쳐진다.",
       "source_text": "물동이 옆. 주막 심부름꾼 쇠돌이 평상 앞에 손을 모은 채 서 있다. 정겸이 묻고, 달래가 약과를 하나 쭉 내민다. 쇠돌의 입이 풀린다.\n**정겸** 구용팔에게 약주를 건넨 자, 얼굴을 봤소?\n**쇠돌** 못 봤어요. 갓을 이만큼 눌러썼어요. 근데 약봉지를 건네는 손에… 흉터가 있었어요. 왼손등에 길게. (자기 손등을 손가락으로 그으며) 하얀 지렁이가 기어가는 것 같았어요.\n정겸이 수첩을 꺼내 적는다.\nInsert. 정겸의 수첩. '검은 갓. 왼손등에 긴 흉터.'\n달래가 수첩을 들여다본다. 정겸이 수첩을 덮는다.\n**달래** 선비님은 왜 이런 걸 적어요?\n**정겸** …선비는 원래 적소.\n**달래** (수상하다는 듯 눈을 가늘게 뜨다가) …하긴 저도 적어요.\n달래가 자기 수첩을 펴 보인다. '손잡을 때 — 축축함. 심장 별로.' 정겸의 입꼬리가 실룩거리다 도로 다물린다.",
-      "shots": []
+      "shots": [
+        {
+          "id": "S03-01",
+          "size": "LS",
+          "angle": "EYE",
+          "move": "FIX",
+          "lens_mm": 28,
+          "characters": [
+            "extras",
+            "jeonggyeom",
+            "dallae"
+          ],
+          "frame": "주막 뒤뜰. 왼쪽에 물동이와 평상, 그 앞에 쇠돌이 손을 모으고 서 있다. 오른쪽에 정겸, 그 옆 가운데에 달래.",
+          "action": "물동이 옆, 쇠돌이 평상 앞에 손을 모은 채 서 있다.",
+          "sound": "(E) 물 긷는 소리, 주막 안쪽 떠드는 소리 멀리",
+          "transition": "CUT",
+          "duration_sec": 4,
+          "continuity": "축: 쇠돌 화면 왼쪽(평상·물동이 앞), 정겸 오른쪽, 달래는 그 사이 가운데. 정겸 시선은 왼쪽으로",
+          "image_prompt": "back yard of a Joseon tavern by day, water jars and a wooden bench on the left, a nervous young errand boy standing with clasped hands facing a tall scholar and a petite young woman on the right"
+        },
+        {
+          "id": "S03-02",
+          "size": "MS",
+          "angle": "EYE",
+          "move": "FIX",
+          "lens_mm": 50,
+          "characters": [
+            "jeonggyeom"
+          ],
+          "frame": "정겸 정면에서 약간 왼쪽을 본다. 심문하듯 반듯하다.",
+          "action": "정겸이 묻는다.",
+          "dialogue": [
+            {
+              "speaker": "jeonggyeom",
+              "line": "구용팔에게 약주를 건넨 자, 얼굴을 봤소?",
+              "mode": "ON"
+            }
+          ],
+          "transition": "CUT",
+          "duration_sec": 3,
+          "image_prompt": "medium shot of the upright scholar questioning someone off-screen left, formal and stern"
+        },
+        {
+          "id": "S03-03",
+          "size": "INSERT",
+          "angle": "EYE",
+          "move": "FIX",
+          "lens_mm": 85,
+          "characters": [
+            "dallae",
+            "extras"
+          ],
+          "frame": "달래의 손이 약과 하나를 쇠돌 코앞으로 쭉 내민다. 쇠돌의 모은 손이 꼼지락댄다.",
+          "action": "달래가 약과를 하나 쭉 내민다.",
+          "transition": "CUT",
+          "duration_sec": 2,
+          "image_prompt": "insert, a small ink-stained hand thrusting a single honey cookie toward a boy's clasped fidgeting hands"
+        },
+        {
+          "id": "S03-04",
+          "size": "CU",
+          "angle": "EYE",
+          "move": "FIX",
+          "lens_mm": 85,
+          "characters": [
+            "extras"
+          ],
+          "frame": "쇠돌 정면. 약과를 보고 침을 꿀꺽, 덥석 받아 쥔다.",
+          "action": "쇠돌의 입이 풀린다.",
+          "sound": "침 삼키는 소리",
+          "transition": "CUT",
+          "duration_sec": 2,
+          "image_prompt": "close-up of a young tavern errand boy gulping at the sight of a honey cookie and snatching it"
+        },
+        {
+          "id": "S03-05",
+          "size": "MS",
+          "angle": "EYE",
+          "move": "DOLLY_IN",
+          "lens_mm": 50,
+          "characters": [
+            "extras"
+          ],
+          "frame": "쇠돌에게 천천히 다가간다. 손으로 갓 챙을 눌러 보이고, 목소리를 낮춘다.",
+          "action": "쇠돌이 그날 본 것을 털어놓는다.",
+          "dialogue": [
+            {
+              "speaker": "extras",
+              "line": "못 봤어요. 갓을 이만큼 눌러썼어요. 근데 약봉지를 건네는 손에… 흉터가 있었어요. 왼손등에 길게. (자기 손등을 손가락으로 그으며) 하얀 지렁이가 기어가는 것 같았어요.",
+              "mode": "ON"
+            }
+          ],
+          "transition": "CUT",
+          "duration_sec": 9,
+          "notes": "화자는 쇠돌(주막 심부름꾼, 단역). 4화 S#3 주막 장면의 그 아이",
+          "image_prompt": "slow push-in on the errand boy miming a hat pulled low over the eyes, lowering his voice as he recalls something"
+        },
+        {
+          "id": "S03-06",
+          "size": "INSERT",
+          "angle": "EYE",
+          "move": "FIX",
+          "lens_mm": 100,
+          "characters": [
+            "extras"
+          ],
+          "frame": "쇠돌의 왼손등. 다른 손 검지가 손등을 길게 가로로 긋는다.",
+          "action": "쇠돌이 자기 손등을 손가락으로 긋는다.",
+          "sound": "쇠돌 대사가 이어진다(하얀 지렁이…)",
+          "transition": "CUT",
+          "duration_sec": 4,
+          "notes": "3화 S#5 흑립 흉터와 같은 방향·길이로 긋는다",
+          "image_prompt": "insert, a boy's index finger slowly drawing a long line across the back of his own left hand"
+        },
+        {
+          "id": "S03-07",
+          "size": "CU",
+          "angle": "EYE",
+          "move": "FIX",
+          "lens_mm": 85,
+          "characters": [
+            "jeonggyeom"
+          ],
+          "frame": "정겸 정면. 눈빛이 단단해진다.",
+          "action": "정겸이 그 말을 새긴다.",
+          "transition": "CUT",
+          "duration_sec": 2,
+          "image_prompt": "close-up of the scholar's gaze sharpening"
+        },
+        {
+          "id": "S03-08",
+          "size": "MS",
+          "angle": "EYE",
+          "move": "FIX",
+          "lens_mm": 50,
+          "characters": [
+            "jeonggyeom"
+          ],
+          "frame": "정겸이 품에서 수첩을 꺼내 펼치고 붓을 놀린다. 달래가 화면 왼쪽 끝에서 고개를 기웃한다.",
+          "action": "정겸이 수첩을 꺼내 적는다.",
+          "transition": "CUT",
+          "duration_sec": 4,
+          "image_prompt": "medium shot of the scholar taking a small notebook from his robe and writing briskly, a curious young woman craning in at the edge of frame"
+        },
+        {
+          "id": "S03-09",
+          "size": "INSERT",
+          "angle": "TOP",
+          "move": "FIX",
+          "lens_mm": 50,
+          "characters": [
+            "jeonggyeom"
+          ],
+          "frame": "탑샷. 정겸의 수첩. 반듯한 해서체.",
+          "action": "정겸의 수첩에 적힌 글씨.",
+          "insert_text": "검은 갓. 왼손등에 긴 흉터.",
+          "motifs": [
+            "INSERT_TEXT"
+          ],
+          "transition": "CUT",
+          "duration_sec": 3,
+          "continuity": "3화 수첩 '윤달래 — 거짓말할 때 말이 빨라짐.' 다음 장",
+          "image_prompt": "top-down insert, a small investigator's notebook with neat brush handwriting in hangul"
+        },
+        {
+          "id": "S03-10",
+          "size": "2S",
+          "angle": "EYE",
+          "move": "FIX",
+          "lens_mm": 50,
+          "characters": [
+            "dallae",
+            "jeonggyeom"
+          ],
+          "frame": "투숏. 달래가 고개를 쭉 빼서 수첩을 들여다보는 순간, 정겸이 수첩을 탁 덮는다.",
+          "action": "달래가 수첩을 들여다본다. 정겸이 수첩을 덮는다.",
+          "sound": "(E) 탁",
+          "transition": "CUT",
+          "duration_sec": 4,
+          "image_prompt": "two-shot, the young woman craning her neck to peek at the notebook as the scholar snaps it shut"
+        },
+        {
+          "id": "S03-11",
+          "size": "MCU",
+          "angle": "EYE",
+          "move": "FIX",
+          "lens_mm": 50,
+          "characters": [
+            "dallae"
+          ],
+          "frame": "달래 정면. 덮인 수첩과 정겸 얼굴을 번갈아 본다.",
+          "action": "달래가 묻는다.",
+          "dialogue": [
+            {
+              "speaker": "dallae",
+              "line": "선비님은 왜 이런 걸 적어요?",
+              "mode": "ON"
+            }
+          ],
+          "transition": "CUT",
+          "duration_sec": 3,
+          "image_prompt": "medium close-up of the young woman glancing between the closed notebook and the man's face"
+        },
+        {
+          "id": "S03-12",
+          "size": "CU",
+          "angle": "EYE",
+          "move": "FIX",
+          "lens_mm": 85,
+          "characters": [
+            "jeonggyeom"
+          ],
+          "frame": "정겸 정면. 한 박자 늦게, 선비답게 점잔을 뺀다.",
+          "action": "정겸이 둘러댄다.",
+          "dialogue": [
+            {
+              "speaker": "jeonggyeom",
+              "line": "…선비는 원래 적소.",
+              "mode": "ON"
+            }
+          ],
+          "transition": "CUT",
+          "duration_sec": 3,
+          "image_prompt": "close-up of the scholar answering primly after a beat"
+        },
+        {
+          "id": "S03-13",
+          "size": "CU",
+          "angle": "EYE",
+          "move": "FIX",
+          "lens_mm": 85,
+          "characters": [
+            "dallae"
+          ],
+          "frame": "달래 정면. 눈을 가늘게 뜨고 정겸을 훑다가, 스르르 풀린다.",
+          "action": "달래가 수상하다는 듯 보다가 수긍한다.",
+          "dialogue": [
+            {
+              "speaker": "dallae",
+              "line": "…하긴 저도 적어요.",
+              "mode": "ON"
+            }
+          ],
+          "transition": "CUT",
+          "duration_sec": 4,
+          "image_prompt": "close-up of the young woman narrowing her eyes in suspicion, then relaxing and shrugging"
+        },
+        {
+          "id": "S03-14",
+          "size": "INSERT",
+          "angle": "TOP",
+          "move": "FIX",
+          "lens_mm": 50,
+          "characters": [
+            "dallae"
+          ],
+          "frame": "탑샷. 달래가 자랑하듯 펴 보이는 자기 수첩. 삐뚤빼뚤 급하게 쓴 글씨.",
+          "action": "달래가 자기 수첩을 펴 보인다.",
+          "insert_text": "손잡을 때 — 축축함. 심장 별로.",
+          "motifs": [
+            "INSERT_TEXT"
+          ],
+          "transition": "CUT",
+          "duration_sec": 4,
+          "image_prompt": "top-down insert, small hands holding open a messy notebook of hurried hangul scribbles toward camera"
+        },
+        {
+          "id": "S03-15",
+          "size": "CU",
+          "angle": "EYE",
+          "move": "FIX",
+          "lens_mm": 85,
+          "characters": [
+            "jeonggyeom"
+          ],
+          "frame": "정겸 정면. 입꼬리가 실룩, 올라가려다 도로 다물린다. 웃음까지 가지 않는다.",
+          "action": "정겸의 입꼬리가 실룩거리다 도로 다물린다.",
+          "transition": "CUT",
+          "duration_sec": 4,
+          "notes": "6화 S#4 첫 웃음의 복선. 여기서는 절대 웃지 않는다",
+          "image_prompt": "close-up of the stern scholar's lips twitching toward a smile and immediately pressing shut"
+        }
+      ]
     },
     {
       "id": "S#4",
@@ -67,9 +893,241 @@
         "jeonggyeom",
         "heukrip"
       ],
-      "summary": "",
+      "mood": "ROMANCE",
+      "summary": "노을 속에 덜 뻣뻣해진 손을 잡고 돌아오는 두 사람. 달래는 이번엔 수첩에 적지 않는다. 대문 앞에서 동시에 손을 놓는 순간, 지붕 위 흉터 난 손이 기와를 깨뜨린다.",
       "source_text": "두 사람이 손을 잡고 돌아온다. 그림자가 길다. 이번에는 팔이 조금 덜 뻣뻣하고, 발도 엇갈려 나간다.\n**달래** 아까보단 덜 축축하네요.\n**정겸** …익숙해지는 중이오.\n**달래** (수첩에 적으려다 멈추고) 이건 안 적을래요.\n대문 앞에서 두 사람이 동시에 손을 놓는다. 동시에 딴 데를 본다.\n골목 위 지붕. 기와를 짚은 흑립의 왼손. 길고 하얀 흉터. 그 손가락에 힘이 들어간다. 기와 한 장이 딱, 금이 간다.",
-      "shots": []
+      "shots": [
+        {
+          "id": "S04-01",
+          "size": "LS",
+          "angle": "EYE",
+          "move": "FIX",
+          "lens_mm": 85,
+          "characters": [
+            "dallae",
+            "jeonggyeom"
+          ],
+          "frame": "망원으로 누른 골목. 화면 왼쪽에 흙담과 책방 대문. 노을 역광 속에서 두 사람이 손을 잡고 오른쪽에서 왼쪽으로 걸어온다. 그림자가 길다.",
+          "action": "두 사람이 손을 잡고 돌아온다. 그림자가 길다.",
+          "sound": "저녁 새소리, 먼 개 짖는 소리",
+          "transition": "CUT",
+          "duration_sec": 4,
+          "continuity": "축: 담장은 화면 왼쪽 세로 벽, 대문도 왼쪽(locations.json axis). 달래 왼쪽(담 쪽), 정겸 오른쪽. 흑립의 지붕은 골목 건너편 화면 오른쪽 위",
+          "image_prompt": "telephoto long shot of a narrow earthen-walled alley at sunset, the wall and a hanok gate on the left, two figures walking hand in hand toward it, long shadows, orange backlight"
+        },
+        {
+          "id": "S04-02",
+          "size": "INSERT",
+          "angle": "EYE",
+          "move": "TRACK_L",
+          "lens_mm": 35,
+          "characters": [
+            "dallae",
+            "jeonggyeom"
+          ],
+          "frame": "S02-03과 같은 발 인서트. 이번에는 짚신과 꽃신이 엇갈려 나간다. 노을빛.",
+          "action": "이번에는 발도 엇갈려 나간다.",
+          "transition": "CUT",
+          "duration_sec": 2,
+          "image_prompt": "same low insert of two pairs of feet, now stepping naturally out of sync, warm sunset light on the dirt"
+        },
+        {
+          "id": "S04-03",
+          "size": "2S",
+          "angle": "EYE",
+          "move": "STEADICAM",
+          "lens_mm": 50,
+          "characters": [
+            "dallae",
+            "jeonggyeom"
+          ],
+          "frame": "S02-02와 같은 정면 투숏. 팔이 조금 덜 뻣뻣하다. 달래가 잡은 손을 살짝 흔든다.",
+          "action": "팔이 조금 덜 뻣뻣하다. 달래가 말을 건다.",
+          "dialogue": [
+            {
+              "speaker": "dallae",
+              "line": "아까보단 덜 축축하네요.",
+              "mode": "ON"
+            }
+          ],
+          "transition": "CUT",
+          "duration_sec": 4,
+          "image_prompt": "frontal two-shot walking at sunset, the couple holding hands more loosely now, arms relaxed"
+        },
+        {
+          "id": "S04-04",
+          "size": "CU",
+          "angle": "EYE",
+          "move": "FIX",
+          "lens_mm": 85,
+          "characters": [
+            "jeonggyeom"
+          ],
+          "frame": "정겸 정면. 노을이 얼굴 한쪽을 물들인다. 시선은 앞만 본다.",
+          "action": "정겸이 짧게 답한다.",
+          "dialogue": [
+            {
+              "speaker": "jeonggyeom",
+              "line": "…익숙해지는 중이오.",
+              "mode": "ON"
+            }
+          ],
+          "transition": "CUT",
+          "duration_sec": 3,
+          "image_prompt": "close-up of the scholar looking straight ahead, sunset glow on one side of his face"
+        },
+        {
+          "id": "S04-05",
+          "size": "MCU",
+          "angle": "EYE",
+          "move": "FIX",
+          "lens_mm": 50,
+          "characters": [
+            "dallae"
+          ],
+          "frame": "달래가 수첩을 펴고 적으려다 멈춘다. 잠깐 정겸 쪽을 본다.",
+          "action": "달래가 수첩에 적으려다 멈춘다.",
+          "dialogue": [
+            {
+              "speaker": "dallae",
+              "line": "이건 안 적을래요.",
+              "mode": "ON"
+            }
+          ],
+          "transition": "CUT",
+          "duration_sec": 4,
+          "image_prompt": "medium close-up, the young woman opening her notebook to write, then hesitating and glancing sideways at the man"
+        },
+        {
+          "id": "S04-06",
+          "size": "INSERT",
+          "angle": "TOP",
+          "move": "FIX",
+          "lens_mm": 50,
+          "characters": [
+            "dallae"
+          ],
+          "frame": "탑샷. S03-14의 수첩. 붓끝이 빈 줄 위에서 머물다 떨어지고, 수첩이 덮인다.",
+          "action": "달래가 아무것도 적지 않고 수첩을 덮는다.",
+          "transition": "CUT",
+          "duration_sec": 2,
+          "image_prompt": "top-down insert, a brush tip hovering over an empty line in a small notebook, then the notebook closing"
+        },
+        {
+          "id": "S04-07",
+          "size": "FS",
+          "angle": "EYE",
+          "move": "FIX",
+          "lens_mm": 35,
+          "characters": [
+            "dallae",
+            "jeonggyeom"
+          ],
+          "frame": "대문 앞 정면. 대문은 화면 왼쪽. 문 앞에 닿는 순간 두 사람이 동시에 손을 놓는다.",
+          "action": "대문 앞에서 두 사람이 동시에 손을 놓는다.",
+          "transition": "CUT",
+          "duration_sec": 3,
+          "image_prompt": "full shot at a hanok gate at dusk, the two letting go of each other's hands at exactly the same moment"
+        },
+        {
+          "id": "S04-08",
+          "size": "2S",
+          "angle": "EYE",
+          "move": "FIX",
+          "lens_mm": 50,
+          "characters": [
+            "dallae",
+            "jeonggyeom"
+          ],
+          "frame": "투숏. 동시에 딴 데를 본다. 달래는 왼쪽 대문 기둥을, 정겸은 오른쪽 하늘을.",
+          "action": "두 사람이 동시에 딴 데를 본다.",
+          "sound": "음악이 잦아든다",
+          "transition": "CUT",
+          "duration_sec": 3,
+          "image_prompt": "two-shot at dusk, both looking away in opposite directions at the same time, awkward"
+        },
+        {
+          "id": "S04-09",
+          "size": "LS",
+          "angle": "LOW",
+          "move": "FIX",
+          "lens_mm": 50,
+          "characters": [
+            "heukrip"
+          ],
+          "frame": "골목 건너편 지붕. 화면 오른쪽 위 1/3 지점, 용마루 그늘에 검은 갓이 웅크리고 있다. 노을 역광이라 윤곽만. 얼굴은 갓 그늘에 잠겼다.",
+          "action": "골목 위 지붕. 흑립이 웅크리고 내려다본다.",
+          "motifs": [
+            "ROOFTOP_HEUKRIP"
+          ],
+          "transition": "CUT",
+          "duration_sec": 3,
+          "notes": "주인공은 모르고 관객만 본다",
+          "image_prompt": "low angle wide shot of a tiled rooftop across an alley at dusk, a small crouching silhouette in a wide black gat in the upper right, backlit by the sunset, face hidden in shadow"
+        },
+        {
+          "id": "S04-10",
+          "size": "INSERT",
+          "angle": "EYE",
+          "move": "RACK_FOCUS",
+          "lens_mm": 135,
+          "characters": [
+            "heukrip",
+            "dallae",
+            "jeonggyeom"
+          ],
+          "frame": "전경에 기와를 짚은 흑립의 왼손. 후경 아래쪽, 대문 앞 두 사람이 흐릿하다. 초점이 두 사람에서 손등의 길고 하얀 흉터로 넘어온다.",
+          "action": "기와를 짚은 흑립의 왼손. 길고 하얀 흉터.",
+          "motifs": [
+            "SCAR_LEFT_HAND"
+          ],
+          "transition": "CUT",
+          "duration_sec": 4,
+          "continuity": "3화 S#5와 같은 왼손, 같은 흉터(손등을 가로지르는 방향). 소매는 검은 철릭",
+          "notes": "꼭 챙길 그림: 지붕 위 흑립 왼손",
+          "image_prompt": "insert, a gaunt left hand pressed on roof tiles in the foreground with a long pale scar across its back, rack focus from two blurred figures at a gate far below to the scar"
+        },
+        {
+          "id": "S04-11",
+          "size": "ECU",
+          "angle": "EYE",
+          "move": "FIX",
+          "lens_mm": 100,
+          "characters": [
+            "heukrip"
+          ],
+          "frame": "손가락과 기와만. 손가락 마디에 힘이 들어가 하얘지고, 그 밑의 기와 한 장에 금이 쩍 간다.",
+          "action": "그 손가락에 힘이 들어간다. 기와 한 장이 딱, 금이 간다.",
+          "sound": "(E) 딱.",
+          "motifs": [
+            "SCAR_LEFT_HAND"
+          ],
+          "transition": "SMASH_CUT",
+          "duration_sec": 3,
+          "image_prompt": "extreme close-up of scarred fingers tightening on a clay roof tile until the tile cracks"
+        },
+        {
+          "id": "S04-12",
+          "size": "LS",
+          "angle": "HIGH",
+          "move": "CRANE_UP",
+          "lens_mm": 35,
+          "characters": [
+            "heukrip",
+            "dallae",
+            "jeonggyeom"
+          ],
+          "frame": "흑립 등 뒤 어깨 너머로 골목을 내려다본다. 화면 아래 대문 앞에 작은 두 사람. 카메라가 지붕 위로 올라가며 둘이 더 작아진다. 정점에서 정지.",
+          "action": "손을 잡고 돌아온 두 사람을, 지붕 위의 흉터 난 손이 내려다본다.",
+          "motifs": [
+            "ROOFTOP_HEUKRIP"
+          ],
+          "transition": "FREEZE",
+          "duration_sec": 5,
+          "notes": "엔딩 훅. 금 간 기와 소리 여운 위에서 프리즈",
+          "image_prompt": "high angle crane up from behind a crouching figure in a black gat on a rooftop, looking down at two tiny figures standing apart at a hanok gate in the dusk alley"
+        }
+      ]
     }
   ]
 }
