@@ -1,0 +1,47 @@
+# Generates the PIXIE teaser sound effects with ElevenLabs on a GitHub-hosted runner and pushes
+# pixie-teaser/sfx/*.wav back to the branch. Run it from the Actions tab with the API key as input;
+# the mixer (python make.py audio) then uses these files instead of the procedural ones.
+name: PIXIE ElevenLabs SFX
+on:
+  workflow_dispatch:
+    inputs:
+      api_key:
+        description: ElevenLabs API key (read from the event payload and masked; rotate it afterwards)
+        required: true
+      branch:
+        description: Branch with the teaser project; the SFX are pushed back here
+        required: true
+        default: claude/dazzling-dijkstra-ab4a48
+      names:
+        description: Optional space-separated SFX names (default = all in tools/elevenlabs_sfx.json)
+        required: false
+permissions:
+  contents: write
+jobs:
+  sfx:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - name: Mask the API key
+        run: |
+          KEY=$(jq -r '.inputs.api_key' "$GITHUB_EVENT_PATH")
+          echo "::add-mask::$KEY"
+          echo "ELEVENLABS_API_KEY=$KEY" >> "$GITHUB_ENV"
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ inputs.branch }}
+      - name: Install ffmpeg
+        run: sudo apt-get update -qq && sudo apt-get install -y -qq ffmpeg
+      - name: Render SFX
+        working-directory: pixie-teaser
+        env:
+          NAMES: ${{ inputs.names }}
+        run: python3 tools/elevenlabs_sfx.py $NAMES
+      - name: Push the SFX back
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add pixie-teaser/sfx
+          git commit -m "Add ElevenLabs SFX for the PIXIE teaser" || { echo "nothing to commit"; exit 0; }
+          git pull --rebase origin "${{ inputs.branch }}"
+          git push origin "HEAD:${{ inputs.branch }}"

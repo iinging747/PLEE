@@ -1,0 +1,17 @@
+{
+  "_note": "ElevenLabs Sound Effects prompts. Each renders to sfx/<name>.wav; the mixer prefers these files over the procedural versions in engine/sfx.py.",
+  "impact": {"text": "Deep cinematic trailer impact hit, huge sub boom with a sharp transient crack and a long dark reverb tail, no music", "duration": 4.0, "influence": 0.6},
+  "hit_metal": {"text": "Elegant metallic cinematic hit, polished steel shimmer ring with a soft low thud, luxury title reveal, clean tail", "duration": 2.5, "influence": 0.6},
+  "whoosh": {"text": "Fast smooth air whoosh pass-by for a video transition, clean, no tonal content", "duration": 0.8, "influence": 0.7},
+  "swish": {"text": "Very short tight swish for a quick cut, subtle and crisp", "duration": 0.5, "influence": 0.7},
+  "riser": {"text": "Tense cinematic riser building to a drop, rising filtered noise and pitch, ends abruptly at the peak", "duration": 3.6, "influence": 0.6},
+  "reverse_swell": {"text": "Reverse cymbal and reverb swell sucking in toward a hit, dark and smooth", "duration": 1.6, "influence": 0.6},
+  "sub_drop": {"text": "Sub bass drop, deep pitch falling boom, clean low end", "duration": 1.6, "influence": 0.6},
+  "heartbeat": {"text": "Single slow human heartbeat, lub-dub, very low and close, dry, in silence", "duration": 1.2, "influence": 0.7},
+  "tick": {"text": "Tiny digital UI tick for on-screen text typing, very short and soft", "duration": 0.5, "influence": 0.7},
+  "click_soft": {"text": "Soft mechanical keyboard key press, single click, close microphone", "duration": 0.5, "influence": 0.7},
+  "glitch": {"text": "Short digital glitch stutter, data corruption bleeps and bit crushed noise burst", "duration": 0.5, "influence": 0.6},
+  "shutter": {"text": "Camera shutter click, single frame, crisp", "duration": 0.5, "influence": 0.7},
+  "shimmer": {"text": "Delicate magical sparkle shimmer, high glassy twinkle, soft and elegant", "duration": 1.8, "influence": 0.6},
+  "boom_low": {"text": "Massive low cinematic boom for a logo reveal, warm deep resonance and long natural decay, no high-pitched elements", "duration": 5.0, "influence": 0.6}
+}

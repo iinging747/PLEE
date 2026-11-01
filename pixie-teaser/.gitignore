@@ -1,0 +1,9 @@
+work/
+media_extra/
+assets/fonts/licensed/
+__pycache__/
+*.pyc
+dist/*.wav
+assets/audio/bgm.wav
+dist/PIXIE_teaser_1080p.mp4
+vo/*.wav
