@@ -509,7 +509,7 @@
       "location": "hyeminseo",
       "time": "DAWN",
       "tc_in": "00:59",
-      "tc_out": "01:45",
+      "tc_out": "01:50",
       "characters": [
         "dallae",
         "jeonggyeom"
@@ -521,8 +521,8 @@
         }
       ],
       "mood": "ROMANCE",
-      "summary": "우물가에서 피를 씻는 달래에게 정겸이 수사로 시작했지만 우산을 같이 쓴 날부터는 아니었다고 털어놓는다. 달래가 귀를 들여다보고 빨갛지 않음을 확인한다. 서생 갑 이야기에 울음이 웃음으로 바뀐다.",
-      "source_text": "정겸이 두레박으로 물을 부어 주고, 달래가 손을 씻는다. 물이 붉게 번진다. 씻고 또 씻는다.\n**정겸** 처음 하숙을 든 건 수사였소. 정혼자 노릇도, 처음엔 그랬소. (사이) 우산을 같이 쓴 날부터는 아니었소.\n달래가 고개를 든다. 눈이 아니라 귀를 본다. 새벽빛이 그 귀에 닿아 있다.\n**달래** …가까이 와 봐요.\n정겸이 무릎을 굽혀 눈높이를 맞춘다. 달래가 코가 닿을 만큼 가까이서 그 귀를 들여다본다.\n**달래** 안 빨개요.\n**정겸** 거짓말이 아니니까.\n**달래** 그날 창고에선 빨갰는데.\n**정겸** 그날은 거짓말을 했으니까. 연습이라고.\n달래의 입꼬리가 떨린다. 울음인지 웃음인지 모를 것이 번지다가, 웃음이 이긴다.\n**달래** 그럼 서생 갑은요. 그것도 수사였어요? 삼 년이나?\n**정겸** (한 박자) …그건 그냥 독자였소.\n**달래** '작가는 연애를 글로 배웠는가.'\n**정겸** …그건 사과하겠소. (사이) 칭찬을 길게 쓰는 법은, 지금 배우는 중이오.",
+      "summary": "혜민서 우물가. 달래가 피 묻은 손을 씻는다. 정겸은 하숙도 정혼자 노릇도 처음엔 수사였지만 우산을 같이 쓴 날부터는 아니었다고 말하고, 귀는 빨갛지 않다. 사흘 뒤 혼례는 '안 하오'. 그러려면 대본이 필요하니 작가님이 써 달라고 청한다.",
+      "source_text": "정겸이 두레박으로 물을 부어 주고, 달래가 손을 씻는다. 물이 붉게 번진다. 씻고 또 씻는다.\n**정겸** 처음 하숙을 든 건 수사였소. 정혼자 노릇도, 처음엔 그랬소. (사이) 우산을 같이 쓴 날부터는 아니었소.\n달래가 고개를 든다. 눈이 아니라 귀를 본다. 새벽빛이 그 귀에 닿아 있다.\n**달래** …가까이 와 봐요.\n정겸이 무릎을 굽혀 눈높이를 맞춘다. 달래가 코가 닿을 만큼 가까이서 그 귀를 들여다본다.\n**달래** 안 빨개요.\n**정겸** 거짓말이 아니니까.\n**달래** 그날 창고에선 빨갰는데.\n**정겸** 그날은 거짓말을 했으니까. 연습이라고.\n달래의 입꼬리가 떨린다. 울음인지 웃음인지 모를 것이 번지다가, 웃음이 이긴다.\n**달래** 그럼 서생 갑은요. 그것도 수사였어요? 삼 년이나?\n**정겸** (한 박자) …그건 그냥 독자였소.\n**달래** '작가는 연애를 글로 배웠는가.'\n**정겸** …그건 사과하겠소. (사이) 칭찬을 길게 쓰는 법은, 지금 배우는 중이오.\n**달래** 사흘 뒤 혼례는요.\n**정겸** 안 하오.\n귀는 새벽빛 그대로다. 달래가 그 귀를 한 번 더 본다.\n**정겸** …그러려면 대본이 필요하오. 작가님이 써 주시오.",
       "shots": [
         {
           "id": "S03-01",
@@ -577,7 +577,7 @@
             }
           ],
           "transition": "CUT",
-          "duration_sec": 5,
+          "duration_sec": 4,
           "image_prompt": "the hatless scholar holding a well bucket, looking down at her hands as he speaks quietly"
         },
         {
@@ -677,7 +677,7 @@
             }
           ],
           "transition": "CUT",
-          "duration_sec": 4,
+          "duration_sec": 3,
           "image_prompt": "tight profile two-shot, their faces a hand's width apart in blue dawn light"
         },
         {
@@ -760,7 +760,7 @@
             }
           ],
           "transition": "CUT",
-          "duration_sec": 4,
+          "duration_sec": 3,
           "image_prompt": "two-shot by the well, the young woman pressing him with a teasing, tearful look"
         },
         {
@@ -827,9 +827,96 @@
             }
           ],
           "transition": "CUT",
-          "duration_sec": 5,
+          "duration_sec": 4,
           "notes": "11화 '다음엔 칭찬도 길게 쓰시오'를 받는 대사",
           "image_prompt": "slow push-in on the scholar apologizing, then raising his eyes to meet hers"
+        },
+        {
+          "id": "S03-16",
+          "size": "MCU",
+          "angle": "EYE",
+          "move": "FIX",
+          "lens_mm": 50,
+          "characters": [
+            "dallae"
+          ],
+          "frame": "달래 정면. 웃음이 걷힌다. 젖은 손을 앞치마에 문지르며 묻는다.",
+          "action": "달래가 혼례를 묻는다.",
+          "dialogue": [
+            {
+              "speaker": "dallae",
+              "line": "사흘 뒤 혼례는요.",
+              "mode": "ON"
+            }
+          ],
+          "transition": "CUT",
+          "duration_sec": 2,
+          "notes": "18화 마 영감의 소식(사흘 뒤 혼례, 신랑은 정겸)",
+          "image_prompt": "dawn medium close-up of the young woman by the well, her smile fading as she wipes her wet hands and asks the hard question"
+        },
+        {
+          "id": "S03-17",
+          "size": "CU",
+          "angle": "EYE",
+          "move": "FIX",
+          "lens_mm": 85,
+          "characters": [
+            "jeonggyeom"
+          ],
+          "frame": "정겸 정면. 망설임 없이.",
+          "action": "정겸이 안 한다고 한다.",
+          "dialogue": [
+            {
+              "speaker": "jeonggyeom",
+              "line": "안 하오.",
+              "mode": "ON"
+            }
+          ],
+          "transition": "CUT",
+          "duration_sec": 2,
+          "image_prompt": "dawn close-up of the young scholar answering without hesitation"
+        },
+        {
+          "id": "S03-18",
+          "size": "ECU",
+          "angle": "EYE",
+          "move": "RACK_FOCUS",
+          "lens_mm": 85,
+          "characters": [
+            "jeonggyeom",
+            "dallae"
+          ],
+          "frame": "S03-05와 같은 옆얼굴. 초점이 귀로 넘어간다. 새벽빛 그대로, 붉은 기가 없다. 화면 끝에 귀를 다시 들여다보는 달래의 눈.",
+          "action": "귀는 새벽빛 그대로다. 달래가 그 귀를 한 번 더 본다.",
+          "motifs": [
+            "EAR_NOT_RED"
+          ],
+          "transition": "CUT",
+          "duration_sec": 2,
+          "image_prompt": "extreme close-up of the young scholar's ear in pale dawn light, completely calm, not red, the young woman's eye peering at it at the edge of frame"
+        },
+        {
+          "id": "S03-19",
+          "size": "MCU",
+          "angle": "EYE",
+          "move": "FIX",
+          "lens_mm": 50,
+          "characters": [
+            "jeonggyeom"
+          ],
+          "frame": "정겸이 한 박자 쉬고, 진지하게 청한다.",
+          "action": "정겸이 대본을 청한다.",
+          "dialogue": [
+            {
+              "speaker": "jeonggyeom",
+              "line": "…그러려면 대본이 필요하오. 작가님이 써 주시오.",
+              "mode": "ON"
+            }
+          ],
+          "transition": "CUT",
+          "duration_sec": 3,
+          "notes": "22화 S#1 '주문은 그 귀 빨간 나리가 넣었고'로 이어진다",
+          "image_prompt": "dawn medium close-up of the young scholar making a serious request, the faintest smile"
         }
       ]
     },
@@ -838,8 +925,8 @@
       "heading": "달래책방 안채 (밤)",
       "location": "dallae_anchae",
       "time": "NIGHT",
-      "tc_in": "01:45",
-      "tc_out": "02:32",
+      "tc_in": "01:50",
+      "tc_out": "02:34",
       "characters": [
         "dallae",
         "jeonggyeom"
@@ -939,7 +1026,7 @@
             "INSERT_TEXT"
           ],
           "transition": "CUT",
-          "duration_sec": 3,
+          "duration_sec": 2,
           "image_prompt": "top-down insert, the opening of a chapter in faded brushwork under lamplight"
         },
         {
@@ -1016,7 +1103,7 @@
           "action": "정겸이 붓을 들어 각 장의 첫 글자를 하나씩 적는다.",
           "sound": "(E) 붓 소리",
           "transition": "CUT",
-          "duration_sec": 3,
+          "duration_sec": 2,
           "image_prompt": "top-down insert, a slender hand making single brush marks one by one on a blank sheet"
         },
         {
@@ -1035,7 +1122,7 @@
             "INSERT_TEXT"
           ],
           "transition": "CUT",
-          "duration_sec": 3,
+          "duration_sec": 2,
           "notes": "TASKS 필수 INSERT. 글자 사이를 띄운 원문 그대로 합성",
           "image_prompt": "top-down insert, a single short row of brush marks on a sheet of paper by lamplight"
         },
@@ -1150,7 +1237,7 @@
       "heading": "남산골 옛 서당 연못 (밤)",
       "location": "namsan_seodang",
       "time": "NIGHT",
-      "tc_in": "02:32",
+      "tc_in": "02:34",
       "tc_out": "03:00",
       "characters": [
         "dallae",
@@ -1231,7 +1318,7 @@
           "action": "정겸이 도포를 벗어 던지고 진흙에 들어간다.",
           "sound": "(E) 진흙 철벅이는 소리",
           "transition": "CUT",
-          "duration_sec": 3,
+          "duration_sec": 2,
           "image_prompt": "the tall scholar flinging off his robe and wading into deep mud"
         },
         {
@@ -1281,7 +1368,7 @@
             "INSERT_TEXT"
           ],
           "transition": "CUT",
-          "duration_sec": 3,
+          "duration_sec": 2,
           "continuity": "24화 친국의 증거. 23화 S#2에서 허진이 태우는 벽장 장부와 구분되게 기름종이 포장을 유지",
           "image_prompt": "top-down insert, the plain cover of an old account ledger unwrapped from oilpaper"
         },
