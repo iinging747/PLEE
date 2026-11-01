@@ -2,7 +2,7 @@
   "series": "월하노인을 잡아라 (숏폼 24부작)",
   "episode": 22,
   "title": "혼례날",
-  "hook": "혼례 잔치에 불려 간 전기수가, 신랑이 도망가는 법을 읽는다.",
+  "hook": "혼례 잔치에 불려 간 전기수가, 신랑이 도망가는 법을 읽는다. 신랑이 직접 주문한 대본이다.",
   "runtime_sec": 180,
   "aspect": "16:9",
   "status": "review",
@@ -111,14 +111,14 @@
       "location": "dallae_anchae",
       "time": "DAWN",
       "tc_in": "00:12",
-      "tc_out": "00:37",
+      "tc_out": "00:36",
       "characters": [
         "dallae",
         "gangsu"
       ],
       "mood": "WARM",
       "summary": "새벽, 달래가 밤새 쓴 원고 '혼례날 신랑이 도망가는 법'을 강수에게 건넨다. 주문은 정겸, 막장의 법칙 하나는 '신랑에게도 사정이 있다'. 그 집 아들은 먹순만 보면 얼굴이 빨개진다.",
-      "source_text": "등잔이 다 타 간다. 달래가 밤새 쓴 원고를 묶는다. 눈은 붉지만 손은 빠르다. 강수가 붕대를 푼 팔로 원고를 받는다.\n**달래** 아버지는 끝까지 써 주셨어. 그러니까 나도 써 줄게. 오라버니 대목. (사이) 주문은 그 귀 빨간 나리가 넣었고.\nInsert. 원고 첫 장. '혼례날 신랑이 도망가는 법'.\n**강수** (원고를 넘기며) …이걸 잔치에서 읽으라고?\n**달래** 막장의 법칙. 하나, 신랑에게도 사정이 있다. (사이) 그 집 아들, 우리 먹순이만 보면 얼굴이 빨개지더라.",
+      "source_text": "등잔이 다 타 간다. 달래가 밤새 쓴 원고를 묶는다. 눈은 붉지만 손은 빠르다. 강수가 붕대를 푼 팔로 원고를 받는다.\n**달래** 아버지는 끝까지 써 주셨어. 그러니까 나도 써 줄게. 오라버니 대목. (사이) 주문은 그 귀 빨간 나리가 넣었고.\nInsert. 원고 첫 장. '혼례날 신랑이 도망가는 법'.\n**강수** (원고를 넘기며) …이걸 잔치에서 읽으라고?\n**달래** 막장의 법칙. 하나, 신랑에게도 사정이 있다. (사이) 둘, 신부에게도.",
       "shots": [
         {
           "id": "S01-01",
@@ -171,7 +171,7 @@
             }
           ],
           "transition": "CUT",
-          "duration_sec": 4,
+          "duration_sec": 3,
           "continuity": "21화에서 찾은 아버지의 소설(첫 글자 '아비는 술을 마시지 않았다')에서 이어진다",
           "image_prompt": "medium close-up of the young author with red-rimmed eyes but a steady voice, holding out the bundle"
         },
@@ -211,7 +211,7 @@
           ],
           "transition": "CUT",
           "duration_sec": 3,
-          "notes": "'귀 빨간 나리'는 정겸(18화 담장 밤의 부탁)",
+          "notes": "'귀 빨간 나리'는 정겸. 이 혼례의 신랑이 제 도망 대본을 주문했다(18화 담장 밤)",
           "image_prompt": "medium close-up of the young author adding a remark with feigned indifference, a faint smile"
         },
         {
@@ -284,19 +284,19 @@
           "characters": [
             "dallae"
           ],
-          "frame": "사이. 달래가 씩 웃는다.",
-          "action": "달래가 귀띔한다.",
+          "frame": "사이. 달래가 붉은 눈으로 웃는다. 웃는데 울 것 같다.",
+          "action": "달래가 둘째 법칙을 덧붙인다.",
           "dialogue": [
             {
               "speaker": "dallae",
-              "line": "그 집 아들, 우리 먹순이만 보면 얼굴이 빨개지더라.",
+              "line": "둘, 신부에게도.",
               "mode": "ON"
             }
           ],
           "transition": "SMASH_CUT",
           "duration_sec": 2,
-          "notes": "18화 S01-10에서 달래가 읽어 낸 눈길",
-          "image_prompt": "close-up of the young author breaking into a sly grin"
+          "notes": "신부(윤희)에게도 사정이 있다 = 강수. 신랑은 달래 자신의 사람이다",
+          "image_prompt": "close-up of the young author with red-rimmed eyes forcing a small smile that is close to tears"
         }
       ]
     },
@@ -305,14 +305,15 @@
       "heading": "윤희의 집 마당 — 초례청 (낮)",
       "location": "yunhui_house",
       "time": "DAY",
-      "tc_in": "00:37",
-      "tc_out": "01:03",
+      "tc_in": "00:36",
+      "tc_out": "01:00",
       "characters": [
         "yunhui",
-        "ma_seobang",
+        "jeonggyeom",
         "ma_yeonggam",
         "gangsu",
         "meoksun",
+        "dallae",
         "extras"
       ],
       "looks": [
@@ -321,13 +322,13 @@
           "variant": "wedding"
         },
         {
-          "character": "ma_seobang",
+          "character": "jeonggyeom",
           "variant": "wedding"
         }
       ],
       "mood": "COMEDY",
-      "summary": "홍 참판 댁 혼례 잔치. 원삼·족두리의 윤희, 사모가 자꾸 비뚤어지는 마 서방. 마 영감이 종로 제일의 전기수를 부르고, 강수는 윤희와 눈이 마주쳐도 이번엔 원고를 놓지 않는다.",
-      "source_text": "초례상 위에 나무 기러기 한 쌍. 원삼에 족두리를 쓴 윤희가 고개를 숙이고 있다. 맞은편 마 서방은 사모관대가 어색해 계속 사모를 고쳐 쓴다. 마 영감은 하객들에게 연신 절을 한다. 마당 한쪽 멍석 위에 강수가 앉아 있다. 하객들 틈에 먹순이 떡 바구니를 들고 서 있다.\n**마 영감** 자, 잔치에는 이야기가 있어야지! 종로 제일의 전기수다!\n강수가 원고를 편다. 윤희가 고개를 아주 조금 든다. 둘의 눈이 마주친다. 이번엔 강수가 원고에서 눈을 떼지 않는다.",
+      "summary": "홍 참판 댁 혼례 잔치. 원삼·족두리의 윤희, 사모관대의 신랑 정겸(표정 없이 귀만 빨갛다). 하객 틈에 먹순과 장옷을 깊이 쓴 달래. 마 영감이 전기수를 부르고, 강수는 윤희와 눈이 마주쳐도 원고를 놓지 않는다.",
+      "source_text": "초례상 위에 나무 기러기 한 쌍. 원삼에 족두리를 쓴 윤희가 고개를 숙이고 있다. 맞은편 신랑 정겸은 사모관대 차림으로 꼿꼿이 섰다. 얼굴엔 표정이 없는데 귀만 빨갛다. 잔치 돈을 댄 마 영감이 하객들 사이를 누빈다. 마당 한쪽 멍석 위에 강수가 앉아 있다. 하객들 틈에 떡 바구니를 든 먹순, 그 뒤에 장옷을 깊이 쓴 달래가 서 있다.\n**마 영감** 자, 잔치에는 이야기가 있어야지! 종로 제일의 전기수다!\n강수가 원고를 편다. 윤희가 고개를 아주 조금 든다. 둘의 눈이 마주친다. 이번엔 강수가 원고에서 눈을 떼지 않는다.",
       "shots": [
         {
           "id": "S02-01",
@@ -337,18 +338,19 @@
           "lens_mm": 24,
           "characters": [
             "yunhui",
-            "ma_seobang",
+            "jeonggyeom",
             "ma_yeonggam",
             "gangsu",
             "meoksun",
+            "dallae",
             "extras"
           ],
-          "frame": "홍 참판 댁 앞마당 초례청 전경. 화면 위쪽 사랑채 대청에 발이 드리웠다. 마당 가운데 초례상, 그 양쪽에 신부와 신랑. 아래쪽 전경에 하객들. 왼쪽 구석 멍석 위에 강수.",
+          "frame": "홍 참판 댁 앞마당 초례청 전경. 화면 위쪽 사랑채 대청에 발이 드리웠다. 마당 가운데 초례상, 왼쪽에 신랑 정겸, 오른쪽에 신부 윤희. 아래쪽 전경에 하객들. 왼쪽 구석 멍석 위에 강수.",
           "action": "혼례 잔치. 초례상을 사이에 두고 신랑 신부가 섰고, 하객들이 둘러섰다.",
           "transition": "CUT",
           "duration_sec": 3,
-          "continuity": "축: 사랑채(대청) 화면 위쪽, 하객 아래. 쪽문(대문)은 화면 왼쪽. 신부 윤희는 화면 오른쪽, 신랑 마 서방은 왼쪽",
-          "image_prompt": "high angle wide shot of a Joseon wedding ceremony in the courtyard of a vice-minister's mansion, a ceremonial table in the center with bride and groom on either side, a bamboo blind hanging over the raised main hall above, crowds of guests in the foreground, a storyteller seated on a straw mat in the corner, festive cloth canopy"
+          "continuity": "축: 사랑채(대청) 화면 위쪽, 하객 아래. 대문은 화면 왼쪽. 신랑 정겸 왼쪽, 신부 윤희 오른쪽",
+          "image_prompt": "high angle wide shot of a Joseon wedding ceremony in the courtyard of a vice-minister's mansion, a ceremonial table in the center, a tall upright bridegroom in a samo-gwandae on the left and a bride in a green wonsam on the right, a bamboo blind over the raised main hall above, guests in the foreground, a storyteller on a straw mat in the corner"
         },
         {
           "id": "S02-02",
@@ -372,11 +374,11 @@
           "characters": [
             "yunhui"
           ],
-          "frame": "원삼에 족두리를 쓴 윤희가 고개를 숙이고 있다. 연지곤지. 표정은 보이지 않는다.",
+          "frame": "원삼에 족두리를 쓴 윤희가 고개를 숙이고 있다. 연지곤지.",
           "action": "원삼에 족두리를 쓴 윤희가 고개를 숙이고 있다.",
           "transition": "CUT",
           "duration_sec": 2,
-          "image_prompt": "medium shot of a young bride in a green wonsam robe and small black jokduri coronet, head bowed, rouge dots on her cheeks, face unreadable"
+          "image_prompt": "medium shot of a young bride in a green wonsam robe and small black jokduri coronet, head bowed, rouge dots on her cheeks"
         },
         {
           "id": "S02-04",
@@ -385,16 +387,35 @@
           "move": "FIX",
           "lens_mm": 50,
           "characters": [
-            "ma_seobang"
+            "jeonggyeom"
           ],
-          "frame": "맞은편 마 서방. 사모가 자꾸 비뚤어져 계속 고쳐 쓴다. 땀을 흘린다.",
-          "action": "마 서방은 사모관대가 어색해 계속 사모를 고쳐 쓴다.",
+          "frame": "맞은편 신랑 정겸. 사모관대 차림으로 꼿꼿이 섰다. 얼굴엔 표정이 없다.",
+          "action": "신랑 정겸은 사모관대 차림으로 꼿꼿이 섰다.",
           "transition": "CUT",
-          "duration_sec": 3,
-          "image_prompt": "medium shot of a nervous young bridegroom in a samo-gwandae costume repeatedly straightening his crooked black winged hat, sweating"
+          "duration_sec": 2,
+          "image_prompt": "medium shot of a tall bridegroom standing rigidly upright in a samo-gwandae wedding costume, face completely expressionless"
         },
         {
           "id": "S02-05",
+          "size": "CU",
+          "angle": "EYE",
+          "move": "FIX",
+          "lens_mm": 85,
+          "characters": [
+            "jeonggyeom"
+          ],
+          "frame": "사모 아래 정겸의 귀. 새빨갛다.",
+          "action": "얼굴엔 표정이 없는데 귀만 빨갛다.",
+          "motifs": [
+            "EAR_RED"
+          ],
+          "transition": "CUT",
+          "duration_sec": 2,
+          "notes": "거짓말이 아니라 거짓 혼례에 서 있는 귀. 1화부터의 귀 모티프",
+          "image_prompt": "close-up of a young man's ear under a black winged samo hat, flushed bright red"
+        },
+        {
+          "id": "S02-06",
           "size": "MS",
           "angle": "EYE",
           "move": "PAN_L",
@@ -403,8 +424,8 @@
             "ma_yeonggam",
             "extras"
           ],
-          "frame": "마 영감이 하객들에게 연신 절을 하다가 멍석 쪽으로 팔을 벌린다.",
-          "action": "마 영감은 하객들에게 연신 절을 한다.",
+          "frame": "잔치 돈을 댄 마 영감이 하객들 사이를 누비다 멍석 쪽으로 팔을 벌린다.",
+          "action": "마 영감이 전기수를 부른다.",
           "dialogue": [
             {
               "speaker": "ma_yeonggam",
@@ -413,11 +434,11 @@
             }
           ],
           "transition": "CUT",
-          "duration_sec": 4,
-          "image_prompt": "medium shot panning with a pudgy old man in shiny silk bowing again and again to the guests, then flinging an arm out toward the storyteller's mat"
+          "duration_sec": 3,
+          "image_prompt": "medium shot panning with a pudgy old man in shiny silk weaving through the wedding guests, then flinging an arm toward the storyteller's straw mat"
         },
         {
-          "id": "S02-06",
+          "id": "S02-07",
           "size": "MS",
           "angle": "EYE",
           "move": "FIX",
@@ -425,31 +446,33 @@
           "characters": [
             "gangsu"
           ],
-          "frame": "멍석 위의 강수가 원고 묶음을 푼다. 부채는 무릎 옆에 접어 두었다.",
+          "frame": "멍석 위의 강수가 원고 묶음을 푼다.",
           "action": "강수가 원고를 편다.",
           "transition": "CUT",
           "duration_sec": 2,
-          "continuity": "강수 붕대를 풀었다(22화부터 붕대·목덜미 무명 없음). 왼쪽 팔뚝에 아문 칼자국만. 차림은 기본(회색 도포, 낡은 갓)",
-          "image_prompt": "medium shot of the storyteller seated on a straw mat untying a manuscript bundle, folded fan resting by his knee"
+          "continuity": "22화부터 강수 팔 붕대 없음. 기본 차림(회색 도포, 낡은 갓)",
+          "image_prompt": "medium shot of the storyteller on a straw mat untying a manuscript bundle"
         },
         {
-          "id": "S02-07",
+          "id": "S02-08",
           "size": "MS",
           "angle": "EYE",
           "move": "FIX",
           "lens_mm": 50,
           "characters": [
             "meoksun",
+            "dallae",
             "extras"
           ],
-          "frame": "하객들 틈. 떡 바구니를 든 먹순이 까치발로 신랑 쪽을 본다.",
-          "action": "하객들 틈에 먹순이 떡 바구니를 들고 서 있다.",
+          "frame": "하객들 틈. 떡 바구니를 든 먹순, 그 뒤에 장옷을 깊이 쓴 달래. 얼굴은 반만 보인다.",
+          "action": "하객들 틈에 떡 바구니를 든 먹순, 그 뒤에 장옷을 깊이 쓴 달래가 서 있다.",
           "transition": "CUT",
           "duration_sec": 2,
-          "image_prompt": "medium shot, among wedding guests, a shop girl holding a basket of rice cakes standing on tiptoe to see"
+          "notes": "달래는 쓰개치마 대신 장옷을 깊이 썼다. 자기가 쓴 대본이 읽히는 혼례를 지켜본다",
+          "image_prompt": "medium shot among wedding guests, a shop girl holding a basket of rice cakes and behind her a petite young woman with a cloak pulled low over her head, half her face hidden, watching the groom"
         },
         {
-          "id": "S02-08",
+          "id": "S02-09",
           "size": "CU",
           "angle": "EYE",
           "move": "FIX",
@@ -460,11 +483,11 @@
           "frame": "윤희가 고개를 아주 조금 든다. 족두리 아래 눈.",
           "action": "윤희가 고개를 아주 조금 든다.",
           "transition": "CUT",
-          "duration_sec": 3,
-          "image_prompt": "close-up of the bride lifting her head just slightly, her quick clever eyes appearing beneath the jokduri coronet"
+          "duration_sec": 2,
+          "image_prompt": "close-up of the bride lifting her head just slightly, quick clever eyes beneath the coronet"
         },
         {
-          "id": "S02-09",
+          "id": "S02-10",
           "size": "CU",
           "angle": "EYE",
           "move": "FIX",
@@ -479,7 +502,7 @@
           "image_prompt": "close-up of the storyteller meeting her eyes across the courtyard"
         },
         {
-          "id": "S02-10",
+          "id": "S02-11",
           "size": "MCU",
           "angle": "EYE",
           "move": "DOLLY_IN",
@@ -487,12 +510,12 @@
           "characters": [
             "gangsu"
           ],
-          "frame": "강수가 숨을 고르고 시선을 원고로 내린다. 이번엔 원고에서 눈을 떼지 않는다. 천천히 다가간다.",
+          "frame": "강수가 숨을 고르고 시선을 원고로 내린다. 이번엔 원고에서 눈을 떼지 않는다.",
           "action": "이번엔 강수가 원고에서 눈을 떼지 않는다.",
           "transition": "CUT",
-          "duration_sec": 3,
-          "notes": "8화 병풍 장면에서는 눈이 마주치자 대사를 잊었다. 이번엔 원고를 끝까지 붙든다",
-          "image_prompt": "slow push-in on the storyteller drawing a breath and fixing his eyes firmly on the manuscript, steady this time"
+          "duration_sec": 2,
+          "notes": "8화 병풍 장면에서는 눈이 마주치자 대사를 잊었다",
+          "image_prompt": "slow push-in on the storyteller drawing a breath and fixing his eyes firmly on the manuscript"
         }
       ]
     },
@@ -501,14 +524,14 @@
       "heading": "같은 장소 (낮)",
       "location": "yunhui_house",
       "time": "DAY",
-      "tc_in": "01:03",
-      "tc_out": "02:03",
+      "tc_in": "01:00",
+      "tc_out": "02:00",
       "characters": [
         "gangsu",
+        "jeonggyeom",
         "extras",
-        "ma_seobang",
+        "dallae",
         "meoksun",
-        "ma_yeonggam",
         "yunhui"
       ],
       "looks": [
@@ -517,13 +540,13 @@
           "variant": "wedding"
         },
         {
-          "character": "ma_seobang",
+          "character": "jeonggyeom",
           "variant": "wedding"
         }
       ],
       "mood": "COMEDY",
-      "summary": "강수가 신랑이 도망가는 대목을 읽자 마 서방이 사모를 떨어뜨리며 먹순을 좋아한다고 외친다. 윤희는 족두리를 벗고 '파혼은 제가 고를게요'. 홍 참판은 강수를 끌어내고 윤희를 별당에 가둔다. 두 사람 사이로 대문이 닫힌다.",
-      "source_text": "**강수** 옛날 옛적, 혼례날 아침에 신랑이 울었소. 신부가 싫어서가 아니라, 다른 사람을 좋아해서. 책방에서 먹 냄새를 맡고, 떡을 나눠 먹던 그 사람을.\n하객들이 웃는다. 마 서방의 얼굴이 하얘진다. 먹순의 떡 바구니가 기운다.\n**강수** 신랑은 생각했소. 오늘 말하지 않으면, 평생 남의 대사로 살겠구나.\n마 서방이 초례상 앞으로 한 걸음 나선다. 사모가 떨어진다.\n**마 서방** 아버지! 저 딴 사람 있어요! (손가락으로 가리키며) 먹순이요!\n**먹순** (떡을 문 채) …저요?\n**마 영감** 이놈아! 너 미쳤냐!\n**홍 참판** (O.S., 대청에서) 이게 무슨 해괴한 짓이냐!\n윤희가 천천히 족두리를 벗어 초례상에 내려놓는다.\n**윤희** 아버지. 혼처는 아버지가 고르셨으니, 파혼은 제가 고를게요.\n마당이 조용해진다. 나무 기러기 한 마리가 상 위에서 쓰러진다.\n**홍 참판** (O.S.) 저 광대 놈부터 끌어내라!\n하인 둘이 강수의 양팔을 잡는다. 강수는 원고를 놓지 않는다. 대문 밖으로 끌려 나가며 돌아본다. 족두리를 벗은 윤희가 마당 한가운데 서서 그를 본다.\n**홍 참판** (O.S.) 저 아이는 별당에 가둬라. 오늘부터 담 밖으로 한 발짝도 못 나간다.\n하녀 둘이 윤희의 양팔을 잡는다. 강수는 대문 밖으로, 윤희는 별당 쪽으로. 그 사이로 대문이 닫힌다.",
+      "summary": "강수가 신랑이 도망가는 대목을 읽자 신랑 정겸이 사모를 벗고 '제 정혼자는 따로 있습니다. 가짜로 시작했지만.' 귀는 빨갛지 않다. 윤희는 족두리를 벗고 '파혼은 제가 고를게요'. 홍 참판은 전기수만 포도청에 넘겨 곤장을 치라 하고, 신랑은 내보내고, 윤희는 별당에 가둔다. 정겸은 하객 틈의 달래에게 '대본대로 했소'. 두 사람 사이로 대문이 닫힌다.",
+      "source_text": "**강수** 옛날 옛적, 혼례날 아침에 신랑이 울었소. 신부가 싫어서가 아니라, 다른 사람을 좋아해서. 책방에서 먹 냄새를 맡고, 하숙비를 깎던 그 사람을.\n하객들이 웃는다. 신랑의 귀가 더 빨개진다. 하객 틈에서 장옷 자락이 움찔한다.\n**강수** 신랑은 생각했소. 오늘 말하지 않으면, 평생 남의 대사로 살겠구나.\n정겸이 초례상 앞으로 한 걸음 나선다. 사모를 벗어 상 위에 내려놓는다.\n**정겸** 저는 이 혼인을 할 수 없습니다. 제 정혼자는 따로 있습니다. (사이) 가짜로 시작했지만.\n장옷 아래 달래의 얼굴이 하얘진다. 먹순의 떡 바구니가 기운다.\n**홍 참판** (O.S., 대청에서) 이게 무슨 해괴한 짓이냐!\n윤희가 천천히 족두리를 벗어, 사모 옆에 내려놓는다.\n**윤희** 아버지. 혼처는 아버지가 고르셨으니, 파혼은 제가 고를게요.\n마당이 조용해진다. 나무 기러기 한 마리가 상 위에서 쓰러진다.\n**홍 참판** (O.S.) 저 광대 놈은 포도청에 넘겨라! 남의 혼사를 어지럽혔으니 곤장이다. 검서는 내보내고!\n하인 둘이 강수의 양팔을 잡는다. 강수는 원고를 놓지 않는다. 정겸은 제 발로 대문을 향해 걷다가, 하객 틈의 장옷 앞에서 한 번 멈춘다.\n**정겸** (낮게) 대본대로 했소.\n**달래** (장옷 속에서) …'가짜로 시작했지만'은 대본에 없었는데요.\n대문 밖으로 끌려 나가며 강수가 돌아본다. 족두리를 벗은 윤희가 마당 한가운데 서서 그를 본다.\n**홍 참판** (O.S.) 저 아이는 별당에 가둬라. 오늘부터 담 밖으로 한 발짝도 못 나간다.\n하녀 둘이 윤희의 양팔을 잡는다. 강수와 정겸은 대문 밖으로, 윤희는 별당 쪽으로. 그 사이로 대문이 닫힌다.",
       "shots": [
         {
           "id": "S03-01",
@@ -544,7 +567,7 @@
             }
           ],
           "transition": "CUT",
-          "duration_sec": 3,
+          "duration_sec": 4,
           "image_prompt": "low angle medium shot of the storyteller reading aloud from a manuscript in his rich stage voice, wedding canopy behind"
         },
         {
@@ -556,18 +579,18 @@
           "characters": [
             "gangsu"
           ],
-          "frame": "강수가 한 줄을 읽고 하객 쪽을 슬쩍 본다.",
+          "frame": "강수가 한 줄을 읽고 신랑 쪽을 슬쩍 본다.",
           "action": "강수가 이어 읽는다.",
           "dialogue": [
             {
               "speaker": "gangsu",
-              "line": "책방에서 먹 냄새를 맡고, 떡을 나눠 먹던 그 사람을.",
+              "line": "책방에서 먹 냄새를 맡고, 하숙비를 깎던 그 사람을.",
               "mode": "ON"
             }
           ],
           "transition": "CUT",
-          "duration_sec": 4,
-          "image_prompt": "medium close-up of the storyteller reading, glancing up at the guests with a knowing look"
+          "duration_sec": 3,
+          "image_prompt": "medium close-up of the storyteller reading, glancing sideways at the groom"
         },
         {
           "id": "S03-03",
@@ -583,7 +606,7 @@
           "sound": "(E) 하객들 웃음",
           "transition": "CUT",
           "duration_sec": 2,
-          "image_prompt": "group shot of wedding guests laughing at the story"
+          "image_prompt": "group shot of wedding guests laughing"
         },
         {
           "id": "S03-04",
@@ -592,16 +615,137 @@
           "move": "FIX",
           "lens_mm": 85,
           "characters": [
-            "ma_seobang"
+            "jeonggyeom"
           ],
-          "frame": "마 서방의 얼굴이 하얘진다.",
-          "action": "마 서방의 얼굴이 하얘진다.",
+          "frame": "신랑의 귀가 더 빨개진다.",
+          "action": "신랑의 귀가 더 빨개진다.",
+          "motifs": [
+            "EAR_RED"
+          ],
           "transition": "CUT",
           "duration_sec": 2,
-          "image_prompt": "close-up of the bridegroom going pale under his crooked winged hat"
+          "image_prompt": "close-up of the bridegroom's ear turning even redder under the samo hat"
         },
         {
           "id": "S03-05",
+          "size": "MS",
+          "angle": "EYE",
+          "move": "FIX",
+          "lens_mm": 50,
+          "characters": [
+            "dallae",
+            "extras"
+          ],
+          "frame": "하객 틈의 장옷 자락이 움찔한다.",
+          "action": "하객 틈에서 장옷 자락이 움찔한다.",
+          "transition": "CUT",
+          "duration_sec": 2,
+          "image_prompt": "medium shot, among the guests the hem of a cloak pulled over a young woman's head flinches"
+        },
+        {
+          "id": "S03-06",
+          "size": "MCU",
+          "angle": "EYE",
+          "move": "DOLLY_IN",
+          "lens_mm": 50,
+          "characters": [
+            "gangsu"
+          ],
+          "frame": "강수가 원고를 읽는다. 천천히 다가간다. 신랑의 이야기이자 강수 자신의 이야기.",
+          "action": "강수가 신랑의 속마음을 읽는다.",
+          "dialogue": [
+            {
+              "speaker": "gangsu",
+              "line": "신랑은 생각했소. 오늘 말하지 않으면, 평생 남의 대사로 살겠구나.",
+              "mode": "ON"
+            }
+          ],
+          "transition": "CUT",
+          "duration_sec": 4,
+          "image_prompt": "slow push-in on the storyteller reading the line with quiet weight, as if speaking of himself"
+        },
+        {
+          "id": "S03-07",
+          "size": "MS",
+          "angle": "EYE",
+          "move": "FIX",
+          "lens_mm": 50,
+          "characters": [
+            "jeonggyeom"
+          ],
+          "frame": "정겸이 초례상 앞으로 한 걸음 나선다. 두 손으로 사모를 벗어 상 위에 내려놓는다.",
+          "action": "정겸이 초례상 앞으로 한 걸음 나선다. 사모를 벗어 상 위에 내려놓는다.",
+          "transition": "CUT",
+          "duration_sec": 2,
+          "notes": "이 컷부터 정겸은 사모 없이 망건·상투에 관대 차림",
+          "image_prompt": "medium shot of the bridegroom stepping forward and removing his black winged samo hat with both hands, setting it on the ceremony table"
+        },
+        {
+          "id": "S03-08",
+          "size": "MCU",
+          "angle": "EYE",
+          "move": "FIX",
+          "lens_mm": 50,
+          "characters": [
+            "jeonggyeom"
+          ],
+          "frame": "정겸이 하객 쪽을 똑바로 본다. 목소리는 낮고 또렷하다.",
+          "action": "정겸이 혼인을 거절한다.",
+          "dialogue": [
+            {
+              "speaker": "jeonggyeom",
+              "line": "저는 이 혼인을 할 수 없습니다. 제 정혼자는 따로 있습니다.",
+              "mode": "ON"
+            }
+          ],
+          "transition": "CUT",
+          "duration_sec": 4,
+          "notes": "2화 달래의 '이분이 제 정혼자예요!'를 거꾸로 갚는 대사",
+          "image_prompt": "medium close-up of the hatless bridegroom facing the guests, voice low and clear"
+        },
+        {
+          "id": "S03-09",
+          "size": "CU",
+          "angle": "EYE",
+          "move": "FIX",
+          "lens_mm": 85,
+          "characters": [
+            "jeonggyeom"
+          ],
+          "frame": "사이. 정겸의 귀. 이번엔 빨갛지 않다.",
+          "action": "정겸이 덧붙인다.",
+          "dialogue": [
+            {
+              "speaker": "jeonggyeom",
+              "line": "가짜로 시작했지만.",
+              "mode": "ON"
+            }
+          ],
+          "motifs": [
+            "EAR_NOT_RED"
+          ],
+          "transition": "CUT",
+          "duration_sec": 2,
+          "notes": "거짓말이 아니라서 귀가 빨갛지 않다. 21화 우물가 귀와 같은 규칙",
+          "image_prompt": "close-up of the young man's ear, now completely calm and not red at all"
+        },
+        {
+          "id": "S03-10",
+          "size": "CU",
+          "angle": "EYE",
+          "move": "FIX",
+          "lens_mm": 85,
+          "characters": [
+            "dallae"
+          ],
+          "frame": "장옷 아래 달래의 얼굴이 하얘진다.",
+          "action": "장옷 아래 달래의 얼굴이 하얘진다.",
+          "transition": "CUT",
+          "duration_sec": 2,
+          "image_prompt": "close-up of a young woman's face under a cloak going pale with shock"
+        },
+        {
+          "id": "S03-11",
           "size": "INSERT",
           "angle": "EYE",
           "move": "FIX",
@@ -614,130 +758,6 @@
           "transition": "CUT",
           "duration_sec": 2,
           "image_prompt": "insert, a basket of rice cakes tilting in a girl's hands, one rice cake tumbling out"
-        },
-        {
-          "id": "S03-06",
-          "size": "MCU",
-          "angle": "EYE",
-          "move": "DOLLY_IN",
-          "lens_mm": 50,
-          "characters": [
-            "gangsu"
-          ],
-          "frame": "강수가 원고를 읽는다. 천천히 다가간다. 원고의 신랑 이야기이자 강수 자신의 이야기.",
-          "action": "강수가 신랑의 속마음을 읽는다.",
-          "dialogue": [
-            {
-              "speaker": "gangsu",
-              "line": "신랑은 생각했소. 오늘 말하지 않으면, 평생 남의 대사로 살겠구나.",
-              "mode": "ON"
-            }
-          ],
-          "transition": "CUT",
-          "duration_sec": 4,
-          "notes": "18화 '대본 없이'와 이어지는 대사. 강수가 제게 하는 말이기도 하다",
-          "image_prompt": "slow push-in on the storyteller reading the line with quiet weight, as if speaking of himself"
-        },
-        {
-          "id": "S03-07",
-          "size": "MS",
-          "angle": "EYE",
-          "move": "FIX",
-          "lens_mm": 50,
-          "characters": [
-            "ma_seobang"
-          ],
-          "frame": "마 서방이 초례상 앞으로 한 걸음 나선다. 사모가 머리에서 떨어진다.",
-          "action": "마 서방이 초례상 앞으로 한 걸음 나선다. 사모가 떨어진다.",
-          "transition": "CUT",
-          "duration_sec": 3,
-          "image_prompt": "medium shot of the bridegroom stepping forward to the ceremony table, his black winged samo hat falling off his head"
-        },
-        {
-          "id": "S03-08",
-          "size": "INSERT",
-          "angle": "HIGH",
-          "move": "FIX",
-          "lens_mm": 50,
-          "characters": [],
-          "frame": "사모가 마당 흙바닥에 떨어져 구른다.",
-          "action": "사모가 떨어진다.",
-          "transition": "CUT",
-          "duration_sec": 1,
-          "image_prompt": "insert, a black winged official's hat bouncing and rolling on the packed earth of a courtyard"
-        },
-        {
-          "id": "S03-09",
-          "size": "MS",
-          "angle": "EYE",
-          "move": "FIX",
-          "lens_mm": 35,
-          "characters": [
-            "ma_seobang",
-            "meoksun"
-          ],
-          "frame": "맨상투가 된 마 서방이 하객들 틈을 손가락으로 가리킨다. 손가락 끝에 먹순.",
-          "action": "마 서방이 외친다.",
-          "dialogue": [
-            {
-              "speaker": "ma_seobang",
-              "line": "아버지! 저 딴 사람 있어요!",
-              "mode": "ON"
-            },
-            {
-              "speaker": "ma_seobang",
-              "line": "먹순이요!",
-              "mode": "ON"
-            }
-          ],
-          "transition": "CUT",
-          "duration_sec": 4,
-          "notes": "사모가 떨어진 뒤라 관대 차림에 맨상투",
-          "image_prompt": "medium shot of the hatless bridegroom with his topknot exposed, pointing a trembling finger into the crowd of guests toward a shop girl"
-        },
-        {
-          "id": "S03-10",
-          "size": "CU",
-          "angle": "EYE",
-          "move": "FIX",
-          "lens_mm": 85,
-          "characters": [
-            "meoksun"
-          ],
-          "frame": "먹순이 떡을 문 채 굳는다.",
-          "action": "먹순이 떡을 문 채 되묻는다.",
-          "dialogue": [
-            {
-              "speaker": "meoksun",
-              "line": "…저요?",
-              "mode": "ON"
-            }
-          ],
-          "transition": "CUT",
-          "duration_sec": 2,
-          "image_prompt": "close-up of the shop girl frozen with a rice cake in her mouth, eyes huge"
-        },
-        {
-          "id": "S03-11",
-          "size": "MCU",
-          "angle": "EYE",
-          "move": "FIX",
-          "lens_mm": 50,
-          "characters": [
-            "ma_yeonggam"
-          ],
-          "frame": "마 영감이 주판을 떨어뜨리며 소리친다.",
-          "action": "마 영감이 노발대발한다.",
-          "dialogue": [
-            {
-              "speaker": "ma_yeonggam",
-              "line": "이놈아! 너 미쳤냐!",
-              "mode": "ON"
-            }
-          ],
-          "transition": "CUT",
-          "duration_sec": 2,
-          "image_prompt": "medium close-up of the pudgy old moneylender shouting, abacus slipping from his hand"
         },
         {
           "id": "S03-12",
@@ -758,9 +778,9 @@
             }
           ],
           "transition": "CUT",
-          "duration_sec": 3,
+          "duration_sec": 2,
           "notes": "화자는 홍 참판(extras). 얼굴을 보이지 않는다. 대청 발 너머 그림자와 목소리만",
-          "image_prompt": "low angle, the raised main hall of the mansion behind a hanging bamboo blind, the shadow of a nobleman in a gat rising abruptly behind it"
+          "image_prompt": "low angle, the raised main hall behind a hanging bamboo blind, the shadow of a nobleman in a gat rising abruptly"
         },
         {
           "id": "S03-13",
@@ -774,7 +794,7 @@
           "frame": "윤희가 천천히 두 손을 올려 족두리를 벗는다.",
           "action": "윤희가 천천히 족두리를 벗는다.",
           "transition": "CUT",
-          "duration_sec": 3,
+          "duration_sec": 2,
           "image_prompt": "medium shot of the bride slowly raising both hands to lift the black jokduri coronet from her head"
         },
         {
@@ -786,11 +806,11 @@
           "characters": [
             "yunhui"
           ],
-          "frame": "족두리가 초례상 위, 나무 기러기 옆에 놓인다.",
-          "action": "족두리를 초례상에 내려놓는다.",
+          "frame": "족두리가 초례상 위, 정겸이 벗어 둔 사모 옆에 놓인다.",
+          "action": "족두리를 사모 옆에 내려놓는다.",
           "transition": "CUT",
           "duration_sec": 2,
-          "image_prompt": "insert, a small black bridal coronet being set down on the ceremony table beside the wooden geese"
+          "image_prompt": "insert, a small black bridal coronet being set down on the ceremony table right beside a black winged official's hat"
         },
         {
           "id": "S03-15",
@@ -812,7 +832,7 @@
           ],
           "transition": "CUT",
           "duration_sec": 4,
-          "notes": "8화 '혼처는 아버지가 고르시거든요. 그래서 소설은 제가 골라요'의 짝. 족두리를 벗은 원삼 차림",
+          "notes": "8화 '혼처는 아버지가 고르시거든요. 그래서 소설은 제가 골라요'의 짝",
           "image_prompt": "medium close-up of the bride, coronet removed, looking straight up at the main hall with calm defiance"
         },
         {
@@ -839,17 +859,17 @@
             "extras"
           ],
           "frame": "대청 발 너머 그림자가 마당을 가리킨다.",
-          "action": "홍 참판이 강수를 끌어내라 한다.",
+          "action": "홍 참판이 강수를 포도청에 넘기라 한다.",
           "dialogue": [
             {
               "speaker": "extras",
-              "line": "저 광대 놈부터 끌어내라!",
+              "line": "저 광대 놈은 포도청에 넘겨라! 남의 혼사를 어지럽혔으니 곤장이다. 검서는 내보내고!",
               "mode": "OS"
             }
           ],
           "transition": "CUT",
-          "duration_sec": 2,
-          "notes": "화자는 홍 참판(extras). 얼굴을 보이지 않는다. 대청 발 너머 그림자와 목소리만",
+          "duration_sec": 3,
+          "notes": "화자는 홍 참판(extras). 얼굴을 보이지 않는다. 대청 발 너머 그림자와 목소리만. 같은 일에 양반 신랑은 '내보내고', 평민 전기수는 곤장. 신분의 벽이 처음으로 값을 매기는 대사",
           "image_prompt": "low angle, behind the bamboo blind the nobleman's shadow thrusting an arm toward the courtyard"
         },
         {
@@ -865,11 +885,74 @@
           "frame": "핸드헬드. 하인 둘이 강수의 양팔을 잡는다. 강수는 원고를 가슴에 붙든 채 놓지 않는다.",
           "action": "하인 둘이 강수의 양팔을 잡는다. 강수는 원고를 놓지 않는다.",
           "transition": "CUT",
-          "duration_sec": 3,
+          "duration_sec": 2,
           "image_prompt": "handheld medium shot, two male servants seizing the storyteller by both arms as he clutches the manuscript to his chest"
         },
         {
           "id": "S03-19",
+          "size": "MS",
+          "angle": "EYE",
+          "move": "FIX",
+          "lens_mm": 35,
+          "characters": [
+            "jeonggyeom",
+            "dallae",
+            "extras"
+          ],
+          "frame": "정겸은 아무도 붙잡지 않는다. 제 발로 대문 쪽으로 걷다가, 하객 틈의 장옷 앞에서 멈춘다.",
+          "action": "정겸은 제 발로 대문을 향해 걷다가, 하객 틈의 장옷 앞에서 한 번 멈춘다.",
+          "transition": "CUT",
+          "duration_sec": 2,
+          "image_prompt": "medium shot, the hatless bridegroom walking toward the gate on his own, no one holding him, stopping in front of a cloaked young woman among the guests"
+        },
+        {
+          "id": "S03-20",
+          "size": "2S",
+          "angle": "EYE",
+          "move": "FIX",
+          "lens_mm": 50,
+          "characters": [
+            "jeonggyeom",
+            "dallae"
+          ],
+          "frame": "투숏. 정겸이 앞만 보고 낮게 말한다. 장옷은 고개를 들지 않는다.",
+          "action": "정겸이 낮게 말한다.",
+          "dialogue": [
+            {
+              "speaker": "jeonggyeom",
+              "line": "대본대로 했소.",
+              "mode": "WHISPER"
+            }
+          ],
+          "transition": "CUT",
+          "duration_sec": 2,
+          "image_prompt": "two-shot, the groom speaking low without turning his head, the cloaked woman beside him keeping her face down"
+        },
+        {
+          "id": "S03-21",
+          "size": "CU",
+          "angle": "EYE",
+          "move": "FIX",
+          "lens_mm": 85,
+          "characters": [
+            "dallae"
+          ],
+          "frame": "장옷 속 달래. 젖은 눈으로 웃음을 참는다.",
+          "action": "달래가 장옷 속에서 대답한다.",
+          "dialogue": [
+            {
+              "speaker": "dallae",
+              "line": "…'가짜로 시작했지만'은 대본에 없었는데요.",
+              "mode": "WHISPER"
+            }
+          ],
+          "transition": "CUT",
+          "duration_sec": 2,
+          "notes": "13화 윤희의 '그건 책에 없는 줄인데요'와 짝. 대본에 없는 줄이 진심",
+          "image_prompt": "close-up under a cloak, the young author with wet eyes trying not to smile"
+        },
+        {
+          "id": "S03-22",
           "size": "LS",
           "angle": "OTS",
           "move": "TRACK_L",
@@ -879,15 +962,14 @@
             "yunhui",
             "extras"
           ],
-          "frame": "끌려가는 강수의 어깨 너머. 대문(화면 왼쪽)으로 끌려 나가며 돌아본다. 마당 한가운데 족두리를 벗은 윤희가 홀로 서서 그를 본다.",
-          "action": "대문 밖으로 끌려 나가며 돌아본다. 족두리를 벗은 윤희가 마당 한가운데 서서 그를 본다.",
+          "frame": "끌려가는 강수의 어깨 너머. 대문으로 끌려 나가며 돌아본다. 마당 한가운데 족두리를 벗은 윤희가 홀로 서서 그를 본다.",
+          "action": "대문 밖으로 끌려 나가며 강수가 돌아본다. 족두리를 벗은 윤희가 마당 한가운데 서서 그를 본다.",
           "transition": "CUT",
-          "duration_sec": 3,
-          "notes": "족두리를 벗은 원삼 차림",
-          "image_prompt": "over-the-shoulder tracking shot from behind the storyteller being dragged out of the gate, looking back at the bride without her coronet standing alone in the middle of the stunned courtyard"
+          "duration_sec": 2,
+          "image_prompt": "over-the-shoulder tracking shot from behind the storyteller being dragged toward the gate, looking back at the bride without her coronet standing alone in the stunned courtyard"
         },
         {
-          "id": "S03-20",
+          "id": "S03-23",
           "size": "CU",
           "angle": "EYE",
           "move": "FIX",
@@ -895,7 +977,7 @@
           "characters": [
             "yunhui"
           ],
-          "frame": "족두리를 벗은 윤희. 대청에서 아버지의 목소리가 떨어진다. 윤희는 대청을 올려다보지 않는다. 대문 쪽, 끌려 나가는 강수만 본다.",
+          "frame": "족두리를 벗은 윤희. 대청에서 아버지의 목소리가 떨어진다. 윤희는 대문 쪽만 본다.",
           "action": "홍 참판이 윤희를 별당에 가두라 명한다.",
           "dialogue": [
             {
@@ -905,12 +987,12 @@
             }
           ],
           "transition": "CUT",
-          "duration_sec": 4,
-          "notes": "화자는 홍 참판(extras). 얼굴을 보이지 않는다. 족두리를 벗은 원삼 차림",
-          "image_prompt": "close-up of the bride without her coronet standing still in the courtyard, a stern voice falling from the main hall above, her eyes fixed only on the gate where a man is being dragged away"
+          "duration_sec": 2,
+          "notes": "화자는 홍 참판(extras). 얼굴을 보이지 않는다. 대청 발 너머 그림자와 목소리만",
+          "image_prompt": "close-up of the bride without her coronet, a stern voice falling from the main hall, her eyes fixed only on the gate"
         },
         {
-          "id": "S03-21",
+          "id": "S03-24",
           "size": "MS",
           "angle": "EYE",
           "move": "FIX",
@@ -919,15 +1001,15 @@
             "yunhui",
             "extras"
           ],
-          "frame": "하녀 둘이 양쪽에서 윤희의 팔을 잡는다. S03-18 강수를 잡는 하인 둘과 같은 구도, 방향만 반대(별당 쪽, 화면 오른쪽).",
+          "frame": "하녀 둘이 양쪽에서 윤희의 팔을 잡는다. S03-18과 같은 구도, 방향만 반대(별당 쪽, 화면 오른쪽).",
           "action": "하녀 둘이 윤희의 양팔을 잡는다.",
           "transition": "CUT",
           "duration_sec": 2,
-          "continuity": "강수는 화면 왼쪽(대문), 윤희는 화면 오른쪽(별당)으로 끌려간다",
-          "image_prompt": "medium shot, two maids taking the bride by both arms from either side and turning her toward the inner quarters, mirroring the servants dragging the man the other way"
+          "continuity": "강수·정겸은 화면 왼쪽(대문), 윤희는 화면 오른쪽(별당)",
+          "image_prompt": "medium shot, two maids taking the bride by both arms and turning her toward the inner quarters, mirroring the servants dragging the man the other way"
         },
         {
-          "id": "S03-22",
+          "id": "S03-25",
           "size": "LS",
           "angle": "EYE",
           "move": "FIX",
@@ -935,20 +1017,20 @@
           "location": "yunhui_house",
           "characters": [
             "gangsu",
+            "jeonggyeom",
             "yunhui",
             "extras"
           ],
-          "frame": "대문 밖 골목에서 본 대문. 두 짝 대문이 닫혀 들어오는 틈으로, 마당 안쪽 별당으로 끌려가는 원삼 자락이 보이다가 사라진다. 대문 앞에 내동댕이쳐진 강수의 등. 쾅.",
-          "action": "강수는 대문 밖으로, 윤희는 별당 쪽으로. 그 사이로 대문이 닫힌다.",
+          "frame": "대문 밖 골목에서 본 대문. 닫혀 들어오는 두 짝 대문 틈으로, 별당 쪽으로 끌려가는 원삼 자락이 보이다 사라진다. 대문 앞에 하인들에게 붙들린 강수, 그 곁에 사모 없이 선 정겸. 쾅.",
+          "action": "강수와 정겸은 대문 밖으로, 윤희는 별당 쪽으로. 그 사이로 대문이 닫힌다.",
           "sound": "(E) 대문 닫히는 소리 쾅, 빗장",
           "motifs": [
             "WALL",
             "DOOR_GAP"
           ],
           "transition": "CUT",
-          "duration_sec": 3,
-          "notes": "두 사람 사이에 처음으로 진짜 문이 닫히는 컷. S#4 꽃살 담장으로 이어진다",
-          "image_prompt": "from the alley outside, the two leaves of a mansion's wooden gate swinging shut, through the narrowing gap a glimpse of a bride in a green ceremonial robe being led away inside, a man thrown down on the ground before the gate"
+          "duration_sec": 2,
+          "image_prompt": "from the alley outside, the two leaves of a mansion's wooden gate swinging shut, through the narrowing gap a glimpse of a bride in a green robe being led away inside, outside the gate a storyteller held by servants and a hatless bridegroom standing beside him"
         }
       ]
     },
@@ -957,15 +1039,15 @@
       "heading": "윤희의 집 별당 담장 밖 (밤)",
       "location": "yunhui_byeoldang",
       "time": "NIGHT",
-      "tc_in": "02:03",
+      "tc_in": "02:00",
       "tc_out": "02:45",
       "characters": [
         "gangsu",
         "yunhui"
       ],
       "mood": "ROMANCE",
-      "summary": "갇힌 별당의 담장 꽃살 구멍을 사이에 두고 강수가 대본 없이 고백한다. 윤희는 엽전을 아껴 두었다가 종로 평상 맨 앞줄에서 던지겠다고, 온 종로가 떠들라고 앉겠다고 한다.",
-      "source_text": "잔치 등롱이 하나둘 꺼진다. 담장 밖 골목에 강수가 서 있다. 도포 소매가 찢어지고 이마에 흙이 묻었다. 담장에 낸 꽃살 구멍 너머로 분홍 저고리가 비친다. 윤희다.\n**윤희** (담 너머) 다친 데는요.\n**강수** 곤장은 면했소. 하인들이 내 낭독을 좋아해서.\n윤희가 웃는다. 담은 높고, 구멍은 손바닥만 하다.\n**강수** 대본 없이 하겠소. 아씨 앞에서는 대사를 다 까먹으니까. (숨을 고르고) 좋아하오.\n꽃살 구멍 너머의 눈이 강수를 오래 본다. 처음 병풍 틈으로 보던 그 눈이다.\n**윤희** …다음 대목은요?\n**강수** 그건 엽전 소리를 들어야 나오는 법이오.\n윤희가 꽃살 구멍으로 엽전 하나를 내민다. 강수가 손을 뻗는 순간, 다시 거둬 쥔다.\n**윤희** 엽전은 아껴 둘래요. 제일 좋은 대목에, 담 밖에서 던지게.\n**강수** 담 밖이라니. 아씨는 이제 별당 문턱도 못 넘잖소.\n**윤희** 종로 평상 앞. 맨 앞줄.\n**강수** 참판댁 아씨가 평상 앞에 앉으면, 온 종로가 떠들 거요.\n**윤희** 떠들라고 앉는 거예요.",
+      "summary": "곤장 열 대를 맞고 절뚝이며 온 강수가, 갇힌 별당의 꽃살 구멍으로 나온 윤희의 손끝을 잡는다. 신랑은 나가라 소리 한 번, 읽은 놈은 열 대. 그래도 대본 없이 '좋아하오'. 윤희는 엽전을 아껴 두고, 그때까지는 월하회가 빌려 가는 책 여백에 첫 글자로 편지하자 한다.",
+      "source_text": "잔치 등롱이 하나둘 꺼진다. 담장 밖 골목으로 강수가 절뚝이며 걸어온다. 도포 등판에 피가 배어 있다. 담장에 낸 꽃살 구멍 너머로 분홍 저고리가 비친다. 윤희다.\n**윤희** (담 너머) 다친 데는요.\n**강수** (아무렇지 않은 척) 열 대 맞았소. 입은 멀쩡하오. 할 말이 있어서.\n윤희가 꽃살 구멍으로 손을 내민다. 손가락 두 마디만 겨우 나온다. 강수가 그 끝을 잡는다.\n**강수** 신랑은 나가라 소리 한 번 듣고, 읽은 놈은 열 대를 맞았소. 그게 법도라더군.\n**강수** (숨을 고르고) 그래도 대본 없이 하겠소. 아씨 앞에서는 대사를 다 까먹으니까. (사이) 좋아하오.\n꽃살 구멍 너머의 눈이 강수를 오래 본다. 처음 병풍 틈으로 보던 그 눈이다.\n**윤희** …다음 대목은요?\n**강수** 그건 엽전 소리를 들어야 나오는 법이오.\n윤희가 꽃살 구멍으로 엽전 하나를 내민다. 강수가 손을 뻗는 순간, 다시 거둬 쥔다.\n**윤희** 엽전은 아껴 둘래요. 제일 좋은 대목에, 담 밖에서 던지게.\n**강수** 담 밖이라니. 아씨는 이제 별당 문턱도 못 넘잖소.\n**윤희** 그럼 그때까지는 책 여백에 써요. 월하회가 빌려 가는 책에, 첫 글자로.",
       "shots": [
         {
           "id": "S04-01",
@@ -976,15 +1058,15 @@
           "characters": [
             "gangsu"
           ],
-          "frame": "밤. 담장 위로 보이던 잔치 등롱이 하나둘 꺼진다. 담장 밖 골목에 강수 혼자. 도포 소매가 찢어지고 이마에 흙.",
-          "action": "잔치 등롱이 하나둘 꺼진다. 담장 밖 골목에 강수가 서 있다.",
+          "frame": "밤. 담장 위로 보이던 잔치 등롱이 하나둘 꺼진다. 담장 밖 골목으로 강수가 절뚝이며 걸어온다. 담에 손을 짚는다. 도포 등판에 피가 배어 있다.",
+          "action": "잔치 등롱이 하나둘 꺼진다. 담장 밖 골목으로 강수가 절뚝이며 걸어온다.",
           "motifs": [
             "WALL"
           ],
           "transition": "CUT",
           "duration_sec": 3,
-          "continuity": "윤희는 S#3 끝에서 별당에 갇혔다(금족령). 담 안쪽은 별당, 강수는 담 밖. 강수: 도포 오른쪽 소매 찢김, 이마에 흙. 23화 S#1까지 이어 간다. 강수 붕대를 풀었다(22화부터 붕대·목덜미 무명 없음). 왼쪽 팔뚝에 아문 칼자국만",
-          "image_prompt": "night, a narrow alley beside a high tiled wall, festive lanterns beyond the wall going out one by one, a lone man in a torn grey robe with dirt on his forehead standing below"
+          "continuity": "곤장 열 대(22화 S#3 뒤): 도포 등판에 핏자국, 절뚝인다. 23화 S#1까지 이어 간다. 팔 붕대는 없다. 윤희는 S#3 끝에서 별당에 갇혔다(금족령)",
+          "image_prompt": "night, a narrow alley beside a high tiled wall, festive lanterns beyond it going out one by one, a man limping along the wall with one hand on it, blood soaked through the back of his grey robe"
         },
         {
           "id": "S04-02",
@@ -1026,7 +1108,7 @@
           ],
           "transition": "CUT",
           "duration_sec": 2,
-          "image_prompt": "extreme close-up of a girl's eye seen through a small flower-patterned lattice opening in a wall, moonlight"
+          "image_prompt": "extreme close-up of a girl's eye seen through a small lattice opening in a wall, moonlight"
         },
         {
           "id": "S04-04",
@@ -1037,41 +1119,64 @@
           "characters": [
             "gangsu"
           ],
-          "frame": "강수가 이마의 흙을 소매로 훔치며 능청을 떤다.",
-          "action": "강수가 능청을 떤다.",
+          "frame": "강수가 담에 등을 기대려다 움찔하고, 아무렇지 않은 척 웃는다.",
+          "action": "강수가 아무렇지 않은 척한다.",
           "dialogue": [
             {
               "speaker": "gangsu",
-              "line": "곤장은 면했소. 하인들이 내 낭독을 좋아해서.",
+              "line": "열 대 맞았소. 입은 멀쩡하오. 할 말이 있어서.",
               "mode": "ON"
             }
           ],
           "transition": "CUT",
-          "duration_sec": 3,
-          "image_prompt": "night medium close-up of the storyteller wiping dirt from his forehead with a torn sleeve and grinning"
+          "duration_sec": 4,
+          "notes": "8·18화에서 두 번 말한 '곤장'을 여기서 갚는다",
+          "image_prompt": "night medium close-up of the storyteller wincing as his beaten back touches the wall, then forcing a careless grin"
         },
         {
           "id": "S04-05",
-          "size": "LS",
+          "size": "INSERT",
           "angle": "EYE",
           "move": "FIX",
-          "lens_mm": 24,
+          "lens_mm": 85,
           "characters": [
-            "gangsu",
-            "yunhui"
+            "yunhui",
+            "gangsu"
           ],
-          "frame": "담 전체. 담은 높고, 구멍은 손바닥만 하다. 그 앞의 강수가 작다. 담 너머에서 웃음소리.",
-          "action": "윤희가 웃는다. 담은 높고, 구멍은 손바닥만 하다.",
-          "sound": "(E) 담 너머 웃음소리",
+          "frame": "꽃살 구멍으로 가는 손가락 두 마디만 겨우 나온다. 강수의 손이 그 끝을 잡는다.",
+          "action": "윤희가 꽃살 구멍으로 손을 내민다. 강수가 그 끝을 잡는다.",
           "motifs": [
             "WALL"
           ],
           "transition": "CUT",
-          "duration_sec": 2,
-          "image_prompt": "night long shot of a high tiled wall towering over a small figure of a man standing before a tiny lattice opening"
+          "duration_sec": 3,
+          "notes": "두 사람이 처음 손을 잡는 컷. 담 너머라 손끝만",
+          "image_prompt": "insert, only two slender fingertips squeezing through a small lattice opening in a wall, a man's rough hand gently holding just their tips"
         },
         {
           "id": "S04-06",
+          "size": "MCU",
+          "angle": "EYE",
+          "move": "FIX",
+          "lens_mm": 50,
+          "characters": [
+            "gangsu"
+          ],
+          "frame": "손끝을 잡은 채 강수가 담담하게 말한다. 웃음기가 없다.",
+          "action": "강수가 법도를 말한다.",
+          "dialogue": [
+            {
+              "speaker": "gangsu",
+              "line": "신랑은 나가라 소리 한 번 듣고, 읽은 놈은 열 대를 맞았소. 그게 법도라더군.",
+              "mode": "ON"
+            }
+          ],
+          "transition": "CUT",
+          "duration_sec": 5,
+          "image_prompt": "night medium close-up of the storyteller holding the fingertips through the wall, speaking flatly, no smile"
+        },
+        {
+          "id": "S04-07",
           "size": "CU",
           "angle": "EYE",
           "move": "FIX",
@@ -1079,21 +1184,21 @@
           "characters": [
             "gangsu"
           ],
-          "frame": "강수가 꽃살 구멍 앞으로 다가선다. 웃음기를 거둔다.",
+          "frame": "강수가 숨을 고르고 꽃살 구멍 앞으로 얼굴을 가져간다.",
           "action": "강수가 대본 없이 하겠다고 한다.",
           "dialogue": [
             {
               "speaker": "gangsu",
-              "line": "대본 없이 하겠소. 아씨 앞에서는 대사를 다 까먹으니까.",
+              "line": "그래도 대본 없이 하겠소. 아씨 앞에서는 대사를 다 까먹으니까.",
               "mode": "ON"
             }
           ],
           "transition": "CUT",
           "duration_sec": 3,
-          "image_prompt": "night close-up of the storyteller stepping up to the lattice opening, his grin fading into sincerity"
+          "image_prompt": "night close-up of the storyteller drawing a breath and bringing his face close to the lattice opening"
         },
         {
-          "id": "S04-07",
+          "id": "S04-08",
           "size": "ECU",
           "angle": "EYE",
           "move": "FIX",
@@ -1101,7 +1206,7 @@
           "characters": [
             "gangsu"
           ],
-          "frame": "숨을 고르고.",
+          "frame": "사이. 아주 가까이.",
           "action": "강수가 고백한다.",
           "dialogue": [
             {
@@ -1112,10 +1217,10 @@
           ],
           "transition": "CUT",
           "duration_sec": 2,
-          "image_prompt": "extreme close-up of the storyteller's face close to the wall, drawing a breath, then speaking simply"
+          "image_prompt": "extreme close-up of the storyteller's face close to the wall, speaking simply"
         },
         {
-          "id": "S04-08",
+          "id": "S04-09",
           "size": "ECU",
           "angle": "EYE",
           "move": "FIX",
@@ -1127,11 +1232,11 @@
           "action": "꽃살 구멍 너머의 눈이 강수를 오래 본다. 처음 병풍 틈으로 보던 그 눈이다.",
           "transition": "CUT",
           "duration_sec": 3,
-          "notes": "8화 S02-04 병풍 틈과 같은 크기·위치로 맞춘다",
+          "notes": "8화 S02-04 병풍 틈과 같은 크기·위치",
           "image_prompt": "extreme close-up of a bright quick-witted eye through a small lattice opening, holding a long look, framed exactly like an eye through a gap in a silk screen"
         },
         {
-          "id": "S04-09",
+          "id": "S04-10",
           "size": "CU",
           "angle": "EYE",
           "move": "FIX",
@@ -1153,7 +1258,7 @@
           "image_prompt": "night close-up from inside the garden wall, a young noble girl in pink pressing close to a lattice opening, smiling with wet eyes"
         },
         {
-          "id": "S04-10",
+          "id": "S04-11",
           "size": "MCU",
           "angle": "EYE",
           "move": "FIX",
@@ -1172,11 +1277,10 @@
           ],
           "transition": "CUT",
           "duration_sec": 3,
-          "notes": "1화 S#1 '다음 대목은 엽전 소리를 들어야 나오는 법이오'의 변주",
           "image_prompt": "night medium close-up of the storyteller breaking into his old showman's grin"
         },
         {
-          "id": "S04-11",
+          "id": "S04-12",
           "size": "INSERT",
           "angle": "EYE",
           "move": "FIX",
@@ -1185,14 +1289,14 @@
             "gangsu",
             "yunhui"
           ],
-          "frame": "꽃살 구멍으로 엽전 하나가 내밀어진다. 강수의 손이 뻗는 순간, 엽전이 다시 쏙 들어간다.",
+          "frame": "꽃살 구멍으로 엽전 하나가 내밀어진다. 강수가 손을 뻗는 순간, 엽전이 다시 쏙 들어간다.",
           "action": "윤희가 엽전 하나를 내민다. 강수가 손을 뻗는 순간, 다시 거둬 쥔다.",
           "transition": "CUT",
-          "duration_sec": 2,
-          "image_prompt": "insert, a slender hand pushing a single brass coin through a small lattice opening, a man's hand reaching for it, the coin snatched back just in time"
+          "duration_sec": 3,
+          "image_prompt": "insert, a slender hand pushing a single brass coin through a lattice opening, a man's hand reaching for it, the coin snatched back"
         },
         {
-          "id": "S04-12",
+          "id": "S04-13",
           "size": "CU",
           "angle": "EYE",
           "move": "FIX",
@@ -1210,11 +1314,11 @@
             }
           ],
           "transition": "CUT",
-          "duration_sec": 2,
-          "image_prompt": "night close-up of the girl inside the wall holding the coin to her chest, playful and certain"
+          "duration_sec": 3,
+          "image_prompt": "night close-up of the girl inside the wall holding the coin to her chest"
         },
         {
-          "id": "S04-13",
+          "id": "S04-14",
           "size": "MCU",
           "angle": "EYE",
           "move": "FIX",
@@ -1222,7 +1326,7 @@
           "characters": [
             "gangsu"
           ],
-          "frame": "강수가 되묻는다. 담 너머 별당 쪽을 한 번 올려다본다.",
+          "frame": "강수가 담 너머 별당 쪽을 한 번 올려다본다.",
           "action": "강수가 금족령을 짚는다.",
           "dialogue": [
             {
@@ -1232,56 +1336,11 @@
             }
           ],
           "transition": "CUT",
-          "duration_sec": 4,
-          "image_prompt": "night medium close-up of the storyteller glancing up at the high wall of the confined pavilion, worried"
-        },
-        {
-          "id": "S04-14",
-          "size": "ECU",
-          "angle": "EYE",
-          "move": "FIX",
-          "lens_mm": 85,
-          "characters": [
-            "yunhui"
-          ],
-          "frame": "꽃살 구멍 너머의 눈이 웃는다.",
-          "action": "윤희가 자리를 말한다.",
-          "dialogue": [
-            {
-              "speaker": "yunhui",
-              "line": "종로 평상 앞. 맨 앞줄.",
-              "mode": "ON"
-            }
-          ],
-          "transition": "CUT",
-          "duration_sec": 2,
-          "notes": "24화 몽타주에서 윤희가 평상 맨 앞줄에서 첫 엽전을 던지는 장면으로 갚는다",
-          "image_prompt": "extreme close-up of a smiling eye through the lattice opening"
+          "duration_sec": 3,
+          "image_prompt": "night medium close-up of the storyteller glancing up at the high wall of the confined pavilion"
         },
         {
           "id": "S04-15",
-          "size": "MCU",
-          "angle": "EYE",
-          "move": "FIX",
-          "lens_mm": 50,
-          "characters": [
-            "gangsu"
-          ],
-          "frame": "강수가 꽃살 구멍 앞에서 고개를 젓는다. 반쯤은 웃고 반쯤은 겁이 난 얼굴.",
-          "action": "강수가 신분의 벽을 말한다.",
-          "dialogue": [
-            {
-              "speaker": "gangsu",
-              "line": "참판댁 아씨가 평상 앞에 앉으면, 온 종로가 떠들 거요.",
-              "mode": "ON"
-            }
-          ],
-          "transition": "CUT",
-          "duration_sec": 4,
-          "image_prompt": "night medium close-up of the storyteller at the lattice opening, shaking his head, half amused and half afraid for her"
-        },
-        {
-          "id": "S04-16",
           "size": "CU",
           "angle": "EYE",
           "move": "FIX",
@@ -1289,19 +1348,19 @@
           "characters": [
             "yunhui"
           ],
-          "frame": "담 안쪽. 꽃살 구멍에 얼굴을 댄 윤희가 웃는다. 겁내지 않는 얼굴.",
-          "action": "윤희가 답한다.",
+          "frame": "담 안쪽 윤희. 이미 답을 정해 둔 얼굴.",
+          "action": "윤희가 여백 편지를 정한다.",
           "dialogue": [
             {
               "speaker": "yunhui",
-              "line": "떠들라고 앉는 거예요.",
+              "line": "그럼 그때까지는 책 여백에 써요. 월하회가 빌려 가는 책에, 첫 글자로.",
               "mode": "ON"
             }
           ],
           "transition": "SMASH_CUT",
-          "duration_sec": 3,
-          "notes": "24화 몽타주(장옷 없이 평상 맨 앞줄, 수군거리는 구경꾼)로 갚는다",
-          "image_prompt": "night close-up from inside the garden wall, the young noble girl in pink smiling through the lattice opening, unafraid"
+          "duration_sec": 4,
+          "notes": "여백 편지의 시작. 23화 S#4 '다음 대목 남았소', 24화 몽타주의 반납된 세책으로 이어진다. 9화 여백 암호·13화 문안 편지와 같은 방식",
+          "image_prompt": "night close-up of the girl inside the wall, her answer already decided, a faint conspiratorial smile"
         }
       ]
     },
@@ -1342,12 +1401,12 @@
           "characters": [
             "gangsu"
           ],
-          "frame": "강수가 평상 밑에 손을 넣어 천에 싼 담배 써는 칼을 꺼낸다. 찢어진 소매 그대로.",
+          "frame": "강수가 평상 밑에 손을 넣어 천에 싼 담배 써는 칼을 꺼낸다. 허리를 굽힐 때 등이 당겨 얼굴을 찡그린다.",
           "action": "강수가 평상 밑에서 담배 써는 칼을 꺼낸다.",
           "transition": "CUT",
           "duration_sec": 2,
-          "continuity": "S#4의 찢어진 소매, 이마의 흙 그대로",
-          "image_prompt": "pre-dawn medium shot, the storyteller in a torn grey robe kneeling to pull a cloth-wrapped tobacco-cutting knife out from under the wooden platform"
+          "continuity": "곤장 열 대(22화 S#3 뒤): 도포 등판에 핏자국, 절뚝인다. 23화 S#1까지 이어 간다. 팔 붕대는 없다",
+          "image_prompt": "pre-dawn medium shot, the storyteller with blood dried on the back of his grey robe kneeling stiffly to pull a cloth-wrapped tobacco-cutting knife from under the wooden platform, wincing"
         },
         {
           "id": "S05-03",
@@ -1399,7 +1458,7 @@
           "characters": [
             "gangsu"
           ],
-          "frame": "뒷모습. 칼을 든 강수가 서소문 쪽 안개 속으로 걸어간다. 카메라가 천천히 올라가며 안개가 그를 삼킨다.",
+          "frame": "뒷모습. 칼을 든 강수가 절뚝이며 서소문 쪽 안개 속으로 걸어간다. 카메라가 천천히 올라가며 안개가 그를 삼킨다.",
           "action": "강수가 안개 속으로 걸어간다.",
           "dialogue": [
             {
@@ -1414,7 +1473,7 @@
           "transition": "FADE_OUT",
           "duration_sec": 5,
           "notes": "엔딩 컷. 23화 S#0 '지난 대목'이 이 컷을 탈색해 다시 쓴다",
-          "image_prompt": "pre-dawn long shot from behind, a lone man carrying a broad knife walking away into thick fog toward the west gate of Seoul, camera slowly rising as the mist swallows him"
+          "image_prompt": "pre-dawn long shot from behind, a lone limping man with a bloodstained back carrying a broad knife into thick fog toward the west gate of Seoul, camera slowly rising as the mist swallows him"
         }
       ]
     }

@@ -32,7 +32,7 @@ REFS_DIR = ROOT / "assets" / "refs"
 EXTS = (".jpg", ".jpeg", ".webp", ".png")
 # 레퍼런스 시트를 만들 인물(반복 등장하는 주·조연). 단역·내레이션은 제외
 REF_CAST = ["dallae", "jeonggyeom", "yul", "gangsu", "yunhui", "heojin", "jeongjo", "heukrip",
-            "meoksun", "ma_yeonggam", "an_naegwan", "lee_deokmu", "jongsagwan", "seoyeon", "ma_seobang"]
+            "meoksun", "ma_yeonggam", "an_naegwan", "lee_deokmu", "jongsagwan", "seoyeon"]
 CONSISTENCY = ("Keep every character's face, hairstyle and costume identical to the attached reference sheets, "
                "and keep the set consistent with the attached location reference.")
 

@@ -26,13 +26,13 @@
       "costume": {
         "default": "하숙생 변장: 낡았지만 반듯한 흰 도포, 검은 갓",
         "palace": "궐 안: 하급 관원의 단령과 사모 (색은 고증확인)",
-        "ep16-20": "갓을 잃고 맨상투가 되는 장면 있음(20화 담장)"
+        "ep16-20": "갓을 잃고 맨상투가 되는 장면 있음(20화 담장)", "ep22": "신랑 사모관대(22화 S#2~S#3). S03-07에서 사모를 벗는다"
       },
       "props": ["『논어』 표지 속 「청상연가」", "수사 수첩", "검서관 호패", "초롱(24화)"],
       "palette": ["#F2EFE6", "#111111", "#C0392B"],
       "tells": "EAR_RED — 거짓말할 때만 귀가 붉어진다. 진심일 때는 절대 붉어지지 않는다",
       "prompt_en": "tall 23-year-old Korean scholar, very upright posture, serious unsmiling face, neatly tied black horsehair gat hat, plain but immaculate white dopo robe, slender hands",
-      "prompt_variants": {"palace": "tall 23-year-old Korean scholar-official, very upright posture, serious unsmiling face, on duty inside the palace in a low-ranking Joseon official's round-collared dallyeong robe in muted blue-green with a black winged samo hat and a plain belt, slender hands", "bareheaded": "tall 23-year-old Korean scholar, very upright posture, tense face, bareheaded after losing his gat: only a topknot (sangtu) under a black horsehair headband (manggeon), white dopo robe dishevelled and dirty, slender hands"}
+      "prompt_variants": {"palace": "tall 23-year-old Korean scholar-official, very upright posture, serious unsmiling face, on duty inside the palace in a low-ranking Joseon official's round-collared dallyeong robe in muted blue-green with a black winged samo hat and a plain belt, slender hands", "bareheaded": "tall 23-year-old Korean scholar, very upright posture, tense face, bareheaded after losing his gat: only a topknot (sangtu) under a black horsehair headband (manggeon), white dopo robe dishevelled and dirty, slender hands", "wedding": "tall 23-year-old Korean bridegroom, very upright posture, expressionless face with flushed red ears, samo-gwandae wedding costume: dark blue round-collared official's robe with an embroidered rank badge, black winged samo hat, ceremonial belt, slender hands"}
     },
     {
       "id": "yul",
@@ -58,7 +58,7 @@
       "costume": {
         "default": "회색 도포, 낡은 갓, 부채",
         "ep12-21": "왼쪽 팔뚝에 붕대",
-        "ep19-21": "오른쪽 목덜미에 무명"
+        "ep19-21": "오른쪽 목덜미에 무명", "ep22-23": "22화 S#3 뒤 곤장 열 대: 22화 S#4~23화 S#1 도포 등판 핏자국, 절뚝임"
       },
       "props": ["부채", "평상(무대)", "몽둥이(18~20화)", "징(23화)", "담배 써는 칼(22~23화)"],
       "palette": ["#7D7F7D", "#2B2B2B"],
@@ -68,7 +68,7 @@
       "id": "yunhui",
       "names": ["윤희", "홍윤희"],
       "age": 18,
-      "role": "홍 참판 댁 서녀, 양반가 여인 독서 모임 '월하회' 회장. 강수와 서브 커플(8·13·18·22화가 두 사람의 회차). 평민 전기수와 참판댁 서녀라 신분의 벽이 있다. 22화 파혼 뒤 별당에 갇히고, 24화에서 장옷 없이 평상 맨 앞줄에 앉는다",
+      "role": "홍 참판 댁 서녀, 양반가 여인 독서 모임 '월하회' 회장. 정겸의 정혼자(서자 검서관과 서녀, 서얼끼리의 혼담. 9화에 깼으나 13화에 양가가 도로 붙인다). 강수와 서브 커플(8·13·18·22화가 두 사람의 회차). 평민 전기수와 참판댁 서녀라 신분의 벽이 있다. 22화 파혼 뒤 별당에 갇히고, 24화에서 장옷 없이 평상 맨 앞줄에 앉는다",
       "look": "단아한 규수인데 눈치가 빠르고 진성 덕후",
       "costume": { "default": "분홍 저고리, 남색 치마, 댕기, 외출 시 장옷", "jangot": "외출 때 머리부터 쓰는 연두 장옷. 얼굴이 반쯤 가려진다(8·13·18화)", "ep22": "혼례복: 녹원삼, 족두리, 연지곤지" },
       "props": ["여백 낙서가 빼곡한 「청상연가」"],
@@ -141,10 +141,9 @@
       "id": "ma_seobang",
       "names": ["마 서방"],
       "age": 24,
-      "role": "마 영감의 외아들. 소심한 「청상연가」 애독자. 윤희의 혼처(13·18·22화), 사실은 먹순을 좋아한다",
-      "costume": { "default": "새 비단 도포가 어색한 차림", "ep22": "사모관대(혼례)" },
-      "prompt_en": "timid 24-year-old Korean man, round soft face like his father but anxious eyes, brand-new silk dopo robe that looks too stiff on him",
-      "prompt_variants": {"wedding": "timid 24-year-old Korean bridegroom, round soft face like his father but anxious eyes, dark blue samo-gwandae wedding costume: an official's round-collared robe with a rank badge and a black winged samo hat that keeps slipping crooked"}
+      "role": "마 영감의 외아들. 2화에서 빚 대신 달래에게 장가들 뻔한다",
+      "costume": { "default": "새 비단 도포가 어색한 차림" },
+      "prompt_en": "timid 24-year-old Korean man, round soft face like his father but anxious eyes, brand-new silk dopo robe that looks too stiff on him"
     },
     {
       "id": "an_naegwan",

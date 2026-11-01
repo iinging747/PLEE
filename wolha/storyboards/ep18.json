@@ -2,7 +2,7 @@
   "series": "월하노인을 잡아라 (숏폼 24부작)",
   "episode": 18,
   "title": "대본 없이",
-  "hook": "빚쟁이 마 영감이 웬일로 빚을 깎아 준다. 아들이 참판댁 사위가 된다며. 그리고 전기수는 처음으로 대본 없이 말해야 한다.",
+  "hook": "빚쟁이 마 영감이 참판댁 혼례 소식을 들고 온다. 신랑은 쫓겨난 하숙생이다. 그리고 전기수는 처음으로 대본 없이 말해야 한다.",
   "runtime_sec": 180,
   "aspect": "16:9",
   "status": "review",
@@ -110,14 +110,13 @@
       "tc_out": "00:42",
       "characters": [
         "ma_yeonggam",
-        "ma_seobang",
         "dallae",
         "gangsu",
         "meoksun"
       ],
       "mood": "COMEDY",
-      "summary": "마 영감이 아들의 참판댁 혼례 소식에 빚을 반만 받겠다 하고, 강수에게 잔치 낭독을 맡긴다. 마 서방은 몰래 「청상연가」 다음 권을 묻는데, 눈은 먹순에게 가 있다. 달래가 그 눈길을 읽는다.",
-      "source_text": "마 영감이 사주단자를 흔들며 들어온다. 뒤에 새 도포를 입은 아들 마 서방이 쭈뼛쭈뼛 따라온다. 달래는 퉁퉁 부은 눈으로 장부를 넘긴다. 마루 끝에서 강수가 붕대 감은 팔을 무릎에 얹고 있다.\n**마 영감** 우리 아들이 참판댁 사위가 된다! 사흘 뒤에 혼례다! 기분이다, 빚은 반만 받으마.\n**달래** (장부에서 눈도 안 떼고) …축하드려요.\n**마 영감** 강수 너, 잔치에서 한 대목 읽어라. 삯은 두둑이 주마.\n**강수** …무슨 대목을요.\n**마 영감** 그걸 내가 아냐! 경사스러운 걸로!\n마 영감이 나가자 마 서방이 달래에게 바짝 다가와 속삭인다.\n**마 서방** 저… 「청상연가」 다음 권은 언제 나와요? 아버지한텐 비밀로요.\n말하는 내내 마 서방의 눈은 마당에서 떡을 썰고 있는 먹순에게 가 있다. 얼굴이 빨갛다. 달래가 그 눈길을 따라간다.\n강수가 부채로 이마를 짚는다.",
+      "summary": "마 영감이 참판댁 혼례 소식을 들고 온다. 사흘 뒤, 신랑은 하숙생이던 검서관 이정겸. 달래는 이미 안다며 부은 눈으로 장부만 넘긴다. 신부가 종로 전기수를 콕 집어 잔치 낭독을 맡겼다. 마 영감은 나가다 말고 다음 권을 묻는다.",
+      "source_text": "마 영감이 장부를 옆구리에 끼고 들어온다. 달래는 퉁퉁 부은 눈으로 장부를 넘긴다. 마루 끝에서 강수가 붕대 감은 팔을 무릎에 얹고 있다. 마당에서 먹순이 떡을 썬다.\n**마 영감** 들었냐? 참판댁 혼례가 사흘 뒤란다. 잔치 돈은 내가 꿔 줬지. 신랑이 누군 줄 알아? 너희 집 하숙하던 그 김일이! 그게 규장각 검서관 이정겸이란다!\n**달래** (장부에서 눈도 안 떼고) …알아요.\n마 영감이 달래의 부은 눈을 보고 헛기침을 한다.\n**마 영감** 흠. 그리고 강수 너, 잔치에서 한 대목 읽어라. 신부가 종로 전기수를 콕 집었단다. 삯은 두둑하고.\n**강수** …무슨 대목을요.\n**마 영감** 그걸 내가 아냐! 경사스러운 걸로!\n마 영감이 나가다 말고 돌아선다.\n**마 영감** (작게) …그리고 「청상연가」 다음 권은 언제 나오냐?\n달래가 장부를 탁 덮는다. 강수가 부채로 이마를 짚는다.",
       "shots": [
         {
           "id": "S01-01",
@@ -127,25 +126,23 @@
           "lens_mm": 24,
           "characters": [
             "ma_yeonggam",
-            "ma_seobang",
             "dallae",
             "gangsu",
             "meoksun"
           ],
-          "frame": "낮, 달래책방 마당과 마루. 화면 왼쪽 대문으로 마 영감이 사주단자를 흔들며 들어오고, 새 도포가 어색한 마 서방이 쭈뼛쭈뼛 따라온다. 마루에는 장부를 넘기는 달래, 마루 끝에는 붕대 감은 팔을 무릎에 얹은 강수. 마당 한쪽에서 먹순이 떡을 썬다.",
-          "action": "마 영감이 사주단자를 흔들며 들어온다. 뒤에 아들 마 서방이 쭈뼛쭈뼛 따라온다.",
+          "frame": "낮, 달래책방 마당과 마루. 화면 왼쪽 대문으로 마 영감이 장부를 옆구리에 끼고 들어온다. 마루에는 퉁퉁 부은 눈으로 장부를 넘기는 달래, 마루 끝에는 붕대 감은 팔을 무릎에 얹은 강수. 마당 한쪽에서 먹순이 떡을 썬다.",
+          "action": "마 영감이 장부를 옆구리에 끼고 들어온다.",
           "dialogue": [
             {
               "speaker": "ma_yeonggam",
-              "line": "우리 아들이 참판댁 사위가 된다! 사흘 뒤에 혼례다!",
+              "line": "들었냐? 참판댁 혼례가 사흘 뒤란다. 잔치 돈은 내가 꿔 줬지.",
               "mode": "ON"
             }
           ],
           "transition": "CUT",
-          "duration_sec": 5,
-          "continuity": "축: 대문 화면 왼쪽, 행랑채 오른쪽. 강수 왼쪽 팔뚝 붕대(12~21화). 부채와 몽둥이는 오른손",
-          "notes": "사주단자는 붉은 보자기에 싼 혼서. 고증확인: 사주단자 싸는 보자기 색",
-          "image_prompt": "daytime, small courtyard of a hanok bookshop, a pudgy old moneylender bustling in through the gate on the left waving a red-wrapped marriage document, his timid son in a stiff new silk robe trailing behind, a young woman with a ledger on the porch, a storyteller with a bandaged forearm at the porch edge, a shop girl slicing rice cakes in the corner"
+          "duration_sec": 6,
+          "continuity": "축: 대문 화면 왼쪽, 행랑채 오른쪽. 강수 왼쪽 팔뚝 붕대(12~21화). 달래의 부은 눈은 17화에서 이어진다",
+          "image_prompt": "daytime, small courtyard of a hanok bookshop, a pudgy old moneylender bustling in through the gate on the left with a ledger under his arm, a young woman with puffy red eyes turning ledger pages on the porch, a storyteller with a bandaged forearm at the porch edge, a shop girl slicing rice cakes in the corner"
         },
         {
           "id": "S01-02",
@@ -156,19 +153,18 @@
           "characters": [
             "ma_yeonggam"
           ],
-          "frame": "마 영감이 주판알을 촤라락 털며 선심 쓰듯 웃는다.",
-          "action": "마 영감이 빚을 깎아 준다.",
+          "frame": "마 영감이 마루 쪽으로 몸을 내밀며 신이 나서 떠든다.",
+          "action": "마 영감이 신랑이 누군지 알린다.",
           "dialogue": [
             {
               "speaker": "ma_yeonggam",
-              "line": "기분이다, 빚은 반만 받으마.",
+              "line": "신랑이 누군 줄 알아? 너희 집 하숙하던 그 김일이! 그게 규장각 검서관 이정겸이란다!",
               "mode": "ON"
             }
           ],
-          "sound": "(E) 주판알 촤라락",
           "transition": "CUT",
-          "duration_sec": 3,
-          "image_prompt": "medium close-up of the pudgy moneylender flicking his abacus beads with a generous, smug grin"
+          "duration_sec": 4,
+          "image_prompt": "medium close-up of the pudgy moneylender leaning in eagerly, relishing the gossip"
         },
         {
           "id": "S01-03",
@@ -180,18 +176,17 @@
             "dallae"
           ],
           "frame": "달래가 장부에서 눈도 안 뗀다. 눈두덩이 퉁퉁 부었다.",
-          "action": "달래는 퉁퉁 부은 눈으로 장부를 넘긴다.",
+          "action": "달래는 이미 안다.",
           "dialogue": [
             {
               "speaker": "dallae",
-              "line": "…축하드려요.",
+              "line": "…알아요.",
               "mode": "ON"
             }
           ],
           "transition": "CUT",
           "duration_sec": 2,
-          "continuity": "달래의 부은 눈은 17화(정겸의 정체가 드러난 밤)에서 이어진다",
-          "image_prompt": "medium close-up of a young bookshop owner with puffy red eyes from crying, not looking up from her ledger"
+          "image_prompt": "medium close-up of the young bookshop owner with puffy red eyes, not looking up from her ledger"
         },
         {
           "id": "S01-04",
@@ -201,23 +196,41 @@
           "lens_mm": 35,
           "characters": [
             "ma_yeonggam",
+            "dallae"
+          ],
+          "frame": "마 영감이 달래의 부은 눈을 보고 머쓱해져 헛기침을 한다.",
+          "action": "마 영감이 달래의 부은 눈을 보고 헛기침을 한다.",
+          "sound": "(E) 헛기침",
+          "transition": "CUT",
+          "duration_sec": 2,
+          "image_prompt": "medium shot, the moneylender noticing the young woman's swollen eyes and clearing his throat awkwardly"
+        },
+        {
+          "id": "S01-05",
+          "size": "MS",
+          "angle": "EYE",
+          "move": "FIX",
+          "lens_mm": 35,
+          "characters": [
+            "ma_yeonggam",
             "gangsu"
           ],
-          "frame": "마 영감이 마루 끝의 강수에게 사주단자로 삿대질한다.",
+          "frame": "마 영감이 화제를 돌려 마루 끝의 강수에게 장부로 삿대질한다.",
           "action": "마 영감이 강수에게 잔치 낭독을 맡긴다.",
           "dialogue": [
             {
               "speaker": "ma_yeonggam",
-              "line": "강수 너, 잔치에서 한 대목 읽어라. 삯은 두둑이 주마.",
+              "line": "흠. 그리고 강수 너, 잔치에서 한 대목 읽어라. 신부가 종로 전기수를 콕 집었단다. 삯은 두둑하고.",
               "mode": "ON"
             }
           ],
           "transition": "CUT",
-          "duration_sec": 3,
-          "image_prompt": "medium shot, the moneylender pointing his marriage document at the storyteller sitting on the porch edge"
+          "duration_sec": 5,
+          "notes": "신부(윤희)가 강수를 직접 불렀다는 것이 핵심",
+          "image_prompt": "medium shot, the moneylender pointing his ledger at the storyteller on the porch edge"
         },
         {
-          "id": "S01-05",
+          "id": "S01-06",
           "size": "MCU",
           "angle": "EYE",
           "move": "FIX",
@@ -225,7 +238,7 @@
           "characters": [
             "gangsu"
           ],
-          "frame": "강수가 붕대 감은 팔을 무릎에 얹은 채, 웃지 않는다.",
+          "frame": "강수가 웃지 않는다.",
           "action": "강수가 묻는다.",
           "dialogue": [
             {
@@ -236,11 +249,10 @@
           ],
           "transition": "CUT",
           "duration_sec": 2,
-          "continuity": "강수 왼쪽 팔뚝 붕대(12~21화). 부채와 몽둥이는 오른손",
-          "image_prompt": "medium close-up of the storyteller with his bandaged forearm on his knee, not smiling for once"
+          "image_prompt": "medium close-up of the storyteller with his bandaged forearm on his knee, not smiling"
         },
         {
-          "id": "S01-06",
+          "id": "S01-07",
           "size": "MCU",
           "angle": "EYE",
           "move": "FIX",
@@ -248,7 +260,7 @@
           "characters": [
             "ma_yeonggam"
           ],
-          "frame": "마 영감이 버럭 하고는 대문 쪽으로 돌아선다.",
+          "frame": "마 영감이 버럭 하고 대문 쪽으로 돌아선다.",
           "action": "마 영감이 나간다.",
           "dialogue": [
             {
@@ -258,80 +270,50 @@
             }
           ],
           "transition": "CUT",
-          "duration_sec": 3,
+          "duration_sec": 2,
           "image_prompt": "medium close-up of the moneylender throwing up his hands and turning toward the gate"
-        },
-        {
-          "id": "S01-07",
-          "size": "2S",
-          "angle": "EYE",
-          "move": "FIX",
-          "lens_mm": 50,
-          "characters": [
-            "ma_seobang",
-            "dallae"
-          ],
-          "frame": "마 영감이 나가자 마 서방이 마루의 달래에게 바짝 다가와 손으로 입을 가리고 속삭인다.",
-          "action": "마 서방이 달래에게 바짝 다가와 속삭인다.",
-          "dialogue": [
-            {
-              "speaker": "ma_seobang",
-              "line": "저… 「청상연가」 다음 권은 언제 나와요? 아버지한텐 비밀로요.",
-              "mode": "WHISPER"
-            }
-          ],
-          "transition": "CUT",
-          "duration_sec": 4,
-          "image_prompt": "two-shot, the timid young man leaning close to the bookshop owner on the porch, hand cupped by his mouth, whispering conspiratorially"
         },
         {
           "id": "S01-08",
           "size": "MS",
-          "angle": "POV",
+          "angle": "EYE",
           "move": "FIX",
-          "lens_mm": 50,
+          "lens_mm": 35,
           "characters": [
-            "meoksun"
+            "ma_yeonggam"
           ],
-          "frame": "마 서방의 시선. 마당에서 떡을 써는 먹순. 볼에 먹이 묻었다.",
-          "action": "마 서방의 눈은 마당에서 떡을 썰고 있는 먹순에게 가 있다.",
+          "frame": "대문 앞. 마 영감이 나가다 말고 돌아서서, 손으로 입을 가리고 작게 묻는다.",
+          "action": "마 영감이 나가다 말고 돌아선다.",
+          "dialogue": [
+            {
+              "speaker": "ma_yeonggam",
+              "line": "…그리고 「청상연가」 다음 권은 언제 나오냐?",
+              "mode": "WHISPER"
+            }
+          ],
           "transition": "CUT",
-          "duration_sec": 2,
-          "image_prompt": "point of view shot, a spunky shop girl with ink on her cheek slicing rice cakes in the courtyard, unaware she is being watched"
+          "duration_sec": 3,
+          "notes": "1화부터 이어지는 마 영감의 '다음 권은 언제' 개그",
+          "image_prompt": "medium shot at the gate, the moneylender turning back and asking under his breath behind his hand"
         },
         {
           "id": "S01-09",
-          "size": "CU",
-          "angle": "EYE",
-          "move": "FIX",
-          "lens_mm": 85,
-          "characters": [
-            "ma_seobang"
-          ],
-          "frame": "마 서방의 얼굴이 빨갛다. 입은 여전히 달래 쪽인데 눈은 마당에 있다.",
-          "action": "마 서방의 얼굴이 빨갛다.",
-          "transition": "CUT",
-          "duration_sec": 2,
-          "notes": "22화 혼례 장면의 복선. 귀 모티프(EAR_RED)는 정겸 전용이라 태그하지 않는다",
-          "image_prompt": "close-up of the timid young man blushing bright red, gazing off toward the courtyard"
-        },
-        {
-          "id": "S01-10",
-          "size": "MCU",
-          "angle": "EYE",
+          "size": "INSERT",
+          "angle": "HIGH",
           "move": "FIX",
           "lens_mm": 50,
           "characters": [
             "dallae"
           ],
-          "frame": "달래가 그 눈길을 따라간다. 먹순, 다시 마 서방. 부은 눈에 생기가 돈다.",
-          "action": "달래가 그 눈길을 따라간다.",
+          "frame": "달래의 손이 장부를 탁 덮는다.",
+          "action": "달래가 장부를 탁 덮는다.",
+          "sound": "(E) 탁",
           "transition": "CUT",
           "duration_sec": 2,
-          "image_prompt": "medium close-up of the bookshop owner following his gaze, her puffy eyes suddenly sharpening with an idea"
+          "image_prompt": "insert, a young woman's ink-stained hand slamming a ledger shut"
         },
         {
-          "id": "S01-11",
+          "id": "S01-10",
           "size": "MCU",
           "angle": "EYE",
           "move": "FIX",
@@ -343,7 +325,7 @@
           "action": "강수가 부채로 이마를 짚는다.",
           "transition": "SMASH_CUT",
           "duration_sec": 2,
-          "image_prompt": "medium close-up of the storyteller pressing his closed fan to his forehead in despair"
+          "image_prompt": "medium close-up of the storyteller pressing his closed fan to his forehead"
         }
       ]
     },
@@ -987,8 +969,8 @@
         "heukrip"
       ],
       "mood": "WARM",
-      "summary": "담 하나를 사이에 두고 차인 두 사내가 밤을 새운다. 정겸은 윤희가 자기를 살려 준 혼담 상대였다며, 이번엔 강수가 혼사를 깨 달라 한다. 작가는 담 안에 있다. 맞은편 지붕엔 흑립이 웅크리고 있다.",
-      "source_text": "마당. 강수가 몽둥이를 안고 마루에 앉아 있다. 담 너머에서 인기척. 담장 기와 위로 갓 끝이 살짝 보인다. 정겸이다. 강수가 담을 향해 말한다.\n**강수** 나리. 쫓겨나고도 담 밖에 서 있소?\n**정겸** (O.S., 담 너머) …그쪽은 왜 안 자오.\n**강수** 차여서.\n**정겸** (O.S.) …나도. (사이) 그 아씨, 한때 내 혼담 상대였소.\n**강수** …알고 있소.\n**정겸** (O.S.) 세검정에서 나를 살려 준 사람이오. 혼담을 제 손으로 깨 줘서. (사이) 이번엔 그쪽이 깨 주시오.\n**강수** 전기수가 참판댁 혼사를 깨면 곤장이오.\n**정겸** (O.S.) 그러니 대본이 필요하겠지. 작가는 그 담 안에 있고.\n담 하나를 사이에 두고 두 사내가 등을 기댄다. 맞은편 지붕 그늘에, 검은 것이 하나 웅크리고 있다.\n(N, 강수) 그날 밤, 담 하나를 사이에 두고 차인 사내 둘이 밤을 새웠소. 그리고 지붕 위에는, 칼을 든 사내가 하나.",
+      "summary": "담 하나를 사이에 두고 차인 두 사내가 밤을 새운다. 정겸은 그 아씨 혼례의 신랑이 자기라며, 신랑이 깨면 불효, 신부가 깨면 소박이니 이번엔 강수가 깨 달라 한다. 작가는 담 안에 있다. 맞은편 지붕엔 흑립이 웅크리고 있다.",
+      "source_text": "마당. 강수가 몽둥이를 안고 마루에 앉아 있다. 담 너머에서 인기척. 담장 기와 위로 갓 끝이 살짝 보인다. 정겸이다. 강수가 담을 향해 말한다.\n**강수** 나리. 쫓겨나고도 담 밖에 서 있소?\n**정겸** (O.S., 담 너머) …그쪽은 왜 안 자오.\n**강수** 차여서.\n**정겸** (O.S.) …나도. (사이) 그 아씨 혼례, 신랑이 나요.\n**강수** …알고 있소.\n**정겸** (O.S.) 세검정에서 그 아씨가 혼담을 깨 줬는데, 양가가 도로 붙였소. 서자 검서관에 서녀면 짝이 맞는다고. (사이) 신랑이 깨면 불효고, 신부가 깨면 소박이오. 이번엔 그쪽이 깨 주시오.\n**강수** 전기수가 참판댁 혼사를 깨면 곤장이오.\n**정겸** (O.S.) 그러니 대본이 필요하겠지. 작가는 그 담 안에 있고.\n담 하나를 사이에 두고 두 사내가 등을 기댄다. 맞은편 지붕 그늘에, 검은 것이 하나 웅크리고 있다.\n(N, 강수) 그날 밤, 담 하나를 사이에 두고 차인 사내 둘이 밤을 새웠소. 그리고 지붕 위에는, 칼을 든 사내가 하나.",
       "shots": [
         {
           "id": "S04-01",
@@ -1002,7 +984,7 @@
           "frame": "밤, 달래책방 마당. 처마 초롱 하나. 강수가 몽둥이를 안고 마루에 앉아 있다. 화면 왼쪽 담장.",
           "action": "강수가 몽둥이를 안고 마루에 앉아 있다.",
           "transition": "CUT",
-          "duration_sec": 3,
+          "duration_sec": 2,
           "continuity": "축: 담장 화면 왼쪽. 강수 왼쪽 팔뚝 붕대(12~21화). 부채와 몽둥이는 오른손",
           "image_prompt": "night, small hanok courtyard lit by a single eave lantern, the storyteller sitting on the porch hugging a wooden club, a tiled earthen wall on the left"
         },
@@ -1110,7 +1092,7 @@
             },
             {
               "speaker": "jeonggyeom",
-              "line": "그 아씨, 한때 내 혼담 상대였소.",
+              "line": "그 아씨 혼례, 신랑이 나요.",
               "mode": "ON"
             }
           ],
@@ -1155,13 +1137,13 @@
           "dialogue": [
             {
               "speaker": "jeonggyeom",
-              "line": "세검정에서 나를 살려 준 사람이오. 혼담을 제 손으로 깨 줘서.",
+              "line": "세검정에서 그 아씨가 혼담을 깨 줬는데, 양가가 도로 붙였소. 서자 검서관에 서녀면 짝이 맞는다고.",
               "mode": "ON"
             }
           ],
           "transition": "CUT",
-          "duration_sec": 4,
-          "notes": "9화 세검정 혼담 자리. 윤희가 '김일 오라버니'로 둘러대 정겸을 살려 줬다",
+          "duration_sec": 5,
+          "notes": "9화 세검정에서 윤희가 깬 혼담을 양가가 다시 붙였다(13화). 정겸은 첩의 아들(10화)",
           "image_prompt": "night medium close-up of the young scholar speaking plainly, moonlight on his face"
         },
         {
@@ -1179,12 +1161,12 @@
           "dialogue": [
             {
               "speaker": "jeonggyeom",
-              "line": "이번엔 그쪽이 깨 주시오.",
+              "line": "신랑이 깨면 불효고, 신부가 깨면 소박이오. 이번엔 그쪽이 깨 주시오.",
               "mode": "ON"
             }
           ],
           "transition": "CUT",
-          "duration_sec": 3,
+          "duration_sec": 5,
           "image_prompt": "night close-up of the young scholar turning his head toward the wall as if facing the man on the other side"
         },
         {
@@ -1228,7 +1210,7 @@
             }
           ],
           "transition": "CUT",
-          "duration_sec": 3,
+          "duration_sec": 2,
           "image_prompt": "night medium shot of the storyteller turning his head toward the inner quarters of the house"
         },
         {
@@ -1263,7 +1245,7 @@
             "WALL"
           ],
           "transition": "CUT",
-          "duration_sec": 3,
+          "duration_sec": 2,
           "image_prompt": "bird's-eye view at night, a single tiled wall splitting the frame vertically, a scholar leaning on one side in the alley and a storyteller leaning on the other side in the courtyard, back to back through the wall"
         },
         {
