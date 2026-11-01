@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """25부작 전체 콘티 보드(한 장짜리 HTML) 만들기.
 
-storyboards/ep01~20.json 을 모두 읽어 tools/board_template.html 에 넣고 out/board.html 로 쓴다.
+storyboards/ep*.json 을 모두 읽어 tools/board_template.html 에 넣고 out/board.html 로 쓴다.
 회차 레일, 3분 타임라인, 모티프 필터, 샷별 이미지 프롬프트 복사가 들어 있다.
 
     python3 tools/board.py            # out/board.html
@@ -42,7 +42,7 @@ def main() -> int:
     tpl = (ROOT / "tools" / "board_template.html").read_text(encoding="utf-8")
     OUT_DIR.mkdir(parents=True, exist_ok=True)
     out = OUT_DIR / "board.html"
-    out.write_text(tpl.replace("/*__DATA__*/null", data), encoding="utf-8")
+    out.write_text(tpl.replace("/*__DATA__*/null", data).replace("__EPISODES__", str(len(eps))), encoding="utf-8")
     n = sum(e["shots"] for e in eps)
     print(f"[보드] {out.relative_to(ROOT)}  회차 {len(eps)} · 샷 {n} · {out.stat().st_size // 1024}KB")
     return 0
