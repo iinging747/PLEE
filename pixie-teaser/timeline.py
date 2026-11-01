@@ -24,7 +24,7 @@ DUR_OUT = LOGO_T0 + (120.0 - 112.75)  # ~63.7 s
 
 # ================================================================= A. COLD OPEN (beats 0-16)
 vid("eye2", 0, 6, 0.4, speed=0.55, z0=1.0, z1=1.12, grade="noir", exp=-0.1, fade_in=0.5)
-caption(3, 9.5, "차트 볼 땐, 말 걸지 마세요", en="Don't talk to me when I'm on the charts.", y=842, use_scrim=False, size=40)
+caption(2.5, 9.5, "감정은 차갑게. 차트는 정확하게.", en="Cold on emotion. Exact on the chart.", y=842, use_scrim=False, size=40)
 SFX.append(dict(t=0.05, name="sub_drop", db=-12))
 vid("eye4", 6, 9, 4.2, speed=0.5, z0=1.05, z1=1.14, grade="noir")
 vid("eye3", 9, 10.5, 1.3, speed=0.5, z0=1.08, z1=1.14, grade="noir")
@@ -52,7 +52,7 @@ slam("P129", 22, 24, focus=(0.42, 0.40), grade="trade", rot=-2.0)
 burst(24, ["P139", "P128", "P141", "P126", "P142", "P138", "P130", "P129", "P131", "P140", "P132", "P142"],
       step=0.5, grade="trade", flash=0.35)
 bumps(16, 30, amt=0.02, shake=3)
-caption(23.5, 30, "포지션은, 안 알려드려요", en="Not telling you my positions.")
+caption(23.5, 30, "흔들리면, 지는 거야.", en="Flinch, and you lose.")
 EVENTS.append(dict(type="strobe", t0=b(28), t1=b(30), period=b(1) - b(0.5), amt=0.15))
 EVENTS.append(dict(type="black", t0=b(30), t1=b(32)))
 label(30.2, 32, "ENTER", y=H / 2, size=22, opacity=0.95)
@@ -78,7 +78,7 @@ crt_off(48)
 slam("P196", 48, 50, focus=(0.5, 0.5), grade="warm", rot=-1.2)
 slam("P198", 50, 52, focus=(0.5, 0.52), grade="warm", rot=1.2)
 cut(50, "whip", 0.8)
-caption(48.6, 55, "노트북 덮으면, 앞치마 입어요", en="Laptop shut, apron on.")
+caption(48.6, 55, "근데, 차트만 보고 살진 않아.", en="But I don't live on charts alone.")
 dine = [("P194", (0.45, 0.38)), ("P195", (0.5, 0.5)), ("V04", 0.8), ("P193", (0.45, 0.45)), ("P197", (0.5, 0.48)),
         ("V02", 1.5), ("P092", (0.5, 0.55)), ("V05", 1.6)]
 for i, item in enumerate(dine):
@@ -101,7 +101,7 @@ bands(68, 76, [dict(src="M3", **{"in": 3.0}, speed=0.5, focus=(0.5, 0.5)),
                dict(src="M1", **{"in": 2.0}, speed=0.5, focus=(0.5, 0.45))], stagger=0.5)
 vid("M3", 76, 80, 6.5, speed=[(0, 1.6), (0.5, 0.3), (1.9, 0.3)], z0=1.0, z1=1.12, grade="beauty",
     fit="width", mask=iris(b(76), 0.4))
-caption(68.5, 76, "화장은, 생각보다 오래 걸려요", en="Makeup takes longer than you'd think.", size=46)
+caption(68.5, 76, "나를 가꾸는 것도, 투자니까.", en="Taking care of myself is an investment too.", size=46)
 EVENTS.append(dict(type="bloom", t0=b(64), t1=b(80), strength=0.4, thr=0.7))
 EVENTS.append(dict(type="particles", t0=b(64), t1=b(80), n=40, seed=8, color=(1, 0.92, 0.88), strength=0.5, speed=10))
 EVENTS.append(dict(type="leak", t0=b(64), t1=b(80), colors=[LILAC, CHAMPAGNE], strength=0.22, seed=9, speed=0.6))
@@ -123,7 +123,7 @@ for i, (pid, foc, gr) in enumerate(world):
 loc_tag(87, 89.5, "Singapore", "MARINA BAY  ·  1.2834° N  103.8607° E")
 tri(92, 94, ["P146", "P152", "P155"], stagger=0.33, grade="stage")
 burst(94, ["P153", "P170", "P102", "P151"], step=0.5, grade="night", flash=0.4)
-caption(86, 94.5, "싱가포르엔 일하러 갔는데, 반은 놀았어요", en="Went to Singapore for work. Played for half of it.", size=46)
+caption(87, 95, "트레이더? 그게 다가 아니야.", en="A trader? That's not all I am.", size=48)
 bumps(85, 96, amt=0.03, shake=4)
 
 # ================================================================= G. CLIMAX (beats 96-112)
@@ -197,7 +197,7 @@ EVENTS.append(dict(type="draw", t0=LIVE_T0, t1=LIVE_T1,
 def _live_sub(frame, t, k, fi):
     a = min(clamp((t - LIVE_T0 - 0.2) / 0.4), clamp((LIVE_T1 - t) / 0.6))
     T.draw_text(frame, "FIRST LIVE", "unb", 22, W / 2, 420, opacity=a * 0.85, tracking=0.02)
-    line = LIVE_DATE if LIVE_DATE else "픽시예요. 첫 라이브 때 봬요"
+    line = LIVE_DATE if LIVE_DATE else "나는 픽시. 첫 라이브에서 보자."
     T.draw_text(frame, line, KR, 34, W / 2, 672, opacity=a * 0.85, tracking=KR_TRACK)
     return frame
 
@@ -208,13 +208,12 @@ SFX.append(dict(t=LIVE_T0, name="hit_metal", db=-16))
 
 # ---------------------------------------------------------------- voiceover slots (VO_SCRIPT.md)
 VO = [
-    dict(id="vo01", t=b(3.2), until=b(9.5), kr="차트 볼 땐, 말 걸지 마세요", en="Don't talk to me when I'm on the charts."),
-    dict(id="vo02", t=b(23.8), until=b(30), kr="포지션은, 안 알려드려요", en="Not telling you my positions."),
-    dict(id="vo03", t=b(48.8), until=b(55), kr="노트북 덮으면, 앞치마 입어요", en="Laptop shut, apron on."),
-    dict(id="vo04", t=b(68.8), until=b(76), kr="화장은, 생각보다 오래 걸려요", en="Makeup takes longer than you'd think."),
-    dict(id="vo05", t=b(86.2), until=b(94.5), kr="싱가포르엔 일하러 갔는데, 반은 놀았어요",
-         en="Went to Singapore for work. Played for half of it."),
-    dict(id="vo06", t=LIVE_T0 + 0.3, until=LIVE_T1, kr="픽시예요. 첫 라이브 때 봬요", en="I'm Pixie. See you at the first live."),
+    dict(id="vo01", t=b(2.7), until=b(9.5), kr="감정은 차갑게. 차트는 정확하게.", en="Cold on emotion. Exact on the chart."),
+    dict(id="vo02", t=b(23.8), until=b(30), kr="흔들리면, 지는 거야.", en="Flinch, and you lose."),
+    dict(id="vo03", t=b(48.8), until=b(55), kr="근데, 차트만 보고 살진 않아.", en="But I don't live on charts alone."),
+    dict(id="vo04", t=b(68.8), until=b(76), kr="나를 가꾸는 것도, 투자니까.", en="Taking care of myself is an investment too."),
+    dict(id="vo05", t=b(87.2), until=b(95), kr="트레이더? 그게 다가 아니야.", en="A trader? That's not all I am."),
+    dict(id="vo06", t=LIVE_T0 + 0.3, until=LIVE_T1, kr="나는 픽시. 첫 라이브에서 보자.", en="I'm Pixie. See you at the first live."),
 ]
 
 # ---------------------------------------------------------------- look / audio
