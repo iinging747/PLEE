@@ -118,7 +118,7 @@
       "location": "heojin_byeolchae",
       "time": "DUSK",
       "tc_in": "00:12",
-      "tc_out": "00:44",
+      "tc_out": "00:40",
       "characters": [
         "dallae",
         "heukrip"
@@ -138,7 +138,7 @@
           "action": "자물쇠가 풀린다.",
           "sound": "(E) 철컥—. 자물쇠 풀리는 소리",
           "transition": "CUT",
-          "duration_sec": 2,
+          "duration_sec": 1,
           "continuity": "축: 별채 문은 화면 왼쪽, 달래는 화면 오른쪽 병풍 앞 비단 금침 위. 창살 창은 오른쪽 벽이라 노을이 달래 등 뒤에서 들어온다. 달래 손목은 앞으로 묶인 채(19화 S#3), 볼에 먹 자국. 이 씬 내내 유지",
           "image_prompt": "inside a locked guest pavilion at sunset, the latticed door rattling as a padlock is undone from outside, orange light through the paper panels"
         },
@@ -231,7 +231,7 @@
             }
           ],
           "transition": "CUT",
-          "duration_sec": 4,
+          "duration_sec": 3,
           "image_prompt": "slow push-in on the young woman staring at the scarred hand, then lifting her eyes to the assassin's face, frightened but steady"
         },
         {
@@ -275,7 +275,7 @@
             }
           ],
           "transition": "CUT",
-          "duration_sec": 4,
+          "duration_sec": 3,
           "image_prompt": "profile two-shot across a small meal tray, the assassin on the left, the young woman on the right speaking defiantly"
         },
         {
@@ -303,7 +303,7 @@
             }
           ],
           "transition": "CUT",
-          "duration_sec": 4,
+          "duration_sec": 3,
           "image_prompt": "over-the-shoulder from the assassin, the young woman eyeing a bowl of rice on the tray with suspicion"
         },
         {
@@ -375,8 +375,8 @@
       "heading": "허진의 집 율의 방 (밤)",
       "location": "heojin_yul_room",
       "time": "NIGHT",
-      "tc_in": "00:44",
-      "tc_out": "01:03",
+      "tc_in": "00:40",
+      "tc_out": "00:59",
       "characters": [
         "yul",
         "extras"
@@ -495,8 +495,8 @@
       "heading": "허진의 집 별채 앞 (밤)",
       "location": "heojin_byeolchae",
       "time": "NIGHT",
-      "tc_in": "01:03",
-      "tc_out": "01:22",
+      "tc_in": "00:59",
+      "tc_out": "01:18",
       "characters": [
         "dallae",
         "yul"
@@ -682,8 +682,8 @@
       "heading": "허진의 집 담장 밖 (밤)",
       "location": "heojin_gate",
       "time": "NIGHT",
-      "tc_in": "01:22",
-      "tc_out": "01:36",
+      "tc_in": "01:18",
+      "tc_out": "01:31",
       "characters": [
         "jeonggyeom",
         "gangsu",
@@ -795,7 +795,7 @@
             "WALL"
           ],
           "transition": "CUT",
-          "duration_sec": 3,
+          "duration_sec": 2,
           "notes": "TASKS 필수: 담 밖 손톱",
           "image_prompt": "insert, long slender fingers digging their nails into an earthen wall until the dirt crumbles"
         }
@@ -806,16 +806,16 @@
       "heading": "허진의 집 후원 (밤)",
       "location": "heojin_huwon",
       "time": "NIGHT",
-      "tc_in": "01:36",
-      "tc_out": "02:41",
+      "tc_in": "01:31",
+      "tc_out": "02:43",
       "characters": [
         "dallae",
         "yul",
         "heukrip"
       ],
       "mood": "GRIEF",
-      "summary": "쪽문 앞을 흑립이 막아선다. 율이 달래 앞에 몸을 던져 가슴을 베이고, 주인의 아들을 벤 흑립의 칼이 멈춘다. 율은 웃으며 마음을 털어놓고 피 묻은 호루라기를 건넨다. 달래가 분다.",
-      "source_text": "연못, 정자, 달빛. 뒤쪽에서 초롱들이 하나둘 켜진다. 뒷담 아래 쪽문은 잠겨 있다. 율이 무릎을 굽힌다.\n**율** 올라서시오. 빨리.\n그때. 정자 지붕에서 흑립이 내려선다. 소리 없이. 둘과 담장 사이에. 율이 몸을 일으켜 달래의 앞을 막는다.\n**율** 비켜라.\n**흑립** 도련님, 들어가십시오.\n**율** 이 사람은 내가 데려간다.\n**흑립** 대감의 명입니다.\n**율** 나도 이 집 사람이다.\n흑립이 율을 비켜 달래 쪽으로 한 발 내딛는다. 율이 흑립의 팔을 잡는다. 뿌리친다. 칼이 칼집에서 빠져나와 달빛에 번쩍인다—\n율이 달래 앞으로 몸을 던진다. 칼날이 율의 가슴을 가른다.\n정적. 흑립의 칼이 허공에서 멈춘다. 흑립의 눈이 크게 흔들린다. 주인의 아들이다.\n율이 뒤로 무너진다. 달래가 받아 안고 흙바닥에 주저앉는다. 달래의 손바닥이 상처를 누른다. 손가락 사이로 뜨거운 것이 배어 나온다. 멈추지 않는다.\n율이 달래를 올려다본다. 그리고 웃는다. 늘 웃던 그 얼굴로.\n**율** (웃으며) …처음엔, 뭐지 싶어서 왔지. 근데 정신 차려 보니까… (숨을 고르며) 내가 당신 앞을 막고 서 있더라.\n**달래** (울며) 말하지 마요!\n**율** …연체료, 이제 다 냈소?\n**달래** 평생 안 받는다고 했잖아요!\n율이 품에서 피 묻은 호루라기를 꺼내 달래의 손에 쥐여 준다.\n**율** (거의 소리 없이) …불어요.\n달래가 호루라기를 물고 분다. 있는 힘을 다해. 날카로운 소리가 밤을 가른다.",
+      "summary": "후원 연못가. 쪽문은 잠겼고 흑립이 내려선다. 율은 쇠부채로 첫 칼을 받아 내며 '부채 쓰는 법은 네가 가르쳤지', 흑립은 '도련님은 두 번째를 못 막습니다'. 두 번째 칼에 율이 부채를 버리고 몸으로 달래를 막는다. 피 흘리며 웃는 율의 고백과 피 묻은 호루라기.",
+      "source_text": "연못, 정자, 달빛. 뒤쪽에서 초롱들이 하나둘 켜진다. 뒷담 아래 쪽문은 잠겨 있다. 율이 무릎을 굽힌다.\n**율** 올라서시오. 빨리.\n그때. 정자 지붕에서 흑립이 내려선다. 소리 없이. 둘과 담장 사이에. 율이 몸을 일으켜 달래의 앞을 막는다.\n**율** 비켜라.\n**흑립** 도련님, 들어가십시오.\n**율** 이 사람은 내가 데려간다.\n**흑립** 대감의 명입니다.\n**율** 나도 이 집 사람이다.\n흑립이 율을 비켜 달래 쪽으로 한 발 내딛는다. 율이 접은 부채로 그 앞을 가로막는다. 칼이 칼집에서 빠져나와 달빛에 번쩍인다. 쨍— 율의 쇠부채가 첫 칼을 받아 낸다. 불꽃이 튄다.\n**율** (칼을 부채로 받친 채, 이를 악물고 웃으며) 부채 쓰는 법은 네가 가르쳤지.\n**흑립** …그래서 압니다. 도련님은 두 번째를 못 막습니다.\n두 번째 칼은 부채보다 빠르다. 율이 부채를 버리고 달래 앞으로 몸을 던진다. 칼날이 율의 가슴을 가른다.\n정적. 흑립의 칼이 허공에서 멈춘다. 흑립의 눈이 크게 흔들린다. 주인의 아들이다.\n율이 뒤로 무너진다. 달래가 받아 안고 흙바닥에 주저앉는다. 달래의 손바닥이 상처를 누른다. 손가락 사이로 뜨거운 것이 배어 나온다. 멈추지 않는다.\n율이 달래를 올려다본다. 그리고 웃는다. 늘 웃던 그 얼굴로.\n**율** (웃으며) …처음엔, 뭐지 싶어서 왔지. 근데 정신 차려 보니까… (숨을 고르며) 내가 당신 앞을 막고 서 있더라.\n**달래** (울며) 말하지 마요!\n**율** …연체료, 이제 다 냈소?\n**달래** 평생 안 받는다고 했잖아요!\n율이 품에서 피 묻은 호루라기를 꺼내 달래의 손에 쥐여 준다.\n**율** (거의 소리 없이) …불어요.\n달래가 호루라기를 물고 분다. 있는 힘을 다해. 날카로운 소리가 밤을 가른다.",
       "shots": [
         {
           "id": "S05-01",
@@ -992,12 +992,12 @@
             "yul",
             "dallae"
           ],
-          "frame": "흑립이 율을 비켜 오른쪽 달래 쪽으로 한 발 들어선다. 율이 그 팔을 잡고, 흑립이 뿌리친다. 흔들리는 카메라.",
-          "action": "흑립이 율을 비켜 달래 쪽으로 한 발 내딛는다. 율이 흑립의 팔을 잡는다. 뿌리친다.",
-          "sound": "(E) 옷자락이 거칠게 스치는 소리",
+          "frame": "흑립이 율을 비켜 오른쪽 달래 쪽으로 한 발 들어선다. 율이 접은 부채를 가로로 들어 그 앞을 막는다.",
+          "action": "흑립이 달래 쪽으로 한 발 내딛는다. 율이 접은 부채로 그 앞을 가로막는다.",
+          "sound": "(E) 옷자락이 거칠게 스치는 소리, ♪ 율의 테마(가야금 한 줄이 튕기고 대금이 받는다)",
           "transition": "CUT",
           "duration_sec": 3,
-          "image_prompt": "handheld, the assassin sidestepping the young nobleman toward the young woman, the nobleman grabbing his arm and being shaken off"
+          "image_prompt": "moonlit garden, an assassin in a black gat stepping past a young nobleman toward a frightened young woman, the nobleman barring his way with a closed iron fan held crosswise"
         },
         {
           "id": "S05-09",
@@ -1021,6 +1021,69 @@
         {
           "id": "S05-10",
           "size": "2S",
+          "angle": "LOW",
+          "move": "SLOWMO",
+          "lens_mm": 50,
+          "characters": [
+            "yul",
+            "heukrip"
+          ],
+          "frame": "로우앵글 슬로모션. 내려오는 칼을 율의 쇠부채가 받아 낸다. 불꽃이 달빛 속으로 흩어진다.",
+          "action": "율의 쇠부채가 첫 칼을 받아 낸다. 불꽃이 튄다.",
+          "sound": "(E) 쨍—",
+          "transition": "CUT",
+          "duration_sec": 2,
+          "notes": "율의 부채는 살이 쇠로 된 쇠부채(철선). 4화 쇳소리가 복선, 12화 골목·20화 후원에서 쓴다",
+          "image_prompt": "low angle slow motion under moonlight, a descending sword caught on the iron ribs of a young nobleman's closed fan, sparks scattering into the dark"
+        },
+        {
+          "id": "S05-11",
+          "size": "MCU",
+          "angle": "EYE",
+          "move": "FIX",
+          "lens_mm": 85,
+          "characters": [
+            "yul"
+          ],
+          "frame": "칼을 부채로 받친 채 버티는 율. 이를 악물었는데 입꼬리는 올라가 있다. 보조개.",
+          "action": "율이 칼을 받친 채 웃는다.",
+          "dialogue": [
+            {
+              "speaker": "yul",
+              "line": "부채 쓰는 법은 네가 가르쳤지.",
+              "mode": "ON"
+            }
+          ],
+          "transition": "CUT",
+          "duration_sec": 3,
+          "notes": "흑립은 이 집에서 율에게 부채 쓰는 법을 가르친 사람. 둘의 시간이 한 줄에 담긴다",
+          "image_prompt": "medium close-up of the young nobleman holding back a sword with his fan, teeth clenched yet smiling, dimple showing, moonlight on sweat"
+        },
+        {
+          "id": "S05-12",
+          "size": "MCU",
+          "angle": "EYE",
+          "move": "FIX",
+          "lens_mm": 85,
+          "characters": [
+            "heukrip"
+          ],
+          "frame": "칼을 맞댄 흑립. 갓 그늘 속 눈이 처음으로 흔들린다. 목소리는 낮다.",
+          "action": "흑립이 답한다.",
+          "dialogue": [
+            {
+              "speaker": "heukrip",
+              "line": "…그래서 압니다. 도련님은 두 번째를 못 막습니다.",
+              "mode": "ON"
+            }
+          ],
+          "transition": "CUT",
+          "duration_sec": 3,
+          "image_prompt": "medium close-up of the assassin under the shadow of his black gat, blade locked against the fan, his eyes wavering for the first time"
+        },
+        {
+          "id": "S05-13",
+          "size": "2S",
           "angle": "DUTCH",
           "move": "SLOWMO",
           "lens_mm": 35,
@@ -1029,8 +1092,8 @@
             "dallae",
             "heukrip"
           ],
-          "frame": "사선 앵글, 슬로모션. 율이 달래 앞으로 몸을 던지고 칼날이 율의 가슴을 가로지른다. 율 어깨 너머로 달래의 얼굴.",
-          "action": "율이 달래 앞으로 몸을 던진다. 칼날이 율의 가슴을 가른다.",
+          "frame": "사선 앵글, 슬로모션. 두 번째 칼은 부채보다 빠르다. 율이 부채를 버리고 달래 앞으로 몸을 던지고, 칼날이 율의 가슴을 가로지른다. 쇠부채가 흙바닥에 떨어진다.",
+          "action": "두 번째 칼은 부채보다 빠르다. 율이 부채를 버리고 달래 앞으로 몸을 던진다. 칼날이 율의 가슴을 가른다.",
           "sound": "소리가 빠진다. 숨소리 하나",
           "transition": "CUT",
           "duration_sec": 3,
@@ -1038,7 +1101,7 @@
           "image_prompt": "dutch angle slow motion, the young nobleman throwing himself in front of the young woman as a sword slashes across his chest"
         },
         {
-          "id": "S05-11",
+          "id": "S05-14",
           "size": "ECU",
           "angle": "EYE",
           "move": "FIX",
@@ -1055,7 +1118,7 @@
           "image_prompt": "extreme close-up of the assassin's shadowed eyes widening and trembling, the frozen sword tip at the bottom of the frame"
         },
         {
-          "id": "S05-12",
+          "id": "S05-15",
           "size": "MS",
           "angle": "HIGH",
           "move": "FIX",
@@ -1072,7 +1135,7 @@
           "image_prompt": "high angle, the wounded young nobleman collapsing backward into the young woman's arms as she sinks onto the dirt, a spoon falling beside them"
         },
         {
-          "id": "S05-13",
+          "id": "S05-16",
           "size": "INSERT",
           "angle": "EYE",
           "move": "FIX",
@@ -1089,7 +1152,7 @@
           "image_prompt": "insert, two small ink-stained hands pressing hard on a chest wound, dark blood seeping between the fingers in moonlight"
         },
         {
-          "id": "S05-14",
+          "id": "S05-17",
           "size": "CU",
           "angle": "HIGH",
           "move": "DOLLY_IN",
@@ -1107,12 +1170,12 @@
             }
           ],
           "transition": "CUT",
-          "duration_sec": 9,
+          "duration_sec": 8,
           "notes": "TASKS 필수 대사. 숨 고르는 사이를 살려 9초. 편집에서 줄이지 말 것",
           "image_prompt": "high angle close-up from her point of view, the wounded young nobleman lying in her arms, looking up with his usual dimpled smile, pale in moonlight, slow push-in"
         },
         {
-          "id": "S05-15",
+          "id": "S05-18",
           "size": "CU",
           "angle": "LOW",
           "move": "FIX",
@@ -1134,7 +1197,7 @@
           "image_prompt": "low angle close-up from his point of view, the young woman crying and shaking her head, tears running over an ink smudge on her cheek"
         },
         {
-          "id": "S05-16",
+          "id": "S05-19",
           "size": "CU",
           "angle": "HIGH",
           "move": "FIX",
@@ -1160,7 +1223,7 @@
           "image_prompt": "high angle close-up, the young nobleman smiling weakly, his bloodied chest visible at the bottom of the frame"
         },
         {
-          "id": "S05-17",
+          "id": "S05-20",
           "size": "CU",
           "angle": "LOW",
           "move": "FIX",
@@ -1182,7 +1245,7 @@
           "image_prompt": "low angle close-up, the young woman shouting through her tears"
         },
         {
-          "id": "S05-18",
+          "id": "S05-21",
           "size": "INSERT",
           "angle": "EYE",
           "move": "FIX",
@@ -1209,7 +1272,7 @@
           "image_prompt": "insert, a trembling hand pressing a small blood-smeared whistle into a young woman's bloodied palm"
         },
         {
-          "id": "S05-19",
+          "id": "S05-22",
           "size": "CU",
           "angle": "EYE",
           "move": "FIX",
@@ -1228,7 +1291,7 @@
           "image_prompt": "close-up, the young woman blowing a small whistle with all her strength, tears streaming"
         },
         {
-          "id": "S05-20",
+          "id": "S05-23",
           "size": "ELS",
           "angle": "HIGH",
           "move": "CRANE_UP",
@@ -1252,7 +1315,7 @@
       "heading": "담장 밖 / 후원 (밤)",
       "location": "heojin_huwon",
       "time": "NIGHT",
-      "tc_in": "02:41",
+      "tc_in": "02:43",
       "tc_out": "03:00",
       "characters": [
         "dallae",
@@ -1351,7 +1414,7 @@
           "frame": "흑립 어깨 너머로 내려다보는 각. 칼이 다시 화면 위로 올라간다. 아래에서 율을 끌어안은 달래가 칼을 똑바로 올려다본다.",
           "action": "흑립이 칼을 다시 든다. 달래는 율을 끌어안은 채 눈을 감지 않는다.",
           "transition": "CUT",
-          "duration_sec": 3,
+          "duration_sec": 2,
           "image_prompt": "over-the-shoulder from the assassin raising his sword again, below him the young woman holding the wounded nobleman stares straight up without closing her eyes"
         },
         {
@@ -1367,7 +1430,7 @@
           "action": "담장 너머로 횃불이 솟는다. 하나. 둘. 열.",
           "sound": "(E) 횃불 타는 소리, 담 넘는 발소리",
           "transition": "CUT",
-          "duration_sec": 3,
+          "duration_sec": 2,
           "image_prompt": "low angle, torches rising one by one over the top of a garden wall at night until there are ten"
         },
         {

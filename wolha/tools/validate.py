@@ -150,6 +150,17 @@ def check(path: Path) -> tuple[list[str], list[str]]:
     if total and abs(total - runtime) > runtime * 0.05:
         (errors if status == "final" else warns).append(
             f"샷 길이 총합 {total:.1f}초 ↔ runtime {runtime}초 (±5% 초과)")
+    # '지난 대목' Flash(S00-02)는 지난 회 마지막 컷을 재사용해야 한다. 앞 회 샷 번호가 바뀌면 여기서 걸린다
+    if data["episode"] >= 2:
+        prev_path = STORYBOARD_DIR / f"ep{data['episode'] - 1:02d}.json"
+        flash = next((sh for sc in data["scenes"] if sc["id"] == "S#0" for sh in sc["shots"] if sh["id"] == "S00-02"), None)
+        if flash and flash.get("image_from") and prev_path.exists():
+            prev = load_json(prev_path)
+            prev_shots = [sh for sc in prev["scenes"] for sh in sc.get("shots", [])]
+            if prev_shots:
+                want = f"ep{prev['episode']:02d}/{prev_shots[-1]['id']}"
+                if flash["image_from"] != want:
+                    warns.append(f"S00-02: image_from {flash['image_from']} 이 지난 회 마지막 컷({want})이 아님")
     shot_count = len(seen_ids)
     if shot_count and not (25 <= shot_count <= 80):
         warns.append(f"샷 수 {shot_count}개 — 3분물 권장 범위 25~80")

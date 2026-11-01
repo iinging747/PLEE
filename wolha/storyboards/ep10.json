@@ -326,7 +326,9 @@
           ],
           "transition": "CUT",
           "duration_sec": 4,
-          "image_prompt": "two-shot inside the warehouse, the young woman crouched beside the jar and the girl inside holding their breath, a bar of torchlight across their faces"
+          "image_prompt": "two-shot inside the warehouse, the young woman crouched beside the jar and the girl inside holding their breath, a bar of torchlight across their faces",
+          "sound": "♪ 율의 테마(가야금 한 줄이 튕기고 대금이 받는다)",
+          "notes": "율이 처음으로 아버지의 이름을 막아서는 장면. 부채를 탁 접는 소리에서 율의 테마가 들어온다"
         },
         {
           "id": "S01-12",
@@ -371,10 +373,10 @@
               "mode": "OS"
             }
           ],
-          "sound": "(E) 발소리가 멀어진다",
+          "sound": "(E) 발소리가 멀어진다, ♪ 율의 테마(가야금 한 줄이 튕기고 대금이 받는다)",
           "transition": "CUT",
           "duration_sec": 4,
-          "notes": "횃불이 물러가는 그림은 다음 씬(새벽 나루)으로 넘어가기 위한 최소한의 컷",
+          "notes": "횃불이 물러가는 그림은 다음 씬(새벽 나루)으로 넘어가기 위한 최소한의 컷 율이 처음으로 아버지의 이름을 막아서는 장면. 부채를 탁 접는 소리에서 율의 테마가 들어온다",
           "image_prompt": "close-up of the young woman listening toward the door, her tension easing slightly as bars of torchlight slide off her face and fade"
         }
       ]

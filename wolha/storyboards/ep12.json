@@ -313,7 +313,7 @@
       "location": "dallae_anchae",
       "time": "NIGHT",
       "tc_in": "00:40",
-      "tc_out": "01:17",
+      "tc_out": "01:15",
       "characters": [
         "gangsu",
         "jeonggyeom",
@@ -338,7 +338,7 @@
           "action": "정겸이 바늘로 강수의 팔을 꿰맨다. 달래가 등잔을 들고 있다.",
           "sound": "(E) 실 당기는 소리. 강수의 참는 숨",
           "transition": "CUT",
-          "duration_sec": 3,
+          "duration_sec": 2,
           "continuity": "축: 강수 화면 왼쪽(다친 왼팔을 화면 가운데 쪽으로 내민다), 정겸 오른쪽, 달래는 둘 사이 뒤쪽 가운데. 방문은 강수 등 뒤 왼쪽. 광원은 달래가 든 등잔 하나. 강수 왼팔은 이 씬에서 꿰매고 S#3부터 무명 붕대",
           "image_prompt": "a cramped room lit only by a single oil lamp held in a young woman's trembling hands at the back, a wounded young man on the left resting his cut forearm on a low desk, a tall scholar on the right stitching the wound with needle and thread"
         },
@@ -544,7 +544,7 @@
           "frame": "정겸이 화면 오른쪽에서 손을 뻗어 달래 손에서 등잔을 받아 든다. 불꽃이 정겸 손에서 곧게 선다. 달래의 빈손은 그대로 떨린다.",
           "action": "정겸이 말없이 등잔을 받아 든다.",
           "transition": "DISSOLVE",
-          "duration_sec": 4,
+          "duration_sec": 3,
           "image_prompt": "two-shot, the tall scholar reaching over and quietly taking the oil lamp from the young woman's hands, the flame steadying in his grip while her empty hands still tremble"
         }
       ]
@@ -554,8 +554,8 @@
       "heading": "종로 담배가게 앞 (낮)",
       "location": "jongno_tobacco",
       "time": "DAY",
-      "tc_in": "01:17",
-      "tc_out": "01:54",
+      "tc_in": "01:15",
+      "tc_out": "01:49",
       "characters": [
         "gangsu",
         "jeonggyeom",
@@ -591,7 +591,7 @@
           "action": "며칠 뒤. 강수가 다시 평상에 선다. 구경꾼이 전보다 많다.",
           "sound": "장터 소음, 담배 써는 칼 소리",
           "transition": "CUT",
-          "duration_sec": 3,
+          "duration_sec": 2,
           "continuity": "축: 정면 무대 구도(bible). 평상 위 강수는 화면 위 가운데, 관객은 화면 아래 전경. 정겸은 군중 속 왼쪽, 안 내관과 삿갓 정조는 군중 뒤 오른쪽에서 왼쪽으로 지나간다. 강수 왼팔 무명 붕대(12~21화)",
           "image_prompt": "high angle crane down onto a Joseon street corner in daylight, an even larger semicircle crowd packed around a wooden storyteller's platform in front of a tobacco shop"
         },
@@ -608,7 +608,7 @@
           "action": "강수가 키스 대목 직전까지 읽어 나가다 뚝 멈춘다.",
           "sound": "낭독 소리(알아듣지 못할 정도로), 군중이 숨을 죽인다",
           "transition": "CUT",
-          "duration_sec": 3,
+          "duration_sec": 2,
           "image_prompt": "low angle, the storyteller on his platform with a white cotton bandage wrapped around his left forearm, holding a thread-bound book in that hand and a fan in the other, pausing dramatically mid-sentence"
         },
         {
@@ -669,7 +669,7 @@
           "action": "던진 사람은 지친 얼굴의 내관. 그 뒤에 삿갓을 눌러쓴 선비 하나. 정조다.",
           "sound": "장터 소음이 한 박자 빠진다",
           "transition": "CUT",
-          "duration_sec": 3,
+          "duration_sec": 2,
           "continuity": "정조는 삿갓 쓴 선비 변장(bible ep12 의상). 안 내관은 무명옷, 삿갓 없음",
           "notes": "변장 차림은 씬 looks(jeongjo:disguise, an_naegwan:disguise)로 프롬프트에 들어간다",
           "image_prompt": "at the back of the crowd, a weary middle-aged man in plain commoner's cotton clothes lowering his throwing arm, rack focus to a scholar behind him wearing a wide bamboo satgat pulled low, only his jaw visible, plain ramie robe"
@@ -802,8 +802,8 @@
       "heading": "허진의 집 사랑채 (밤)",
       "location": "heojin_sarang",
       "time": "NIGHT",
-      "tc_in": "01:54",
-      "tc_out": "02:27",
+      "tc_in": "01:49",
+      "tc_out": "02:22",
       "characters": [
         "heojin",
         "heukrip"
@@ -981,7 +981,7 @@
       "heading": "달래책방 골목 (밤)",
       "location": "dallae_wall",
       "time": "NIGHT",
-      "tc_in": "02:27",
+      "tc_in": "02:22",
       "tc_out": "03:00",
       "characters": [
         "yul",
@@ -989,8 +989,8 @@
         "dallae"
       ],
       "mood": "ACTION",
-      "summary": "완력패 다섯이 달래책방 골목에 들어서자 부채를 편 율이 막아선다. 옆구리를 베인 율이 호루라기로 순라군을 부르고, 담에 기대 피를 흘리다 책방 안 달래의 웃음소리에 작게 웃고는 어둠 속으로 사라진다.",
-      "source_text": "몽둥이와 칼을 든 완력패 다섯이 골목으로 들어선다. 그 앞을 누군가 막는다. 부채를 편 율이다.\n**율** 여긴 내 단골 책방이라서. 연체료도 아직 다 못 냈고.\n칼이 번쩍인다. 율의 옆구리. 율이 비틀거리며 품에서 호루라기를 꺼내 분다. 날카로운 소리. 골목 끝에서 순라군의 횃불이 모여든다. 완력패가 흩어진다.\n율이 담에 기댄다. 옆구리를 누른 손가락 사이로 피가 떨어진다. 한 방울. 두 방울. 책방 안에서 달래의 웃음소리가 들린다. 율이 그 소리를 듣고 아주 작게 웃는다. 그리고 누가 보기 전에 어둠 속으로 걸어간다.",
+      "summary": "완력패 다섯 앞을 막아선 율. '여긴 내 단골 책방이라서.' 쇠부채로 셋을 막아 내다 등 뒤에서 옆구리를 베이고, 호루라기로 순라군을 부른다. 피를 흘리며 책방 안 웃음소리에 작게 웃고, 아무도 보기 전에 어둠 속으로 사라진다.",
+      "source_text": "몽둥이와 칼을 든 완력패 다섯이 골목으로 들어선다. 그 앞을 누군가 막는다. 부채를 편 율이다.\n**율** 여긴 내 단골 책방이라서. 연체료도 아직 다 못 냈고.\n율이 부채를 탁 접는다. 쇳소리. 첫 몽둥이를 부채로 받아 흘리고 손목을 쳐 떨군다. 둘째의 무릎을 걷어차 꺾는다. 셋째의 칼을 부채로 막는다. 불꽃이 튄다. 그 사이 뒤에서 넷째의 칼이 번쩍인다. 율의 옆구리. 율이 비틀거리며 품에서 호루라기를 꺼내 분다. 날카로운 소리. 골목 끝에서 순라군의 횃불이 모여든다. 완력패가 흩어진다.\n율이 담에 기댄다. 옆구리를 누른 손가락 사이로 피가 떨어진다. 한 방울. 두 방울. 책방 안에서 달래의 웃음소리가 들린다. 율이 그 소리를 듣고 아주 작게 웃는다. 그리고 누가 보기 전에 어둠 속으로 걸어간다.",
       "shots": [
         {
           "id": "S05-01",
@@ -1022,7 +1022,7 @@
           ],
           "frame": "완력패 어깨 너머. 담 아래 초롱빛 속으로 한 사람이 걸어 나와 길을 막는다. 부채가 펴진다. 율이다.",
           "action": "그 앞을 누군가 막는다. 부채를 편 율이다.",
-          "sound": "(E) 부채 펴는 소리 촥",
+          "sound": "(E) 부채 펴는 소리 촥, ♪ 율의 테마(가야금 한 줄이 튕기고 대금이 받는다)",
           "transition": "CUT",
           "duration_sec": 3,
           "image_prompt": "over the shoulders of the thugs, a handsome young nobleman in a plum silk robe stepping out under a lantern by the wall to block the alley, snapping open a folding fan"
@@ -1054,6 +1054,73 @@
         },
         {
           "id": "S05-04",
+          "size": "INSERT",
+          "angle": "LOW",
+          "move": "FIX",
+          "lens_mm": 85,
+          "characters": [
+            "yul"
+          ],
+          "frame": "율이 부채를 탁 접는다. 초롱빛에 쇠살이 번득인다.",
+          "action": "율이 부채를 탁 접는다. 쇳소리.",
+          "sound": "(E) 철컥 — 쇳소리",
+          "transition": "CUT",
+          "duration_sec": 2,
+          "notes": "율의 부채는 살이 쇠로 된 쇠부채(철선). 4화 쇳소리가 복선, 12화 골목·20화 후원에서 쓴다",
+          "image_prompt": "low angle insert, a young nobleman's hand snapping shut a folding fan, its dark iron ribs flashing in lantern light"
+        },
+        {
+          "id": "S05-05",
+          "size": "MS",
+          "angle": "LOW",
+          "move": "SLOWMO",
+          "lens_mm": 35,
+          "characters": [
+            "yul",
+            "extras"
+          ],
+          "frame": "로우앵글 슬로모션. 내리치는 첫 몽둥이를 접은 부채로 받아 흘리고, 손목을 쳐 몽둥이를 떨군다.",
+          "action": "첫 몽둥이를 부채로 받아 흘리고 손목을 쳐 떨군다.",
+          "transition": "CUT",
+          "duration_sec": 2,
+          "notes": "싸움에서도 웃음기가 남아 있다. 도포 자락이 크게 돈다",
+          "image_prompt": "low angle slow motion, an elegant young nobleman in plum silk deflecting a club with a closed iron fan and striking the thug's wrist so the club drops"
+        },
+        {
+          "id": "S05-06",
+          "size": "MS",
+          "angle": "EYE",
+          "move": "HANDHELD",
+          "lens_mm": 35,
+          "characters": [
+            "yul",
+            "extras"
+          ],
+          "frame": "핸드헬드. 율이 돌아서며 둘째의 무릎을 걷어차 꺾는다.",
+          "action": "둘째의 무릎을 걷어차 꺾는다.",
+          "transition": "CUT",
+          "duration_sec": 2,
+          "image_prompt": "handheld medium shot, the young nobleman spinning and kicking a second thug's knee out from under him in a moonlit alley"
+        },
+        {
+          "id": "S05-07",
+          "size": "2S",
+          "angle": "LOW",
+          "move": "FIX",
+          "lens_mm": 50,
+          "characters": [
+            "yul",
+            "extras"
+          ],
+          "frame": "셋째의 칼을 부채로 막는다. 쇠와 쇠가 부딪혀 불꽃이 튄다.",
+          "action": "셋째의 칼을 부채로 막는다. 불꽃이 튄다.",
+          "sound": "(E) 쨍",
+          "transition": "CUT",
+          "duration_sec": 2,
+          "image_prompt": "low angle two-shot, a sword blade meeting the iron ribs of a closed fan, sparks flying between the young nobleman and the thug"
+        },
+        {
+          "id": "S05-08",
           "size": "MS",
           "angle": "DUTCH",
           "move": "HANDHELD",
@@ -1062,8 +1129,8 @@
             "yul",
             "extras"
           ],
-          "frame": "사선 구도, 흔들리는 카메라. 칼날이 초롱빛에 번쩍이고 율의 옆구리를 스친다. 율이 비틀거린다.",
-          "action": "칼이 번쩍인다. 율의 옆구리.",
+          "frame": "사선 구도, 흔들리는 카메라. 셋째와 맞선 율의 등 뒤에서 넷째의 칼날이 초롱빛에 번쩍이고 옆구리를 긋는다. 율이 비틀거린다.",
+          "action": "그 사이 뒤에서 넷째의 칼이 번쩍인다. 율의 옆구리.",
           "sound": "(E) 쇳소리, 비단 찢어지는 소리",
           "transition": "CUT",
           "duration_sec": 3,
@@ -1071,7 +1138,7 @@
           "image_prompt": "dutch angle handheld, a blade flashing in lantern light and slicing across the side of the young nobleman's silk robe, he staggers"
         },
         {
-          "id": "S05-05",
+          "id": "S05-09",
           "size": "INSERT",
           "angle": "EYE",
           "move": "FIX",
@@ -1090,7 +1157,7 @@
           "image_prompt": "insert, a bloodied hand pulling a small whistle from inside the front of a plum silk robe"
         },
         {
-          "id": "S05-06",
+          "id": "S05-10",
           "size": "CU",
           "angle": "EYE",
           "move": "FIX",
@@ -1109,7 +1176,7 @@
           "image_prompt": "close-up of the young nobleman blowing hard on a small whistle, sweat on his brow, smile gone"
         },
         {
-          "id": "S05-07",
+          "id": "S05-11",
           "size": "ELS",
           "angle": "HIGH",
           "move": "FIX",
@@ -1125,7 +1192,7 @@
           "image_prompt": "high angle extreme wide shot of the alley, patrol torches converging from both ends, five thugs scattering in all directions"
         },
         {
-          "id": "S05-08",
+          "id": "S05-12",
           "size": "MS",
           "angle": "EYE",
           "move": "FIX",
@@ -1137,11 +1204,11 @@
           "action": "율이 담에 기댄다.",
           "sound": "멀어지는 발소리, 율의 숨",
           "transition": "CUT",
-          "duration_sec": 3,
+          "duration_sec": 2,
           "image_prompt": "medium shot, the wounded young nobleman leaning his back against the earthen wall on the left, slowly sagging, torchlight sweeping past"
         },
         {
-          "id": "S05-09",
+          "id": "S05-13",
           "size": "INSERT",
           "angle": "HIGH",
           "move": "FIX",
@@ -1153,11 +1220,11 @@
           "action": "옆구리를 누른 손가락 사이로 피가 떨어진다. 한 방울. 두 방울.",
           "sound": "(E) 똑. …똑.",
           "transition": "CUT",
-          "duration_sec": 3,
+          "duration_sec": 2,
           "image_prompt": "insert, fingers pressed against a wounded side, drops of blood falling between them onto the dirt one by one, lantern light"
         },
         {
-          "id": "S05-10",
+          "id": "S05-14",
           "size": "LS",
           "angle": "LOW",
           "move": "FIX",
@@ -1170,7 +1237,7 @@
           "image_prompt": "low angle over a tiled earthen wall, the warm glow of an oil lamp behind the paper windows of a small hanok, night"
         },
         {
-          "id": "S05-11",
+          "id": "S05-15",
           "size": "CU",
           "angle": "EYE",
           "move": "DOLLY_IN",
@@ -1189,7 +1256,7 @@
           "image_prompt": "slow push-in on the pale young nobleman turning his face toward the wall and smiling very faintly at a sound beyond it, his blood-stained hand at the bottom edge of frame"
         },
         {
-          "id": "S05-12",
+          "id": "S05-16",
           "size": "LS",
           "angle": "HIGH",
           "move": "CRANE_UP",
@@ -1200,7 +1267,7 @@
           "frame": "율이 담에서 몸을 떼어 화면 오른쪽 어둠으로 걸어 나간다. 카메라가 올라가면 초롱빛 아래 핏방울 자국만 남고, 담 너머 책방 불빛이 화면 왼쪽에 걸린다.",
           "action": "율이 누가 보기 전에 어둠 속으로 걸어간다.",
           "transition": "FREEZE",
-          "duration_sec": 3,
+          "duration_sec": 2,
           "notes": "엔딩 훅. 담 아래 핏방울 위에서 프리즈",
           "image_prompt": "high angle crane up, the young nobleman walking away into the dark end of the alley, leaving drops of blood in a pool of lantern light beneath the wall, the glowing bookshop windows beyond the wall on the left"
         }

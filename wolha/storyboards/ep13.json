@@ -53,7 +53,7 @@
           "characters": [
             "yul"
           ],
-          "frame": "Flash. 12화 마지막 컷(S05-12)을 탈색해 다시 보여 준다. 율이 담에서 몸을 떼어 화면 오른쪽 어둠으로 걸어 나간다. 카메라가 올라가면 초롱빛 아래 핏방울 자국만 남고, 담 너머 책방 불빛이 화면 왼쪽에 걸린다.",
+          "frame": "Flash. 12화 마지막 컷(S05-16)을 탈색해 다시 보여 준다. 율이 담에서 몸을 떼어 화면 오른쪽 어둠으로 걸어 나간다. 카메라가 올라가면 초롱빛 아래 핏방울 자국만 남고, 담 너머 책방 불빛이 화면 왼쪽에 걸린다.",
           "action": "책방 앞을 막아선 율. 피가 발끝에 떨어진다.",
           "dialogue": [
             {
@@ -67,7 +67,7 @@
           ],
           "transition": "CUT",
           "duration_sec": 7,
-          "image_from": "ep12/S05-12",
+          "image_from": "ep12/S05-16",
           "image_filter": "desaturate",
           "image_prompt": "desaturated memory. high angle crane up, the young nobleman walking away into the dark end of the alley, leaving drops of blood in a pool of lantern light beneath the wall, the glowing bookshop windows beyond the wall on the left"
         },

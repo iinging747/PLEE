@@ -45,9 +45,9 @@
         "ep12-20": "옆구리 상처를 감은 무명 띠(도포 속). 20화 이후 가슴 상처",
         "ep24": "흰 두루마기, 봇짐(유배길 동행)"
       },
-      "props": ["부채", "약과 꾸러미", "호루라기", "「삼국지」 넷째·다섯째 권"],
+      "props": ["쇠부채(살이 쇠로 된 철선, 4화 쇳소리 복선, 12·20화 격투)", "약과 꾸러미", "호루라기", "「삼국지」 넷째·다섯째 권", "'판서댁' 장부 조각(6화에 주워 24화에 바친다)"],
       "palette": ["#8E3B6E", "#E7A3B8", "#F6E7B0"],
-      "prompt_en": "handsome 21-year-old Korean nobleman, playful smile with a dimple, silk dopo robe in plum and rose tones, holding a folding fan"
+      "prompt_en": "handsome 21-year-old Korean nobleman, playful smile with a dimple, silk dopo robe in plum and rose tones, holding a folding fan with dark iron ribs"
     },
     {
       "id": "gangsu",
