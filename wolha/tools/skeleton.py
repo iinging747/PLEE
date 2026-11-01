@@ -6,7 +6,7 @@ shots 는 빈 배열로 둔다. 샷은 사람이나 Codex 가 docs/storyboard_gu
 
 사용법:
     python3 wolha/tools/skeleton.py 2            # 2화 뼈대 생성
-    python3 wolha/tools/skeleton.py 2-20         # 2~20화
+    python3 wolha/tools/skeleton.py 2-25         # 2~25화
     python3 wolha/tools/skeleton.py all --force  # 이미 있는 파일도 덮어씀(주의)
 
 이미 shots 가 채워진 파일은 --force 없이 덮어쓰지 않는다.
@@ -21,12 +21,12 @@ from wolha_lib import (
     name_to_id, parse_shortform, time_code,
 )
 
-SERIES = "월하노인을 잡아라 (숏폼 20부작)"
+SERIES = "월하노인을 잡아라 (숏폼 25부작)"
 
 
 def episodes_from_arg(arg: str) -> list[int]:
     if arg == "all":
-        return list(range(1, 21))
+        return list(range(1, 26))
     if "-" in arg:
         a, b = arg.split("-")
         return list(range(int(a), int(b) + 1))

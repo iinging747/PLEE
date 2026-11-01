@@ -1,5 +1,5 @@
 {
-  "series": "월하노인을 잡아라 (숏폼 24부작)",
+  "series": "월하노인을 잡아라 (숏폼 25부작)",
   "episode": 8,
   "title": "월하회",
   "hook": "금서 낭독회에 불려 간 전기수가, 병풍 너머의 아씨 앞에서 처음으로 대사를 까먹는다.",
@@ -130,7 +130,7 @@
           "action": "달래가 매화 도장이 찍힌 편지를 강수에게 내민다.",
           "transition": "CUT",
           "duration_sec": 2,
-          "notes": "매화 도장은 월하회의 표식. 13화 문안 책, 22화 혼례 장면에도 같은 도장을 쓴다",
+          "notes": "매화 도장은 월하회의 표식. 13화 문안 책, 23화 혼례 장면에도 같은 도장을 쓴다",
           "image_prompt": "top-down insert, a folded letter on worn wooden floorboards stamped with a small red plum-blossom seal, ink-stained fingertips sliding it forward"
         },
         {
@@ -524,7 +524,7 @@
           ],
           "transition": "CUT",
           "duration_sec": 4,
-          "notes": "병풍은 두 사람 사이 첫 '담'. 22화 꽃살 담장 구멍과 짝을 이룬다",
+          "notes": "병풍은 두 사람 사이 첫 '담'. 23화 꽃살 담장 구멍과 짝을 이룬다",
           "image_prompt": "top-down wide shot, a silk folding screen splitting the frame in two, a storyteller with a book on the left and a girl with empty hands on the right performing a dialogue across it, listeners around her"
         },
         {

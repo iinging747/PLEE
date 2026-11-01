@@ -1,12 +1,12 @@
 {
-  "series": "월하노인을 잡아라 (숏폼 24부작)",
+  "series": "월하노인을 잡아라 (숏폼 25부작)",
   "episode": 15,
   "title": "무원록",
   "hook": "「무원록」대로라면, 아버지는 물에 빠지기 전에 이미 죽어 있었다.",
   "runtime_sec": 180,
   "aspect": "16:9",
   "status": "review",
-  "notes": "샷 수 51, 평균 3.5초. EAR_NOT_RED(S02-08)는 1화 S03-06과 같은 구도로 찍는다. 무너지는 달래 롱테이크는 S02-12(14초, DOLLY_IN). 허진의 찻주전자는 대본대로 넘치지 않고 멈추므로 TEA_OVERFLOW 태그를 달지 않았다(S04-03). 율 옆구리 무명 띠는 S01-10에서 감아 20화까지 도포 속에 유지. 강수 왼팔 붕대 계속. 흑립이 대본에 나오지 않는 회차라 지붕 위 흑립은 넣지 않았다(14화와 같은 판단 필요). 앞 12초는 강수의 '지난 대목'(S#0, 시그니처). 그만큼 각 씬을 span 비율로 줄였다.",
+  "notes": "샷 수 51, 평균 3.5초. EAR_NOT_RED(S02-08)는 1화 S03-06과 같은 구도로 찍는다. 무너지는 달래 롱테이크는 S02-12(14초, DOLLY_IN). 허진의 찻주전자는 대본대로 넘치지 않고 멈추므로 TEA_OVERFLOW 태그를 달지 않았다(S04-03). 율 옆구리 무명 띠는 S01-10에서 감아 21화까지 도포 속에 유지. 강수 왼팔 붕대 계속. 흑립이 대본에 나오지 않는 회차라 지붕 위 흑립은 넣지 않았다(14화와 같은 판단 필요). 앞 12초는 강수의 '지난 대목'(S#0, 시그니처). 그만큼 각 씬을 span 비율로 줄였다.",
   "scenes": [
     {
       "id": "S#0",
@@ -1235,7 +1235,7 @@
           "transition": "CUT",
           "duration_sec": 3,
           "image_prompt": "handheld medium shot, the storyteller clutching his bandaged left arm bursting into the room and shouting, the young woman and the scholar rising in the foreground, lamplight, a small pink silk ribbon tied at the end of his forearm bandage",
-          "continuity": "윤희의 분홍 댕기: 13화 S#3에 강수의 왼팔 붕대 끝에 묶어 준다. 21화까지 붕대 끝, 22화 S#1부터 왼 손목"
+          "continuity": "윤희의 분홍 댕기: 13화 S#3에 강수의 왼팔 붕대 끝에 묶어 준다. 22화까지 붕대 끝, 23화 S#1부터 왼 손목"
         },
         {
           "id": "S05-07",

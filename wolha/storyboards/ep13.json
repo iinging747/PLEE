@@ -1,5 +1,5 @@
 {
-  "series": "월하노인을 잡아라 (숏폼 24부작)",
+  "series": "월하노인을 잡아라 (숏폼 25부작)",
   "episode": 13,
   "title": "책장을 넘기는 손",
   "hook": "칼 맞은 전기수는 책장을 넘길 손이 없다. 대신 넘겨 주겠다는 아씨가 찾아온다.",
@@ -131,7 +131,7 @@
           "action": "강수가 왼팔에 붕대를 감은 채 서안 앞에 앉아 한 손으로 새 대목을 외우려 한다.",
           "transition": "CUT",
           "duration_sec": 5,
-          "continuity": "강수 왼쪽 팔뚝 붕대(12~21화). 오른손만 쓴다",
+          "continuity": "강수 왼쪽 팔뚝 붕대(12~22화). 오른손만 쓴다",
           "image_prompt": "daytime, cramped inner room of a bookshop with piles of manuscripts, the storyteller seated at a low desk with a white bandage on his left forearm, awkwardly trying to turn the pages of a book one-handed"
         },
         {
@@ -193,7 +193,7 @@
           ],
           "transition": "CUT",
           "duration_sec": 3,
-          "continuity": "강수 왼쪽 팔뚝 붕대(12~21화). 오른손만 쓴다",
+          "continuity": "강수 왼쪽 팔뚝 붕대(12~22화). 오른손만 쓴다",
           "image_prompt": "medium close-up of the storyteller glaring down at his bandaged left forearm, sulking"
         },
         {
@@ -225,7 +225,7 @@
           "action": "먹순이 나간 사이 강수가 책을 줍는다.",
           "transition": "CUT",
           "duration_sec": 3,
-          "continuity": "강수 왼쪽 팔뚝 붕대(12~21화). 오른손만 쓴다",
+          "continuity": "강수 왼쪽 팔뚝 붕대(12~22화). 오른손만 쓴다",
           "image_prompt": "medium shot of the storyteller alone, picking up the fallen book with his right hand and sighing"
         },
         {
@@ -264,7 +264,7 @@
           "sound": "(E) 윽",
           "transition": "CUT",
           "duration_sec": 3,
-          "continuity": "강수 왼쪽 팔뚝 붕대(12~21화). 오른손만 쓴다",
+          "continuity": "강수 왼쪽 팔뚝 붕대(12~22화). 오른손만 쓴다",
           "image_prompt": "medium close-up of the storyteller springing to his feet and wincing, clutching his bandaged left forearm"
         },
         {
@@ -364,7 +364,7 @@
           "sound": "(E) 헛기침",
           "transition": "CUT",
           "duration_sec": 2,
-          "continuity": "강수 왼쪽 팔뚝 붕대(12~21화). 오른손만 쓴다",
+          "continuity": "강수 왼쪽 팔뚝 붕대(12~22화). 오른손만 쓴다",
           "image_prompt": "medium close-up of the storyteller tracing the margin notes with one finger, then clearing his throat to hide that he is moved"
         },
         {
@@ -701,7 +701,7 @@
           "action": "강수가 윤희를 대문까지 바래다준다.",
           "transition": "CUT",
           "duration_sec": 2,
-          "continuity": "축: 대문 화면 왼쪽. 강수 왼쪽 팔뚝 붕대(12~21화). 오른손만 쓴다",
+          "continuity": "축: 대문 화면 왼쪽. 강수 왼쪽 팔뚝 붕대(12~22화). 오른손만 쓴다",
           "image_prompt": "dusk, orange backlight in the small courtyard of a hanok bookshop, the storyteller walking a cloaked young noblewoman to the gate on the left, a maid a few steps behind"
         },
         {
@@ -894,7 +894,7 @@
           "action": "윤희가 제 머리의 분홍 댕기를 풀어 붕대 끝을 묶는다.",
           "transition": "CUT",
           "duration_sec": 3,
-          "continuity": "윤희의 분홍 댕기: 13화 S#3에 강수의 왼팔 붕대 끝에 묶어 준다. 21화까지 붕대 끝, 22화 S#1부터 왼 손목",
+          "continuity": "윤희의 분홍 댕기: 13화 S#3에 강수의 왼팔 붕대 끝에 묶어 준다. 22화까지 붕대 끝, 23화 S#1부터 왼 손목",
           "image_prompt": "insert at golden hour, a pink silk hair ribbon sliding loose from the end of a braid and slender fingers tying it around the end of a white forearm bandage, the ribbon tails hanging"
         },
         {
@@ -1011,7 +1011,7 @@
           "action": "강수가 팔에 묶인 댕기를 내려다본다.",
           "transition": "CUT",
           "duration_sec": 2,
-          "continuity": "윤희의 분홍 댕기: 13화 S#3에 강수의 왼팔 붕대 끝에 묶어 준다. 21화까지 붕대 끝, 22화 S#1부터 왼 손목",
+          "continuity": "윤희의 분홍 댕기: 13화 S#3에 강수의 왼팔 붕대 끝에 묶어 준다. 22화까지 붕대 끝, 23화 S#1부터 왼 손목",
           "image_prompt": "insert, a man's bandaged left forearm with a pink silk ribbon tied at the end of the bandage, fluttering in the evening breeze"
         }
       ]
@@ -1126,7 +1126,7 @@
           "action": "달래책방 안채. 강수가 한 손으로 문안 편지가 적힌 책을 넘긴다.",
           "transition": "CUT",
           "duration_sec": 4,
-          "continuity": "강수 왼쪽 팔뚝 붕대(12~21화). 오른손만 쓴다",
+          "continuity": "강수 왼쪽 팔뚝 붕대(12~22화). 오른손만 쓴다",
           "image_prompt": "night, a single oil lamp in a cramped bookshop room, the storyteller turning the pages of a margin-filled book one-handed"
         },
         {

@@ -1,5 +1,5 @@
 {
-  "series": "월하노인을 잡아라 (숏폼 24부작)",
+  "series": "월하노인을 잡아라 (숏폼 25부작)",
   "episode": 4,
   "title": "연체 도령",
   "hook": "판서댁 외아들이 책방에 나타나고, 월하노인을 사칭하던 한량이 독살된다.",
@@ -140,7 +140,7 @@
           "transition": "CUT",
           "duration_sec": 2,
           "continuity": "축: 대문 화면 왼쪽, 행랑채 오른쪽(locations.json). 율은 대문 쪽(왼쪽)에서 들어와 마루 앞 왼쪽에 서고, 달래는 마루 가운데, 정겸은 오른쪽 행랑채 앞 후경. 율과 달래의 대화선은 씬 내내 유지",
-          "notes": "율의 부채는 살이 쇠로 된 쇠부채(철선). 4화 쇳소리가 복선, 12화 골목·20화 후원에서 쓴다",
+          "notes": "율의 부채는 살이 쇠로 된 쇠부채(철선). 4화 쇳소리가 복선, 12화 골목·21화 후원에서 쓴다",
           "image_prompt": "insert, a book dropped from a plum-colored silk sleeve onto the wooden porch of a hanok bookshop"
         },
         {

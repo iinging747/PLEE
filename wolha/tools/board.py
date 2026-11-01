@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""20부작 전체 콘티 보드(한 장짜리 HTML) 만들기.
+"""25부작 전체 콘티 보드(한 장짜리 HTML) 만들기.
 
 storyboards/ep01~20.json 을 모두 읽어 tools/board_template.html 에 넣고 out/board.html 로 쓴다.
 회차 레일, 3분 타임라인, 모티프 필터, 샷별 이미지 프롬프트 복사가 들어 있다.

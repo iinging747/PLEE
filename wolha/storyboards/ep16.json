@@ -1,5 +1,5 @@
 {
-  "series": "월하노인을 잡아라 (숏폼 24부작)",
+  "series": "월하노인을 잡아라 (숏폼 25부작)",
   "episode": 16,
   "title": "첫 키스",
   "hook": "숨소리도 못 내는 좁은 창고. 이번엔 대본이 없다.",
@@ -427,7 +427,7 @@
           "sound": "(E) 항아리 쓰러지는 소리, 된장 쏟아지는 소리",
           "transition": "CUT",
           "duration_sec": 2,
-          "continuity": "축: 장독대는 화면 오른쪽, 종사관 가운데, 강수·먹순 왼쪽. 대문(단속반 퇴장 방향)은 화면 왼쪽. 강수 왼쪽 아래팔 붕대 유지 / 윤희의 분홍 댕기: 13화 S#3에 강수의 왼팔 붕대 끝에 묶어 준다. 21화까지 붕대 끝, 22화 S#1부터 왼 손목",
+          "continuity": "축: 장독대는 화면 오른쪽, 종사관 가운데, 강수·먹순 왼쪽. 대문(단속반 퇴장 방향)은 화면 왼쪽. 강수 왼쪽 아래팔 붕대 유지 / 윤희의 분홍 댕기: 13화 S#3에 강수의 왼팔 붕대 끝에 묶어 준다. 22화까지 붕대 끝, 23화 S#1부터 왼 손목",
           "image_prompt": "high angle wide night shot, a torchlit row of large earthenware jars on the right, constables tipping them over, an officer in the middle, a storyteller with a bandaged left forearm and a shop girl watching from the left, a small pink silk ribbon tied at the end of his forearm bandage"
         },
         {
@@ -508,7 +508,7 @@
           "transition": "CUT",
           "duration_sec": 3,
           "image_prompt": "medium shot, the storyteller with his left forearm bandaged, opening a folding fan with his good right hand and smiling slyly, torchlight, a small pink silk ribbon tied at the end of his forearm bandage",
-          "continuity": "윤희의 분홍 댕기: 13화 S#3에 강수의 왼팔 붕대 끝에 묶어 준다. 21화까지 붕대 끝, 22화 S#1부터 왼 손목"
+          "continuity": "윤희의 분홍 댕기: 13화 S#3에 강수의 왼팔 붕대 끝에 묶어 준다. 22화까지 붕대 끝, 23화 S#1부터 왼 손목"
         },
         {
           "id": "S02-06",
@@ -969,7 +969,7 @@
           "transition": "CUT",
           "duration_sec": 3,
           "image_prompt": "wide night shot of a small hanok yard lit only by a lantern under the eaves, the young nobleman turning away from the storeroom, a storyteller with a bandaged left forearm sitting on the wooden porch meeting his eyes, a small pink silk ribbon tied at the end of his forearm bandage",
-          "continuity": "윤희의 분홍 댕기: 13화 S#3에 강수의 왼팔 붕대 끝에 묶어 준다. 21화까지 붕대 끝, 22화 S#1부터 왼 손목"
+          "continuity": "윤희의 분홍 댕기: 13화 S#3에 강수의 왼팔 붕대 끝에 묶어 준다. 22화까지 붕대 끝, 23화 S#1부터 왼 손목"
         },
         {
           "id": "S04-05",
@@ -1014,7 +1014,7 @@
           "transition": "CUT",
           "duration_sec": 3,
           "image_prompt": "medium close-up of the storyteller sitting on the porch with his bandaged left forearm resting on his knee, glancing at the young man's bleeding left side, a small pink silk ribbon tied at the end of his forearm bandage",
-          "continuity": "윤희의 분홍 댕기: 13화 S#3에 강수의 왼팔 붕대 끝에 묶어 준다. 21화까지 붕대 끝, 22화 S#1부터 왼 손목"
+          "continuity": "윤희의 분홍 댕기: 13화 S#3에 강수의 왼팔 붕대 끝에 묶어 준다. 22화까지 붕대 끝, 23화 S#1부터 왼 손목"
         },
         {
           "id": "S04-07",

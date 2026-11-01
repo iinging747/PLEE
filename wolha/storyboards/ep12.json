@@ -1,12 +1,12 @@
 {
-  "series": "월하노인을 잡아라 (숏폼 24부작)",
+  "series": "월하노인을 잡아라 (숏폼 25부작)",
   "episode": 12,
   "title": "그 눈",
   "hook": "칼을 맞고 쓰러진 강수가, 이 년 전 스승을 찌른 그 눈을 다시 본다.",
   "runtime_sec": 180,
   "aspect": "16:9",
   "status": "review",
-  "notes": "샷 수 57, 평균 3.2초. 흑립의 눈 ECU(S01-07)를 '그 눈'의 기준 컷으로 삼아 S04-06에서 같은 렌즈로 되풀이한다. 강수 부상은 왼팔(원작 11화 대본 기준), 율 상처는 왼쪽 옆구리로 정했다. 14~20화도 같은 쪽으로 이어 갈 것. WHISTLE 첫 등장 S05-05~06. 지붕 위 흑립은 S01-10. 정조 삿갓 변장 S03-06(이미지 생성 시 곤룡포 토큰 주의). S#5의 달래는 웃음소리(O.S.)로만 나와 샷 characters에서는 뺐다. 고증확인: 호루라기 재질. 앞 12초는 강수의 '지난 대목'(S#0, 시그니처). 그만큼 각 씬을 span 비율로 줄였다.",
+  "notes": "샷 수 57, 평균 3.2초. 흑립의 눈 ECU(S01-07)를 '그 눈'의 기준 컷으로 삼아 S04-06에서 같은 렌즈로 되풀이한다. 강수 부상은 왼팔(원작 11화 대본 기준), 율 상처는 왼쪽 옆구리로 정했다. 14~21화도 같은 쪽으로 이어 갈 것. WHISTLE 첫 등장 S05-05~06. 지붕 위 흑립은 S01-10. 정조 삿갓 변장 S03-06(이미지 생성 시 곤룡포 토큰 주의). S#5의 달래는 웃음소리(O.S.)로만 나와 샷 characters에서는 뺐다. 고증확인: 호루라기 재질. 앞 12초는 강수의 '지난 대목'(S#0, 시그니처). 그만큼 각 씬을 span 비율로 줄였다.",
   "scenes": [
     {
       "id": "S#0",
@@ -146,7 +146,7 @@
           "sound": "(E) 천 찢어지는 소리, 짧은 신음",
           "transition": "CUT",
           "duration_sec": 2,
-          "continuity": "강수 왼팔 부상 시작. 12~21화 왼팔 붕대로 이어진다(왼팔은 원작 11화 대본 기준)",
+          "continuity": "강수 왼팔 부상 시작. 12~22화 왼팔 붕대로 이어진다(왼팔은 원작 11화 대본 기준)",
           "image_prompt": "dutch angle handheld, a young storyteller twisting away and raising his left forearm to block a falling sword at night, his grey sleeve splitting open, a spray of blood, moonlight"
         },
         {
@@ -592,7 +592,7 @@
           "sound": "장터 소음, 담배 써는 칼 소리",
           "transition": "CUT",
           "duration_sec": 2,
-          "continuity": "축: 정면 무대 구도(bible). 평상 위 강수는 화면 위 가운데, 관객은 화면 아래 전경. 정겸은 군중 속 왼쪽, 안 내관과 삿갓 정조는 군중 뒤 오른쪽에서 왼쪽으로 지나간다. 강수 왼팔 무명 붕대(12~21화)",
+          "continuity": "축: 정면 무대 구도(bible). 평상 위 강수는 화면 위 가운데, 관객은 화면 아래 전경. 정겸은 군중 속 왼쪽, 안 내관과 삿갓 정조는 군중 뒤 오른쪽에서 왼쪽으로 지나간다. 강수 왼팔 무명 붕대(12~22화)",
           "image_prompt": "high angle crane down onto a Joseon street corner in daylight, an even larger semicircle crowd packed around a wooden storyteller's platform in front of a tobacco shop"
         },
         {
@@ -1066,7 +1066,7 @@
           "sound": "(E) 철컥 — 쇳소리",
           "transition": "CUT",
           "duration_sec": 2,
-          "notes": "율의 부채는 살이 쇠로 된 쇠부채(철선). 4화 쇳소리가 복선, 12화 골목·20화 후원에서 쓴다",
+          "notes": "율의 부채는 살이 쇠로 된 쇠부채(철선). 4화 쇳소리가 복선, 12화 골목·21화 후원에서 쓴다",
           "image_prompt": "low angle insert, a young nobleman's hand snapping shut a folding fan, its dark iron ribs flashing in lantern light"
         },
         {
@@ -1153,7 +1153,7 @@
           ],
           "transition": "CUT",
           "duration_sec": 2,
-          "notes": "WHISTLE 첫 등장. 20화 피 묻은 호루라기와 같은 소품. 고증확인: 호루라기 재질과 모양(대나무 또는 쇠붙이)",
+          "notes": "WHISTLE 첫 등장. 21화 피 묻은 호루라기와 같은 소품. 고증확인: 호루라기 재질과 모양(대나무 또는 쇠붙이)",
           "image_prompt": "insert, a bloodied hand pulling a small whistle from inside the front of a plum silk robe"
         },
         {

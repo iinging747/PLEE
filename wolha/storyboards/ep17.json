@@ -1,12 +1,12 @@
 {
-  "series": "월하노인을 잡아라 (숏폼 24부작)",
+  "series": "월하노인을 잡아라 (숏폼 25부작)",
   "episode": 17,
   "title": "서생 갑",
   "hook": "가난한 하숙생은 왕이 보낸 검서관이었고, 삼 년 동안 그녀를 괴롭힌 악플러 서생 갑이었다.",
   "runtime_sec": 180,
   "aspect": "16:9",
   "status": "review",
-  "notes": "샷 수 58, 평균 3.1초. S#2 안채 창호지 그림자는 대본이 이름을 밝히지 않지만 달래로 보고 씬 인물에 넣었다. S#5에서 달래는 대사로만 언급되므로 씬 인물에서 뺐다. 강수 왼쪽 아래팔 붕대는 대본('성한 손')에 따라 17화에도 유지(AGENTS.md: 12~21화). 율 상처는 왼쪽 옆구리(12~15화와 같다). 대본에 지붕 위 흑립이 없어 ROOFTOP_HEUKRIP 컷은 넣지 않았다. 앞 12초는 강수의 '지난 대목'(S#0, 시그니처). 그만큼 각 씬을 span 비율로 줄였다.",
+  "notes": "샷 수 58, 평균 3.1초. S#2 안채 창호지 그림자는 대본이 이름을 밝히지 않지만 달래로 보고 씬 인물에 넣었다. S#5에서 달래는 대사로만 언급되므로 씬 인물에서 뺐다. 강수 왼쪽 아래팔 붕대는 대본('성한 손')에 따라 17화에도 유지(AGENTS.md: 12~22화). 율 상처는 왼쪽 옆구리(12~15화와 같다). 대본에 지붕 위 흑립이 없어 ROOFTOP_HEUKRIP 컷은 넣지 않았다. 앞 12초는 강수의 '지난 대목'(S#0, 시그니처). 그만큼 각 씬을 span 비율로 줄였다.",
   "scenes": [
     {
       "id": "S#0",
@@ -394,7 +394,7 @@
           ],
           "transition": "CUT",
           "duration_sec": 3,
-          "notes": "꼭 챙길 그림: 계약서 찢기. CONTRACT 2화 서명 → 17화 찢기 → 24화 새 계약서, 같은 TOP 구도",
+          "notes": "꼭 챙길 그림: 계약서 찢기. CONTRACT 2화 서명 → 17화 찢기 → 25화 새 계약서, 같은 TOP 구도",
           "image_prompt": "top-down insert in the same composition as the earlier contract signing, small hands tearing a hand-written contract in half, then in half again"
         },
         {
@@ -480,7 +480,7 @@
           ],
           "transition": "CUT",
           "duration_sec": 3,
-          "continuity": "축: 행랑채 방문은 화면 왼쪽, 방 안 정겸은 오른쪽. 대문은 화면 왼쪽(dallae_maru axis). 우산은 문간 왼쪽 기둥에 기대 있다. 강수 왼쪽 아래팔 붕대 유지(대본 '성한 손') / 윤희의 분홍 댕기: 13화 S#3에 강수의 왼팔 붕대 끝에 묶어 준다. 21화까지 붕대 끝, 22화 S#1부터 왼 손목",
+          "continuity": "축: 행랑채 방문은 화면 왼쪽, 방 안 정겸은 오른쪽. 대문은 화면 왼쪽(dallae_maru axis). 우산은 문간 왼쪽 기둥에 기대 있다. 강수 왼쪽 아래팔 붕대 유지(대본 '성한 손') / 윤희의 분홍 댕기: 13화 S#3에 강수의 왼팔 붕대 끝에 묶어 준다. 22화까지 붕대 끝, 23화 S#1부터 왼 손목",
           "image_prompt": "medium shot, the tall scholar packing a cloth bundle with a few books in a tiny tidy room, the storyteller with a bandaged left forearm standing in the doorway on the left, morning light, a small pink silk ribbon tied at the end of his forearm bandage"
         },
         {
@@ -527,7 +527,7 @@
           "transition": "CUT",
           "duration_sec": 4,
           "image_prompt": "handheld profile two-shot, the storyteller grabbing the taller man's collar with his good right hand, his left forearm bandaged, the scholar not resisting, a small pink silk ribbon tied at the end of his forearm bandage",
-          "continuity": "윤희의 분홍 댕기: 13화 S#3에 강수의 왼팔 붕대 끝에 묶어 준다. 21화까지 붕대 끝, 22화 S#1부터 왼 손목"
+          "continuity": "윤희의 분홍 댕기: 13화 S#3에 강수의 왼팔 붕대 끝에 묶어 준다. 22화까지 붕대 끝, 23화 S#1부터 왼 손목"
         },
         {
           "id": "S02-04",
@@ -595,7 +595,7 @@
           "transition": "CUT",
           "duration_sec": 2,
           "image_prompt": "medium close-up of the storyteller with a bandaged left forearm retorting bitterly, a small pink silk ribbon tied at the end of his forearm bandage",
-          "continuity": "윤희의 분홍 댕기: 13화 S#3에 강수의 왼팔 붕대 끝에 묶어 준다. 21화까지 붕대 끝, 22화 S#1부터 왼 손목"
+          "continuity": "윤희의 분홍 댕기: 13화 S#3에 강수의 왼팔 붕대 끝에 묶어 준다. 22화까지 붕대 끝, 23화 S#1부터 왼 손목"
         },
         {
           "id": "S02-07",
@@ -1403,7 +1403,7 @@
           ],
           "transition": "FREEZE",
           "duration_sec": 4,
-          "notes": "엔딩 훅. 19화 납치로 이어진다",
+          "notes": "엔딩 훅. 20화 납치로 이어진다",
           "image_prompt": "slow push-in close-up of the composed official giving a quiet order, candle flame wavering, freeze frame"
         }
       ]

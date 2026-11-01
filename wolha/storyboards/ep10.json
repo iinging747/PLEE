@@ -1,12 +1,12 @@
 {
-  "series": "월하노인을 잡아라 (숏폼 24부작)",
+  "series": "월하노인을 잡아라 (숏폼 25부작)",
   "episode": 10,
   "title": "우산이 하나뿐이면",
   "hook": "비 오는 새벽, 우산 하나 아래서 그가 처음으로 자기 이야기를 한다.",
   "runtime_sec": 180,
   "aspect": "16:9",
   "status": "review",
-  "notes": "샷 수 58, 평균 3.1초. TASKS 필수 그림: 새우젓 독(S01-03), 등 돌린 정겸(S02-07), 우산 산책 부감(S03-18), EAR_NOT_RED 첫 등장(S03-10, 21화가 이 구도를 그대로 쓴다), 원고 발견(S04-04). 정겸 대사 '어미가 첩이었소…'는 길지만 한 샷(S03-05, 8초)에 통으로 넣었다. 지붕 위 흑립은 S02-01. 앞 12초는 강수의 '지난 대목'(S#0, 시그니처). 그만큼 각 씬을 span 비율로 줄였다.",
+  "notes": "샷 수 58, 평균 3.1초. TASKS 필수 그림: 새우젓 독(S01-03), 등 돌린 정겸(S02-07), 우산 산책 부감(S03-18), EAR_NOT_RED 첫 등장(S03-10, 22화가 이 구도를 그대로 쓴다), 원고 발견(S04-04). 정겸 대사 '어미가 첩이었소…'는 길지만 한 샷(S03-05, 8초)에 통으로 넣었다. 지붕 위 흑립은 S02-01. 앞 12초는 강수의 '지난 대목'(S#0, 시그니처). 그만큼 각 씬을 span 비율로 줄였다.",
   "scenes": [
     {
       "id": "S#0",
@@ -881,7 +881,7 @@
           ],
           "transition": "CUT",
           "duration_sec": 3,
-          "notes": "EAR_NOT_RED 첫 등장. EAR_RED와 렌즈·크기·각도·초점 이동을 똑같이 맞추고 색만 다르다(붉은 채도 강조 없이 새벽 푸른빛 그대로). 21화 S#3 우물가 귀 클로즈업은 이 구도(왼쪽 옆얼굴, 귀 높이 수평, 100mm, 귀는 화면 가운데에서 약간 오른쪽, 눈에서 귀로 초점 이동)를 그대로 쓴다. TASKS 10화 필수 그림",
+          "notes": "EAR_NOT_RED 첫 등장. EAR_RED와 렌즈·크기·각도·초점 이동을 똑같이 맞추고 색만 다르다(붉은 채도 강조 없이 새벽 푸른빛 그대로). 22화 S#3 우물가 귀 클로즈업은 이 구도(왼쪽 옆얼굴, 귀 높이 수평, 100mm, 귀는 화면 가운데에서 약간 오른쪽, 눈에서 귀로 초점 이동)를 그대로 쓴다. TASKS 10화 필수 그림",
           "image_prompt": "extreme close-up profile of the left side of the young man's face at ear level, face turned toward frame left, ear just right of center, focus shifting from his eye to his ear which stays its natural color, the rim of an umbrella at the top edge, rain streaks behind, cool blue dawn light, no red tint"
         },
         {

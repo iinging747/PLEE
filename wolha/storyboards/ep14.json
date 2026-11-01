@@ -1,5 +1,5 @@
 {
-  "series": "월하노인을 잡아라 (숏폼 24부작)",
+  "series": "월하노인을 잡아라 (숏폼 25부작)",
   "episode": 14,
   "title": "빈 무덤",
   "hook": "이 년 전 처형됐다는 죄인의 무덤이 비어 있다.",
@@ -327,7 +327,7 @@
           "sound": "(E) 바람, 삽이 언 흙을 찍는 소리",
           "transition": "CUT",
           "duration_sec": 2,
-          "continuity": "축: 무덤은 화면 가운데, 강수 왼쪽, 정겸 오른쪽. 서소문 성벽은 화면 오른쪽 뒤. 땅에 내려놓은 초롱 하나가 광원. 강수 왼팔 붕대(12~21화)",
+          "continuity": "축: 무덤은 화면 가운데, 강수 왼쪽, 정겸 오른쪽. 서소문 성벽은 화면 오른쪽 뒤. 땅에 내려놓은 초롱 하나가 광원. 강수 왼팔 붕대(12~22화)",
           "image_prompt": "high angle extreme wide shot of a bleak hillside of criminals' graves at night outside the city wall, crooked wooden markers, dry grass bending in the wind, two small figures digging beside a single lantern on the ground"
         },
         {
@@ -359,7 +359,7 @@
           "transition": "CUT",
           "duration_sec": 2,
           "image_prompt": "profile two-shot of two men digging a grave at night by lantern light, the one on the left shoveling one-handed with his bandaged left arm held close, the tall one on the right digging neatly with both hands, a small pink silk ribbon tied at the end of his forearm bandage",
-          "continuity": "윤희의 분홍 댕기: 13화 S#3에 강수의 왼팔 붕대 끝에 묶어 준다. 21화까지 붕대 끝, 22화 S#1부터 왼 손목"
+          "continuity": "윤희의 분홍 댕기: 13화 S#3에 강수의 왼팔 붕대 끝에 묶어 준다. 22화까지 붕대 끝, 23화 S#1부터 왼 손목"
         },
         {
           "id": "S02-04",
@@ -928,7 +928,7 @@
           ],
           "transition": "CUT",
           "duration_sec": 2,
-          "notes": "율이 스며드는 몽타주. 24화 '연체는 일부러 했소'의 복선",
+          "notes": "율이 스며드는 몽타주. 25화 '연체는 일부러 했소'의 복선",
           "image_prompt": "top-down insert, a brand-new calligraphy brush laid beside an overdue rental book on the porch"
         },
         {
