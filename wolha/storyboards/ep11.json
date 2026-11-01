@@ -108,14 +108,14 @@
       "location": "dallae_storage",
       "time": "MORNING",
       "tc_in": "00:12",
-      "tc_out": "00:40",
+      "tc_out": "00:45",
       "characters": [
         "dallae",
         "jeonggyeom"
       ],
       "mood": "MYSTERY",
-      "summary": "정겸은 원고를 도로 싸 넣고 계약서를 품에 넣은 뒤, 달래를 보지 않은 채 '비가 새오'만 남기고 나간다. 그제야 문설주에 등을 대고 주저앉는 달래. '…봤어. 봤는데.'",
-      "source_text": "정적. 빗물만 뚝, 뚝 떨어진다. 정겸이 원고를 기름종이에 도로 싸서 궤짝에 넣는다. 뚜껑을 덮는다. 계약서를 품에 넣는다. 달래 쪽을 보지 않고 지나친다.\n**정겸** 비가 새오. 궤짝을 옮겨 두시오.\n정겸이 나간다. 달래는 숨도 못 쉰다. 그가 나가고 나서야 문설주에 등을 대고 주르륵 미끄러져 앉는다.\n**달래** (소리 없이) …봤어. 봤는데.",
+      "summary": "책 창고. 원고를 본 정겸이 아무 말 없이 궤짝을 덮고 나간다. '비가 새오.' 무너져 앉은 달래의 머리 위로 기와 소리. 빗속에서 정겸이 서툰 손으로 창고 지붕을 고치고 있다. 달래가 입을 틀어막는다.",
+      "source_text": "정적. 빗물만 뚝, 뚝 떨어진다. 정겸이 원고를 기름종이에 도로 싸서 궤짝에 넣는다. 뚜껑을 덮는다. 계약서를 품에 넣는다. 달래 쪽을 보지 않고 지나친다.\n**정겸** 비가 새오. 궤짝을 옮겨 두시오.\n정겸이 나간다. 달래는 숨도 못 쉰다. 그가 나가고 나서야 문설주에 등을 대고 주르륵 미끄러져 앉는다.\n**달래** (소리 없이) …봤어. 봤는데.\n(E) 지붕에서 기와 소리. 달래가 고개를 든다. 빗속, 창고 지붕 위에서 정겸이 서툰 손으로 깨진 기와를 갈아 끼우고 있다. 갓에서 빗물이 줄줄 흐른다. 원고 궤짝 바로 위다. 달래가 입을 틀어막는다. 웃음인지 울음인지 모를 것이 샌다.",
       "shots": [
         {
           "id": "S01-01",
@@ -306,6 +306,39 @@
           "duration_sec": 4,
           "notes": "소리 없이 입 모양만. 자막으로 처리",
           "image_prompt": "slightly high close-up of the young woman hugging her knees on the floor, lips moving soundlessly"
+        },
+        {
+          "id": "S01-12",
+          "size": "LS",
+          "angle": "LOW",
+          "move": "FIX",
+          "lens_mm": 35,
+          "location": "dallae_roof",
+          "characters": [
+            "jeonggyeom"
+          ],
+          "frame": "로우앵글, 빗속. 창고 지붕 위에서 정겸이 서툰 손으로 깨진 기와를 갈아 끼운다. 갓에서 빗물이 줄줄 흐른다. 바로 아래가 원고 궤짝이다.",
+          "action": "빗속, 창고 지붕 위에서 정겸이 서툰 손으로 깨진 기와를 갈아 끼우고 있다.",
+          "sound": "(E) 지붕에서 기와 소리, 빗소리",
+          "transition": "CUT",
+          "duration_sec": 3,
+          "notes": "정체를 알아 버린 아침, 정겸이 한 첫 일은 그녀의 원고를 비에서 지키는 일이다. 붓만 쥐던 손이라 서툴다",
+          "image_prompt": "low angle in pouring rain, a tall young scholar in a soaked white robe and dripping black gat kneeling on a bookshop storeroom roof, clumsily fitting a new roof tile"
+        },
+        {
+          "id": "S01-13",
+          "size": "CU",
+          "angle": "EYE",
+          "move": "FIX",
+          "lens_mm": 85,
+          "characters": [
+            "dallae"
+          ],
+          "frame": "문설주에 기대 앉은 달래가 지붕을 올려다보다 입을 틀어막는다. 웃음인지 울음인지 모를 것이 샌다.",
+          "action": "달래가 입을 틀어막는다. 웃음인지 울음인지 모를 것이 샌다.",
+          "transition": "CUT",
+          "duration_sec": 2,
+          "image_prompt": "close-up of the young author sitting against a doorframe, looking up at the roof and pressing a hand over her mouth, half laughing and half crying"
         }
       ]
     },
@@ -314,8 +347,8 @@
       "heading": "달래책방 행랑채 (밤)",
       "location": "dallae_haengrang",
       "time": "NIGHT",
-      "tc_in": "00:40",
-      "tc_out": "01:03",
+      "tc_in": "00:45",
+      "tc_out": "01:06",
       "characters": [
         "jeonggyeom"
       ],
@@ -336,7 +369,7 @@
           "action": "등잔 아래. 정겸이 수첩에 쓴다.",
           "sound": "(E) 붓 소리",
           "transition": "CUT",
-          "duration_sec": 3,
+          "duration_sec": 2,
           "continuity": "축: 등잔은 화면 왼쪽, 정겸은 정면, 문간은 오른쪽. 문간에 10화의 우산이 기대 서 있다(17화 '두고 간 우산'과 같은 자리)",
           "image_prompt": "a tiny tidy lodger's room at night lit by a single oil lamp on the left, the tall scholar writing in a small notebook, a wet oiled-paper umbrella leaning by the door on the right"
         },
@@ -404,7 +437,7 @@
           "frame": "정겸 클로즈업. 불빛이 아래에서 얼굴을 비춘다. 카메라가 아주 천천히 다가간다. 눈은 종이에 박혀 있다.",
           "action": "한참 그대로 들고 있다.",
           "transition": "CUT",
-          "duration_sec": 4,
+          "duration_sec": 3,
           "notes": "'한참'의 무대사 샷. 표정 변화 없이 눈만",
           "image_prompt": "slow push-in close-up of the scholar's face lit from below by the lamp, eyes fixed on the page he holds near the flame, motionless"
         },
@@ -461,8 +494,8 @@
       "heading": "창덕궁 존현각 (밤)",
       "location": "jonhyeongak",
       "time": "NIGHT",
-      "tc_in": "01:03",
-      "tc_out": "01:31",
+      "tc_in": "01:06",
+      "tc_out": "01:32",
       "characters": [
         "jeonggyeom",
         "jeongjo"
@@ -491,7 +524,7 @@
           "action": "정조가 책장을 넘기며 묻는다. 고개도 들지 않는다.",
           "sound": "촛불 타는 소리, 책장 넘기는 소리",
           "transition": "CUT",
-          "duration_sec": 3,
+          "duration_sec": 2,
           "continuity": "축: 정조 화면 왼쪽 위, 정겸 오른쪽 아래(왼쪽을 향해 꿇어앉음). 1화 존현각과는 반대편에서 찍는다. 정겸의 귀 ECU를 시리즈 규칙(왼쪽 옆얼굴)대로 잡기 위해서다. 이 씬 내내 유지",
           "notes": "정겸은 궐 안이므로 관복(단령·사모). 고증확인: 검서관 단령 색",
           "image_prompt": "candle-lit royal study at night, stacks of memorials, the king at a low desk on the upper left turning pages of a book, a young official in formal robe and samo hat kneeling small on the lower right"
@@ -555,7 +588,7 @@
             "EAR_RED"
           ],
           "transition": "CUT",
-          "duration_sec": 3,
+          "duration_sec": 2,
           "notes": "10화 S03-10(EAR_NOT_RED)과 같은 구도라 대비가 산다",
           "image_prompt": "extreme close-up profile of the left side of the young official's face under a black samo hat at ear level, focus shifting from his eye to his ear glowing bright red in candlelight, everything else muted"
         },
@@ -665,7 +698,7 @@
       "heading": "종로 사인회 (낮)",
       "location": "jongno_tobacco",
       "time": "DAY",
-      "tc_in": "01:31",
+      "tc_in": "01:32",
       "tc_out": "02:22",
       "characters": [
         "dallae",
@@ -908,7 +941,7 @@
             "INSERT_TEXT"
           ],
           "transition": "CUT",
-          "duration_sec": 4,
+          "duration_sec": 3,
           "notes": "글씨는 후반 합성. 끝의 서명만 1화 S04-13과 같은 필체로",
           "image_prompt": "top-down insert, forceful brush strokes filling the flyleaf of a book line by line, ink-stained fingers"
         },

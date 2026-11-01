@@ -54,7 +54,7 @@
           "characters": [
             "yul"
           ],
-          "frame": "Flash. 14화 마지막 컷(S04-13)을 탈색해 다시 보여 준다. 달래 쪽에서 본 율. 웃는 얼굴과 도포 옆구리의 핏자국이 한 프레임에 들어온다. 천천히 다가가다 대사 끝에서 멈춘다.",
+          "frame": "Flash. 14화 마지막 컷(S04-16)을 탈색해 다시 보여 준다. 달래 쪽에서 본 율. 웃는 얼굴과 도포 옆구리의 핏자국이 한 프레임에 들어온다. 천천히 다가가다 대사 끝에서 멈춘다.",
           "action": "웃는 율의 도포에 피가 번져 있다. \"…연체료요.\"",
           "dialogue": [
             {
@@ -68,7 +68,7 @@
           ],
           "transition": "CUT",
           "duration_sec": 7,
-          "image_from": "ep14/S04-13",
+          "image_from": "ep14/S04-16",
           "image_filter": "desaturate",
           "image_prompt": "desaturated memory. slow push-in on the smiling young nobleman framed waist-up, his dimpled smile and the dark bloodstain on the side of his plum silk robe in the same frame, dusk backlight"
         },
@@ -108,7 +108,7 @@
       "location": "dallae_maru",
       "time": "DUSK",
       "tc_in": "00:12",
-      "tc_out": "00:49",
+      "tc_out": "00:55",
       "characters": [
         "dallae",
         "yul",
@@ -116,8 +116,8 @@
         "jeonggyeom"
       ],
       "mood": "COMEDY",
-      "summary": "달래가 율의 상처를 감는다. 사레들린 율, 숨는 먹순. 호루라기 분 사람이 율이라는 걸 아는 달래가 연체료를 평생 안 받겠다고 하고, 율이 무언가 말하려는 순간 정겸이 보리차를 들고 온다. 율은 짠 보리차를 끝까지 마신다.",
-      "source_text": "달래가 무명 띠와 사기 약병을 들고 율 앞에 선다.\n**달래** 벗으세요.\n**율** (사레가 들려) …뭐요?\n**달래** 도포요. 저고리도.\n부엌에서 고개를 내밀던 먹순이 쏙 들어간다. (E) 장독 뚜껑 떨어지는 소리.\n율이 체념하고 고름을 푼다. 옆구리에 피가 번진 헝겊. 달래가 그걸 풀고 약을 바른다. 율이 이를 문다.\n**달래** (손을 멈추지 않고) 며칠 전 밤 골목에서 호루라기 분 사람.\n**율** …연체료라니까.\n**달래** (매듭을 지으며) 도령 연체료는요, 평생 안 받을게요.\n율이 달래를 본다. 입을 연다.\n**율** 낭자, 나는—\n**정겸** (O.S.) 보리차 끓였소.\n정겸이 쟁반을 들고 온다. 율이 입을 다문다. 고름을 맨다. 그리고 늘 웃던 대로 웃는다. 보리차를 한 모금 마신다. 표정이 일그러진다. 짜다. 그래도 끝까지 마신다.",
+      "summary": "달래가 율의 옆구리 상처를 감아 주며 '도령 연체료는 평생 안 받을게요'. 율의 고백은 정겸의 보리차에 끊긴다. 율이 돌아간 뒤 정겸이 무심한 척 '다음엔 내가 감겠소. 상처.' '다쳤어요?' '…다칠 예정이오.' 귀가 빨갛다.",
+      "source_text": "달래가 무명 띠와 사기 약병을 들고 율 앞에 선다.\n**달래** 벗으세요.\n**율** (사레가 들려) …뭐요?\n**달래** 도포요. 저고리도.\n부엌에서 고개를 내밀던 먹순이 쏙 들어간다. (E) 장독 뚜껑 떨어지는 소리.\n율이 체념하고 고름을 푼다. 옆구리에 피가 번진 헝겊. 달래가 그걸 풀고 약을 바른다. 율이 이를 문다.\n**달래** (손을 멈추지 않고) 며칠 전 밤 골목에서 호루라기 분 사람.\n**율** …연체료라니까.\n**달래** (매듭을 지으며) 도령 연체료는요, 평생 안 받을게요.\n율이 달래를 본다. 입을 연다.\n**율** 낭자, 나는—\n**정겸** (O.S.) 보리차 끓였소.\n정겸이 쟁반을 들고 온다. 율이 입을 다문다. 고름을 맨다. 그리고 늘 웃던 대로 웃는다. 보리차를 한 모금 마신다. 표정이 일그러진다. 짜다. 그래도 끝까지 마신다.\n율이 돌아간 뒤. 정겸이 빈 찻잔을 거두며 무심한 척 말한다.\n**정겸** 다음엔 내가 감겠소. 상처.\n**달래** 선비님 다쳤어요?\n**정겸** …다칠 예정이오.\n귀가 빨갛다. 달래가 고개를 돌려 웃음을 참는다.",
       "shots": [
         {
           "id": "S01-01",
@@ -139,7 +139,7 @@
             }
           ],
           "transition": "CUT",
-          "duration_sec": 3,
+          "duration_sec": 2,
           "continuity": "축: 대문은 화면 왼쪽, 행랑채는 오른쪽(bible axis). 율은 마루 끝 왼쪽에 앉고 달래는 오른쪽에 선다. 부엌은 오른쪽 뒤, 정겸은 오른쪽에서 들어온다. 율 왼쪽 옆구리 상처, 14화의 피 번진 자줏빛 도포 그대로",
           "image_prompt": "medium shot on a wooden porch at dusk, a young woman standing over a seated nobleman holding a roll of cotton bandage and a small porcelain medicine bottle, giving an order"
         },
@@ -378,7 +378,7 @@
           "frame": "오른쪽에서 정겸이 보리차 쟁반을 들고 들어온다. 표정 없음.",
           "action": "정겸이 쟁반을 들고 온다.",
           "transition": "CUT",
-          "duration_sec": 2,
+          "duration_sec": 1,
           "image_prompt": "medium shot, the tall expressionless scholar entering from the right carrying a wooden tray with cups of barley tea"
         },
         {
@@ -393,7 +393,7 @@
           "frame": "율이 입을 다물고 고름을 맨다. 그리고 늘 웃던 대로 웃는다.",
           "action": "율이 입을 다문다. 고름을 맨다. 그리고 늘 웃던 대로 웃는다.",
           "transition": "CUT",
-          "duration_sec": 2,
+          "duration_sec": 1,
           "image_prompt": "medium shot, the nobleman closing his mouth, retying his robe and putting his usual easy smile back on"
         },
         {
@@ -413,6 +413,122 @@
           "duration_sec": 3,
           "notes": "정겸의 보리차는 짜다(원작 설정)",
           "image_prompt": "medium close-up, the nobleman sipping barley tea, his face twisting at the salty taste, yet draining the cup to the last drop while the scholar stands stiffly behind"
+        },
+        {
+          "id": "S01-16",
+          "size": "MS",
+          "angle": "EYE",
+          "move": "FIX",
+          "lens_mm": 35,
+          "characters": [
+            "jeonggyeom",
+            "dallae"
+          ],
+          "frame": "율이 돌아간 뒤. 마루. 정겸이 빈 찻잔을 거두며 달래 쪽은 보지 않는다.",
+          "action": "율이 돌아간 뒤. 정겸이 빈 찻잔을 거둔다.",
+          "transition": "CUT",
+          "duration_sec": 1,
+          "image_prompt": "dusk on the bookshop porch, the tall young scholar collecting an empty teacup without looking at the young woman"
+        },
+        {
+          "id": "S01-17",
+          "size": "MCU",
+          "angle": "EYE",
+          "move": "FIX",
+          "lens_mm": 50,
+          "characters": [
+            "jeonggyeom"
+          ],
+          "frame": "정겸이 무심한 척, 찻잔만 보며 말한다.",
+          "action": "정겸이 무심한 척 말한다.",
+          "dialogue": [
+            {
+              "speaker": "jeonggyeom",
+              "line": "다음엔 내가 감겠소. 상처.",
+              "mode": "ON"
+            }
+          ],
+          "transition": "CUT",
+          "duration_sec": 2,
+          "notes": "율의 상처를 감아 주던 달래를 다 보고 있었다. 정겸식 질투",
+          "image_prompt": "medium close-up of the young scholar speaking with studied indifference, eyes on the teacup"
+        },
+        {
+          "id": "S01-18",
+          "size": "CU",
+          "angle": "EYE",
+          "move": "FIX",
+          "lens_mm": 85,
+          "characters": [
+            "dallae"
+          ],
+          "frame": "달래가 눈을 동그랗게 뜬다.",
+          "action": "달래가 묻는다.",
+          "dialogue": [
+            {
+              "speaker": "dallae",
+              "line": "선비님 다쳤어요?",
+              "mode": "ON"
+            }
+          ],
+          "transition": "CUT",
+          "duration_sec": 1,
+          "image_prompt": "close-up of the young woman blinking in surprise"
+        },
+        {
+          "id": "S01-19",
+          "size": "CU",
+          "angle": "EYE",
+          "move": "FIX",
+          "lens_mm": 85,
+          "characters": [
+            "jeonggyeom"
+          ],
+          "frame": "정겸이 한 박자 늦게, 진지하게.",
+          "action": "정겸이 대답한다.",
+          "dialogue": [
+            {
+              "speaker": "jeonggyeom",
+              "line": "…다칠 예정이오.",
+              "mode": "ON"
+            }
+          ],
+          "transition": "CUT",
+          "duration_sec": 2,
+          "image_prompt": "close-up of the young scholar answering after a beat, dead serious"
+        },
+        {
+          "id": "S01-20",
+          "size": "ECU",
+          "angle": "PROFILE",
+          "move": "FIX",
+          "lens_mm": 85,
+          "characters": [
+            "jeonggyeom"
+          ],
+          "frame": "옆얼굴. 귀가 빨갛다.",
+          "action": "귀가 빨갛다.",
+          "motifs": [
+            "EAR_RED"
+          ],
+          "transition": "CUT",
+          "duration_sec": 2,
+          "image_prompt": "extreme close-up profile of a young man's ear turning bright red"
+        },
+        {
+          "id": "S01-21",
+          "size": "MS",
+          "angle": "EYE",
+          "move": "FIX",
+          "lens_mm": 35,
+          "characters": [
+            "dallae"
+          ],
+          "frame": "달래가 고개를 홱 돌려 웃음을 참는다. 어깨가 떨린다.",
+          "action": "달래가 고개를 돌려 웃음을 참는다.",
+          "transition": "CUT",
+          "duration_sec": 1,
+          "image_prompt": "medium shot of the young woman turning her head away, shoulders shaking as she holds back laughter"
         }
       ]
     },
@@ -421,8 +537,8 @@
       "heading": "달래책방 행랑채 (밤)",
       "location": "dallae_haengrang",
       "time": "NIGHT",
-      "tc_in": "00:49",
-      "tc_out": "01:54",
+      "tc_in": "00:55",
+      "tc_out": "01:56",
       "characters": [
         "dallae",
         "jeonggyeom"
@@ -502,7 +618,7 @@
             "INSERT_TEXT"
           ],
           "transition": "CUT",
-          "duration_sec": 3,
+          "duration_sec": 2,
           "notes": "TASKS 필수 컷(검시 기록 INSERT)",
           "image_prompt": "top-down insert of an old official inquest record on yellowed paper under lamplight"
         },
@@ -518,7 +634,7 @@
           "frame": "손가락이 한 줄에서 멈춘다. 다음 줄로 내려가 또 멈춘다. 초점이 손가락을 따라간다.",
           "action": "정겸의 손가락이 한 줄에서 멈춘다. 다음 줄에서 또 멈춘다.",
           "transition": "CUT",
-          "duration_sec": 3,
+          "duration_sec": 2,
           "image_prompt": "insert, rack focus following a fingertip that stops on one line of the document, then moves down and stops on the next"
         },
         {
@@ -573,7 +689,7 @@
             "EAR_NOT_RED"
           ],
           "transition": "CUT",
-          "duration_sec": 3,
+          "duration_sec": 2,
           "notes": "EAR_NOT_RED. 1화 S03-06(EAR_RED)과 렌즈·각도·초점 이동까지 똑같이. 붉은색 채도를 올리지 않는다",
           "image_prompt": "extreme close-up profile, focus shifting from the young man's eye to his ear, which stays its natural color, lamplight"
         },
@@ -675,7 +791,7 @@
           "action": "정겸이 다가가 무릎을 꿇고 달래를 끌어당겨 안는다. 달래는 밀어내지 않는다.",
           "sound": "흐느낌",
           "transition": "CUT",
-          "duration_sec": 3,
+          "duration_sec": 2,
           "image_prompt": "two-shot, the scholar kneeling at the threshold and pulling the sobbing young woman into his arms, she does not push him away, lamplight"
         },
         {
@@ -721,7 +837,7 @@
       "heading": "달래책방 행랑채 (새벽)",
       "location": "dallae_haengrang",
       "time": "DAWN",
-      "tc_in": "01:54",
+      "tc_in": "01:56",
       "tc_out": "02:22",
       "characters": [
         "jeonggyeom",
@@ -795,7 +911,7 @@
             "INSERT_TEXT"
           ],
           "transition": "CUT",
-          "duration_sec": 4,
+          "duration_sec": 3,
           "image_prompt": "top-down insert, a brush writing slightly crooked lines in a small notebook resting on a knee, blue dawn light"
         },
         {
@@ -841,7 +957,7 @@
           "frame": "눈가에 닿는 정겸의 엄지. 아주 천천히 눈물 자국을 닦는다.",
           "action": "엄지로 아주 조심스럽게 닦는다.",
           "transition": "CUT",
-          "duration_sec": 4,
+          "duration_sec": 3,
           "notes": "TASKS 필수 컷(새벽 눈물 닦기)",
           "image_prompt": "extreme close-up in slow motion, a man's thumb very gently wiping a dried tear track from the corner of a sleeping woman's eye, blue dawn light"
         },

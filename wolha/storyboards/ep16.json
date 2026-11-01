@@ -886,14 +886,14 @@
       "location": "dallae_maru",
       "time": "NIGHT",
       "tc_in": "01:59",
-      "tc_out": "02:18",
+      "tc_out": "02:21",
       "characters": [
         "yul",
         "gangsu"
       ],
       "mood": "GRIEF",
-      "summary": "단속 소식에 달려왔지만 한 걸음 늦은 율이 손가락 하나 너비의 문틈으로 다 본다. 초롱을 불어 끄고 돌아서는 율을 마루의 강수만 본다. 피 젖은 옆구리를 두고 '연체료요'.",
-      "source_text": "초롱을 든 율이 창고 문 앞에 서 있다. 숨이 차다. 옆구리의 무명 띠가 피로 젖었다. 단속 소식을 듣고 달려왔지만 행렬보다 한 걸음 늦었다.\n문틈은 손가락 하나 너비다. 그 너비로, 율은 다 봤다.\n율이 초롱을 내린다. 불을 불어 끈다. 한 걸음 물러나고, 돌아선다. 마루에 걸터앉은 강수와 눈이 마주친다. 강수는 다 안다.\n**강수** (낮게) …도령.\n**율** (돌아보지 않고) 무사하면 됐소.\n**강수** 도령 옆구리는 무사하지 않은 것 같은데.\n**율** 연체료요.\n율이 어둠 속으로 나간다. 옆구리를 짚었지만 허리는 꼿꼿하다.",
+      "summary": "단속 소식에 피 흘리며 달려온 율이, 손가락 하나 너비의 문틈으로 두 사람을 본다. 초롱을 끄고 돌아서 강수에게 '무사하면 됐소', '연체료요'. 나가다 멈춰 '재밌어서 온 건데. 언제부터 하나도 재미가 없네.'",
+      "source_text": "초롱을 든 율이 창고 문 앞에 서 있다. 숨이 차다. 옆구리의 무명 띠가 피로 젖었다. 단속 소식을 듣고 달려왔지만 행렬보다 한 걸음 늦었다.\n문틈은 손가락 하나 너비다. 그 너비로, 율은 다 봤다.\n율이 초롱을 내린다. 불을 불어 끈다. 한 걸음 물러나고, 돌아선다. 마루에 걸터앉은 강수와 눈이 마주친다. 강수는 다 안다.\n**강수** (낮게) …도령.\n**율** (돌아보지 않고) 무사하면 됐소.\n**강수** 도령 옆구리는 무사하지 않은 것 같은데.\n**율** 연체료요.\n율이 어둠 속으로 나가다 멈춘다. 돌아보지 않는다.\n**율** …재밌어서 온 건데. 언제부터 하나도 재미가 없네.\n옆구리를 짚었지만 허리는 꼿꼿하다. 율이 어둠 속으로 사라진다.",
       "shots": [
         {
           "id": "S04-01",
@@ -1048,11 +1048,35 @@
           "characters": [
             "yul"
           ],
-          "frame": "율의 뒷모습이 화면 왼쪽 뒤 어둠으로 걸어 나간다. 왼쪽 옆구리를 짚었지만 허리는 꼿꼿하다.",
-          "action": "율이 어둠 속으로 나간다.",
+          "frame": "율이 어둠 속으로 나가다 멈춘다. 돌아보지 않는다. 등 뒤로 창고 문틈의 빛 한 줄.",
+          "action": "율이 어둠 속으로 나가다 멈춘다. 돌아보지 않는다.",
           "transition": "FADE_OUT",
           "duration_sec": 2,
           "image_prompt": "wide shot from behind, the young nobleman walking away into the darkness, one hand pressed to his left side but his back held straight"
+        },
+        {
+          "id": "S04-09",
+          "size": "CU",
+          "angle": "PROFILE",
+          "move": "FIX",
+          "lens_mm": 85,
+          "characters": [
+            "yul"
+          ],
+          "frame": "등 돌린 율의 옆얼굴. 늘 웃던 입이 웃지 않는다. 말을 마치고 옆구리를 짚은 채 허리를 꼿꼿이 세우고 어둠 속으로 걸어간다.",
+          "action": "율이 혼잣말을 한다. 옆구리를 짚었지만 허리는 꼿꼿하다. 율이 어둠 속으로 사라진다.",
+          "dialogue": [
+            {
+              "speaker": "yul",
+              "line": "…재밌어서 온 건데. 언제부터 하나도 재미가 없네.",
+              "mode": "ON"
+            }
+          ],
+          "sound": "♪ 율의 테마(가야금 한 줄이 튕기고 대금이 받는다)",
+          "transition": "CUT",
+          "duration_sec": 3,
+          "notes": "4화부터의 입버릇 '재밌네'가 처음으로 무너지는 대사. 율이 장난이 아니게 된 순간",
+          "image_prompt": "close-up profile of the young nobleman with his back to the light, not smiling for once, then straightening and walking away into darkness holding his side"
         }
       ]
     },
@@ -1061,7 +1085,7 @@
       "heading": "창덕궁 존현각 (밤)",
       "location": "jonhyeongak",
       "time": "NIGHT",
-      "tc_in": "02:18",
+      "tc_in": "02:21",
       "tc_out": "02:46",
       "characters": [
         "an_naegwan",
@@ -1180,7 +1204,7 @@
             }
           ],
           "transition": "CUT",
-          "duration_sec": 6,
+          "duration_sec": 4,
           "image_prompt": "slightly low angle, the king explaining calmly by candlelight, a hint of mischief behind his stern face"
         },
         {
@@ -1224,7 +1248,7 @@
             }
           ],
           "transition": "CUT",
-          "duration_sec": 6,
+          "duration_sec": 5,
           "notes": "대사가 길어 7초. 다음 컷 정겸 리액션으로 바로 붙인다",
           "image_prompt": "slow push-in on the king leaning forward, an amused glint in his eyes as he speaks, candles flickering behind"
         },

@@ -303,7 +303,7 @@
       "location": "seosomun",
       "time": "NIGHT",
       "tc_in": "00:44",
-      "tc_out": "01:26",
+      "tc_out": "01:23",
       "characters": [
         "jeonggyeom",
         "gangsu"
@@ -326,7 +326,7 @@
           "action": "죄인들의 무덤이 모인 언덕. 바람. 정겸과 강수가 한 무덤을 파고 있다.",
           "sound": "(E) 바람, 삽이 언 흙을 찍는 소리",
           "transition": "CUT",
-          "duration_sec": 3,
+          "duration_sec": 2,
           "continuity": "축: 무덤은 화면 가운데, 강수 왼쪽, 정겸 오른쪽. 서소문 성벽은 화면 오른쪽 뒤. 땅에 내려놓은 초롱 하나가 광원. 강수 왼팔 붕대(12~21화)",
           "image_prompt": "high angle extreme wide shot of a bleak hillside of criminals' graves at night outside the city wall, crooked wooden markers, dry grass bending in the wind, two small figures digging beside a single lantern on the ground"
         },
@@ -357,7 +357,7 @@
           "action": "강수는 붕대 감은 팔 때문에 한 손으로 삽질을 한다.",
           "sound": "두 사람의 거친 숨, 흙 던지는 소리",
           "transition": "CUT",
-          "duration_sec": 3,
+          "duration_sec": 2,
           "image_prompt": "profile two-shot of two men digging a grave at night by lantern light, the one on the left shoveling one-handed with his bandaged left arm held close, the tall one on the right digging neatly with both hands"
         },
         {
@@ -386,7 +386,7 @@
           "frame": "구덩이 위 부감. 두 사람이 동시에 고개를 들어 서로를 본다.",
           "action": "두 사람이 눈을 마주친다.",
           "transition": "CUT",
-          "duration_sec": 3,
+          "duration_sec": 2,
           "image_prompt": "high angle looking down into the grave pit, the two men lifting their heads at the same moment to look at each other, lantern light"
         },
         {
@@ -549,8 +549,8 @@
       "heading": "달래책방 대문 앞 (낮)",
       "location": "dallae_maru",
       "time": "DAY",
-      "tc_in": "01:26",
-      "tc_out": "02:13",
+      "tc_in": "01:23",
+      "tc_out": "02:07",
       "characters": [
         "dallae",
         "jeonggyeom",
@@ -575,7 +575,7 @@
           "action": "「청상연가」 7권이 풀린 날. 대문 앞에 독자들이 몰려와 있다. 누군가 책을 흔든다.",
           "sound": "웅성거림이 구호로 바뀐다",
           "transition": "CUT",
-          "duration_sec": 3,
+          "duration_sec": 2,
           "continuity": "축: 대문은 항상 화면 왼쪽, 행랑채는 오른쪽(bible axis). 독자들은 대문 쪽(왼쪽)에 몰리고, 마루 위 달래와 정겸은 화면 오른쪽",
           "image_prompt": "wide shot of a small hanok bookshop gate on the left crowded with agitated readers spilling in from the alley, one waving a thread-bound book overhead, daylight"
         },
@@ -796,7 +796,7 @@
           "frame": "달래 얼굴에 아주 천천히 다가간다. 등잔빛. 그 줄에서 눈을 떼지 못한다.",
           "action": "달래가 그 줄을 오래 본다.",
           "transition": "CUT",
-          "duration_sec": 4,
+          "duration_sec": 3,
           "image_prompt": "very slow push-in on the young woman's face as she stares at a line in the book for a long time, lamplight, her expression softening"
         },
         {
@@ -811,7 +811,7 @@
           "frame": "달래가 책을 가슴에 잠깐 댄다. 눈을 감았다 뜨고, 퍼뜩 책을 서안에 내려놓는다.",
           "action": "책을 가슴에 잠깐 대었다가, 정신이 든 듯 내려놓는다.",
           "transition": "CUT",
-          "duration_sec": 4,
+          "duration_sec": 3,
           "image_prompt": "medium shot, the young woman briefly hugging the book to her chest with eyes closed, then catching herself and putting it down abruptly"
         },
         {
@@ -843,18 +843,95 @@
       "heading": "달래책방 마당 (해 질 녘)",
       "location": "dallae_maru",
       "time": "DUSK",
-      "tc_in": "02:13",
+      "tc_in": "02:07",
       "tc_out": "03:00",
       "characters": [
         "dallae",
         "yul"
       ],
       "mood": "ROMANCE",
-      "summary": "해 질 녘, 율이 늘 그렇듯 웃으며 7권을 빌리러 온다. 걸음이 조금 느리다. 책을 건네던 달래가 율의 도포 옆구리에 번진 피를 보고 묻자, 율은 보조개를 지으며 연체료라고 답한다.",
-      "source_text": "율이 부채를 흔들며 들어온다. 늘 그렇듯 웃는다. 다만 걸음이 조금 느리다.\n**율** 7권 하나 빌려주시오. 연체할 거지만.\n달래가 책을 건네다 멈춘다. 율의 도포 옆구리에 피가 번져 있다. 자줏빛 비단 위에서 검게 굳어 간다.\n**달래** 도령, 이거 무슨 상처예요?\n율이 웃는다. 보조개가 팬다.\n**율** …연체료요.",
+      "summary": "판서댁 도령의 연체가 이상해졌다. 빌리러 오는 날마다 약과, 먹, 등잔 기름, 새 붓을 두고 간다. 그날도 웃으며 7권을 빌리러 온 율의 도포 옆구리에 피가 번져 있다. '…연체료요.'",
+      "source_text": "(N, 강수) 판서댁 도령의 연체는 그 무렵부터 이상해졌소. 빌리러 오는 날이 반납하는 날보다 많아졌고, 올 때마다 무언가를 두고 갔지. 원고 쓰는 밤이 길다면서.\nInsert. 마루 끝에 하나씩 놓이는 것들. 약과 꾸러미. 판서댁 먹 한 자루. 등잔 기름 한 병. 새 붓 한 자루.\n율이 부채를 흔들며 들어온다. 늘 그렇듯 웃는다. 다만 걸음이 조금 느리다.\n**율** 7권 하나 빌려주시오. 연체할 거지만.\n달래가 책을 건네다 멈춘다. 율의 도포 옆구리에 피가 번져 있다. 자줏빛 비단 위에서 검게 굳어 간다.\n**달래** 도령, 이거 무슨 상처예요?\n율이 웃는다. 보조개가 팬다.\n**율** …연체료요.",
       "shots": [
         {
           "id": "S04-01",
+          "size": "INSERT",
+          "angle": "TOP",
+          "move": "FIX",
+          "lens_mm": 50,
+          "characters": [
+            "yul"
+          ],
+          "frame": "탑샷. 달래책방 마루 끝. 자줏빛 비단 소매의 손이 약과 꾸러미를 놓고 사라진다.",
+          "action": "마루 끝에 약과 꾸러미가 놓인다.",
+          "dialogue": [
+            {
+              "speaker": "N:gangsu",
+              "line": "판서댁 도령의 연체는 그 무렵부터 이상해졌소.",
+              "mode": "N"
+            }
+          ],
+          "sound": "♪ 율의 테마(가야금 한 줄이 튕기고 대금이 받는다)",
+          "motifs": [
+            "NARRATOR"
+          ],
+          "transition": "CUT",
+          "duration_sec": 3,
+          "image_prompt": "top-down insert of a wooden porch edge, a hand in a plum silk sleeve setting down a small cloth bundle of honey cookies and withdrawing"
+        },
+        {
+          "id": "S04-02",
+          "size": "INSERT",
+          "angle": "TOP",
+          "move": "FIX",
+          "lens_mm": 50,
+          "characters": [
+            "yul"
+          ],
+          "frame": "같은 자리, 다른 날. 이번엔 판서댁 먹 한 자루와 등잔 기름 한 병.",
+          "action": "판서댁 먹 한 자루, 등잔 기름 한 병이 놓인다.",
+          "dialogue": [
+            {
+              "speaker": "N:gangsu",
+              "line": "빌리러 오는 날이 반납하는 날보다 많아졌고, 올 때마다 무언가를 두고 갔지.",
+              "mode": "N"
+            }
+          ],
+          "motifs": [
+            "NARRATOR"
+          ],
+          "transition": "CUT",
+          "duration_sec": 4,
+          "image_prompt": "top-down insert of the same porch edge on another day, a fine ink stick stamped with a noble house seal and a small bottle of lamp oil"
+        },
+        {
+          "id": "S04-03",
+          "size": "INSERT",
+          "angle": "TOP",
+          "move": "FIX",
+          "lens_mm": 50,
+          "characters": [
+            "yul"
+          ],
+          "frame": "또 다른 날. 새 붓 한 자루. 그 옆에 늘 그렇듯 연체된 책.",
+          "action": "새 붓 한 자루가 놓인다.",
+          "dialogue": [
+            {
+              "speaker": "N:gangsu",
+              "line": "원고 쓰는 밤이 길다면서.",
+              "mode": "N"
+            }
+          ],
+          "motifs": [
+            "NARRATOR"
+          ],
+          "transition": "CUT",
+          "duration_sec": 2,
+          "notes": "율이 스며드는 몽타주. 24화 '연체는 일부러 했소'의 복선",
+          "image_prompt": "top-down insert, a brand-new calligraphy brush laid beside an overdue rental book on the porch"
+        },
+        {
+          "id": "S04-04",
           "size": "LS",
           "angle": "EYE",
           "move": "FIX",
@@ -867,12 +944,12 @@
           "action": "율이 부채를 흔들며 들어온다. 늘 그렇듯 웃는다.",
           "sound": "저녁 새소리, 부채 소리",
           "transition": "CUT",
-          "duration_sec": 3,
+          "duration_sec": 2,
           "continuity": "축: 대문은 화면 왼쪽, 행랑채는 오른쪽(bible axis). 율은 대문으로 들어와 오른쪽 마루의 달래 쪽으로 간다. 역광은 대문 쪽. 율 왼쪽 옆구리 상처(12화 S#5), 이 샷에서는 부채와 소매에 가려 피가 보이지 않는다",
           "image_prompt": "wide shot of a hanok bookshop yard at dusk, a handsome young nobleman in a plum silk robe strolling in through the gate on the left, fanning himself and smiling, orange backlight, a young woman at the wooden porch on the right"
         },
         {
-          "id": "S04-02",
+          "id": "S04-05",
           "size": "MS",
           "angle": "EYE",
           "move": "TRACK_R",
@@ -887,7 +964,7 @@
           "image_prompt": "tracking right on the lower half of the young nobleman's silk robe as he walks a little too slowly, his free hand discreetly pressing the side of his robe"
         },
         {
-          "id": "S04-03",
+          "id": "S04-06",
           "size": "MS",
           "angle": "EYE",
           "move": "FIX",
@@ -902,7 +979,7 @@
           "image_prompt": "medium shot, the young woman sorting books in a wooden chest on the porch looking up toward the left, dusk light"
         },
         {
-          "id": "S04-04",
+          "id": "S04-07",
           "size": "2S",
           "angle": "EYE",
           "move": "FIX",
@@ -925,7 +1002,7 @@
           "image_prompt": "two-shot at the edge of the porch at dusk, the smiling nobleman on the left leaning an elbow on the porch, the young woman on the right"
         },
         {
-          "id": "S04-05",
+          "id": "S04-08",
           "size": "MCU",
           "angle": "EYE",
           "move": "FIX",
@@ -940,7 +1017,7 @@
           "image_prompt": "medium close-up, the young woman rolling her eyes as she pulls a book from the chest"
         },
         {
-          "id": "S04-06",
+          "id": "S04-09",
           "size": "INSERT",
           "angle": "EYE",
           "move": "FIX",
@@ -956,7 +1033,7 @@
           "image_prompt": "insert, a young woman's ink-stained hand passing a book toward a man and stopping in midair"
         },
         {
-          "id": "S04-07",
+          "id": "S04-10",
           "size": "INSERT",
           "angle": "EYE",
           "move": "RACK_FOCUS",
@@ -967,12 +1044,12 @@
           "frame": "초점이 책에서 그 뒤 율의 도포 옆구리로 넘어간다. 자줏빛 비단 위 검붉은 얼룩이 검게 굳어 간다.",
           "action": "율의 도포 옆구리에 피가 번져 있다. 자줏빛 비단 위에서 검게 굳어 간다.",
           "transition": "CUT",
-          "duration_sec": 4,
+          "duration_sec": 3,
           "continuity": "율 왼쪽 옆구리 피. 15화 S#1 상처 감기로 이어진다",
           "image_prompt": "insert, rack focus from a book in the foreground to a spreading dark bloodstain on the side of a plum silk robe, dusk light"
         },
         {
-          "id": "S04-08",
+          "id": "S04-11",
           "size": "CU",
           "angle": "EYE",
           "move": "FIX",
@@ -987,7 +1064,7 @@
           "image_prompt": "close-up of the young woman's face as the teasing look drains away, dusk light"
         },
         {
-          "id": "S04-09",
+          "id": "S04-12",
           "size": "MS",
           "angle": "OTS",
           "move": "FIX",
@@ -1010,7 +1087,7 @@
           "image_prompt": "over the nobleman's shoulder toward the young woman looking him straight in the eye, worried, dusk light"
         },
         {
-          "id": "S04-10",
+          "id": "S04-13",
           "size": "MS",
           "angle": "EYE",
           "move": "FIX",
@@ -1025,7 +1102,7 @@
           "image_prompt": "medium shot of the nobleman, his fan stopping mid-wave, his smile frozen for a beat, dusk light"
         },
         {
-          "id": "S04-11",
+          "id": "S04-14",
           "size": "2S",
           "angle": "PROFILE",
           "move": "FIX",
@@ -1041,7 +1118,7 @@
           "image_prompt": "profile two-shot at dusk, the nobleman on the left and the young woman on the right with a half-offered book between them, sunset light between them, silence"
         },
         {
-          "id": "S04-12",
+          "id": "S04-15",
           "size": "CU",
           "angle": "EYE",
           "move": "FIX",
@@ -1055,11 +1132,11 @@
             "LATE_FEE"
           ],
           "transition": "CUT",
-          "duration_sec": 4,
+          "duration_sec": 3,
           "image_prompt": "close-up of the young nobleman slowly breaking into a smile, a deep dimple, dusk light"
         },
         {
-          "id": "S04-13",
+          "id": "S04-16",
           "size": "MS",
           "angle": "EYE",
           "move": "DOLLY_IN",
