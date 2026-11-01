@@ -697,14 +697,13 @@
           "characters": [
             "jeonggyeom"
           ],
-          "frame": "밤. 서안 위 등잔 하나(화면 오른쪽). 정겸이 수첩에 붓을 놀린다. 왼쪽 창호지 문은 어둡다. 저도 모르게 따라 웃다가, 손등으로 입을 막는다. 귀 끝이 붉다.",
-          "action": "정겸이 창호지 쪽을 오래 본다. 저도 모르게 따라 웃다가, 손등으로 입을 막는다.",
+          "frame": "밤. 서안 위 등잔 하나(화면 오른쪽). 정겸이 수첩에 붓을 놀린다. 왼쪽 창호지 문은 어둡다.",
+          "action": "등잔 아래. 정겸이 수첩에 적는다.",
           "sound": "등잔 심지 타는 소리, 붓 소리",
           "transition": "CUT",
           "duration_sec": 3,
           "continuity": "축: 창호지 문(안채 쪽)은 화면 왼쪽, 등잔과 서안은 오른쪽(5화 S#1·7화 S#1과 같은 방). 정겸 시선은 마지막에 왼쪽 창호지로",
-          "image_prompt": "a tall scholar writing in a small notebook by a single oil lamp at night in a tiny tidy room, a dark paper door on the left",
-          "notes": "정겸이 처음으로 '들킨' 웃음. 시청자만 본다"
+          "image_prompt": "a tall scholar writing in a small notebook by a single oil lamp at night in a tiny tidy room, a dark paper door on the left"
         },
         {
           "id": "S04-02",
@@ -885,12 +884,12 @@
           "characters": [
             "jeonggyeom"
           ],
-          "frame": "왼쪽 옆얼굴. 아주 느리게 다가간다. 정겸이 창호지 쪽을 한참 본다. 귀는 그대로다.",
-          "action": "정겸이 창호지 쪽을 본다. 한참 본다.",
+          "frame": "왼쪽 옆얼굴. 아주 느리게 다가간다. 정겸이 창호지 쪽을 한참 본다. 안채의 웃음소리에 저도 모르게 따라 웃다가, 손등으로 입을 막는다. 귀는 그대로다.",
+          "action": "정겸이 창호지 쪽을 한참 본다. 저도 모르게 따라 웃다가, 손등으로 입을 막는다.",
           "transition": "FADE_OUT",
           "duration_sec": 4,
-          "notes": "'한참'을 살리는 무대사 컷. 귀 색은 손대지 않는다(EAR 모티프 없음)",
-          "image_prompt": "very slow push-in on the profile of the scholar gazing at a glowing paper door for a long time, lamplight behind him"
+          "notes": "'한참'을 살리는 무대사 컷. 귀 색은 손대지 않는다(EAR 모티프 없음) 정겸이 처음으로 '들킨' 웃음. 시청자만 본다",
+          "image_prompt": "very slow push-in on the profile of the scholar gazing at a glowing paper door for a long time, lamplight behind him, a small unguarded smile he quickly hides behind the back of his hand"
         }
       ]
     },
