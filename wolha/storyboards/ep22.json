@@ -118,7 +118,7 @@
       ],
       "mood": "WARM",
       "summary": "새벽, 달래가 밤새 쓴 원고 '혼례날 신랑이 도망가는 법'을 강수에게 건넨다. 주문은 정겸, 막장의 법칙 하나는 '신랑에게도 사정이 있다'. 그 집 아들은 먹순만 보면 얼굴이 빨개진다.",
-      "source_text": "등잔이 다 타 간다. 달래가 밤새 쓴 원고를 묶는다. 눈은 붉지만 손은 빠르다. 강수가 붕대를 푼 팔로 원고를 받는다.\n**달래** 아버지는 끝까지 써 주셨어. 그러니까 나도 써 줄게. 오라버니 대목. (사이) 주문은 그 귀 빨간 나리가 넣었고.\nInsert. 원고 첫 장. '혼례날 신랑이 도망가는 법'.\n**강수** (원고를 넘기며) …이걸 잔치에서 읽으라고?\n**달래** 막장의 법칙. 하나, 신랑에게도 사정이 있다. (사이) 둘, 신부에게도.",
+      "source_text": "등잔이 다 타 간다. 달래가 밤새 쓴 원고를 묶는다. 눈은 붉지만 손은 빠르다. 강수가 붕대를 푼 팔로 원고를 받는다. 손목에는 붕대 끝에 매여 있던 분홍 댕기 하나만 남겨 감았다.\n**달래** 아버지는 끝까지 써 주셨어. 그러니까 나도 써 줄게. 오라버니 대목. (사이) 주문은 그 귀 빨간 나리가 넣었고.\nInsert. 원고 첫 장. '혼례날 신랑이 도망가는 법'.\n**강수** (원고를 넘기며) …이걸 잔치에서 읽으라고?\n**달래** 막장의 법칙. 하나, 신랑에게도 사정이 있다. (사이) 둘, 신부에게도.",
       "shots": [
         {
           "id": "S01-01",
@@ -184,12 +184,12 @@
           "characters": [
             "gangsu"
           ],
-          "frame": "강수가 붕대를 푼 왼팔을 내밀어 원고를 받는다. 팔뚝에 아문 칼자국.",
-          "action": "강수가 붕대를 푼 팔로 원고를 받는다.",
+          "frame": "강수가 붕대를 푼 왼팔을 내밀어 원고를 받는다. 팔뚝에 아문 칼자국. 손목엔 붕대 끝에 매여 있던 분홍 댕기 하나만 남겨 감았다.",
+          "action": "강수가 붕대를 푼 팔로 원고를 받는다. 손목에는 분홍 댕기 하나만 남겨 감았다.",
           "transition": "CUT",
           "duration_sec": 2,
-          "continuity": "강수 붕대를 풀었다(22화부터 붕대·목덜미 무명 없음). 왼쪽 팔뚝에 아문 칼자국만",
-          "image_prompt": "medium shot of the storyteller reaching out with his unbandaged left arm, a healed scar on the forearm, to take the manuscript bundle"
+          "continuity": "강수 붕대를 풀었다(22화부터 붕대·목덜미 무명 없음). 왼쪽 팔뚝에 아문 칼자국만 / 윤희의 분홍 댕기: 13화 S#3에 강수의 왼팔 붕대 끝에 묶어 준다. 21화까지 붕대 끝, 22화 S#1부터 왼 손목",
+          "image_prompt": "medium shot of the storyteller reaching out with his unbandaged left arm, a healed scar on the forearm, to take the manuscript bundle, a faded pink silk ribbon tied around his left wrist"
         },
         {
           "id": "S01-05",
@@ -1047,7 +1047,7 @@
       ],
       "mood": "ROMANCE",
       "summary": "곤장 열 대를 맞고 절뚝이며 온 강수가, 갇힌 별당의 꽃살 구멍으로 나온 윤희의 손끝을 잡는다. 신랑은 나가라 소리 한 번, 읽은 놈은 열 대. 그래도 대본 없이 '좋아하오'. 윤희는 엽전을 아껴 두고, 그때까지는 월하회가 빌려 가는 책 여백에 첫 글자로 편지하자 한다.",
-      "source_text": "잔치 등롱이 하나둘 꺼진다. 담장 밖 골목으로 강수가 절뚝이며 걸어온다. 도포 등판에 피가 배어 있다. 담장에 낸 꽃살 구멍 너머로 분홍 저고리가 비친다. 윤희다.\n**윤희** (담 너머) 다친 데는요.\n**강수** (아무렇지 않은 척) 열 대 맞았소. 입은 멀쩡하오. 할 말이 있어서.\n윤희가 꽃살 구멍으로 손을 내민다. 손가락 두 마디만 겨우 나온다. 강수가 그 끝을 잡는다.\n**강수** 신랑은 나가라 소리 한 번 듣고, 읽은 놈은 열 대를 맞았소. 그게 법도라더군.\n**강수** (숨을 고르고) 그래도 대본 없이 하겠소. 아씨 앞에서는 대사를 다 까먹으니까. (사이) 좋아하오.\n꽃살 구멍 너머의 눈이 강수를 오래 본다. 처음 병풍 틈으로 보던 그 눈이다.\n**윤희** …다음 대목은요?\n**강수** 그건 엽전 소리를 들어야 나오는 법이오.\n윤희가 꽃살 구멍으로 엽전 하나를 내민다. 강수가 손을 뻗는 순간, 다시 거둬 쥔다.\n**윤희** 엽전은 아껴 둘래요. 제일 좋은 대목에, 담 밖에서 던지게.\n**강수** 담 밖이라니. 아씨는 이제 별당 문턱도 못 넘잖소.\n**윤희** 그럼 그때까지는 책 여백에 써요. 월하회가 빌려 가는 책에, 첫 글자로.",
+      "source_text": "잔치 등롱이 하나둘 꺼진다. 담장 밖 골목으로 강수가 절뚝이며 걸어온다. 도포 등판에 피가 배어 있다. 담장에 낸 꽃살 구멍 너머로 분홍 저고리가 비친다. 윤희다.\n**윤희** (담 너머) 다친 데는요.\n**강수** (아무렇지 않은 척) 열 대 맞았소. 입은 멀쩡하오. 할 말이 있어서.\n윤희가 꽃살 구멍으로 손을 내민다. 손가락 두 마디만 겨우 나온다. 강수가 그 끝을 잡는다. 강수의 손목에 분홍 댕기가 감겨 있다. 윤희의 손가락이 그 댕기를 더듬는다.\n**강수** 신랑은 나가라 소리 한 번 듣고, 읽은 놈은 열 대를 맞았소. 그게 법도라더군.\n**강수** (숨을 고르고) 그래도 대본 없이 하겠소. 아씨 앞에서는 대사를 다 까먹으니까. (사이) 좋아하오.\n꽃살 구멍 너머의 눈이 강수를 오래 본다. 처음 병풍 틈으로 보던 그 눈이다.\n**윤희** …다음 대목은요?\n**강수** 그건 엽전 소리를 들어야 나오는 법이오.\n윤희가 꽃살 구멍으로 엽전 하나를 내민다. 강수가 손을 뻗는 순간, 다시 거둬 쥔다.\n**윤희** 엽전은 아껴 둘래요. 제일 좋은 대목에, 담 밖에서 던지게.\n**강수** 담 밖이라니. 아씨는 이제 별당 문턱도 못 넘잖소.\n**윤희** 그럼 그때까지는 책 여백에 써요. 월하회가 빌려 가는 책에, 첫 글자로.",
       "shots": [
         {
           "id": "S04-01",
@@ -1064,7 +1064,7 @@
             "WALL"
           ],
           "transition": "CUT",
-          "duration_sec": 3,
+          "duration_sec": 2,
           "continuity": "곤장 열 대(22화 S#3 뒤): 도포 등판에 핏자국, 절뚝인다. 23화 S#1까지 이어 간다. 팔 붕대는 없다. 윤희는 S#3 끝에서 별당에 갇혔다(금족령)",
           "image_prompt": "night, a narrow alley beside a high tiled wall, festive lanterns beyond it going out one by one, a man limping along the wall with one hand on it, blood soaked through the back of his grey robe"
         },
@@ -1143,15 +1143,16 @@
             "yunhui",
             "gangsu"
           ],
-          "frame": "꽃살 구멍으로 가는 손가락 두 마디만 겨우 나온다. 강수의 손이 그 끝을 잡는다.",
-          "action": "윤희가 꽃살 구멍으로 손을 내민다. 강수가 그 끝을 잡는다.",
+          "frame": "꽃살 구멍으로 가는 손가락 두 마디만 겨우 나온다. 강수의 손이 그 끝을 잡는다. 강수의 손목에 감긴 분홍 댕기. 윤희의 손가락이 그 댕기를 더듬는다.",
+          "action": "강수가 그 끝을 잡는다. 강수의 손목에 분홍 댕기가 감겨 있다. 윤희의 손가락이 그 댕기를 더듬는다.",
           "motifs": [
             "WALL"
           ],
           "transition": "CUT",
-          "duration_sec": 3,
-          "notes": "두 사람이 처음 손을 잡는 컷. 담 너머라 손끝만",
-          "image_prompt": "insert, only two slender fingertips squeezing through a small lattice opening in a wall, a man's rough hand gently holding just their tips"
+          "duration_sec": 4,
+          "notes": "두 사람이 처음 손을 잡는 컷. 담 너머라 손끝만 13화에 묶어 준 제 댕기를 손끝으로 알아본다",
+          "image_prompt": "night insert at a garden wall, two slender fingertips poking through a small carved lattice opening, a man's hand holding them, a faded pink silk ribbon tied around his wrist, the fingertips touching the ribbon",
+          "continuity": "윤희의 분홍 댕기: 13화 S#3에 강수의 왼팔 붕대 끝에 묶어 준다. 21화까지 붕대 끝, 22화 S#1부터 왼 손목"
         },
         {
           "id": "S04-06",

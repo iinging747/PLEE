@@ -110,7 +110,7 @@
       "location": "dallae_haengrang",
       "time": "DAWN",
       "tc_in": "00:12",
-      "tc_out": "00:59",
+      "tc_out": "00:57",
       "characters": [
         "dallae",
         "jeonggyeom"
@@ -135,7 +135,7 @@
             "INSERT_TEXT"
           ],
           "transition": "CUT",
-          "duration_sec": 3,
+          "duration_sec": 2,
           "continuity": "축: 16화 S#6과 같다. 행랑채 방문(문간의 정겸)은 화면 왼쪽, 서안 앞 달래는 오른쪽. 16화 엔딩 정지 화면에서 바로 이어진다",
           "notes": "꼭 챙길 그림: 밀명 INSERT",
           "image_prompt": "top-down insert, small ink-stained hands unfolding an official document stamped with a large red royal seal, blue dawn light"
@@ -178,7 +178,7 @@
             "INSERT_TEXT"
           ],
           "transition": "CUT",
-          "duration_sec": 3,
+          "duration_sec": 2,
           "notes": "꼭 챙길 그림: 같은 글씨 대조. 두 글씨의 삐침이 겹쳐 보이게 놓는다",
           "image_prompt": "top-down insert, a rented novel with brush notes in its margins laid side by side with an open notebook, rack focus between the two identical handwriting styles, a small ink-stained finger tracing a matching stroke"
         },
@@ -448,8 +448,8 @@
       "heading": "달래책방 행랑채 문간 (아침)",
       "location": "dallae_haengrang",
       "time": "MORNING",
-      "tc_in": "00:59",
-      "tc_out": "01:27",
+      "tc_in": "00:57",
+      "tc_out": "01:25",
       "characters": [
         "jeonggyeom",
         "gangsu",
@@ -480,8 +480,8 @@
           ],
           "transition": "CUT",
           "duration_sec": 3,
-          "continuity": "축: 행랑채 방문은 화면 왼쪽, 방 안 정겸은 오른쪽. 대문은 화면 왼쪽(dallae_maru axis). 우산은 문간 왼쪽 기둥에 기대 있다. 강수 왼쪽 아래팔 붕대 유지(대본 '성한 손')",
-          "image_prompt": "medium shot, the tall scholar packing a cloth bundle with a few books in a tiny tidy room, the storyteller with a bandaged left forearm standing in the doorway on the left, morning light"
+          "continuity": "축: 행랑채 방문은 화면 왼쪽, 방 안 정겸은 오른쪽. 대문은 화면 왼쪽(dallae_maru axis). 우산은 문간 왼쪽 기둥에 기대 있다. 강수 왼쪽 아래팔 붕대 유지(대본 '성한 손') / 윤희의 분홍 댕기: 13화 S#3에 강수의 왼팔 붕대 끝에 묶어 준다. 21화까지 붕대 끝, 22화 S#1부터 왼 손목",
+          "image_prompt": "medium shot, the tall scholar packing a cloth bundle with a few books in a tiny tidy room, the storyteller with a bandaged left forearm standing in the doorway on the left, morning light, a small pink silk ribbon tied at the end of his forearm bandage"
         },
         {
           "id": "S02-02",
@@ -526,7 +526,8 @@
           ],
           "transition": "CUT",
           "duration_sec": 4,
-          "image_prompt": "handheld profile two-shot, the storyteller grabbing the taller man's collar with his good right hand, his left forearm bandaged, the scholar not resisting"
+          "image_prompt": "handheld profile two-shot, the storyteller grabbing the taller man's collar with his good right hand, his left forearm bandaged, the scholar not resisting, a small pink silk ribbon tied at the end of his forearm bandage",
+          "continuity": "윤희의 분홍 댕기: 13화 S#3에 강수의 왼팔 붕대 끝에 묶어 준다. 21화까지 붕대 끝, 22화 S#1부터 왼 손목"
         },
         {
           "id": "S02-04",
@@ -593,7 +594,8 @@
           ],
           "transition": "CUT",
           "duration_sec": 2,
-          "image_prompt": "medium close-up of the storyteller with a bandaged left forearm retorting bitterly"
+          "image_prompt": "medium close-up of the storyteller with a bandaged left forearm retorting bitterly, a small pink silk ribbon tied at the end of his forearm bandage",
+          "continuity": "윤희의 분홍 댕기: 13화 S#3에 강수의 왼팔 붕대 끝에 묶어 준다. 21화까지 붕대 끝, 22화 S#1부터 왼 손목"
         },
         {
           "id": "S02-07",
@@ -687,15 +689,15 @@
       "heading": "달래책방 마루 (해 질 녘)",
       "location": "dallae_maru",
       "time": "DUSK",
-      "tc_in": "01:27",
-      "tc_out": "02:04",
+      "tc_in": "01:25",
+      "tc_out": "02:05",
       "characters": [
         "dallae",
         "yul"
       ],
       "mood": "WARM",
-      "summary": "빈 행랑채와 우산 하나. 율이 하려던 말을 문틈의 기억 앞에서 삼키고 약과 두 개를 내민다. 달래는 약과를 먹다 울고, 8권 앞부분 원고와 「삼국지」 넷째 권을 율에게 맡긴다.",
-      "source_text": "달래가 마루 끝에 혼자 앉아 있다. 행랑채는 비었고, 문간에 우산 하나만 남아 있다. 율이 들어와 한 사람 거리를 두고 앉는다.\n**율** 하숙생은 나갔소?\n**달래** 나간 게 아니라, 원래 없던 사람이에요.\n율이 더 묻지 않는다. 숨을 한 번 고른다.\n**율** 낭자. 나는, 처음에—\n율의 입이 열린 채 멈춘다. 달래의 눈가가 붉다.\nFlash. (16화 S#4) 손가락 하나 너비의 문틈.\n율이 입을 다문다. 대신 약과 꾸러미를 푼다.\n**율** …처음에 약과를 세 개 샀는데, 오다가 하나 먹었소. 그래서 두 개요. 하나씩 나눠야 하니까.\n**달래** (어이가 없어서) …그 말 하려고 그렇게 뜸을 들였어요?\n달래가 약과를 베어 문다. 달다. 그래서 눈물이 난다. 율은 못 본 척 마당만 본다.\n**달래** (코를 훌쩍이며) 도령. 8권 앞부분 원고, 방각소에 좀 갖다주세요.\n**율** 연체료 대신이라면.\n달래가 보자기와 「삼국지」 넷째 권을 건넨다.\n**달래** 이번에 연체하면 진짜 받을 거예요.",
+      "summary": "텅 빈 행랑채. 율이 고백하려다 문틈을 떠올리고 '약과를 세 개 샀는데' 로 돌린다. 달래가 약과를 베어 물고 울고, 이마를 율의 어깨에 잠깐 기댄다. 율의 손은 그녀의 등에 닿지 않는다. 8권 원고와 「삼국지」 넷째 권이 율의 손으로.",
+      "source_text": "달래가 마루 끝에 혼자 앉아 있다. 행랑채는 비었고, 문간에 우산 하나만 남아 있다. 율이 들어와 한 사람 거리를 두고 앉는다.\n**율** 하숙생은 나갔소?\n**달래** 나간 게 아니라, 원래 없던 사람이에요.\n율이 더 묻지 않는다. 숨을 한 번 고른다.\n**율** 낭자. 나는, 처음에—\n율의 입이 열린 채 멈춘다. 달래의 눈가가 붉다.\nFlash. (16화 S#4) 손가락 하나 너비의 문틈.\n율이 입을 다문다. 대신 약과 꾸러미를 푼다.\n**율** …처음에 약과를 세 개 샀는데, 오다가 하나 먹었소. 그래서 두 개요. 하나씩 나눠야 하니까.\n**달래** (어이가 없어서) …그 말 하려고 그렇게 뜸을 들였어요?\n달래가 약과를 베어 문다. 달다. 그래서 눈물이 난다. 율은 못 본 척 마당만 본다.\n달래의 이마가 율의 어깨에 잠깐 기댄다. 율이 숨을 멈춘다. 손이 그녀의 등 위에서 망설이다가, 닿지 않고 내려간다.\n**달래** (코를 훌쩍이며) 도령. 8권 앞부분 원고, 방각소에 좀 갖다주세요.\n**율** 연체료 대신이라면.\n달래가 보자기와 「삼국지」 넷째 권을 건넨다.\n**달래** 이번에 연체하면 진짜 받을 거예요.",
       "shots": [
         {
           "id": "S03-01",
@@ -736,7 +738,7 @@
             }
           ],
           "transition": "CUT",
-          "duration_sec": 4,
+          "duration_sec": 3,
           "image_prompt": "two-shot on a wooden porch at sunset, the handsome nobleman sitting down one person's distance away from the young woman"
         },
         {
@@ -849,7 +851,7 @@
             }
           ],
           "transition": "CUT",
-          "duration_sec": 5,
+          "duration_sec": 4,
           "image_prompt": "medium shot, the nobleman with an untied cloth bundle on his knee holding out one of two honey cookies toward the young woman, sunset light"
         },
         {
@@ -907,6 +909,40 @@
         },
         {
           "id": "S03-12",
+          "size": "2S",
+          "angle": "PROFILE",
+          "move": "FIX",
+          "lens_mm": 50,
+          "characters": [
+            "dallae",
+            "yul"
+          ],
+          "frame": "측면 투숏. 달래가 몸을 기울여, 이마를 율의 어깨에 잠깐 기댄다. 한 사람 거리가 처음으로 없어진다. 율이 숨을 멈춘다.",
+          "action": "달래의 이마가 율의 어깨에 잠깐 기댄다. 율이 숨을 멈춘다.",
+          "sound": "♪ 율의 테마(가야금 한 줄이 튕기고 대금이 받는다)",
+          "transition": "CUT",
+          "duration_sec": 3,
+          "image_prompt": "profile two-shot at dusk on a wooden porch, a young woman leaning her forehead briefly against the shoulder of an elegant young nobleman in plum silk, who stops breathing"
+        },
+        {
+          "id": "S03-13",
+          "size": "INSERT",
+          "angle": "EYE",
+          "move": "FIX",
+          "lens_mm": 85,
+          "characters": [
+            "yul",
+            "dallae"
+          ],
+          "frame": "달래의 등 위. 율의 손이 망설이다가, 닿지 않고 천천히 내려간다.",
+          "action": "율의 손이 그녀의 등 위에서 망설이다가, 닿지 않고 내려간다.",
+          "transition": "CUT",
+          "duration_sec": 2,
+          "notes": "율은 끝까지 닿지 않는다. 그래서 더 아프다",
+          "image_prompt": "insert, a young man's hand hovering over a young woman's back in a cotton jeogori, hesitating, then lowering without touching"
+        },
+        {
+          "id": "S03-14",
           "size": "MCU",
           "angle": "EYE",
           "move": "FIX",
@@ -928,7 +964,7 @@
           "image_prompt": "medium close-up of the young woman sniffling and changing the subject to work"
         },
         {
-          "id": "S03-13",
+          "id": "S03-15",
           "size": "MCU",
           "angle": "EYE",
           "move": "FIX",
@@ -950,7 +986,7 @@
           "image_prompt": "medium close-up of the nobleman, his dimpled smile returning"
         },
         {
-          "id": "S03-14",
+          "id": "S03-16",
           "size": "INSERT",
           "angle": "EYE",
           "move": "FIX",
@@ -980,8 +1016,8 @@
       "heading": "종로 방각소 (밤)",
       "location": "banggakso",
       "time": "NIGHT",
-      "tc_in": "02:04",
-      "tc_out": "02:23",
+      "tc_in": "02:05",
+      "tc_out": "02:24",
       "characters": [
         "yul",
         "extras"
@@ -1123,7 +1159,7 @@
       "heading": "허진의 집 사랑채 (밤)",
       "location": "heojin_sarang",
       "time": "NIGHT",
-      "tc_in": "02:23",
+      "tc_in": "02:24",
       "tc_out": "03:00",
       "characters": [
         "heojin",
@@ -1249,7 +1285,7 @@
             "INSERT_TEXT"
           ],
           "transition": "CUT",
-          "duration_sec": 3,
+          "duration_sec": 2,
           "image_prompt": "top-down insert of an old hand-copied book, one passage darkened by years of finger grime, a palm slowly stroking over it"
         },
         {

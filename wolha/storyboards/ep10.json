@@ -387,7 +387,7 @@
       "location": "mapo",
       "time": "DAWN",
       "tc_in": "00:49",
-      "tc_out": "01:17",
+      "tc_out": "01:25",
       "characters": [
         "dallae",
         "jeonggyeom",
@@ -396,8 +396,8 @@
         "extras"
       ],
       "mood": "WARM",
-      "summary": "물안개 속 강화행 첫 배. 율이 사공에게 엽전 꾸러미를 통째로 쥐여 주고, 서연은 달래에게 깊이 고개를 숙인다. 배를 등지고 선 정겸은 '아무것도 못 봤소'. 비가 오기 시작하고, 율은 우산도 없이 혼자 나루를 떠난다.",
-      "source_text": "물안개. 서연이 강화로 가는 첫 배에 오른다. 율이 사공에게 엽전 꾸러미를 통째로 쥐여 준다. 서연이 배 위에서 달래에게 깊이 고개를 숙인다.\n정겸은 뒤돌아 서 있다. 검서관이 도망치는 규수를 보내고 있다.\n**정겸** (등을 보인 채) …아무것도 못 봤소.\n빗방울이 떨어지기 시작한다. 율이 하늘을 보고 픽 웃는다. 우산도 없이 혼자 나루 밖으로 걸어간다. 돌아보지 않는다.",
+      "summary": "물안개 나루. 서연이 강화 가는 첫 배에 오르고, 정겸은 등을 돌린 채 '아무것도 못 봤소'. 우산도 없이 떠나는 율에게 달래가 뛰어가 제 우산을 쥐여 준다. '이건 연체해도 돼요.' 율은 우산을 펴지 않고 품에 안은 채 비를 맞으며 걷는다.",
+      "source_text": "물안개. 서연이 강화로 가는 첫 배에 오른다. 율이 사공에게 엽전 꾸러미를 통째로 쥐여 준다. 서연이 배 위에서 달래에게 깊이 고개를 숙인다.\n정겸은 뒤돌아 서 있다. 검서관이 도망치는 규수를 보내고 있다.\n**정겸** (등을 보인 채) …아무것도 못 봤소.\n빗방울이 떨어지기 시작한다. 율이 하늘을 보고 픽 웃는다. 우산도 없이 혼자 나루 밖으로 걸어간다. 달래가 뛰어가 제 우산을 율의 손에 쥐여 준다.\n**달래** 도령, 오늘 고마웠어요. 이건 연체해도 돼요.\n율이 우산을 받아 든다. 펴지 않는다. 달래가 돌아가 정겸의 우산 아래로 들어간다. 율은 접힌 우산을 품에 안은 채 비를 맞으며 걸어간다. 돌아보지 않는다.",
       "shots": [
         {
           "id": "S02-01",
@@ -478,7 +478,7 @@
           "frame": "배 위의 서연. 물안개 너머 화면 왼쪽(달래)을 향해 깊이 고개를 숙인다.",
           "action": "서연이 배 위에서 달래에게 깊이 고개를 숙인다.",
           "transition": "CUT",
-          "duration_sec": 3,
+          "duration_sec": 2,
           "image_prompt": "medium shot, the girl standing in the boat bowing deeply toward the shore on the left, mist drifting over the water"
         },
         {
@@ -508,7 +508,7 @@
           "frame": "강가에서 조금 떨어진 정겸. 배를 등지고 화면 왼쪽을 향해 꼿꼿이 서 있다. 후경 오른쪽에 떠나는 배.",
           "action": "정겸은 뒤돌아 서 있다. 검서관이 도망치는 규수를 보내고 있다.",
           "transition": "CUT",
-          "duration_sec": 3,
+          "duration_sec": 2,
           "notes": "TASKS 10화 필수 그림(등 돌린 정겸)",
           "image_prompt": "full shot, the tall scholar standing rigidly with his back to the departing boat, facing away from the river, the boat small in the misty background"
         },
@@ -589,12 +589,84 @@
           "characters": [
             "yul"
           ],
-          "frame": "율이 우산도 없이 화면 왼쪽 나루 밖 길로 혼자 걸어 나간다. 돌아보지 않는다. 후경 안개 속에 달래와 정겸이 작다.",
-          "action": "율이 우산도 없이 혼자 나루 밖으로 걸어간다. 돌아보지 않는다.",
+          "frame": "율이 우산도 없이 화면 왼쪽 나루 밖 길로 혼자 걸어 나간다. 후경 안개 속에 달래와 정겸이 작다.",
+          "action": "율이 우산도 없이 혼자 나루 밖으로 걸어간다.",
           "sound": "빗소리가 조금씩 굵어진다",
           "transition": "CUT",
-          "duration_sec": 3,
+          "duration_sec": 2,
           "image_prompt": "wide shot, the nobleman walking away alone toward the left without an umbrella in the light rain, not looking back, two small figures behind him in the mist"
+        },
+        {
+          "id": "S02-13",
+          "size": "MS",
+          "angle": "EYE",
+          "move": "HANDHELD",
+          "lens_mm": 35,
+          "characters": [
+            "dallae"
+          ],
+          "frame": "핸드헬드. 접은 기름종이 우산을 든 달래가 빗속을 뛰어 율을 쫓아간다.",
+          "action": "달래가 뛰어간다.",
+          "transition": "CUT",
+          "duration_sec": 2,
+          "image_prompt": "handheld medium shot, a young woman running through light rain on a misty riverbank path holding a folded oiled-paper umbrella"
+        },
+        {
+          "id": "S02-14",
+          "size": "2S",
+          "angle": "EYE",
+          "move": "FIX",
+          "lens_mm": 50,
+          "characters": [
+            "dallae",
+            "yul"
+          ],
+          "frame": "투숏. 달래가 숨을 고르며 접힌 우산을 율의 손에 쥐여 준다. 율은 받는 손이 굳는다.",
+          "action": "달래가 제 우산을 율의 손에 쥐여 준다.",
+          "dialogue": [
+            {
+              "speaker": "dallae",
+              "line": "도령, 오늘 고마웠어요. 이건 연체해도 돼요.",
+              "mode": "ON"
+            }
+          ],
+          "transition": "CUT",
+          "duration_sec": 4,
+          "image_prompt": "two-shot in drizzle, a breathless young woman pressing a folded oiled-paper umbrella into the hand of an elegant young nobleman in plum silk, who freezes"
+        },
+        {
+          "id": "S02-15",
+          "size": "CU",
+          "angle": "EYE",
+          "move": "FIX",
+          "lens_mm": 85,
+          "characters": [
+            "yul"
+          ],
+          "frame": "율이 손에 쥔 우산을 내려다본다. 펴지 않는다. 화면 밖으로 달래의 발소리가 멀어진다.",
+          "action": "율이 우산을 받아 든다. 펴지 않는다.",
+          "transition": "CUT",
+          "duration_sec": 2,
+          "image_prompt": "close-up of the young nobleman looking down at the folded umbrella in his hand, raindrops on his lashes, not opening it"
+        },
+        {
+          "id": "S02-16",
+          "size": "LS",
+          "angle": "EYE",
+          "move": "FIX",
+          "lens_mm": 35,
+          "characters": [
+            "yul",
+            "dallae",
+            "jeonggyeom"
+          ],
+          "frame": "율이 접힌 우산을 품에 안은 채 비를 맞으며 화면 왼쪽으로 걸어간다. 돌아보지 않는다. 후경, 달래가 뛰어가 정겸의 우산 아래로 쏙 들어간다.",
+          "action": "달래가 정겸의 우산 아래로 들어간다. 율은 접힌 우산을 품에 안고 비를 맞으며 걸어간다.",
+          "sound": "♪ 율의 테마(가야금 한 줄이 튕기고 대금이 받는다)",
+          "transition": "CUT",
+          "duration_sec": 3,
+          "notes": "그래서 S#3의 우산은 하나다. 율은 이 우산을 끝내 펴지 않는다",
+          "image_prompt": "long shot in rain, the young nobleman walking away hugging a folded umbrella to his chest, getting soaked, while in the misty background the young woman ducks under the tall scholar's umbrella"
         }
       ]
     },
@@ -603,8 +675,8 @@
       "heading": "운종가 골목 (새벽, 비)",
       "location": "unjong_rain",
       "time": "DAWN",
-      "tc_in": "01:17",
-      "tc_out": "02:22",
+      "tc_in": "01:25",
+      "tc_out": "02:24",
       "characters": [
         "dallae",
         "jeonggyeom"
@@ -630,7 +702,7 @@
             "UMBRELLA"
           ],
           "transition": "CUT",
-          "duration_sec": 3,
+          "duration_sec": 2,
           "continuity": "축: 정면 커버리지(두 사람이 카메라 쪽으로 걷는다)에서 정겸은 화면 왼쪽, 달래는 오른쪽. 달래는 정겸의 왼편에 서고, 우산은 달래 쪽으로 기울어 정겸의 오른쪽 어깨(화면 왼쪽)가 흠뻑 젖는다. 귀 ECU는 달래 쪽에서 본 정겸의 왼쪽 옆얼굴(1화 S03-06 구도). 마지막 수직 부감은 축 중립(locations.json axis)",
           "notes": "고증확인: 18세기 한양 기름종이 우산의 형태(살 수, 손잡이)",
           "image_prompt": "high angle crane down into a narrow alley at blue dawn in heavy rain, a single oiled-paper umbrella approaching from the far end, wet stones reflecting the sky"
@@ -651,8 +723,9 @@
             "UMBRELLA"
           ],
           "transition": "CUT",
-          "duration_sec": 4,
-          "image_prompt": "two-shot at eye level, camera leading them as they walk toward it, the tall scholar on the left holding one oiled-paper umbrella tilted over the petite young woman on the right, his right shoulder outside the umbrella and soaked dark"
+          "duration_sec": 2,
+          "image_prompt": "two-shot at eye level, camera leading them as they walk toward it, the tall scholar on the left holding one oiled-paper umbrella tilted over the petite young woman on the right, his right shoulder outside the umbrella and soaked dark",
+          "notes": "달래는 제 우산을 율에게 주고 왔다. 그래서 우산은 하나다"
         },
         {
           "id": "S03-03",
@@ -687,7 +760,7 @@
             "UMBRELLA"
           ],
           "transition": "CUT",
-          "duration_sec": 4,
+          "duration_sec": 3,
           "notes": "'한참'의 무대사 샷. 자르지 말 것",
           "image_prompt": "side tracking medium long shot, the two walking left under one umbrella in silence, the young woman in the foreground and the tall scholar half a step beyond, curtains of rain falling from the umbrella's rim"
         },
@@ -807,7 +880,7 @@
             "EAR_NOT_RED"
           ],
           "transition": "CUT",
-          "duration_sec": 4,
+          "duration_sec": 3,
           "notes": "EAR_NOT_RED 첫 등장. EAR_RED와 렌즈·크기·각도·초점 이동을 똑같이 맞추고 색만 다르다(붉은 채도 강조 없이 새벽 푸른빛 그대로). 21화 S#3 우물가 귀 클로즈업은 이 구도(왼쪽 옆얼굴, 귀 높이 수평, 100mm, 귀는 화면 가운데에서 약간 오른쪽, 눈에서 귀로 초점 이동)를 그대로 쓴다. TASKS 10화 필수 그림",
           "image_prompt": "extreme close-up profile of the left side of the young man's face at ear level, face turned toward frame left, ear just right of center, focus shifting from his eye to his ear which stays its natural color, the rim of an umbrella at the top edge, rain streaks behind, cool blue dawn light, no red tint"
         },
@@ -968,7 +1041,7 @@
             "UMBRELLA"
           ],
           "transition": "DISSOLVE",
-          "duration_sec": 4,
+          "duration_sec": 3,
           "notes": "TASKS 10화 필수 그림(우산 산책 부감). 수직 부감은 축 중립. 17화 '두고 간 우산'과 같은 우산",
           "image_prompt": "bird's-eye view straight down on a narrow rain-soaked alley at blue dawn, a single oiled-paper umbrella moving up the frame and shrinking as the camera rises, wet tiled roofs framing the edges"
         }
@@ -979,7 +1052,7 @@
       "heading": "달래책방 책 창고 (아침)",
       "location": "dallae_storage",
       "time": "MORNING",
-      "tc_in": "02:22",
+      "tc_in": "02:24",
       "tc_out": "03:00",
       "characters": [
         "dallae",
@@ -1047,7 +1120,7 @@
           "frame": "맨 아래 궤짝 안. 기름종이로 싸서 끈으로 묶은 두툼한 원고 다발.",
           "action": "맨 아래 궤짝에 기름종이로 싼 원고 다발이 묶여 있다.",
           "transition": "CUT",
-          "duration_sec": 3,
+          "duration_sec": 2,
           "notes": "TASKS 10화 필수 그림(원고 발견)",
           "image_prompt": "insert from above, inside the bottom chest a thick bundle of manuscript wrapped in yellowish oiled paper and tied with string"
         },
@@ -1064,7 +1137,7 @@
           "action": "정겸이 매듭을 푼다. 펼친다.",
           "sound": "(E) 기름종이 바스락",
           "transition": "CUT",
-          "duration_sec": 3,
+          "duration_sec": 2,
           "image_prompt": "top-down insert, slender fingers untying the string and unfolding the oiled paper to reveal densely hand-written manuscript pages"
         },
         {

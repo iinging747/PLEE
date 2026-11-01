@@ -738,7 +738,8 @@
           ],
           "transition": "CUT",
           "duration_sec": 3,
-          "image_prompt": "two-shot, a wall dividing the left of frame, the scholar pressed against it staring ahead, the storyteller with a cloth bandage on the right side of his neck and a bandaged left forearm whispering beside him"
+          "image_prompt": "two-shot, a wall dividing the left of frame, the scholar pressed against it staring ahead, the storyteller with a cloth bandage on the right side of his neck and a bandaged left forearm whispering beside him, a small pink silk ribbon tied at the end of his forearm bandage",
+          "continuity": "윤희의 분홍 댕기: 13화 S#3에 강수의 왼팔 붕대 끝에 묶어 준다. 21화까지 붕대 끝, 22화 S#1부터 왼 손목"
         },
         {
           "id": "S04-03",

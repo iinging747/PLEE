@@ -1234,7 +1234,8 @@
           ],
           "transition": "CUT",
           "duration_sec": 3,
-          "image_prompt": "handheld medium shot, the storyteller clutching his bandaged left arm bursting into the room and shouting, the young woman and the scholar rising in the foreground, lamplight"
+          "image_prompt": "handheld medium shot, the storyteller clutching his bandaged left arm bursting into the room and shouting, the young woman and the scholar rising in the foreground, lamplight, a small pink silk ribbon tied at the end of his forearm bandage",
+          "continuity": "윤희의 분홍 댕기: 13화 S#3에 강수의 왼팔 붕대 끝에 묶어 준다. 21화까지 붕대 끝, 22화 S#1부터 왼 손목"
         },
         {
           "id": "S05-07",

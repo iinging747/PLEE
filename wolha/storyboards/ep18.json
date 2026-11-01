@@ -335,7 +335,7 @@
       "location": "jongno_tobacco",
       "time": "DAY",
       "tc_in": "00:42",
-      "tc_out": "01:20",
+      "tc_out": "01:18",
       "characters": [
         "gangsu",
         "yunhui",
@@ -553,7 +553,7 @@
           "frame": "핸드헬드. 강수가 사람들 사이를 헤치고 나간다. 저만치 장옷이 골목 입구로 사라진다.",
           "action": "강수가 사람들 사이로 사라지는 장옷을 쫓는다.",
           "transition": "CUT",
-          "duration_sec": 6,
+          "duration_sec": 5,
           "image_prompt": "handheld long shot, the storyteller pushing through the crowd after a pale green cloak disappearing into the mouth of a side alley"
         }
       ]
@@ -563,15 +563,15 @@
       "heading": "종로 뒷골목 (해 질 녘)",
       "location": "jongno_alley",
       "time": "DUSK",
-      "tc_in": "01:20",
-      "tc_out": "02:15",
+      "tc_in": "01:18",
+      "tc_out": "02:17",
       "characters": [
         "gangsu",
         "yunhui"
       ],
       "mood": "ROMANCE",
-      "summary": "골목에서 윤희가 대본 말고 강수의 말을 청한다. 강수는 처음으로 대본 없이 '가지 마시오'라고 말하지만, 윤희는 서녀는 고르지 못한다며 돌아선다.",
-      "source_text": "담벼락 사이 좁은 골목. 윤희가 멈춰 선다. 강수가 숨을 고른다.\n**윤희** 잔치에서 읽어 주신다면서요. 제 혼례에서.\n**강수** …옛날에 한 전기수가 있었소. 남의 연애는 기가 막히게 읽는데, 제 것은 한 줄도 못 읽는—\n**윤희** 대본 말고요.\n강수가 굳는다. 긴 사이. 골목 끝에서 개가 짖는다.\n**윤희** 남의 대사 말고, 강수 씨 말로요.\n**강수** (한참 만에) 전기수가 참판댁 아씨한테 할 말은, 대본에도 없소.\n**윤희** 그러니까 대본 없이요.\n**강수** (아주 작게) …가지 마시오.\n윤희가 웃는다. 눈가가 젖어 있다.\n**윤희** 그 말, 소설에서는 백 번도 더 읽었는데. 들은 건 처음이에요. (사이) 근데 서녀는 고르지 못해요. 소설은 골라도.\n윤희가 돌아선다. 장옷 자락이 골목 모퉁이로 사라진다. 강수는 그 자리에 서 있다. 부채를 쥔 손에 힘이 들어간다.",
+      "summary": "담벼락 골목. 강수의 붕대 끝엔 아직 윤희의 분홍 댕기. '대본 말고요. 강수 씨 말로요.' '…가지 마시오.' 강수의 손이 소매 한 뼘 앞에서 멈춘다. '들은 건 처음이에요. 근데 서녀는 고르지 못해요. 소설은 골라도.'",
+      "source_text": "담벼락 사이 좁은 골목. 윤희가 멈춰 선다. 강수가 숨을 고른다. 강수의 왼팔 붕대 끝에 분홍 댕기가 아직 매여 있다. 윤희의 눈이 거기 머문다.\n**윤희** 잔치에서 읽어 주신다면서요. 제 혼례에서.\n**강수** …옛날에 한 전기수가 있었소. 남의 연애는 기가 막히게 읽는데, 제 것은 한 줄도 못 읽는—\n**윤희** 대본 말고요.\n강수가 굳는다. 긴 사이. 골목 끝에서 개가 짖는다.\n**윤희** 남의 대사 말고, 강수 씨 말로요.\n**강수** (한참 만에) 전기수가 참판댁 아씨한테 할 말은, 대본에도 없소.\n**윤희** 그러니까 대본 없이요.\n**강수** (아주 작게) …가지 마시오.\n강수의 손이 윤희의 소매 쪽으로 올라가다, 한 뼘 앞에서 멈춘다. 그대로 내려간다.\n윤희가 웃는다. 눈가가 젖어 있다.\n**윤희** 그 말, 소설에서는 백 번도 더 읽었는데. 들은 건 처음이에요. (사이) 근데 서녀는 고르지 못해요. 소설은 골라도.\n윤희가 돌아선다. 장옷 자락이 골목 모퉁이로 사라진다. 강수는 그 자리에 서 있다. 부채를 쥔 손에 힘이 들어간다.",
       "shots": [
         {
           "id": "S03-01",
@@ -595,7 +595,7 @@
             "WALL"
           ],
           "transition": "CUT",
-          "duration_sec": 4,
+          "duration_sec": 2,
           "continuity": "축: 강수 화면 왼쪽, 윤희 오른쪽 안쪽. 이 씬 내내 유지",
           "image_prompt": "dusk, a narrow alley between high earthen walls, a cloaked young woman stopping deep in the alley, a man running in from the left and stopping short"
         },
@@ -617,6 +617,37 @@
         },
         {
           "id": "S03-03",
+          "size": "INSERT",
+          "angle": "EYE",
+          "move": "FIX",
+          "lens_mm": 85,
+          "characters": [
+            "gangsu"
+          ],
+          "frame": "숨을 고르는 강수의 왼팔. 붕대 끝에 13화의 분홍 댕기가 아직 매여 있다. 해 질 녘 빛에 색이 바랬다.",
+          "action": "강수의 왼팔 붕대 끝에 분홍 댕기가 아직 매여 있다.",
+          "transition": "CUT",
+          "duration_sec": 2,
+          "continuity": "윤희의 분홍 댕기: 13화 S#3에 강수의 왼팔 붕대 끝에 묶어 준다. 21화까지 붕대 끝, 22화 S#1부터 왼 손목",
+          "image_prompt": "insert at dusk, a man's bandaged left forearm, a faded pink silk ribbon still tied at the end of the bandage"
+        },
+        {
+          "id": "S03-04",
+          "size": "CU",
+          "angle": "EYE",
+          "move": "FIX",
+          "lens_mm": 85,
+          "characters": [
+            "yunhui"
+          ],
+          "frame": "돌아선 윤희의 눈이 그 댕기에 머문다. 장옷 그늘.",
+          "action": "윤희의 눈이 댕기에 머문다.",
+          "transition": "CUT",
+          "duration_sec": 2,
+          "image_prompt": "close-up of the young noblewoman under a pale green veil-cloak, her eyes resting on something at arm height"
+        },
+        {
+          "id": "S03-05",
           "size": "MCU",
           "angle": "EYE",
           "move": "FIX",
@@ -630,7 +661,7 @@
               "variant": "jangot"
             }
           ],
-          "frame": "윤희가 돌아선다. 장옷 그늘 속 얼굴.",
+          "frame": "장옷 그늘 속 윤희. 댕기에서 눈을 들어 강수를 본다.",
           "action": "윤희가 묻는다.",
           "dialogue": [
             {
@@ -644,7 +675,7 @@
           "image_prompt": "dusk medium close-up of the cloaked noble girl turning around, her face shadowed by the cloak"
         },
         {
-          "id": "S03-04",
+          "id": "S03-06",
           "size": "MCU",
           "angle": "EYE",
           "move": "FIX",
@@ -666,7 +697,7 @@
           "image_prompt": "dusk medium close-up of the storyteller slipping into his stage voice out of habit, half-opening his fan"
         },
         {
-          "id": "S03-05",
+          "id": "S03-07",
           "size": "CU",
           "angle": "EYE",
           "move": "FIX",
@@ -694,7 +725,7 @@
           "image_prompt": "dusk close-up of the noble girl cutting him off, steady gaze"
         },
         {
-          "id": "S03-06",
+          "id": "S03-08",
           "size": "CU",
           "angle": "EYE",
           "move": "FIX",
@@ -709,7 +740,7 @@
           "image_prompt": "dusk close-up of the storyteller frozen, half-open fan stopped mid-motion"
         },
         {
-          "id": "S03-07",
+          "id": "S03-09",
           "size": "LS",
           "angle": "EYE",
           "move": "FIX",
@@ -735,7 +766,7 @@
           "image_prompt": "dusk long shot of the two standing apart in the narrow alley, a single strip of fading light lying on the ground between them"
         },
         {
-          "id": "S03-08",
+          "id": "S03-10",
           "size": "CU",
           "angle": "EYE",
           "move": "FIX",
@@ -763,7 +794,7 @@
           "image_prompt": "dusk close-up of the cloaked noble girl taking a step closer, her voice soft but firm"
         },
         {
-          "id": "S03-09",
+          "id": "S03-11",
           "size": "CU",
           "angle": "EYE",
           "move": "FIX",
@@ -786,7 +817,7 @@
           "image_prompt": "dusk close-up of the storyteller after a long silence, no trace of his usual grin"
         },
         {
-          "id": "S03-10",
+          "id": "S03-12",
           "size": "CU",
           "angle": "EYE",
           "move": "FIX",
@@ -814,7 +845,7 @@
           "image_prompt": "dusk close-up of the noble girl, not backing down"
         },
         {
-          "id": "S03-11",
+          "id": "S03-13",
           "size": "ECU",
           "angle": "EYE",
           "move": "FIX",
@@ -836,7 +867,24 @@
           "image_prompt": "extreme close-up of the storyteller's lips barely moving as he speaks almost inaudibly"
         },
         {
-          "id": "S03-12",
+          "id": "S03-14",
+          "size": "INSERT",
+          "angle": "EYE",
+          "move": "FIX",
+          "lens_mm": 85,
+          "characters": [
+            "gangsu",
+            "yunhui"
+          ],
+          "frame": "강수의 손이 윤희의 장옷 소매 쪽으로 올라가다, 한 뼘 앞에서 멈춘다. 그대로 내려간다. 붕대 끝의 분홍 댕기가 흔들린다.",
+          "action": "강수의 손이 윤희의 소매 쪽으로 올라가다 한 뼘 앞에서 멈춘다. 그대로 내려간다.",
+          "transition": "CUT",
+          "duration_sec": 2,
+          "notes": "8화의 한 치가 18화엔 한 뼘. 신분의 담만큼 멀어졌다",
+          "image_prompt": "insert in a narrow dusk alley, a man's hand with a pink ribbon tied on its forearm bandage rising toward a young woman's veil-cloak sleeve and stopping a hand's width short, then dropping"
+        },
+        {
+          "id": "S03-15",
           "size": "CU",
           "angle": "EYE",
           "move": "FIX",
@@ -857,7 +905,7 @@
           "image_prompt": "dusk close-up of the noble girl smiling with tears welling in her eyes beneath the cloak"
         },
         {
-          "id": "S03-13",
+          "id": "S03-16",
           "size": "MCU",
           "angle": "EYE",
           "move": "FIX",
@@ -885,7 +933,7 @@
           "image_prompt": "dusk medium close-up of the cloaked noble girl speaking through a tearful smile"
         },
         {
-          "id": "S03-14",
+          "id": "S03-17",
           "size": "CU",
           "angle": "EYE",
           "move": "FIX",
@@ -913,7 +961,7 @@
           "image_prompt": "dusk close-up, the girl's smile fading into quiet resignation"
         },
         {
-          "id": "S03-15",
+          "id": "S03-18",
           "size": "LS",
           "angle": "EYE",
           "move": "FIX",
@@ -938,7 +986,7 @@
           "image_prompt": "dusk long shot, the cloaked girl turning and vanishing around the corner of the alley, the man left standing alone between the walls"
         },
         {
-          "id": "S03-16",
+          "id": "S03-19",
           "size": "INSERT",
           "angle": "EYE",
           "move": "FIX",
@@ -960,7 +1008,7 @@
       "heading": "달래책방 마당 / 담장 밖 (밤)",
       "location": "dallae_maru",
       "time": "NIGHT",
-      "tc_in": "02:15",
+      "tc_in": "02:17",
       "tc_out": "03:00",
       "characters": [
         "gangsu",
@@ -1001,7 +1049,7 @@
           "action": "담장 기와 위로 갓 끝이 살짝 보인다. 정겸이다.",
           "sound": "(E) 담 너머 발소리가 멎는다",
           "transition": "CUT",
-          "duration_sec": 3,
+          "duration_sec": 2,
           "image_prompt": "low angle, the top of a tiled wall at night, the tip of a black horsehair gat just visible above the roof tiles from the other side"
         },
         {
@@ -1275,7 +1323,7 @@
             "WALL"
           ],
           "transition": "FREEZE",
-          "duration_sec": 7,
+          "duration_sec": 6,
           "notes": "엔딩 정지 컷. 흑립은 지붕 그늘의 실루엣으로만, 작게. 19화 S#0 '지난 대목'이 이 컷을 탈색해 다시 쓴다",
           "image_prompt": "extreme long shot at night, crane rising over a small hanok bookshop, two tiny figures leaning on either side of a wall below, and in the shadow of the opposite rooftop a small dark crouching figure"
         }

@@ -313,7 +313,7 @@
       "location": "dallae_anchae",
       "time": "DAY",
       "tc_in": "00:35",
-      "tc_out": "01:08",
+      "tc_out": "01:05",
       "characters": [
         "dallae",
         "jeonggyeom",
@@ -441,7 +441,7 @@
             "INSERT_TEXT"
           ],
           "transition": "CUT",
-          "duration_sec": 3,
+          "duration_sec": 2,
           "continuity": "같은 쪽지를 7화 S#3에서 이덕무가 창빛에 비춘다. 종이 질감·접힌 자국을 맞출 것. 4화 협박 쪽지와 같은 질감(7화 S#3에서 관아 종이로 감정된다)",
           "image_prompt": "top-down insert, an unfolded slip of unusually fine white paper with a few bold brush strokes"
         },
@@ -486,7 +486,7 @@
             }
           ],
           "transition": "CUT",
-          "duration_sec": 6,
+          "duration_sec": 5,
           "image_prompt": "medium shot of the young woman waving off a threat with feigned nonchalance, rolling up her sleeves and springing to her feet"
         },
         {
@@ -548,7 +548,7 @@
           "action": "정겸이 할 말을 잃는다. 먹순이 두 사람을 번갈아 본다.",
           "sound": "짧은 해학 효과음",
           "transition": "CUT",
-          "duration_sec": 3,
+          "duration_sec": 2,
           "image_prompt": "same group composition, the scholar left speechless while the shop girl looks back and forth between the two"
         }
       ]
@@ -558,8 +558,8 @@
       "heading": "마포 새우젓 창고 (밤)",
       "location": "mapo",
       "time": "NIGHT",
-      "tc_in": "01:08",
-      "tc_out": "02:04",
+      "tc_in": "01:05",
+      "tc_out": "01:56",
       "characters": [
         "dallae",
         "jeonggyeom",
@@ -586,7 +586,7 @@
           "action": "새우젓 창고. 네 사람이 어둠 속을 숨어든다.",
           "sound": "강물 소리, 풀벌레",
           "transition": "CUT",
-          "duration_sec": 3,
+          "duration_sec": 2,
           "continuity": "축: 강은 화면 왼쪽, 창고는 오른쪽. 창고 안에서는 문이 화면 오른쪽, 궤짝 더미는 왼쪽 안쪽. 달래 왼쪽, 정겸 오른쪽. 율은 문 밖 오른쪽",
           "image_prompt": "extreme wide night shot of the Mapo riverbank under a bright moon, dark Han River on the left, rows of warehouse roofs on the right, four small figures sneaking between the buildings"
         },
@@ -765,7 +765,7 @@
           "action": "불길이 책 더미를 타고 순식간에 오른다.",
           "sound": "(E) 화르륵, 종이 타는 소리",
           "transition": "CUT",
-          "duration_sec": 4,
+          "duration_sec": 3,
           "image_prompt": "handheld low angle, flames racing up towering stacks of books to the ceiling, moonlight drowned by orange firelight"
         },
         {
@@ -812,7 +812,7 @@
           "frame": "정겸이 소매로 입을 막고 연기를 뚫고 들어간다. 불빛이 얼굴을 친다.",
           "action": "정겸이 연기를 뚫고 들어간다.",
           "transition": "CUT",
-          "duration_sec": 4,
+          "duration_sec": 3,
           "image_prompt": "handheld, the tall scholar shielding his mouth with his sleeve and plunging through thick smoke, firelight on his face"
         },
         {
@@ -828,7 +828,7 @@
           "frame": "로우앵글. 책 더미를 걷어 낸 정겸이 달래를 안아 든다. 달래의 손엔 나무패가 쥐여 있다.",
           "action": "정겸이 달래를 안아 든다.",
           "transition": "CUT",
-          "duration_sec": 4,
+          "duration_sec": 3,
           "continuity": "달래 손에 나무패. 이후 치마 속에 감춘다(S04-05에서 꺼낸다)",
           "image_prompt": "handheld low angle, the scholar lifting the young woman into his arms out of fallen burning books, a wooden tag clutched in her fist"
         },
@@ -876,7 +876,7 @@
           "frame": "로우앵글 슬로모션. 불길 역광 속에서 정겸이 달래를 안고 연기를 뚫고 문밖으로 뛰쳐나온다.",
           "action": "정겸이 달래를 안고 연기 속에서 뛰쳐나온다.",
           "transition": "CUT",
-          "duration_sec": 4,
+          "duration_sec": 3,
           "notes": "꼭 챙길 그림: 창고 화재",
           "image_prompt": "low angle slow motion, the scholar bursting out of a smoking warehouse doorway carrying the young woman in his arms, backlit by roaring flames"
         }
@@ -887,16 +887,16 @@
       "heading": "마포 강가 (밤)",
       "location": "mapo",
       "time": "NIGHT",
-      "tc_in": "02:04",
-      "tc_out": "02:41",
+      "tc_in": "01:56",
+      "tc_out": "02:44",
       "characters": [
         "dallae",
         "jeonggyeom",
         "yul"
       ],
       "mood": "ROMANCE",
-      "summary": "그을린 모래밭. 달래는 책이 아니라 나무패 때문에 다시 들어갔다고 한다. 다섯째 조항으로 말을 막는 달래에게 정겸이 처음으로 웃는다. 1초. \"연기 때문이오.\"",
-      "source_text": "두 사람이 기침을 하며 모래밭에 주저앉는다. 뒤에서 창고가 탄다. 율은 조금 떨어진 곳에서 불을 보고 있다.\n**달래** (기침하며) 손목 위로 닿았어요. 둘째 조항.\n**정겸** 왜 다시 들어갔소. 책 몇 권 때문에.\n달래가 치마 속에서 그을린 나무패를 꺼내 보인다. '형조'.\n**달래** 책 때문이 아니라 이거 때문이에요.\n정겸이 나무패를 본다. 그리고 달래를 본다.\n**정겸** 도대체 당신은—\n**달래** 다섯째 조항이요. 사생활은 캐묻지 마세요.\n정겸이 달래를 본다. 그리고 웃는다. 처음이다. 아주 짧다.\n달래가 기침도 잊고 그 얼굴을 본다. 웃음은 이미 사라졌다.\n**달래** 방금 웃었죠?\n**정겸** 연기 때문이오.",
+      "summary": "강가. '손목 위로 닿았어요.' 달래가 나무패를 내밀고, 정겸이 처음 웃는다. '연기 때문이오.' 달래는 아무렇지 않게 율의 까진 손에 앞치마 끈을 감아 준다. '다음 연체료는 반만 받을게요.' 달래한테는 아무것도 아닌 일, 판서댁 외아들한테는 처음 있는 일.",
+      "source_text": "두 사람이 기침을 하며 모래밭에 주저앉는다. 뒤에서 창고가 탄다. 율은 조금 떨어진 곳에서 불을 보고 있다.\n**달래** (기침하며) 손목 위로 닿았어요. 둘째 조항.\n**정겸** 왜 다시 들어갔소. 책 몇 권 때문에.\n달래가 치마 속에서 그을린 나무패를 꺼내 보인다. '형조'.\n**달래** 책 때문이 아니라 이거 때문이에요.\n정겸이 나무패를 본다. 그리고 달래를 본다.\n**정겸** 도대체 당신은—\n**달래** 다섯째 조항이요. 사생활은 캐묻지 마세요.\n정겸이 달래를 본다. 그리고 웃는다. 처음이다. 아주 짧다.\n달래가 기침도 잊고 그 얼굴을 본다. 웃음은 이미 사라졌다.\n**달래** 방금 웃었죠?\n**정겸** 연기 때문이오.\n달래가 일어나 율에게 간다. 돌로 자물쇠를 찧던 율의 손등이 까져 피가 배어 있다. 달래가 앞치마 끈을 쭉 찢어 아무렇지 않게 감아 준다.\n**달래** 자물쇠 깨 줘서 고마워요, 도령. 다음 연체료는 반만 받을게요.\n율이 감긴 손을 내려다본다. 달래는 벌써 먹순을 부르며 돌아선다.\n(N, 강수) 달래한테는 아무것도 아닌 일이었소. 판서댁 외아들한테는, 처음 있는 일이었고.",
       "shots": [
         {
           "id": "S04-01",
@@ -993,7 +993,7 @@
             "INSERT_TEXT"
           ],
           "transition": "CUT",
-          "duration_sec": 3,
+          "duration_sec": 2,
           "image_prompt": "insert, a small sooty hand pulling a scorched wooden tag from under a skirt and holding it out, firelight revealing branded characters"
         },
         {
@@ -1168,6 +1168,116 @@
           "duration_sec": 3,
           "notes": "귀는 연기와 그늘로 가린다. 대본에 귀 언급이 없으므로 EAR 모티프를 쓰지 않는다",
           "image_prompt": "medium close-up of the scholar turning his face toward the fire as drifting smoke crosses the frame"
+        },
+        {
+          "id": "S04-15",
+          "size": "MS",
+          "angle": "EYE",
+          "move": "FIX",
+          "lens_mm": 35,
+          "characters": [
+            "dallae",
+            "yul"
+          ],
+          "frame": "모래밭. 달래가 털고 일어나 화면 오른쪽, 떨어져 선 율에게 걸어간다. 돌로 자물쇠를 찧던 율의 오른손 손등이 까져 피가 배어 있다.",
+          "action": "달래가 일어나 율에게 간다. 율의 손등이 까져 피가 배어 있다.",
+          "transition": "CUT",
+          "duration_sec": 2,
+          "image_prompt": "night riverbank with a burning warehouse behind, a soot-faced young woman walking up to an elegant young nobleman in plum silk whose right knuckles are scraped and bleeding"
+        },
+        {
+          "id": "S04-16",
+          "size": "INSERT",
+          "angle": "EYE",
+          "move": "FIX",
+          "lens_mm": 85,
+          "characters": [
+            "dallae",
+            "yul"
+          ],
+          "frame": "달래가 앞치마 끈을 쭉 찢어, 까진 율의 손등에 아무렇지 않게 둘둘 감고 매듭을 짓는다. 비단 소매와 그을린 무명 끈.",
+          "action": "달래가 앞치마 끈을 찢어 아무렇지 않게 감아 준다.",
+          "sound": "(E) 천 찢는 소리",
+          "transition": "CUT",
+          "duration_sec": 2,
+          "continuity": "율의 오른손 손등에 달래의 앞치마 끈(6화 S#4~S#5). 율이 반한 순간",
+          "image_prompt": "insert in firelight, a young woman's ink-stained hands briskly wrapping a torn strip of cotton apron string around a nobleman's scraped knuckles, plum silk sleeve"
+        },
+        {
+          "id": "S04-17",
+          "size": "MCU",
+          "angle": "EYE",
+          "move": "FIX",
+          "lens_mm": 50,
+          "characters": [
+            "dallae"
+          ],
+          "frame": "달래 정면. 매듭을 탁 당기며, 장부 정리하듯 대수롭지 않게.",
+          "action": "달래가 대수롭지 않게 말한다.",
+          "dialogue": [
+            {
+              "speaker": "dallae",
+              "line": "자물쇠 깨 줘서 고마워요, 도령. 다음 연체료는 반만 받을게요.",
+              "mode": "ON"
+            }
+          ],
+          "transition": "CUT",
+          "duration_sec": 3,
+          "image_prompt": "medium close-up of the soot-faced young woman tugging a knot tight and talking casually, burning warehouse glow on her face"
+        },
+        {
+          "id": "S04-18",
+          "size": "MLS",
+          "angle": "EYE",
+          "move": "FIX",
+          "lens_mm": 35,
+          "characters": [
+            "dallae",
+            "yul",
+            "meoksun"
+          ],
+          "frame": "달래는 벌써 먹순을 부르며 화면 왼쪽으로 돌아선다. 전경 오른쪽, 율이 감긴 손을 든 채 그 자리에 남는다.",
+          "action": "달래는 벌써 먹순을 부르며 돌아선다.",
+          "dialogue": [
+            {
+              "speaker": "N:gangsu",
+              "line": "달래한테는 아무것도 아닌 일이었소.",
+              "mode": "N"
+            }
+          ],
+          "motifs": [
+            "NARRATOR"
+          ],
+          "transition": "CUT",
+          "duration_sec": 2,
+          "image_prompt": "medium long shot on the riverbank at night, the young woman already turning away to the left waving to a girl, the young nobleman left standing in the foreground with his wrapped hand raised"
+        },
+        {
+          "id": "S04-19",
+          "size": "CU",
+          "angle": "EYE",
+          "move": "FIX",
+          "lens_mm": 85,
+          "characters": [
+            "yul"
+          ],
+          "frame": "율이 감긴 손을 내려다본다. 웃지 않는다. 불빛이 얼굴에 일렁인다.",
+          "action": "율이 감긴 손을 내려다본다.",
+          "dialogue": [
+            {
+              "speaker": "N:gangsu",
+              "line": "판서댁 외아들한테는, 처음 있는 일이었고.",
+              "mode": "N"
+            }
+          ],
+          "sound": "♪ 율의 테마(가야금 한 줄이 튕기고 대금이 받는다)",
+          "motifs": [
+            "NARRATOR"
+          ],
+          "transition": "CUT",
+          "duration_sec": 3,
+          "notes": "율이 반하는 순간. 달래에겐 별것 아닌 일이라 카메라도 달래를 따라가지 않는다. 아무도 판서댁 도령의 손을 그렇게 함부로 잡은 적이 없었다",
+          "image_prompt": "close-up of the young nobleman looking down at the rough cotton strip wrapped around his hand, not smiling, firelight flickering on his face"
         }
       ]
     },
@@ -1176,14 +1286,14 @@
       "heading": "창고 잿더미 (새벽)",
       "location": "mapo",
       "time": "DAWN",
-      "tc_in": "02:41",
+      "tc_in": "02:44",
       "tc_out": "03:00",
       "characters": [
         "yul"
       ],
       "mood": "MYSTERY",
       "summary": "새벽 잿더미에서 율이 '판서댁'이 적힌 장부 조각을 줍는다. 보조개가 사라진다.",
-      "source_text": "율이 혼자 재 속을 뒤진다. 부채 끝으로 재를 헤친다. 반쯤 타다 만 장부 조각 하나를 줍는다.\nInsert. 장부 조각. 숫자들 사이로 '판서댁'.\n율의 보조개가 사라진다. 조각을 천천히 접어 품에 넣는다.",
+      "source_text": "율이 혼자 재 속을 뒤진다. 앞치마 끈이 감긴 손으로, 부채 끝으로 재를 헤친다. 반쯤 타다 만 장부 조각 하나를 줍는다.\nInsert. 장부 조각. 숫자들 사이로 '판서댁'.\n율의 보조개가 사라진다. 조각을 천천히 접어 품에 넣는다.",
       "shots": [
         {
           "id": "S05-01",
@@ -1198,7 +1308,7 @@
           "action": "율이 혼자 잿더미에 서 있다.",
           "sound": "새벽 강물, 재가 바스러지는 소리",
           "transition": "CUT",
-          "duration_sec": 4,
+          "duration_sec": 2,
           "continuity": "축: S#3·S#4와 같은 방향(강 왼쪽, 창고 터 오른쪽). 율의 도포 자락에 그을음",
           "image_prompt": "extreme wide shot at misty dawn, the charred ruins of a riverside warehouse with thin smoke rising, a lone nobleman standing in the ashes, river on the left"
         },
@@ -1211,11 +1321,12 @@
           "characters": [
             "yul"
           ],
-          "frame": "율이 쪼그려 앉아 접은 부채 끝으로 재를 헤친다.",
-          "action": "율이 부채 끝으로 재를 헤친다.",
+          "frame": "율이 쪼그려 앉는다. 앞치마 끈이 감긴 오른손으로 접은 부채를 쥐고, 그 끝으로 재를 헤친다.",
+          "action": "앞치마 끈이 감긴 손으로, 부채 끝으로 재를 헤친다.",
           "transition": "CUT",
           "duration_sec": 3,
-          "image_prompt": "medium shot from above, the nobleman crouching and sifting through ashes with the tip of his closed fan"
+          "image_prompt": "dawn mist over ashes, a young nobleman in plum silk crouching and sifting through the ashes with the tip of a closed fan, his right hand wrapped in a rough cotton strip",
+          "continuity": "율의 오른손 손등에 달래의 앞치마 끈(6화 S#4~S#5). 율이 반한 순간"
         },
         {
           "id": "S05-03",
@@ -1226,11 +1337,12 @@
           "characters": [
             "yul"
           ],
-          "frame": "재 속에서 반쯤 타다 만 종이 귀퉁이. 율의 손가락이 집어 든다.",
+          "frame": "재 속에서 반쯤 타다 만 종이 귀퉁이. 율의 손가락이 집어 든다. 손등에 감긴 앞치마 끈이 보인다.",
           "action": "반쯤 타다 만 장부 조각 하나를 줍는다.",
           "transition": "CUT",
           "duration_sec": 2,
-          "image_prompt": "insert, fingers lifting a half-burnt scrap of a ledger page out of grey ashes"
+          "image_prompt": "insert, fingers lifting a half-burnt scrap of a ledger page out of grey ashes",
+          "continuity": "율의 오른손 손등에 달래의 앞치마 끈(6화 S#4~S#5). 율이 반한 순간"
         },
         {
           "id": "S05-04",
@@ -1279,7 +1391,7 @@
           "frame": "율이 조각을 천천히 접어 품에 넣는다. 카메라가 떠오르며 잿더미 한가운데 선 율이 작아진다. 정점에서 정지.",
           "action": "율이 조각을 천천히 접어 품에 넣는다.",
           "transition": "FREEZE",
-          "duration_sec": 4,
+          "duration_sec": 3,
           "continuity": "장부 조각은 율의 품(왼쪽 앞섶). 7화 S#5로 이어짐",
           "notes": "엔딩 훅",
           "image_prompt": "crane up from the nobleman slowly folding a paper scrap and tucking it into his robe, rising to reveal him small and alone in the ashes at dawn"

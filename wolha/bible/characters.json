@@ -45,7 +45,7 @@
         "ep12-20": "옆구리 상처를 감은 무명 띠(도포 속). 20화 이후 가슴 상처",
         "ep24": "흰 두루마기, 봇짐(유배길 동행)"
       },
-      "props": ["쇠부채(살이 쇠로 된 철선, 4화 쇳소리 복선, 12·20화 격투)", "약과 꾸러미", "호루라기", "「삼국지」 넷째·다섯째 권", "'판서댁' 장부 조각(6화에 주워 24화에 바친다)"],
+      "props": ["쇠부채(살이 쇠로 된 철선, 4화 쇳소리 복선, 12·20화 격투)", "약과 꾸러미", "호루라기", "「삼국지」 넷째·다섯째 권", "달래의 앞치마 끈(6화 S#4, 까진 손등에 감아 준 것. 율이 반한 순간)", "'판서댁' 장부 조각(6화에 주워 24화에 바친다)"],
       "palette": ["#8E3B6E", "#E7A3B8", "#F6E7B0"],
       "prompt_en": "handsome 21-year-old Korean nobleman, playful smile with a dimple, silk dopo robe in plum and rose tones, holding a folding fan with dark iron ribs"
     },
@@ -57,7 +57,7 @@
       "look": "목소리 좋은 미남. 무대에서는 능청, 윤희 앞에서는 대사를 까먹는다",
       "costume": {
         "default": "회색 도포, 낡은 갓, 부채",
-        "ep12-21": "왼쪽 팔뚝에 붕대",
+        "ep12-21": "왼쪽 팔뚝에 붕대. 13화 S#3부터 붕대 끝에 윤희의 분홍 댕기", "ep22-24": "왼 손목에 분홍 댕기(22화 S#1에 붕대를 풀고 댕기만 남김)",
         "ep19-21": "오른쪽 목덜미에 무명", "ep22-23": "22화 S#3 뒤 곤장 열 대: 22화 S#4~23화 S#1 도포 등판 핏자국, 절뚝임"
       },
       "props": ["부채", "평상(무대)", "몽둥이(18~20화)", "징(23화)", "담배 써는 칼(22~23화)"],
@@ -71,7 +71,7 @@
       "role": "홍 참판 댁 서녀, 양반가 여인 독서 모임 '월하회' 회장. 정겸의 정혼자(서자 검서관과 서녀, 서얼끼리의 혼담. 9화에 깼으나 13화에 양가가 도로 붙인다). 강수와 서브 커플(8·13·18·22화가 두 사람의 회차). 평민 전기수와 참판댁 서녀라 신분의 벽이 있다. 22화 파혼 뒤 별당에 갇히고, 24화에서 장옷 없이 평상 맨 앞줄에 앉는다",
       "look": "단아한 규수인데 눈치가 빠르고 진성 덕후",
       "costume": { "default": "분홍 저고리, 남색 치마, 댕기, 외출 시 장옷", "jangot": "외출 때 머리부터 쓰는 연두 장옷. 얼굴이 반쯤 가려진다(8·13·18화)", "ep22": "혼례복: 녹원삼, 족두리, 연지곤지" },
-      "props": ["여백 낙서가 빼곡한 「청상연가」"],
+      "props": ["여백 낙서가 빼곡한 「청상연가」", "분홍 댕기(13화 S#3에 풀어 강수의 붕대 끝에 묶어 준다)"],
       "palette": ["#F4B6C2", "#2C3E73"],
       "prompt_en": "graceful 18-year-old Korean noble girl, quick clever eyes, pink jeogori, navy chima, long braid with ribbon",
       "prompt_variants": {"jangot": "graceful 18-year-old Korean noble girl, quick clever eyes, a pale green jangot cloak draped over her head and held closed under her chin so her face is half hidden, pink jeogori and navy chima glimpsed beneath", "wedding": "graceful 18-year-old Korean noble bride, quick clever eyes, green wonsam ceremonial wedding robe with rainbow-striped sleeves, small black jokduri coronet on her head, red rouge dots on her cheeks and forehead"}

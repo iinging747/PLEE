@@ -707,7 +707,7 @@
       ],
       "mood": "ROMANCE",
       "summary": "삯을 직접 들고 나온 윤희. 장옷이 미끄러져 얼굴을 본 강수는 또 대사를 잊는다. 윤희는 모레 검서관과 혼담이 있다고, 서녀라 혼처는 못 고르지만 소설은 고른다고 말한다. 강수는 한 걸음 물러서 '곤장'을 말한다.",
-      "source_text": "낭독이 끝난 뒤. 장옷을 머리에 쓴 윤희가 직접 엽전 꾸러미를 들고 나온다. 하녀는 별당 모퉁이 너머에서 기다린다.\n**윤희** 삯이에요. 엽전은 안 던졌어요. 틀렸으니까.\n**강수** 그럼 다음엔 안 틀리겠소.\n**윤희** 다음이 있어요?\n**강수** …다음 대목이 남았잖소.\n윤희가 웃는다. 장옷이 미끄러져 얼굴이 드러난다. 강수가 그대로 굳는다.\n**강수** …뭐라고 하려 했는지 잊었소.\n**윤희** 전기수님은 대사를 자주 잊으시네요.\n**강수** 아씨 앞에서만.\n윤희가 웃음을 멈춘다. 장옷을 다시 끌어 쓴다.\n**윤희** 모레 혼담 자리가 있어요. 규장각 검서관이래요. 저는 서녀라서, 혼처는 아버지가 고르시거든요. (사이) 그래서 소설은 제가 골라요.\n강수가 한 걸음 물러선다. 장옷 자락과 자기 두루마기 사이를 본다.\n**강수** …전기수가 참판댁 아씨랑 이렇게 서 있는 걸 누가 보면, 곤장이오.\n**윤희** 그럼 다음 대목은 병풍 너머에서 해요.\n**하녀** (O.S.) 아씨! 사랑채에서 찾으세요!\n윤희가 돌아서 간다. 강수의 손에 엽전 꾸러미만 남는다.",
+      "source_text": "낭독이 끝난 뒤. 장옷을 머리에 쓴 윤희가 직접 엽전 꾸러미를 들고 나온다. 하녀는 별당 모퉁이 너머에서 기다린다.\n**윤희** 삯이에요. 엽전은 안 던졌어요. 틀렸으니까.\n**강수** 그럼 다음엔 안 틀리겠소.\n**윤희** 다음이 있어요?\n**강수** …다음 대목이 남았잖소.\n윤희가 웃는다. 장옷이 미끄러져 얼굴이 드러난다. 강수가 저도 모르게 손을 뻗어 흘러내리는 장옷 자락을 붙잡는다. 손이 윤희의 뺨 한 치 앞에서 멈춘다. 그대로 굳는다.\n**강수** …뭐라고 하려 했는지 잊었소.\n**윤희** 전기수님은 대사를 자주 잊으시네요.\n**강수** 아씨 앞에서만.\n윤희가 웃음을 멈춘다. 장옷을 다시 끌어 쓴다.\n**윤희** 모레 혼담 자리가 있어요. 규장각 검서관이래요. 저는 서녀라서, 혼처는 아버지가 고르시거든요. (사이) 그래서 소설은 제가 골라요.\n강수가 한 걸음 물러선다. 장옷 자락과 자기 두루마기 사이를 본다.\n**강수** …전기수가 참판댁 아씨랑 이렇게 서 있는 걸 누가 보면, 곤장이오.\n**윤희** 그럼 다음 대목은 병풍 너머에서 해요.\n**하녀** (O.S.) 아씨! 사랑채에서 찾으세요!\n윤희가 돌아서 간다. 강수의 손에 엽전 꾸러미만 남는다.",
       "shots": [
         {
           "id": "S03-01",
@@ -727,7 +727,7 @@
           "frame": "별당 뒷마당, 달빛. 장옷을 머리에 쓴 윤희가 엽전 꾸러미를 들고 걸어 나온다. 화면 오른쪽 모퉁이 너머로 등롱을 든 하녀의 그림자만 비친다.",
           "action": "장옷을 머리에 쓴 윤희가 직접 엽전 꾸러미를 들고 나온다. 하녀는 모퉁이 너머에서 기다린다.",
           "transition": "CUT",
-          "duration_sec": 3,
+          "duration_sec": 2,
           "continuity": "축: 별당 툇마루 화면 왼쪽, 하녀가 기다리는 모퉁이 오른쪽",
           "image_prompt": "moonlit back courtyard of a women's pavilion at night, a young noblewoman with a cloak draped over her head walking out holding a string of brass coins, a maid's lantern shadow waiting around the corner on the right"
         },
@@ -852,6 +852,23 @@
         },
         {
           "id": "S03-07",
+          "size": "INSERT",
+          "angle": "EYE",
+          "move": "FIX",
+          "lens_mm": 85,
+          "characters": [
+            "gangsu",
+            "yunhui"
+          ],
+          "frame": "강수의 손이 저도 모르게 뻗어, 흘러내리는 장옷 자락을 붙잡는다. 손끝이 윤희의 뺨 한 치 앞에서 멈춘다. 달빛.",
+          "action": "강수가 저도 모르게 장옷 자락을 붙잡는다. 손이 뺨 한 치 앞에서 멈춘다.",
+          "transition": "CUT",
+          "duration_sec": 2,
+          "notes": "닿지 않은 한 치. 서브커플은 끝까지 '닿기 직전'으로 설렌다",
+          "image_prompt": "moonlit insert, a man's hand instinctively catching a slipping pale green veil-cloak, his fingertips frozen an inch from a young woman's cheek"
+        },
+        {
+          "id": "S03-08",
           "size": "CU",
           "angle": "EYE",
           "move": "FIX",
@@ -859,7 +876,7 @@
           "characters": [
             "gangsu"
           ],
-          "frame": "강수가 그대로 굳는다. 입만 움직인다.",
+          "frame": "강수가 장옷 자락을 쥔 채 그대로 굳는다. 입만 움직인다.",
           "action": "강수가 그대로 굳는다.",
           "dialogue": [
             {
@@ -873,7 +890,7 @@
           "image_prompt": "moonlit close-up of the storyteller frozen, stunned, lips barely moving"
         },
         {
-          "id": "S03-08",
+          "id": "S03-09",
           "size": "MCU",
           "angle": "EYE",
           "move": "FIX",
@@ -895,7 +912,7 @@
           "image_prompt": "moonlit medium close-up of the noble girl, face uncovered, tilting her head and holding back a laugh"
         },
         {
-          "id": "S03-09",
+          "id": "S03-10",
           "size": "CU",
           "angle": "EYE",
           "move": "FIX",
@@ -917,7 +934,7 @@
           "image_prompt": "moonlit close-up of the storyteller looking straight at her, quiet and sincere"
         },
         {
-          "id": "S03-10",
+          "id": "S03-11",
           "size": "MCU",
           "angle": "EYE",
           "move": "FIX",
@@ -931,14 +948,14 @@
               "variant": "jangot"
             }
           ],
-          "frame": "윤희의 웃음이 멈춘다. 장옷을 다시 끌어 쓴다.",
-          "action": "윤희가 웃음을 멈춘다. 장옷을 다시 끌어 쓴다.",
+          "frame": "윤희의 웃음이 멈춘다. 강수의 손에서 장옷 자락을 가만히 거둬, 다시 끌어 쓴다.",
+          "action": "윤희가 강수의 손에서 장옷 자락을 거둬 다시 끌어 쓴다.",
           "transition": "CUT",
           "duration_sec": 2,
           "image_prompt": "moonlit medium close-up, the noble girl's smile fading as she pulls the cloak back over her head"
         },
         {
-          "id": "S03-11",
+          "id": "S03-12",
           "size": "MCU",
           "angle": "EYE",
           "move": "FIX",
@@ -967,7 +984,7 @@
           "image_prompt": "moonlit medium close-up of the cloaked noble girl speaking evenly, her eyes lowered"
         },
         {
-          "id": "S03-12",
+          "id": "S03-13",
           "size": "CU",
           "angle": "EYE",
           "move": "FIX",
@@ -995,7 +1012,7 @@
           "image_prompt": "moonlit close-up, the cloaked noble girl lifting her eyes with quiet defiance"
         },
         {
-          "id": "S03-13",
+          "id": "S03-14",
           "size": "2S",
           "angle": "PROFILE",
           "move": "FIX",
@@ -1021,7 +1038,7 @@
           "image_prompt": "moonlit profile two-shot, the storyteller stepping back from the cloaked noble girl, a strip of empty moonlit ground opening between the hem of her cloak and his grey robe"
         },
         {
-          "id": "S03-14",
+          "id": "S03-15",
           "size": "MCU",
           "angle": "EYE",
           "move": "FIX",
@@ -1043,7 +1060,7 @@
           "image_prompt": "moonlit medium close-up of the storyteller glancing toward the corner and speaking in a low voice"
         },
         {
-          "id": "S03-15",
+          "id": "S03-16",
           "size": "MCU",
           "angle": "EYE",
           "move": "FIX",
@@ -1071,7 +1088,7 @@
           "image_prompt": "moonlit medium close-up of the cloaked noble girl with a small sly smile"
         },
         {
-          "id": "S03-16",
+          "id": "S03-17",
           "size": "MS",
           "angle": "EYE",
           "move": "FIX",
@@ -1099,7 +1116,7 @@
           "image_prompt": "medium shot, the cloaked girl turning toward a lantern light approaching around the corner"
         },
         {
-          "id": "S03-17",
+          "id": "S03-18",
           "size": "MLS",
           "angle": "EYE",
           "move": "FIX",
@@ -1121,7 +1138,7 @@
           "image_prompt": "moonlit medium long shot, the cloaked girl walking away toward the lantern light, the storyteller left standing alone"
         },
         {
-          "id": "S03-18",
+          "id": "S03-19",
           "size": "INSERT",
           "angle": "HIGH",
           "move": "FIX",

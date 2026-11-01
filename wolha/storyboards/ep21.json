@@ -114,7 +114,7 @@
       "location": "heojin_huwon",
       "time": "NIGHT",
       "tc_in": "00:12",
-      "tc_out": "00:40",
+      "tc_out": "00:38",
       "characters": [
         "dallae",
         "jeonggyeom",
@@ -147,7 +147,7 @@
           "action": "흑립의 눈이 횃불 사이의 한 사람에게서 멈춘다.",
           "sound": "(E) 횃불 타는 소리, 몰려드는 발소리",
           "transition": "CUT",
-          "duration_sec": 2,
+          "duration_sec": 1,
           "continuity": "축: 담장·쪽문과 담을 넘어온 내금위·정겸·강수는 화면 왼쪽, 허진과 초롱 든 하인들은 화면 오른쪽(정자·사랑채 쪽). 달래와 율은 가운데 흙바닥. 20화 S#6에서 이어짐: 정겸 맨상투, 강수 오른쪽 목덜미 무명·왼팔 붕대, 율 가슴 상처(20화 새 상처)와 왼쪽 옆구리 상처, 달래 두 손에 피",
           "image_prompt": "extreme close-up of the assassin's eyes reflecting many torches, his gaze locking on someone"
         },
@@ -164,7 +164,7 @@
           "frame": "흑립 시점. 횃불 든 내금위 사이에 몽둥이를 쥔 강수. 오른쪽 목덜미의 무명.",
           "action": "횃불 사이에 강수가 있다.",
           "transition": "CUT",
-          "duration_sec": 2,
+          "duration_sec": 1,
           "notes": "흑립이 그날(1790) 쫓지 못한 아이. 23화 S#1의 복선",
           "image_prompt": "point of view through a line of torch-bearing guards, the young storyteller gripping a club, a cloth bandage on the right side of his neck"
         },
@@ -366,16 +366,16 @@
       "heading": "혜민서 의원 방 (새벽)",
       "location": "hyeminseo",
       "time": "DAWN",
-      "tc_in": "00:40",
-      "tc_out": "00:59",
+      "tc_in": "00:38",
+      "tc_out": "01:01",
       "characters": [
         "dallae",
         "yul",
         "extras"
       ],
       "mood": "GRIEF",
-      "summary": "혜민서 의원이 율의 품에서 칼자국 난 「삼국지」 넷째 권을 꺼낸다. 책이 한 번, 달래의 손이 한 번 율을 살렸다. 피투성이 손으로 책을 받은 달래의 손이 그제야 떨린다.",
-      "source_text": "의원이 율의 품에서 피에 젖은 책 한 권을 꺼낸다. 「삼국지」 넷째 권. 표지에 칼자국이 비스듬히 나 있다.\n**혜민서 의원** 칼날이 이 책에 한 번 걸리고 들어갔소. 누가 누르고 있었소?\n**달래** 제가요.\n**혜민서 의원** 책이 한 번, 그 손이 한 번 살렸소.\n의원이 책을 달래에게 건넨다. 달래가 피투성이인 자기 손으로 책을 받는다. 그제야 손이 떨리기 시작한다.",
+      "summary": "혜민서. 율의 품에서 칼자국 난 「삼국지」 넷째 권. '책이 한 번, 그 손이 한 번 살렸소.' 의원이 나간 뒤 달래가 율의 이마 머리카락을 쓸어 넘긴다. '일어나요. 다섯째 권, 아직 안 빌려 갔잖아요.'",
+      "source_text": "의원이 율의 품에서 피에 젖은 책 한 권을 꺼낸다. 「삼국지」 넷째 권. 표지에 칼자국이 비스듬히 나 있다.\n**혜민서 의원** 칼날이 이 책에 한 번 걸리고 들어갔소. 누가 누르고 있었소?\n**달래** 제가요.\n**혜민서 의원** 책이 한 번, 그 손이 한 번 살렸소.\n의원이 책을 달래에게 건넨다. 달래가 피투성이인 자기 손으로 책을 받는다. 그제야 손이 떨리기 시작한다.\n의원이 나간 뒤. 달래가 잠든 율의 이마에 엉겨 붙은 머리카락을 조심스럽게 쓸어 넘긴다.\n**달래** (작게) 일어나요. 다섯째 권, 아직 안 빌려 갔잖아요.",
       "shots": [
         {
           "id": "S02-01",
@@ -497,9 +497,48 @@
           "action": "달래가 피투성이인 자기 손으로 책을 받는다. 그제야 손이 떨리기 시작한다.",
           "sound": "숨소리만",
           "transition": "CUT",
-          "duration_sec": 4,
+          "duration_sec": 3,
           "notes": "TASKS 필수: 피투성이 손",
           "image_prompt": "insert, slow push-in on two blood-caked small hands receiving the cut book, beginning to tremble"
+        },
+        {
+          "id": "S02-07",
+          "size": "MS",
+          "angle": "HIGH",
+          "move": "FIX",
+          "lens_mm": 35,
+          "characters": [
+            "dallae",
+            "yul"
+          ],
+          "frame": "의원이 나간 뒤. 등잔 하나. 달래가 잠든 율의 이마에 엉겨 붙은 머리카락을 조심스럽게 쓸어 넘긴다.",
+          "action": "달래가 잠든 율의 이마에 엉겨 붙은 머리카락을 쓸어 넘긴다.",
+          "transition": "CUT",
+          "duration_sec": 2,
+          "image_prompt": "slightly high angle in a dim clinic room at dawn, a young woman gently brushing matted hair from the forehead of an unconscious pale young nobleman, one oil lamp"
+        },
+        {
+          "id": "S02-08",
+          "size": "CU",
+          "angle": "EYE",
+          "move": "FIX",
+          "lens_mm": 85,
+          "characters": [
+            "dallae"
+          ],
+          "frame": "달래 정면, 율 쪽으로 몸을 숙여 아주 작게.",
+          "action": "달래가 작게 말한다.",
+          "dialogue": [
+            {
+              "speaker": "dallae",
+              "line": "일어나요. 다섯째 권, 아직 안 빌려 갔잖아요.",
+              "mode": "ON"
+            }
+          ],
+          "transition": "CUT",
+          "duration_sec": 3,
+          "notes": "24화 율의 편지 맨 끝 줄 '다섯째 권도 빌려주시오'와 쿠키 '평생 연체'의 앞줄",
+          "image_prompt": "close-up of the young woman leaning down and whispering, blood and ink on her cheek, lamplight"
         }
       ]
     },
@@ -508,8 +547,8 @@
       "heading": "혜민서 뒤뜰 우물가 (새벽)",
       "location": "hyeminseo",
       "time": "DAWN",
-      "tc_in": "00:59",
-      "tc_out": "01:50",
+      "tc_in": "01:01",
+      "tc_out": "01:52",
       "characters": [
         "dallae",
         "jeonggyeom"
@@ -925,7 +964,7 @@
       "heading": "달래책방 안채 (밤)",
       "location": "dallae_anchae",
       "time": "NIGHT",
-      "tc_in": "01:50",
+      "tc_in": "01:52",
       "tc_out": "02:34",
       "characters": [
         "dallae",
@@ -1160,7 +1199,7 @@
           "frame": "탑샷. 달래가 종이를 끌어당긴다. 눈물 한 방울이 '달' 자 위에 떨어져 먹이 번진다.",
           "action": "달래가 종이를 끌어당겨 자기 눈으로 읽는다. 눈물이 '달' 자 위에 떨어진다.",
           "transition": "CUT",
-          "duration_sec": 3,
+          "duration_sec": 2,
           "image_prompt": "top-down insert, a teardrop falling onto a brush mark on paper and spreading into the ink"
         },
         {
@@ -1182,7 +1221,7 @@
             }
           ],
           "transition": "CUT",
-          "duration_sec": 5,
+          "duration_sec": 4,
           "image_prompt": "close-up of the young woman breaking down in tears by lamplight"
         },
         {

@@ -239,7 +239,8 @@
           "sound": "(E) 삐걱, 마루 널 우는 소리",
           "transition": "CUT",
           "duration_sec": 3,
-          "image_prompt": "medium shot on a moonlit wooden porch, the storyteller with his left forearm bandaged dozing with a wooden club in his arms, his eyes snapping open"
+          "image_prompt": "medium shot on a moonlit wooden porch, the storyteller with his left forearm bandaged dozing with a wooden club in his arms, his eyes snapping open, a small pink silk ribbon tied at the end of his forearm bandage",
+          "continuity": "윤희의 분홍 댕기: 13화 S#3에 강수의 왼팔 붕대 끝에 묶어 준다. 21화까지 붕대 끝, 22화 S#1부터 왼 손목"
         },
         {
           "id": "S01-08",
@@ -256,7 +257,8 @@
           "sound": "(E) 휙, 퍽",
           "transition": "CUT",
           "duration_sec": 3,
-          "image_prompt": "handheld dutch angle, the storyteller swinging a club a half beat too late because of his bandaged left forearm, a black-clad figure slipping inside and striking his neck with the pommel of a sword"
+          "image_prompt": "handheld dutch angle, the storyteller swinging a club a half beat too late because of his bandaged left forearm, a black-clad figure slipping inside and striking his neck with the pommel of a sword, a small pink silk ribbon tied at the end of his forearm bandage",
+          "continuity": "윤희의 분홍 댕기: 13화 S#3에 강수의 왼팔 붕대 끝에 묶어 준다. 21화까지 붕대 끝, 22화 S#1부터 왼 손목"
         },
         {
           "id": "S01-09",

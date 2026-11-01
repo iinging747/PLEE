@@ -358,7 +358,8 @@
           "sound": "두 사람의 거친 숨, 흙 던지는 소리",
           "transition": "CUT",
           "duration_sec": 2,
-          "image_prompt": "profile two-shot of two men digging a grave at night by lantern light, the one on the left shoveling one-handed with his bandaged left arm held close, the tall one on the right digging neatly with both hands"
+          "image_prompt": "profile two-shot of two men digging a grave at night by lantern light, the one on the left shoveling one-handed with his bandaged left arm held close, the tall one on the right digging neatly with both hands, a small pink silk ribbon tied at the end of his forearm bandage",
+          "continuity": "윤희의 분홍 댕기: 13화 S#3에 강수의 왼팔 붕대 끝에 묶어 준다. 21화까지 붕대 끝, 22화 S#1부터 왼 손목"
         },
         {
           "id": "S02-04",

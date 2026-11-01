@@ -1124,7 +1124,7 @@
       ],
       "mood": "EPIC",
       "summary": "노량 배다리, 행차 행렬. 징이 군중 속에서 손에서 손으로 건너간다. 쪽문으로 빠져나온 윤희를 강수가 돌려보내려 하자 '그럼 비극도 같이 읽어요'. 윤희가 징을 넘기고, 흰 소복의 달래가 징을 친다. '제가 월하노인, 윤달래입니다!'",
-      "source_text": "얼어붙은 한강 위로 배를 잇대어 놓은 배다리. 현륭원으로 향하는 행차 행렬. 깃발, 악대, 호위 무사들. 말 위의 정조. 신하들 사이에 허진.\n군중 사이로 보자기에 싼 징이 손에서 손으로 건너간다. 먹순에게서 강수에게로. 강수 옆에, 쪽문으로 빠져나온 장옷 차림의 윤희가 서 있다.\n**강수** (작게) 담 안으로 돌아가시오. 아씨까지 다치면, 그건 막장이 아니라 비극이오.\n**윤희** 그럼 비극도 같이 읽어요.\n윤희가 강수의 손에서 징을 받아 박 과부에게 넘긴다. 맨 앞줄의 흰 소복이 징을 받는다. 쓰개치마를 벗는다. 달래다. 호위 무사의 창대 사이로 한 발 내딛는다.\n징—! 행렬이 멈춘다. 징—! 악대가 멈춘다. 징—!\n**달래** 억울하옵니다! (말 위의 왕을 똑바로 보며) 제가 월하노인, 윤달래입니다!\n정조의 얼굴에서 화면이 멈춘다.",
+      "source_text": "얼어붙은 한강 위로 배를 잇대어 놓은 배다리. 현륭원으로 향하는 행차 행렬. 깃발, 악대, 호위 무사들. 말 위의 정조. 신하들 사이에 허진.\n군중 사이로 보자기에 싼 징이 손에서 손으로 건너간다. 먹순에게서 강수에게로. 강수 옆에, 쪽문으로 빠져나온 장옷 차림의 윤희가 서 있다.\n**강수** (작게) 담 안으로 돌아가시오. 아씨까지 다치면, 그건 막장이 아니라 비극이오.\n**윤희** 그럼 비극도 같이 읽어요.\n윤희가 강수의 손에서 징을 받는다. 두 손이 징 위에서 한 박자 겹친다. 윤희가 징을 박 과부에게 넘긴다. 맨 앞줄의 흰 소복이 징을 받는다. 쓰개치마를 벗는다. 달래다. 호위 무사의 창대 사이로 한 발 내딛는다.\n징—! 행렬이 멈춘다. 징—! 악대가 멈춘다. 징—!\n**달래** 억울하옵니다! (말 위의 왕을 똑바로 보며) 제가 월하노인, 윤달래입니다!\n정조의 얼굴에서 화면이 멈춘다.",
       "shots": [
         {
           "id": "S05-01",
@@ -1240,14 +1240,13 @@
         },
         {
           "id": "S05-06",
-          "size": "MS",
+          "size": "INSERT",
           "angle": "EYE",
           "move": "FIX",
-          "lens_mm": 50,
+          "lens_mm": 85,
           "characters": [
             "yunhui",
-            "gangsu",
-            "extras"
+            "gangsu"
           ],
           "looks": [
             {
@@ -1255,12 +1254,13 @@
               "variant": "jangot"
             }
           ],
-          "frame": "같은 방향. 윤희가 강수의 손에서 징을 받아, 왼쪽의 박 과부에게 넘긴다.",
-          "action": "윤희가 강수의 손에서 징을 받아 박 과부에게 넘긴다.",
+          "frame": "보자기에 싼 징 위. 징을 쥔 강수의 손 위로 윤희의 손이 포개진다. 강수의 손목에 분홍 댕기. 한 박자.",
+          "action": "윤희가 강수의 손에서 징을 받는다. 두 손이 징 위에서 한 박자 겹친다.",
           "transition": "CUT",
           "duration_sec": 2,
           "notes": "박 과부(단역) 8화 서연이 쪽문을 나서던 장면의 짝.",
-          "image_prompt": "in the crowd, a young noblewoman in a pale green cloak taking a wrapped gong from the storyteller's hands and passing it to an older widow on her left"
+          "image_prompt": "insert in a crowd on a frozen riverbank, a young woman's hand under a pale green veil-cloak sleeve resting over a man's hand on a cloth-wrapped gong, a faded pink ribbon around his wrist",
+          "continuity": "윤희의 분홍 댕기: 13화 S#3에 강수의 왼팔 붕대 끝에 묶어 준다. 21화까지 붕대 끝, 22화 S#1부터 왼 손목"
         },
         {
           "id": "S05-07",
@@ -1269,11 +1269,12 @@
           "move": "FIX",
           "lens_mm": 85,
           "characters": [
+            "yunhui",
             "dallae",
             "extras"
           ],
-          "frame": "박 과부의 손에서 흰 소복 소매의 손으로 징이 넘어간다. 화면 오른쪽에서 왼쪽으로.",
-          "action": "맨 앞줄의 흰 소복이 징을 받는다.",
+          "frame": "징이 윤희의 손에서 박 과부의 손으로, 다시 흰 소복 소매의 손으로 넘어간다. 화면 오른쪽에서 왼쪽으로.",
+          "action": "윤희가 징을 박 과부에게 넘기고, 맨 앞줄의 흰 소복이 징을 받는다.",
           "transition": "CUT",
           "duration_sec": 2,
           "image_prompt": "insert, the wrapped gong passing from right to left into hands in plain white mourning sleeves at the front of the crowd"
