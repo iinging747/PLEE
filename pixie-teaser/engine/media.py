@@ -40,7 +40,7 @@ def video_info(path):
                 audio=has_audio, pix=v.get("pix_fmt", ""))
 
 
-def conform(key, path, t_in, t_out, headroom=1.0, max_fps=60.0, fit="cover", force=False):
+def conform(key, path, t_in, t_out, headroom=1.0, max_fps=60.0, fit="cover", force=False, crop=None):
     """Extract [t_in, t_out] of `path` as JPEG frames scaled to cover W×H × headroom.
 
     Returns dict(dir, fps, start, n, w, h)."""
@@ -49,13 +49,15 @@ def conform(key, path, t_in, t_out, headroom=1.0, max_fps=60.0, fit="cover", for
     pre = 0.0
     start = max(0.0, t_in - pre)
     dur = min(t_out, info["dur"]) - start
-    tag = f"{key}_{start:.3f}_{dur:.3f}_{headroom}_{fit}_{fps}"
+    tag = f"{key}_{start:.3f}_{dur:.3f}_{headroom}_{fit}_{fps}" + (f"_c{crop[0]}x{crop[1]}" if crop else "")
     d = os.path.join(CONF, tag)
     meta = os.path.join(d, "meta.json")
     if os.path.exists(meta) and not force:
         return json.load(open(meta))
     os.makedirs(d, exist_ok=True)
     sw, sh = info["w"], info["h"]
+    if crop:
+        sw, sh = crop[0], crop[1]
     if fit == "cover":
         s = max(W / sw, H / sh) * headroom
     elif fit == "width":
@@ -68,6 +70,8 @@ def conform(key, path, t_in, t_out, headroom=1.0, max_fps=60.0, fit="cover", for
     if info["hdr"]:
         vf.append("zscale=t=linear:npl=203,format=gbrpf32le,zscale=p=bt709,"
                   "tonemap=tonemap=mobius:desat=0.4:param=0.4,zscale=t=bt709:m=bt709:r=tv,format=yuv420p")
+    if crop:
+        vf.append(f"crop={crop[0]}:{crop[1]}:{crop[2]}:{crop[3]}")
     vf.append(f"scale={ow}:{oh}:flags=lanczos")
     vf.append(f"fps={fps}")
     cmd = ["ffmpeg", "-v", "error", "-y", "-ss", f"{start:.3f}", "-t", f"{dur:.3f}", "-i", path,

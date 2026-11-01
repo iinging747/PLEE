@@ -312,7 +312,7 @@ def prepare(tl):
         t_in = c.get("in", 0.0)
         a, b = (t_in - span, t_in + 0.1) if c.get("reverse") else (t_in - 0.05, t_in + span)
         c["_conf"] = media.conform(c["src"], src["path"], max(0.0, a), b, src.get("headroom", 1.0),
-                                   src.get("max_fps", 60), src.get("fit", "cover"))
+                                   src.get("max_fps", 60), src.get("fit", "cover"), crop=src.get("crop"))
 
 
 def render_range(f0, f1, out_path, crf=18):
@@ -335,8 +335,10 @@ def render_range(f0, f1, out_path, crf=18):
     p.wait()
 
 
-def video(jobs=4, t_from=0.0, t_to=DUR, out=None):
+def video(jobs=4, t_from=0.0, t_to=None, out=None):
     tl = load_timeline()
+    if t_to is None:
+        t_to = getattr(tl, "DUR_OUT", DUR)
     prepare(tl)  # conform once in the parent
     f0, f1 = int(round(t_from * FPS)), int(round(t_to * FPS))
     os.makedirs(os.path.join(WORK, "chunks"), exist_ok=True)
@@ -413,5 +415,5 @@ if __name__ == "__main__":
         args = sys.argv[2:]
         jobs = int(args[args.index("--jobs") + 1]) if "--jobs" in args else 4
         a = float(args[args.index("--from") + 1]) if "--from" in args else 0.0
-        b = float(args[args.index("--to") + 1]) if "--to" in args else DUR
+        b = float(args[args.index("--to") + 1]) if "--to" in args else None
         print(video(jobs, a, b))

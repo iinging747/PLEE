@@ -27,6 +27,8 @@ def font_path(role):
         "display_i": ["BodoniModa-Italic.ttf"],
         "label": ["Jost-Light.ttf"],
         "kr": ["Pretendard-Light.otf"],
+        "anton": ["Anton-Regular.ttf"],
+        "unb_black": ["Unbounded-Black.ttf"],
     }
     over = os.path.join(LICENSED, role + ".otf")
     for ext in (".otf", ".ttf"):
@@ -314,6 +316,12 @@ SHOTS = {
     "calculated": lambda sc: shot_word(sc, "Calculated.", role="display_i", frac=0.48),
     "world": lambda sc: shot_word(sc, "A bigger world", role="display_i", spacing=0.93, frac=0.55),
     "live": lambda sc: shot_word(sc, "Coming soon", role="display_i", spacing=0.93, frac=0.40),
+    # v4: bold condensed chrome
+    "a_cold": lambda sc: shot_word(sc, "COLD.", role="anton", spacing=0.96, frac=0.34),
+    "a_calm": lambda sc: shot_word(sc, "CALM.", role="anton", spacing=0.96, frac=0.34),
+    "a_calc": lambda sc: shot_word(sc, "CALCULATED.", role="anton", spacing=0.96, frac=0.62),
+    "a_more": lambda sc: shot_word(sc, "MORE THAN A TRADER", role="anton", spacing=0.97, frac=0.78),
+    "a_soon": lambda sc: shot_word(sc, "COMING SOON", role="anton", spacing=0.97, frac=0.50),
 }
 
 

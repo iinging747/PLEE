@@ -76,11 +76,41 @@ def limiter(x, ceiling=0.89, release=0.08, look=0.004):
     return x * out[:, None]
 
 
+def edit_bgm(src, segments, n, xf=0.03):
+    """Concatenate BGM segments [(src_start, src_end, out_start)] with short equal-power crossfades."""
+    out = np.zeros((n, 2), np.float32)
+    f = int(xf * SR)
+    for i, (a, bnd, o) in enumerate(segments):
+        ia, ib, io = int(a * SR), int(bnd * SR), int(o * SR)
+        last_cut = i == len(segments) - 1 or segments[i + 1][2] != o + (bnd - a)
+        seg = src[max(0, ia - f): min(len(src), ib + f)].copy()
+        pre = ia - max(0, ia - f)
+        L = len(seg)
+        env = np.ones(L, np.float32)
+        if i > 0 and pre > 0:
+            env[:2 * pre] = np.sin(np.linspace(0, np.pi / 2, 2 * pre)) ** 2
+        if i < len(segments) - 1 and not last_cut:
+            post = L - (ib - ia) - pre
+            if post > 0:
+                env[-2 * post:] = np.cos(np.linspace(0, np.pi / 2, 2 * post)) ** 2
+        start = io - pre
+        s0 = max(0, start)
+        e0 = min(n, start + L)
+        if e0 > s0:
+            out[s0:e0] += seg[s0 - start:e0 - start] * env[s0 - start:e0 - start, None]
+    return out
+
+
 def build(tl, out_wav):
-    n = int(DUR * SR)
-    bgm = load_bgm()[:n]
-    if len(bgm) < n:
-        bgm = np.pad(bgm, ((0, n - len(bgm)), (0, 0)))
+    dur = getattr(tl, "DUR_OUT", DUR)
+    n = int(dur * SR)
+    src = load_bgm()
+    if getattr(tl, "BGM_SEGMENTS", None):
+        bgm = edit_bgm(src, tl.BGM_SEGMENTS, n)
+    else:
+        bgm = src[:n]
+        if len(bgm) < n:
+            bgm = np.pad(bgm, ((0, n - len(bgm)), (0, 0)))
     # BGM edit envelope
     bg_env = env_curve(tl.BGM_ENV, n) if getattr(tl, "BGM_ENV", None) else np.ones(n, np.float32)
     music = bgm * bg_env[:, None] * db(getattr(tl, "BGM_GAIN_DB", 0.0))
@@ -140,7 +170,7 @@ def build(tl, out_wav):
         place(fxbus, x, t, db(e.get("db", -6.0)))
         if e.get("duck"):
             d0 = int(max(0, e["t"] - 0.02) * SR)
-            d1 = int(min(DUR, e["t"] + e.get("duck_len", 0.5)) * SR)
+            d1 = int(min(dur, e["t"] + e.get("duck_len", 0.5)) * SR)
             if d1 > d0:
                 k = np.linspace(0, 1, d1 - d0)
                 duck[d0:d1] = np.minimum(duck[d0:d1], 1 - (1 - db(e["duck"])) * (1 - k) ** 2)
@@ -157,7 +187,7 @@ def build(tl, out_wav):
         x = x / (np.max(np.abs(x)) + 1e-9) * 0.7
         place(vobus, x, v["t"], db(v.get("db", -2.0)))
         d0 = int(max(0, v["t"] - 0.18) * SR)
-        d1 = int(min(DUR, v["t"] + len(x) / SR + 0.25) * SR)
+        d1 = int(min(dur, v["t"] + len(x) / SR + 0.25) * SR)
         r = int(0.12 * SR)
         g = np.full(d1 - d0, db(-7.0), np.float32)
         g[:r] = np.linspace(1, db(-7.0), r)

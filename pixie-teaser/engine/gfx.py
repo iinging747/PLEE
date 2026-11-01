@@ -155,6 +155,10 @@ def panel_mask(w, h, k, mode="up"):
         hh = int(h * e)
         if hh > 0:
             m[:hh] = 1
+    elif mode == "rl":
+        ww = int(w * e)
+        if ww > 0:
+            m[:, w - ww:] = 1
     else:
         ww = int(w * e)
         if ww > 0:

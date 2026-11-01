@@ -29,7 +29,18 @@ FONT_FILES = {
     "tenor": "TenorSans.ttf",
     "mont_l": "Montserrat-Light.ttf",
     "mono": "JetBrainsMono-Regular.ttf",
+    # bold display (v4)
+    "anton": "Anton-Regular.ttf",
+    "unb_black": "Unbounded-Black.ttf",
+    "unb_bold": "Unbounded-Bold.ttf",
+    "unb": "Unbounded-Regular.ttf",
+    "unb_l": "Unbounded-Light.ttf",
+    "syne_xb": "Syne-ExtraBold.ttf",
+    "syne": "Syne-Medium.ttf",
     # Korean
+    "kr_black": "Pretendard-Black.otf",
+    "kr_xb": "Pretendard-ExtraBold.otf",
+    "kr_bold": "Pretendard-Bold.otf",
     "kr_t": "Pretendard-Thin.otf",
     "kr_xl": "Pretendard-ExtraLight.otf",
     "kr_l": "Pretendard-Light.otf",
@@ -242,4 +253,53 @@ def a_flicker(k, seed):
         r = hash01(seed, i)
         on = k > r * 0.6 and (k > r * 0.6 + 0.12 or hash01(seed, i, int(k * 40)) > 0.4)
         return 0.0, 0.0, 1.0 if on else 0.0
+    return f
+
+
+# ---------------------------------------------------------------- full-frame masks (knockout titles)
+_masks = {}
+
+
+def fit_size(text, name, max_w, size0=600, tracking=0.0):
+    w = text_width(text, name, size0, tracking)
+    return int(size0 * min(1.0, max_w / max(w, 1)))
+
+
+def text_mask(text, name, size, cx, cy, tracking=0.0):
+    """Full-frame (H, W) alpha of `text` centred at (cx, cy); cached."""
+    from .core import W as FW, H as FH
+    key = (text, name, int(size), int(cx), int(cy), round(tracking, 3))
+    m = _masks.get(key)
+    if m is None:
+        fr = np.zeros((FH, FW, 3), np.float32)
+        draw_text(fr, text, name, size, cx, cy, color=(1, 1, 1), tracking=tracking, shadow=0.0)
+        m = fr[..., 0].copy()
+        _masks[key] = m
+    return m
+
+
+def anchor_in(mask, cx, cy):
+    """Nearest filled pixel to (cx, cy) - the point a zoom-through dives into."""
+    ys, xs = np.where(mask > 0.9)
+    i = np.argmin((xs - cx) ** 2 + (ys - cy) ** 2)
+    return float(xs[i]), float(ys[i])
+
+
+def zoom_mask(mask, s, ax, ay, ox=0.0, oy=0.0):
+    """Scale a full-frame mask by s about (ax, ay) (plus offset), clipped to frame."""
+    if abs(s - 1) < 1e-4 and not ox and not oy:
+        return mask
+    h, w = mask.shape
+    m = np.array([[s, 0, ax - s * ax + ox], [0, s, ay - s * ay + oy]], np.float32)
+    return cv2.warpAffine(mask, m, (w, h), flags=cv2.INTER_LINEAR, borderMode=cv2.BORDER_CONSTANT)
+
+
+def a_slam(k, dist=-90, stagger=0.05):
+    """Letters drop in hard, one after another."""
+    from .core import ease_out_expo
+
+    def f(i, n):
+        local = k * (1 + stagger * n) - stagger * i
+        e = ease_out_expo(local * 1.4)
+        return 0.0, (1 - e) * dist, 1.0 if local > 0 else 0.0
     return f
