@@ -1,0 +1,163 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<title>Elysium Brief</title>
+<link rel="stylesheet" href="../node_modules/@fontsource/noto-sans-kr/500.css">
+<link rel="stylesheet" href="../node_modules/@fontsource/noto-sans-kr/600.css">
+<link rel="stylesheet" href="../node_modules/@fontsource/noto-sans-kr/700.css">
+<link rel="stylesheet" href="../node_modules/@fontsource/noto-sans-kr/800.css">
+<link rel="stylesheet" href="../node_modules/@fontsource/noto-sans-kr/900.css">
+<link rel="stylesheet" href="../node_modules/@fontsource/dm-sans/300.css">
+<link rel="stylesheet" href="../node_modules/@fontsource/dm-sans/500.css">
+<link rel="stylesheet" href="../node_modules/@fontsource/dm-mono/400.css">
+<link rel="stylesheet" href="../node_modules/@fontsource/dm-mono/500.css">
+<style>
+  /* Elysium Brief: news-style cards, 1080 x 1350 (4:5). */
+  :root { --ink: #0E2A30; --ink2: #4A6066; --ink3: #8A989B; --accent: #0E9C84; --mint: #97FCE4; --line: rgba(14, 42, 48, .12); --amber: #C9741A; }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { background: #bbb; font-family: 'Noto Sans KR', sans-serif; color: var(--ink); word-break: keep-all; }
+  .card { width: 1080px; height: 1350px; position: relative; overflow: hidden; margin-bottom: 40px; background: #F6F5F1; padding: 92px 96px 0 120px; }
+  .card::before { content: ''; position: absolute; left: 0; top: 0; bottom: 0; width: 18px; background: var(--mint); }
+  .card.mint { background: var(--mint); }
+  .card.mint::before { background: var(--ink); }
+  .bar { display: flex; justify-content: space-between; align-items: baseline; padding-bottom: 22px; border-bottom: 3px solid var(--ink); font-family: 'DM Mono', monospace; font-weight: 500; font-size: 24px; letter-spacing: .22em; }
+  .bar .r { color: var(--ink2); letter-spacing: .12em; }
+  .kicker { font-family: 'DM Mono', monospace; font-weight: 500; font-size: 26px; letter-spacing: .2em; color: var(--accent); margin-top: 96px; }
+  .date { font-family: 'DM Sans', sans-serif; font-weight: 300; font-size: 210px; letter-spacing: -.06em; line-height: .9; color: var(--accent); margin-top: 84px; }
+  h1 { font-weight: 800; font-size: 82px; line-height: 1.18; letter-spacing: -.045em; margin-top: 40px; }
+  .body { font-size: 40px; font-weight: 500; line-height: 1.62; letter-spacing: -.025em; color: var(--ink2); margin-top: 44px; }
+  .body b { color: var(--ink); font-weight: 700; }
+  .note { margin-top: 48px; padding-top: 28px; border-top: 2px solid var(--line); font-size: 30px; font-weight: 600; line-height: 1.5; color: var(--ink3); }
+  .facts { display: grid; grid-template-columns: repeat(3, 1fr); gap: 0; margin-top: 64px; border-top: 2px solid var(--line); border-bottom: 2px solid var(--line); }
+  .facts div { padding: 30px 0 32px; }
+  .facts div + div { padding-left: 30px; border-left: 2px solid var(--line); }
+  .facts .k { font-family: 'DM Mono', monospace; font-size: 22px; letter-spacing: .16em; color: var(--ink3); }
+  .facts .v { font-size: 40px; font-weight: 800; letter-spacing: -.03em; margin-top: 10px; }
+  .facts .v small { font-size: 24px; font-weight: 600; color: var(--ink3); margin-left: 6px; }
+  .rows { margin-top: 60px; border-top: 2px solid var(--line); }
+  .rows .row { display: flex; gap: 34px; padding: 34px 0; border-bottom: 2px solid var(--line); }
+  .rows .n { font-family: 'DM Mono', monospace; font-size: 26px; color: var(--accent); padding-top: 8px; flex: 0 0 56px; }
+  .rows .t { font-size: 38px; font-weight: 700; line-height: 1.5; letter-spacing: -.025em; }
+  .rows .t small { display: block; font-size: 30px; font-weight: 500; color: var(--ink2); margin-top: 6px; line-height: 1.5; }
+  .foot { position: absolute; left: 120px; right: 96px; bottom: 64px; font-size: 22px; font-weight: 600; line-height: 1.55; color: var(--ink3); }
+  .mint .foot { color: var(--ink2); }
+  .cover-d { font-family: 'DM Sans', sans-serif; font-weight: 300; font-size: 380px; letter-spacing: -.07em; line-height: .85; margin-top: 120px; }
+  .cover-t { font-weight: 900; font-size: 104px; line-height: 1.12; letter-spacing: -.05em; margin-top: 36px; }
+  .cover-s { font-size: 40px; font-weight: 600; line-height: 1.5; margin-top: 34px; color: var(--ink2); }
+  .cat { position: absolute; }
+</style>
+</head>
+<body>
+
+<!-- 01 cover -->
+<section class="card mint" id="b01">
+  <div class="bar"><span>ELYSIUM BRIEF</span><span class="r">2026.11.06</span></div>
+  <div class="cover-d">D-3</div>
+  <div class="cover-t">엘리시움<br>메인넷까지 3일</div>
+  <div class="cover-s">8월 공개부터 오늘까지<br>주요 소식 정리</div>
+  <img class="cat" src="../assets/stickers/hypurr_sit.png" style="width:330px; right:70px; bottom:-40px; transform:scaleX(-1)">
+</section>
+
+<!-- 02 overview -->
+<section class="card" id="b02">
+  <div class="bar"><span>ELYSIUM BRIEF</span><span class="r">02 / 10</span></div>
+  <div class="kicker">OVERVIEW</div>
+  <h1>엘리시움은<br>하이퍼리퀴드 생태계의<br>L2다</h1>
+  <p class="body"><b>키네틱(kHYPE 운영사)</b>이 만든다. 하이퍼리퀴드 옆에 거래 전용 고속도로를 하나 더 내는 구조다.</p>
+  <div class="facts">
+    <div><div class="k">GAS</div><div class="v">HYPE</div></div>
+    <div><div class="k">SETTLEMENT</div><div class="v">HyperEVM</div></div>
+    <div><div class="k">BLOCK</div><div class="v">0.1~0.2초<small>목표</small></div></div>
+  </div>
+  <div class="foot">출처: 키네틱 문서</div>
+</section>
+
+<!-- 03 Aug 24 -->
+<section class="card" id="b03">
+  <div class="bar"><span>ELYSIUM BRIEF</span><span class="r">03 / 10</span></div>
+  <div class="date">08.24</div>
+  <h1>키네틱,<br>엘리시움 첫 공개</h1>
+  <p class="body">수수료는 HYPE로 받는다. 시퀀서 수익은 <b>빌더 25%, 트레저리 25%, KNTQ 매수·소각 50%</b>로 나눌 계획이다.</p>
+  <p class="note">배분 기준은 시퀀서 수익이며 전체 가스비가 아니다.</p>
+  <div class="foot">출처: Forklog, Crypto Briefing</div>
+</section>
+
+<!-- 04 Sep 22 -->
+<section class="card" id="b04">
+  <div class="bar"><span>ELYSIUM BRIEF</span><span class="r">04 / 10</span></div>
+  <div class="date">09.22</div>
+  <h1>공개 테스트넷 오픈</h1>
+  <p class="body">개발자들이 앱을 미리 올려 시험하는 단계다. 실제 자산은 오가지 않는다.</p>
+  <p class="note">테스트넷 체인 ID 99801</p>
+  <div class="foot">출처: The Defiant, Chainstack</div>
+</section>
+
+<!-- 05 Oct 19 -->
+<section class="card" id="b05">
+  <div class="bar"><span>ELYSIUM BRIEF</span><span class="r">05 / 10</span></div>
+  <div class="date">10.19</div>
+  <h1>메인넷 날짜<br>11월 9일로 확정</h1>
+  <p class="body">하이퍼리퀴드 본 거래소(하이퍼코어) 연결은 메인넷 <b>약 4주 뒤</b> 업그레이드로 추가될 예정이다.</p>
+  <div class="foot">출처: TechFlow, Bankless</div>
+</section>
+
+<!-- 06 Oct 28 -->
+<section class="card" id="b06">
+  <div class="bar"><span>ELYSIUM BRIEF</span><span class="r">06 / 10</span></div>
+  <div class="date">10.28</div>
+  <h1>pump.fun·fomo,<br>첫날부터 거래 지원</h1>
+  <p class="body">pump.fun은 11월 9일부터 앱에서 엘리시움 거래를 지원한다고 밝혔다. fomo는 독점 트레이딩 파트너로 참여한다.</p>
+  <p class="note">같은 날 KNTQ는 사상 최고가 0.4547달러를 기록했다.</p>
+  <div class="foot">출처: KuCoin, TokenPost, CoinMarketCap</div>
+</section>
+
+<!-- 07 Nov 5 -->
+<section class="card" id="b07">
+  <div class="bar"><span>ELYSIUM BRIEF</span><span class="r">07 / 10</span></div>
+  <div class="date">11.05</div>
+  <h1>웜홀과 파트너십</h1>
+  <p class="body">다른 체인과 자산·메시지를 주고받는 <b>웜홀(Wormhole)</b> 인프라가 붙는다. 웜홀은 10월 22일 업데이트에 엘리시움 지원을 미리 넣어 뒀다.</p>
+  <div class="foot">출처: Crypto Briefing, Wormhole GitHub v2.69.0</div>
+</section>
+
+<!-- 08 day one -->
+<section class="card" id="b08">
+  <div class="bar"><span>ELYSIUM BRIEF</span><span class="r">08 / 10</span></div>
+  <div class="kicker">DAY ONE</div>
+  <h1>첫날 함께하는 서비스</h1>
+  <div class="rows">
+    <div class="row"><div class="n">01</div><div class="t">Nest<small>첫 블록부터 가동하는 거래소(DEX)</small></div></div>
+    <div class="row"><div class="n">02</div><div class="t">pump.fun<small>앱에서 엘리시움 거래 지원</small></div></div>
+    <div class="row"><div class="n">03</div><div class="t">fomo<small>독점 트레이딩 파트너</small></div></div>
+    <div class="row"><div class="n">04</div><div class="t">Wormhole<small>다른 체인과 자산 이동</small></div></div>
+  </div>
+  <p class="note" style="border-top:0; margin-top:24px">그 밖에 KyberSwap·OpenSea·GMGN·Maestro 등의 대응이 보도됐다.</p>
+  <div class="foot">출처: Bankless, Coinotaku, Crypto Briefing</div>
+</section>
+
+<!-- 09 check -->
+<section class="card" id="b09">
+  <div class="bar"><span>ELYSIUM BRIEF</span><span class="r">09 / 10</span></div>
+  <div class="kicker" style="color:var(--amber)">CHECK</div>
+  <h1>참여 전 확인할 것</h1>
+  <div class="rows">
+    <div class="row"><div class="n" style="color:var(--amber)">01</div><div class="t">공식 브릿지는 메인넷과 함께 열린다<small>지금 도는 '엘리시움 브릿지'는 비공식이고, 피싱으로 분류된 사이트도 있다.</small></div></div>
+    <div class="row"><div class="n" style="color:var(--amber)">02</div><div class="t">엘리시움 토큰·공식 포인트는 아직 없다<small>에어드롭을 약속하는 링크는 의심부터 할 것.</small></div></div>
+    <div class="row"><div class="n" style="color:var(--amber)">03</div><div class="t">초기에는 시퀀서 1개로 운영된다<small>출금에는 대기 기간이 있다.</small></div></div>
+  </div>
+  <div class="foot">출처: 키네틱 문서, AirdropAlert, Gridinsoft</div>
+</section>
+
+<!-- 10 next -->
+<section class="card mint" id="b10">
+  <div class="bar"><span>ELYSIUM BRIEF</span><span class="r">10 / 10</span></div>
+  <div class="kicker" style="color:var(--ink)">NEXT</div>
+  <div class="date" style="color:var(--ink); margin-top:60px">11.09</div>
+  <h1>메인넷 출시</h1>
+  <p class="body" style="color:var(--ink)">이후 약 4주 뒤 하이퍼코어 연결 업그레이드가 예정돼 있다.</p>
+  <div class="foot">키네틱 문서, Bankless, Crypto Briefing, CoinMarketCap 등 보도 종합 (2026.11.06 기준)<br>일정·수치는 바뀔 수 있으며, 정보 제공 목적으로 투자 권유가 아니다.</div>
+</section>
+
+</body>
+</html>
